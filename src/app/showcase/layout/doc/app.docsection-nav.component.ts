@@ -31,7 +31,7 @@ export class AppDocSectionNav {
 
         if (hash) {
             this.activeTab = hash;
-            this.scrollToSection(hash);
+            this.scrollTo(hash);
         } else if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
             this.activeTab = this.getId(this.sections[0].querySelector('.doc-section-label'));
         }
@@ -41,9 +41,13 @@ export class AppDocSectionNav {
         });
     }
 
-    scrollToSection(hash) {}
+    scrollTo(hash) {}
 
     getId(el): string {
-        return '';
+        return el.querySelector('a').getAttribute('id');
     }
+
+    onScroll() {}
+
+    onButtonClick() {}
 }
