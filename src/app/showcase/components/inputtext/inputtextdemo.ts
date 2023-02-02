@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { BasicDocComponent } from './basicdoc';
+import { IconsDocComponent } from './iconsdoc';
 import { ImportDocComponent } from './importdoc';
 
 @Component({
@@ -32,5 +33,10 @@ export class InputTextDemo {
             label: 'Basic',
             component: BasicDocComponent
         },
+        {
+            id: 'icons',
+            label: 'Icons',
+            component: IconsDocComponent
+        }
     ]
 }
