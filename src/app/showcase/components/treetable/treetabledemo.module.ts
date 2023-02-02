@@ -9,7 +9,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { TabViewModule } from 'primeng/tabview';
 import { ToastModule } from 'primeng/toast';
 import { TreeTableModule } from 'primeng/treetable';
-import { AppCodeModule } from '../../layout/code/app.code.component';
+import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { TreeTableColGroupDemo } from './treetablecolgroupdemo';
 import { TreeTableColResizeDemo } from './treetablecolresizedemo';

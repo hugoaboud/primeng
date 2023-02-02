@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { SliderModule } from 'primeng/slider';
 import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from '../../layout/code/app.code.component';
+import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { SliderDemo } from './sliderdemo';
 import { SliderDemoRoutingModule } from './sliderdemo-routing.module';

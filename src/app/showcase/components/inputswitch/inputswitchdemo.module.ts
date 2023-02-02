@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from '../../layout/code/app.code.component';
+import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { InputSwitchDemo } from './inputswitchdemo';
 import { InputSwitchDemoRoutingModule } from './inputswitchdemo-routing.module';

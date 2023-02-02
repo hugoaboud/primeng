@@ -21,7 +21,7 @@ import { PasswordModule } from 'primeng/password';
 import { TabViewModule } from 'primeng/tabview';
 import { TreeSelectModule } from 'primeng/treeselect';
 
-import { AppCodeModule } from '../../layout/code/app.code.component';
+import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 
 @NgModule({

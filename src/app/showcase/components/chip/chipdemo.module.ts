@@ -4,7 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { ChipModule } from 'primeng/chip';
 import { PanelModule } from 'primeng/panel';
 import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from '../../layout/code/app.code.component';
+import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { ChipDemo } from './chipdemo';
 import { ChipDemoRoutingModule } from './chipdemo-routing.module';

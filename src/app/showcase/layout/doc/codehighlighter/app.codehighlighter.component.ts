@@ -21,6 +21,9 @@ export class CodeHighlighterComponent implements AfterViewInit {
         if (window['Prism']) {
             window['Prism'].highlightElement(this.codeElement.nativeElement);
         }
+    }
+    
+    ngOnInit() {
         this.languageClassName = 'pt-5 language-' + this.lang;
     }
 }

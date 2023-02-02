@@ -5,7 +5,7 @@ import { ButtonModule } from 'primeng/button';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
 import { PanelModule } from 'primeng/panel';
 import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from '../../layout/code/app.code.component';
+import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { CascadeSelectDemo } from './cascadeselectdemo';
 import { CascadeSelectDemoRoutingModule } from './cascadeselectdemo-routing.module';
