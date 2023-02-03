@@ -16,7 +16,7 @@ interface CodeLang {
     selector: 'floatlabel-doc',
     template: `
 <div>
-    <app-docsectiontext title="FloatLabel">
+    <app-docsectiontext title="Float Label">
         <p>A floating label appears on top of the input field when focused.</p>
     </app-docsectiontext>
     <div class="card flex justify-content-center">

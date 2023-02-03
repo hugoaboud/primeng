@@ -74,5 +74,10 @@ export class InputTextDemo {
             label: 'Disabled',
             component: DisabledDocComponent
         },
+        {
+            id: 'api',
+            label: 'API',
+            doc: [{ name: 'InputText', pathname: '/modules/inputtext.html' }]
+        }
     ]
 }

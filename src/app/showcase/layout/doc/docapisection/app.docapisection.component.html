@@ -1,0 +1,9 @@
+<div>
+    <app-docsectiontext title="API">Visit the API documentation for detailed information about all the properties,
+        events and methods of the component.</app-docsectiontext>
+    <ul>
+        <li *ngFor="let doc of docs" class="field doc-section-description">
+            <a [href]="doc.pathname">{{doc.name}}</a>
+        </li>
+    </ul>
+</div>

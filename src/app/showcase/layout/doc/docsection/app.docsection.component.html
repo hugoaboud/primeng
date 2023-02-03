@@ -12,7 +12,6 @@
 
         <ng-template #docComponent></ng-template>
 
-
-        <!-- doc api -->
+        <app-docapisection *ngIf="doc.id ==='api' && doc.doc" [docs]="doc.doc"></app-docapisection>
     </section>
 </div>
