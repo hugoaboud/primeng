@@ -1,6 +1,6 @@
 <div *ngFor="let doc of docs">
     <section class="py-3">
-        <div *ngIf="doc.id !== 'api'">
+        <div *ngIf="doc.children && doc.id !== 'api'">
             <div [id]="doc.id">
                 <h2 [id]="doc.id" class="doc-section-label">
                     {{ doc.label }}
