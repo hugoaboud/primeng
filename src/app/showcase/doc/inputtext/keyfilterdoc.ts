@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 interface CodeLang {
     html?: string;
@@ -10,7 +10,7 @@ interface CodeLang {
 @Component({
     selector: 'keyfilter-doc',
     template: ` <div>
-        <app-docsectiontext title="Key Filter" id="keyfilter">
+        <app-docsectiontext [title]="title" [id]="id">
             <p>InputText has built-in key filtering support to block certain keys, refer to <a href="/keyfilter">keyfilter</a> page for more information.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
@@ -21,6 +21,10 @@ interface CodeLang {
 })
 export class KeyFilterDocComponent {
     value1: string;
+
+    @Input() id: string
+
+    @Input() title: string
 
     code: CodeLang = {
         html: `

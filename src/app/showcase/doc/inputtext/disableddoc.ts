@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 interface CodeLang {
     html?: string;
@@ -10,7 +10,7 @@ interface CodeLang {
 @Component({
     selector: 'disabled-doc',
     template: ` <div>
-        <app-docsectiontext title="Disabled" id="disabled">
+        <app-docsectiontext [title]="title" [id]="id">
             <p>When <i>disabled</i> is present, the element cannot be edited and focused.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
@@ -21,8 +21,13 @@ interface CodeLang {
 })
 export class DisabledDocComponent {
     value1: string;
+    
     value2: string;
 
+    @Input() id: string
+
+    @Input() title: string
+    
     code: CodeLang = {
         html: `
 <input id="disabled-input" type="text" pInputText [disabled]="true" [(ngModel)]="value1" />`,

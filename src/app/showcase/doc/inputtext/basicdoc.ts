@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 interface CodeLang {
     html?: string;
@@ -10,7 +10,7 @@ interface CodeLang {
 @Component({
     selector: 'basic-doc',
     template: ` <div>
-        <app-docsectiontext title="Basic" id="basic">
+        <app-docsectiontext [title]="title" [id]="id">
             <p>InputText is used as a controlled input with <i>value</i> and <i>onChange</i> properties.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
@@ -21,6 +21,10 @@ interface CodeLang {
 })
 export class BasicDocComponent {
     value1: string;
+
+    @Input() id: string
+
+    @Input() title: string
 
     code: CodeLang = {
         html: `

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 interface CodeLang {
     html?: string;
@@ -10,7 +10,7 @@ interface CodeLang {
 @Component({
     selector: 'floatlabel-doc',
     template: ` <div>
-        <app-docsectiontext title="Float Label" id="floatlabel">
+        <app-docsectiontext [title]="title" [id]="id">
             <p>A floating label appears on top of the input field when focused.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
@@ -24,8 +24,13 @@ interface CodeLang {
 })
 export class FloatLabelDocComponent {
     value1: string;
+    
     value2: string;
 
+    @Input() id: string
+
+    @Input() title: string
+    
     code: CodeLang = {
         html: `
 <span class="p-float-label">

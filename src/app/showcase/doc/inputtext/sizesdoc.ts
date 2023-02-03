@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 interface CodeLang {
     html?: string;
@@ -10,7 +10,7 @@ interface CodeLang {
 @Component({
     selector: 'sizes-doc',
     template: ` <div>
-        <app-docsectiontext title="Sizes" id="sizes">
+        <app-docsectiontext [title]="title" [id]="id">
             <p>Apply <i>.p-input-sm</i> to reduce the size of the input element or <i>.p-input-lg</i> to enlarge it.</p>
         </app-docsectiontext>
         <div class="card flex flex-column align-items-center gap-3 ">
@@ -23,9 +23,15 @@ interface CodeLang {
 })
 export class SizesDocComponent {
     value1: string;
+    
     value2: string;
+    
     value3: string;
 
+    @Input() id: string
+
+    @Input() title: string
+    
     code: CodeLang = {
         html: `
 <input pInputText type="text" class="p-inputtext-sm" placeholder="Small" [(ngModel)]="value1" />
