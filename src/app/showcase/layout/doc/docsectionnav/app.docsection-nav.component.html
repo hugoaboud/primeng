@@ -1,4 +1,4 @@
-<ul class="xl:block doc-section-nav" [ngClass]="{'hidden' : visible}">
+<ul *ngIf="docs && docs.length" class="xl:block doc-section-nav" [ngClass]="{'hidden' : visible}">
     <li *ngFor="let doc of docs; let i = index;" class="navbar-item" [ngClass]="{'active-navbar-item' : activeTab === doc.id}">
         <button pButton class="p-link" (click)="onButtonClick(doc)">{{doc.label}}</button>
         <ng-template *ngIf="doc.children">

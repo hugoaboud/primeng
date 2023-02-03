@@ -6,4 +6,6 @@ import { Component, Input } from '@angular/core';
 })
 export class AppDocSectionTextComponent {
     @Input() title: string;
+
+    @Input() id: string;
 }

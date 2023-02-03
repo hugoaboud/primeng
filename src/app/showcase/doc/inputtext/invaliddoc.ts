@@ -10,7 +10,7 @@ interface CodeLang {
 @Component({
     selector: 'invalid-doc',
     template: ` <div>
-        <app-docsectiontext title="Invalid">
+        <app-docsectiontext title="Invalid" id="invalid">
             <p>Invalid state style is added using the <i>p-invalid</i> and <i>p-dirty</i> class to indicate a failed validation.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">

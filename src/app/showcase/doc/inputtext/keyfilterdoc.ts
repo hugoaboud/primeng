@@ -10,7 +10,7 @@ interface CodeLang {
 @Component({
     selector: 'keyfilter-doc',
     template: ` <div>
-        <app-docsectiontext title="Key Filter">
+        <app-docsectiontext title="Key Filter" id="keyfilter">
             <p>InputText has built-in key filtering support to block certain keys, refer to <a href="/keyfilter">keyfilter</a> page for more information.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">

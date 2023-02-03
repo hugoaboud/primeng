@@ -23,14 +23,15 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
     constructor(@Inject(DOCUMENT) private document: Document, private zone: NgZone, private renderer: Renderer2) {}
 
     ngOnInit(): void {
-        this.sections = this.document.querySelectorAll('section');
-        const hash = window.location.hash.substring(1);
+        this.sections = document.querySelectorAll('section'); // Get all sections on the page
+        const hash = window.location.hash.substring(1); // Get the initial hash
 
         if (hash) {
             this.activeTab = hash;
             this.scrollTo(hash);
         } else if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
-            this.activeTab = this.getId(this.sections[0].querySelector('.doc-section-label')) ?? 'null';
+            console.log(this.sections[0])
+            this.activeTab = this.getId(this.sections[0]) ?? '0';
         }
 
         this.zone.runOutsideAngular(() => {
@@ -41,15 +42,18 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
     }
 
     scrollTo(id) {
-        this.document.getElementById(id).parentElement.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        // this.document.getElementById(id).parentElement.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        console.log(id)
     }
 
-    getId(el): string {
-        return el.querySelector('a').getAttribute('id');
+    getId(section): string {
+        console.log(section)
+        // return el.querySelector('a').getAttribute('id');
+        return '';
     }
 
     onScroll() {
-        const sections = this.document.querySelectorAll('section');
+        const sections = this.document.querySelectorAll('section')
         const topbarEl = this.document.getElementsByClassName('layout-topbar')[0];
 
         sections.forEach((section) => {

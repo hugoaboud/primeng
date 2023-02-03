@@ -10,7 +10,7 @@ interface CodeLang {
 @Component({
     selector: 'disabled-doc',
     template: ` <div>
-        <app-docsectiontext title="Disabled">
+        <app-docsectiontext title="Disabled" id="disabled">
             <p>When <i>disabled</i> is present, the element cannot be edited and focused.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">

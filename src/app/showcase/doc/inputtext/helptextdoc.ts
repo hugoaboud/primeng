@@ -10,7 +10,7 @@ interface CodeLang {
 @Component({
     selector: 'helptext-doc',
     template: ` <div>
-        <app-docsectiontext title="Help Text"> An advisory text can be defined with the semantic <i>small</i> tag. </app-docsectiontext>
+        <app-docsectiontext title="Help Text" id="helptext"> An advisory text can be defined with the semantic <i>small</i> tag. </app-docsectiontext>
         <div class="card flex justify-content-center">
             <div class="flex flex-column gap-2">
                 <label htmlFor="username">Username</label>

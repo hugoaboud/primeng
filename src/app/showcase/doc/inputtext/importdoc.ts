@@ -10,7 +10,7 @@ interface CodeLang {
 @Component({
     selector: 'import-doc',
     template: ` <div>
-        <app-docsectiontext title="Import"> </app-docsectiontext>
+        <app-docsectiontext title="Import" id="import"> </app-docsectiontext>
         <app-code [hideToggleCode]="true" [hideStackBlitz]="true" [hideCodeSandbox]="true" [code]="code"></app-code>
     </div>`
 })

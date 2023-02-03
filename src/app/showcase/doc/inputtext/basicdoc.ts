@@ -10,7 +10,7 @@ interface CodeLang {
 @Component({
     selector: 'basic-doc',
     template: ` <div>
-        <app-docsectiontext title="Basic">
+        <app-docsectiontext title="Basic" id="basic">
             <p>InputText is used as a controlled input with <i>value</i> and <i>onChange</i> properties.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">

@@ -10,7 +10,7 @@ interface CodeLang {
 @Component({
     selector: 'sizes-doc',
     template: ` <div>
-        <app-docsectiontext title="Sizes">
+        <app-docsectiontext title="Sizes" id="sizes">
             <p>Apply <i>.p-input-sm</i> to reduce the size of the input element or <i>.p-input-lg</i> to enlarge it.</p>
         </app-docsectiontext>
         <div class="card flex flex-column align-items-center gap-3 ">

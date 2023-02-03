@@ -5,7 +5,7 @@ import { ChangeDetectorRef, Component, ComponentFactoryResolver, Input, OnInit, 
     templateUrl: './app.docsection.component.html'
 })
 export class AppDocSectionsComponent implements OnInit {
-    @Input() docs: [];
+    @Input() docs!: [];
 
     currentDocIndex = -1;
 
