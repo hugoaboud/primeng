@@ -19,7 +19,7 @@ import { JsonService } from '../service/json.service';
 import { PhotoService } from '../service/photo.service';
 import { ProductService } from '../service/product.service';
 
-import { LandingModule } from '../components/landing/landing.module';
+import { LandingModule } from '../pages/landing/landing.module';
 import { AppMainComponent } from './app.main.component';
 import { AppConfigModule } from './config/app.config.module';
 import { AppDemoActionsModule } from './demoactions/app.demoactions.component';
