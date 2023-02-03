@@ -20,16 +20,16 @@ interface CodeLang {
         <p>Icons can be placed inside an input element by wrapping both the input and the icon with an element that has either <i>.p-input-icon-left</i> or <i>p-input-icon-right</i> class..</p>
     </app-docsectiontext>
    <div class="card flex flex-wrap justify-content-center gap-3">
-    <span class="p-input-icon-left">
-        <i class="pi pi-search"></i>
-        <input type="text" pInputText [(ngModel)]="value1">
-    </span>
+        <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText [(ngModel)]="value1">
+        </span>
 
-    <span class="p-input-icon-right">
-        <i class="pi pi-spin pi-spinner"></i>
-        <input type="text" pInputText [(ngModel)]="value2">
-    </span>
-</div>
+        <span class="p-input-icon-right">
+            <i class="pi pi-spin pi-spinner"></i>
+            <input type="text" pInputText [(ngModel)]="value2">
+        </span>
+    </div>
     <app-code [code]="code"></app-code>
 </div>`
 })

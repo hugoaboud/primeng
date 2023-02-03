@@ -1,7 +1,13 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { BasicDocComponent } from './basicdoc';
+import { DisabledDocComponent } from './disableddoc';
+import { FloatLabelDocComponent } from './floatlabeldoc';
+import { HelpTextDocComponent } from './helptextdoc';
 import { IconsDocComponent } from './iconsdoc';
 import { ImportDocComponent } from './importdoc';
+import { InvalidDocComponent } from './invaliddoc';
+import { KeyFilterDocComponent } from './keyfilterdoc';
+import { SizesDocComponent } from './sizesdoc';
 
 @Component({
     templateUrl: './inputtextdemo.html',
@@ -37,6 +43,41 @@ export class InputTextDemo {
             id: 'icons',
             label: 'Icons',
             component: IconsDocComponent
+        },
+        {
+            id: 'keyfilter',
+            label: 'Key Filter',
+            component: KeyFilterDocComponent
+        },
+        {
+            id: 'sizes',
+            label: 'Sizes',
+            component: SizesDocComponent
+        },
+        {
+            id: 'helptext',
+            label: 'Help Text',
+            component: HelpTextDocComponent
+        },
+        {
+            id: 'floatlabel',
+            label: 'Float Label',
+            component: FloatLabelDocComponent
+        },
+        {
+            id: 'invalid',
+            label: 'Invalid',
+            component: InvalidDocComponent
+        },
+        {
+            id: 'disabled',
+            label: 'Disabled',
+            component: DisabledDocComponent
+        },
+        {
+            id: 'api',
+            label: 'API',
+            doc: [{ name: 'InputText', pathname: '/modules/inputtext.html' }]
         }
     ]
 }

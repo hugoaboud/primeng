@@ -1,12 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { ChangeDetectorRef, Component, ComponentFactoryResolver, Input, NgModule, OnInit, ViewChild, ViewContainerRef } from "@angular/core";
-
-
-interface DocItems {
-    id: string,
-    label: string
-    component: any
-}
+import { DocApiSectionModule } from "../docapisection/app.docapisection.component";
 
 @Component({
     selector: 'app-docsection',
@@ -40,7 +34,7 @@ export class AppDocSectionsComponent implements OnInit {
 }
 
 @NgModule({
-    imports: [CommonModule],
+    imports: [CommonModule, DocApiSectionModule],
     exports: [AppDocSectionsComponent],
     declarations: [AppDocSectionsComponent]
 })
