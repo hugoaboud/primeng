@@ -25,10 +25,12 @@ export class AppDocSectionsComponent implements OnInit {
         this.cdRef.detectChanges();
         this.currentDocIndex = (this.currentDocIndex + 1) % this.docs.length
         const newComponent: any = this.docs[this.currentDocIndex]
-        const componentFactory = this.componentFactoryResolver.resolveComponentFactory(newComponent.component)
 
         const viewContainerRef = this.docComponent;
-        viewContainerRef.createComponent(componentFactory);
+
+        if (newComponent.component !== undefined) {
+            viewContainerRef.createComponent(newComponent.component);
+        }
     }
 
 }

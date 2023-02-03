@@ -1,18 +1,13 @@
 import { CommonModule } from "@angular/common";
-import { Component, Input, NgModule, OnInit } from "@angular/core";
+import { Component, Input, NgModule } from "@angular/core";
 import { AppDocSectionTextModule } from "../docsectiontext/app.docsectiontext.component";
 
 @Component({
     selector: 'app-docapisection',
     templateUrl: './app.docapisection.component.html'
 })
-export class AppDocApiSection implements OnInit {
+export class AppDocApiSection  {
     @Input() docs;
-
-    ngOnInit() {
-        console.log('api')
-        console.log(this.docs)
-    }
 
 }
 
