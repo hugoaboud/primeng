@@ -3,7 +3,6 @@
     <app-topbar (menuButtonClick)="onMenuButtonClick()"></app-topbar>
     <app-config></app-config>
     <app-menu [active]="menuActive"></app-menu>
-    <app-docsection-nav></app-docsection-nav>
     <div class="layout-mask" [ngClass]="{'layout-mask-active': menuActive}" (click)="onMaskClick()"></div>
     
     <div class="layout-content">
@@ -11,5 +10,6 @@
             <router-outlet></router-outlet>
             <app-footer></app-footer>
         </div>
+        <app-docsection-nav></app-docsection-nav>
     </div>
 </div>

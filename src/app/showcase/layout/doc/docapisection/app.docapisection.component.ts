@@ -1,6 +1,6 @@
-import { CommonModule } from "@angular/common";
-import { Component, Input, NgModule, OnInit } from "@angular/core";
-import { AppDocSectionTextModule } from "../docsectiontext/app.docsectiontext.component";
+import { CommonModule } from '@angular/common';
+import { Component, Input, NgModule, OnInit } from '@angular/core';
+import { AppDocSectionTextModule } from '../docsectiontext/app.docsectiontext.component';
 
 @Component({
     selector: 'app-docapisection',
@@ -9,11 +9,7 @@ import { AppDocSectionTextModule } from "../docsectiontext/app.docsectiontext.co
 export class AppDocApiSection implements OnInit {
     @Input() docs;
 
-    ngOnInit() {
-        console.log('api')
-        console.log(this.docs)
-    }
-
+    ngOnInit() {}
 }
 
 @NgModule({
@@ -21,4 +17,4 @@ export class AppDocApiSection implements OnInit {
     exports: [AppDocApiSection],
     declarations: [AppDocApiSection]
 })
-export class DocApiSectionModule { }
+export class DocApiSectionModule {}

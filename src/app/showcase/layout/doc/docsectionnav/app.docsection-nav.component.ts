@@ -1,22 +1,24 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, NgZone, Renderer2 } from '@angular/core';
+import { Component, Inject, NgZone, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Doc, DocService } from '../../../service/doc.service';
+import { DocSectionNav, DocService } from '../../../service/doc.service';
 
 @Component({
     selector: 'app-docsection-nav',
     templateUrl: './app.docsection-nav.component.html'
 })
-export class AppDocSectionNavComponent {
+export class AppDocSectionNavComponent implements OnInit, OnDestroy {
     visible!: boolean;
 
-    docs: Doc[];
+    docs: DocSectionNav[];
 
     subscription!: Subscription;
 
     sections!: any;
 
     activeTab!: string;
+
+    scrollListener!: any;
 
     constructor(@Inject(DOCUMENT) private document: Document, private docService: DocService, private zone: NgZone, private renderer: Renderer2) {
         this.subscription = this.docService.docSectionNavActive$.subscribe((value: boolean) => {
@@ -25,7 +27,6 @@ export class AppDocSectionNavComponent {
     }
 
     ngOnInit(): void {
-        console.log(this.document);
         this.sections = this.document.querySelectorAll('section');
         const hash = window.location.hash.substring(1);
 
@@ -33,21 +34,68 @@ export class AppDocSectionNavComponent {
             this.activeTab = hash;
             this.scrollTo(hash);
         } else if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
-            // this.activeTab = this.getId(this.sections[0].querySelector('.doc-section-label'));
+            this.activeTab = this.getId(this.sections[0].querySelector('.doc-section-label')) ?? 'null';
         }
 
         this.zone.runOutsideAngular(() => {
-            this.renderer.listen(this.document, 'scroll', (event) => {});
+            this.scrollListener = this.renderer.listen(this.document, 'scroll', (event: any) => {
+                this.onScroll();
+            });
+        });
+
+        this.docs = [
+            {
+                id: '123',
+                label: 'inputtext',
+                doc: {
+                    name: 'inputtext',
+                    pathname: '/inputtext'
+                }
+            }
+        ];
+    }
+
+    scrollTo(id) {
+        this.document.getElementById(id).parentElement.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    }
+
+    getId(el): string {
+        return el.querySelector('a').getAttribute('id');
+    }
+
+    onScroll() {
+        const sections = this.document.querySelectorAll('section');
+        const topbarEl = this.document.getElementsByClassName('layout-topbar')[0];
+
+        sections.forEach((section) => {
+            const sectionLabelEl = section.querySelectorAll('.doc-section-label');
+            const isScrolledTo = (section) => window.scrollY >= section.offsetTop - topbarEl.clientHeight - 20 && window.scrollY < section.offsetTop + section.offsetHeight - topbarEl.clientHeight - 20;
+            if (isScrolledTo(section)) {
+                // Check if the section has multiple child elements
+                if (sectionLabelEl.length > 1) {
+                    sectionLabelEl.forEach((child) => {
+                        // Check if the child element is currently scrolled to
+                        if (isScrolledTo(child)) {
+                            // Set the active tab to the id of the currently scrolled to child element
+                            this.activeTab = this.getId(child);
+                        }
+                    });
+                } else {
+                    this.activeTab = this.getId(sectionLabelEl[0]);
+                }
+            }
         });
     }
 
-    scrollTo(hash) {}
-
-    getId(el): string {
-        return '';
+    onButtonClick(doc) {
+        // Scroll to the clicked button's parent element
+        this.scrollTo(doc.id);
     }
 
-    onScroll() {}
-
-    onButtonClick() {}
+    ngOnDestroy() {
+        if (this.scrollListener) {
+            this.scrollListener();
+            this.scrollListener = null;
+        }
+    }
 }

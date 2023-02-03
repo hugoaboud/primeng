@@ -33,4 +33,6 @@ export class DocService {
     getDoc(): Doc {
         return this.doc;
     }
+
+    isVisible() {}
 }

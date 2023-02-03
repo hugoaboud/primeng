@@ -39,7 +39,6 @@ export class AppMainComponent implements OnInit {
                 gtag('config', 'UA-93461466-1', {
                     page_path: '/primeng' + event.urlAfterRedirects
                 });
-
                 this.hideMenu();
             }
         });
