@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, NgModule, ViewChild } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
+import { CodeHighlighterComponent } from '../codehighlighter/app.codehighlighter.component';
 
 @Component({
     selector: 'app-code',
@@ -31,6 +32,6 @@ export class AppCodeComponent {
 @NgModule({
     imports: [CommonModule, ButtonModule, TooltipModule],
     exports: [AppCodeComponent],
-    declarations: [AppCodeComponent]
+    declarations: [AppCodeComponent, CodeHighlighterComponent]
 })
 export class AppCodeModule {}

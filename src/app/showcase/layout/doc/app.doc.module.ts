@@ -5,7 +5,6 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { TooltipModule } from 'primeng/tooltip';
 import { AppCodeModule } from './code/app.code.component';
-import { CodeHighlighterComponent } from './codehighlighter/app.codehighlighter.component';
 import { AppDocApiSection } from './docapisection/app.docapisection.component';
 import { AppDocSectionsComponent } from './docsection/app.docsection.component';
 import { AppDocSectionNavComponent } from './docsectionnav/app.docsection-nav.component';
@@ -13,7 +12,7 @@ import { AppDocSectionTextComponent } from './docsectiontext/app.docsectiontext.
 
 @NgModule({
     imports: [CommonModule, FormsModule, ButtonModule, InputTextModule, TooltipModule, AppCodeModule],
-    exports: [AppDocSectionTextComponent, AppDocApiSection, AppDocSectionNavComponent, AppDocSectionsComponent, CodeHighlighterComponent],
-    declarations: [AppDocSectionTextComponent, AppDocApiSection, AppDocSectionNavComponent, AppDocSectionsComponent, CodeHighlighterComponent]
+    exports: [AppDocSectionTextComponent, AppDocApiSection, AppDocSectionNavComponent, AppDocSectionsComponent],
+    declarations: [AppDocSectionTextComponent, AppDocApiSection, AppDocSectionNavComponent, AppDocSectionsComponent]
 })
 export class AppDocModule {}
