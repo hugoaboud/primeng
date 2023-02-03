@@ -14,8 +14,6 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
 
     subscription!: Subscription;
 
-    sections!: any;
-
     activeTab!: string;
 
     scrollListener!: any;
@@ -23,14 +21,14 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
     constructor(@Inject(DOCUMENT) private document: Document, private zone: NgZone, private renderer: Renderer2) {}
 
     ngOnInit(): void {
-        this.sections = document.querySelectorAll('section'); // Get all sections on the page
+        const sections = document.querySelectorAll('section'); // Get all sections on the page
         const hash = window.location.hash.substring(1); // Get the initial hash
 
         if (hash) {
             this.activeTab = hash;
             this.scrollTo(hash);
         } else if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
-            this.activeTab = this.getId(this.sections[0].querySelector('.doc-section-label'));
+            this.activeTab = this.getId(sections[0].querySelector('.doc-section-label'));
         }
 
         this.zone.runOutsideAngular(() => {
