@@ -30,8 +30,7 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
             this.activeTab = hash;
             this.scrollTo(hash);
         } else if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
-            console.log(this.sections[0])
-            this.activeTab = this.getId(this.sections[0]) ?? '0';
+            this.activeTab = this.getId(this.sections[0].querySelector('.doc-section-label'));
         }
 
         this.zone.runOutsideAngular(() => {
@@ -42,14 +41,11 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
     }
 
     scrollTo(id) {
-        // this.document.getElementById(id).parentElement.scrollIntoView({ block: 'start', behavior: 'smooth' });
-        console.log(id)
+        this.document.getElementById(id).parentElement.scrollIntoView({ block: 'start', behavior: 'smooth' });
     }
 
     getId(section): string {
-        console.log(section)
-        // return el.querySelector('a').getAttribute('id');
-        return '';
+        return section.querySelector('a').getAttribute('id');
     }
 
     onScroll() {
