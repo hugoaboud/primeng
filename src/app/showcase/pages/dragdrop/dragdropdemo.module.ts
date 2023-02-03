@@ -4,7 +4,7 @@ import { DragDropModule } from 'primeng/dragdrop';
 import { PanelModule } from 'primeng/panel';
 import { TableModule } from 'primeng/table';
 import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
+import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { DragDropDemo } from './dragdropdemo';
 import { DragDropDemoRoutingModule } from './dragdropdemo-routing.module';

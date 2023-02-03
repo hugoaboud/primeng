@@ -1,16 +1,16 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, NgZone, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Component, Inject, Input, NgZone, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { DocSectionNav, DocService } from '../../../service/doc.service';
+import { Doc } from 'src/app/showcase/domain/doc';
 
 @Component({
     selector: 'app-docsection-nav',
     templateUrl: './app.docsection-nav.component.html'
 })
 export class AppDocSectionNavComponent implements OnInit, OnDestroy {
-    visible!: boolean;
+    @Input() docs!: Doc[];
 
-    docs: DocSectionNav[];
+    visible!: boolean;
 
     subscription!: Subscription;
 
@@ -20,11 +20,7 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
 
     scrollListener!: any;
 
-    constructor(@Inject(DOCUMENT) private document: Document, private docService: DocService, private zone: NgZone, private renderer: Renderer2) {
-        this.subscription = this.docService.docSectionNavActive$.subscribe((value: boolean) => {
-            this.visible = value;
-        });
-    }
+    constructor(@Inject(DOCUMENT) private document: Document, private zone: NgZone, private renderer: Renderer2) {}
 
     ngOnInit(): void {
         this.sections = this.document.querySelectorAll('section');
@@ -42,17 +38,6 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
                 this.onScroll();
             });
         });
-
-        this.docs = [
-            {
-                id: '123',
-                label: 'inputtext',
-                doc: {
-                    name: 'inputtext',
-                    pathname: '/inputtext'
-                }
-            }
-        ];
     }
 
     scrollTo(id) {

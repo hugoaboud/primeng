@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
+import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { CheckboxDemo } from './checkboxdemo';
 import { CheckboxDemoRoutingModule } from './checkboxdemo-routing.module';

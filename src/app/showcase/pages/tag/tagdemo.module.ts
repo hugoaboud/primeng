@@ -4,7 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import { TabViewModule } from 'primeng/tabview';
 import { TagModule } from 'primeng/tag';
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
+import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { TagDemo } from './tagdemo';
 import { TagDemoRoutingModule } from './tagdemo-routing.module';

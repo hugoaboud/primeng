@@ -5,7 +5,7 @@ import { DividerModule } from 'primeng/divider';
 import { InputTextModule } from 'primeng/inputtext';
 import { PanelModule } from 'primeng/panel';
 import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
+import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { DividerDemo } from './dividerdemo';
 import { TagDemoRoutingModule } from './dividerdemo-routing.module';

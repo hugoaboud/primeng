@@ -2,40 +2,35 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, NgModule, ViewChild } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
-import { CodeHighlighterModule } from '../codehighlighter/app.codehighlighter.component';
-
 
 @Component({
     selector: 'app-code',
     templateUrl: './app.code.component.html'
 })
 export class AppCodeComponent {
-
     @Input() code;
-    @Input() hideToggleCode: boolean = false; 
+    @Input() hideToggleCode: boolean = false;
     @Input() hideCodeSandbox: boolean = false;
     @Input() hideStackBlitz: boolean = false;
-    
 
-@ViewChild('code') codeViewChild: ElementRef;
+    @ViewChild('code') codeViewChild: ElementRef;
 
-codeLang: string = 'html'
+    codeLang: string = 'html';
 
-constructor() { }
+    constructor() {}
 
-changeLang(lang: string) {
-    this.codeLang = lang
-}
+    changeLang(lang: string) {
+        this.codeLang = lang;
+    }
 
-   async copyCode(){
-    await navigator.clipboard.writeText(this.code[this.codeLang])
-}
-
+    async copyCode() {
+        await navigator.clipboard.writeText(this.code[this.codeLang]);
+    }
 }
 
 @NgModule({
-    imports: [CommonModule, ButtonModule, TooltipModule, CodeHighlighterModule],
+    imports: [CommonModule, ButtonModule, TooltipModule],
     exports: [AppCodeComponent],
     declarations: [AppCodeComponent]
 })
-export class AppCodeModule { }
+export class AppCodeModule {}

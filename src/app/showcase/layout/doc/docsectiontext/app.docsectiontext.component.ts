@@ -1,5 +1,4 @@
-import { CommonModule } from "@angular/common";
-import { Component, Input, NgModule, ViewChild } from "@angular/core";
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-docsectiontext',
@@ -8,10 +7,3 @@ import { Component, Input, NgModule, ViewChild } from "@angular/core";
 export class AppDocSectionTextComponent {
     @Input() title: string;
 }
-
-@NgModule({
-    imports: [CommonModule,],
-    exports: [AppDocSectionTextComponent],
-    declarations: [AppDocSectionTextComponent]
-})
-export class AppDocSectionTextModule { }

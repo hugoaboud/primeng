@@ -8,7 +8,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { PanelModule } from 'primeng/panel';
 import { RatingModule } from 'primeng/rating';
 import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
+import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { DataViewDemo } from './dataviewdemo';
 import { DataViewDemoRoutingModule } from './dataviewdemo-routing.module';

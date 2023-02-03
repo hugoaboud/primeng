@@ -1,6 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input, NgModule } from '@angular/core';
-import { AppDocSectionTextModule } from '../docsectiontext/app.docsectiontext.component';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-docapisection',
@@ -9,10 +7,3 @@ import { AppDocSectionTextModule } from '../docsectiontext/app.docsectiontext.co
 export class AppDocApiSection {
     @Input() docs;
 }
-
-@NgModule({
-    imports: [CommonModule, AppDocSectionTextModule],
-    exports: [AppDocApiSection],
-    declarations: [AppDocApiSection]
-})
-export class DocApiSectionModule {}

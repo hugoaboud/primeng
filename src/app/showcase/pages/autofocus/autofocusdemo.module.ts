@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AutoFocusModule } from 'primeng/autofocus';
 import { InputTextModule } from 'primeng/inputtext';
 import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
+import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { AutoFocusDemoRoutingModule } from './autofocusdemo-routing.module';
 import { AutoFocusDemo } from './autofocusdemo.component';

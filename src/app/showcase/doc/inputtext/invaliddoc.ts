@@ -1,9 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { InputTextModule } from 'primeng/inputtext';
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
-import { AppDocSectionTextModule } from 'src/app/showcase/layout/doc//docsectiontext/app.docsectiontext.component';
+import { Component } from '@angular/core';
 
 interface CodeLang {
     html?: string;
@@ -38,10 +33,3 @@ export class InputText {
 }`
     };
 }
-
-@NgModule({
-    imports: [CommonModule, AppCodeModule, AppDocSectionTextModule, InputTextModule, FormsModule],
-    exports: [InvalidDocComponent],
-    declarations: [InvalidDocComponent]
-})
-export class InvalidDocModule {}

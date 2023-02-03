@@ -1,13 +1,11 @@
-import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, Input, NgModule, ViewChild } from '@angular/core';
-
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'code-highlighter',
     templateUrl: './app.codehighlighter.component.html'
 })
 export class CodeHighlighterComponent implements AfterViewInit {
-    constructor() { }
+    constructor() {}
 
     @ViewChild('codeElement') codeElement: ElementRef;
 
@@ -22,15 +20,8 @@ export class CodeHighlighterComponent implements AfterViewInit {
             window['Prism'].highlightElement(this.codeElement.nativeElement);
         }
     }
-    
+
     ngOnInit() {
         this.languageClassName = 'pt-5 language-' + this.lang;
     }
 }
-
-@NgModule({
-    imports: [CommonModule],
-    exports: [CodeHighlighterComponent],
-    declarations: [CodeHighlighterComponent]
-})
-export class CodeHighlighterModule { }

@@ -4,7 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
 import { TabViewModule } from 'primeng/tabview';
 import { ToastModule } from 'primeng/toast';
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
+import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { MenuDemo } from './menudemo';
 import { MenuDemoRoutingModule } from './menudemo-routing.module';

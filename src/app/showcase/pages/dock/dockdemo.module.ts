@@ -9,7 +9,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { TerminalModule } from 'primeng/terminal';
 import { ToastModule } from 'primeng/toast';
 import { TreeModule } from 'primeng/tree';
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
+import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { DockDemo } from './dockdemo';
 import { DockDemoRoutingModule } from './dockdemo-routing.module';

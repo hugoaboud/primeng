@@ -4,7 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { CarouselModule } from 'primeng/carousel';
 import { TabViewModule } from 'primeng/tabview';
 import { ToastModule } from 'primeng/toast';
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
+import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { CarouselDemo } from './carouseldemo';
 import { CarouselDemoRoutingModule } from './carouseldemo-routing.module';

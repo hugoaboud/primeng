@@ -4,7 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { TabViewModule } from 'primeng/tabview';
 import { ToastModule } from 'primeng/toast';
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
+import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
 import { DynamicDialogModule } from '../../../components/dynamicdialog/dynamicdialog';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { DynamicDialogDemo } from './dynamicdialogdemo';

@@ -1,10 +1,4 @@
-import { CommonModule } from '@angular/common';
-import { Component, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { InputTextModule } from 'primeng/inputtext';
-import { KeyFilterModule } from 'primeng/keyfilter';
-import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { AppDocSectionTextModule } from '../../layout/doc/docsectiontext/app.docsectiontext.component';
+import { Component } from '@angular/core';
 
 interface CodeLang {
     html?: string;
@@ -38,10 +32,3 @@ export class InputText {
 }`
     };
 }
-
-@NgModule({
-    imports: [CommonModule, AppCodeModule, AppDocSectionTextModule, InputTextModule, FormsModule, KeyFilterModule],
-    exports: [KeyFilterDocComponent],
-    declarations: [KeyFilterDocComponent]
-})
-export class KeyFilterDocModule {}

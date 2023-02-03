@@ -10,7 +10,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { StepsModule } from 'primeng/steps';
 import { TabViewModule } from 'primeng/tabview';
 import { ToastModule } from 'primeng/toast';
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
+import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { ConfirmationDemo } from './confirmationdemo';
 import { PaymentDemo } from './paymentdemo';

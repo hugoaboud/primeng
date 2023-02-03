@@ -6,7 +6,7 @@ import { CascadeSelectModule } from 'primeng/cascadeselect';
 import { PanelModule } from 'primeng/panel';
 import { TabViewModule } from 'primeng/tabview';
 import { TreeSelectModule } from 'primeng/treeselect';
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
+import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { TreeSelectDemo } from './treeselectdemo';
 import { TreeSelectDemoRoutingModule } from './treeselectdemo-routing.module';

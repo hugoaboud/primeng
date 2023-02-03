@@ -5,7 +5,7 @@ import { GalleriaModule } from 'primeng/galleria';
 import { TabViewModule } from 'primeng/tabview';
 import { GalleriaDemoRoutingModule } from './galleriademo-routing.module';
 
-import { AppCodeModule } from 'src/app/showcase/layout/doc//code/app.code.component';
+import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
 import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
 import { GalleriaAdvancedDemo } from './galleriaadvanceddemo';
 import { GalleriaAutoPlayDemo } from './galleriaautoplaydemo';
