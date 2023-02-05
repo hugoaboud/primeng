@@ -69,7 +69,7 @@ export class AvatarDemo {
             component: AvatarStyleDocComponent
         },
         {
-            id: 'stylingofavatar',
+            id: 'stylingofavatargroup',
             label: 'Styling of AvatarGroup',
             component: AvatarGroupStyleDocComponent
         },

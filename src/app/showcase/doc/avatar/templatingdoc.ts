@@ -8,8 +8,8 @@ import { CodeLang } from '../../domain/codelang';
         <p>Content can easily be customized with the dynamic content instead of using the built-in modes.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
-            <p-avatar>
-                Content
+            <p-avatar size="xlarge">
+                <span class="text-base">Content</span>
             </p-avatar>
         </div>
         <app-code [code]="code"></app-code>
@@ -23,8 +23,8 @@ export class TemplatingDocComponent {
 
     code: CodeLang = {
         html: `
-<p-avatar>
-    Content
+<p-avatar size="xlarge">
+    <span class="text-base">Content</span>
 </p-avatar>`,
         typescript: `
 import { Component } from '@angular/core';
