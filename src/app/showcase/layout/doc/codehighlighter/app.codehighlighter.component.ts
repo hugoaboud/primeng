@@ -1,27 +1,39 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild, TemplateRef, ChangeDetectorRef, SimpleChanges, OnChanges, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Code } from 'src/app/showcase/domain/code';
 
 @Component({
     selector: 'code-highlighter',
-    templateUrl: './app.codehighlighter.component.html'
+    templateUrl: './app.codehighlighter.component.html',
 })
-export class CodeHighlighterComponent implements AfterViewInit {
-    constructor() {}
+export class CodeHighlighterComponent implements OnInit, OnChanges {
 
-    @ViewChild('codeElement') codeElement: ElementRef;
+    @ViewChild('codeElement',  { static: true }) codeElement: ElementRef;
+    
+    @Input() lang!: string;
+    
+    @Input() code!: Code;
 
-    @Input() lang: string;
+    languageClassName!: string;
 
-    @Input() code: string;
+    codeTemplate: TemplateRef<any>;
 
-    languageClassName: string = '';
-
-    ngAfterViewInit() {
-        if (window['Prism']) {
-            window['Prism'].highlightElement(this.codeElement.nativeElement);
-        }
-    }
+    constructor(private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
-        this.languageClassName = 'pt-5 language-' + this.lang;
+        this.setClassName();
+    }
+
+    ngOnChanges(changes: SimpleChanges) {
+        if (changes.code && changes.code.currentValue) {
+            this.code = changes.code.currentValue;
+        }
+        if (changes.lang && changes.lang.currentValue) {
+            this.lang = changes.lang.currentValue === 'typescript' ? 'tsx' : changes.lang.currentValue;
+        }
+
+    }
+
+    setClassName() {
+        this.languageClassName = 'language-' + this.lang;
     }
 }

@@ -1,26 +1,26 @@
 <div class="relative doc-section-code">
-    <div class="flex align-items-center justify-content-end absolute z-2 gap-3" style="right: 0.75rem; top: 0.75rem">
-        <button *ngIf="code && code.html && !hideToggleCode" pButton label="HTML" pTooltip="HTML" tooltipPosition="bottom"
+    <div class="flex align-items-center justify-content-end absolute z-2 gap-3" *ngIf="!hideToggleCode" style="right: 0.75rem; top: 1.75rem">
+        <button *ngIf="code.html" pButton label="HTML" pTooltip="HTML" tooltipPosition="bottom"
             tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('html')"
             class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
-            [ngClass]="{'doc-section-code-active text-primary':codeLang === 'html'}"></button>
-        <button *ngIf="code && code.typescript" pButton label="TS" pTooltip="Typescript" tooltipPosition="bottom"
+            [ngClass]="{'doc-section-code-active text-primary':code === 'html'}">
+        </button>
+        <button *ngIf="code.typescript || code.module" pButton [label]="code.typescript ? 'TS' : 'Module'" [pTooltip]="code.typescript ? 'TypeScript' : 'Module'" tooltipPosition="bottom"
             tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('typescript')"
             class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
-            [ngClass]="{'doc-section-code-active text-primary':codeLang === 'typescript'}"></button>
-        <button *ngIf="code && code.scss && !hideToggleCode" pButton label="SCSS" pTooltip="SCSS" tooltipPosition="bottom"
+            [ngClass]="{'doc-section-code-active text-primary':code === 'typescript'}">
+        </button>
+        <button *ngIf="code.scss" pButton label="SCSS" pTooltip="SCSS" tooltipPosition="bottom"
             tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('scss')"
             class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
-            [ngClass]="{'doc-section-code-active text-primary':codeLang === 'scss'}"></button>
-        <button *ngIf="code && code.module && !hideToggleCode" pButton label="Module" pTooltip="Module" tooltipPosition="bottom"
-            tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('module')"
-            class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
-            [ngClass]="{'doc-section-code-active text-primary':codeLang === 'module'}"></button>
+            [ngClass]="{'doc-section-code-active text-primary':code === 'scss'}">
+        </button>
 
-        <button *ngIf="code && code.data && !hideToggleCode" pButton icon="pi pi-database" pTooltip="View Data"
+        <button *ngIf="code.data" pButton icon="pi pi-database" pTooltip="View Data"
             tooltipPosition="bottom" tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('data')"
             class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
-            [ngClass]="{'doc-section-code-active text-primary':codeLang === 'data'}"></button>
+            [ngClass]="{'doc-section-code-active text-primary':code === 'data'}">
+        </button>
 
         <button pButton pTooltip="Edit in CodeSandbox" tooltipPosition="bottom"
             tooltipStyleClass="doc-section-code-tooltip" *ngIf="!hideCodeSandbox"
@@ -48,19 +48,6 @@
     </div>
 
 
-    <code-highlighter *ngIf="codeLang === 'typescript'" lang="tsx" [code]="code && code.typescript">
-    </code-highlighter>
-
-    <code-highlighter *ngIf="codeLang === 'html'" lang="html" [code]="code && code.html">
-    </code-highlighter>
-
-    <code-highlighter *ngIf="codeLang === 'scss'" lang="scss" [code]="code && code.scss">
-    </code-highlighter>
-
-    <code-highlighter *ngIf="codeLang === 'data'" lang="data" [code]="code && code.scss">
-    </code-highlighter>
-
-    <code-highlighter *ngIf="codeLang === 'module'" lang="data" [code]="code && code.module">
-    </code-highlighter>
+    <code-highlighter [lang]="lang" [code]="getCode(lang)"></code-highlighter>
 
 </div>

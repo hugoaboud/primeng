@@ -1,5 +1,5 @@
-<pre>
-    <code #codeElement [class]="languageClassName">
+<pre [ngClass]="'language-' + lang">
+    <code #codeElement [ngClass]="'language-' + lang">
         {{code}}
     </code>
 </pre>

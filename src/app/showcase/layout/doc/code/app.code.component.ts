@@ -2,14 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, NgModule, ViewChild } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
+import { Code } from 'src/app/showcase/domain/code';
 import { CodeHighlighterComponent } from '../codehighlighter/app.codehighlighter.component';
-
 @Component({
     selector: 'app-code',
     templateUrl: './app.code.component.html'
 })
 export class AppCodeComponent {
-    @Input() code;
+    @Input() code: Code;
 
     @Input() hideToggleCode: boolean = false;
     
@@ -19,16 +19,28 @@ export class AppCodeComponent {
 
     @ViewChild('code') codeViewChild: ElementRef;
 
-    codeLang: string = 'html';
+    lang!: string;
 
     constructor() {}
 
+    ngOnInit() {
+        this.lang = this.getLang();
+    }
+
     changeLang(lang: string) {
-        this.codeLang = lang;
+        this.lang = lang;
+    }
+
+    getLang(): string {
+        return Object.keys(this.code)[0];
     }
 
     async copyCode() {
-        await navigator.clipboard.writeText(this.code[this.codeLang]);
+        await navigator.clipboard.writeText(this.code[this.lang]);
+    }
+
+    getCode(lang: string) {
+        return this.code[lang];
     }
 }
 
