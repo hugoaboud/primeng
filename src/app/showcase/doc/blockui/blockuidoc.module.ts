@@ -9,4 +9,4 @@ import { AppCodeModule } from '../../layout/doc/code/app.code.component';
     declarations: [],
     exports: []
 })
-export class BadgeDocModule {}
+export class BlockUIDocModule {}
