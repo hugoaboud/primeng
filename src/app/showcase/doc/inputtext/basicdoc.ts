@@ -1,11 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-interface CodeLang {
-    html?: string;
-    typescript?: string;
-    scss?: string;
-    data?: string;
-}
+import { CodeLang } from '../../domain/codelang';
 
 @Component({
     selector: 'basic-doc',
@@ -30,7 +24,7 @@ export class BasicDocComponent {
         html: `
 <input type="text" pInputText [(ngModel)]="value1">`,
         typescript: `
-export class InputText {
+export class InputTextDemo {
     value:1 string;
 }`
     };

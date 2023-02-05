@@ -1,11 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-
-interface CodeLang {
-    html?: string;
-    typescript?: string;
-    scss?: string;
-    data?: string;
-}
+import { Component, Input } from '@angular/core';
+import { CodeLang } from '../../domain/codelang';
 
 @Component({
     selector: 'import-doc',
@@ -22,8 +16,6 @@ export class ImportDocComponent {
     @Input() title: string
 
     code: CodeLang = {
-        html: `
-        import { InputTextModule } from 'primeng/inputtext';
-        `
+        html: `import { InputTextModule } from 'primeng/inputtext';`
     };
 }

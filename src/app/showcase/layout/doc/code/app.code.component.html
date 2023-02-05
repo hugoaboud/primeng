@@ -12,6 +12,10 @@
             tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('scss')"
             class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
             [ngClass]="{'doc-section-code-active text-primary':codeLang === 'scss'}"></button>
+        <button *ngIf="code && code.module && !hideToggleCode" pButton label="Module" pTooltip="Module" tooltipPosition="bottom"
+            tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('module')"
+            class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
+            [ngClass]="{'doc-section-code-active text-primary':codeLang === 'module'}"></button>
 
         <button *ngIf="code && code.data && !hideToggleCode" pButton icon="pi pi-database" pTooltip="View Data"
             tooltipPosition="bottom" tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('data')"
@@ -55,4 +59,8 @@
 
     <code-highlighter *ngIf="codeLang === 'data'" lang="data" [code]="code && code.scss">
     </code-highlighter>
+
+    <code-highlighter *ngIf="codeLang === 'module'" lang="data" [code]="code && code.module">
+    </code-highlighter>
+
 </div>

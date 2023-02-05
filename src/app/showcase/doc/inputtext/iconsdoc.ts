@@ -1,11 +1,5 @@
 import { Component, Input } from '@angular/core';
-
-interface CodeLang {
-    html?: string;
-    typescript?: string;
-    scss?: string;
-    data?: string;
-}
+import { CodeLang } from '../../domain/codelang';
 
 @Component({
     selector: 'icons-doc',

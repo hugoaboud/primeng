@@ -10,8 +10,11 @@ import { CodeHighlighterComponent } from '../codehighlighter/app.codehighlighter
 })
 export class AppCodeComponent {
     @Input() code;
+
     @Input() hideToggleCode: boolean = false;
+    
     @Input() hideCodeSandbox: boolean = false;
+    
     @Input() hideStackBlitz: boolean = false;
 
     @ViewChild('code') codeViewChild: ElementRef;
