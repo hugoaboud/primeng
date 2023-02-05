@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'avatargroup-doc',
@@ -27,7 +27,7 @@ export class AvatarGroupDocComponent {
 
     @Input() title: string;
 
-    code: CodeLang = {
+    code: Code = {
         html: `
 <p-avatarGroup styleClass="mb-3">
     <p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" size="large" shape="circle"></p-avatar>

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'size-doc',
@@ -19,7 +19,7 @@ export class SizeDocComponent {
 
     @Input() title: string
 
-    code: CodeLang = {
+    code: Code = {
         html: `
 <p-avatar label="P" size="large"></p-avatar>`,
         typescript: `

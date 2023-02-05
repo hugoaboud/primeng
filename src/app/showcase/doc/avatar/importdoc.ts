@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'import-doc',
@@ -14,7 +14,7 @@ export class ImportDocComponent {
 
     @Input() title: string
 
-    code: CodeLang = {
+    code: Code = {
         html: `
 import { AvatarModule } from 'primeng/avatar';`
     };

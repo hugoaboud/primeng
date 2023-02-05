@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'basic-doc',
@@ -20,7 +20,7 @@ export class BasicDocComponent {
 
     @Input() title: string
 
-    code: CodeLang = {
+    code: Code = {
         html: `
 <input type="text" pInputText [(ngModel)]="value1">`,
         typescript: `

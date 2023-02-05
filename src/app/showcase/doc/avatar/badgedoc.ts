@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'badge-doc',
@@ -19,7 +19,7 @@ export class BadgeDocComponent {
 
     @Input() title: string
 
-    code: CodeLang = {
+    code: Code = {
         html: `
 <p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" pBadge value="4" severity="danger" size="xlarge"></p-avatar>`,
         typescript: `

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'keyfilter-doc',
@@ -20,7 +20,7 @@ export class KeyFilterDocComponent {
 
     @Input() title: string
 
-    code: CodeLang = {
+    code: Code = {
         html: `
 <input pInputText pKeyFilter="int" placeholder="Integers" [(ngModel)]="value1" />`,
 

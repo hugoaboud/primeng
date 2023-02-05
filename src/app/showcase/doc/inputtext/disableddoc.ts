@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'disabled-doc',
@@ -22,7 +22,7 @@ export class DisabledDocComponent {
 
     @Input() title: string
     
-    code: CodeLang = {
+    code: Code = {
         html: `
 <input id="disabled-input" type="text" pInputText [disabled]="true" [(ngModel)]="value1" />`,
 

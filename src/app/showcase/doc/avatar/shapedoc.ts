@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'shape-doc',
@@ -19,7 +19,7 @@ export class ShapeDocComponent {
 
     @Input() title: string
 
-    code: CodeLang = {
+    code: Code = {
         html: `
     <p-avatar label="P" shape="circle"></p-avatar>`,
         typescript: `

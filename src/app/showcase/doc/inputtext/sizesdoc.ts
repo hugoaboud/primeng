@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'sizes-doc',
@@ -26,7 +26,7 @@ export class SizesDocComponent {
 
     @Input() title: string
     
-    code: CodeLang = {
+    code: Code = {
         html: `
 <input pInputText type="text" class="p-inputtext-sm" placeholder="Small" [(ngModel)]="value1" />
 <input pInputText type="text" placeholder="Normal" [(ngModel)]="value2" />

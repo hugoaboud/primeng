@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'templating-doc',
@@ -21,7 +21,7 @@ export class TemplatingDocComponent {
 
     @Input() title: string
 
-    code: CodeLang = {
+    code: Code = {
         html: `
 <p-avatar size="xlarge">
     <span class="text-base">Content</span>

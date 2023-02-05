@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'icon-doc',
@@ -35,7 +35,7 @@ export class IconDocComponent {
 
     @Input() title: string
 
-    code: CodeLang = {
+    code: Code = {
         html: `
 <div class="grid card grid-nogutter">
     <div class="col-12 md:col-4">

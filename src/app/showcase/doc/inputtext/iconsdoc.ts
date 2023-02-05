@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'icons-doc',
@@ -30,7 +30,7 @@ export class IconsDocComponent {
 
     @Input() title: string
     
-    code: CodeLang = {
+    code: Code = {
         html: `
 <div class="card flex flex-wrap justify-content-center gap-3">
     <span class="p-input-icon-left">

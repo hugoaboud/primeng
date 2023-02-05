@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'floatlabel-doc',
@@ -25,7 +25,7 @@ export class FloatLabelDocComponent {
 
     @Input() title: string
     
-    code: CodeLang = {
+    code: Code = {
         html: `
 <span class="p-float-label">
     <input pInputText id="username" [(ngModel)]="value1" />

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'helptext-doc',
@@ -22,7 +22,7 @@ export class HelpTextDocComponent {
 
     @Input() title: string
 
-    code: CodeLang = {
+    code: Code = {
         html: `
 <div class="flex flex-column gap-2">
     <label htmlFor="username">Username</label>

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CodeLang } from '../../domain/codelang';
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'invalid-doc',
@@ -20,7 +20,7 @@ export class InvalidDocComponent {
 
     @Input() title: string
     
-    code: CodeLang = {
+    code: Code = {
         html: `
 <input pInputText class="ng-invalid ng-dirty" [(ngModel)]="value1" />
 `,

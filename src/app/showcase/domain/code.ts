@@ -1,4 +1,4 @@
-export interface CodeLang {
+export interface Code {
     html?: string;
     typescript?: string;
     scss?: string;
