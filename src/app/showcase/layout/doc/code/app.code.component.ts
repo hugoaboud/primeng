@@ -12,9 +12,9 @@ export class AppCodeComponent {
     @Input() code: Code;
 
     @Input() hideToggleCode: boolean = false;
-    
+
     @Input() hideCodeSandbox: boolean = false;
-    
+
     @Input() hideStackBlitz: boolean = false;
 
     @ViewChild('code') codeViewChild: ElementRef;

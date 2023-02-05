@@ -3,14 +3,13 @@ import { Code } from 'src/app/showcase/domain/code';
 
 @Component({
     selector: 'code-highlighter',
-    templateUrl: './app.codehighlighter.component.html',
+    templateUrl: './app.codehighlighter.component.html'
 })
 export class CodeHighlighterComponent implements OnInit, OnChanges {
+    @ViewChild('codeElement', { static: true }) codeElement: ElementRef;
 
-    @ViewChild('codeElement',  { static: true }) codeElement: ElementRef;
-    
     @Input() lang!: string;
-    
+
     @Input() code!: Code;
 
     languageClassName!: string;
@@ -30,7 +29,6 @@ export class CodeHighlighterComponent implements OnInit, OnChanges {
         if (changes.lang && changes.lang.currentValue) {
             this.lang = changes.lang.currentValue === 'typescript' ? 'tsx' : changes.lang.currentValue;
         }
-
     }
 
     setClassName() {

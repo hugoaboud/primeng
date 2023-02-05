@@ -16,9 +16,9 @@ import { Code } from '../../domain/code';
 export class KeyFilterDocComponent {
     value1: string;
 
-    @Input() id: string
+    @Input() id: string;
 
-    @Input() title: string
+    @Input() title: string;
 
     code: Code = {
         html: `

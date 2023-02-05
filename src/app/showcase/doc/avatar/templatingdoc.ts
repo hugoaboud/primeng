@@ -5,7 +5,7 @@ import { Code } from '../../domain/code';
     selector: 'templating-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-        <p>Content can easily be customized with the dynamic content instead of using the built-in modes.</p>
+            <p>Content can easily be customized with the dynamic content instead of using the built-in modes.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
             <p-avatar size="xlarge">
@@ -16,10 +16,9 @@ import { Code } from '../../domain/code';
     </div>`
 })
 export class TemplatingDocComponent {
+    @Input() id: string;
 
-    @Input() id: string
-
-    @Input() title: string
+    @Input() title: string;
 
     code: Code = {
         html: `

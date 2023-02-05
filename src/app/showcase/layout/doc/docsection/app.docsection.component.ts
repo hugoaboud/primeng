@@ -1,9 +1,9 @@
 import { ChangeDetectorRef, Component, ComponentFactoryResolver, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 
 interface Props {
-    id: string,
-    title: string,
-    component: any
+    id: string;
+    title: string;
+    component: any;
 }
 
 @Component({
@@ -34,8 +34,8 @@ export class AppDocSectionsComponent implements OnInit {
 
         if (newComponent.component !== undefined) {
             let component = viewContainerRef.createComponent<Props>(newComponent.component);
-            component.instance.id = newComponent.id
-            component.instance.title = newComponent.label
+            component.instance.id = newComponent.id;
+            component.instance.title = newComponent.label;
         }
     }
 }

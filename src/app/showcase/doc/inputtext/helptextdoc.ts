@@ -4,7 +4,7 @@ import { Code } from '../../domain/code';
 @Component({
     selector: 'helptext-doc',
     template: ` <div>
-    <app-docsectiontext [title]="title" [id]="id"> An advisory text can be defined with the semantic <i>small</i> tag. </app-docsectiontext>
+        <app-docsectiontext [title]="title" [id]="id"> An advisory text can be defined with the semantic <i>small</i> tag. </app-docsectiontext>
         <div class="card flex justify-content-center">
             <div class="flex flex-column gap-2">
                 <label htmlFor="username">Username</label>
@@ -18,9 +18,9 @@ import { Code } from '../../domain/code';
 export class HelpTextDocComponent {
     value1: string;
 
-    @Input() id: string
+    @Input() id: string;
 
-    @Input() title: string
+    @Input() title: string;
 
     code: Code = {
         html: `

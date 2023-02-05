@@ -9,10 +9,9 @@ import { Code } from '../../domain/code';
     </div>`
 })
 export class ImportDocComponent {
+    @Input() id: string;
 
-    @Input() id: string
-
-    @Input() title: string
+    @Input() title: string;
 
     code: Code = {
         html: `

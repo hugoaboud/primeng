@@ -5,14 +5,14 @@ import { Code } from '../../domain/code';
     selector: 'directive-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-        <p>Following is the list of structural style classes, for theming classes visit <a href="#" [routerLink]="['/theming']">theming</a> page.</p>
+            <p>Following is the list of structural style classes, for theming classes visit <a href="#" [routerLink]="['/theming']">theming</a> page.</p>
             <div class="doc-tablewrapper">
                 <table class="doc-table">
                     <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Element</th>
-                    </tr>
+                        <tr>
+                            <th>Name</th>
+                            <th>Element</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -58,8 +58,7 @@ import { Code } from '../../domain/code';
     </div>`
 })
 export class StyleDocComponent {
+    @Input() id: string;
 
-    @Input() id: string
-
-    @Input() title: string
+    @Input() title: string;
 }

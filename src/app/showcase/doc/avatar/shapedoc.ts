@@ -14,10 +14,9 @@ import { Code } from '../../domain/code';
     </div>`
 })
 export class ShapeDocComponent {
+    @Input() id: string;
 
-    @Input() id: string
-
-    @Input() title: string
+    @Input() title: string;
 
     code: Code = {
         html: `

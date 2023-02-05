@@ -15,13 +15,13 @@ import { Code } from '../../domain/code';
 })
 export class DisabledDocComponent {
     value1: string;
-    
+
     value2: string;
 
-    @Input() id: string
+    @Input() id: string;
 
-    @Input() title: string
-    
+    @Input() title: string;
+
     code: Code = {
         html: `
 <input id="disabled-input" type="text" pInputText [disabled]="true" [(ngModel)]="value1" />`,

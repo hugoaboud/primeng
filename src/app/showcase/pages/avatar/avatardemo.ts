@@ -82,6 +82,6 @@ export class AvatarDemo {
             id: 'avatargroupprops',
             label: 'Properties of AvatarGroup',
             component: AvatarGroupPropsDocComponent
-        },
+        }
     ];
 }

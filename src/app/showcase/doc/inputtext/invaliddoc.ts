@@ -16,10 +16,10 @@ import { Code } from '../../domain/code';
 export class InvalidDocComponent {
     value1: string;
 
-    @Input() id: string
+    @Input() id: string;
 
-    @Input() title: string
-    
+    @Input() title: string;
+
     code: Code = {
         html: `
 <input pInputText class="ng-invalid ng-dirty" [(ngModel)]="value1" />

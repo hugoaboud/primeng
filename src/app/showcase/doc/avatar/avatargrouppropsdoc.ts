@@ -33,8 +33,7 @@ import { Component, Input } from '@angular/core';
     </div>`
 })
 export class AvatarGroupPropsDocComponent {
+    @Input() id: string;
 
-    @Input() id: string
-
-    @Input() title: string
+    @Input() title: string;
 }

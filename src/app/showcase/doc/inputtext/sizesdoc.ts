@@ -17,15 +17,15 @@ import { Code } from '../../domain/code';
 })
 export class SizesDocComponent {
     value1: string;
-    
+
     value2: string;
-    
+
     value3: string;
 
-    @Input() id: string
+    @Input() id: string;
 
-    @Input() title: string
-    
+    @Input() title: string;
+
     code: Code = {
         html: `
 <input pInputText type="text" class="p-inputtext-sm" placeholder="Small" [(ngModel)]="value1" />

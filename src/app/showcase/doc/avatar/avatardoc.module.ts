@@ -23,7 +23,35 @@ import { AvatarGroupPropsDocComponent } from './avatargrouppropsdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, InputTextModule, FormsModule, AppDocModule, AvatarModule, AvatarGroupModule],
-    declarations: [ImportDocComponent, LabelDocComponent, IconDocComponent, AvatarGroupDocComponent, ImageDocComponent, AvatarStyleDocComponent, AvatarGroupStyleDocComponent, ShapeDocComponent, SizeDocComponent, BadgeDocComponent, TemplatingDocComponent, AvatarPropsDocComponent, AvatarGroupPropsDocComponent],
-    exports: [ImportDocComponent, LabelDocComponent, IconDocComponent, AvatarGroupDocComponent, ImageDocComponent, AvatarStyleDocComponent, AvatarGroupStyleDocComponent, ShapeDocComponent, SizeDocComponent, BadgeDocComponent, TemplatingDocComponent, AvatarPropsDocComponent, AvatarGroupPropsDocComponent]
+    declarations: [
+        ImportDocComponent,
+        LabelDocComponent,
+        IconDocComponent,
+        AvatarGroupDocComponent,
+        ImageDocComponent,
+        AvatarStyleDocComponent,
+        AvatarGroupStyleDocComponent,
+        ShapeDocComponent,
+        SizeDocComponent,
+        BadgeDocComponent,
+        TemplatingDocComponent,
+        AvatarPropsDocComponent,
+        AvatarGroupPropsDocComponent
+    ],
+    exports: [
+        ImportDocComponent,
+        LabelDocComponent,
+        IconDocComponent,
+        AvatarGroupDocComponent,
+        ImageDocComponent,
+        AvatarStyleDocComponent,
+        AvatarGroupStyleDocComponent,
+        ShapeDocComponent,
+        SizeDocComponent,
+        BadgeDocComponent,
+        TemplatingDocComponent,
+        AvatarPropsDocComponent,
+        AvatarGroupPropsDocComponent
+    ]
 })
 export class AvatarDocModule {}

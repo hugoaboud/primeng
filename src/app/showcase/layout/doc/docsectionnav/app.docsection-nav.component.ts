@@ -47,7 +47,7 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
     }
 
     onScroll() {
-        const sections = this.document.querySelectorAll('section')
+        const sections = this.document.querySelectorAll('section');
         const topbarEl = this.document.getElementsByClassName('layout-topbar')[0];
 
         sections.forEach((section) => {

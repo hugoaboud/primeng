@@ -18,13 +18,13 @@ import { Code } from '../../domain/code';
 })
 export class FloatLabelDocComponent {
     value1: string;
-    
+
     value2: string;
 
-    @Input() id: string
+    @Input() id: string;
 
-    @Input() title: string
-    
+    @Input() title: string;
+
     code: Code = {
         html: `
 <span class="p-float-label">

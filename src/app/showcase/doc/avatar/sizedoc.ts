@@ -5,7 +5,7 @@ import { Code } from '../../domain/code';
     selector: 'size-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-        <p><i>size</i> property defines the size of the Avatar with <i>large</i> and <i>xlarge</i> as possible values.</p>
+            <p><i>size</i> property defines the size of the Avatar with <i>large</i> and <i>xlarge</i> as possible values.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
             <p-avatar label="P" size="large"></p-avatar>
@@ -14,10 +14,9 @@ import { Code } from '../../domain/code';
     </div>`
 })
 export class SizeDocComponent {
+    @Input() id: string;
 
-    @Input() id: string
-
-    @Input() title: string
+    @Input() title: string;
 
     code: Code = {
         html: `

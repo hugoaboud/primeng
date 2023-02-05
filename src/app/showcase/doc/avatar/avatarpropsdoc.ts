@@ -63,8 +63,7 @@ import { Component, Input } from '@angular/core';
     </div>`
 })
 export class AvatarPropsDocComponent {
+    @Input() id: string;
 
-    @Input() id: string
-
-    @Input() title: string
+    @Input() title: string;
 }

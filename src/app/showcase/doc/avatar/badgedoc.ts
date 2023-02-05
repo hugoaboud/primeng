@@ -5,7 +5,7 @@ import { Code } from '../../domain/code';
     selector: 'badge-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-        <p>A <i>badge</i> can be added to an Avatar with the <a href="#" [routerLink]="['/badge']">Badge</a> directive.</p>
+            <p>A <i>badge</i> can be added to an Avatar with the <a href="#" [routerLink]="['/badge']">Badge</a> directive.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
             <p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" pBadge value="4" severity="danger" size="xlarge"></p-avatar>
@@ -14,10 +14,9 @@ import { Code } from '../../domain/code';
     </div>`
 })
 export class BadgeDocComponent {
+    @Input() id: string;
 
-    @Input() id: string
-
-    @Input() title: string
+    @Input() title: string;
 
     code: Code = {
         html: `

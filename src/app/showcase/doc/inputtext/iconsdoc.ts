@@ -23,13 +23,13 @@ import { Code } from '../../domain/code';
 })
 export class IconsDocComponent {
     value1: string;
-    
+
     value2: string;
 
-    @Input() id: string
+    @Input() id: string;
 
-    @Input() title: string
-    
+    @Input() title: string;
+
     code: Code = {
         html: `
 <div class="card flex flex-wrap justify-content-center gap-3">
