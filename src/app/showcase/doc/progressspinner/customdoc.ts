@@ -21,7 +21,7 @@ export class CustomDocComponent {
     code: Code = {
         html: `
 <div class="card">
-    <p-progressSpinnner styleClass="w-4rem h-4rem" strokeWidth="8" fill="var(--surface-ground)" animationDuration=".5s"/>
+    <p-progressSpinner styleClass="w-4rem h-4rem" strokeWidth="8" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
 </div>`,
         typescript: `
 import { Component } from '@angular/core';
