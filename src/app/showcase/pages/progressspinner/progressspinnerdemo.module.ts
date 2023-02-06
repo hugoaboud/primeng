@@ -1,14 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ProgressSpinnerModule } from 'primeng/progressspinner';
-import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
-import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
+import { ProgressSpinnerDocModule } from '../../doc/progressspinner/progressspinnerdoc.module';
+import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { ProgressSpinnerDemo } from './progressspinnerdemo';
 import { ProgressSpinnerDemoRoutingModule } from './progressspinnerdemo-routing.module';
 
 @NgModule({
-    imports: [CommonModule, ProgressSpinnerDemoRoutingModule, ProgressSpinnerModule, TabViewModule, AppDemoActionsModule, AppCodeModule],
+    imports: [CommonModule, ProgressSpinnerDemoRoutingModule, AppDocModule, ProgressSpinnerDocModule],
     declarations: [ProgressSpinnerDemo]
 })
 export class ProgressSpinnerDemoModule {}
