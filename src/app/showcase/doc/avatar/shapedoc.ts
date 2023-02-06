@@ -5,10 +5,11 @@ import { Code } from '../../domain/code';
     selector: 'shape-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>Avatar comes in two different styles specified with the <i>shape</i> property, "square" is the default and "circle" is the alternative.</p>
+            <p>Avatar comes in two different styles specified with the <i>shape</i> property, <i>square</i> is the default and <i>circle</i> is the alternative.</p>
         </app-docsectiontext>
-        <div class="card flex justify-content-center">
+        <div class="card flex justify-content-center gap-2">
             <p-avatar label="P" shape="circle"></p-avatar>
+            <p-avatar label="T"></p-avatar>
         </div>
         <app-code [code]="code"></app-code>
     </div>`
@@ -20,8 +21,9 @@ export class ShapeDocComponent {
 
     code: Code = {
         html: `
-<div class="card flex justify-content-center">
+<div class="card flex justify-content-center gap-2">
     <p-avatar label="P" shape="circle"></p-avatar>
+    <p-avatar label="T"></p-avatar>
 </div>`,
         typescript: `
 import { Component } from '@angular/core';

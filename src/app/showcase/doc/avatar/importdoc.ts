@@ -5,7 +5,7 @@ import { Code } from '../../domain/code';
     selector: 'import-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"> </app-docsectiontext>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" [hideToggleCode]="true"></app-code>
     </div>`
 })
 export class ImportDocComponent {

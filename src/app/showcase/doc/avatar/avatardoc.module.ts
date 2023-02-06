@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AvatarModule } from 'primeng/avatar';
+import { BadgeModule } from 'primeng/badge';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { InputTextModule } from 'primeng/inputtext';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
@@ -23,7 +24,7 @@ import { AvatarGroupPropsDocComponent } from './avatargrouppropsdoc';
 import { EventsDocComponent } from './eventsdoc';
 
 @NgModule({
-    imports: [CommonModule, RouterModule, AppCodeModule, InputTextModule, FormsModule, AppDocModule, AvatarModule, AvatarGroupModule],
+    imports: [CommonModule, RouterModule, AppCodeModule, InputTextModule, FormsModule, AppDocModule, AvatarModule, AvatarGroupModule, BadgeModule],
     declarations: [
         ImportDocComponent,
         LabelDocComponent,

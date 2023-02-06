@@ -58,7 +58,7 @@ export class ChipDemo {
         {
             id: 'api',
             label: 'API',
-            doc: [{ name: 'BlockUI', pathname: '/modules/blockui.html' }]
+            doc: [{ name: 'Chip', pathname: '/modules/chip.html' }]
         }
     ]
 }

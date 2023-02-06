@@ -22,7 +22,7 @@ import { Code } from '../../domain/code';
             </div>
             <div class="col-12 md:col-4">
                 <h5>Label - Badge</h5>
-                <p-avatar label="U" pBadge styleClass="mr-5" value="4" size="xlarge" [style]="{ 'background-color': '#4caf4f', color: '#ffffff' }"></p-avatar>
+                <p-avatar label="U" pBadge styleClass="mr-5" value="4" size="large" [style]="{ 'background-color': '#4caf4f', color: '#ffffff' }"></p-avatar>
             </div>
         </div>
         <app-code [code]="code"></app-code>
@@ -50,7 +50,7 @@ export class LabelDocComponent {
     </div>
     <div class="col-12 md:col-4">
         <h5>Label - Badge</h5>
-        <p-avatar label="U" pBadge styleClass="mr-5" value="4" size="xlarge" [style]="{ 'background-color': '#4caf4f', color: '#ffffff' }"></p-avatar>
+        <p-avatar label="U" pBadge styleClass="mr-5" value="4" size="large" [style]="{ 'background-color': '#4caf4f', color: '#ffffff' }"></p-avatar>
     </div>
 </div>`,
         typescript: `
