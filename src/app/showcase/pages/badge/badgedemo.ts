@@ -52,6 +52,11 @@ export class BadgeDemo {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
+        },
+        {
+            id: 'api',
+            label: 'API',
+            doc: [{ name: 'Badge', pathname: '/modules/badge.html' }]
         }
     ];
 }
