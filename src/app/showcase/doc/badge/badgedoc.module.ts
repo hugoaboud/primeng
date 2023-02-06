@@ -13,10 +13,11 @@ import { PositionDocComponent } from './positiondoc';
 import { SeverityDocComponent } from './severitydoc';
 import { SizeDocComponent } from './sizedoc';
 import { StyleDocComponent } from './styledoc';
+import { PropsDocComponent } from './propsdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, BadgeModule, ButtonModule],
-    declarations: [ImportDocComponent, BasicDocComponent, ButtonDocComponent, DirectiveDocComponent, PositionDocComponent, SeverityDocComponent, SizeDocComponent, StyleDocComponent],
-    exports: [ImportDocComponent, BasicDocComponent, ButtonDocComponent, DirectiveDocComponent, PositionDocComponent, SeverityDocComponent, SizeDocComponent, StyleDocComponent]
+    declarations: [ImportDocComponent, BasicDocComponent, ButtonDocComponent, DirectiveDocComponent, PositionDocComponent, SeverityDocComponent, SizeDocComponent, StyleDocComponent, PropsDocComponent],
+    exports: [ImportDocComponent, BasicDocComponent, ButtonDocComponent, DirectiveDocComponent, PositionDocComponent, SeverityDocComponent, SizeDocComponent, StyleDocComponent, PropsDocComponent]
 })
 export class BadgeDocModule {}
