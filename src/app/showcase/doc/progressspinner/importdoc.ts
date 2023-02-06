@@ -15,6 +15,6 @@ export class ImportDocComponent {
 
     code: Code = {
         typescript: `
-import {ProgressSpinnerModule} from 'primeng/progressspinner';`
+import { ProgressSpinnerModule } from 'primeng/progressspinner';`
     };
 }
