@@ -7,6 +7,7 @@ import { DirectiveDocComponent } from '../../doc/badge/directivedoc';
 import { PositionDocComponent } from '../../doc/badge/positiondoc';
 import { SeverityDocComponent } from '../../doc/badge/severitydoc';
 import { StyleDocComponent } from '../../doc/badge/styledoc';
+import { PropsDocComponent } from '../../doc/badge/propsdoc';
 
 @Component({
     templateUrl: './badgedemo.html'
@@ -52,6 +53,11 @@ export class BadgeDemo {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
+        },
+        {
+            id: 'props',
+            label: 'Properties',
+            component: PropsDocComponent
         },
         {
             id: 'api',

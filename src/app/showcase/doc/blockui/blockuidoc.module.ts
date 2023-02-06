@@ -9,11 +9,12 @@ import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { BasicDocComponent } from './basicdoc';
 import { DocumentDocComponent } from './documentdoc';
 import { ImportDocComponent } from './importdoc';
+import { PropsDocComponent } from './propsdoc';
 import { StyleDocComponent } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, PanelModule, ButtonModule, BlockUIModule],
-    declarations: [ImportDocComponent, BasicDocComponent, DocumentDocComponent, StyleDocComponent],
-    exports: [ImportDocComponent, BasicDocComponent, DocumentDocComponent, StyleDocComponent]
+    declarations: [ImportDocComponent, BasicDocComponent, DocumentDocComponent, StyleDocComponent, PropsDocComponent],
+    exports: [ImportDocComponent, BasicDocComponent, DocumentDocComponent, StyleDocComponent, PropsDocComponent]
 })
 export class BlockUIDocModule {}

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BasicDocComponent } from '../../doc/blockui/basicdoc';
 import { DocumentDocComponent } from '../../doc/blockui/documentdoc';
 import { ImportDocComponent } from '../../doc/blockui/importdoc';
+import { PropsDocComponent } from '../../doc/blockui/propsdoc';
 import { StyleDocComponent } from '../../doc/blockui/styledoc';
 
 @Component({
@@ -72,6 +73,11 @@ export class BlockUIDemo {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
+        },
+        {
+            id: 'props',
+            label: 'Properties',
+            component: PropsDocComponent
         },
         {
             id: 'api',
