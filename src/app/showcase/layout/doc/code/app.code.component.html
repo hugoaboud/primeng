@@ -3,23 +3,23 @@
         <button *ngIf="code.html" pButton label="HTML" pTooltip="HTML" tooltipPosition="bottom"
             tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('html')"
             class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
-            [ngClass]="{'doc-section-code-active text-primary':code === 'html'}">
+            [ngClass]="{'doc-section-code-active text-primary':lang === 'html'}">
         </button>
         <button *ngIf="code.typescript || code.module" pButton [label]="code.typescript ? 'TS' : 'Module'" [pTooltip]="code.typescript ? 'TypeScript' : 'Module'" tooltipPosition="bottom"
             tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('typescript')"
             class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
-            [ngClass]="{'doc-section-code-active text-primary':code === 'typescript'}">
+            [ngClass]="{'doc-section-code-active text-primary':lang === 'typescript'}">
         </button>
         <button *ngIf="code.scss" pButton label="SCSS" pTooltip="SCSS" tooltipPosition="bottom"
             tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('scss')"
             class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
-            [ngClass]="{'doc-section-code-active text-primary':code === 'scss'}">
+            [ngClass]="{'doc-section-code-active text-primary':lang === 'scss'}">
         </button>
 
         <button *ngIf="code.data" pButton icon="pi pi-database" pTooltip="View Data"
             tooltipPosition="bottom" tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('data')"
             class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
-            [ngClass]="{'doc-section-code-active text-primary':code === 'data'}">
+            [ngClass]="{'doc-section-code-active text-primary':lang === 'data'}">
         </button>
 
         <button pButton pTooltip="Edit in CodeSandbox" tooltipPosition="bottom"
