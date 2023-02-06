@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'directive-doc',
+    selector: 'style-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Following is the list of structural style classes, for theming classes visit <a href="#" [routerLink]="['/theming']">theming</a> page.</p>
