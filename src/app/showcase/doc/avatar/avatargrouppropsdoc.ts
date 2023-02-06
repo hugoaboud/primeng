@@ -3,8 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
     selector: 'avatargroupprops-doc',
     template: ` <div>
-        <app-docsectiontext [title]="title" [id]="id">
-        </app-docsectiontext>
+        <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
         <div class="doc-tablewrapper">
             <table class="doc-table">
                 <thead>

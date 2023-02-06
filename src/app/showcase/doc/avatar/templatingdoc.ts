@@ -22,9 +22,11 @@ export class TemplatingDocComponent {
 
     code: Code = {
         html: `
-<p-avatar size="xlarge">
-    <span class="text-base">Content</span>
-</p-avatar>`,
+<div class="card flex justify-content-center">
+    <p-avatar size="xlarge">
+        <span class="text-base">Content</span>
+    </p-avatar>
+</div>`,
         typescript: `
 import { Component } from '@angular/core';
 

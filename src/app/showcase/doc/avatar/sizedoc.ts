@@ -7,8 +7,9 @@ import { Code } from '../../domain/code';
         <app-docsectiontext [title]="title" [id]="id">
             <p><i>size</i> property defines the size of the Avatar with <i>large</i> and <i>xlarge</i> as possible values.</p>
         </app-docsectiontext>
-        <div class="card flex justify-content-center">
+        <div class="card flex justify-content-center gap-2">
             <p-avatar label="P" size="large"></p-avatar>
+            <p-avatar label="T" size="xlarge"></p-avatar>
         </div>
         <app-code [code]="code"></app-code>
     </div>`
@@ -20,7 +21,10 @@ export class SizeDocComponent {
 
     code: Code = {
         html: `
-<p-avatar label="P" size="large"></p-avatar>`,
+<div class="card flex justify-content-center gap-2">
+    <p-avatar label="P" size="large"></p-avatar>
+    <p-avatar label="T" size="xlarge"></p-avatar>
+</div>`,
         typescript: `
 import { Component } from '@angular/core';
 

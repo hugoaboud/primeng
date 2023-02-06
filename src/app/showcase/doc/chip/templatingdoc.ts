@@ -5,13 +5,13 @@ import { Code } from '../../domain/code';
     selector: 'templating-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-        <p>Content can easily be customized with the dynamic content instead of using the built-in modes.</p>
-            <div class="card flex align-items-center">
-                <p-chip>
-                    <div class="p-2">Content</div>
-                </p-chip>
-            </div>
+            <p>Content can easily be customized with the dynamic content instead of using the built-in modes.</p>
         </app-docsectiontext>
+        <div class="card flex align-items-center">
+            <p-chip>
+                <div class="p-2">Content</div>
+            </p-chip>
+        </div>
         <app-code [code]="code"></app-code>
     </div>`
 })

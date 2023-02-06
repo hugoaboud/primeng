@@ -6,12 +6,12 @@ import { Code } from '../../domain/code';
     template: `
     <div>
         <app-docsectiontext [title]="title" [id]="id">
-        <p>Enabling <i>fullScreen</i> property controls the document.</p>
-            <div class="card">
-                <p-blockUI [blocked]="blockedDocument"></p-blockUI>
-                <button type="button" pButton pRipple label="Block" (click)="blockDocument()"></button>
-            </div>
+            <p>Enabling <i>fullScreen</i> property controls the document.</p>
         </app-docsectiontext>
+        <div class="card">
+            <p-blockUI [blocked]="blockedDocument"></p-blockUI>
+            <button type="button" pButton pRipple label="Block" (click)="blockDocument()"></button>
+        </div>
         <app-code [code]="code"></app-code>
     </div>`
 })
@@ -31,8 +31,10 @@ export class DocumentDocComponent {
 
     code: Code = {
         html: `
-<p-blockUI [blocked]="blockedDocument"></p-blockUI>
-<button type="button" pButton pRipple label="Block" (click)="blockDocument()"></button>`,
+<div class="card">
+    <p-blockUI [blocked]="blockedDocument"></p-blockUI>
+    <button type="button" pButton pRipple label="Block" (click)="blockDocument()"></button>
+</div>`,
         typescript: `
 import { Component } from '@angular/core';
 

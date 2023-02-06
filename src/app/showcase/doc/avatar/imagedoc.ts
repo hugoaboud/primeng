@@ -6,13 +6,12 @@ import { Code } from '../../domain/code';
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Use the <i>image</i> property to display an image as an Avatar.</p>
-            <div class="card">
-                <p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>
-                <p-avatar image="assets/showcase/images/demo/avatar/asiyajavayant.png" styleClass="mr-2" size="large" shape="circle"></p-avatar>
-                <p-avatar image="assets/showcase/images/demo/avatar/onyamalimba.png" styleClass="mr-2" shape="circle"></p-avatar>
-            </div>
         </app-docsectiontext>
-
+        <div class="card">
+            <p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>
+            <p-avatar image="assets/showcase/images/demo/avatar/asiyajavayant.png" styleClass="mr-2" size="large" shape="circle"></p-avatar>
+            <p-avatar image="assets/showcase/images/demo/avatar/onyamalimba.png" styleClass="mr-2" shape="circle"></p-avatar>
+        </div>
         <app-code [code]="code"></app-code>
     </div>`
 })
@@ -23,9 +22,11 @@ export class ImageDocComponent {
 
     code: Code = {
         html: `
-<p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>
-<p-avatar image="assets/showcase/images/demo/avatar/asiyajavayant.png" styleClass="mr-2" size="large" shape="circle"></p-avatar>
-<p-avatar image="assets/showcase/images/demo/avatar/onyamalimba.png" styleClass="mr-2" shape="circle"></p-avatar>`,
+<div class="card">
+    <p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>
+    <p-avatar image="assets/showcase/images/demo/avatar/asiyajavayant.png" styleClass="mr-2" size="large" shape="circle"></p-avatar>
+    <p-avatar image="assets/showcase/images/demo/avatar/onyamalimba.png" styleClass="mr-2" shape="circle"></p-avatar>
+</div>`,
         typescript: `
 import { Component } from '@angular/core';
 

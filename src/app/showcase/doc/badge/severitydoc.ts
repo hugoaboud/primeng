@@ -6,13 +6,13 @@ import { Code } from '../../domain/code';
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Severity defines the color of the badge, possible values are <i>success</i>, <i>info</i>, <i>warning</i> and <i>danger</i></p>
-            <div class="card flex justify-content-center">
-                <p-badge [value]="2" severity="success"></p-badge>
-                <p-badge [value]="9" severity="info"></p-badge>
-                <p-badge [value]="3" severity="warning"></p-badge>
-                <p-badge [value]="12" severity="danger"></p-badge>
-            </div>
         </app-docsectiontext>
+        <div class="card flex justify-content-center">
+            <p-badge [value]="2" severity="success"></p-badge>
+            <p-badge [value]="9" severity="info"></p-badge>
+            <p-badge [value]="3" severity="warning"></p-badge>
+            <p-badge [value]="12" severity="danger"></p-badge>
+        </div>
         <app-code [code]="code"></app-code>
     </div>`
 })
@@ -23,10 +23,12 @@ export class SeverityDocComponent {
 
     code: Code = {
         html: `
-<p-badge [value]="2"  severity="success"></p-badge>
-<p-badge [value]="9"  severity="info"></p-badge>
-<p-badge [value]="3"  severity="warning"></p-badge>
-<p-badge [value]="12"  severity="danger"></p-badge>`,
+<div class="card flex justify-content-center">
+    <p-badge [value]="2" severity="success"></p-badge>
+    <p-badge [value]="9" severity="info"></p-badge>
+    <p-badge [value]="3" severity="warning"></p-badge>
+    <p-badge [value]="12" severity="danger"></p-badge>
+</div>`,
         typescript: `
 import { Component } from '@angular/core';
 

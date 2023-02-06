@@ -20,7 +20,9 @@ export class ShapeDocComponent {
 
     code: Code = {
         html: `
-    <p-avatar label="P" shape="circle"></p-avatar>`,
+<div class="card flex justify-content-center">
+    <p-avatar label="P" shape="circle"></p-avatar>
+</div>`,
         typescript: `
 import { Component } from '@angular/core';
 

@@ -20,7 +20,9 @@ export class BadgeDocComponent {
 
     code: Code = {
         html: `
-<p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" pBadge value="4" severity="danger" size="xlarge"></p-avatar>`,
+<div class="card flex justify-content-center">
+    <p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" pBadge value="4" severity="danger" size="xlarge"></p-avatar>
+</div>`,
         typescript: `
 import { Component } from '@angular/core';
 

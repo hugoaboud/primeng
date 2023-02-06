@@ -6,10 +6,10 @@ import { Code } from '../../domain/code';
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Content of the badge is specified using the <i>value</i> property.</p>
-            <div class="card flex justify-content-center">
-                <p-badge [value]="2"></p-badge>
-            </div>
         </app-docsectiontext>
+        <div class="card flex justify-content-center">
+            <p-badge [value]="2"></p-badge>
+        </div>
         <app-code [code]="code"></app-code>
     </div>`
 })
@@ -20,7 +20,9 @@ export class BasicDocComponent {
 
     code: Code = {
         html: `
-<p-badge [value]="2"></p-badge>`,
+<div class="card flex justify-content-center">
+    <p-badge [value]="2"></p-badge>
+</div>`,
         typescript: `
 import { Component } from '@angular/core';
 

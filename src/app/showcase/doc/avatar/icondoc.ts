@@ -6,6 +6,7 @@ import { Code } from '../../domain/code';
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A font icon is displayed as an Avatar with the <i>icon</i> property.</p>
+        </app-docsectiontext>
             <div class="grid card grid-nogutter">
                 <div class="col-12 md:col-4">
                     <h5>Icon</h5>
@@ -24,8 +25,6 @@ import { Code } from '../../domain/code';
                     <p-avatar icon="pi pi-user" pBadge value="4" severity="success" styleClass="mr-2" size="xlarge"></p-avatar>
                 </div>
             </div>
-        </app-docsectiontext>
-
         <app-code [code]="code"></app-code>
     </div>`
 })

@@ -6,10 +6,10 @@ import { Code } from '../../domain/code';
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Content of the badge is specified using the <i>value</i> property.</p>
-            <div class="card flex justify-content-center">
-                <i class="pi pi-bell text-3xl" pBadge value="2"></i>
-            </div>
         </app-docsectiontext>
+        <div class="card flex justify-content-center">
+            <i class="pi pi-bell text-3xl" pBadge value="2"></i>
+        </div>
         <app-code [code]="code"></app-code>
     </div>`
 })
@@ -20,7 +20,9 @@ export class DirectiveDocComponent {
 
     code: Code = {
         html: `
-<i class="pi pi-bell text-3xl" pBadge value="2"></i>`,
+<div class="card flex justify-content-center">
+    <i class="pi pi-bell text-3xl" pBadge value="2"></i>
+</div>`,
         typescript: `
 import { Component } from '@angular/core';
 
