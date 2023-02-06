@@ -18,6 +18,9 @@ import { SizeDocComponent } from './sizedoc';
 import { BadgeDocComponent } from './badgedoc';
 import { TemplatingDocComponent } from './templatingdoc';
 import { AvatarGroupStyleDocComponent } from './avatargroupstyledoc';
+import { AvatarPropsDocComponent } from './avatarpropsdoc';
+import { AvatarGroupPropsDocComponent } from './avatargrouppropsdoc';
+import { EventsDocComponent } from './eventsdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, InputTextModule, FormsModule, AppDocModule, AvatarModule, AvatarGroupModule],
@@ -32,7 +35,10 @@ import { AvatarGroupStyleDocComponent } from './avatargroupstyledoc';
         ShapeDocComponent,
         SizeDocComponent,
         BadgeDocComponent,
-        TemplatingDocComponent
+        TemplatingDocComponent,
+        AvatarPropsDocComponent,
+        AvatarGroupPropsDocComponent,
+        EventsDocComponent
     ],
     exports: [
         ImportDocComponent,
@@ -45,7 +51,10 @@ import { AvatarGroupStyleDocComponent } from './avatargroupstyledoc';
         ShapeDocComponent,
         SizeDocComponent,
         BadgeDocComponent,
-        TemplatingDocComponent
+        TemplatingDocComponent,
+        AvatarPropsDocComponent,
+        AvatarGroupPropsDocComponent,
+        EventsDocComponent
     ]
 })
 export class AvatarDocModule {}

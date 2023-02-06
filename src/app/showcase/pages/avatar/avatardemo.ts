@@ -10,6 +10,9 @@ import { ShapeDocComponent } from '../../doc/avatar/shapedoc';
 import { SizeDocComponent } from '../../doc/avatar/sizedoc';
 import { BadgeDocComponent } from '../../doc/avatar/badgedoc';
 import { TemplatingDocComponent } from '../../doc/avatar/templatingdoc';
+import { AvatarPropsDocComponent } from '../../doc/avatar/avatarpropsdoc';
+import { AvatarGroupPropsDocComponent } from '../../doc/avatar/avatargrouppropsdoc';
+import { EventsDocComponent } from '../../doc/avatar/eventsdoc';
 
 @Component({
     templateUrl: './avatardemo.html'
@@ -70,6 +73,21 @@ export class AvatarDemo {
             id: 'stylingofavatargroup',
             label: 'Styling of AvatarGroup',
             component: AvatarGroupStyleDocComponent
+        },
+        {
+            id: 'avatarprops',
+            label: 'Properties of Avatar',
+            component: AvatarPropsDocComponent
+        },
+        {
+            id: 'avatargroupprops',
+            label: 'Properties of AvatarGroup',
+            component: AvatarGroupPropsDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
         },
         {
             id: 'api',
