@@ -55,5 +55,10 @@ export class ChipDemo {
             label: 'Events',
             component: EventsDocComponent
         },
+        {
+            id: 'api',
+            label: 'API',
+            doc: [{ name: 'BlockUI', pathname: '/modules/blockui.html' }]
+        }
     ]
 }
