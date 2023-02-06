@@ -1,4 +1,8 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
+import { BasicDocComponent } from '../../doc/blockui/basicdoc';
+import { DocumentDocComponent } from '../../doc/blockui/documentdoc';
+import { ImportDocComponent } from '../../doc/blockui/importdoc';
+import { StyleDocComponent } from '../../doc/blockui/styledoc';
 
 @Component({
     templateUrl: './blockuidemo.html',
@@ -47,4 +51,32 @@ export class BlockUIDemo {
             this.blockedDocument = false;
         }, 3000);
     }
+
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'document',
+            label: 'Document',
+            component: DocumentDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        },
+        {
+            id: 'api',
+            label: 'API',
+            doc: [{ name: 'BlockUI', pathname: '/modules/blockui.html' }]
+        }
+    ]
 }
