@@ -1,23 +1,50 @@
-import { Component, OnInit } from '@angular/core';
-import { MessageService } from 'primeng/api';
+import { Component } from '@angular/core';
+import { BasicDocComponent } from '../../doc/progressbar/basicdoc';
+import { StyleDocComponent } from '../../doc/progressbar/styledoc';
+import { ImportDocComponent } from '../../doc/progressbar/importdoc';
+import { IndeterminateDocComponent } from '../../doc/progressbar/indeterminatedoc';
+import { DynamicDocComponent } from '../../doc/progressbar/dynamicdoc';
+import { PropsDocComponent } from '../../doc/progressbar/propsdoc';
 
 @Component({
-    templateUrl: './progressbardemo.html',
-    providers: [MessageService]
+    templateUrl: './progressbardemo.html'
 })
 export class ProgressBarDemo {
-    value: number = 0;
-
-    constructor(private messageService: MessageService) {}
-
-    ngOnInit() {
-        let interval = setInterval(() => {
-            this.value = this.value + Math.floor(Math.random() * 10) + 1;
-            if (this.value >= 100) {
-                this.value = 100;
-                this.messageService.add({ severity: 'info', summary: 'Success', detail: 'Process Completed' });
-                clearInterval(interval);
-            }
-        }, 2000);
-    }
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'dynamic',
+            label: 'Dynamic',
+            component: DynamicDocComponent
+        },
+        {
+            id: 'indeterminate',
+            label: 'Indeterminate',
+            component: IndeterminateDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        },
+        {
+            id: 'props',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'api',
+            label: 'API',
+            doc: [{ name: 'ProgressBar', pathname: '/modules/progressbar.html' }]
+        }
+    ];
 }
