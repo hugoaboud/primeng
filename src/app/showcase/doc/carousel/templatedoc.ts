@@ -18,12 +18,12 @@ import { ProductService } from '../../service/product.service';
                     <div class="product-item">
                         <div class="product-item-content">
                             <div class="mb-3">
-                                <img src="assets/showcase/images/demo/product/{{product.image}}" [alt]="product.name" class="product-image" />
+                                <img src="assets/showcase/images/demo/product/{{ product.image }}" [alt]="product.name" class="product-image" />
                             </div>
                             <div>
-                                <h4 class="mb-1">{{product.name}}</h4>
-                                <h6 class="mt-0 mb-3">{{product.price}}</h6>
-                                <span [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+                                <h4 class="mb-1">{{ product.name }}</h4>
+                                <h6 class="mt-0 mb-3">{{ product.price }}</h6>
+                                <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{ product.inventoryStatus }}</span>
                                 <div class="car-buttons mt-5">
                                     <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
                                     <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>

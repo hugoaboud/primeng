@@ -7,11 +7,11 @@ import { ProductService } from '../../service/product.service';
     selector: 'responsive-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-        <p>
-            Carousel supports specific configuration per screen size with the <i>responsiveOptions</i> property that takes an array of objects where each object defines the max-width <i>breakpoint</i>, <i>numVisible</i> for the number of
-            items items per page and <i>numScroll</i> for number of items to scroll. When <i>responsiveOptions</i> is defined, the <i>numScroll</i> and <i>numVisible</i> properties of the Carousel are used as default when there is breakpoint
-            that applies.
-        </p>
+            <p>
+                Carousel supports specific configuration per screen size with the <i>responsiveOptions</i> property that takes an array of objects where each object defines the max-width <i>breakpoint</i>, <i>numVisible</i> for the number of items
+                items per page and <i>numScroll</i> for number of items to scroll. When <i>responsiveOptions</i> is defined, the <i>numScroll</i> and <i>numVisible</i> properties of the Carousel are used as default when there is breakpoint that
+                applies.
+            </p>
         </app-docsectiontext>
         <div class="card">
             <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
@@ -19,12 +19,12 @@ import { ProductService } from '../../service/product.service';
                     <div class="product-item">
                         <div class="product-item-content">
                             <div class="mb-3">
-                                <img src="assets/showcase/images/demo/product/{{product.image}}" [alt]="product.name" class="product-image" />
+                                <img src="assets/showcase/images/demo/product/{{ product.image }}" [alt]="product.name" class="product-image" />
                             </div>
                             <div>
-                                <h4 class="mb-1">{{product.name}}</h4>
-                                <h6 class="mt-0 mb-3">{{product.price}}</h6>
-                                <span [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+                                <h4 class="mb-1">{{ product.name }}</h4>
+                                <h6 class="mt-0 mb-3">{{ product.price }}</h6>
+                                <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{ product.inventoryStatus }}</span>
                                 <div class="car-buttons mt-5">
                                     <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
                                     <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
