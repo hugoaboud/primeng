@@ -15,6 +15,6 @@ import { TemplateDocComponent } from './templatedoc';
 @NgModule({
     imports: [CommonModule, ChipsModule, FormsModule, AppCodeModule, AppDocModule],
     declarations: [ImportDocComponent, BasicDocComponent, CommaSeperatorDocComponent, RegexpSeperatorDocComponent, TemplateDocComponent, StyleDocComponent, PropsDocComponent],
-    exports: [ImportDocComponent, BasicDocComponent, CommaSeperatorDocComponent, RegexpSeperatorDocComponent, TemplateDocComponent, StyleDocComponent, PropsDocComponent]
+    exports: [ImportDocComponent, BasicDocComponent, CommaSeperatorDocComponent, RegexpSeperatorDocComponent, TemplateDocComponent, StyleDocComponent, PropsDocComponent, AppDocModule]
 })
 export class ChipsDocModule {}
