@@ -9,10 +9,10 @@ import { Component, Input } from '@angular/core';
         <div class="doc-tablewrapper">
             <table class="doc-table">
                 <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Element</th>
-                </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Element</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>

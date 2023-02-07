@@ -9,7 +9,7 @@ import { Code } from '../../domain/code';
             <p>For progresses with no value to track, set the <i>mode</i> property to <i>indeterminate</i>.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-progressBar mode="indeterminate" [style]="{'height': '6px'}"></p-progressBar>
+            <p-progressBar mode="indeterminate" [style]="{ height: '6px' }"></p-progressBar>
         </div>
         <app-code [code]="code"></app-code>
     </div>`

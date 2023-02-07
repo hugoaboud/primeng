@@ -3,8 +3,7 @@ import { Code } from '../../domain/code';
 
 @Component({
     selector: 'document-doc',
-    template: `
-    <div>
+    template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Enabling <i>fullScreen</i> property controls the document.</p>
         </app-docsectiontext>
@@ -19,7 +18,7 @@ export class DocumentDocComponent {
     @Input() id: string;
 
     @Input() title: string;
-    
+
     blockedDocument: boolean = false;
 
     blockDocument() {

@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
     selector: 'style-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>Following is the list of structural style classes, for theming classes visit <a href="#" [routerLink]="['/theming']">theming</a> page.</p>
+            <p>Following is the list of structural style classes, for theming classes visit <i>theming page.</i></p>
         </app-docsectiontext>
         <div class="doc-tablewrapper">
             <table class="doc-table">
@@ -16,16 +16,24 @@ import { Component, Input } from '@angular/core';
                 </thead>
                 <tbody>
                     <tr>
-                        <td>p-skeleton</td>
+                        <td>p-chips</td>
                         <td>Container element.</td>
                     </tr>
                     <tr>
-                        <td>p-skeleton-circle</td>
-                        <td>Container element of a determinate progressbar.</td>
+                        <td>p-chips-token</td>
+                        <td>Chip element container.</td>
                     </tr>
                     <tr>
-                        <td>p-skeleton-animation-none</td>
-                        <td>Container element of an indeterminate progressbar.</td>
+                        <td>p-chips-token-icon</td>
+                        <td>Icon of a chip.</td>
+                    </tr>
+                    <tr>
+                        <td>p-chips-token-label</td>
+                        <td>Label of a chip.</td>
+                    </tr>
+                    <tr>
+                        <td>p-chips-input-token</td>
+                        <td>Container of input element.</td>
                     </tr>
                 </tbody>
             </table>

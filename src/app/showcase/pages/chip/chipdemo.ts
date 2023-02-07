@@ -13,7 +13,6 @@ import { EventsDocComponent } from '../../doc/chip/eventsdoc';
     styleUrls: ['chipdemo.scss']
 })
 export class ChipDemo {
-
     docs = [
         {
             id: 'import',
@@ -60,5 +59,5 @@ export class ChipDemo {
             label: 'API',
             doc: [{ name: 'Chip', pathname: '/modules/chip.html' }]
         }
-    ]
+    ];
 }

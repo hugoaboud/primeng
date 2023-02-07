@@ -15,48 +15,48 @@ import { MethodsDocComponent } from '../../doc/inplace/methodsdoc';
 export class InplaceDemo {
     docs = [
         {
-            id:'import',
-            label:'Import',
+            id: 'import',
+            label: 'Import',
             component: ImportDocComponent
         },
         {
-            id:'basic',
-            label:'Basic',
+            id: 'basic',
+            label: 'Basic',
             component: BasicDocComponent
         },
         {
-            id:'input',
-            label:'Input',
+            id: 'input',
+            label: 'Input',
             component: InputDocComponent
         },
         {
-            id:'image',
-            label:'Image',
+            id: 'image',
+            label: 'Image',
             component: ImageDocComponent
         },
         {
-            id:'data',
-            label:'Data',
+            id: 'data',
+            label: 'Data',
             component: DataDocComponent
         },
         {
-            id:'style',
-            label:'Style',
+            id: 'style',
+            label: 'Style',
             component: StyleDocComponent
         },
         {
-            id:'props',
-            label:'Properties',
+            id: 'props',
+            label: 'Properties',
             component: PropsDocComponent
         },
         {
-            id:'events',
-            label:'Events',
+            id: 'events',
+            label: 'Events',
             component: EventsDocComponent
         },
         {
-            id:'methods',
-            label:'Methods',
+            id: 'methods',
+            label: 'Methods',
             component: MethodsDocComponent
         },
         {
@@ -64,5 +64,5 @@ export class InplaceDemo {
             label: 'API',
             doc: [{ name: 'Inplace', pathname: '/modules/inplace.html' }]
         }
-    ]
+    ];
 }
