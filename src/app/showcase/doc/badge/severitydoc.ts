@@ -7,7 +7,7 @@ import { Code } from '../../domain/code';
         <app-docsectiontext [title]="title" [id]="id">
             <p>Severity defines the color of the badge, possible values are <i>success</i>, <i>info</i>, <i>warning</i> and <i>danger</i></p>
         </app-docsectiontext>
-        <div class="card flex justify-content-center">
+        <div class="card flex justify-content-center gap-2">
             <p-badge [value]="2" severity="success"></p-badge>
             <p-badge [value]="9" severity="info"></p-badge>
             <p-badge [value]="3" severity="warning"></p-badge>
@@ -23,7 +23,7 @@ export class SeverityDocComponent {
 
     code: Code = {
         html: `
-<div class="card flex justify-content-center">
+<div class="card flex justify-content-center gap-2">
     <p-badge [value]="2" severity="success"></p-badge>
     <p-badge [value]="9" severity="info"></p-badge>
     <p-badge [value]="3" severity="warning"></p-badge>
