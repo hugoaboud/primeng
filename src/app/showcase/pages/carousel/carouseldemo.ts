@@ -1,39 +1,63 @@
 import { Component } from '@angular/core';
-import { Product } from '../../domain/product';
-import { ProductService } from '../../service/product.service';
+import { ImportDocComponent } from '../../doc/carousel/importdoc';
+import { BasicDocComponent } from '../../doc/carousel/basicdoc';
+import { PropsDocComponent } from '../../doc/carousel/propsdoc';
+import { StyleDocComponent } from '../../doc/carousel/styledoc';
+import { CircularDocComponent } from '../../doc/carousel/circulardoc';
+import { NumScrollDocComponent } from '../../doc/carousel/numscrolldoc';
+import { ResponsiveDocComponent } from '../../doc/carousel/responsivedoc';
+import { VerticalDocComponent } from '../../doc/carousel/verticaldoc';
 
 @Component({
     templateUrl: './carouseldemo.html',
     styleUrls: ['./carouseldemo.scss']
 })
 export class CarouselDemo {
-    products: Product[];
-
-    responsiveOptions;
-
-    constructor(private productService: ProductService) {
-        this.responsiveOptions = [
-            {
-                breakpoint: '1024px',
-                numVisible: 3,
-                numScroll: 3
-            },
-            {
-                breakpoint: '768px',
-                numVisible: 2,
-                numScroll: 2
-            },
-            {
-                breakpoint: '560px',
-                numVisible: 1,
-                numScroll: 1
-            }
-        ];
-    }
-
-    ngOnInit() {
-        this.productService.getProductsSmall().then((products) => {
-            this.products = products;
-        });
-    }
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'circular',
+            label: 'Circular',
+            component: CircularDocComponent
+        },
+        {
+            id: 'numscroll',
+            label: 'Num Scroll',
+            component: NumScrollDocComponent
+        },
+        {
+            id: 'responsive',
+            label: 'Responsive',
+            component: ResponsiveDocComponent
+        },
+        {
+            id: 'vertical',
+            label: 'Vertical',
+            component: VerticalDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        },
+        {
+            id: 'props',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'api',
+            label: 'API',
+            doc: [{ name: 'Carousel', pathname: '/modules/carousel.html' }]
+        }
+    ];
 }

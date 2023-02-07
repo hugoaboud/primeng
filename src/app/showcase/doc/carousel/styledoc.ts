@@ -16,40 +16,40 @@ import { Component, Input } from '@angular/core';
                 </thead>
                 <tbody>
                     <tr>
-                        <td>p-badge</td>
-                        <td>Badge element</td>
+                        <td>p-carousel</td>
+                        <td>Container element.</td>
                     </tr>
                     <tr>
-                        <td>p-overlay-badge</td>
-                        <td>Wrapper of a badge and its target.</td>
+                        <td>p-carousel-header</td>
+                        <td>Header section.</td>
                     </tr>
                     <tr>
-                        <td>p-badge-dot</td>
-                        <td>Badge element with no value.</td>
+                        <td>p-carousel-footer</td>
+                        <td>Footer section.</td>
                     </tr>
                     <tr>
-                        <td>p-badge-success</td>
-                        <td>Badge element with success severity.</td>
+                        <td>p-carousel-content</td>
+                        <td>Main content element. It contains the container of the viewport.</td>
                     </tr>
                     <tr>
-                        <td>p-badge-info</td>
-                        <td>Badge element with info severity.</td>
+                        <td>p-carousel-container</td>
+                        <td>Container of the viewport. It contains navigation buttons and viewport.</td>
                     </tr>
                     <tr>
-                        <td>p-badge-warning</td>
-                        <td>Badge element with warning severity.</td>
+                        <td>p-carousel-items-content</td>
+                        <td>Viewport.</td>
                     </tr>
                     <tr>
-                        <td>p-badge-danger</td>
-                        <td>Badge element with danger severity.</td>
+                        <td>p-carousel-dots-container</td>
+                        <td>Container of the paginator.</td>
                     </tr>
                     <tr>
-                        <td>p-badge-lg</td>
-                        <td>Large badge element</td>
+                        <td>p-carousel-dot-item</td>
+                        <td>Paginator element.</td>
                     </tr>
                     <tr>
-                        <td>p-badge-xl</td>
-                        <td>Extra large badge element</td>
+                        <td>p-carousel-dot-icon</td>
+                        <td>Paginator element icon.</td>
                     </tr>
                 </tbody>
             </table>
