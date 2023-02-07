@@ -27,10 +27,10 @@ import { CarService } from '../../service/car.service';
                         </ng-template>
                         <ng-template pTemplate="body" let-car>
                             <tr>
-                                <td>{{car.vin}}</td>
-                                <td>{{car.year}}</td>
-                                <td>{{car.brand}}</td>
-                                <td>{{car.color}}</td>
+                                <td>{{ car.vin }}</td>
+                                <td>{{ car.year }}</td>
+                                <td>{{ car.brand }}</td>
+                                <td>{{ car.color }}</td>
                             </tr>
                         </ng-template>
                     </p-table>

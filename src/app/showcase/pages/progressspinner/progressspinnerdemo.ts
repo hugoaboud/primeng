@@ -12,29 +12,29 @@ import { PropsDocComponent } from '../../doc/progressspinner/propsdoc';
 export class ProgressSpinnerDemo {
     docs = [
         {
-           id: 'import',
-           label: 'Import',
-           component: ImportDocComponent 
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
         },
         {
-           id: 'basic',
-           label: 'Basic',
-           component: BasicDocComponent 
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
         },
         {
-           id: 'custom',
-           label: 'Custom',
-           component: CustomDocComponent 
+            id: 'custom',
+            label: 'Custom',
+            component: CustomDocComponent
         },
         {
-           id: 'style',
-           label: 'Style',
-           component: StyleDocComponent 
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
         },
         {
-           id: 'props',
-           label: 'Properties',
-           component: PropsDocComponent 
+            id: 'props',
+            label: 'Properties',
+            component: PropsDocComponent
         },
         {
             id: 'api',

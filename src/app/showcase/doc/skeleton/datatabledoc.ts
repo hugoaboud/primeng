@@ -8,7 +8,7 @@ import { Code } from '../../domain/code';
             <p>Sample DataTable implementation using different Skeleton components and PrimeFlex CSS utilities.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-table [value]="products" [tableStyle]="{'min-width': '50rem'}">
+            <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header">
                     <tr>
                         <th>Code</th>

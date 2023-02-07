@@ -84,5 +84,5 @@ export class BlockUIDemo {
             label: 'API',
             doc: [{ name: 'BlockUI', pathname: '/modules/blockui.html' }]
         }
-    ]
+    ];
 }

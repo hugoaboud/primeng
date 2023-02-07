@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
                     </div>
                 </ng-template>
                 <ng-template pTemplate="content">
-                    <img src="assets/showcase/images/demo/galleria/galleria5.jpg" alt="Nature">
+                    <img src="assets/showcase/images/demo/galleria/galleria5.jpg" alt="Nature" />
                 </ng-template>
             </p-inplace>
         </div>
