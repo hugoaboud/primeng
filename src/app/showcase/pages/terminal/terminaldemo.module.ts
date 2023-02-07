@@ -1,14 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { TabViewModule } from 'primeng/tabview';
-import { TerminalModule } from 'primeng/terminal';
-import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
-import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
+import { TerminalDocModule } from '../../doc/terminal/terminaldoc.module';
+import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { TerminalDemo } from './terminaldemo';
 import { TerminalDemoRoutingModule } from './terminaldemo-routing.module';
 
 @NgModule({
-    imports: [CommonModule, TerminalDemoRoutingModule, TerminalModule, TabViewModule, TabViewModule, AppCodeModule, AppDemoActionsModule],
+    imports: [CommonModule, TerminalDemoRoutingModule, AppDocModule, TerminalDocModule],
     declarations: [TerminalDemo]
 })
 export class TerminalDemoModule {}
