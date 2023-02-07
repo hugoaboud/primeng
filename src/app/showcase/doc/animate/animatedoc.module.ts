@@ -11,6 +11,6 @@ import { AnimateModule } from 'primeng/animate';
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, AnimateModule],
     declarations: [ImportDocComponent, BasicDocComponent, PropsDocComponent],
-    exports: [ImportDocComponent, BasicDocComponent, PropsDocComponent]
+    exports: [ImportDocComponent, BasicDocComponent, PropsDocComponent, AppDocModule]
 })
 export class AnimateDocModule {}
