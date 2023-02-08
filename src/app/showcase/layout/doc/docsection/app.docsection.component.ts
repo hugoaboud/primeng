@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Doc } from 'src/app/showcase/domain/doc';
 
 interface Props {
     id: string;
@@ -11,7 +12,7 @@ interface Props {
     templateUrl: './app.docsection.component.html'
 })
 export class AppDocSectionsComponent implements OnInit {
-    @Input() docs!: [];
+    @Input() docs!: Doc[];
 
     currentDocIndex = -1;
 

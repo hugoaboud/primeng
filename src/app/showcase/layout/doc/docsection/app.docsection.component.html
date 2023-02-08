@@ -1,6 +1,6 @@
 <div *ngFor="let doc of docs">
     <section class="py-3">
-        <ng-template #docComponent></ng-template>
+        <ng-template *ngIf="doc.id !== 'api'" #docComponent></ng-template>
         <app-docapisection *ngIf="doc.id ==='api' && doc.doc" [docs]="doc.doc"></app-docapisection>
     </section>
 </div>
