@@ -16,40 +16,40 @@ import { Component, Input } from '@angular/core';
                 </thead>
                 <tbody>
                     <tr>
-                        <td>p-carousel</td>
+                        <td>p-galleria</td>
                         <td>Container element.</td>
                     </tr>
                     <tr>
-                        <td>p-carousel-header</td>
+                        <td>p-galleria-header</td>
                         <td>Header section.</td>
                     </tr>
                     <tr>
-                        <td>p-carousel-footer</td>
+                        <td>p-galleria-footer</td>
                         <td>Footer section.</td>
                     </tr>
                     <tr>
-                        <td>p-carousel-content</td>
-                        <td>Main content element. It contains the container of the viewport.</td>
+                        <td>p-galleria-item-wrapper</td>
+                        <td>Preview content element. It contains preview and indicator containers.</td>
                     </tr>
                     <tr>
-                        <td>p-carousel-container</td>
-                        <td>Container of the viewport. It contains navigation buttons and viewport.</td>
+                        <td>p-galleria-item-container</td>
+                        <td>Container of the preview content. It contains navigation buttons, preview item and caption content.</td>
                     </tr>
                     <tr>
-                        <td>p-carousel-items-content</td>
-                        <td>Viewport.</td>
+                        <td>p-galleria-indicators</td>
+                        <td>Container of the indicators. It contains indicator items.</td>
                     </tr>
                     <tr>
-                        <td>p-carousel-dots-container</td>
-                        <td>Container of the paginator.</td>
+                        <td>p-galleria-thumbnail-wrapper</td>
+                        <td>Thumbnail content element.</td>
                     </tr>
                     <tr>
-                        <td>p-carousel-dot-item</td>
-                        <td>Paginator element.</td>
+                        <td>p-galleria-thumbnail-container</td>
+                        <td>Container of the thumbnail content. It contains navigation buttons and thumbnail items.</td>
                     </tr>
                     <tr>
-                        <td>p-carousel-dot-icon</td>
-                        <td>Paginator element icon.</td>
+                        <td>p-galleria-caption</td>
+                        <td>Content of the preview caption.</td>
                     </tr>
                 </tbody>
             </table>

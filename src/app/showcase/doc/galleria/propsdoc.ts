@@ -16,64 +16,40 @@ import { Component, Input } from '@angular/core';
                 </thead>
                 <tbody>
                     <tr>
+                        <td>id</td>
+                        <td>string</td>
+                        <td>null</td>
+                        <td>Unique identifier of the element.</td>
+                    </tr>
+                    <tr>
                         <td>value</td>
                         <td>array</td>
                         <td>null</td>
                         <td>An array of objects to display.</td>
                     </tr>
                     <tr>
-                        <td>page</td>
+                        <td>activeIndex</td>
                         <td>number</td>
-                        <td>null</td>
+                        <td>0</td>
                         <td>Index of the first item.</td>
                     </tr>
                     <tr>
-                        <td>style</td>
-                        <td>object</td>
-                        <td>null</td>
-                        <td>Inline style of the component.</td>
-                    </tr>
-                    <tr>
-                        <td>styleClass</td>
-                        <td>string</td>
-                        <td>null</td>
-                        <td>Style class of the viewport container.</td>
-                    </tr>
-                    <tr>
-                        <td>circular</td>
+                        <td>fullScreen</td>
                         <td>boolean</td>
                         <td>false</td>
-                        <td>Defines if scrolling would be infinite.</td>
+                        <td>Whether to display the component on fullscreen.</td>
                     </tr>
                     <tr>
-                        <td>showIndicators</td>
+                        <td>visible</td>
                         <td>boolean</td>
                         <td>false</td>
-                        <td>Whether to display indicator container.</td>
-                    </tr>
-                    <tr>
-                        <td>showNavigators</td>
-                        <td>boolean</td>
-                        <td>true</td>
-                        <td>Whether to display navigation buttons in container.</td>
-                    </tr>
-                    <tr>
-                        <td>autoplayInterval</td>
-                        <td>number</td>
-                        <td>null</td>
-                        <td>Time in milliseconds to scroll items automatically.</td>
+                        <td>Specifies the visibility of the mask on fullscreen mode.</td>
                     </tr>
                     <tr>
                         <td>numVisible</td>
                         <td>number</td>
-                        <td>1</td>
+                        <td>3</td>
                         <td>Number of items per page.</td>
-                    </tr>
-                    <tr>
-                        <td>numScroll</td>
-                        <td>number</td>
-                        <td>1</td>
-                        <td>Number of items to scroll.</td>
                     </tr>
                     <tr>
                         <td>responsiveOptions</td>
@@ -82,46 +58,118 @@ import { Component, Input } from '@angular/core';
                         <td>An array of options for responsive design.</td>
                     </tr>
                     <tr>
-                        <td>orientation</td>
-                        <td>string</td>
-                        <td>horizontal</td>
-                        <td>Specifies the layout of the component, valid values are "horizontal" and "vertical".</td>
+                        <td>showItemNavigators</td>
+                        <td>boolean</td>
+                        <td>false</td>
+                        <td>Whether to display navigation buttons in preview container.</td>
                     </tr>
                     <tr>
-                        <td>verticalViewPortHeight</td>
+                        <td>showThumbnailNavigators</td>
+                        <td>boolean</td>
+                        <td>true</td>
+                        <td>Whether to display navigation buttons in thumbnail container.</td>
+                    </tr>
+                    <tr>
+                        <td>showItemNavigatorsOnHover</td>
+                        <td>boolean</td>
+                        <td>false</td>
+                        <td>Whether to display navigation buttons on preview container's hover.</td>
+                    </tr>
+                    <tr>
+                        <td>changeItemOnIndicatorHover</td>
+                        <td>boolean</td>
+                        <td>false</td>
+                        <td>When enabled, preview item is changed on indicator item's hover.</td>
+                    </tr>
+                    <tr>
+                        <td>circular</td>
+                        <td>boolean</td>
+                        <td>false</td>
+                        <td>Defines if scrolling would be infinite.</td>
+                    </tr>
+                    <tr>
+                        <td>autoPlay</td>
+                        <td>boolean</td>
+                        <td>false</td>
+                        <td>Items are displayed with a slideshow in autoPlay mode.</td>
+                    </tr>
+                    <tr>
+                        <td>transitionInterval</td>
+                        <td>number</td>
+                        <td>4000</td>
+                        <td>Time in milliseconds to scroll items.</td>
+                    </tr>
+                    <tr>
+                        <td>showThumbnails</td>
+                        <td>boolean</td>
+                        <td>true</td>
+                        <td>Whether to display thumbnail container.</td>
+                    </tr>
+                    <tr>
+                        <td>thumbnailsPosition</td>
+                        <td>string</td>
+                        <td>bottom</td>
+                        <td>Position of thumbnails. Valid values are "bottom", "top", "left" and "right".</td>
+                    </tr>
+                    <tr>
+                        <td>verticalThumbnailViewPortHeight</td>
                         <td>string</td>
                         <td>300px</td>
-                        <td>Height of the viewport in vertical layout.</td>
+                        <td>Height of the viewport in vertical thumbnail.</td>
                     </tr>
                     <tr>
-                        <td>contentClass</td>
+                        <td>showIndicators</td>
+                        <td>boolean</td>
+                        <td>false</td>
+                        <td>Whether to display indicator container.</td>
+                    </tr>
+                    <tr>
+                        <td>showIndicatorsOnItem</td>
+                        <td>boolean</td>
+                        <td>false</td>
+                        <td>When enabled, indicator container is displayed on preview container.</td>
+                    </tr>
+                    <tr>
+                        <td>indicatorsPosition</td>
+                        <td>string</td>
+                        <td>bottom</td>
+                        <td>Position of indicators. Valid values are "bottom", "top", "left" and "right".</td>
+                    </tr>
+                    <tr>
+                        <td>baseZIndex</td>
+                        <td>number</td>
+                        <td>0</td>
+                        <td>Base zIndex value to use in layering.</td>
+                    </tr>
+                    <tr>
+                        <td>maskClass</td>
                         <td>string</td>
                         <td>null</td>
-                        <td>Style class of main content.</td>
+                        <td>Style class of the mask on fullscreen mode.</td>
                     </tr>
                     <tr>
-                        <td>indicatorsContentClass</td>
+                        <td>containerStyle</td>
                         <td>string</td>
                         <td>null</td>
-                        <td>Style class of the paginator items.</td>
+                        <td>Inline style of the component on fullscreen mode. Otherwise, the 'style' property can be used.</td>
                     </tr>
                     <tr>
-                        <td>indicatorsContentStyle</td>
-                        <td>object</td>
-                        <td>null</td>
-                        <td>Style of the paginator items.</td>
-                    </tr>
-                    <tr>
-                        <td>indicatorStyleClass</td>
+                        <td>galleriaClass</td>
                         <td>string</td>
                         <td>null</td>
-                        <td>Style class of the indicators.</td>
+                        <td>Style class of the component on fullscreen mode. Otherwise, the 'class' property can be used.</td>
                     </tr>
                     <tr>
-                        <td>indicatorStyle</td>
+                        <td>showTransitionOptions</td>
                         <td>string</td>
-                        <td>null</td>
-                        <td>Style of the indicators.</td>
+                        <td>150ms cubic-bezier(0, 0, 0.2, 1)/td>
+                        <td>Transition options of the show animation.</td>
+                    </tr>
+                    <tr>
+                        <td>hideTransitionOptions</td>
+                        <td>string</td>
+                        <td>150ms cubic-bezier(0, 0, 0.2, 1)</td>
+                        <td>Transition options of the hide animation.</td>
                     </tr>
                 </tbody>
             </table>

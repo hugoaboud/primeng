@@ -15,6 +15,6 @@ export class ImportDocComponent {
 
     code: Code = {
         typescript: `
-import { CarouselModule } from 'primeng/carousel';`
+import { GallerialModule } from 'primeng/galleria';`
     };
 }
