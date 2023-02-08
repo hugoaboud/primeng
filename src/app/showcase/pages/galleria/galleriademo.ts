@@ -145,15 +145,15 @@ export class GalleriaDemo {
             id: 'advanced',
             label: 'Advanced',
             component: AdvancedDocComponent
-        }
-    ];
-
-    apiDocs = [
+        },
         {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
-        },
+        }
+    ];
+
+    apiDocs = [
         {
             id: 'props',
             label: 'Properties',
