@@ -162,7 +162,7 @@ import { Component, Input } from '@angular/core';
                     <tr>
                         <td>showTransitionOptions</td>
                         <td>string</td>
-                        <td>150ms cubic-bezier(0, 0, 0.2, 1)/td>
+                        <td>150ms cubic-bezier(0, 0, 0.2, 1)/td></td>
                         <td>Transition options of the show animation.</td>
                     </tr>
                     <tr>

@@ -9,13 +9,13 @@ import { PhotoService } from '../../service/photo.service';
             <p>Galleria responsiveness is defined with the <i>responsiveOptions</i> property.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-galleria [(value)]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'width': '100%'}" [numVisible]="7" [circular]="true"> 
+            <p-galleria [(value)]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{ width: '100%' }" [numVisible]="7" [circular]="true">
                 <ng-template pTemplate="item" let-item>
-                    <img [src]="item.previewImageSrc" style="width: 100%; display: block;"/>
+                    <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
                 </ng-template>
                 <ng-template pTemplate="thumbnail" let-item>
                     <div class="grid grid-nogutter justify-content-center">
-                        <img [src]="item.thumbnailImageSrc" style="display: block;"/>
+                        <img [src]="item.thumbnailImageSrc" style="display: block;" />
                     </div>
                 </ng-template>
             </p-galleria>

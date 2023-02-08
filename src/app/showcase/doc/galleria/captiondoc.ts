@@ -9,7 +9,7 @@ import { PhotoService } from '../../service/photo.service';
             <p>Description of an image is specified with the <i>caption</i> template.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-galleria [(value)]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'width': '100%'}" [numVisible]="5"> 
+            <p-galleria [(value)]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{ width: '100%' }" [numVisible]="5">
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
                 </ng-template>
@@ -19,8 +19,8 @@ import { PhotoService } from '../../service/photo.service';
                     </div>
                 </ng-template>
                 <ng-template pTemplate="caption" let-item>
-                    <h4 style="margin-bottom: .5rem; color: #ffffff;">{{item.title}}</h4>
-                    <p>{{item.alt}}</p>
+                    <h4 style="margin-bottom: .5rem; color: #ffffff;">{{ item.title }}</h4>
+                    <p>{{ item.alt }}</p>
                 </ng-template>
             </p-galleria>
         </div>

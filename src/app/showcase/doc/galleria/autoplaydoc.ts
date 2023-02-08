@@ -9,7 +9,7 @@ import { PhotoService } from '../../service/photo.service';
             <p>A slideshow implementation is defined by adding <i>circular</i> and <i>autoPlay</i> properties.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-galleria [(value)]="images" [autoPlay]="true" [circular]="true" [responsiveOptions]="responsiveOptions" [numVisible]="5"  [containerStyle]="{'width': '100%'}"> 
+            <p-galleria [(value)]="images" [autoPlay]="true" [circular]="true" [responsiveOptions]="responsiveOptions" [numVisible]="5" [containerStyle]="{ width: '100%' }">
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%;" />
                 </ng-template>

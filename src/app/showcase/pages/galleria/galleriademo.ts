@@ -90,18 +90,18 @@ export class GalleriaDemo {
                 {
                     id: 'withthumbnails',
                     label: 'With Thumbnails',
-                    component: WithThumbnailsDocComponent,
+                    component: WithThumbnailsDocComponent
                 },
                 {
                     id: 'withtouthumbnails',
                     label: 'Without Thumbnails',
-                    component: WithoutThumbnailsDocComponent,
+                    component: WithoutThumbnailsDocComponent
                 },
                 {
                     id: 'customcontent',
                     label: 'Custom Content',
-                    component: CustomContentDocComponent,
-                },
+                    component: CustomContentDocComponent
+                }
             ]
         },
         {
@@ -112,22 +112,22 @@ export class GalleriaDemo {
                 {
                     id: 'itemwiththumbnails',
                     label: 'With Thumbnails',
-                    component: ItemThumbnailsDocComponent,
+                    component: ItemThumbnailsDocComponent
                 },
                 {
                     id: 'itemwithtouthumbnails',
                     label: 'Without Thumbnails',
-                    component: ItemWithoutThumbnailsDocComponent,
+                    component: ItemWithoutThumbnailsDocComponent
                 },
                 {
                     id: 'hover',
                     label: 'Display on Hover',
-                    component: HoverDocComponent,
+                    component: HoverDocComponent
                 },
                 {
                     id: 'withindicators',
                     label: 'With Indicators',
-                    component: IndicatorsDocComponent,
+                    component: IndicatorsDocComponent
                 }
             ]
         },

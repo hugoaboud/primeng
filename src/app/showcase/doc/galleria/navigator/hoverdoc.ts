@@ -9,7 +9,7 @@ import { PhotoService } from '../../../service/photo.service';
             <p>Navigators are displayed on hover only if <i>showItemNavigatorsOnHover</i> is enabled.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-galleria [(value)]="images" [showIndicators]="false" [showItemNavigatorsOnHover]="true" [showItemNavigators]="true" [responsiveOptions]="responsiveOptions" [containerStyle]="{'width': '100%'}"> 
+            <p-galleria [(value)]="images" [showIndicators]="false" [showItemNavigatorsOnHover]="true" [showItemNavigators]="true" [responsiveOptions]="responsiveOptions" [containerStyle]="{ width: '100%' }">
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
                 </ng-template>
@@ -28,7 +28,7 @@ export class HoverDocComponent implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
-    
+
     images: any[];
 
     responsiveOptions: any[] = [
