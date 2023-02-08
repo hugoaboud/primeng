@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ComponentFactoryResolver, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 
 interface Props {
     id: string;
@@ -17,7 +17,7 @@ export class AppDocSectionsComponent implements OnInit {
 
     @ViewChild('docComponent', { read: ViewContainerRef }) docComponent: ViewContainerRef;
 
-    constructor(private componentFactoryResolver: ComponentFactoryResolver, private cdRef: ChangeDetectorRef) {}
+    constructor(private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
         for (let index = 0; index < this.docs.length; index++) {
@@ -26,16 +26,23 @@ export class AppDocSectionsComponent implements OnInit {
     }
 
     loadComponent() {
-        this.cdRef.detectChanges();
+        this.cd.detectChanges();
         this.currentDocIndex = (this.currentDocIndex + 1) % this.docs.length;
         const newComponent: any = this.docs[this.currentDocIndex];
-
+        
         const viewContainerRef = this.docComponent;
-
         if (newComponent.component !== undefined) {
             let component = viewContainerRef.createComponent<Props>(newComponent.component);
             component.instance.id = newComponent.id;
             component.instance.title = newComponent.label;
+        }
+        if (newComponent.children) {
+            for (let i = 0; i < newComponent.children.length; i++) {
+                const children = newComponent.children[i];
+                let component = viewContainerRef.createComponent<Props>(children.component);
+                component.instance.id = children.id;
+                component.instance.title = children.label;
+            }
         }
     }
 }

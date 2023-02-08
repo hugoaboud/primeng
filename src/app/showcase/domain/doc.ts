@@ -5,4 +5,5 @@ export interface Doc {
     label?: string;
     component?: ComponentRef<any>;
     doc?: Doc[];
+    children?: Doc[];
 }

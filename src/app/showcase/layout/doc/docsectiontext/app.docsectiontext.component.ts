@@ -8,4 +8,6 @@ export class AppDocSectionTextComponent {
     @Input() title: string;
 
     @Input() id: string;
+
+    @Input() level: number = 2;
 }

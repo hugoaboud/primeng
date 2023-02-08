@@ -71,7 +71,6 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
     }
 
     onButtonClick(doc) {
-        // Scroll to the clicked button's parent element
         this.scrollTo(doc.id);
     }
 
