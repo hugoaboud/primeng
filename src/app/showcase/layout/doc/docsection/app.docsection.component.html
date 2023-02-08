@@ -1,20 +1,6 @@
 <div *ngFor="let doc of docs">
     <section class="py-3">
-        <!-- <div *ngIf="doc.children && doc.id !== 'api'">
-            <div *ngFor="let child of doc.children">
-                <div>
-                    <h3 [id]="child.id" class="doc-section-label">
-                        {{ child.label }}
-                        <a [id]="child.id" href="#">#</a>
-                    </h3>
-                    <div class="doc-section-description main">{{ child.description || 'Section Content' }}</div>
-                </div>
-            </div>
-
-        </div> -->
-
         <ng-template #docComponent></ng-template>
-
         <app-docapisection *ngIf="doc.id ==='api' && doc.doc" [docs]="doc.doc"></app-docapisection>
     </section>
 </div>
