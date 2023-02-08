@@ -19,4 +19,4 @@ import { EventsDocComponent } from './eventsdoc';
     exports: [AppDocModule, ImportDocComponent, BasicDocComponent, InlineDocComponent, FormatDocComponent, DisabledDocComponent, PropsDocComponent, StyleDocComponent, EventsDocComponent],
     declarations: [ImportDocComponent, BasicDocComponent, InlineDocComponent, FormatDocComponent, DisabledDocComponent, PropsDocComponent, StyleDocComponent, EventsDocComponent]
 })
-export class ColorPickerDocModule { }
+export class ColorPickerDocModule {}

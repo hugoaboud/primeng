@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'events-doc',
+    selector: 'methods-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
         <div class="doc-tablewrapper">
@@ -15,29 +15,31 @@ import { Component, Input } from '@angular/core';
                 </thead>
                 <tbody>
                     <tr>
-                        <td>onChange</td>
-                        <td>
-                            event.originalEvent: Browser event<br />
-                            event.value: Selected color
-                        </td>
-                        <td>Callback to invoke when a color is selected.</td>
+                        <td>resetFilter</td>
+                        <td>-</td>
+                        <td>Resets filtering.</td>
                     </tr>
                     <tr>
-                        <td>onShow</td>
-                        <td>event: Event object</td>
-                        <td>Callback to invoke when popup is shown.</td>
+                        <td>focus</td>
+                        <td>-</td>
+                        <td>Applies focus.</td>
                     </tr>
                     <tr>
-                        <td>onHide</td>
-                        <td>event: Event object</td>
-                        <td>Callback to invoke when popup is hidden.</td>
+                        <td>show</td>
+                        <td>-</td>
+                        <td>Displays the panel.</td>
+                    </tr>
+                    <tr>
+                        <td>hide</td>
+                        <td>-</td>
+                        <td>Hides the panel.</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>`
 })
-export class EventsDocComponent {
+export class MethodsDocComponent {
     @Input() id: string;
 
     @Input() title: string;

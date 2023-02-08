@@ -1,124 +1,94 @@
 import { Component } from '@angular/core';
-import { SelectItem } from 'primeng/api';
-import { SelectItemGroup } from 'primeng/api';
-
-interface City {
-    name: string;
-    code: string;
-}
+import { BasicDocComponent } from '../../doc/dropdown/basicdoc';
+import { DisabledDocComponent } from '../../doc/dropdown/disableddoc';
+import { EditableDocComponent } from '../../doc/dropdown/editabledoc';
+import { FilterDocComponent } from '../../doc/dropdown/filterdoc';
+import { GroupDocComponent } from '../../doc/dropdown/groupdoc';
+import { ImportDocComponent } from '../../doc/dropdown/importdoc';
+import { TemplateDocComponent } from '../../doc/dropdown/templatedoc';
+import { VirtualScrollDocComponent } from '../../doc/dropdown/virtualscrolldoc';
+import { FloatLabelDocComponent } from '../../doc/dropdown/floatlabeldoc';
+import { PropsDocComponent } from '../../doc/dropdown/propsdoc';
+import { StyleDocComponent } from '../../doc/dropdown/styledoc';
+import { EventsDocComponent } from '../../doc/dropdown/eventsdoc';
+import { MethodsDocComponent } from '../../doc/dropdown/methodsdoc';
+import { TemplatesDocComponent } from '../../doc/dropdown/templatesdoc';
 
 @Component({
     templateUrl: './dropdowndemo.html',
     styleUrls: ['./dropdowndemo.scss']
 })
 export class DropdownDemo {
-    cities: City[];
-
-    selectedCity1: City;
-
-    selectedCity2: City;
-
-    selectedCity3: string;
-
-    selectedCountry: string;
-
-    countries: any[];
-
-    groupedCities: SelectItemGroup[];
-
-    items: SelectItem[];
-
-    lazyItems: SelectItem[];
-
-    selectedItem1: string;
-
-    selectedItem2: string;
-
-    loading: boolean = false;
-
-    loadLazyTimeout: any;
-
-    constructor() {
-        this.items = [];
-        for (let i = 0; i < 10000; i++) {
-            this.items.push({ label: 'Item ' + i, value: 'Item ' + i });
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'editable',
+            label: 'Editable',
+            component: EditableDocComponent
+        },
+        {
+            id: 'group',
+            label: 'Group',
+            component: GroupDocComponent
+        },
+        {
+            id: 'template',
+            label: 'Template',
+            component: TemplateDocComponent
+        },
+        {
+            id: 'filter',
+            label: 'Filter',
+            component: FilterDocComponent
+        },
+        {
+            id: 'virtualscroll',
+            label: 'Virtual Scroll',
+            component: VirtualScrollDocComponent
+        },
+        {
+            id: 'disabled',
+            label: 'Disabled',
+            component: DisabledDocComponent
+        },
+        {
+            id: 'floatlabel',
+            label: 'Float Label',
+            component: FloatLabelDocComponent
+        },
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
+        },
+        {
+            id: 'methods',
+            label: 'Methods',
+            component: MethodsDocComponent
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDocComponent
         }
-
-        this.cities = [
-            { name: 'New York', code: 'NY' },
-            { name: 'Rome', code: 'RM' },
-            { name: 'London', code: 'LDN' },
-            { name: 'Istanbul', code: 'IST' },
-            { name: 'Paris', code: 'PRS' }
-        ];
-
-        this.groupedCities = [
-            {
-                label: 'Germany',
-                value: 'de',
-                items: [
-                    { label: 'Berlin', value: 'Berlin' },
-                    { label: 'Frankfurt', value: 'Frankfurt' },
-                    { label: 'Hamburg', value: 'Hamburg' },
-                    { label: 'Munich', value: 'Munich' }
-                ]
-            },
-            {
-                label: 'USA',
-                value: 'us',
-                items: [
-                    { label: 'Chicago', value: 'Chicago' },
-                    { label: 'Los Angeles', value: 'Los Angeles' },
-                    { label: 'New York', value: 'New York' },
-                    { label: 'San Francisco', value: 'San Francisco' }
-                ]
-            },
-            {
-                label: 'Japan',
-                value: 'jp',
-                items: [
-                    { label: 'Kyoto', value: 'Kyoto' },
-                    { label: 'Osaka', value: 'Osaka' },
-                    { label: 'Tokyo', value: 'Tokyo' },
-                    { label: 'Yokohama', value: 'Yokohama' }
-                ]
-            }
-        ];
-
-        this.countries = [
-            { name: 'Australia', code: 'AU' },
-            { name: 'Brazil', code: 'BR' },
-            { name: 'China', code: 'CN' },
-            { name: 'Egypt', code: 'EG' },
-            { name: 'France', code: 'FR' },
-            { name: 'Germany', code: 'DE' },
-            { name: 'India', code: 'IN' },
-            { name: 'Japan', code: 'JP' },
-            { name: 'Spain', code: 'ES' },
-            { name: 'United States', code: 'US' }
-        ];
-
-        this.lazyItems = Array.from({ length: 100000 });
-    }
-
-    onLazyLoad(event) {
-        this.loading = true;
-
-        if (this.loadLazyTimeout) {
-            clearTimeout(this.loadLazyTimeout);
-        }
-
-        //imitate delay of a backend call
-        this.loadLazyTimeout = setTimeout(() => {
-            const { first, last } = event;
-            const lazyItems = [...this.lazyItems];
-
-            for (let i = first; i < last; i++) {
-                lazyItems[i] = { label: `Item #${i}`, value: i };
-            }
-
-            this.lazyItems = lazyItems;
-            this.loading = false;
-        }, Math.random() * 1000 + 250);
-    }
+    ];
 }
