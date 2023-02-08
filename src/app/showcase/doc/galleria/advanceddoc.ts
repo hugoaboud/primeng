@@ -10,27 +10,40 @@ import { PhotoService } from '../../service/photo.service';
             <p>Simple example with indicators only.</p>
         </app-docsectiontext>
         <div class="card">
-        <p-galleria #galleria [(value)]="images" [(activeIndex)]="activeIndex" [numVisible]="5" [showThumbnails]="showThumbnails" [showItemNavigators]="true" [showItemNavigatorsOnHover]="true" [circular]="true" [autoPlay]="true" [transitionInterval]="3000" [containerStyle]="{'width':'100%'}" [containerClass]="galleriaClass()"> 
-            <ng-template pTemplate="item" let-item>
-                <img [src]="item.previewImageSrc" [ngStyle]="{'width': !fullscreen ? '100%' : '', 'display': !fullscreen ? 'block' : ''}" />
-            </ng-template>
-            <ng-template pTemplate="thumbnail" let-item>
-                <div class="grid grid-nogutter justify-content-center">
-                    <img [src]="item.thumbnailImageSrc" />
-                </div>
-            </ng-template>
-            <ng-template pTemplate="footer" let-item>
-                <div class="custom-galleria-footer">
-                    <button type="button" pButton icon="pi pi-list" (click)="onThumbnailButtonClick()"></button>
-                    <span *ngIf="images"  class="title-container">
-                        <span>{{activeIndex + 1}}/{{images.length}}</span>
-                        <span class="title">{{images[activeIndex].title}}</span>
-                        <span>{{images[activeIndex].alt}}</span>
-                    </span>
-                    <button type="button" pButton [icon]="fullScreenIcon()" (click)="toggleFullScreen()" class="fullscreen-button"></button>
-                </div>
-            </ng-template>
-        </p-galleria>
+            <p-galleria
+                #galleria
+                [(value)]="images"
+                [(activeIndex)]="activeIndex"
+                [numVisible]="5"
+                [showThumbnails]="showThumbnails"
+                [showItemNavigators]="true"
+                [showItemNavigatorsOnHover]="true"
+                [circular]="true"
+                [autoPlay]="true"
+                [transitionInterval]="3000"
+                [containerStyle]="{ width: '100%' }"
+                [containerClass]="galleriaClass()"
+            >
+                <ng-template pTemplate="item" let-item>
+                    <img [src]="item.previewImageSrc" [ngStyle]="{ width: !fullscreen ? '100%' : '', display: !fullscreen ? 'block' : '' }" />
+                </ng-template>
+                <ng-template pTemplate="thumbnail" let-item>
+                    <div class="grid grid-nogutter justify-content-center">
+                        <img [src]="item.thumbnailImageSrc" />
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="footer" let-item>
+                    <div class="custom-galleria-footer">
+                        <button type="button" pButton icon="pi pi-list" (click)="onThumbnailButtonClick()"></button>
+                        <span *ngIf="images" class="title-container">
+                            <span>{{ activeIndex + 1 }}/{{ images.length }}</span>
+                            <span class="title">{{ images[activeIndex].title }}</span>
+                            <span>{{ images[activeIndex].alt }}</span>
+                        </span>
+                        <button type="button" pButton [icon]="fullScreenIcon()" (click)="toggleFullScreen()" class="fullscreen-button"></button>
+                    </div>
+                </ng-template>
+            </p-galleria>
         </div>
         <app-code [code]="code"></app-code>
     </div>`,
@@ -40,7 +53,7 @@ export class AdvancedDocComponent implements OnInit, OnDestroy {
     @Input() id: string;
 
     @Input() title: string;
-    
+
     images: any[];
 
     showThumbnails: boolean;

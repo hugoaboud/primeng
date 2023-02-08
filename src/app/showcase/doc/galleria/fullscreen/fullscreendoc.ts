@@ -6,11 +6,10 @@ import { Component, Input } from '@angular/core';
         <app-docsectiontext [title]="title" [id]="id">
             <p>In fullscreen mode content covers the whole page over a modal layer.</p>
         </app-docsectiontext>
-    </div>`,
+    </div>`
 })
-export class FullScreenDocComponent{
+export class FullScreenDocComponent {
     @Input() id: string;
 
     @Input() title: string;
-
 }

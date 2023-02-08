@@ -9,7 +9,7 @@ import { PhotoService } from '../../service/photo.service';
             <p>Galleria requires a <i>value</i> as a collection of images, <i>item</i> template for the higher resolution image and <i>thumbnail</i> template to display as a thumbnail.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-galleria [(value)]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'width': '100%'}" [numVisible]="5">
+            <p-galleria [(value)]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{ width: '100%' }" [numVisible]="5">
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%;" />
                 </ng-template>
@@ -30,7 +30,7 @@ export class BasicDocComponent implements OnInit {
     @Input() title: string;
 
     images: any[];
-    
+
     responsiveOptions: any[];
 
     constructor(private photoService: PhotoService) {}

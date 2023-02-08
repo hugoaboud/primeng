@@ -9,7 +9,7 @@ import { PhotoService } from '../../../service/photo.service';
             <p>Indicators can be activated on hover instead of click if <i>changeItemOnIndicatorHover</i> is added.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-galleria [(value)]="images" [showIndicators]="true" [showThumbnails]="false" [changeItemOnIndicatorHover]="true" [responsiveOptions]="responsiveOptions" [containerStyle]="{'width': '100%'}"> 
+            <p-galleria [(value)]="images" [showIndicators]="true" [showThumbnails]="false" [changeItemOnIndicatorHover]="true" [responsiveOptions]="responsiveOptions" [containerStyle]="{ width: '100%' }">
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
                 </ng-template>
@@ -28,7 +28,7 @@ export class HoverEventDocComponent implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
-    
+
     images: any[];
 
     responsiveOptions: any[] = [

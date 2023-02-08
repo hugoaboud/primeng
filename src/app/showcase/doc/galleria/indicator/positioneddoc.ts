@@ -6,16 +6,27 @@ import { PhotoService } from '../../../service/photo.service';
     selector: 'positioned-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
-            <p>Indicators can be placed at four different sides using the <i>indicatorsPosition</i> property. In addition, enabling <i>showIndicatorsOnItem</i> moves the indicators inside the image section. <i>indicatorsPosition</i> set to <i>bottom</i> by default, accepted values are <i>top</i>, <i>left</i>, <i>right</i>, and <i>bottom</i>.</p>
+            <p>
+                Indicators can be placed at four different sides using the <i>indicatorsPosition</i> property. In addition, enabling <i>showIndicatorsOnItem</i> moves the indicators inside the image section. <i>indicatorsPosition</i> set to
+                <i>bottom</i> by default, accepted values are <i>top</i>, <i>left</i>, <i>right</i>, and <i>bottom</i>.
+            </p>
         </app-docsectiontext>
         <div class="card">
             <div class="flex flex-wrap gap-3 mb-5">
-                <p-radioButton *ngFor="let option of positionOptions;" [name]="option.label" [value]="option.value" [label]="option.label" [(ngModel)]="position" [inputId]="label"></p-radioButton>
+                <p-radioButton *ngFor="let option of positionOptions" [name]="option.label" [value]="option.value" [label]="option.label" [(ngModel)]="position" [inputId]="label"></p-radioButton>
             </div>
             <div class="flex align-items-center">
                 <p-checkbox [(ngModel)]="showIndicatorsOnItem" [binary]="true" inputId="binary" label="Inside" ngClass="mt-3"></p-checkbox>
             </div>
-            <p-galleria [(value)]="images" [indicatorsPosition]="position" [showIndicators]="true" [showThumbnails]="false" [showIndicatorsOnItem]="showIndicatorsOnItem" [responsiveOptions]="responsiveOptions" [containerStyle]="{'width': '100%','margin-top': '2em'}">
+            <p-galleria
+                [(value)]="images"
+                [indicatorsPosition]="position"
+                [showIndicators]="true"
+                [showThumbnails]="false"
+                [showIndicatorsOnItem]="showIndicatorsOnItem"
+                [responsiveOptions]="responsiveOptions"
+                [containerStyle]="{ width: '100%', 'margin-top': '2em' }"
+            >
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
                 </ng-template>
@@ -34,7 +45,7 @@ export class PositionedDocComponent implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
-    
+
     images: any[];
 
     position: string = 'top';

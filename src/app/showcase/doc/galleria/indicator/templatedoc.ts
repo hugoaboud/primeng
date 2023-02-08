@@ -9,7 +9,7 @@ import { PhotoService } from '../../../service/photo.service';
             <p>Indicator content can be customized with the <i>indicator</i> template.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-galleria [(value)]="images" [showIndicators]="true" [showThumbnails]="false" [showIndicatorsOnItem]="true" indicatorsPosition="left" [responsiveOptions]="responsiveOptions" [containerStyle]="{'width': '100%','margin-top': '2em'}">
+            <p-galleria [(value)]="images" [showIndicators]="true" [showThumbnails]="false" [showIndicatorsOnItem]="true" indicatorsPosition="left" [responsiveOptions]="responsiveOptions" [containerStyle]="{ width: '100%', 'margin-top': '2em' }">
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
                 </ng-template>
@@ -20,7 +20,7 @@ import { PhotoService } from '../../../service/photo.service';
                 </ng-template>
                 <ng-template pTemplate="indicator" let-index>
                     <span style="color: #e9ecef; cursor: pointer">
-                        {{index + 1}}
+                        {{ index + 1 }}
                     </span>
                 </ng-template>
             </p-galleria>
@@ -33,7 +33,7 @@ export class TemplateDocComponent implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
-    
+
     images: any[];
 
     responsiveOptions: any[] = [

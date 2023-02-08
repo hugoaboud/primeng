@@ -6,11 +6,10 @@ import { Component, Input } from '@angular/core';
         <app-docsectiontext [title]="title" [id]="id">
             <p>Indicators allow quick navigation between the items.</p>
         </app-docsectiontext>
-    </div>`,
+    </div>`
 })
-export class IndicatorDocComponent{
+export class IndicatorDocComponent {
     @Input() id: string;
 
     @Input() title: string;
-
 }

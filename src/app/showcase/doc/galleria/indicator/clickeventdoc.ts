@@ -9,7 +9,7 @@ import { PhotoService } from '../../../service/photo.service';
             <p>Indicators are displayed at the bottom by enabling <i>showIndicators</i> property and interacted with the click event by default.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-galleria [(value)]="images" [showIndicators]="true" [showThumbnails]="false" [responsiveOptions]="responsiveOptions" [containerStyle]="{'width': '100%'}">
+            <p-galleria [(value)]="images" [showIndicators]="true" [showThumbnails]="false" [responsiveOptions]="responsiveOptions" [containerStyle]="{ width: '100%' }">
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
                 </ng-template>
@@ -28,7 +28,7 @@ export class ClickEventDocComponent implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
-    
+
     images: any[];
 
     responsiveOptions: any[] = [

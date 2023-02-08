@@ -29,7 +29,7 @@ export class AppDocSectionsComponent implements OnInit {
         this.cd.detectChanges();
         this.currentDocIndex = (this.currentDocIndex + 1) % this.docs.length;
         const newComponent: any = this.docs[this.currentDocIndex];
-        
+
         const viewContainerRef = this.docComponent;
         if (newComponent.component !== undefined) {
             let component = viewContainerRef.createComponent<Props>(newComponent.component);

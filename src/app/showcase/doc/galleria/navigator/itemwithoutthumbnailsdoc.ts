@@ -9,7 +9,7 @@ import { PhotoService } from '../../../service/photo.service';
             <p>Simple example with indicators only.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-galleria [(value)]="images" [numVisible]="5" [circular]="true" [showItemNavigators]="true" [showThumbnails]="false" [responsiveOptions]="responsiveOptions" [containerStyle]="{'width': '100%'}">
+            <p-galleria [(value)]="images" [numVisible]="5" [circular]="true" [showItemNavigators]="true" [showThumbnails]="false" [responsiveOptions]="responsiveOptions" [containerStyle]="{ width: '100%' }">
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
                 </ng-template>
@@ -28,7 +28,7 @@ export class ItemWithoutThumbnailsDocComponent implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
-    
+
     images: any[];
 
     responsiveOptions: any[] = [

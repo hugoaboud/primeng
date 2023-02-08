@@ -9,7 +9,7 @@ import { PhotoService } from '../../../service/photo.service';
             <p>Add <i>showItemNavigators</i> to display navigator elements and the left and right side.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-galleria [(value)]="images" [showItemNavigators]="true" [responsiveOptions]="responsiveOptions" [circular]="true"  [numVisible]="5" [containerStyle]="{'width': '100%'}">
+            <p-galleria [(value)]="images" [showItemNavigators]="true" [responsiveOptions]="responsiveOptions" [circular]="true" [numVisible]="5" [containerStyle]="{ width: '100%' }">
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
                 </ng-template>
@@ -28,7 +28,7 @@ export class ItemThumbnailsDocComponent implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
-    
+
     images: any[];
 
     responsiveOptions: any[] = [

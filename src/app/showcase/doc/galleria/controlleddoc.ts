@@ -13,7 +13,7 @@ import { PhotoService } from '../../service/photo.service';
                 <p-button type="button" icon="pi pi-minus" (click)="prev()" styleClass="p-button-secondary mr-2"></p-button>
                 <p-button type="button" icon="pi pi-plus" (click)="next()" styleClass="p-button-primary"></p-button>
             </div>
-            <p-galleria [(value)]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'width': '100%'}" [numVisible]="5" [(activeIndex)]="activeIndex"> 
+            <p-galleria [(value)]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{ width: '100%' }" [numVisible]="5" [(activeIndex)]="activeIndex">
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%;" />
                 </ng-template>

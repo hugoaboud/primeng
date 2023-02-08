@@ -6,11 +6,10 @@ import { Component, Input } from '@angular/core';
         <app-docsectiontext [title]="title" [id]="id">
             <p>Navigators are used to move back and forth between the images.</p>
         </app-docsectiontext>
-    </div>`,
+    </div>`
 })
-export class NavigatorDocComponent{
+export class NavigatorDocComponent {
     @Input() id: string;
 
     @Input() title: string;
-
 }
