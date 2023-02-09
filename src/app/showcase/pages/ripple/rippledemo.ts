@@ -29,7 +29,10 @@ export class RippleDemo {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
-        },
+        }
+    ];
+
+    apiDocs = [
         {
             id: 'api',
             label: 'API',

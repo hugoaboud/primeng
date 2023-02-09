@@ -73,7 +73,10 @@ export class AvatarDemo {
             id: 'stylingofavatargroup',
             label: 'Styling of AvatarGroup',
             component: AvatarGroupStyleDocComponent
-        },
+        }
+    ];
+
+    apiDocs = [
         {
             id: 'avatarprops',
             label: 'Properties of Avatar',

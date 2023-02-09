@@ -43,7 +43,10 @@ export class ChipDemo {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
-        },
+        }
+    ];
+
+    apiDocs = [
         {
             id: 'properties',
             label: 'Properties',

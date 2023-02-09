@@ -53,7 +53,10 @@ export class BadgeDemo {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
-        },
+        }
+    ];
+
+    apiDocs = [
         {
             id: 'props',
             label: 'Properties',

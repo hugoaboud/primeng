@@ -30,7 +30,10 @@ export class ProgressSpinnerDemo {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
-        },
+        }
+    ];
+
+    apiDocs = [
         {
             id: 'props',
             label: 'Properties',

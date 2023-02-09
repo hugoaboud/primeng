@@ -17,7 +17,10 @@ export class AnimateDemo {
             id: 'basic',
             label: 'Basic',
             component: BasicDocComponent
-        },
+        }
+    ];
+
+    apiDocs = [
         {
             id: 'props',
             label: 'Properties',

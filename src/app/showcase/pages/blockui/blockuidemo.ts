@@ -74,6 +74,9 @@ export class BlockUIDemo {
             label: 'Style',
             component: StyleDocComponent
         },
+    ];
+
+    apiDocs = [
         {
             id: 'props',
             label: 'Properties',

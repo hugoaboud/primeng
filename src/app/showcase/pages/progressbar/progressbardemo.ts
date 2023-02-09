@@ -35,7 +35,10 @@ export class ProgressBarDemo {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
-        },
+        }
+    ];
+
+    apiDocs = [
         {
             id: 'props',
             label: 'Properties',

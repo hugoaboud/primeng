@@ -23,7 +23,10 @@ export class StyleClassDemo {
             id: 'animation',
             label: 'Animation',
             component: AnimationDocComponent
-        },
+        }
+    ];
+
+    apiDocs = [
         {
             id: 'props',
             label: 'Properties',
