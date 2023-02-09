@@ -1,4 +1,4 @@
-<div class="relative doc-section-code">
+<div *ngIf="code" class="relative doc-section-code">
     <div class="flex align-items-center justify-content-end absolute z-2 gap-3" *ngIf="!hideToggleCode" style="right: 0.75rem; top: 1.75rem">
         <button *ngIf="code.html" pButton label="HTML" pTooltip="HTML" tooltipPosition="bottom"
             tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('html')"

@@ -9,7 +9,7 @@ import { CodeHighlighterComponent } from '../codehighlighter/app.codehighlighter
     templateUrl: './app.code.component.html'
 })
 export class AppCodeComponent {
-    @Input() code: Code;
+    @Input() code!: Code;
 
     @Input() hideToggleCode: boolean = false;
 
@@ -32,7 +32,9 @@ export class AppCodeComponent {
     }
 
     getLang(): string {
-        return Object.keys(this.code)[0];
+        if (this.code) {
+            return Object.keys(this.code)[0];
+        }
     }
 
     async copyCode() {
@@ -40,7 +42,9 @@ export class AppCodeComponent {
     }
 
     getCode(lang: string) {
-        return this.code[lang];
+        if(this.code) {
+            return this.code[lang];
+        }
     }
 }
 
