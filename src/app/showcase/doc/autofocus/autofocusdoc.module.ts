@@ -12,6 +12,6 @@ import { InputTextModule } from 'primeng/inputtext';
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, AutoFocusModule, InputTextModule],
     declarations: [ImportDocComponent, BasicDocComponent, PropsDocComponent],
-    exports: [ImportDocComponent, BasicDocComponent, PropsDocComponent]
+    exports: [ImportDocComponent, BasicDocComponent, PropsDocComponent, AppDocModule]
 })
 export class AutoFocusDocModule {}
