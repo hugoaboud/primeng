@@ -40,14 +40,17 @@ export class EditorDemo {
             component: CustomToolbarDocComponent
         },
         {
-            id: 'properties',
-            label: 'Properties',
-            component: PropsDocComponent
-        },
-        {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
+        }
+    ];
+
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
         },
         {
             id: 'events',
@@ -58,6 +61,11 @@ export class EditorDemo {
             id: 'methods',
             label: 'Methods',
             component: MethodsDocComponent
+        },
+        {
+            id: 'api',
+            label: 'API',
+            doc: [{ name: 'Editor', pathname: '/modules/editor.html' }]
         }
     ];
 }

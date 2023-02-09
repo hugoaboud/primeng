@@ -55,6 +55,11 @@ export class ColorPickerDemo {
             id: 'events',
             label: 'Events',
             component: EventsDocComponent
+        },
+        {
+            id: 'api',
+            label: 'API',
+            doc: [{ name: 'ColorPicker', pathname: '/modules/colorpicker.html' }]
         }
     ];
 }

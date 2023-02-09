@@ -133,6 +133,11 @@ export class CalendarDemo {
             id: 'methods',
             label: 'Methods',
             component: MethodsDocComponent
+        },
+        {
+            id: 'api',
+            label: 'API',
+            doc: [{ name: 'Calendar', pathname: '/modules/calendar.html' }]
         }
     ];
 }
