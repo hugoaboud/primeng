@@ -55,6 +55,20 @@ export class BasicDocComponent {
     ];
 
     code: Code = {
+        basic: `
+<div pFocusTrap class="card flex align-items-center justify-content-center flex-wrap gap-3">
+    <div>
+        <h4>Input</h4>
+        <input id="input" type="text" size="30" pInputText>
+    </div>
+    <div>
+        <h4>Float Label</h4>
+        <span class="p-float-label">
+            <input id="float-input" type="text" size="30" pInputText> 
+            <label for="float-input">Username</label>
+        </span>
+    </div>
+</div>`,
         html: `
 <div pFocusTrap class="card flex align-items-center justify-content-center flex-wrap gap-3">
     <div>
@@ -101,6 +115,21 @@ export class FocusTrapDemo {
         { name: 'Istanbul', code: 'IST' },
         { name: 'Paris', code: 'PRS' }
     ];
-}`
+}`,
+        module: `
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
+import { DropdownModule } from 'primeng/dropdown';
+import { FocusTrapModule } from 'primeng/focustrap';
+
+@NgModule({
+    imports: [CommonModule, FormsModule, ButtonModule, InputTextModule, DropdownModule, FocusTrapModule],
+    declarations: [FocusTrapDemo]
+})
+export class FocusTrapDemoModule {}
+`
     };
 }

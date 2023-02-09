@@ -429,20 +429,33 @@
                             "routerLink": "/progressspinner"
                         },
                         {
-                            "name": "Ripple",
-                            "routerLink": "/ripple"
-                        },
-                        {
                             "name": "Tag",
                             "routerLink": "/tag"
                         },
                         {
                             "name": "Terminal",
                             "routerLink": "/terminal"
+                        }
+                    ]
+                },
+                {
+                    "name": "Directives",
+                    "children": [
+                        {
+                            "name": "Defer",
+                            "routerLink": "/defer"
+                        },
+                        {
+                            "name": "FocusTrap",
+                            "routerLink": "/focustrap"
                         },
                         {
                             "name": "StyleClass",
                             "routerLink": "/styleclass"
+                        },
+                        {
+                            "name": "Ripple",
+                            "routerLink": "/ripple"
                         },
                         {
                             "name": "AutoFocus",

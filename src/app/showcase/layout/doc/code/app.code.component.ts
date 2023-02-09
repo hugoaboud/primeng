@@ -4,6 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
 import { Code } from 'src/app/showcase/domain/code';
 import { CodeHighlighterComponent } from '../codehighlighter/app.codehighlighter.component';
+
 @Component({
     selector: 'app-code',
     templateUrl: './app.code.component.html'
