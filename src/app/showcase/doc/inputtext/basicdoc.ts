@@ -5,16 +5,16 @@ import { Code } from '../../domain/code';
     selector: 'basic-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>InputText is used as a controlled input with <i>value</i> and <i>onChange</i> properties.</p>
+            <p>InputText is applied to an input field with pInputText directive.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
-            <input type="text" pInputText [(ngModel)]="value1" />
+            <input type="text" pInputText [(ngModel)]="value" />
         </div>
         <app-code [code]="code"></app-code>
     </div>`
 })
 export class BasicDocComponent {
-    value1: string;
+    value: string;
 
     @Input() id: string;
 
@@ -22,10 +22,10 @@ export class BasicDocComponent {
 
     code: Code = {
         html: `
-<input type="text" pInputText [(ngModel)]="value1">`,
+<input type="text" pInputText [(ngModel)]="value" />`,
         typescript: `
 export class InputTextDemo {
-    value:1 string;
+    value: string;
 }`
     };
 }

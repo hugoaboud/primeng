@@ -8,13 +8,13 @@ import { Code } from '../../domain/code';
             <p>InputText has built-in key filtering support to block certain keys, refer to <a href="/keyfilter">keyfilter</a> page for more information.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
-            <input pInputText pKeyFilter="int" placeholder="Integers" [(ngModel)]="value1" />
+            <input pInputText pKeyFilter="int" placeholder="Integers" [(ngModel)]="value" />
         </div>
         <app-code [code]="code"></app-code>
     </div>`
 })
 export class KeyFilterDocComponent {
-    value1: string;
+    value: string;
 
     @Input() id: string;
 
@@ -22,11 +22,11 @@ export class KeyFilterDocComponent {
 
     code: Code = {
         html: `
-<input pInputText pKeyFilter="int" placeholder="Integers" [(ngModel)]="value1" />`,
+<input pInputText pKeyFilter="int" placeholder="Integers" [(ngModel)]="value" />`,
 
         typescript: `
-export class InputText {
-    value:1 string;
+export class InputTextDemo {
+    value: string;
 }`
     };
 }

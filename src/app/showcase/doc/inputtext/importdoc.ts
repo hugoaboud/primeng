@@ -16,6 +16,7 @@ export class ImportDocComponent {
     @Input() title: string;
 
     code: Code = {
-        html: `import { InputTextModule } from 'primeng/inputtext';`
+        html: `
+import { InputTextModule } from 'primeng/inputtext';`
     };
 }

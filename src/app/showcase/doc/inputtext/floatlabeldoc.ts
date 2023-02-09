@@ -9,7 +9,7 @@ import { Code } from '../../domain/code';
         </app-docsectiontext>
         <div class="card flex justify-content-center">
             <span class="p-float-label">
-                <input pInputText id="username" [(ngModel)]="value1" />
+                <input pInputText id="username" [(ngModel)]="value" />
                 <label htmlFor="username">Username</label>
             </span>
         </div>
@@ -17,9 +17,7 @@ import { Code } from '../../domain/code';
     </div>`
 })
 export class FloatLabelDocComponent {
-    value1: string;
-
-    value2: string;
+    value: string;
 
     @Input() id: string;
 
@@ -28,13 +26,13 @@ export class FloatLabelDocComponent {
     code: Code = {
         html: `
 <span class="p-float-label">
-    <input pInputText id="username" [(ngModel)]="value1" />
+    <input pInputText id="username" [(ngModel)]="value" />
     <label htmlFor="username">Username</label>
 </span>`,
 
         typescript: `
-export class InputText {
-    value:1 string;
+export class InputTextDemo {
+    value: string;
 }`
     };
 }
