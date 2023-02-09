@@ -112,14 +112,17 @@ export class CalendarDemo {
             component: InlineDocComponent
         },
         {
-            id: 'properties',
-            label: 'Properties',
-            component: PropsDocComponent
-        },
-        {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
+        }
+    ];
+
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
         },
         {
             id: 'events',
