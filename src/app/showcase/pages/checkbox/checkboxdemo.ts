@@ -64,7 +64,10 @@ export class CheckboxDemo {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
-        },
+        }
+    ];
+
+    apiDocs = [
         {
             id: 'properties',
             label: 'Properties',

@@ -92,6 +92,11 @@ export class DropdownDemo {
             id: 'templates',
             label: 'Templates',
             component: TemplatesDocComponent
+        },
+        {
+            id: 'api',
+            label: 'API',
+            doc: [{ name: 'Dropdown', pathname: '/modules/dropdown.html' }]
         }
     ];
 }
