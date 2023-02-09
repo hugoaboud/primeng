@@ -73,7 +73,7 @@ export class BlockUIDemo {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
-        },
+        }
     ];
 
     apiDocs = [
