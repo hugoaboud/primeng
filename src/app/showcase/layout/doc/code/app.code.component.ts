@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Input, NgModule, ViewChild } from '@angular/core';
+import { Component, Input, NgModule } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
 import { Code } from 'src/app/showcase/domain/code';
@@ -17,9 +17,11 @@ export class AppCodeComponent {
 
     @Input() hideStackBlitz: boolean = false;
 
-    @ViewChild('code') codeViewChild: ElementRef;
+    fullCodeVisible: boolean = false;
 
     lang!: string;
+
+    selectedCode!: string;
 
     constructor() {}
 
@@ -41,10 +43,20 @@ export class AppCodeComponent {
         await navigator.clipboard.writeText(this.code[this.lang]);
     }
 
-    getCode(lang: string) {
+    getCode(lang: string = 'basic') {
         if(this.code) {
-            return this.code[lang];
+            if(this.fullCodeVisible || this.hideToggleCode) {
+                return this.code[lang];
+            }
+            else {
+                return this.code['basic'];
+            }
         }
+    }
+
+    toggleCode() {
+        this.fullCodeVisible = !this.fullCodeVisible;
+        this.fullCodeVisible && (this.lang = 'html');
     }
 }
 

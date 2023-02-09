@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild, TemplateRef, ChangeDetectorRef, SimpleChanges, OnChanges, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild, TemplateRef, ChangeDetectorRef, SimpleChanges, OnChanges, OnInit } from '@angular/core';
 import { Code } from 'src/app/showcase/domain/code';
 
 @Component({
@@ -27,7 +27,8 @@ export class CodeHighlighterComponent implements OnInit, OnChanges {
             this.code = changes.code.currentValue;
         }
         if (changes.lang && changes.lang.currentValue) {
-            this.lang = changes.lang.currentValue === 'typescript' ? 'tsx' : changes.lang.currentValue;
+            const currentLang = changes.lang.currentValue; 
+            this.lang = (currentLang === 'typescript' || currentLang === 'module') ? 'tsx' : currentLang === 'basic' ? 'html' : currentLang;
         }
     }
 

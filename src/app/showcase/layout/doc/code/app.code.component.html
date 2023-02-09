@@ -1,25 +1,39 @@
 <div *ngIf="code" class="relative doc-section-code">
-    <div class="flex align-items-center justify-content-end absolute z-2 gap-3" *ngIf="!hideToggleCode" style="right: 0.75rem; top: 1.75rem">
-        <button *ngIf="code.html" pButton label="HTML" pTooltip="HTML" tooltipPosition="bottom"
-            tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('html')"
-            class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
-            [ngClass]="{'doc-section-code-active text-primary':lang === 'html'}">
-        </button>
-        <button *ngIf="code.typescript || code.module" pButton [label]="code.typescript ? 'TS' : 'Module'" [pTooltip]="code.typescript ? 'TypeScript' : 'Module'" tooltipPosition="bottom"
-            tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('typescript')"
-            class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
-            [ngClass]="{'doc-section-code-active text-primary':lang === 'typescript'}">
-        </button>
-        <button *ngIf="code.scss" pButton label="SCSS" pTooltip="SCSS" tooltipPosition="bottom"
-            tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('scss')"
-            class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
-            [ngClass]="{'doc-section-code-active text-primary':lang === 'scss'}">
-        </button>
-
-        <button *ngIf="code.data" pButton icon="pi pi-database" pTooltip="View Data"
-            tooltipPosition="bottom" tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('data')"
-            class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
-            [ngClass]="{'doc-section-code-active text-primary':lang === 'data'}">
+    <div class="flex align-items-center justify-content-end absolute z-2 gap-3" style="right: 0.75rem; top: 1.75rem">
+        <div class="flex align-items-center" *ngIf="fullCodeVisible">
+            <button *ngIf="code.html" pButton label="HTML" pTooltip="HTML" tooltipPosition="bottom"
+                tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('html')"
+                class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
+                [ngClass]="{'doc-section-code-active text-primary':lang === 'html'}">
+            </button>
+    
+            <button *ngIf="code.typescript" pButton label="TS" pTooltip="TypeScript" tooltipPosition="bottom"
+                tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('typescript')"
+                class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
+                [ngClass]="{'doc-section-code-active text-primary':lang === 'typescript'}">
+            </button>
+    
+            <button *ngIf="code.module" pButton label="MODULE" pTooltip="Module" tooltipPosition="bottom"
+                tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('module')"
+                class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
+                [ngClass]="{'doc-section-code-active text-primary':lang === 'module'}">
+            </button>
+    
+            <button *ngIf="code.scss" pButton label="SCSS" pTooltip="SCSS" tooltipPosition="bottom"
+                tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('scss')"
+                class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
+                [ngClass]="{'doc-section-code-active text-primary':lang === 'scss'}">
+            </button>
+    
+            <button *ngIf="code.data" pButton icon="pi pi-database" pTooltip="View Data"
+                tooltipPosition="bottom" tooltipStyleClass="doc-section-code-tooltip" (click)="changeLang('data')"
+                class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
+                [ngClass]="{'doc-section-code-active text-primary':lang === 'data'}">
+            </button>
+        </div>
+        <button *ngIf="!hideToggleCode" pButton icon="pi pi-code" pTooltip="Toggle Full Code" tooltipPosition="bottom" 
+            class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center" 
+            (click)="toggleCode()">
         </button>
 
         <button pButton pTooltip="Edit in CodeSandbox" tooltipPosition="bottom"
@@ -44,10 +58,8 @@
         <button pButton type="button"
             class="p-button-rounded p-button-text text-sm p-button-plain p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center"
             (click)="copyCode()" icon="pi pi-copy" pTooltip="Copy Code" tooltipPosition="bottom"
-            tooltipStyleClass="doc-section-code-tooltip"></button>
+            tooltipStyleClass="doc-section-code-tooltip">
+        </button>
     </div>
-
-
     <code-highlighter [lang]="lang" [code]="getCode(lang)"></code-highlighter>
-
 </div>
