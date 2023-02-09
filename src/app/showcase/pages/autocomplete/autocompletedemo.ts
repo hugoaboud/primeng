@@ -47,7 +47,10 @@ export class AutoCompleteDemo {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
-        },
+        }
+    ];
+
+    apiDocs = [
         {
             id: 'properties',
             label: 'Properties',
