@@ -39,14 +39,17 @@ export class ColorPickerDemo {
             component: DisabledDocComponent
         },
         {
-            id: 'properties',
-            label: 'Properties',
-            component: PropsDocComponent
-        },
-        {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
+        }
+    ];
+
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
         },
         {
             id: 'events',
