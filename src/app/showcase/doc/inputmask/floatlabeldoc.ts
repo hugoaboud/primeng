@@ -9,29 +9,35 @@ import { Code } from '../../domain/code';
         </app-docsectiontext>
         <div class="card flex justify-content-center">
             <span class="p-float-label">
-                <input pInputText id="username" [(ngModel)]="value" />
-                <label htmlFor="username">Username</label>
+                <p-inputMask mask="999-99-9999" [(ngModel)]="value" id="ssn_input"></p-inputMask>
+                <label htmlFor="ssn_input">SSN</label>
             </span>
         </div>
         <app-code [code]="code"></app-code>
     </div>`
 })
-export class FloatLabelDocComponent {
-    value: string;
-
+export class FloatlabelDocComponent {
     @Input() id: string;
 
     @Input() title: string;
 
+    value: string;
+
     code: Code = {
         html: `
 <span class="p-float-label">
-    <input pInputText id="username" [(ngModel)]="value" />
-    <label htmlFor="username">Username</label>
+    <p-inputMask mask="999-99-9999" [(ngModel)]="value" id="ssn_input"></p-inputMask>
+    <label htmlFor="ssn_input">SSN</label>
 </span>`,
 
         typescript: `
-export class InputTextDemo {
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './inputmaskdemo.html'
+})
+
+export class InputMaskDemo {
     value: string;
 }`
     };

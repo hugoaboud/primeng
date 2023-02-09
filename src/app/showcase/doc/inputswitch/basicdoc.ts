@@ -5,27 +5,34 @@ import { Code } from '../../domain/code';
     selector: 'basic-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>InputText is applied to an input field with pInputText directive.</p>
+            <p>Two-way binding to a boolean property is defined using the standard ngModel directive.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
-            <input type="text" pInputText [(ngModel)]="value" />
+            <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
         </div>
         <app-code [code]="code"></app-code>
     </div>`
 })
 export class BasicDocComponent {
-    value: string;
-
     @Input() id: string;
 
     @Input() title: string;
 
+    checked: boolean;
+
     code: Code = {
         html: `
-<input type="text" pInputText [(ngModel)]="value" />`,
+<p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>`,
+
         typescript: `
-export class InputTextDemo {
-    value: string;
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './inputswitchdemo.html'
+})
+
+export class InputSwitchDemo {
+    checked: boolean;
 }`
     };
 }

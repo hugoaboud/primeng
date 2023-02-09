@@ -8,6 +8,8 @@ import { InvalidDocComponent } from 'src/app/showcase/doc/inputtext/invaliddoc';
 import { SizesDocComponent } from 'src/app/showcase/doc/inputtext/sizesdoc';
 import { BasicDocComponent } from '../../doc/inputtext/basicdoc';
 import { KeyFilterDocComponent } from '../../doc/inputtext/keyfilterdoc';
+import { PropsDocComponent } from '../../doc/inputtext/propsdoc';
+import { StyleDocComponent } from '../../doc/inputtext/styledoc';
 
 @Component({
     templateUrl: './inputtextdemo.html',
@@ -73,6 +75,19 @@ export class InputTextDemo {
             id: 'disabled',
             label: 'Disabled',
             component: DisabledDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        },
+    ];
+
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
         },
         {
             id: 'api',

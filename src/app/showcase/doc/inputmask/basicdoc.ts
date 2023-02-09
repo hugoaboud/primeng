@@ -5,26 +5,33 @@ import { Code } from '../../domain/code';
     selector: 'basic-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>InputText is applied to an input field with pInputText directive.</p>
+            <p>Component is defined using p-inputMask element with a mask and two-way value binding is enabled with standard ngModel directive.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
-            <input type="text" pInputText [(ngModel)]="value" />
+            <p-inputMask mask="99-999999" [(ngModel)]="value" placeholder="99-999999"></p-inputMask>
         </div>
         <app-code [code]="code"></app-code>
     </div>`
 })
 export class BasicDocComponent {
-    value: string;
-
     @Input() id: string;
 
     @Input() title: string;
 
+    value: string;
+
     code: Code = {
         html: `
-<input type="text" pInputText [(ngModel)]="value" />`,
+<p-inputMask mask="99-999999" [(ngModel)]="value" placeholder="99-999999"></p-inputMask>`,
+
         typescript: `
-export class InputTextDemo {
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './inputmaskdemo.html'
+})
+
+export class InputMaskDemo {
     value: string;
 }`
     };

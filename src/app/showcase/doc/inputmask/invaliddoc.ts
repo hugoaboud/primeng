@@ -8,24 +8,30 @@ import { Code } from '../../domain/code';
             <p>Invalid state style is added using the <i>ng-invalid</i> and <i>ng-dirty</i> class to indicate a failed validation.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
-            <input pInputText class="ng-invalid ng-dirty" [(ngModel)]="value" />
+            <p-inputMask mask="999-99-9999" [(ngModel)]="value" class="ng-invalid ng-dirty"></p-inputMask>
         </div>
         <app-code [code]="code"></app-code>
     </div>`
 })
 export class InvalidDocComponent {
-    value: string;
-
     @Input() id: string;
 
     @Input() title: string;
 
+    value: string;
+
     code: Code = {
         html: `
-<input pInputText class="ng-invalid ng-dirty" [(ngModel)]="value" />`,
+<p-inputMask mask="999-99-9999" [(ngModel)]="value" class="ng-invalid ng-dirty"></p-inputMask>`,
 
         typescript: `
-export class InputTextDemo {
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './inputmaskdemo.html'
+})
+
+export class InputMaskDemo {
     value: string;
 }`
     };

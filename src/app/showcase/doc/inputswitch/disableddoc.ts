@@ -5,28 +5,34 @@ import { Code } from '../../domain/code';
     selector: 'invalid-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>Invalid state style is added using the <i>ng-invalid</i> and <i>ng-dirty</i> class to indicate a failed validation.</p>
+            <p>When <i>disabled</i> is present, the element cannot be edited and focused.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
-            <input pInputText class="ng-invalid ng-dirty" [(ngModel)]="value" />
+            <p-inputSwitch [(ngModel)]="checked" [disabled]="true"></p-inputSwitch>
         </div>
         <app-code [code]="code"></app-code>
     </div>`
 })
-export class InvalidDocComponent {
-    value: string;
-
+export class DisabledDocComponent {
     @Input() id: string;
 
     @Input() title: string;
 
+    checked: boolean;
+
     code: Code = {
         html: `
-<input pInputText class="ng-invalid ng-dirty" [(ngModel)]="value" />`,
+<p-inputSwitch [(ngModel)]="checked" [disabled]="true"></p-inputSwitch>`,
 
         typescript: `
-export class InputTextDemo {
-    value: string;
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './inputswitchdemo.html'
+})
+
+export class InputSwitchDemo {
+    checked: boolean;
 }`
     };
 }
