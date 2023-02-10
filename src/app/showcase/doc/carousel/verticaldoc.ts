@@ -52,6 +52,12 @@ export class VerticalDocComponent implements OnInit {
     }
 
     code: Code = {
+        basic: `
+<p-carousel [value]="products" [numVisible]="3" [numScroll]="1" orientation="vertical" verticalViewPortHeight="360px" [responsiveOptions]="responsiveOptions">
+    <ng-template let-product pTemplate="item">
+        //content
+    </ng-template>
+</p-carousel>`,
         html: `
 <div class="card flex justify-content-center">
     <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" orientation="vertical" verticalViewPortHeight="360px" [responsiveOptions]="responsiveOptions">

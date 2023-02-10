@@ -29,6 +29,8 @@ export class DocumentDocComponent {
     }
 
     code: Code = {
+        basic: `
+<p-blockUI [blocked]="blockedDocument"></p-blockUI>`,
         html: `
 <div class="card">
     <p-blockUI [blocked]="blockedDocument"></p-blockUI>

@@ -20,6 +20,8 @@ export class IndeterminateDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-progressBar mode="indeterminate" [style]="{ height: '6px' }"></p-progressBar>`,
         html: `
 <div class="card">
     <p-progressBar mode="indeterminate" [style]="{'height': '6px'}"></p-progressBar>

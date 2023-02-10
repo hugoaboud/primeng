@@ -21,6 +21,10 @@ export class TemplatingDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-chip>
+    <div class="p-2">Content</div>
+</p-chip>`,
         html: `
 <div class="card flex align-items-center">
     <p-chip>

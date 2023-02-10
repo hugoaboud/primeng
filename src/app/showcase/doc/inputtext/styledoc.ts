@@ -5,21 +5,21 @@ import { Component, Input } from '@angular/core';
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
         <div class="doc-tablewrapper">
-                <table class="doc-table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Element</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>p-inputtext</td>
-                            <td>Input element</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <table class="doc-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Element</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>p-inputtext</td>
+                        <td>Input element</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>`
 })
 export class StyleDocComponent {

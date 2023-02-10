@@ -10,24 +10,9 @@ import { PhotoService } from '../../../service/photo.service';
         </app-docsectiontext>
         <div class="card">
             <button pButton type="button" icon="pi pi-external-link" label="Show" (click)="displayBasic = true"></button>
-            <p-galleria
-                [(value)]="images"
-                [(visible)]="displayBasic"
-                [responsiveOptions]="responsiveOptions"
-                [containerStyle]="{ 'max-width': '850px' }"
-                [numVisible]="7"
-                [circular]="true"
-                [fullScreen]="true"
-                [showItemNavigators]="true"
-                [showThumbnails]="false"
-            >
+            <p-galleria [(value)]="images" [(visible)]="displayBasic" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '850px' }" [numVisible]="7" [circular]="true" [fullScreen]="true" [showItemNavigators]="true">
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
-                </ng-template>
-                <ng-template pTemplate="thumbnail" let-item>
-                    <div class="grid grid-nogutter justify-content-center">
-                        <img [src]="item.thumbnailImageSrc" style="display: block;" />
-                    </div>
                 </ng-template>
             </p-galleria>
         </div>
@@ -70,18 +55,38 @@ export class WithoutThumbnailsDocComponent implements OnInit {
     }
 
     code: Code = {
+        basic: `
+<p-galleria
+    [(value)]="images"
+    [(visible)]="displayBasic"
+    [responsiveOptions]="responsiveOptions"
+    [containerStyle]="{ 'max-width': '850px' }"
+    [numVisible]="7"
+    [circular]="true"
+    [fullScreen]="true"
+    [showItemNavigators]="true"
+    [showThumbnails]="false"
+>
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
+    </ng-template>
+</p-galleria>`,
         html: `
 <div class="card">
-    <button pButton type="button" icon="pi pi-external-link" label="Show" (click)="displayBasic2 = true"></button>
-    <p-galleria [(value)]="images" [(visible)]="displayBasic2" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '850px'}" [numVisible]="7"
-        [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false">
+    <button pButton type="button" icon="pi pi-external-link" label="Show" (click)="displayBasic = true"></button>
+    <p-galleria
+        [(value)]="images"
+        [(visible)]="displayBasic"
+        [responsiveOptions]="responsiveOptions"
+        [containerStyle]="{ 'max-width': '850px' }"
+        [numVisible]="7"
+        [circular]="true"
+        [fullScreen]="true"
+        [showItemNavigators]="true"
+        [showThumbnails]="false"
+    >
         <ng-template pTemplate="item" let-item>
-            <img [src]="item.previewImageSrc" style="width: 100%; display: block;"/>
-        </ng-template>
-        <ng-template pTemplate="thumbnail" let-item>
-            <div class="grid grid-nogutter justify-content-center">
-                <img [src]="item.thumbnailImageSrc" style="display: block;"/>
-            </div>
+            <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
         </ng-template>
     </p-galleria>
 </div>`,

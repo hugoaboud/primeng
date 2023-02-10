@@ -25,6 +25,8 @@ export class BasicDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-chip label="Action"></p-chip>`,
         html: `
 <div class="card flex align-items-center gap-2">
     <p-chip label="Action"></p-chip>

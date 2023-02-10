@@ -23,6 +23,8 @@ export class SeverityDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-tag severity="success" value="Success"></p-tag>`,
         html: `
 <div class="card flex justify-content-center gap-2">
     <p-tag value="Primary"></p-tag>

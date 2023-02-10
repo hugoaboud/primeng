@@ -13,11 +13,6 @@ import { PhotoService } from '../../../service/photo.service';
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
                 </ng-template>
-                <ng-template pTemplate="thumbnail" let-item>
-                    <div class="grid grid-nogutter justify-content-center">
-                        <img [src]="item.thumbnailImageSrc" style="display: block;" />
-                    </div>
-                </ng-template>
                 <ng-template pTemplate="indicator" let-index>
                     <span style="color: #e9ecef; cursor: pointer">
                         {{ index + 1 }}
@@ -60,16 +55,22 @@ export class TemplateDocComponent implements OnInit {
     }
 
     code: Code = {
+        basic: `
+<p-galleria [(value)]="images" [showIndicators]="true" [showThumbnails]="false" [showIndicatorsOnItem]="true" indicatorsPosition="left" [responsiveOptions]="responsiveOptions" [containerStyle]="{ width: '100%', 'margin-top': '2em' }">
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
+    </ng-template>
+    <ng-template pTemplate="indicator" let-index>
+        <span style="color: #e9ecef; cursor: pointer">
+            {{ index + 1 }}
+        </span>
+    </ng-template>
+</p-galleria>`,
         html: `
 <div class="card">
     <p-galleria [(value)]="images" [showIndicators]="true" [showThumbnails]="false" [showIndicatorsOnItem]="true" indicatorsPosition="left" [responsiveOptions]="responsiveOptions" [containerStyle]="{'width': '100%','margin-top': '2em'}">
         <ng-template pTemplate="item" let-item>
             <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
-        </ng-template>
-        <ng-template pTemplate="thumbnail" let-item>
-            <div class="grid grid-nogutter justify-content-center">
-                <img [src]="item.thumbnailImageSrc" style="display: block;" />
-            </div>
         </ng-template>
         <ng-template pTemplate="indicator" let-index>
             <span style="color: #e9ecef; cursor: pointer">

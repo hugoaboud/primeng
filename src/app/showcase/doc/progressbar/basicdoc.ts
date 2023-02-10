@@ -19,6 +19,8 @@ export class BasicDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-progressBar [value]="50"></p-progressBar>`,
         html: `
 <div class="card">
     <p-progressBar [value]="50"></p-progressBar>

@@ -24,6 +24,13 @@ export class InputDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-inplace closable="closable" [style]="{ 'min-height': '33px' }">
+    <ng-template pTemplate="display"> Click to Edit </ng-template>
+    <ng-template pTemplate="content">
+        <input type="text" value="PrimeNG" pInputText />
+    </ng-template>
+</p-inplace>`,
         html: `
 <div class="card">
     <p-inplace closable="closable" [style]="{'min-height':'33px'}">

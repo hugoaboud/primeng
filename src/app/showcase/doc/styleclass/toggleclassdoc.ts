@@ -23,6 +23,9 @@ export class ToggleClassDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic:`
+<button pButton label="Toggle p-disabled" pStyleClass="@next" toggleClass="p-disabled"></button>
+<input type="text" pInputText class="block mt-3" />`,
         html: `
 <div class="card flex flex-column align-items-center">
     <button pButton label="Toggle p-disabled" pStyleClass="@next" toggleClass="p-disabled"></button>

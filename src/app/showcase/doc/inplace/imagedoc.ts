@@ -29,6 +29,18 @@ export class ImageDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-inplace>
+    <ng-template pTemplate="display">
+        <div class="inline-flex align-items-center">
+            <span class="pi pi-image" style="vertical-align: middle"></span>
+            <span class="ml-2">View Picture</span>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="content">
+        <img src="assets/showcase/images/demo/galleria/galleria5.jpg" alt="Nature" />
+    </ng-template>
+</p-inplace>`,
         html: `
 <div class="card">
     <p-inplace>
@@ -39,7 +51,7 @@ export class ImageDocComponent {
             </div>
         </ng-template>
         <ng-template pTemplate="content">
-            <img src="assets/showcase/images/demo/galleria/galleria5.jpg" alt="Nature">
+            <img src="assets/showcase/images/demo/galleria/galleria5.jpg" alt="Nature" />
         </ng-template>
     </p-inplace>
 </div>`,

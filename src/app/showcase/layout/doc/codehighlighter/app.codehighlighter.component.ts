@@ -27,8 +27,8 @@ export class CodeHighlighterComponent implements OnInit, OnChanges {
             this.code = changes.code.currentValue;
         }
         if (changes.lang && changes.lang.currentValue) {
-            const currentLang = changes.lang.currentValue; 
-            this.lang = (currentLang === 'typescript' || currentLang === 'module') ? 'tsx' : currentLang === 'basic' ? 'html' : currentLang;
+            const currentLang = changes.lang.currentValue;
+            this.lang = currentLang === 'typescript' || currentLang === 'module' ? 'tsx' : currentLang === 'basic' ? 'html' : currentLang;
         }
     }
 

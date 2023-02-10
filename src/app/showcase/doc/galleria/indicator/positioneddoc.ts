@@ -30,11 +30,6 @@ import { PhotoService } from '../../../service/photo.service';
                 <ng-template pTemplate="item" let-item>
                     <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
                 </ng-template>
-                <ng-template pTemplate="thumbnail" let-item>
-                    <div class="grid grid-nogutter justify-content-center">
-                        <img [src]="item.thumbnailImageSrc" style="display: block;" />
-                    </div>
-                </ng-template>
             </p-galleria>
         </div>
         <app-code [code]="code"></app-code>
@@ -95,6 +90,20 @@ export class PositionedDocComponent implements OnInit {
     }
 
     code: Code = {
+        basic: `
+<p-galleria
+    [(value)]="images"
+    [indicatorsPosition]="position"
+    [showIndicators]="true"
+    [showThumbnails]="false"
+    [showIndicatorsOnItem]="showIndicatorsOnItem"
+    [responsiveOptions]="responsiveOptions"
+    [containerStyle]="{ width: '100%', 'margin-top': '2em' }"
+>
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
+    </ng-template>
+</p-galleria>`,
         html: `
 <div class="card">
     <div class="flex flex-wrap gap-3 mb-5">
@@ -106,11 +115,6 @@ export class PositionedDocComponent implements OnInit {
     <p-galleria [(value)]="images" [indicatorsPosition]="position" [showIndicators]="true" [showThumbnails]="false" [showIndicatorsOnItem]="showIndicatorsOnItem" [responsiveOptions]="responsiveOptions" [containerStyle]="{'width': '100%','margin-top': '2em'}">
         <ng-template pTemplate="item" let-item>
             <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
-        </ng-template>
-        <ng-template pTemplate="thumbnail" let-item>
-            <div class="grid grid-nogutter justify-content-center">
-                <img [src]="item.thumbnailImageSrc" style="display: block;" />
-            </div>
         </ng-template>
     </p-galleria>
 </div>`,

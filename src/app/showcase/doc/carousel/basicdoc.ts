@@ -72,6 +72,12 @@ export class BasicDocComponent implements OnInit {
     }
 
     code: Code = {
+        basic: `
+<p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+    <ng-template let-product pTemplate="item">
+        //content
+    </ng-template>
+</p-carousel>`,
         html: `
 <div class="card">
     <p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">

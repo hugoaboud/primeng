@@ -54,6 +54,35 @@ export class DataDocComponent {
     }
 
     code: Code = {
+        basic: `
+<p-inplace>
+    <ng-template pTemplate="display">
+        <div class="inline-flex align-items-center">
+            <span class="pi pi-table" style="vertical-align: middle"></span>
+            <span class="ml-2">View Data</span>
+        </div>
+    </ng-template>
+    <ng-template pTemplate="content">
+        <p-table [value]="cars" responsiveLayout="scroll">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Vin</th>
+                    <th>Year</th>
+                    <th>Brand</th>
+                    <th>Color</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-car>
+                <tr>
+                    <td>{{ car.vin }}</td>
+                    <td>{{ car.year }}</td>
+                    <td>{{ car.brand }}</td>
+                    <td>{{ car.color }}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </ng-template>
+</p-inplace>`,
         html: `
 <div class="card">
     <p-inplace closable="closable" [style]="{'min-height':'33px'}">

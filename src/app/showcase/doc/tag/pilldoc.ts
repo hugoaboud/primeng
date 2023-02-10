@@ -23,6 +23,8 @@ export class PillDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-tag value="Primary" [rounded]="true"></p-tag>`,
         html: `
 <div class="card flex justify-content-center gap-2">
     <p-tag value="Primary" [rounded]="true"></p-tag>

@@ -52,6 +52,32 @@ export class ShapesDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<h5>Rectangle</h5>
+<p-skeleton styleClass="mb-2"></p-skeleton>
+<p-skeleton width="10rem" styleClass="mb-2"></p-skeleton>
+<p-skeleton width="5rem" styleClass="mb-2"></p-skeleton>
+<p-skeleton height="2rem" styleClass="mb-2"></p-skeleton>
+<p-skeleton width="10rem" height="4rem"></p-skeleton>
+
+<h5>Rounded</h5>
+<p-skeleton styleClass="mb-2" borderRadius="16px"></p-skeleton>
+<p-skeleton width="10rem" styleClass="mb-2" borderRadius="16px"></p-skeleton>
+<p-skeleton width="5rem" styleClass="mb-2" borderRadius="16px"></p-skeleton>
+<p-skeleton height="2rem" styleClass="mb-2" borderRadius="16px"></p-skeleton>
+<p-skeleton width="10rem" height="4rem" borderRadius="16px"></p-skeleton>
+
+<h5 class="mt-3">Square</h5>
+<p-skeleton size="2rem" styleClass="mr-2"></p-skeleton>
+<p-skeleton size="3rem" styleClass="mr-2"></p-skeleton>
+<p-skeleton size="4rem" styleClass="mr-2"></p-skeleton>
+<p-skeleton size="5rem"></p-skeleton>
+
+<h5 class="mt-3">Circle</h5>
+<p-skeleton shape="circle" size="2rem" styleClass="mr-2"></p-skeleton>
+<p-skeleton shape="circle" size="3rem" styleClass="mr-2"></p-skeleton>
+<p-skeleton shape="circle" size="4rem" styleClass="mr-2"></p-skeleton>
+<p-skeleton shape="circle" size="5rem"></p-skeleton>`,
         html: `
 <div class="grid grid-nogutter">
     <div class="col-12 md:col-6">

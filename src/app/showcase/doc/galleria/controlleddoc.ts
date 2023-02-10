@@ -77,6 +77,21 @@ export class ControlledDocComponent implements OnInit {
     }
 
     code: Code = {
+        basic: `
+<div class="py-2">
+    <p-button type="button" icon="pi pi-minus" (click)="prev()" styleClass="p-button-secondary mr-2"></p-button>
+    <p-button type="button" icon="pi pi-plus" (click)="next()" styleClass="p-button-primary"></p-button>
+</div>
+<p-galleria [(value)]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{ width: '100%' }" [numVisible]="5" [(activeIndex)]="activeIndex">
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%;" />
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.thumbnailImageSrc" />
+        </div>
+    </ng-template>
+</p-galleria>`,
         html: `
 <div class="card">
     <div class="py-2">

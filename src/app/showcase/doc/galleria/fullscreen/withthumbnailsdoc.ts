@@ -60,6 +60,17 @@ export class WithThumbnailsDocComponent implements OnInit {
     }
 
     code: Code = {
+        basic: `
+<p-galleria [(value)]="images" [(visible)]="displayBasic" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '50%' }" [numVisible]="9" [circular]="true" [fullScreen]="true" [showItemNavigators]="true">
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%; display: block;" />
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.thumbnailImageSrc" style="display: block;" />
+        </div>
+    </ng-template>
+</p-galleria>`,
         html: `
 <div class="card">
     <button pButton type="button" icon="pi pi-external-link" label="Show" (click)="displayBasic = true"></button>

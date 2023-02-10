@@ -77,6 +77,17 @@ export class ThumbnailDocComponent implements OnInit {
     }
 
     code: Code = {
+        basic: `
+<p-galleria [(value)]="images" [thumbnailsPosition]="position" [responsiveOptions]="responsiveOptions" [containerStyle]="{ width: '100%' }" [numVisible]="5">
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" style="width: 100%; min-height: 420px; display: block;" />
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.thumbnailImageSrc" />
+        </div>
+    </ng-template>
+</p-galleria>`,
         html: `
 <div class="card">
     <div class="flex flex-wrap gap-3 mb-5">

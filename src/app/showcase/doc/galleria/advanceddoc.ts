@@ -7,7 +7,7 @@ import { PhotoService } from '../../service/photo.service';
     selector: 'advanced-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>Simple example with indicators only.</p>
+            <p>Galleria can be extended further to implement complex requirements.</p>
         </app-docsectiontext>
         <div class="card">
             <p-galleria
@@ -163,6 +163,41 @@ export class AdvancedDocComponent implements OnInit, OnDestroy {
         return `pi ${this.fullscreen ? 'pi-window-minimize' : 'pi-window-maximize'}`;
     }
     code: Code = {
+        basic: `
+<p-galleria
+    #galleria
+    [(value)]="images"
+    [(activeIndex)]="activeIndex"
+    [numVisible]="5"
+    [showThumbnails]="showThumbnails"
+    [showItemNavigators]="true"
+    [showItemNavigatorsOnHover]="true"
+    [circular]="true"
+    [autoPlay]="true"
+    [transitionInterval]="3000"
+    [containerStyle]="{ width: '100%' }"
+    [containerClass]="galleriaClass()"
+>
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.previewImageSrc" [ngStyle]="{ width: !fullscreen ? '100%' : '', display: !fullscreen ? 'block' : '' }" />
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.thumbnailImageSrc" />
+        </div>
+    </ng-template>
+    <ng-template pTemplate="footer" let-item>
+        <div class="custom-galleria-footer">
+            <button type="button" pButton icon="pi pi-list" (click)="onThumbnailButtonClick()"></button>
+            <span *ngIf="images" class="title-container">
+                <span>{{ activeIndex + 1 }}/{{ images.length }}</span>
+                <span class="title">{{ images[activeIndex].title }}</span>
+                <span>{{ images[activeIndex].alt }}</span>
+            </span>
+            <button type="button" pButton [icon]="fullScreenIcon()" (click)="toggleFullScreen()" class="fullscreen-button"></button>
+        </div>
+    </ng-template>
+</p-galleria>`,
         html: `
 <div class="card">
     <p-galleria #galleria [(value)]="images" [(activeIndex)]="activeIndex" [numVisible]="5" [showThumbnails]="showThumbnails" [showItemNavigators]="true" [showItemNavigatorsOnHover]="true" [circular]="true" [autoPlay]="true" [transitionInterval]="3000" [containerStyle]="{'width':'100%'}" [containerClass]="galleriaClass()"> 

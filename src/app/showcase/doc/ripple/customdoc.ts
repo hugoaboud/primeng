@@ -21,6 +21,8 @@ export class CustomDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<div pRipple class="card styled-box-green shadow-2">Green</div>`,
         html: `
 <div class="card card-container flex justify-content-center align-items-center">
     <div pRipple class="card styled-box-green shadow-2">Green</div>

@@ -22,6 +22,8 @@ export class ImageDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-chip label="Amy Elsner" image="assets/showcase/images/demo/avatar/amyelsner.png" styleClass="mr-2"></p-chip>`,
         html: `
 <div class="card flex align-items-center">
     <p-chip label="Amy Elsner" image="assets/showcase/images/demo/avatar/amyelsner.png" styleClass="mr-2"></p-chip>

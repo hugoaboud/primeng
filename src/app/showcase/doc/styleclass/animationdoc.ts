@@ -29,11 +29,25 @@ export class AnimationDocComponent {
     @Input() title: string;
 
     code: Code = {
-        html: `
-<div class="card flex justify-content-center">
+        basic: `
+<div>
     <button pButton label="Show" class="mr-2" pStyleClass=".box" enterClass="hidden" enterActiveClass="fadein"></button>
     <button pButton label="Hide" pStyleClass=".box" leaveActiveClass="fadeout" leaveToClass="hidden"></button>
-    <div class="box hidden">Content</div>
+</div>
+
+<div class="hidden animation-duration-500 box">
+    <div class="flex bg-green-500 text-white align-items-center justify-content-center py-3 border-round-md mt-3 font-bold shadow-2 w-8rem h-8rem">Content</div>
+</div>`,
+        html: `
+<div class="card flex flex-column align-items-center">
+    <div>
+        <button pButton label="Show" class="mr-2" pStyleClass=".box" enterClass="hidden" enterActiveClass="fadein"></button>
+        <button pButton label="Hide" pStyleClass=".box" leaveActiveClass="fadeout" leaveToClass="hidden"></button>
+    </div>
+
+    <div class="hidden animation-duration-500 box">
+        <div class="flex bg-green-500 text-white align-items-center justify-content-center py-3 border-round-md mt-3 font-bold shadow-2 w-8rem h-8rem">Content</div>
+    </div>
 </div>`,
         typescript: `
 import { Component } from '@angular/core';

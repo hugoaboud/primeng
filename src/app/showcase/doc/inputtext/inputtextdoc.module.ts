@@ -22,4 +22,4 @@ import { StyleDocComponent } from './styledoc';
     declarations: [BasicDocComponent, DisabledDocComponent, FloatLabelDocComponent, HelpTextDocComponent, IconsDocComponent, InvalidDocComponent, KeyFilterDocComponent, SizesDocComponent, ImportDocComponent, PropsDocComponent, StyleDocComponent],
     exports: [ImportDocComponent, BasicDocComponent, DisabledDocComponent, FloatLabelDocComponent, HelpTextDocComponent, IconsDocComponent, InvalidDocComponent, KeyFilterDocComponent, SizesDocComponent, PropsDocComponent, StyleDocComponent]
 })
-export class InputtextDocModule { }
+export class InputtextDocModule {}

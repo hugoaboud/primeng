@@ -21,6 +21,8 @@ export class BasicDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-scrollTop></p-scrollTop>`,
         html: `
 <div class="card flex flex-column align-items-center">
     <p>Scroll down the page to display the ScrollTo component.</p>

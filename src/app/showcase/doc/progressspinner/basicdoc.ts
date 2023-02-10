@@ -19,6 +19,8 @@ export class BasicDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-progressSpinner></p-progressSpinner>`,
         html: `
 <div class="card">
     <p-progressSpinner></p-progressSpinner>

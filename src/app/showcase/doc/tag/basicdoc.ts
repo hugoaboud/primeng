@@ -19,6 +19,8 @@ export class BasicDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic:`
+<p-tag value="New"></p-tag>`,
         html: `
 <div class="card flex justify-content-center">
     <p-tag value="New"></p-tag>

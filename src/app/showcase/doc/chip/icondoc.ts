@@ -22,6 +22,8 @@ export class IconDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-chip label="Apple" icon="pi pi-apple"></p-chip>`,
         html: `
 <div class="card flex align-items-center gap-2">
     <p-chip label="Apple" icon="pi pi-apple"></p-chip>

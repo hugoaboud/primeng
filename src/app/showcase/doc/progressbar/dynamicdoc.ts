@@ -37,6 +37,8 @@ export class DynamicDocComponent implements OnInit {
     }
 
     code: Code = {
+        basic: `
+<p-progressBar [value]="value"></p-progressBar>`,
         html: `
 <div class="card">
     <p-toast></p-toast>
