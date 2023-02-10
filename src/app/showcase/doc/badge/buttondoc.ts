@@ -20,6 +20,8 @@ export class ButtonDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-button label="Emails" badge="8" styleClass="mr-2"></p-button>`,
         html: `
 <div class="card flex justify-content-center">
     <p-button label="Emails" badge="8" styleClass="mr-2"></p-button>

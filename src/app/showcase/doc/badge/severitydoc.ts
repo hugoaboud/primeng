@@ -22,6 +22,8 @@ export class SeverityDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-badge [value]="2" severity="success"></p-badge>`,
         html: `
 <div class="card flex justify-content-center gap-2">
     <p-badge [value]="2" severity="success"></p-badge>

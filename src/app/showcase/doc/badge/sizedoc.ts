@@ -21,6 +21,8 @@ export class SizeDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-badge value="4" size="large" severity="warning"></p-badge>`,
         html: `
 <div class="card flex justify-content-center">
     <p-badge value="2"></p-badge>

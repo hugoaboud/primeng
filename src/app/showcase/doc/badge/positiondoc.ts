@@ -21,6 +21,8 @@ export class PositionDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<i class="pi pi-bell mr-4 p-text-secondary" pBadge style="font-size: 2rem" value="2"></i>`,
         html: `
 <div class="card flex justify-content-center">
     <i class="pi pi-bell mr-4 p-text-secondary" pBadge style="font-size: 2rem" value="2"></i>
