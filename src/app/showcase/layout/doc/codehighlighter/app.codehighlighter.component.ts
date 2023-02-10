@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, ViewChild, TemplateRef, ChangeDetectorRef, SimpleChanges, OnChanges, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild, TemplateRef, SimpleChanges, OnChanges, OnInit } from '@angular/core';
 import { Code } from 'src/app/showcase/domain/code';
 
 @Component({
@@ -16,7 +16,7 @@ export class CodeHighlighterComponent implements OnInit, OnChanges {
 
     codeTemplate: TemplateRef<any>;
 
-    constructor(private cd: ChangeDetectorRef) {}
+    constructor() {}
 
     ngOnInit() {
         this.setClassName();

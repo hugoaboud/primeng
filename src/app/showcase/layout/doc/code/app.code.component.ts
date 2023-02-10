@@ -46,7 +46,7 @@ export class AppCodeComponent {
 
     getCode(lang: string = 'basic') {
         if(this.code) {
-            if(this.fullCodeVisible || this.hideToggleCode) {
+            if (this.fullCodeVisible || this.hideToggleCode) {
                 return this.code[lang];
             }
             else {
