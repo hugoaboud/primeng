@@ -1,0 +1,38 @@
+import { Component, Input } from '@angular/core';
+import { Code } from '../../domain/code';
+
+@Component({
+    selector: 'basic-doc',
+    template: ` <div>
+        <app-docsectiontext [title]="title" [id]="id">
+            <p>InputTextarea is applied to an input field with pInputTextarea directive.</p>
+        </app-docsectiontext>
+        <div class="card flex justify-content-center">
+            <textarea rows="5" cols="30" pInputTextarea [(ngModel)]="value"></textarea>
+        </div>
+        <app-code [code]="code"></app-code>
+    </div>`
+})
+export class BasicDocComponent {
+    @Input() id: string;
+
+    @Input() title: string;
+
+    value: string;
+
+    code: Code = {
+        html: `
+<textarea rows="5" cols="30" pInputTextarea [(ngModel)]="value"></textarea>`,
+
+        typescript: `
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './textareademo.html'
+})
+
+export class TextareaDemo {
+    value: string;
+}`
+    };
+}
