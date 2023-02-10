@@ -18,10 +18,6 @@ import { Code } from '../../domain/code';
             <div pAnimate enterClass="flipup" class="flex justify-content-center align-items-center h-20rem w-20rem border-round shadow-2 animation-duration-1000 animation-ease-out">
                 <span class="text-900 text-3xl font-bold">flipup</span>
             </div>
-            <div class="h-30rem"></div>
-            <div pAnimate enterClass="flipleft" class="flex justify-content-center align-items-center h-20rem w-20rem border-round shadow-2 animation-duration-1000 animation-ease-out">
-                <span class="text-900 text-3xl font-bold">flipleft</span>
-            </div>
         </div>
         <app-code [code]="code"></app-code>
     </div>`
@@ -32,6 +28,10 @@ export class BasicDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<div pAnimate enterClass="flip" leaveClass="fadeoutleft" class="flex justify-content-center align-items-center h-20rem w-20rem border-round shadow-2 animation-duration-1000 animation-ease-out">
+    <span class="text-900 text-3xl font-bold">flip</span>
+</div>`,
         html: `
 <div class="card">
     <div pAnimate enterClass="flip" leaveClass="fadeoutleft" class="flex justify-content-center align-items-center h-20rem w-20rem border-round shadow-2 animation-duration-1000 animation-ease-out">
@@ -40,10 +40,6 @@ export class BasicDocComponent {
     <div class="h-30rem"></div>
     <div pAnimate enterClass="flipup" class="flex justify-content-center align-items-center h-20rem w-20rem border-round shadow-2 animation-duration-1000 animation-ease-out">
         <span class="text-900 text-3xl font-bold">flipup</span>
-    </div>
-    <div class="h-30rem"></div>
-    <div pAnimate enterClass="flipleft" class="flex justify-content-center align-items-center h-20rem w-20rem border-round shadow-2 animation-duration-1000 animation-ease-out">
-        <span class="text-900 text-3xl font-bold">flipleft</span>
     </div>
 </div>`,
         typescript: `

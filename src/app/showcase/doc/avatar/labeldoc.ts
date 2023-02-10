@@ -34,6 +34,8 @@ export class LabelDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-avatar label="P" styleClass="mr-2" size="xlarge"></p-avatar>`,
         html: `
 <div class="card grid grid-nogutter">
     <div class="col-12 md:col-4">

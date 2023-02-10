@@ -20,6 +20,8 @@ export class SizeDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-avatar label="P" size="large"></p-avatar>`,
         html: `
 <div class="card flex justify-content-center gap-2">
     <p-avatar label="P" size="large"></p-avatar>

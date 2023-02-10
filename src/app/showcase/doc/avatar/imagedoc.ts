@@ -21,6 +21,8 @@ export class ImageDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>`,
         html: `
 <div class="card">
     <p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" styleClass="mr-2" size="xlarge" shape="circle"></p-avatar>

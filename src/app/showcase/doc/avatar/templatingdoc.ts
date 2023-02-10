@@ -21,6 +21,10 @@ export class TemplatingDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-avatar size="xlarge">
+    <span class="text-base">Content</span>
+</p-avatar>`,
         html: `
 <div class="card flex justify-content-center">
     <p-avatar size="xlarge">

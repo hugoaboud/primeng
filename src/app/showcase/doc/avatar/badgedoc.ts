@@ -19,6 +19,8 @@ export class BadgeDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" pBadge value="4" severity="danger"></p-avatar>`,
         html: `
 <div class="card flex justify-content-center">
     <p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" pBadge value="4" severity="danger"></p-avatar>

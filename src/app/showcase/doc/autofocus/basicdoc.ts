@@ -19,6 +19,8 @@ export class BasicDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<input type="text" pInputText pAutoFocus [autofocus]="true" placeholder="Automatically focused" />`,
         html: `
 <div class="card flex justify-content-center">
     <input type="text" pInputText pAutoFocus [autofocus]="true" placeholder="Automatically focused" /> 

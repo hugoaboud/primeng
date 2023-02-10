@@ -34,6 +34,8 @@ export class IconDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-avatar icon="pi pi-user" styleClass="mr-2" size="xlarge"></p-avatar>`,
         html: `
 <div class="grid card grid-nogutter">
     <div class="col-12 md:col-4">

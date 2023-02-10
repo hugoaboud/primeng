@@ -26,6 +26,11 @@ export class AvatarGroupDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-avatarGroup styleClass="mb-3">
+    <p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" size="large" shape="circle"></p-avatar>
+    <p-avatar image="assets/showcase/images/demo/avatar/asiyajavayant.png" size="large" shape="circle"></p-avatar>
+</p-avatarGroup>`,
         html: `
 <div class="card justify-content-center">
     <p-avatarGroup styleClass="mb-3">

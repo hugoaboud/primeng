@@ -20,6 +20,8 @@ export class ShapeDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-avatar label="P" shape="circle"></p-avatar>`,
         html: `
 <div class="card flex justify-content-center gap-2">
     <p-avatar label="P" shape="circle"></p-avatar>
