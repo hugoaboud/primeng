@@ -80,7 +80,7 @@ export class InputTextDemo {
             id: 'style',
             label: 'Style',
             component: StyleDocComponent
-        },
+        }
     ];
 
     apiDocs = [
