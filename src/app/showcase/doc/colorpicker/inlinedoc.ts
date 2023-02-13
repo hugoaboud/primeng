@@ -21,9 +21,22 @@ export class InlineDocComponent {
     color: string;
 
     code: Code = {
-        html: `
+        basic: `
 <p-colorPicker [(ngModel)]="color1" [inline]="true"></p-colorPicker>`,
+
+        html: `
+<div class="card flex justify-content-center">
+    <p-colorPicker [(ngModel)]="color" [inline]="true"></p-colorPicker>
+</div>`,
+
         typescript: `
-color: string;`
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './colorpickerdemo.html'
+})
+export class ColorPickerDemo {
+    color: string;
+}`
     };
 }
