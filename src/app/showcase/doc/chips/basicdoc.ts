@@ -21,11 +21,23 @@ export class BasicDocComponent {
     values: string[];
 
     code: Code = {
+        basic: `
+<p-chips [(ngModel)]="values"></p-chips>`,
+
         html: `
 <div class="card p-fluid">
     <p-chips [(ngModel)]="values" ></p-chips>
 </div>`,
+
         typescript: `
-values: string[];`
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './chipsdemo.html'
+})
+
+export class ChipsDemo {
+    values: string[];
+}`
     };
 }

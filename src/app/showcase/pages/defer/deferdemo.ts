@@ -30,12 +30,12 @@ export class DeferDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent,
+            component: BasicDocComponent
         },
         {
             id: 'datatable',
             label: 'DataTable',
-            component: DataTableDocComponent,
+            component: DataTableDocComponent
         }
     ];
 

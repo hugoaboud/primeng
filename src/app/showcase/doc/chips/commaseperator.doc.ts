@@ -21,11 +21,23 @@ export class CommaSeperatorDocComponent {
     values: string[];
 
     code: Code = {
+        basic: `
+<p-chips [(ngModel)]="values" separator="," placeholder="Hint: a, b, c"></p-chips>`,
+
         html: `
 <div class="card p-fluid">
     <p-chips [(ngModel)]="values" separator="," placeholder="Hint: a, b, c"></p-chips>
 </div>`,
+
         typescript: `
-values: string[];`
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './chipsdemo.html'
+})
+
+export class ChipsDemo {
+    values: string[];
+}`
     };
 }

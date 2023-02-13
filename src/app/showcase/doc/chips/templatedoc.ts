@@ -23,13 +23,27 @@ export class TemplateDocComponent {
     values: string[];
 
     code: Code = {
+        basic: `
+<p-chips [(ngModel)]="values">
+    <ng-template let-item pTemplate="item"> {{ item }} - (active) <i class="pi pi-user ml-2"></i> </ng-template>
+</p-chips>`,
+
         html: `
 <div class="card p-fluid">
     <p-chips [(ngModel)]="values">
         <ng-template let-item pTemplate="item"> {{ item }} - (active) <i class="pi pi-user ml-2"></i> </ng-template>
     </p-chips>
 </div>`,
+
         typescript: `
-values: string[];`
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './chipsdemo.html'
+})
+
+export class ChipsDemo {
+    values: string[];
+}`
     };
 }
