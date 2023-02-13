@@ -44,7 +44,7 @@ export class MultipleDocComponent {
     <span class="p-inputgroup-addon">.00</span>
 </div>`,
 
-        html:`
+        html: `
 <div class="card flex justify-content-center">
     <div class="p-inputgroup w-full md:w-30rem">
         <span class="p-inputgroup-addon">

@@ -33,7 +33,7 @@ export class CheckboxDocComponent {
     @Input() title: string;
 
     code: Code = {
-        basic:`
+        basic: `
 <div class="p-inputgroup">
     <span class="p-inputgroup-addon"><p-checkbox value="value1"></p-checkbox></span>
     <input type="text" pInputText placeholder="Username" />
@@ -49,7 +49,7 @@ export class CheckboxDocComponent {
     <input type="text" pInputText placeholder="Website" />
     <span class="p-inputgroup-addon"><p-radioButton name="category" value="site"></p-radioButton></span>
 </div>`,
-        
+
         html: `
 <div class="card flex flex-column md:flex-row gap-3">
     <div class="p-inputgroup">

@@ -29,7 +29,7 @@ export class CustomToolbarDocComponent {
     text: string = 'Hello World!';
 
     code: Code = {
-        html: `
+        basic: `
 <p-editor [(ngModel)]="text" [style]="{ height: '320px' }">
     <ng-template pTemplate="header">
         <span class="ql-formats">
@@ -40,9 +40,28 @@ export class CustomToolbarDocComponent {
     </ng-template>
 </p-editor>`,
 
+        html: `
+<div class="card">
+    <p-editor [(ngModel)]="text" [style]="{ height: '320px' }">
+        <ng-template pTemplate="header">
+            <span class="ql-formats">
+                <button type="button" class="ql-bold" aria-label="Bold"></button>
+                <button type="button" class="ql-italic" aria-label="Italic"></button>
+                <button type="button" class="ql-underline" aria-label="Underline"></button>
+            </span>
+        </ng-template>
+    </p-editor>
+</div>`,
+
         typescript: `
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './editordemo.html'
+})
+
 export class EditorDemo {
-    text: string = 'Hello World!';      
+    text: string = 'Hello World!';
 }`
     };
 }
