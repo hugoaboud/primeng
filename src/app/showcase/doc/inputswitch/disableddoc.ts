@@ -21,8 +21,13 @@ export class DisabledDocComponent {
     checked: boolean;
 
     code: Code = {
-        html: `
+        basic: `
 <p-inputSwitch [(ngModel)]="checked" [disabled]="true"></p-inputSwitch>`,
+
+        html: `
+<div class="card flex justify-content-center">
+    <p-inputSwitch [(ngModel)]="checked" [disabled]="true"></p-inputSwitch>
+</div>`,
 
         typescript: `
 import { Component } from '@angular/core';
