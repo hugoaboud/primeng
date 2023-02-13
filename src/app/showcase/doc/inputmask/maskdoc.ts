@@ -39,6 +39,16 @@ export class MaskDocComponent {
     value3: string;
 
     code: Code = {
+        basic: `
+<span class="font-bold block mb-2">SSN</span>
+<p-inputMask mask="999-99-9999" [(ngModel)]="value1" placeholder="999-99-9999"></p-inputMask>
+
+<span class="font-bold block mb-2">Phone</span>
+<p-inputMask mask="(999) 999-9999" [(ngModel)]="value2" placeholder="(999) 999-9999"></p-inputMask>
+
+<span class="font-bold block mb-2">Serial Number</span>
+<p-inputMask mask="a*-999-a999" [(ngModel)]="value3" placeholder="a*-999-a999"></p-inputMask>`,
+
         html: `
 <div class="card p-fluid flex flex-wrap gap-3">
     <div class="flex-auto">

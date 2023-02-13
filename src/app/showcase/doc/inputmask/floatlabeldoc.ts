@@ -24,11 +24,19 @@ export class FloatlabelDocComponent {
     value: string;
 
     code: Code = {
-        html: `
+        basic: `
 <span class="p-float-label">
     <p-inputMask mask="999-99-9999" [(ngModel)]="value" id="ssn_input"></p-inputMask>
     <label htmlFor="ssn_input">SSN</label>
 </span>`,
+
+        html: `
+<div class="card flex justify-content-center">
+    <span class="p-float-label">
+    <p-inputMask mask="999-99-9999" [(ngModel)]="value" id="ssn_input"></p-inputMask>
+    <label htmlFor="ssn_input">SSN</label>
+    </span>
+</div>`,
 
         typescript: `
 import { Component } from '@angular/core';

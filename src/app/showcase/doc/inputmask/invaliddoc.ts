@@ -21,8 +21,13 @@ export class InvalidDocComponent {
     value: string;
 
     code: Code = {
-        html: `
+        basic: `
 <p-inputMask mask="999-99-9999" [(ngModel)]="value" class="ng-invalid ng-dirty"></p-inputMask>`,
+
+        html: `
+<div class="card flex justify-content-center">
+    <p-inputMask mask="999-99-9999" [(ngModel)]="value" class="ng-invalid ng-dirty"></p-inputMask>
+</div>`,
 
         typescript: `
 import { Component } from '@angular/core';

@@ -21,8 +21,13 @@ export class BasicDocComponent {
     value: string;
 
     code: Code = {
-        html: `
+        basic: `
 <p-inputMask mask="99-999999" [(ngModel)]="value" placeholder="99-999999"></p-inputMask>`,
+
+        html: `
+<div class="card flex justify-content-center">
+    <p-inputMask mask="99-999999" [(ngModel)]="value" placeholder="99-999999"></p-inputMask>
+</div>`,
 
         typescript: `
 import { Component } from '@angular/core';

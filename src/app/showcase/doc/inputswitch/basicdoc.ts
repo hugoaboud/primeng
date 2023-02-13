@@ -24,11 +24,10 @@ export class BasicDocComponent {
         basic: `
 <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>`,
 
-        html:` 
+        html: ` 
 <div class="card flex justify-content-center">
     <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
 </div>`,
-
 
         typescript: `
 import { Component } from '@angular/core';
