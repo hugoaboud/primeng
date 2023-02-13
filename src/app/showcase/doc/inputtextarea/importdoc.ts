@@ -15,6 +15,6 @@ export class ImportDocComponent {
 
     code: Code = {
         typescript: `
-import { InputTextarea } from 'primereact/inputtextarea';`
+import { InputTextareaModule } from 'primeng/inputtextarea';`
     };
 }
