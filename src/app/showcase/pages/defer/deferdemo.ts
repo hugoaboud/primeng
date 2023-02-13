@@ -3,6 +3,7 @@ import { MessageService } from 'primeng/api';
 import { EventsDocComponent } from '../../doc/defer/eventsdoc';
 import { BasicDocComponent } from '../../doc/defer/basicdoc';
 import { ImportDocComponent } from '../../doc/defer/importdoc';
+import { DataTableDocComponent } from '../../doc/defer/datatabledoc';
 import { CarService } from '../../service/car.service';
 import { Car } from '../domain/car';
 
@@ -30,6 +31,11 @@ export class DeferDemo {
             id: 'basic',
             label: 'Basic',
             component: BasicDocComponent,
+        },
+        {
+            id: 'datatable',
+            label: 'DataTable',
+            component: DataTableDocComponent,
         }
     ];
 
@@ -38,6 +44,11 @@ export class DeferDemo {
             id: 'events',
             label: 'Events',
             component: EventsDocComponent
+        },
+        {
+            id: 'api',
+            label: 'API',
+            doc: [{ name: 'Defer', pathname: '/modules/defer.html' }]
         }
     ];
 }
