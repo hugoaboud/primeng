@@ -38,15 +38,25 @@ export class BasicDocComponent {
     }
 
     code: Code = {
-        html: `
+        basic: `
 <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown>`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown>
+</div>`,
+
         typescript: `
+import { Component } from '@angular/core';
+
 interface City {
     name: string;
     code: string;
 }
 
+@Component({
+    templateUrl: './dropdowndemo.html'
+})
 export class DropdownDemo {
     cities: City[];
 

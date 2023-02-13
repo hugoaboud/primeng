@@ -84,6 +84,6 @@ import { ToastModule } from 'primeng/toast';
     imports: [CommonModule, RouterModule, FormsModule, DeferModule, ToastModule],
     declarations: [DeferDemo]
 })
-export class DeferDemoModule {}`,
+export class DeferDemoModule {}`
     };
 }

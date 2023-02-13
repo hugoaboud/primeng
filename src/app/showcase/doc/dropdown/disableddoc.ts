@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-dropdown placeholder="Select a City" [disabled]="true"></p-dropdown>
         </div>
-        <app-code [code]="code" [hideToggleCode]="true"></app-code>
+        <app-code [code]="code"></app-code>
     </div>`
 })
 export class DisabledDocComponent {
@@ -19,7 +19,12 @@ export class DisabledDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<p-dropdown placeholder="Select a City" [disabled]="true"></p-dropdown>`,
+
         html: `
-<p-dropdown placeholder="Select a City" [disabled]="true"></p-dropdown>`
+<div class="card flex justify-content-center">
+    <p-dropdown placeholder="Select a City" [disabled]="true"></p-dropdown>
+</div>`
     };
 }

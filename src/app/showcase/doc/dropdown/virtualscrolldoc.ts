@@ -34,13 +34,22 @@ export class VirtualScrollDocComponent {
     }
 
     code: Code = {
-        html: `
+        basic: `
 <p-dropdown [options]="items" [(ngModel)]="selectedItem" placeholder="Select Item" 
     [virtualScroll]="true" [virtualScrollItemSize]="38"></p-dropdown>`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <p-dropdown [options]="items" [(ngModel)]="selectedItem" placeholder="Select Item" [virtualScroll]="true" [virtualScrollItemSize]="38"></p-dropdown>
+</div>`,
+
         typescript: `
 import { SelectItem } from 'primeng/api';
-        
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './dropdowndemo.html'
+})
 export class DropdownDemo {
     items: SelectItem[];
     

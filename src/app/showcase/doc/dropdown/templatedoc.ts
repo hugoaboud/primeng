@@ -54,7 +54,7 @@ export class TemplateDocComponent {
     }
 
     code: Code = {
-        html: `
+        basic: `
 <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [showClear]="true" placeholder="Select a Country">
     <ng-template pTemplate="selectedItem">
         <div class="country-item country-item-value" *ngIf="selectedCountry">
@@ -70,7 +70,30 @@ export class TemplateDocComponent {
     </ng-template>
 </p-dropdown>`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <p-dropdown [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [showClear]="true" placeholder="Select a Country">
+        <ng-template pTemplate="selectedItem">
+            <div class="country-item country-item-value" *ngIf="selectedCountry">
+                <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + selectedCountry.code.toLowerCase()" />
+                <div>{{ selectedCountry.name }}</div>
+            </div>
+        </ng-template>
+        <ng-template let-country pTemplate="item">
+            <div class="country-item">
+                <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + country.code.toLowerCase()" />
+                <div>{{ country.name }}</div>
+            </div>
+        </ng-template>
+    </p-dropdown>
+</div>`,
+
         typescript: `
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './dropdowndemo.html'
+})
 export class DropdownDemo {
     countries: any[];
 
