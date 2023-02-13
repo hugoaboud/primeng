@@ -24,7 +24,7 @@ export class BasicDocComponent {
         basic: `
 <textarea rows="5" cols="30" pInputTextarea [(ngModel)]="value"></textarea>`,
 
-        html:`
+        html: `
 <div class="card flex justify-content-center">
     <textarea rows="5" cols="30" pInputTextarea [(ngModel)]="value"></textarea>
 </div>`,

@@ -31,6 +31,12 @@ export class IconsDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<span class="p-input-icon-left">
+    <i class="pi pi-search"></i>
+    <input type="text" pInputText [(ngModel)]="value" />
+</span>`,
+
         html: `
 <div class="card flex flex-wrap justify-content-center gap-3">
     <span class="p-input-icon-left">
@@ -45,9 +51,15 @@ export class IconsDocComponent {
 </div>`,
 
         typescript: `
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './inputtextdemo.html'
+})
+
 export class InputTextDemo {
     value: string;
-    value2: string
+    value2: string;
 }`
     };
 }

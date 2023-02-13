@@ -25,14 +25,29 @@ export class HelpTextDocComponent {
     @Input() title: string;
 
     code: Code = {
-        html: `
+        basic: `
 <div class="flex flex-column gap-2">
     <label htmlFor="username">Username</label>
     <input pInputText id="username" aria-describedby="username-help" [(ngModel)]="value" />
     <small id="username-help">Enter your username to reset your password.</small>
 </div>`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <div class="flex flex-column gap-2">
+        <label htmlFor="username">Username</label>
+        <input pInputText id="username" aria-describedby="username-help" [(ngModel)]="value" />
+        <small id="username-help">Enter your username to reset your password.</small>
+    </div>
+</div>`,
+
         typescript: `
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './inputtextdemo.html'
+})
+
 export class InputTextDemo {
     value: string;
 }`

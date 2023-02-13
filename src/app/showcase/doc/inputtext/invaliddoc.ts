@@ -21,10 +21,21 @@ export class InvalidDocComponent {
     @Input() title: string;
 
     code: Code = {
-        html: `
+        basic: `
 <input pInputText class="ng-invalid ng-dirty" [(ngModel)]="value" />`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <input pInputText class="ng-invalid ng-dirty" [(ngModel)]="value" />
+</div>`,
+
         typescript: `
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './inputtextdemo.html'
+})
+
 export class InputTextDemo {
     value: string;
 }`

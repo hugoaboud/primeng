@@ -24,13 +24,27 @@ export class FloatLabelDocComponent {
     @Input() title: string;
 
     code: Code = {
-        html: `
+        basic: `
 <span class="p-float-label">
     <input pInputText id="username" [(ngModel)]="value" />
     <label htmlFor="username">Username</label>
 </span>`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <span class="p-float-label">
+        <input pInputText id="username" [(ngModel)]="value" />
+        <label htmlFor="username">Username</label>
+    </span>
+</div>`,
+
         typescript: `
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './inputtextdemo.html'
+})
+
 export class InputTextDemo {
     value: string;
 }`

@@ -21,9 +21,21 @@ export class BasicDocComponent {
     @Input() title: string;
 
     code: Code = {
-        html: `
+        basic: `
 <input type="text" pInputText [(ngModel)]="value" />`,
+
+        html: `
+<div class="card flex justify-content-center">
+    <input type="text" pInputText [(ngModel)]="value" />
+</div>`,
+
         typescript: `
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './inputtextdemo.html'
+})
+
 export class InputTextDemo {
     value: string;
 }`

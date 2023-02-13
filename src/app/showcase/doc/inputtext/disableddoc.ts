@@ -21,10 +21,21 @@ export class DisabledDocComponent {
     @Input() title: string;
 
     code: Code = {
-        html: `
+        basic: `
 <input id="disabled-input" type="text" pInputText [disabled]="true" [(ngModel)]="value" />`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <input id="disabled-input" type="text" pInputText [disabled]="true" [(ngModel)]="value" />
+</div>`,
+
         typescript: `
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './inputtextdemo.html'
+})
+
 export class InputTextDemo {
     value: string;
 }`

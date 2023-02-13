@@ -36,7 +36,6 @@ export class FloatlabelDocComponent {
     </span>
 </div>`,
 
-
         typescript: `
 import { Component } from '@angular/core';
 

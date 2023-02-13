@@ -23,7 +23,7 @@ export class IconDocComponent {
     @Input() title: string;
 
     code: Code = {
-        basic:`
+        basic: `
 <p-tag icon="pi pi-user" value="Primary"></p-tag>`,
         html: `
 <div class="card flex justify-content-center gap-2">

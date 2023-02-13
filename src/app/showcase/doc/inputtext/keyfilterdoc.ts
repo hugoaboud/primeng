@@ -14,19 +14,30 @@ import { Code } from '../../domain/code';
     </div>`
 })
 export class KeyFilterDocComponent {
-    value: string;
+    value: number;
 
     @Input() id: string;
 
     @Input() title: string;
 
     code: Code = {
-        html: `
+        basic: `
 <input pInputText pKeyFilter="int" placeholder="Integers" [(ngModel)]="value" />`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <input pInputText pKeyFilter="int" placeholder="Integers" [(ngModel)]="value" />
+</div>`,
+
         typescript: `
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './inputtextdemo.html'
+})
+
 export class InputTextDemo {
-    value: string;
+    value: number;
 }`
     };
 }
