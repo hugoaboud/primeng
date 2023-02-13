@@ -61,37 +61,32 @@ import { Component } from '@angular/core';
     templateUrl: './autocompletedemo.html'
 })
 export class AutoCompleteDemo {
-    countries: any[];
+    selectedItem: any;
+
+    filteredItems: any[];
 
     items: any[];
 
-    groupedCities: SelectItemGroup[];
+    filterItems(event) {
+        //in a real application, make a request to a remote url with the query and return filtered results, for demo we filter at client side
+        let filtered: any[] = [];
+        let query = event.query;
 
-    selectedCountryAdvanced: any[];
+        for (let i = 0; i < this.items.length; i++) {
+            let item = this.items[i];
+            if (item.label.toLowerCase().indexOf(query.toLowerCase()) == 0) {
+                filtered.push(item);
+            }
+        }
 
-    filteredCountries: any[];
-
-    constructor(private countryService: CountryService) {}
+        this.filteredItems = filtered;
+    }
 
     ngOnInit() {
         this.items = [];
         for (let i = 0; i < 10000; i++) {
             this.items.push({ label: 'Item ' + i, value: 'Item ' + i });
         }
-    }
-
-    filterCountry(event) {
-        let filtered: any[] = [];
-        let query = event.query;
-
-        for (let i = 0; i < this.countries.length; i++) {
-            let country = this.countries[i];
-            if (country.name.toLowerCase().indexOf(query.toLowerCase()) == 0) {
-                filtered.push(country);
-            }
-        }
-
-        this.filteredCountries = filtered;
     }
 }`
     };
