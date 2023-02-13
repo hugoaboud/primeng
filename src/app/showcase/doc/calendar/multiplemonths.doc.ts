@@ -21,10 +21,23 @@ export class MultipleMonthDocComponent {
     date: Date[];
 
     code: Code = {
+        basic: `
+<p-calendar [(ngModel)]="date" [numberOfMonths]="3"></p-calendar>`,
+
         html: `
-<p-calendar [(ngModel)]="dateValue" [numberOfMonths]="3"></p-calendar>`,
+<div class="card flex justify-content-center">
+    <p-calendar [(ngModel)]="date" [numberOfMonths]="3"></p-calendar>
+</div>`,
 
         typescript: `
-date: Date[];`
+import { Component } from '@angular/core'
+
+@Component({
+    templateUrl: './calendardemo.html'
+})
+
+export class CalendarDemo {
+    date: Date[];
+}`
     };
 }

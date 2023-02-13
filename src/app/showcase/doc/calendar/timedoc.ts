@@ -21,10 +21,23 @@ export class TimeDocComponent {
     date: Date[];
 
     code: Code = {
-        html: `
+        basic: `
 <p-calendar [(ngModel)]="date" [showTime]="true" [showSeconds]="true"></p-calendar>`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <p-calendar [(ngModel)]="date" [showTime]="true" [showSeconds]="true"></p-calendar>
+</div>`,
+
         typescript: `
-date: Date[];`
+import { Component } from '@angular/core'
+
+@Component({
+    templateUrl: './calendardemo.html'
+})
+
+export class CalendarDemo {
+    date: Date[];
+}`
     };
 }
