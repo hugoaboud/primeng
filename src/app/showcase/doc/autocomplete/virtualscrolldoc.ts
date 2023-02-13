@@ -45,20 +45,22 @@ export class VirtualScrollDocComponent {
     }
 
     code: Code = {
+        basic: `
+<p-autoComplete [(ngModel)]="selectedItem" [virtualScroll]="true" [suggestions]="filteredItems" [virtualScrollItemSize]="34" (completeMethod)="filterItems($event)" field="label" [dropdown]="true"> </p-autoComplete>`,
+
         html: `
-<p-autoComplete [(ngModel)]="selectedCountryAdvanced" [suggestions]="filteredCountries" 
-    (completeMethod)="filterCountry($event)" field="name" [dropdown]="true">
-        <ng-template let-country pTemplate="item">
-            <div class="country-item">
-                <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" 
-                    [class]="'flag flag-' + country.code.toLowerCase()" />
-                <div>{{ country.name }}</div>
-            </div>
-        </ng-template>
-</p-autoComplete>`,
+<div class="card flex justify-content-center">
+    <p-autoComplete [(ngModel)]="selectedItem" [virtualScroll]="true" [suggestions]="filteredItems" [virtualScrollItemSize]="34" (completeMethod)="filterItems($event)" field="label" [dropdown]="true"> </p-autoComplete>
+</div>`,
 
         typescript: `
-export class TemplateDocComponent {
+import { SelectItemGroup } from 'primeng/api';
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './autocompletedemo.html'
+})
+export class AutoCompleteDemo {
     countries: any[];
 
     items: any[];

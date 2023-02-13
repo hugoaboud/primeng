@@ -93,7 +93,7 @@ export class GroupedDocComponent {
     }
 
     code: Code = {
-        html: `
+        basic: `
 <p-autoComplete [(ngModel)]="selectedCity" [group]="true" [suggestions]="filteredGroups" 
     (completeMethod)="filterGroupedCity($event)" field="label" [dropdown]="true">
     <ng-template let-group pTemplate="group">
@@ -105,8 +105,26 @@ export class GroupedDocComponent {
     </ng-template>
 </p-autoComplete>`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <p-autoComplete [(ngModel)]="selectedCity" [group]="true" [suggestions]="filteredGroups" (completeMethod)="filterGroupedCity($event)" field="label" [dropdown]="true">
+        <ng-template let-group pTemplate="group">
+            <div class="flex align-items-center">
+                <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'mr-2 flag flag-' + group.value" style="width: 20px" />
+                <span>{{ group.label }}</span>
+            </div>
+        </ng-template>
+    </p-autoComplete>
+</div>`,
+
         typescript: `
-export class GroupedDocComponent {
+import { SelectItemGroup } from 'primeng/api';
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './autocompletedemo.html'
+})
+export class AutoCompleteDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -189,9 +207,6 @@ export class CountryService {
                     .then(res => <any[]> res.json().data)
                     .then(data => { return data; });
     }
-}`,
-
-        module: `
-import { FilterService, SelectItemGroup } from 'primeng/api';`
+}`
     };
 }

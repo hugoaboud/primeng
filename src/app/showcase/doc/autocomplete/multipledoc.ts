@@ -92,14 +92,27 @@ export class MultipleDocComponent {
     }
 
     code: Code = {
-        html: `
+        basic: `
 <span class="p-fluid">
     <p-autoComplete [(ngModel)]="selectedCountries" [suggestions]="filteredCountries" 
         (completeMethod)="filterCountry($event)" field="name" [multiple]="true"></p-autoComplete>
 </span>`,
 
+        html: `
+<div class="card">
+    <span class="p-fluid">
+        <p-autoComplete [(ngModel)]="selectedCountries" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [multiple]="true"> </p-autoComplete>
+    </span>
+</div>`,
+
         typescript: `
-export class MultipleDocComponent {
+import { SelectItemGroup } from 'primeng/api';
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './autocompletedemo.html'
+})
+export class AutoCompleteDemo {
     countries: any[];
 
     items: any[];
