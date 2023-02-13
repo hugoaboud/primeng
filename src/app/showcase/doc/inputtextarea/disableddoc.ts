@@ -19,6 +19,9 @@ export class DisabledDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<textarea rows="5" cols="30" pInputTextarea [disabled]="true"></textarea>`,
+        
         html: `
 <div class="card flex justify-content-center">
     <textarea rows="5" cols="30" pInputTextarea [disabled]="true"></textarea>

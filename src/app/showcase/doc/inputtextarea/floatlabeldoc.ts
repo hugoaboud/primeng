@@ -22,11 +22,20 @@ export class FloatlabelDocComponent {
     @Input() title: string;
 
     code: Code = {
-        html: `
+        basic: `
 <span class="p-float-label">
     <textarea id="float-input" rows="5" cols="30" pInputTextarea></textarea>
     <label for="float-input">Summary</label>
 </span>`,
+
+        html: `
+<div class="card flex justify-content-center">
+    <span class="p-float-label">
+        <textarea id="float-input" rows="5" cols="30" pInputTextarea></textarea>
+        <label for="float-input">Summary</label>
+    </span>
+</div>`,
+
 
         typescript: `
 import { Component } from '@angular/core';

@@ -21,8 +21,13 @@ export class AutoResizeDocComponent {
     value: string;
 
     code: Code = {
-        html: `
+        basic: `
 <textarea rows="5" cols="30" pInputTextarea [autoResize]="true"></textarea>`,
+
+        html: `
+<div class="card flex justify-content-center">
+    <textarea rows="5" cols="30" pInputTextarea [autoResize]="true"></textarea>
+</div>`,
 
         typescript: `
 import { Component } from '@angular/core';
