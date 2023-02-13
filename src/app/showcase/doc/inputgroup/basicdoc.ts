@@ -31,6 +31,23 @@ export class BasicDocComponent {
     @Input() title: string;
 
     code: Code = {
+        basic: `
+<div class="p-inputgroup">
+    <span class="p-inputgroup-addon">
+        <i class="pi pi-user"></i>
+    </span>
+    <input pInputText placeholder="Username" />
+</div>
+<div class="p-inputgroup">
+    <span class="p-inputgroup-addon">$</span>
+    <input type="text" pInputText placeholder="Price" />
+    <span class="p-inputgroup-addon">.00</span>
+</div>
+<div class="p-inputgroup">
+    <span class="p-inputgroup-addon">www</span>
+    <input type="text" pInputText placeholder="Website" />
+</div>`,
+
         html: `
 <div class="card flex flex-column md:flex-row gap-3">
     <div class="p-inputgroup">
@@ -51,6 +68,7 @@ export class BasicDocComponent {
         <input type="text" pInputText placeholder="Website" />
     </div>
 </div>`,
+
         typescript: `
 import { Component } from '@angular/core';
 

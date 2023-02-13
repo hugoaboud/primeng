@@ -31,7 +31,7 @@ export class MultipleDocComponent {
     dates: Date[];
 
     code: Code = {
-        html: `
+        basic: `
 <div class="p-inputgroup w-full md:w-30rem">
     <span class="p-inputgroup-addon">
         <i class="pi pi-clock"></i>
@@ -42,6 +42,21 @@ export class MultipleDocComponent {
     <input type="text" pInputText placeholder="Price" />
     <span class="p-inputgroup-addon">$</span>
     <span class="p-inputgroup-addon">.00</span>
+</div>`,
+
+        html:`
+<div class="card flex justify-content-center">
+    <div class="p-inputgroup w-full md:w-30rem">
+        <span class="p-inputgroup-addon">
+            <i class="pi pi-clock"></i>
+        </span>
+        <span class="p-inputgroup-addon">
+            <i class="pi pi-star-fill"></i>
+        </span>
+        <input type="text" pInputText placeholder="Price" />
+        <span class="p-inputgroup-addon">$</span>
+        <span class="p-inputgroup-addon">.00</span>
+    </div>
 </div>`,
 
         typescript: `
