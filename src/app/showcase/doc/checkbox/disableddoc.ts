@@ -8,9 +8,9 @@ import { Code } from '../../domain/code';
             <p>When <i>disabled</i> is present, the element cannot be edited and focused.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
-            <p-checkbox [disabled]="true"></p-checkbox>
+            <p-checkbox [disabled]="true" [(ngModel)]="checked"></p-checkbox>
         </div>
-        <app-code [code]="code" [hideToggleCode]="true"></app-code>
+        <app-code [code]="code"></app-code>
     </div>`
 })
 export class DisabledDocComponent {
@@ -18,8 +18,26 @@ export class DisabledDocComponent {
 
     @Input() title: string;
 
+    checked: boolean;
+
     code: Code = {
+        basic: `
+<p-checkbox [disabled]="true" [(ngModel)]="checked"></p-checkbox>`,
+
         html: `
-<p-checkbox [disabled]="true"></p-checkbox>`
+<div class="card flex justify-content-center">
+    <p-checkbox [disabled]="true" [(ngModel)]="checked"></p-checkbox>
+</div>`,
+
+        typescript: `
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './checkboxdemo.html'
+})
+
+export class CheckboxDemo {
+    checked: boolean;
+}`
     };
 }
