@@ -23,9 +23,11 @@ export class FloatLabelDocComponent {
 
     code: Code = {
         html: `
-<span class="p-float-label">
-    <p-dropdown inputId="float-label"></p-dropdown>
-    <label for="float-label">Select a City</label>
-</span>`
+<div class="card flex justify-content-center">
+    <span class="p-float-label">
+        <p-dropdown inputId="float-label"></p-dropdown>
+        <label for="float-label">Select a City</label>
+    </span>
+</div>`
     };
 }

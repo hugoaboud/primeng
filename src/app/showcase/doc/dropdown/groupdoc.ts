@@ -64,7 +64,7 @@ export class GroupDocComponent {
     }
 
     code: Code = {
-        html: `
+        basic: `
 <p-dropdown [options]="groupedCities" [(ngModel)]="selectedCity" placeholder="Select a City" [group]="true">
     <ng-template let-group pTemplate="group">
         <div class="flex align-items-center">
@@ -75,9 +75,25 @@ export class GroupDocComponent {
     </ng-template>
 </p-dropdown>`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <p-dropdown [options]="groupedCities" [(ngModel)]="selectedCity" placeholder="Select a City" [group]="true">
+        <ng-template let-group pTemplate="group">
+            <div class="flex align-items-center">
+                <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'mr-2 flag flag-' + group.value" style="width: 20px" />
+                <span>{{ group.label }}</span>
+            </div>
+        </ng-template>
+    </p-dropdown>
+</div>`,
+
         typescript: `
 import { SelectItemGroup } from 'primeng/api';
+import { Component } from '@angular/core';
 
+@Component({
+    templateUrl: './dropdowndemo.html'
+})
 export class DropdownDemo {
     groupedCities: SelectItemGroup[];
 

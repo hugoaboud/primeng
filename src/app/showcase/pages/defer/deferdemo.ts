@@ -24,12 +24,12 @@ export class DeferDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent,
+            component: ImportDocComponent
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent,
+            component: BasicDocComponent
         }
     ];
 

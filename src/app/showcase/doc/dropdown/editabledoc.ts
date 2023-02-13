@@ -38,15 +38,25 @@ export class EditableDocComponent {
     }
 
     code: Code = {
-        html: `
+        basic: `
 <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City" [editable]="true" optionLabel="name"></p-dropdown>`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City" [editable]="true" optionLabel="name"></p-dropdown>
+</div>`,
+
         typescript: `
+import { Component } from '@angular/core';
+
 interface City {
     name: string;
     code: string;
 }
 
+@Component({
+    templateUrl: './dropdowndemo.html'
+})
 export class DropdownDemo {
     cities: City[];
 
@@ -54,11 +64,11 @@ export class DropdownDemo {
 
     constructor() {
         this.cities = [
-            { name: 'New York', code: 'NY' },
-            { name: 'Rome', code: 'RM' },
-            { name: 'London', code: 'LDN' },
-            { name: 'Istanbul', code: 'IST' },
-            { name: 'Paris', code: 'PRS' }
+            {name: 'New York', code: 'NY'},
+            {name: 'Rome', code: 'RM'},
+            {name: 'London', code: 'LDN'},
+            {name: 'Istanbul', code: 'IST'},
+            {name: 'Paris', code: 'PRS'}
         ];
     }
 }`

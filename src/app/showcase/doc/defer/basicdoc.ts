@@ -11,9 +11,7 @@ import { CarService } from '../../service/car.service';
             <p>Defer is applied to a container element with pDefer directive where content needs to be placed inside an ng-template.</p>
         </app-docsectiontext>
         <div class="card">
-            <div style="height:1200px">
-                Table is not loaded yet, scroll down to initialize it.
-            </div>
+            <div style="height:1200px">Table is not loaded yet, scroll down to initialize it.</div>
 
             <p-toast></p-toast>
             <div pDefer (onLoad)="initData()">
@@ -29,10 +27,10 @@ import { CarService } from '../../service/car.service';
                         </ng-template>
                         <ng-template pTemplate="body" let-car>
                             <tr>
-                                <td>{{car.vin}}</td>
-                                <td>{{car.year}}</td>
-                                <td>{{car.brand}}</td>
-                                <td>{{car.color}}</td>
+                                <td>{{ car.vin }}</td>
+                                <td>{{ car.year }}</td>
+                                <td>{{ car.brand }}</td>
+                                <td>{{ car.color }}</td>
                             </tr>
                         </ng-template>
                     </p-table>
@@ -146,6 +144,6 @@ import { ToastModule } from 'primeng/toast';
     imports: [CommonModule, RouterModule, FormsModule, DeferModule, TableModule, ToastModule],
     declarations: [DeferDemo]
 })
-export class DeferDemoModule {}`,
+export class DeferDemoModule {}`
     };
 }
