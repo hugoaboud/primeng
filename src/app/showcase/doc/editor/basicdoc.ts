@@ -21,13 +21,23 @@ export class BasicDocComponent {
     text: string;
 
     code: Code = {
+        basic: `
+<p-editor [(ngModel)]="text" [style]="{ height: '320px' }"></p-editor>`,
+
         html: `
-<p-editor [(ngModel)]="text" [style]="{ height: '320px' }"></p-editor>
-`,
+<div class="card">
+    <p-editor [(ngModel)]="text" [style]="{ height: '320px' }"></p-editor>
+</div>`,
 
         typescript: `
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './editordemo.html'
+})
+
 export class EditorDemo {
-    text: string;            
+    text: string;
 }`
     };
 }

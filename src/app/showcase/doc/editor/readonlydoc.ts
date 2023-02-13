@@ -21,12 +21,23 @@ export class ReadOnlyDocComponent {
     text: string = 'Always bet on Prime!';
 
     code: Code = {
-        html: `
+        basic: `
 <p-editor [(ngModel)]="text" [readonly]="true" [style]="{ height: '320px' }"></p-editor>`,
 
+        html: `
+<div class="card">
+    <p-editor [(ngModel)]="text" [readonly]="true" [style]="{ height: '320px' }"></p-editor>
+</div>`,
+
         typescript: `
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './editordemo.html'
+})
+
 export class EditorDemo {
-    text: string = 'Always bet on Prime!';      
+    text: string = 'Always bet on Prime!';
 }`
     };
 }
