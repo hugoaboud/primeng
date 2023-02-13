@@ -360,10 +360,6 @@
                     "children": [
                         {
                             "name": "Message",
-                            "routerLink": "/message"
-                        },
-                        {
-                            "name": "Messages",
                             "routerLink": "/messages"
                         },
                         {
