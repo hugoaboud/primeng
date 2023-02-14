@@ -9,9 +9,7 @@ import { Code } from '../../domain/code';
             <p>Defer is applied to a container element with pDefer directive where content needs to be placed inside an ng-template.</p>
         </app-docsectiontext>
         <div class="card">
-            <p style="margin-bottom: 70rem;">
-                Content is not loaded yet, scroll down to initialize it.
-            </p>
+            <p style="margin-bottom: 70rem;">Content is not loaded yet, scroll down to initialize it.</p>
             <p-toast></p-toast>
             <div pDefer (onLoad)="onLoad()">
                 <ng-template>

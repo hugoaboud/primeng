@@ -12,15 +12,15 @@ import { Product } from '../../domain/product';
             <div class="p-2 border-1 surface-border border-round w-15rem h-10rem">
                 <ul class="list-none flex flex-column gap-2 p-0 m-0">
                     <li *ngFor="let product of availableProducts" class="p-2 border-round shadow-1" pDraggable (onDragStart)="dragStart(product)" (onDragEnd)="dragEnd()">
-                        {{product.name}}
+                        {{ product.name }}
                     </li>
                 </ul>
             </div>
             <div class="p-2 w-15rem h-10rem drop-column" pDroppable (onDrop)="drop()">
                 <p class="text-center surface-border border-bottom-1">Drop Zone</p>
-                <ul class="list-none flex flex-column gap-2 p-0 m-0" *ngIf="selectedProducts" >
+                <ul class="list-none flex flex-column gap-2 p-0 m-0" *ngIf="selectedProducts">
                     <li *ngFor="let product of selectedProducts" class="p-2 border-round shadow-1">
-                        {{product.name}}
+                        {{ product.name }}
                     </li>
                 </ul>
             </div>
@@ -42,9 +42,9 @@ export class DropIndicatorDocComponent {
     ngOnInit() {
         this.selectedProducts = [];
         this.availableProducts = [
-            {id:'1', name: 'Black Watch'},
-            {id:'2', name: 'Bamboo Watch'},
-        ]
+            { id: '1', name: 'Black Watch' },
+            { id: '2', name: 'Bamboo Watch' }
+        ];
     }
 
     dragStart(product: Product) {

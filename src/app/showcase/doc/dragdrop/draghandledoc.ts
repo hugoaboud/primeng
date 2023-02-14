@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Code } from '../../domain/code';;
+import { Code } from '../../domain/code';
 
 @Component({
     selector: 'draghandle-doc',
@@ -9,9 +9,7 @@ import { Code } from '../../domain/code';;
         </app-docsectiontext>
         <div class="card">
             <div pDraggable dragHandle=".p-panel-header" class="w-15rem">
-                <p-panel header="Drag Header">
-                    Content
-                </p-panel>
+                <p-panel header="Drag Header"> Content </p-panel>
             </div>
         </div>
         <app-code [code]="code"></app-code>

@@ -14,16 +14,16 @@ import { ProductService } from '../../service/product.service';
                 <div *ngFor="let product of availableProducts">
                     <div class="product-item" pDraggable="products" (onDragStart)="dragStart(product)" (onDragEnd)="dragEnd()">
                         <div class="image-container">
-                                <img src="assets/showcase/images/demo/product/{{product.image}}" [alt]="product.name" class="product-image" />
+                            <img src="assets/showcase/images/demo/product/{{ product.image }}" [alt]="product.name" class="product-image" />
                         </div>
                         <div class="product-list-detail">
-                            <h5 class="mb-2">{{product.name}}</h5>
+                            <h5 class="mb-2">{{ product.name }}</h5>
                             <i class="pi pi-tag product-category-icon"></i>
-                            <span class="product-category">{{product.category}}</span>
-                            </div>
-                            <div class="product-list-action">
-                            <h6 class="mb-2">{{product.price}}</h6>
-                            <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+                            <span class="product-category">{{ product.category }}</span>
+                        </div>
+                        <div class="product-list-action">
+                            <h6 class="mb-2">{{ product.price }}</h6>
+                            <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{ product.inventoryStatus }}</span>
                         </div>
                     </div>
                 </div>
@@ -40,10 +40,10 @@ import { ProductService } from '../../service/product.service';
                     </ng-template>
                     <ng-template pTemplate="body" let-product>
                         <tr>
-                            <td>{{product.id}}</td>
-                            <td>{{product.category}}</td>
-                            <td>{{product.name}}</td>
-                            <td>{{product.price}}</td>
+                            <td>{{ product.id }}</td>
+                            <td>{{ product.category }}</td>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.price }}</td>
                         </tr>
                     </ng-template>
                 </p-table>
@@ -51,9 +51,9 @@ import { ProductService } from '../../service/product.service';
         </div>
         <app-code [code]="code"></app-code>
     </div>`,
-    providers: [ProductService],
+    providers: [ProductService]
 })
-export class DataTableDocComponent implements OnInit{
+export class DataTableDocComponent implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -333,6 +333,6 @@ export class DragDropDemoModule {}`,
     "inventoryStatus": "INSTOCK",
     "rating": 5
 },
-...`,
+...`
     };
 }

@@ -18,7 +18,18 @@ import { DroppablePropsDocComponent } from './droppablepropsdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, DragDropModule, TableModule, FormsModule, PanelModule],
-    exports: [BasicDocComponent, DataTableDocComponent, ImportDocComponent, DropIndicatorDocComponent, DragHandleDocComponent, DraggableEventsDocComponent, DraggablePropsDocComponent, DroppableEventsDocComponent, DroppablePropsDocComponent, AppDocModule],
+    exports: [
+        BasicDocComponent,
+        DataTableDocComponent,
+        ImportDocComponent,
+        DropIndicatorDocComponent,
+        DragHandleDocComponent,
+        DraggableEventsDocComponent,
+        DraggablePropsDocComponent,
+        DroppableEventsDocComponent,
+        DroppablePropsDocComponent,
+        AppDocModule
+    ],
     declarations: [BasicDocComponent, DataTableDocComponent, ImportDocComponent, DropIndicatorDocComponent, DragHandleDocComponent, DraggableEventsDocComponent, DraggablePropsDocComponent, DroppableEventsDocComponent, DroppablePropsDocComponent]
 })
 export class DragDropDocModule {}

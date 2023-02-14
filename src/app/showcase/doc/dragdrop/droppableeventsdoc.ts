@@ -16,23 +16,17 @@ import { Component, Input } from '@angular/core';
                 <tbody>
                     <tr>
                         <td>onDragEnter</td>
-                        <td>
-                            event: browser event
-                        </td>
+                        <td>event: browser event</td>
                         <td>Callback to invoke when a draggable enters drop area.</td>
                     </tr>
                     <tr>
                         <td>onDrop</td>
-                        <td>
-                            event: browser event
-                        </td>
+                        <td>event: browser event</td>
                         <td>Callback to invoke when a draggable is dropped onto drop area.</td>
                     </tr>
                     <tr>
                         <td>onDragLeave</td>
-                        <td>
-                            event: browser event
-                        </td>
+                        <td>event: browser event</td>
                         <td>Callback to invoke when a draggable leave drop area.</td>
                     </tr>
                 </tbody>
