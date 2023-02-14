@@ -12,7 +12,7 @@ import { Code } from '../../domain/code';
             <p-toast key="toast1"></p-toast>
             <p-toast key="toast2"></p-toast>
             <button type="button" pButton pRipple (click)="showToast1()" label="Show Success"></button>
-            <button type="button" pButton pRipple (click)="showToast2()" label="Show Warning" class="p-button-success"></button>
+            <button type="button" pButton pRipple (click)="showToast2()" label="Show Warning" class="p-button-warning"></button>
         </div>
         <app-code [code]="code"></app-code>
     </div>`,
@@ -26,10 +26,12 @@ export class TargetDocComponent {
     constructor(private messageService: MessageService) {}
 
     showToast1() {
+        this.messageService.clear();
         this.messageService.add({ key: 'toast1', severity: 'success', summary: 'Success', detail: 'key: toast1' });
     }
 
     showToast2() {
+        this.messageService.clear();
         this.messageService.add({ key: 'toast2', severity: 'warn', summary: 'Warning', detail: 'key: toast2' });
     }
 
@@ -58,12 +60,14 @@ export class ToastDemo {
 
     constructor(private messageService: MessageService) {}
 
-    showTaost1() {
-        this.messageService.add({ key:'toast1', severity: 'success', summary: 'Success', detail: 'key: toast1' });
+    showToast1() {
+        this.messageService.clear();
+        this.messageService.add({ key: 'toast1', severity: 'success', summary: 'Success', detail: 'key: toast1' });
     }
-    
-    showTaost2() {
-        this.messageService.add({ key:'toast2', severity: 'warn', summary: 'Warning', detail: 'key: toast2' });
+
+    showToast2() {
+        this.messageService.clear();
+        this.messageService.add({ key: 'toast2', severity: 'warn', summary: 'Warning', detail: 'key: toast2' });
     }
 }`,
         module: `
