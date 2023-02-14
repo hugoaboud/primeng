@@ -11,6 +11,7 @@ import { DynamicDocComponent } from '../../doc/messages/dynamicdoc';
 import { StaticDocComponent } from '../../doc/messages/staticdoc';
 import { ServiceDocComponent } from '../../doc/messages/servicedoc';
 import { AnimationDocComponent } from '../../doc/messages/animationdoc';
+import { TemplatesDocComponent } from '../../doc/messages/templatesdoc';
 
 @Component({
     templateUrl: './messagesdemo.html'
@@ -79,6 +80,11 @@ export class MessagesDemo {
             id: 'messageprops',
             label: 'Properties of Message',
             component: MessagePropsDocComponent
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDocComponent
         }
     ];
 }

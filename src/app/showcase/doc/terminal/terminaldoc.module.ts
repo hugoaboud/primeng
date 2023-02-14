@@ -12,6 +12,6 @@ import { StyleDocComponent } from './styledoc';
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, TerminalModule],
     declarations: [ImportDocComponent, BasicDocComponent, StyleDocComponent, PropsDocComponent],
-    exports: [ImportDocComponent, BasicDocComponent, StyleDocComponent, PropsDocComponent]
+    exports: [ImportDocComponent, BasicDocComponent, StyleDocComponent, PropsDocComponent, AppDocModule]
 })
 export class TerminalDocModule {}

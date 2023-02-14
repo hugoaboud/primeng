@@ -21,7 +21,7 @@ import { DynamicDocComponent } from './dynamicdoc';
 import { ServiceDocComponent } from './servicedoc';
 import { InlineDocComponent } from './inlinedoc';
 import { AnimationDocComponent } from './animationdoc';
-
+import { TemplatesDocComponent } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, FormsModule, RouterModule, MessagesModule, ButtonModule, MessageModule, InputTextModule, AppDocModule],
@@ -38,7 +38,8 @@ import { AnimationDocComponent } from './animationdoc';
         AnimationDocComponent,
         MessageStyleDocComponent,
         MessagesPropsDocComponent,
-        MessagePropsDocComponent
+        MessagePropsDocComponent,
+        TemplatesDocComponent
     ],
     exports: [AppDocModule]
 })
