@@ -1,92 +1,83 @@
 import { Component } from '@angular/core';
-import { SelectItemGroup } from 'primeng/api';
-import { ListboxFilterOptions } from 'primeng/listbox';
-interface City {
-    name: string;
-    code: string;
-}
-
-interface Country {
-    name: string;
-    code: string;
-}
-
+import { BasicDocComponent } from '../../doc/listbox/basicdoc';
+import { DisabledDocComponent } from '../../doc/listbox/disableddoc';
+import { EventsDocComponent } from '../../doc/listbox/eventsdoc';
+import { FilterDocComponent } from '../../doc/listbox/filterdoc';
+import { GroupDocComponent } from '../../doc/listbox/groupdoc';
+import { ImportDocComponent } from '../../doc/listbox/importdoc';
+import { InvalidDocComponent } from '../../doc/listbox/invaliddoc';
+import { MultipleDocComponent } from '../../doc/listbox/multipledoc';
+import { PropsDocComponent } from '../../doc/listbox/propsdoc';
+import { StyleDocComponent } from '../../doc/listbox/styledoc';
+import { TemplateDocComponent } from '../../doc/listbox/templatedoc';
+import { TemplatesDocComponent } from '../../doc/listbox/templatesdoc';
 @Component({
     templateUrl: './listboxdemo.html'
 })
 export class ListboxDemo {
-    filterValue = '';
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'multiple',
+            label: 'Multiple',
+            component: MultipleDocComponent
+        },
+        {
+            id: 'template',
+            label: 'Template',
+            component: TemplateDocComponent
+        },
+        {
+            id: 'group',
+            label: 'Group',
+            component: GroupDocComponent
+        },
+        {
+            id: 'filter',
+            label: 'Filter',
+            component: FilterDocComponent
+        },
+        {
+            id: 'invalid',
+            label: 'Invalid',
+            component: InvalidDocComponent
+        },
+        {
+            id: 'disabled',
+            label: 'Disabled',
+            component: DisabledDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        }
+    ];
 
-    groupedCities: SelectItemGroup[];
-
-    cities: City[];
-
-    countries: Country[];
-
-    selectedCity: City;
-
-    selectedCountries: Country[];
-
-    selectedCities: any[];
-
-    constructor() {
-        this.cities = [
-            { name: 'New York', code: 'NY' },
-            { name: 'Rome', code: 'RM' },
-            { name: 'London', code: 'LDN' },
-            { name: 'Istanbul', code: 'IST' },
-            { name: 'Paris', code: 'PRS' }
-        ];
-
-        this.countries = [
-            { name: 'Australia', code: 'AU' },
-            { name: 'Brazil', code: 'BR' },
-            { name: 'China', code: 'CN' },
-            { name: 'Egypt', code: 'EG' },
-            { name: 'France', code: 'FR' },
-            { name: 'Germany', code: 'DE' },
-            { name: 'India', code: 'IN' },
-            { name: 'Japan', code: 'JP' },
-            { name: 'Spain', code: 'ES' },
-            { name: 'United States', code: 'US' }
-        ];
-
-        this.groupedCities = [
-            {
-                label: 'Germany',
-                value: 'de',
-                items: [
-                    { label: 'Berlin', value: 'Berlin' },
-                    { label: 'Frankfurt', value: 'Frankfurt' },
-                    { label: 'Hamburg', value: 'Hamburg' },
-                    { label: 'Munich', value: 'Munich' }
-                ]
-            },
-            {
-                label: 'USA',
-                value: 'us',
-                items: [
-                    { label: 'Chicago', value: 'Chicago' },
-                    { label: 'Los Angeles', value: 'Los Angeles' },
-                    { label: 'New York', value: 'New York' },
-                    { label: 'San Francisco', value: 'San Francisco' }
-                ]
-            },
-            {
-                label: 'Japan',
-                value: 'jp',
-                items: [
-                    { label: 'Kyoto', value: 'Kyoto' },
-                    { label: 'Osaka', value: 'Osaka' },
-                    { label: 'Tokyo', value: 'Tokyo' },
-                    { label: 'Yokohama', value: 'Yokohama' }
-                ]
-            }
-        ];
-    }
-
-    myResetFunction(options: ListboxFilterOptions) {
-        options.reset();
-        this.filterValue = '';
-    }
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDocComponent
+        }
+    ];
 }
