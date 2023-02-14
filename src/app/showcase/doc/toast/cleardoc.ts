@@ -6,7 +6,10 @@ import { Code } from '../../domain/code';
     selector: 'clear-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>Clicking the close icon on the toast, removes it manually. Same can also be achieved programmatically using the clear function of the <i>messageService</i>. Calling it without any arguments, removes all displayed messages whereas calling it with a key, removes the messages displayed on a toast having the same key. </p>
+            <p>
+                Clicking the close icon on the toast, removes it manually. Same can also be achieved programmatically using the clear function of the <i>messageService</i>. Calling it without any arguments, removes all displayed messages whereas
+                calling it with a key, removes the messages displayed on a toast having the same key.
+            </p>
         </app-docsectiontext>
         <div class="card flex justify-content-center gap-2">
             <p-toast key="myKey"></p-toast>
@@ -25,7 +28,7 @@ export class ClearDocComponent {
     constructor(private messageService: MessageService) {}
 
     show() {
-        this.messageService.add({ key:'myKey', severity: 'success', summary: 'Message 1', detail: 'Message Content' });
+        this.messageService.add({ key: 'myKey', severity: 'success', summary: 'Message 1', detail: 'Message Content' });
     }
 
     clear() {
