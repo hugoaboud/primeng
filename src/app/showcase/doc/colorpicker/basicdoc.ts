@@ -21,9 +21,23 @@ export class BasicDocComponent {
     color: string;
 
     code: Code = {
-        html: `
+        basic: `
 <p-colorPicker [(ngModel)]="color"></p-colorPicker>`,
+
+        html: `
+<div class="card flex justify-content-center">
+    <p-colorPicker [(ngModel)]="color"></p-colorPicker>
+</div>`,
+
         typescript: `
-color: string;`
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './colorpickerdemo.html'
+})
+
+export class ColorPickerDemo {
+    color: string;
+}`
     };
 }

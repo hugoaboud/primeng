@@ -1,47 +1,93 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { LocaleDocComponent } from '../../doc/inputnumber/localedoc';
+import { ImportDocComponent } from '../../doc/inputnumber/importdoc';
+import { NumeralsDocComponent } from '../../doc/inputnumber/numeralsdoc';
+import { CurrencyDocComponent } from '../../doc/inputnumber/currencydoc';
+import { PrefixSuffixDocComponent } from '../../doc/inputnumber/prefixsuffixdoc';
+import { ButtonsDocComponent } from '../../doc/inputnumber/buttonsdoc';
+import { VerticalDocComponent } from '../../doc/inputnumber/verticaldoc';
+import { FloatlabelDocComponent } from '../../doc/inputnumber/floatlabeldoc';
+import { InvalidDocComponent } from '../../doc/inputnumber/invaliddoc';
+import { DisabledDocComponent } from '../../doc/inputnumber/disableddoc';
+import { PropsDocComponent } from '../../doc/inputnumber/propsdoc';
+import { MethodsDocComponent } from '../../doc/inputnumber/methodsdoc';
+import { EventsDocComponent } from '../../doc/inputnumber/eventsdoc';
+import { StyleDocComponent } from '../../doc/inputnumber/styledoc';
 
 @Component({
     templateUrl: './inputnumberdemo.html',
     encapsulation: ViewEncapsulation.None
 })
 export class InputNumberDemo {
-    value1: number = 42723;
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'numeral',
+            label: 'Numeral',
+            component: NumeralsDocComponent
+        },
+        {
+            id: 'locale',
+            label: 'Locale',
+            component: LocaleDocComponent
+        },
+        {
+            id: 'currency',
+            label: 'Currency',
+            component: CurrencyDocComponent
+        },
+        {
+            id: 'prefixsuffix',
+            label: 'Prefix & Suffix',
+            component: PrefixSuffixDocComponent
+        },
+        {
+            id: 'buttons',
+            label: 'Buttons',
+            component: ButtonsDocComponent
+        },
+        {
+            id: 'vertical',
+            label: 'Vertical',
+            component: VerticalDocComponent
+        },
+        {
+            id: 'floatlabel',
+            label: 'Float Label',
+            component: FloatlabelDocComponent
+        },
+        {
+            id: 'invalid',
+            label: 'Invalid',
+            component: InvalidDocComponent
+        },
+        {
+            id: 'disabled',
+            label: 'Disabled',
+            component: DisabledDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        }
+    ];
 
-    value2: number = 58151;
-
-    value3: number = 2351.35;
-
-    value4: number = 50;
-
-    value5: number = 151351;
-
-    value6: number = 115744;
-
-    value7: number = 635524;
-
-    value8: number = 732762;
-
-    value9: number = 1500;
-
-    value10: number = 2500;
-
-    value11: number = 4250;
-
-    value12: number = 5002;
-
-    value13: number = 20;
-
-    value14: number = 50;
-
-    value15: number = 10;
-
-    value16: number = 20;
-
-    value17: number = 20;
-
-    value18: number = 10.5;
-
-    value19: number = 25;
-
-    value20: number = 50;
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
+        },
+        { id: 'methods', label: 'Methods', component: MethodsDocComponent }
+    ];
 }

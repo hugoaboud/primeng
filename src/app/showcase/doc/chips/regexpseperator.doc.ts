@@ -21,12 +21,25 @@ export class RegexpSeperatorDocComponent {
     values: string[];
 
     code: Code = {
+        basic: `
+<p-chips [(ngModel)]="values" [separator]="separatorExp" placeholder="Hint: a, b c"></p-chips>`,
+
         html: `
 <div class="card p-fluid">
     <p-chips [(ngModel)]="values" [separator]="separatorExp" placeholder="Hint: a, b c"></p-chips>
 </div>`,
+
         typescript: `
-values: string[];
-separatorExp: RegExp = /,| /;`
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './chipsdemo.html'
+})
+
+export class ChipsDemo {
+    values: string[];
+
+    separatorExp: RegExp = /,| /;
+}`
     };
 }

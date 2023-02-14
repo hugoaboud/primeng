@@ -21,9 +21,23 @@ export class DisabledDocComponent {
     color: string;
 
     code: Code = {
-        html: `
+        basic: `
 <p-colorPicker [(ngModel)]="color" [disabled]="true"></p-colorPicker>`,
+
+        html: `
+<div class="card flex justify-content-center">
+    <p-colorPicker [(ngModel)]="color" [disabled]="true"></p-colorPicker>
+</div>`,
+
         typescript: `
-color: string;`
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './colorpickerdemo.html'
+})
+
+export class ColorPickerDemo {
+    color: string;
+}`
     };
 }

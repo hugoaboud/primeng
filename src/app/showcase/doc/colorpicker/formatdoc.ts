@@ -39,6 +39,11 @@ export class FormatDocComponent {
     colorHSB: any = { h: 239, s: 59, b: 95 };
 
     code: Code = {
+        basic: `
+<p-colorPicker [(ngModel)]="color"></p-colorPicker>
+<p-colorPicker [(ngModel)]="colorRGB" format="rgb"></p-colorPicker>
+<p-colorPicker [(ngModel)]="colorHSB" format="hsb"></p-colorPicker>`,
+
         html: `
 <div class="card flex flex-wrap gap-3">
     <div class="flex-1 flex flex-column align-items-center gap-3">
@@ -57,11 +62,19 @@ export class FormatDocComponent {
         <span>{{ 'h:' + colorHSB.h + ' s:' + colorHSB.s + ' b:' + colorHSB.b }}</span>
     </div>
 </div>`,
+
         typescript: `
-color: string = '#6466f1';
+import { Component } from '@angular/core';
 
-colorRGB: any = { r: 100, g: 102, b: 241 };
+@Component({
+    templateUrl: './colorpickerdemo.html'
+})
+export class ColorPickerDemo {
+    color: string = '#6466f1';
 
-colorHSB: any = { h: 239, s: 59, b: 95 };`
+    colorRGB: any = { r: 100, g: 102, b: 241 };
+
+    colorHSB: any = { h: 239, s: 59, b: 95 };
+}`
     };
 }

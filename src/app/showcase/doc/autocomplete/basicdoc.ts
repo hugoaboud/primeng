@@ -94,12 +94,23 @@ export class BasicDocComponent {
     }
 
     code: Code = {
-        html: `
+        basic: `
 <p-autoComplete [(ngModel)]="selectedCountry" [showEmptyMessage]="true" [suggestions]="filteredCountries"
     (completeMethod)="filterCountry($event)" field="name" [minLength]="1"></p-autoComplete>`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <p-autoComplete [(ngModel)]="selectedCountry" [showEmptyMessage]="true" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [minLength]="1"></p-autoComplete>
+</div>`,
+
         typescript: `
-export class BasicDocComponent {
+import { SelectItemGroup } from 'primeng/api';
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './autocompletedemo.html'
+})
+export class AutoCompleteDemo {
     countries: any[];
 
     items: any[];
@@ -182,9 +193,6 @@ export class CountryService {
                     .then(res => <any[]> res.json().data)
                     .then(data => { return data; });
     }
-}`,
-
-        module: `
-import { SelectItemGroup } from 'primeng/api';`
+}`
     };
 }

@@ -41,11 +41,21 @@ export class MinMaxDocComponent {
     }
 
     code: Code = {
-        html: `
+        basic: `
 <p-calendar [(ngModel)]="date" [minDate]="minDate" [maxDate]="maxDate" [readonlyInput]="true"></p-calendar>`,
 
+        html: ` 
+<div class="card flex justify-content-center">
+    <p-calendar [(ngModel)]="date" [minDate]="minDate" [maxDate]="maxDate" [readonlyInput]="true"></p-calendar>
+</div>`,
+
         typescript: `
-export class MinMaxDocComponent {        
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './calendardemo.html'
+})
+export class CalendarDemo {        
     date: Date;
     
     minDate: Date;

@@ -45,51 +45,48 @@ export class VirtualScrollDocComponent {
     }
 
     code: Code = {
+        basic: `
+<p-autoComplete [(ngModel)]="selectedItem" [virtualScroll]="true" [suggestions]="filteredItems" [virtualScrollItemSize]="34" (completeMethod)="filterItems($event)" field="label" [dropdown]="true"> </p-autoComplete>`,
+
         html: `
-<p-autoComplete [(ngModel)]="selectedCountryAdvanced" [suggestions]="filteredCountries" 
-    (completeMethod)="filterCountry($event)" field="name" [dropdown]="true">
-        <ng-template let-country pTemplate="item">
-            <div class="country-item">
-                <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" 
-                    [class]="'flag flag-' + country.code.toLowerCase()" />
-                <div>{{ country.name }}</div>
-            </div>
-        </ng-template>
-</p-autoComplete>`,
+<div class="card flex justify-content-center">
+    <p-autoComplete [(ngModel)]="selectedItem" [virtualScroll]="true" [suggestions]="filteredItems" [virtualScrollItemSize]="34" (completeMethod)="filterItems($event)" field="label" [dropdown]="true"> </p-autoComplete>
+</div>`,
 
         typescript: `
-export class TemplateDocComponent {
-    countries: any[];
+import { SelectItemGroup } from 'primeng/api';
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './autocompletedemo.html'
+})
+export class AutoCompleteDemo {
+    selectedItem: any;
+
+    filteredItems: any[];
 
     items: any[];
 
-    groupedCities: SelectItemGroup[];
+    filterItems(event) {
+        //in a real application, make a request to a remote url with the query and return filtered results, for demo we filter at client side
+        let filtered: any[] = [];
+        let query = event.query;
 
-    selectedCountryAdvanced: any[];
+        for (let i = 0; i < this.items.length; i++) {
+            let item = this.items[i];
+            if (item.label.toLowerCase().indexOf(query.toLowerCase()) == 0) {
+                filtered.push(item);
+            }
+        }
 
-    filteredCountries: any[];
-
-    constructor(private countryService: CountryService) {}
+        this.filteredItems = filtered;
+    }
 
     ngOnInit() {
         this.items = [];
         for (let i = 0; i < 10000; i++) {
             this.items.push({ label: 'Item ' + i, value: 'Item ' + i });
         }
-    }
-
-    filterCountry(event) {
-        let filtered: any[] = [];
-        let query = event.query;
-
-        for (let i = 0; i < this.countries.length; i++) {
-            let country = this.countries[i];
-            if (country.name.toLowerCase().indexOf(query.toLowerCase()) == 0) {
-                filtered.push(country);
-            }
-        }
-
-        this.filteredCountries = filtered;
     }
 }`
     };

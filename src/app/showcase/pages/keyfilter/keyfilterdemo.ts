@@ -1,33 +1,36 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { ImportDocComponent } from '../../doc/keyfilter/importdoc';
+import { PresetsDocComponent } from '../../doc/keyfilter/presetsdoc';
+import { PropsDocComponent } from '../../doc/keyfilter/propsdoc';
+import { RegexDocComponent } from '../../doc/keyfilter/regexdoc';
 
 @Component({
-    templateUrl: './keyfilterdemo.html',
-    animations: [
-        trigger('errorState', [
-            state(
-                'hidden',
-                style({
-                    opacity: 0
-                })
-            ),
-            state(
-                'visible',
-                style({
-                    opacity: 1
-                })
-            ),
-            transition('visible => hidden', animate('400ms ease-in')),
-            transition('hidden => visible', animate('400ms ease-out'))
-        ])
-    ]
+    templateUrl: './keyfilterdemo.html'
 })
 export class KeyFilterDemo {
-    blockSpecial: RegExp = /^[^<>*#!]+$/;
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'presets',
+            label: 'Presets',
+            component: PresetsDocComponent
+        },
+        {
+            id: 'regex',
+            label: 'Regex',
+            component: RegexDocComponent
+        }
+    ];
 
-    blockSpace: RegExp = /[^\s]/;
-
-    ccRegex: RegExp = /[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/;
-
-    cc: string;
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
+        }
+    ];
 }

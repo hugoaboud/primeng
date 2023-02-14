@@ -21,9 +21,23 @@ export class BasicDocComponent {
     checked: boolean;
 
     code: Code = {
-        html: `
+        basic: `
 <p-checkbox [(ngModel)]="checked" [binary]="true" inputId="binary"></p-checkbox>`,
+
+        html: `
+<div class="card flex justify-content-center">
+    <p-checkbox [(ngModel)]="checked" [binary]="true" inputId="binary"></p-checkbox>
+</div>`,
+
         typescript: `
-checked: boolean;`
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './checkboxdemo.html'
+})
+
+export class CheckboxDemo {
+    checked: boolean;
+}`
     };
 }

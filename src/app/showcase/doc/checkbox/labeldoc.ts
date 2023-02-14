@@ -22,12 +22,25 @@ export class LabelDocComponent {
     selectedValues: string[] = [];
 
     code: Code = {
+        basic: `
+<p-checkbox name="groupname" value="val1" label="Value 1" [(ngModel)]="selectedValues"></p-checkbox>
+<p-checkbox name="groupname" value="val2" label="Value 2" [(ngModel)]="selectedValues"></p-checkbox>`,
+
         html: `
 <div class="card flex justify-content-center gap-3">
     <p-checkbox name="groupname" value="val1" label="Value 1" [(ngModel)]="selectedValues"></p-checkbox>
     <p-checkbox name="groupname" value="val2" label="Value 2" [(ngModel)]="selectedValues"></p-checkbox>
 </div>`,
+
         typescript: `
-selectedValues: string[] = [];`
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './checkboxdemo.html'
+})
+
+export class CheckboxDemo {
+    selectedValues: string[] = [];
+}`
     };
 }

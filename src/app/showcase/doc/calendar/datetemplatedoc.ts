@@ -23,14 +23,31 @@ export class DateTemplateDocComponent {
     date: Date[];
 
     code: Code = {
-        html: `
+        basic: `
 <p-calendar [(ngModel)]="date">
     <ng-template pTemplate="date" let-date>
         <span [ngStyle]="{textDecoration: (date.day < 21 && date.day > 10) ? 'line-through' : 'inherit'}">{{date.day}}</span>
     </ng-template>
 </p-calendar>`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <p-calendar [(ngModel)]="date">
+        <ng-template pTemplate="date" let-date>
+            <span [ngStyle]="{ textDecoration: date.day < 21 && date.day > 10 ? 'line-through' : 'inherit' }">{{ date.day }}</span>
+        </ng-template>
+    </p-calendar>
+</div>`,
+
         typescript: `
-date: Date[];`
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './calendardemo.html'
+})
+
+export class CalendarDemo {
+    date: Date[];
+}`
     };
 }

@@ -21,10 +21,23 @@ export class MultipleDocComponent {
     dates: Date[];
 
     code: Code = {
-        html: `
+        basic: `
 <p-calendar [(ngModel)]="dates" selectionMode="multiple" [readonlyInput]="true"></p-calendar>`,
 
+        html: `
+<div class="card flex justify-content-center">
+    <p-calendar [(ngModel)]="dates" selectionMode="multiple" [readonlyInput]="true"></p-calendar>
+</div>`,
+
         typescript: `
-dates: Date[];`
+import { Component } from '@angular/core';
+
+@Component({
+    templateUrl: './calendardemo.html'
+})
+
+export class CalendarDemo {
+    dates: Date[];
+}`
     };
 }
