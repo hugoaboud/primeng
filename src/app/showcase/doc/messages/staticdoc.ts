@@ -59,6 +59,6 @@ import { MessagesDemoRoutingModule } from './messagesdemo-routing.module';
     declarations: [MessagesDemo]
 })
 export class MessagesDemoModule {}
-`,
+`
     };
 }

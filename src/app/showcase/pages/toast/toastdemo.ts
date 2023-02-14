@@ -1,72 +1,108 @@
 import { Component } from '@angular/core';
 import { MessageService } from 'primeng/api';
-
+import { ImportDocComponent } from '../../doc/toast/importdoc';
+import { BasicDocComponent } from '../../doc/toast/basicdoc';
+import { SeverityDocComponent } from '../../doc/toast/severitydoc';
+import { AnimationDocComponent } from '../../doc/toast/animationdoc';
+import { EventsDocComponent } from '../../doc/toast/eventsdoc';
+import { InterfaceDocComponent } from '../../doc/toast/interfacedoc';
+import { MultipleDocComponent } from '../../doc/toast/multipledoc';
+import { PositionDocComponent } from '../../doc/toast/positiondoc';
+import { PropsDocComponent } from '../../doc/toast/propsdoc';
+import { ResponsiveDocComponent } from '../../doc/toast/responsivedoc';
+import { StickyDocComponent } from '../../doc/toast/stickydoc';
+import { StyleDocComponent } from '../../doc/toast/styledoc';
+import { TargetDocComponent } from '../../doc/toast/targetdoc';
+import { TemplateDocComponent } from '../../doc/toast/templatedoc';
+import { TemplatesDocComponent } from '../../doc/toast/templatesdoc';
+import { ClearDocComponent } from '../../doc/toast/cleardoc';
 @Component({
-    templateUrl: './toastdemo.html',
-    styleUrls: ['./toastdemo.scss'],
-    providers: [MessageService]
+    templateUrl: './toastdemo.html'
 })
 export class ToastDemo {
-    constructor(private messageService: MessageService) {}
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'severity',
+            label: 'Severity',
+            component: SeverityDocComponent
+        },
+        {
+            id: 'position',
+            label: 'Position',
+            component: PositionDocComponent
+        },
+        {
+            id: 'multiple',
+            label: 'Multiple',
+            component: MultipleDocComponent
+        },
+        {
+            id: 'target',
+            label: 'Target',
+            component: TargetDocComponent
+        },
+        {
+            id: 'sticky',
+            label: 'Sticky',
+            component: StickyDocComponent
+        },
+        {
+            id: 'clear',
+            label: 'Clearing Messages',
+            component: ClearDocComponent
+        },
+        {
+            id: 'templating',
+            label: 'Templating',
+            component: TemplateDocComponent
+        },
+        {
+            id: 'responsive',
+            label: 'Responsive',
+            component: ResponsiveDocComponent
+        },
+        {
+            id: 'animation',
+            label: 'Animation',
+            component: AnimationDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        }
+    ];
 
-    showSuccess() {
-        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Message Content' });
-    }
-
-    showInfo() {
-        this.messageService.add({ severity: 'info', summary: 'Info', detail: 'Message Content' });
-    }
-
-    showWarn() {
-        this.messageService.add({ severity: 'warn', summary: 'Warn', detail: 'Message Content' });
-    }
-
-    showError() {
-        this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Message Content' });
-    }
-
-    showCustom() {
-        this.messageService.add({ severity: 'custom', summary: 'Custom', detail: 'Message Content', icon: 'pi-file' });
-    }
-
-    showTopLeft() {
-        this.messageService.add({ key: 'tl', severity: 'info', summary: 'Info', detail: 'Message Content' });
-    }
-
-    showTopCenter() {
-        this.messageService.add({ key: 'tc', severity: 'warn', summary: 'Warn', detail: 'Message Content' });
-    }
-
-    showBottomCenter() {
-        this.messageService.add({ key: 'bc', severity: 'success', summary: 'Success', detail: 'Message Content' });
-    }
-
-    showConfirm() {
-        this.messageService.clear();
-        this.messageService.add({ key: 'c', sticky: true, severity: 'warn', summary: 'Are you sure?', detail: 'Confirm to proceed' });
-    }
-
-    showMultiple() {
-        this.messageService.addAll([
-            { severity: 'success', summary: 'Message 1', detail: 'Message Content' },
-            { severity: 'info', summary: 'Message 2', detail: 'Message Content' },
-            { severity: 'warn', summary: 'Message 3', detail: 'Message Content' }
-        ]);
-    }
-
-    showSticky() {
-        this.messageService.add({ severity: 'info', summary: 'Sticky', detail: 'Message Content', sticky: true });
-    }
-
-    onConfirm() {
-        this.messageService.clear('c');
-    }
-
-    onReject() {
-        this.messageService.clear('c');
-    }
-
-    clear() {
-        this.messageService.clear();
-    }
+    apiDocs = [
+        {
+            id: 'interface',
+            label: 'Message Interface',
+            component: InterfaceDocComponent
+        },
+        {
+            id: 'props',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDocComponent
+        }
+    ];
 }
