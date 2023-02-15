@@ -82,7 +82,7 @@ export class LineDocComponent {
     }
 
     code: Code = {
-        basic:`
+        basic: `
 <p-chart type="line" [data]="data" [options]="options"></p-chart>`,
         html: `
 <div class="card">
@@ -170,6 +170,6 @@ import { ChartDemo } from './chartdemo';
     imports: [CommonModule, ChartModule],
     declarations: [ChartDemo]
 })
-export class ChartDemoModule {}`,
+export class ChartDemoModule {}`
     };
 }

@@ -27,7 +27,7 @@ export class LineStyleDocComponent {
         const textColor = documentStyle.getPropertyValue('--text-color');
         const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
         const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
-        
+
         this.data = {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
             datasets: [
@@ -56,7 +56,7 @@ export class LineStyleDocComponent {
                 }
             ]
         };
-        
+
         this.options = {
             maintainAspectRatio: false,
             aspectRatio: 0.6,
@@ -89,7 +89,7 @@ export class LineStyleDocComponent {
     }
 
     code: Code = {
-        basic:`
+        basic: `
 <p-chart type="line" [data]="data" [options]="options"></p-chart>`,
         html: `
 <div class="card">
@@ -184,6 +184,6 @@ import { ChartDemo } from './chartdemo';
     imports: [CommonModule, ChartModule],
     declarations: [ChartDemo]
 })
-export class ChartDemoModule {}`,
+export class ChartDemoModule {}`
     };
 }

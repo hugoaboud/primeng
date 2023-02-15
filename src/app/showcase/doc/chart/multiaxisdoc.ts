@@ -27,7 +27,7 @@ export class MultiAxisDocComponent {
         const textColor = documentStyle.getPropertyValue('--text-color');
         const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
         const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
-        
+
         this.data = {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
             datasets: [
@@ -49,7 +49,7 @@ export class MultiAxisDocComponent {
                 }
             ]
         };
-        
+
         this.options = {
             stacked: false,
             maintainAspectRatio: false,
@@ -98,7 +98,7 @@ export class MultiAxisDocComponent {
     }
 
     code: Code = {
-        basic:`
+        basic: `
 <p-chart type="line" [data]="data" [options]="options"></p-chart>`,
         html: `
 <div class="card">
@@ -202,6 +202,6 @@ import { ChartDemo } from './chartdemo';
     imports: [CommonModule, ChartModule],
     declarations: [ChartDemo]
 })
-export class ChartDemoModule {}`,
+export class ChartDemoModule {}`
     };
 }

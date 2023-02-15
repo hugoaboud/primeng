@@ -26,7 +26,7 @@ export class RadarDocComponent {
         const documentStyle = getComputedStyle(document.documentElement);
         const textColor = documentStyle.getPropertyValue('--text-color');
         const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
-        
+
         this.data = {
             labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
             datasets: [
@@ -50,7 +50,7 @@ export class RadarDocComponent {
                 }
             ]
         };
-        
+
         this.options = {
             plugins: {
                 legend: {
@@ -73,7 +73,7 @@ export class RadarDocComponent {
     }
 
     code: Code = {
-        basic:`
+        basic: `
 <p-chart type="radar" [data]="data" [options]="options"></p-chart>`,
         html: `
 <div class="card flex justify-content-center">
@@ -152,6 +152,6 @@ import { ChartDemo } from './chartdemo';
     imports: [CommonModule, ChartModule],
     declarations: [ChartDemo]
 })
-export class ChartDemoModule {}`,
+export class ChartDemoModule {}`
     };
 }

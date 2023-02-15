@@ -5,7 +5,10 @@ import { Code } from '../../domain/code';
     selector: 'basic-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>A chart is configured with 3 properties; <i>type</i>, <i>data</i> and <i>options</i>. Chart type is defined using the <i>type</i> property that accepts <i>pie</i>, <i>doughtnut</i>, <i>line</i>, <i>bar</i>, <i>radar</i> and <i>polarArea</i> as a value. The <i>data</i> defines datasets represented with the chart and the <i>options</i> provide numerous customization options to customize the presentation.</p>
+            <p>
+                A chart is configured with 3 properties; <i>type</i>, <i>data</i> and <i>options</i>. Chart type is defined using the <i>type</i> property that accepts <i>pie</i>, <i>doughtnut</i>, <i>line</i>, <i>bar</i>, <i>radar</i> and
+                <i>polarArea</i> as a value. The <i>data</i> defines datasets represented with the chart and the <i>options</i> provide numerous customization options to customize the presentation.
+            </p>
         </app-docsectiontext>
         <div class="card">
             <p-chart type="bar" [data]="basicData" [options]="basicOptions"></p-chart>
@@ -74,7 +77,7 @@ export class BasicDocComponent {
     }
 
     code: Code = {
-        basic:`
+        basic: `
 <p-chart type="bar" [data]="basicData" [options]="basicOptions"></p-chart>`,
         html: `
 <div class="card">
@@ -151,6 +154,6 @@ import { ChartDemo } from './chartdemo';
     imports: [CommonModule, ChartModule],
     declarations: [ChartDemo]
 })
-export class ChartDemoModule {}`,
+export class ChartDemoModule {}`
     };
 }

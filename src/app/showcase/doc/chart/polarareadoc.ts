@@ -26,7 +26,7 @@ export class PolarAreaDocComponent {
         const documentStyle = getComputedStyle(document.documentElement);
         const textColor = documentStyle.getPropertyValue('--text-color');
         const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
-        
+
         this.data = {
             datasets: [
                 {
@@ -43,7 +43,7 @@ export class PolarAreaDocComponent {
             ],
             labels: ['Red', 'Green', 'Yellow', 'Grey', 'Blue']
         };
-        
+
         this.options = {
             plugins: {
                 legend: {
@@ -63,7 +63,7 @@ export class PolarAreaDocComponent {
     }
 
     code: Code = {
-        basic:`
+        basic: `
 <p-chart type="polarArea" [data]="data" [options]="options"></p-chart>`,
         html: `
 <div class="card flex justify-content-center">
@@ -132,6 +132,6 @@ import { ChartDemo } from './chartdemo';
     imports: [CommonModule, ChartModule],
     declarations: [ChartDemo]
 })
-export class ChartDemoModule {}`,
+export class ChartDemoModule {}`
     };
 }

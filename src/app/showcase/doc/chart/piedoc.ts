@@ -50,7 +50,7 @@ export class PieDocComponent {
     }
 
     code: Code = {
-        basic:`
+        basic: `
 <p-chart type="pie" [data]="data" [options]="options"></p-chart>`,
         html: `
 <div class="card flex justify-content-center">
@@ -106,6 +106,6 @@ import { ChartDemo } from './chartdemo';
     imports: [CommonModule, ChartModule],
     declarations: [ChartDemo]
 })
-export class ChartDemoModule {}`,
+export class ChartDemoModule {}`
     };
 }
