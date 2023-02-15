@@ -79,7 +79,7 @@ export class BasicDocComponent implements OnInit {
     </p-galleria>
 </div>`,
         typescript: `
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PhotoService } from '../../service/photo.service';
 
 @Component({

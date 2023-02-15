@@ -107,7 +107,7 @@ export class ResponsiveDocComponent implements OnInit {
     </p-carousel>
 </div>`,
         typescript: `
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/product.service';
 
