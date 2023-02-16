@@ -320,9 +320,10 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MenubarModule } from 'primeng/menubar';
 import { MenubarDemo } from './menubardemo';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
-    imports: [CommonModule, MenubarModule],
+    imports: [CommonModule, MenubarModule, InputTextModule],
     declarations: [MenubarDemo]
 })
 export class MenubarDemoModule {}`
