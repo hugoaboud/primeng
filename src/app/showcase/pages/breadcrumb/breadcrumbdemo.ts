@@ -1,17 +1,53 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { Component } from '@angular/core';
+import { StyleDocComponent } from '../../doc/breadcrumb/styledoc';
+import { BasicDocComponent } from '../../doc/breadcrumb/basicdoc';
+import { EventsDocComponent } from '../../doc/breadcrumb/eventsdoc';
+import { ImportDocComponent } from '../../doc/breadcrumb/importdoc';
+import { MenuItemDocComponent } from '../../doc/breadcrumb/menuitemdoc';
+import { PropsDocComponent } from '../../doc/breadcrumb/propsdoc';
 
 @Component({
     templateUrl: './breadcrumbdemo.html'
 })
-export class BreadcrumbDemo implements OnInit {
-    items: MenuItem[];
+export class BreadcrumbDemo {
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            basic: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        }
+    ];
 
-    home: MenuItem;
-
-    ngOnInit() {
-        this.items = [{ label: 'Computer' }, { label: 'Notebook' }, { label: 'Accessories' }, { label: 'Backpacks' }, { label: 'Item' }];
-
-        this.home = { icon: 'pi pi-home', routerLink: '/' };
-    }
+    apiDocs = [
+        {
+            id: 'props',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
+        },
+        {
+            id: 'methods',
+            label: 'Methods',
+            component: EventsDocComponent
+        },
+        {
+            id: 'menuitem',
+            label: 'MenuItem API',
+            component: MenuItemDocComponent
+        }
+    ];
 }
