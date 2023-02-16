@@ -22,7 +22,7 @@ export class PopupDocComponent implements OnInit {
 
     @Input() title: string;
 
-    items: MenuItem[];
+    items!: MenuItem[];
 
     constructor(private messageService: MessageService) {}
 
@@ -96,7 +96,7 @@ import { MenuItem, MessageService } from 'primeng/api';
 })
 export class MenuDemo implements OnInit {
     
-    items: MenuItem[];
+    items!: MenuItem[];
 
     constructor(private messageService: MessageService) {}
     

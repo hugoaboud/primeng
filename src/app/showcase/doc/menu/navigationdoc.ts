@@ -22,7 +22,7 @@ export class NavigationDocComponent implements OnInit {
 
     @Input() title: string;
 
-    items: MenuItem[];
+    items!: MenuItem[];
 
     ngOnInit() {
         this.items = [
@@ -55,7 +55,7 @@ import { MenuItem } from 'primeng/api';
 })
 export class MenuDemo implements OnInit {
 
-    items: MenuItem[];
+    items!: MenuItem[];
 
     constructor(private messageService: MessageService) {}
     

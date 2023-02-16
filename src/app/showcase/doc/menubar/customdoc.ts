@@ -3,19 +3,25 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'document-doc',
+    selector: 'custom-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>Setting <i>global</i> property to <i>true</i> attaches the context menu to the document.</p>
+            <p>Custom content can be placed inside the menubar using the <i>start</i> and <i>end</i> templates.</p>
         </app-docsectiontext>
-        <div class="card text-center">
-            <p class="mb-0">Right-Click anywhere on this page to view the global ContextMenu.</p>
-            <p-contextMenu [model]="items" [global]="true"></p-contextMenu>
+        <div class="card">
+            <p-menubar [model]="items">
+                <ng-template pTemplate="start">
+                    <img src="assets/showcase/images/primeng.svg" height="40" class="mr-2" />
+                </ng-template>
+                <ng-template pTemplate="end">
+                    <input type="text" pInputText placeholder="Search" />
+                </ng-template>
+            </p-menubar>
         </div>
         <app-code [code]="code"></app-code>
     </div>`
 })
-export class DocumentDocComponent implements OnInit {
+export class CustomDocComponent implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -142,9 +148,6 @@ export class DocumentDocComponent implements OnInit {
                 ]
             },
             {
-                separator: true
-            },
-            {
                 label: 'Quit',
                 icon: 'pi pi-fw pi-power-off'
             }
@@ -153,12 +156,25 @@ export class DocumentDocComponent implements OnInit {
 
     code: Code = {
         basic: `
-<p-contextMenu [model]="items" [global]="true"></p-contextMenu>`,
+<p-menubar [model]="items">
+    <ng-template pTemplate="start">
+        <img src="assets/showcase/images/primeng.svg" height="40" class="mr-2" />
+    </ng-template>
+    <ng-template pTemplate="end">
+        <input type="text" pInputText placeholder="Search" />
+    </ng-template>
+</p-menubar>`,
 
         html: `
-<div class="card text-center">
-    <p class="mb-0">Right-Click anywhere on this page to view the global ContextMenu.</p>
-    <p-contextMenu [model]="items" [global]="true"></p-contextMenu>
+<div class="card">
+    <p-menubar [model]="items">
+        <ng-template pTemplate="start">
+            <img src="assets/showcase/images/primeng.svg" height="40" class="mr-2" />
+        </ng-template>
+        <ng-template pTemplate="end">
+            <input type="text" pInputText placeholder="Search" />
+        </ng-template>
+    </p-menubar>
 </div>`,
 
         typescript: `
@@ -166,9 +182,9 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './contextmenudemo.html'
+    templateUrl: './menubardemo.html'
 })
-export class ContextMenuDemo implements OnInit {
+export class MenubarDemo implements OnInit {
 
     items!: MenuItem[];
 
@@ -292,9 +308,6 @@ export class ContextMenuDemo implements OnInit {
                 ]
             },
             {
-                separator: true
-            },
-            {
                 label: 'Quit',
                 icon: 'pi pi-fw pi-power-off'
             }
@@ -305,13 +318,13 @@ export class ContextMenuDemo implements OnInit {
         module: `
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ContextMenuModule } from 'primeng/contextmenu';
-import { ContextMenuDemo } from './contextmenudemo';
+import { MenubarModule } from 'primeng/menubar';
+import { MenubarDemo } from './menubardemo';
 
 @NgModule({
-    imports: [CommonModule, ContextMenuModule],
-    declarations: [ContextMenuDemo]
+    imports: [CommonModule, MenubarModule],
+    declarations: [MenubarDemo]
 })
-export class ContextMenuDemoModule {}`
+export class MenubarDemoModule {}`
     };
 }

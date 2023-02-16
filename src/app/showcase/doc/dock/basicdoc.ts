@@ -31,7 +31,7 @@ export class BasicDocComponent implements OnInit {
 
     @Input() title: string;
 
-    items: MenuItem[];
+    items!: MenuItem[];
 
     position: string = 'top';
 
@@ -106,7 +106,7 @@ import { MenuItem } from 'primeng/api';
 })
 export class DockDemo implements OnInit {
 
-    items: MenuItem[];
+    items!: MenuItem[];
 
     position: string = 'top';
 

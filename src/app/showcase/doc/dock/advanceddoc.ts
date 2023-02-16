@@ -73,23 +73,23 @@ export class AdvancedDocComponent implements OnInit, OnDestroy {
 
     @Input() title: string;
 
-    displayTerminal: boolean;
+    displayTerminal!: boolean;
 
-    displayFinder: boolean;
+    displayFinder!: boolean;
 
-    displayGalleria: boolean;
+    displayGalleria!: boolean;
 
-    dockItems: MenuItem[];
+    dockItems!: MenuItem[];
 
-    menubarItems: any[];
+    menubarItems!: any[];
 
-    responsiveOptions: any[];
+    responsiveOptions!: any[];
 
-    images: any[];
+    images!: any[];
 
-    nodes: any[];
+    nodes!: any[];
 
-    subscription: Subscription;
+    subscription!: Subscription;
 
     constructor(private galleriaService: PhotoService, private nodeService: NodeService, private messageService: MessageService, private terminalService: TerminalService) {}
 
@@ -486,23 +486,23 @@ import { PhotoService } from '../../service/photo.service';
 })
 export class DockDemo implements OnInit {
 
-    displayTerminal: boolean;
+    displayTerminal!: boolean;
 
-    displayFinder: boolean;
+    displayFinder!: boolean;
 
-    displayGalleria: boolean;
+    displayGalleria!: boolean;
 
-    dockItems: MenuItem[];
+    dockItems!: MenuItem[];
 
-    menubarItems: any[];
+    menubarItems!: any[];
 
-    responsiveOptions: any[];
+    responsiveOptions!: any[];
 
-    images: any[];
+    images!: any[];
 
-    nodes: any[];
+    nodes!: any[];
 
-    subscription: Subscription;
+    subscription!: Subscription;
 
     constructor(private galleriaService: PhotoService, private nodeService: NodeService, private messageService: MessageService, private terminalService: TerminalService) {}
 
