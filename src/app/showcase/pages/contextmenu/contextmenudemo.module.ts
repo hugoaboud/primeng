@@ -1,14 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ContextMenuModule } from 'primeng/contextmenu';
-import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
-import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
+import { ContextMenuDocModule } from '../../doc/contextmenu/contextmenudoc.module';
 import { ContextMenuDemo } from './contextmenudemo';
 import { ContextMenuDemoRoutingModule } from './contextmenudemo-routing.module';
 
 @NgModule({
-    imports: [CommonModule, ContextMenuDemoRoutingModule, ContextMenuModule, TabViewModule, AppCodeModule, AppDemoActionsModule],
+    imports: [CommonModule, ContextMenuDemoRoutingModule, ContextMenuDocModule],
     declarations: [ContextMenuDemo]
 })
 export class ContextMenuDemoModule {}
