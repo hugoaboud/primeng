@@ -6,7 +6,7 @@ import { Code } from '../../domain/code';
     selector: 'vertical-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-        <p>Layout of the MegaMenu is changed with the <i>orientation</i> property that accepts <i>horizontal</i> and <i>vertical</i> as options.</p>
+            <p>Layout of the MegaMenu is changed with the <i>orientation</i> property that accepts <i>horizontal</i> and <i>vertical</i> as options.</p>
         </app-docsectiontext>
         <div class="card">
             <p-megaMenu [model]="items" orientation="vertical"></p-megaMenu>

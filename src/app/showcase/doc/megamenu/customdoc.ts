@@ -10,12 +10,12 @@ import { Code } from '../../domain/code';
         </app-docsectiontext>
         <div class="card">
             <p-megaMenu [model]="items">
-            <ng-template pTemplate="start">
-            <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2">
-        </ng-template>
-        <ng-template pTemplate="end">
-        <input type="text" pInputText placeholder="Search">
-    </ng-template>
+                <ng-template pTemplate="start">
+                    <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
+                </ng-template>
+                <ng-template pTemplate="end">
+                    <input type="text" pInputText placeholder="Search" />
+                </ng-template>
             </p-megaMenu>
         </div>
         <app-code [code]="code"></app-code>
@@ -149,11 +149,25 @@ export class CustomDocComponent implements OnInit {
 
     code: Code = {
         basic: `
-<p-megaMenu [model]="items"></p-megaMenu>`,
+<p-megaMenu [model]="items">
+    <ng-template pTemplate="start">
+        <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
+    </ng-template>
+    <ng-template pTemplate="end">
+        <input type="text" pInputText placeholder="Search" />
+    </ng-template>
+</p-megaMenu>`,
 
         html: `
 <div class="card">
-    <p-megaMenu [model]="items"></p-megaMenu>
+    <p-megaMenu [model]="items">
+        <ng-template pTemplate="start">
+            <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
+        </ng-template>
+        <ng-template pTemplate="end">
+            <input type="text" pInputText placeholder="Search" />
+        </ng-template>
+    </p-megaMenu>
 </div>`,
 
         typescript: `

@@ -18,17 +18,7 @@ import { ButtonModule } from 'primeng/button';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, MegaMenuModule, InputTextModule, ButtonModule, AppDocModule],
-    declarations: [
-        BasicDocComponent,
-        EventsDocComponent,
-        ImportDocComponent,
-        MegaMenuItemDocComponent,
-        PropsDocComponent,
-        StyleDocComponent,
-        CustomDocComponent,
-        TemplatesDocComponent,
-        VerticalDocComponent
-    ],
+    declarations: [BasicDocComponent, EventsDocComponent, ImportDocComponent, MegaMenuItemDocComponent, PropsDocComponent, StyleDocComponent, CustomDocComponent, TemplatesDocComponent, VerticalDocComponent],
     exports: [AppDocModule]
 })
 export class MegaMenuDocModule {}
