@@ -473,7 +473,7 @@ export class AdvancedDocComponent implements OnInit, OnDestroy {
 
         typescript: `
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MenuItem, MessageService, PhotoService, NodeService } from 'primeng/api';
+import { MenuItem, MessageService } from 'primeng/api';
 import { TerminalService } from 'primeng/terminal';
 import { Subscription } from 'rxjs';
 import { NodeService } from '../../service/node.service';
