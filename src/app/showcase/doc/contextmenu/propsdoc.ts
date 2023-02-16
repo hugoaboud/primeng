@@ -3,9 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
     selector: 'props-doc',
     template: ` <div>
-        <app-docsectiontext [title]="title" [id]="id">
-            <p>Defines valid properties in Menu component.</p>
-        </app-docsectiontext>
+        <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
         <div class="doc-tablewrapper">
             <table class="doc-table">
                 <thead>
