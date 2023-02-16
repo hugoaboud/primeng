@@ -164,10 +164,6 @@ export class MegaMenu implements AfterContentInit {
 
     @Input() orientation: string = 'horizontal';
 
-    @Input() autoZIndex: boolean = true;
-
-    @Input() baseZIndex: number = 0;
-
     @ContentChildren(PrimeTemplate) templates: QueryList<any>;
 
     activeItem: any;
