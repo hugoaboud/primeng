@@ -164,6 +164,22 @@ import { DockDemo } from './dockdemo';
     imports: [CommonModule, FormsModule, RouterModule, DockModule, RadioButtonModule],
     declarations: [DockDemo]
 })
-export class DockDemoModule {}`
+export class DockDemoModule {}`,
+
+        scss: `
+:host ::ng-deep {
+    .dock-window {
+        width: 100%;
+        height: 450px;
+        position: relative;
+        background-image: url('../../../../assets/showcase/images/dock/window.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .p-dock {
+        z-index: 1000;
+    }
+}`
     };
 }
