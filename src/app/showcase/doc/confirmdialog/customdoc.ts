@@ -6,19 +6,18 @@ import { Code } from '../../domain/code';
     selector: 'custom-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-        <p>
-            Properties of the dialog are defined in two ways, <i>message</i>, <i>icon</i>, <i>header</i> properties can either
-            be defined using confirm method or declaratively on p-confirmDialog ng-template by <i>header</i> and <i>footer</i> templates. If these values are unlikely to change then
-            declarative approach would be useful, still properties defined in a ng-template can be overridden with confirm method call.
-        </p>
-        <p>
-            In addition, buttons at footer section can be customized by passing your own UI, important note to make confirmation work with
-            a custom UI is defining a local ng-template variable for the dialog and assign accept()-reject() methods to your own buttons.
-        </p>
+            <p>
+                Properties of the dialog are defined in two ways, <i>message</i>, <i>icon</i>, <i>header</i> properties can either be defined using confirm method or declaratively on p-confirmDialog ng-template by <i>header</i> and
+                <i>footer</i> templates. If these values are unlikely to change then declarative approach would be useful, still properties defined in a ng-template can be overridden with confirm method call.
+            </p>
+            <p>
+                In addition, buttons at footer section can be customized by passing your own UI, important note to make confirmation work with a custom UI is defining a local ng-template variable for the dialog and assign accept()-reject() methods to
+                your own buttons.
+            </p>
         </app-docsectiontext>
         <div class="card flex justify-content-center">
             <p-toast></p-toast>
-            <p-confirmDialog #cd [style]="{width: '50vw'}">
+            <p-confirmDialog #cd [style]="{ width: '50vw' }">
                 <ng-template pTemplate="header">
                     <h3>Header Content</h3>
                 </ng-template>
