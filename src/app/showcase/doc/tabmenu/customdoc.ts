@@ -10,9 +10,7 @@ import { Code } from '../../domain/code';
         </app-docsectiontext>
         <div class="card">
             <p-tabMenu [model]="items" [activeItem]="activeItem">
-                <ng-template pTemplate="item" let-item let-i="index">
-                    {{i}} - Custom {{item.label}}
-                </ng-template>
+                <ng-template pTemplate="item" let-item let-i="index"> {{ i }} - Custom {{ item.label }} </ng-template>
             </p-tabMenu>
         </div>
         <app-code [code]="code"></app-code>
