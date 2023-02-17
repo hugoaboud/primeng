@@ -1,31 +1,66 @@
 import { Component } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { ControlledDocComponent } from '../../doc/tabmenu/controlleddoc';
+import { ActiveDocComponent } from '../../doc/tabmenu/activedoc';
+import { BasicDocComponent } from '../../doc/tabmenu/basicdoc';
+import { EventsDocComponent } from '../../doc/tabmenu/eventsdoc';
+import { ImportDocComponent } from '../../doc/tabmenu/importdoc';
+import { MenuItemDocComponent } from '../../doc/tabmenu/menuitemdoc';
+import { PropsDocComponent } from '../../doc/tabmenu/propsdoc';
+import { StyleDocComponent } from '../../doc/tabmenu/styledoc';
+import { ScrollableDocComponent } from '../../doc/tabmenu/scrollabledoc';
 
 @Component({
     templateUrl: './tabmenudemo.html'
 })
 export class TabMenuDemo {
-    items: MenuItem[];
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'active',
+            label: 'Active Item',
+            component: ActiveDocComponent
+        },
+        {
+            id: 'controlled',
+            label: 'Controlled',
+            component: ControlledDocComponent
+        },
+        {
+            id: 'scrollable',
+            label: 'Scrollable',
+            component: ScrollableDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        }
+    ];
 
-    scrollableItems: MenuItem[];
-
-    activeItem: MenuItem;
-
-    activeItem2: MenuItem;
-
-    ngOnInit() {
-        this.items = [
-            { label: 'Home', icon: 'pi pi-fw pi-home' },
-            { label: 'Calendar', icon: 'pi pi-fw pi-calendar' },
-            { label: 'Edit', icon: 'pi pi-fw pi-pencil' },
-            { label: 'Documentation', icon: 'pi pi-fw pi-file' },
-            { label: 'Settings', icon: 'pi pi-fw pi-cog' }
-        ];
-
-        this.scrollableItems = Array.from({ length: 50 }, (_, i) => ({ label: `Tab ${i + 1}` }));
-
-        this.activeItem = this.items[0];
-
-        this.activeItem2 = this.scrollableItems[0];
-    }
+    apiDocs = [
+        {
+            id: 'props',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
+        },
+        {
+            id: 'menuitem',
+            label: 'MenuItem API',
+            component: MenuItemDocComponent
+        }
+    ];
 }

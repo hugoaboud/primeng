@@ -108,7 +108,7 @@ export class StepsDemo implements OnInit {
         module: `
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { StepsModule } from 'primeng/steps';'
+import { StepsModule } from 'primeng/steps';
 import { ToastModule } from 'primeng/toast'
 import { StepsDemo } from './stepsdemo';
 

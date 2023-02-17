@@ -1,14 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { TabMenuModule } from 'primeng/tabmenu';
-import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
-import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
+import { TabMenuDocModule } from '../../doc/tabmenu/tabmenudoc.module';
 import { TabMenuDemo } from './tabmenudemo';
 import { TabMenuDemoRoutingModule } from './tabmenudemo-routing.module';
 
 @NgModule({
-    imports: [CommonModule, TabMenuDemoRoutingModule, TabMenuModule, TabViewModule, AppCodeModule, AppDemoActionsModule],
+    imports: [CommonModule, TabMenuDemoRoutingModule, TabMenuDocModule],
     declarations: [TabMenuDemo]
 })
 export class TabMenuDemoModule {}
