@@ -15,15 +15,7 @@ import { StyleDocComponent } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, SlideMenuModule, ButtonModule, AppDocModule],
-    declarations: [
-        BasicDocComponent,
-        ImportDocComponent,
-        MenuItemDocComponent,
-        MethodsDocComponent,
-        PropsDocComponent,
-        StyleDocComponent,
-        PopupDocComponent
-    ],
+    declarations: [BasicDocComponent, ImportDocComponent, MenuItemDocComponent, MethodsDocComponent, PropsDocComponent, StyleDocComponent, PopupDocComponent],
     exports: [AppDocModule]
 })
 export class SlideMenuDocModule {}

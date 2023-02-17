@@ -11,7 +11,6 @@ import { StyleDocComponent } from '../../doc/slidemenu/styledoc';
     templateUrl: './slidemenudemo.html'
 })
 export class SlideMenuDemo {
-    
     docs = [
         {
             id: 'import',
