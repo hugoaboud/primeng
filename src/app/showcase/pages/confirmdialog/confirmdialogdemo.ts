@@ -1,78 +1,54 @@
 import { Component } from '@angular/core';
-import { ConfirmationService, ConfirmEventType, MessageService } from 'primeng/api';
+import { BasicDocComponent } from '../../doc/confirmdialog/basicdoc';
+import { EventsDocComponent } from '../../doc/confirmdialog/eventsdoc';
+import { ImportDocComponent } from '../../doc/confirmdialog/importdoc';
+import { PropsDocComponent } from '../../doc/confirmdialog/propsdoc';
+import { StyleDocComponent } from '../../doc/confirmdialog/styledoc';
+import { PositionDocComponent } from '../../doc/confirmdialog/positiondoc';
+import { CustomDocComponent } from '../../doc/confirmdialog/customdoc';
 
 @Component({
-    templateUrl: './confirmdialogdemo.html',
-    providers: [ConfirmationService, MessageService]
+    templateUrl: './confirmdialogdemo.html'
 })
 export class ConfirmDialogDemo {
-    position: string;
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'position',
+            label: 'Position',
+            component: PositionDocComponent
+        },
+        {
+            id: 'custom',
+            label: 'Custom Content',
+            component: CustomDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        }
+    ];
 
-    constructor(private confirmationService: ConfirmationService, private messageService: MessageService) {}
-
-    confirm1() {
-        this.confirmationService.confirm({
-            message: 'Are you sure that you want to proceed?',
-            header: 'Confirmation',
-            icon: 'pi pi-exclamation-triangle',
-            accept: () => {
-                this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'You have accepted' });
-            },
-            reject: (type) => {
-                switch (type) {
-                    case ConfirmEventType.REJECT:
-                        this.messageService.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected' });
-                        break;
-                    case ConfirmEventType.CANCEL:
-                        this.messageService.add({ severity: 'warn', summary: 'Cancelled', detail: 'You have cancelled' });
-                        break;
-                }
-            }
-        });
-    }
-
-    confirm2() {
-        this.confirmationService.confirm({
-            message: 'Do you want to delete this record?',
-            header: 'Delete Confirmation',
-            icon: 'pi pi-info-circle',
-            accept: () => {
-                this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted' });
-            },
-            reject: (type) => {
-                switch (type) {
-                    case ConfirmEventType.REJECT:
-                        this.messageService.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected' });
-                        break;
-                    case ConfirmEventType.CANCEL:
-                        this.messageService.add({ severity: 'warn', summary: 'Cancelled', detail: 'You have cancelled' });
-                        break;
-                }
-            }
-        });
-    }
-
-    confirmPosition(position: string) {
-        this.position = position;
-
-        this.confirmationService.confirm({
-            message: 'Do you want to delete this record?',
-            header: 'Delete Confirmation',
-            icon: 'pi pi-info-circle',
-            accept: () => {
-                this.messageService.add({ severity: 'info', summary: 'Confirmed', detail: 'Record deleted' });
-            },
-            reject: (type) => {
-                switch (type) {
-                    case ConfirmEventType.REJECT:
-                        this.messageService.add({ severity: 'error', summary: 'Rejected', detail: 'You have rejected' });
-                        break;
-                    case ConfirmEventType.CANCEL:
-                        this.messageService.add({ severity: 'warn', summary: 'Cancelled', detail: 'You have cancelled' });
-                        break;
-                }
-            },
-            key: 'positionDialog'
-        });
-    }
+    apiDocs = [
+        {
+            id: 'props',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
+        }
+    ];
 }
