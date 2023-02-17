@@ -8,6 +8,7 @@ import { MenuItemDocComponent } from '../../doc/tabmenu/menuitemdoc';
 import { PropsDocComponent } from '../../doc/tabmenu/propsdoc';
 import { StyleDocComponent } from '../../doc/tabmenu/styledoc';
 import { ScrollableDocComponent } from '../../doc/tabmenu/scrollabledoc';
+import { CustomDocComponent } from '../../doc/tabmenu/customdoc';
 
 @Component({
     templateUrl: './tabmenudemo.html'
@@ -38,6 +39,11 @@ export class TabMenuDemo {
             id: 'scrollable',
             label: 'Scrollable',
             component: ScrollableDocComponent
+        },
+        {
+            id: 'custom',
+            label: 'Custom Content',
+            component: CustomDocComponent
         },
         {
             id: 'style',

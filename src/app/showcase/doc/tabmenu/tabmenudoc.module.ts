@@ -15,10 +15,11 @@ import { MenuItemDocComponent } from './menuitemdoc';
 import { PropsDocComponent } from './propsdoc';
 import { StyleDocComponent } from './styledoc';
 import { ScrollableDocComponent } from './scrollabledoc';
+import { CustomDocComponent } from './customdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, TabMenuModule, ButtonModule, RippleModule, AppDocModule],
-    declarations: [BasicDocComponent, EventsDocComponent, ScrollableDocComponent, ImportDocComponent, MenuItemDocComponent, PropsDocComponent, StyleDocComponent, ControlledDocComponent, ActiveDocComponent],
+    declarations: [BasicDocComponent, EventsDocComponent, ScrollableDocComponent, ImportDocComponent, MenuItemDocComponent, PropsDocComponent, StyleDocComponent, ControlledDocComponent, ActiveDocComponent, CustomDocComponent],
     exports: [AppDocModule]
 })
 export class TabMenuDocModule {}
