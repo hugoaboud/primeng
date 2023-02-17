@@ -6,6 +6,8 @@ import { PropsDocComponent } from '../../doc/confirmdialog/propsdoc';
 import { StyleDocComponent } from '../../doc/confirmdialog/styledoc';
 import { PositionDocComponent } from '../../doc/confirmdialog/positiondoc';
 import { CustomDocComponent } from '../../doc/confirmdialog/customdoc';
+import { ServiceDocComponent } from '../../doc/confirmdialog/servicedoc';
+import { TemplatesDocComponent } from '../../doc/confirmdialog/templatesdoc';
 
 @Component({
     templateUrl: './confirmdialogdemo.html'
@@ -49,6 +51,16 @@ export class ConfirmDialogDemo {
             id: 'events',
             label: 'Events',
             component: EventsDocComponent
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDocComponent
+        },
+        {
+            id: 'service',
+            label: 'Confirmation Service',
+            component: ServiceDocComponent
         }
     ];
 }

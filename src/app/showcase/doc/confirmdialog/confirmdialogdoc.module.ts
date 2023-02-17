@@ -13,10 +13,12 @@ import { PropsDocComponent } from './propsdoc';
 import { StyleDocComponent } from './styledoc';
 import { PositionDocComponent } from './positiondoc';
 import { CustomDocComponent } from './customdoc';
+import { ServiceDocComponent } from './servicedoc';
+import { TemplatesDocComponent } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, ConfirmDialogModule, ButtonModule, ToastModule, AppDocModule],
-    declarations: [BasicDocComponent, EventsDocComponent, ImportDocComponent, PropsDocComponent, StyleDocComponent, PositionDocComponent, CustomDocComponent],
+    declarations: [BasicDocComponent, EventsDocComponent, ImportDocComponent, PropsDocComponent, StyleDocComponent, PositionDocComponent, CustomDocComponent, ServiceDocComponent, TemplatesDocComponent],
     exports: [AppDocModule]
 })
 export class ConfirmDialogDocModule {}
