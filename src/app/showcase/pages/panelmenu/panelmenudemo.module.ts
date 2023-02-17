@@ -1,14 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { PanelMenuModule } from 'primeng/panelmenu';
-import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
-import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
+import { PanelMenuDocModule } from '../../doc/panelmenu/panelmenudoc.module';
 import { PanelMenuDemo } from './panelmenudemo';
 import { PanelMenuDemoRoutingModule } from './panelmenudemo-routing.module';
 
 @NgModule({
-    imports: [CommonModule, PanelMenuDemoRoutingModule, PanelMenuModule, TabViewModule, AppDemoActionsModule, AppCodeModule],
+    imports: [CommonModule, PanelMenuDemoRoutingModule, PanelMenuDocModule],
     declarations: [PanelMenuDemo]
 })
 export class PanelMenuDemoModule {}
