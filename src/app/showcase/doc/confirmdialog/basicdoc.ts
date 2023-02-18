@@ -69,6 +69,7 @@ export class BasicDocComponent {
 
     code: Code = {
         basic: `
+<p-toast></p-toast>
 <p-confirmDialog [style]="{width: '50vw'}"></p-confirmDialog>
 <p-button pRipple (click)="confirm1()" icon="pi pi-check" label="Confirm"></p-button>
 <p-button pRipple (click)="confirm2()" icon="pi pi-times" label="Delete" class="p-button-danger"></p-button>`,
