@@ -1,25 +1,72 @@
 import { Component } from '@angular/core';
-import { MessageService } from 'primeng/api';
-import { Product } from '../../domain/product';
-import { ProductService } from '../../service/product.service';
+import { BasicDocComponent } from '../../doc/overlaypanel/basicdoc';
+import { ImportDocComponent } from '../../doc/overlaypanel/importdoc';
+import { PropsDocComponent } from '../../doc/overlaypanel/propsdoc';
+import { StyleDocComponent } from '../../doc/overlaypanel/styledoc';
+import { TemplatesDocComponent } from '../../doc/overlaypanel/templatesdoc';
+import { DataTableDocComponent } from '../../doc/overlaypanel/datatabledoc';
+import { CustomDocComponent } from '../../doc/overlaypanel/customdoc';
+import { TargetDocComponent } from '../../doc/overlaypanel/targetdoc';
+import { EventsDocComponent } from '../../doc/overlaypanel/eventsdoc';
+import { MethodsDocComponent } from '../../doc/overlaypanel/methodsdoc';
 
 @Component({
-    templateUrl: './overlaypaneldemo.html',
-    styleUrls: ['./overlaypanel.scss'],
-    providers: [MessageService]
+    templateUrl: './overlaypaneldemo.html'
 })
 export class OverlayPanelDemo {
-    products: Product[];
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'target',
+            label: 'Target',
+            component: TargetDocComponent
+        },
+        {
+            id: 'custom',
+            label: 'Custom Content',
+            component: CustomDocComponent
+        },
+        {
+            id: 'datatable',
+            label: 'DataTable',
+            component: DataTableDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        }
+    ];
 
-    selectedProduct: Product;
-
-    constructor(private productService: ProductService, private messageService: MessageService) {}
-
-    ngOnInit() {
-        this.productService.getProductsSmall().then((products) => (this.products = products));
-    }
-
-    onRowSelect(event) {
-        this.messageService.add({ severity: 'info', summary: 'Product Selected', detail: event.data.name });
-    }
+    apiDocs = [
+        {
+            id: 'props',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
+        },
+        {
+            id: 'methods',
+            label: 'Methods',
+            component: MethodsDocComponent
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDocComponent
+        }
+    ];
 }
