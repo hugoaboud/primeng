@@ -202,6 +202,7 @@ export class OverlayPanel implements AfterContentInit, OnDestroy {
     }
 
     show(event, target?) {
+        target && event.stopPropagation();
         if (this.isOverlayAnimationInProgress) {
             return;
         }
