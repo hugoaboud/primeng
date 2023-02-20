@@ -1,42 +1,72 @@
-import { Component, OnDestroy } from '@angular/core';
-import { DialogService } from '../../../components/dynamicdialog/dialogservice';
-import { MessageService } from 'primeng/api';
-import { ProductListDemo } from './productlistdemo';
-import { DynamicDialogRef } from '../../../components/dynamicdialog/dynamicdialog-ref';
-import { Product } from '../../domain/product';
+import { Component } from '@angular/core';
+import { OpenDocComponent } from '../../doc/dynamicdialog/opendoc';
+import { ImportDocComponent } from '../../doc/dynamicdialog/importdoc';
+import { PropsDocComponent } from '../../doc/dynamicdialog/propsdoc';
+import { StyleDocComponent } from '../../doc/dynamicdialog/styledoc';
+import { BasicDocComponent } from '../../doc/dynamicdialog/basicdoc';
+import { UsageDocComponent } from '../../doc/dynamicdialog/usagedoc';
+import { PassingDataDocComponent } from '../../doc/dynamicdialog/passingdatadoc';
+import { CloseDocComponent } from '../../doc/dynamicdialog/closedoc';
+import { ProductListDemoDoc } from '../../doc/dynamicdialog/productlistdemodoc';
+import { EventsDocComponent } from '../../doc/dynamicdialog/eventsdoc';
 
 @Component({
-    templateUrl: './dynamicdialogdemo.html',
-    providers: [DialogService, MessageService]
+    templateUrl: './dynamicdialogdemo.html'
 })
-export class DynamicDialogDemo implements OnDestroy {
-    constructor(public dialogService: DialogService, public messageService: MessageService) {}
-
-    ref: DynamicDialogRef;
-
-    show() {
-        this.ref = this.dialogService.open(ProductListDemo, {
-            header: 'Choose a Product',
-            width: '70%',
-            contentStyle: { overflow: 'auto' },
-            baseZIndex: 10000,
-            maximizable: true
-        });
-
-        this.ref.onClose.subscribe((product: Product) => {
-            if (product) {
-                this.messageService.add({ severity: 'info', summary: 'Product Selected', detail: product.name });
-            }
-        });
-
-        this.ref.onMaximize.subscribe((value) => {
-            this.messageService.add({ severity: 'info', summary: 'Maximized', detail: `maximized: ${value.maximized}` });
-        });
-    }
-
-    ngOnDestroy() {
-        if (this.ref) {
-            this.ref.close();
+export class DynamicDialogDemo {
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'usage',
+            label: 'Usage',
+            component: UsageDocComponent
+        },
+        {
+            id: 'open',
+            label: 'Opening a Dialog',
+            component: OpenDocComponent
+        },
+        {
+            id: 'passingdata',
+            label: 'Passing Data',
+            component: PassingDataDocComponent
+        },
+        {
+            id: 'close',
+            label: 'Closing a Dialog',
+            component: CloseDocComponent
+        },
+        {
+            id: 'productlistdemo',
+            label: 'ProductListDemo',
+            component: ProductListDemoDoc
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
         }
-    }
+    ];
+
+    apiDocs = [
+        {
+            id: 'props',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
+        }
+    ];
 }
