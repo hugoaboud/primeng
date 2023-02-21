@@ -33,33 +33,42 @@ export class TooltipDocComponent implements OnInit {
     ngOnInit() {
         this.tooltipItems = [
             {
-                tooltip: 'Add',
+                tooltipOptions: {
+                    tooltipLabel: 'Add'
+                },
                 icon: 'pi pi-pencil',
                 command: () => {
                     this.messageService.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
                 }
             },
             {
-                tooltip: 'Update',
+                tooltipOptions: {
+                    tooltipLabel: 'Update'
+                },
                 icon: 'pi pi-refresh',
                 command: () => {
                     this.messageService.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
                 }
             },
             {
-                tooltip: 'Delete',
+                tooltipOptions: {
+                    tooltipLabel: 'Delete'
+                },
                 icon: 'pi pi-trash',
                 command: () => {
                     this.messageService.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
                 }
             },
             {
-                tooltip: 'Upload',
-                icon: 'pi pi-upload',
-                routerLink: ['/fileupload']
+                tooltipOptions: {
+                    tooltipLabel: 'Upload'
+                },
+                icon: 'pi pi-upload'
             },
             {
-                tooltip: 'Angular Website',
+                tooltipOptions: {
+                    tooltipLabel: 'Angular Website'
+                },
                 icon: 'pi pi-external-link',
                 url: 'http://angular.io'
             }
@@ -67,39 +76,48 @@ export class TooltipDocComponent implements OnInit {
 
         this.leftTooltipItems = [
             {
-                tooltip: 'Add',
+                tooltipOptions: {
+                    tooltipLabel: 'Add',
+                    tooltipPosition: 'left'
+                },
                 icon: 'pi pi-pencil',
-                tooltipPosition: 'left',
                 command: () => {
                     this.messageService.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
                 }
             },
             {
-                tooltip: 'Update',
+                tooltipOptions: {
+                    tooltipLabel: 'Update',
+                    tooltipPosition: 'left'
+                },
                 icon: 'pi pi-refresh',
-                tooltipPosition: 'left',
                 command: () => {
                     this.messageService.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
                 }
             },
             {
-                tooltip: 'Delete',
+                tooltipOptions: {
+                    tooltipLabel: 'Delete',
+                    tooltipPosition: 'left'
+                },
                 icon: 'pi pi-trash',
-                tooltipPosition: 'left',
                 command: () => {
                     this.messageService.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
                 }
             },
             {
-                tooltip: 'Upload',
                 icon: 'pi pi-upload',
-                tooltipPosition: 'left',
-                routerLink: ['/fileupload']
+                tooltipOptions: {
+                    tooltipLabel: 'Upload',
+                    tooltipPosition: 'left'
+                }
             },
             {
-                tooltip: 'Angular Website',
+                tooltipOptions: {
+                    tooltipLabel: 'Angular Website',
+                    tooltipPosition: 'left'
+                },
                 icon: 'pi pi-external-link',
-                tooltipPosition: 'left',
                 url: 'http://angular.io'
             }
         ];
@@ -137,33 +155,42 @@ export class TooltipDemo implements OnInit {
     ngOnInit() {
         this.tooltipItems = [
             {
-                tooltip: 'Add',
+                tooltipOptions: {
+                    tooltipLabel: 'Add'
+                },
                 icon: 'pi pi-pencil',
                 command: () => {
                     this.messageService.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
                 }
             },
             {
-                tooltip: 'Update',
+                tooltipOptions: {
+                    tooltipLabel: 'Update'
+                },
                 icon: 'pi pi-refresh',
                 command: () => {
                     this.messageService.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
                 }
             },
             {
-                tooltip: 'Delete',
+                tooltipOptions: {
+                    tooltipLabel: 'Delete'
+                },
                 icon: 'pi pi-trash',
                 command: () => {
                     this.messageService.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
                 }
             },
             {
-                tooltip: 'Upload',
-                icon: 'pi pi-upload',
-                routerLink: ['/fileupload']
+                tooltipOptions: {
+                    tooltipLabel: 'Upload'
+                },
+                icon: 'pi pi-upload'
             },
             {
-                tooltip: 'Angular Website',
+                tooltipOptions: {
+                    tooltipLabel: 'Angular Website'
+                },
                 icon: 'pi pi-external-link',
                 url: 'http://angular.io'
             }
@@ -171,39 +198,48 @@ export class TooltipDemo implements OnInit {
 
         this.leftTooltipItems = [
             {
-                tooltip: 'Add',
+                tooltipOptions: {
+                    tooltipLabel: 'Add',
+                    tooltipPosition: 'left'
+                },
                 icon: 'pi pi-pencil',
-                tooltipPosition: 'left',
                 command: () => {
                     this.messageService.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
                 }
             },
             {
-                tooltip: 'Update',
+                tooltipOptions: {
+                    tooltipLabel: 'Update',
+                    tooltipPosition: 'left'
+                },
                 icon: 'pi pi-refresh',
-                tooltipPosition: 'left',
                 command: () => {
                     this.messageService.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
                 }
             },
             {
-                tooltip: 'Delete',
+                tooltipOptions: {
+                    tooltipLabel: 'Delete',
+                    tooltipPosition: 'left'
+                },
                 icon: 'pi pi-trash',
-                tooltipPosition: 'left',
                 command: () => {
                     this.messageService.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
                 }
             },
             {
-                tooltip: 'Upload',
                 icon: 'pi pi-upload',
-                tooltipPosition: 'left',
-                routerLink: ['/fileupload']
+                tooltipOptions: {
+                    tooltipLabel: 'Upload',
+                    tooltipPosition: 'left'
+                }
             },
             {
-                tooltip: 'Angular Website',
+                tooltipOptions: {
+                    tooltipLabel: 'Angular Website',
+                    tooltipPosition: 'left'
+                },
                 icon: 'pi pi-external-link',
-                tooltipPosition: 'left',
                 url: 'http://angular.io'
             }
         ];
