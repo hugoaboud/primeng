@@ -1,141 +1,85 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuItem, MessageService } from 'primeng/api';
+import { Component } from '@angular/core';
+import { CircleDocComponent } from '../../doc/speeddial/circledoc';
+import { CustomDocComponent } from '../../doc/speeddial/customdoc';
+import { EventsDocComponent } from '../../doc/speeddial/eventsdoc';
+import { ImportDocComponent } from '../../doc/speeddial/importdoc';
+import { LinearDocComponent } from '../../doc/speeddial/lineardoc';
+import { MaskDocComponent } from '../../doc/speeddial/maskdoc';
+import { PropsDocComponent } from '../../doc/speeddial/propsdoc';
+import { QuarterCircleDocComponent } from '../../doc/speeddial/quartercircledoc';
+import { SemiCircleDocComponent } from '../../doc/speeddial/semicircledoc';
+import { StyleDocComponent } from '../../doc/speeddial/styledoc';
+import { TemplatesDocComponent } from '../../doc/speeddial/templatesdoc';
+import { TooltipDocComponent } from '../../doc/speeddial/tooltipdoc';
 
 @Component({
     templateUrl: './speeddialdemo.html',
-    styleUrls: ['./speeddialdemo.scss'],
-    providers: [MessageService]
+    styleUrls: ['./speeddialdemo.scss']
 })
-export class SpeedDialDemo implements OnInit {
-    items: MenuItem[];
+export class SpeedDialDemo {
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'linear',
+            label: 'Linear',
+            component: LinearDocComponent
+        },
+        {
+            id: 'circle',
+            label: 'Circle',
+            component: CircleDocComponent
+        },
+        {
+            id: 'semicircle',
+            label: 'Semi Circle',
+            component: SemiCircleDocComponent
+        },
+        {
+            id: 'quartercircle',
+            label: 'Quarter Circle',
+            component: QuarterCircleDocComponent
+        },
+        {
+            id: 'tooltip',
+            label: 'Tooltip',
+            component: TooltipDocComponent
+        },
+        {
+            id: 'mask',
+            label: 'Mask',
+            component: MaskDocComponent
+        },
+        {
+            id: 'custom',
+            label: 'Custom',
+            component: CustomDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        }
+    ];
 
-    tooltipItems: MenuItem[];
-
-    leftTooltipItems: MenuItem[];
-
-    constructor(private messageService: MessageService) {}
-
-    ngOnInit() {
-        this.items = [
-            {
-                icon: 'pi pi-pencil',
-                command: () => {
-                    this.messageService.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
-                }
-            },
-            {
-                icon: 'pi pi-refresh',
-                command: () => {
-                    this.messageService.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
-                }
-            },
-            {
-                icon: 'pi pi-trash',
-                command: () => {
-                    this.messageService.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
-                }
-            },
-            {
-                icon: 'pi pi-upload',
-                routerLink: ['/fileupload']
-            },
-            {
-                icon: 'pi pi-external-link',
-                url: 'http://angular.io'
-            }
-        ];
-
-        this.tooltipItems = [
-            {
-                tooltipOptions: {
-                    tooltipLabel: 'Add'
-                },
-                icon: 'pi pi-pencil',
-                command: () => {
-                    this.messageService.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
-                }
-            },
-            {
-                tooltipOptions: {
-                    tooltipLabel: 'Update'
-                },
-                icon: 'pi pi-refresh',
-                command: () => {
-                    this.messageService.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
-                }
-            },
-            {
-                tooltipOptions: {
-                    tooltipLabel: 'Delete'
-                },
-                icon: 'pi pi-trash',
-                command: () => {
-                    this.messageService.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
-                }
-            },
-            {
-                tooltipOptions: {
-                    tooltipLabel: 'Upload'
-                },
-                icon: 'pi pi-upload',
-                routerLink: ['/fileupload']
-            },
-            {
-                tooltipOptions: {
-                    tooltipLabel: 'Angular Website'
-                },
-                icon: 'pi pi-external-link',
-                url: 'http://angular.io'
-            }
-        ];
-
-        this.leftTooltipItems = [
-            {
-                tooltipOptions: {
-                    tooltipLabel: 'Add',
-                    tooltipPosition: 'left'
-                },
-                icon: 'pi pi-pencil',
-                command: () => {
-                    this.messageService.add({ severity: 'info', summary: 'Add', detail: 'Data Added' });
-                }
-            },
-            {
-                tooltipOptions: {
-                    tooltipLabel: 'Update',
-                    tooltipPosition: 'left'
-                },
-                icon: 'pi pi-refresh',
-                command: () => {
-                    this.messageService.add({ severity: 'success', summary: 'Update', detail: 'Data Updated' });
-                }
-            },
-            {
-                tooltipOptions: {
-                    tooltipLabel: 'Delete',
-                    tooltipPosition: 'left'
-                },
-                icon: 'pi pi-trash',
-                command: () => {
-                    this.messageService.add({ severity: 'error', summary: 'Delete', detail: 'Data Deleted' });
-                }
-            },
-            {
-                icon: 'pi pi-upload',
-                tooltipOptions: {
-                    tooltipLabel: 'Upload',
-                    tooltipPosition: 'left'
-                },
-                routerLink: ['/fileupload']
-            },
-            {
-                tooltipOptions: {
-                    tooltipLabel: 'Angular Website',
-                    tooltipPosition: 'left'
-                },
-                icon: 'pi pi-external-link',
-                url: 'http://angular.io'
-            }
-        ];
-    }
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
+        }
+    ];
 }
