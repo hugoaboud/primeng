@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AppConfig } from '../domain/appconfig';
-import { AppConfigService } from '../service/appconfig.service';
-import { JsonService } from '../service/json.service';
+import { AppConfigService } from '../service/appconfigservice';
+import { JsonService } from '../service/jsonservice';
 
 @Component({
     selector: 'app-root',

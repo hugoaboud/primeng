@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as FileSaver from 'file-saver';
 import { Product } from '../../domain/product';
-import { ProductService } from '../../service/product.service';
+import { ProductService } from '../../service/productservice';
 
 @Component({
     templateUrl: './tableexportdemo.html'

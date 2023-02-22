@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { AppConfigService } from '../../service/appconfig.service';
-import { UIKitService } from '../../service/uikit.service';
+import { AppConfigService } from '../../service/appconfigservice';
+import { UIKitService } from '../../service/uikitservice';
 
 @Component({
     templateUrl: './uikit.component.html',

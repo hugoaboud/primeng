@@ -3,7 +3,7 @@ import { MessageService } from 'primeng/api';
 import { OverlayPanel } from 'primeng/overlaypanel';
 import { Code } from '../../domain/code';
 import { Product } from '../../domain/product';
-import { ProductService } from '../../service/product.service';
+import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'datatable-doc',

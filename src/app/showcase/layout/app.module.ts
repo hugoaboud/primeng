@@ -7,17 +7,17 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
-import { CarService } from '../service/car.service';
-import { CountryService } from '../service/country.service';
-import { EventService } from '../service/event.service';
-import { NodeService } from '../service/node.service';
+import { CarService } from '../service/carservice';
+import { CountryService } from '../service/countryservice';
+import { EventService } from '../service/eventservice';
+import { NodeService } from '../service/nodeservice';
 
-import { AppConfigService } from '../service/appconfig.service';
-import { CustomerService } from '../service/customer.service';
-import { IconService } from '../service/icon.service';
-import { JsonService } from '../service/json.service';
-import { PhotoService } from '../service/photo.service';
-import { ProductService } from '../service/product.service';
+import { AppConfigService } from '../service/appconfigservice';
+import { CustomerService } from '../service/customerservice';
+import { IconService } from '../service/iconservice';
+import { JsonService } from '../service/jsonservice';
+import { PhotoService } from '../service/photoservice';
+import { ProductService } from '../service/productservice';
 
 import { LandingModule } from '../pages/landing/landing.module';
 import { AppMainComponent } from './app.main.component';

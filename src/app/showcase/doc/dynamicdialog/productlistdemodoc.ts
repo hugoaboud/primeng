@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 import { DynamicDialogRef } from '../../../components/dynamicdialog/dynamicdialog-ref';
 import { Product } from '../../domain/product';
-import { ProductService } from '../../service/product.service';
+import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'productlistdemo-doc',

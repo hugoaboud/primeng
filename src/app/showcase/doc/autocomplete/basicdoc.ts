@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SelectItemGroup } from 'primeng/api';
 import { Code } from '../../domain/code';
-import { CountryService } from '../../service/country.service';
+import { CountryService } from '../../service/countryservice';
 
 @Component({
     selector: 'basic-doc',

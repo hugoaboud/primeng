@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
-import { NodeService } from '../../service/node.service';
+import { NodeService } from '../../service/nodeservice';
 
 @Component({
     selector: 'filter-doc',

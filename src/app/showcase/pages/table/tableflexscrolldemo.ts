@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LazyLoadEvent } from 'primeng/api';
-import { CarService } from '../../service/car.service';
+import { CarService } from '../../service/carservice';
 import { Car } from '../domain/car';
 
 @Component({

@@ -3,8 +3,8 @@ import { MenuItem, MessageService } from 'primeng/api';
 import { TerminalService } from 'primeng/terminal';
 import { Subscription } from 'rxjs';
 import { Code } from '../../domain/code';
-import { NodeService } from '../../service/node.service';
-import { PhotoService } from '../../service/photo.service';
+import { NodeService } from '../../service/nodeservice';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
     selector: 'advanced-doc',

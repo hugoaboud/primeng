@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { default as MenuData } from 'src/assets/showcase/data/menu.json';
 import { AppConfig } from '../../domain/appconfig';
-import { AppConfigService } from '../../service/appconfig.service';
+import { AppConfigService } from '../../service/appconfigservice';
 declare let gtag: Function;
 
 export interface MenuItem {

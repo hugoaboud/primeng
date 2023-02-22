@@ -4,9 +4,9 @@ import { Table } from 'primeng/table';
 import { AppConfig } from '../../domain/appconfig';
 import { Customer, Representative } from '../../domain/customer';
 import { AppComponent } from '../../layout/app.component';
-import { AppConfigService } from '../../service/appconfig.service';
-import { CustomerService } from '../../service/customer.service';
-import { NodeService } from '../../service/node.service';
+import { AppConfigService } from '../../service/appconfigservice';
+import { CustomerService } from '../../service/customerservice';
+import { NodeService } from '../../service/nodeservice';
 interface City {
     name: string;
     code: string;

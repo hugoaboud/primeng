@@ -4,7 +4,7 @@ import { EventsDocComponent } from '../../doc/defer/eventsdoc';
 import { BasicDocComponent } from '../../doc/defer/basicdoc';
 import { ImportDocComponent } from '../../doc/defer/importdoc';
 import { DataTableDocComponent } from '../../doc/defer/datatabledoc';
-import { CarService } from '../../service/car.service';
+import { CarService } from '../../service/carservice';
 import { Car } from '../domain/car';
 
 @Component({

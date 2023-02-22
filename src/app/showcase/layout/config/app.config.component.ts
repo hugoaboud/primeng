@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { DomHandler } from 'primeng/dom';
 import { Subscription } from 'rxjs';
 import { AppConfig } from '../../domain/appconfig';
-import { AppConfigService } from '../../service/appconfig.service';
+import { AppConfigService } from '../../service/appconfigservice';
 
 @Component({
     selector: 'app-config',

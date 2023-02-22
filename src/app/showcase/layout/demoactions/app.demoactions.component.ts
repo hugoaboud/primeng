@@ -1,6 +1,6 @@
 import { Component, Input, NgModule } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
-import { AppConfigService } from '../../service/appconfig.service';
+import { AppConfigService } from '../../service/appconfigservice';
 
 @Component({
     selector: 'app-demoActions',

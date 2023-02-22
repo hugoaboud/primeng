@@ -3,8 +3,8 @@ import { Component, ElementRef, EventEmitter, OnDestroy, OnInit, Output, ViewChi
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AppConfig } from '../../domain/appconfig';
-import { AppConfigService } from '../../service/appconfig.service';
-import { JsonService, Version } from '../../service/json.service';
+import { AppConfigService } from '../../service/appconfigservice';
+import { JsonService, Version } from '../../service/jsonservice';
 
 @Component({
     selector: 'app-topbar',

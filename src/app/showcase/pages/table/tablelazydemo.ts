@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LazyLoadEvent } from 'primeng/api';
 import { Customer, Representative } from '../../domain/customer';
-import { CustomerService } from '../../service/customer.service';
+import { CustomerService } from '../../service/customerservice';
 
 @Component({
     templateUrl: './tablelazydemo.html'

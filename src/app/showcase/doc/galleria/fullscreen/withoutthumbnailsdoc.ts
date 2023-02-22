@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../../domain/code';
-import { PhotoService } from '../../../service/photo.service';
+import { PhotoService } from '../../../service/photoservice';
 
 @Component({
     selector: 'withoutthumbnails-doc',
