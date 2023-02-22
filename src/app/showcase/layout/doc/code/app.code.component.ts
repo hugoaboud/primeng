@@ -4,13 +4,22 @@ import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
 import { Code } from 'src/app/showcase/domain/code';
 import { CodeHighlighterComponent } from '../codehighlighter/app.codehighlighter.component';
-
+import { useStackBlitz } from '../codeeditor';
 @Component({
     selector: 'app-code',
     templateUrl: './app.code.component.html'
 })
 export class AppCodeComponent {
+
     @Input() code!: Code;
+
+    @Input() service!: any;
+
+    @Input() dependencies!: any;
+
+    @Input() component!: string;
+
+    @Input() extFiles!: any;
 
     @Input() hideToggleCode: boolean = false;
 
@@ -58,6 +67,14 @@ export class AppCodeComponent {
         this.fullCodeVisible = !this.fullCodeVisible;
         this.fullCodeVisible && (this.lang = 'html');
     }
+
+    openStackBlitz() {
+        if(this.code) {
+            useStackBlitz({code: this.code})    
+        }
+    }
+
+    showCodesandbox() {}
 }
 
 @NgModule({

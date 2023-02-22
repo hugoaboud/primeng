@@ -48,6 +48,7 @@
 
         <button pButton pTooltip="Edit in StackBlitz" tooltipPosition="bottom"
             tooltipStyleClass="doc-section-code-tooltip" *ngIf="!hideStackBlitz"
+            (click)="openStackBlitz()"
             class="p-button-rounded p-button-text text-sm p-button-plain  p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center">
             <svg role="img" viewBox="0 0 24 24" width="16" height="16" fill="var(--text-color-secondary)"
                 style="display: block">

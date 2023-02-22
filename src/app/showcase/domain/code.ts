@@ -5,4 +5,6 @@ export interface Code {
     scss?: string;
     data?: string;
     module?: string;
+    routeFiles?: object;
+    component?: string;
 }

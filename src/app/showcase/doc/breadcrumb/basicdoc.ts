@@ -11,7 +11,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" [title]="title"></app-code>
     </div>`
 })
 export class BasicDocComponent implements OnInit {
@@ -43,9 +43,11 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './breadcrumbdemo.html'
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
-export class BreadcrumbDemo implements OnInit {
+export class AppComponent implements OnInit {
 
     items!: MenuItem[];
 
