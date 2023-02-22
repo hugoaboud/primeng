@@ -10,7 +10,6 @@ import { useStackBlitz } from '../codeeditor';
     templateUrl: './app.code.component.html'
 })
 export class AppCodeComponent {
-
     @Input() code!: Code;
 
     @Input() service!: any;
@@ -69,8 +68,8 @@ export class AppCodeComponent {
     }
 
     openStackBlitz() {
-        if(this.code) {
-            useStackBlitz({code: this.code})    
+        if (this.code) {
+            useStackBlitz({ code: this.code });
         }
     }
 
