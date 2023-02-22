@@ -3,8 +3,7 @@ import { getAngularApp } from './templates';
 import { Props } from './templates';
 
 const useStackBlitz = (props: Props) => {
-
-    const { files } = getAngularApp(props)
+    const { files } = getAngularApp(props);
 
     let _files = {};
     Object.entries(files).forEach(([k, v]) => (_files[`${k}`] = typeof v.content === 'object' ? JSON.stringify(v.content, null, 2) : v.content));
@@ -22,7 +21,7 @@ const useStackBlitz = (props: Props) => {
         openFile: 'src/app/app.component.html'
     };
     // @ts-ignore
-    sdk.openProject(project, options)
+    sdk.openProject(project, options);
 };
 
 export { useStackBlitz };

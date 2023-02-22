@@ -185,7 +185,7 @@ export class AppComponent implements OnInit {
     }
 }`,
         service: ['CountryService'],
-    
+
         data: `
 //CountryService
 {
@@ -193,6 +193,5 @@ export class AppComponent implements OnInit {
     "code": "AF"
 }
 ...`
-
     };
 }

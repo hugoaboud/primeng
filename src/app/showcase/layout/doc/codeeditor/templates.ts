@@ -475,12 +475,11 @@ not safari 15.2-15.3`;
 
 const importServices = (service: string[]) => {
     return service.map((s) => `import { ${s} } from 'src/service/${s.toLowerCase()}';`).join('');
-}
+};
 
-const getAngularApp =  (props: Props = {}) => {
+const getAngularApp = (props: Props = {}) => {
     const { code, extFiles, extPages } = props;
     const dependencies = getDependencies();
-
 
     const app_module_ts = `
 import { NgModule } from '@angular/core';
@@ -657,7 +656,7 @@ ${code.service && importServices(code.service)}
     ],
     declarations: [ AppComponent ],
     bootstrap: [ AppComponent ],
-    providers: [ ${code.service && code.service.length ? code.service.map(s => s).join(', ') : ''} ]
+    providers: [ ${code.service && code.service.length ? code.service.map((s) => s).join(', ') : ''} ]
 })
 
 export class AppModule {}`;
@@ -697,9 +696,9 @@ export class AppModule {}`;
                 dependencies
             }
         },
-        'src/app/app.component.html': {content: code.html.trim()},
-        'src/app/app.component.ts': {content:code.typescript.trim()},
-        'src/app/app.component.scss': {content:code.scss ? code.scss.trim() : ''},
+        'src/app/app.component.html': { content: code.html.trim() },
+        'src/app/app.component.ts': { content: code.typescript.trim() },
+        'src/app/app.component.scss': { content: code.scss ? code.scss.trim() : '' },
         ...defaultFiles
     };
 
@@ -712,7 +711,6 @@ export class AppModule {}`;
     }
 
     return { files };
-}
-
+};
 
 export { getAngularApp };
