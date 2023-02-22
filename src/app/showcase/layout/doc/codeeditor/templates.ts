@@ -6,7 +6,7 @@ export interface Props {
     code?: Code;
     title?: string;
     description?: string;
-    service?: object;
+    service?: string[];
     extPages?: object;
     component?: string;
     extFiles?: object
@@ -43,15 +43,6 @@ const getDependencies = () => {
 
 const checkDependency = (dep: string) =>  {
     return !(dep.startsWith('jasmine') || dep.startsWith('del') || dep.startsWith('gulp') || dep.startsWith('jspdf') || dep.startsWith('prism') || dep.startsWith('del') || dep.startsWith('@stackblitz'));
-}
-
-const getServiceFiles = () => {
-    const serviceFiles = {};
-    for (const key in services) {
-        serviceFiles[key] = services[key];
-    }
-
-    return serviceFiles;
 }
 
 const staticStyles = {
@@ -680,14 +671,14 @@ const defaultFiles = {
 };
 
 const getAngularApp =  (props: Props = {}) => {
-    const { code, service, extFiles, extPages } = props;
+    const { code, extFiles, extPages } = props;
     const dependencies = getDependencies();
-
+    
     const files = {
         'package.json': {
             content: {
-                name: 'example-app',
-                description: 'asdasdas',
+                name: 'primeng-demo',
+                description: 'PrimeNG Demo',
                 keywords: [],
                 scripts: {
                     "ng": "ng",
@@ -698,13 +689,21 @@ const getAngularApp =  (props: Props = {}) => {
                 dependencies
             }
         },
-        'src/app/app.component.html': {content: code.html},
-        'src/app/app.component.ts': {content:code.typescript},
-        'src/app/app.component.scss': {content:code.scss ?? ''},
+        'src/app/app.component.html': {content: code.html.trim()},
+        'src/app/app.component.ts': {content:code.typescript.trim()},
+        'src/app/app.component.scss': {content:code.scss ? code.scss.trim() : ''},
         ...defaultFiles
     }
 
-    return { files, dependencies, pkg };
+    if (code.service) {
+        code.service.forEach((name) => {
+            files[`src/service/${name.toLowerCase()}.ts`] = {
+                content: services[name]
+            };
+        });
+    }
+
+    return { files };
 }
 
 

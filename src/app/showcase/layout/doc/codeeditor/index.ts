@@ -4,7 +4,7 @@ import { Props } from './templates'
 
 const useStackBlitz = (props: Props) => {
 
-    const { files, dependencies } = getAngularApp(props)
+    const { files } = getAngularApp(props)
 
     let _files = {};
     Object.entries(files).forEach(([k, v]) => (_files[`${k}`] = typeof v.content === 'object' ? JSON.stringify(v.content, null, 2) : v.content));
@@ -22,7 +22,6 @@ const useStackBlitz = (props: Props) => {
     }
     // @ts-ignore
     sdk.openProject(project, options)
-
 };
 
 export { useStackBlitz };

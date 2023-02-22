@@ -7,4 +7,5 @@ export interface Code {
     module?: string;
     routeFiles?: object;
     component?: string;
+    service?: string[];
 }

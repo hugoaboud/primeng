@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SelectItemGroup } from 'primeng/api';
 import { Code } from '../../domain/code';
 import { CountryService } from '../../service/country.service';
@@ -18,7 +18,7 @@ import { CountryService } from '../../service/country.service';
         <app-code [code]="code"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class BasicDocComponent implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -104,24 +104,28 @@ export class BasicDocComponent {
 </div>`,
 
         typescript: `
+import { Component, Input, OnInit } from '@angular/core';
 import { SelectItemGroup } from 'primeng/api';
-import { Component } from '@angular/core';
+import { CountryService } from '../service/countryservice';
 
 @Component({
-    templateUrl: './autocompletedemo.html'
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    providers: [CountryService]
 })
-export class AutoCompleteDemo {
-    countries: any[];
+export class AppComponent implements OnInit {
+    countries!: any[];
 
-    items: any[];
+    items!: any[];
 
-    selectedCountry: any;
+    selectedCountry!: any;
 
-    filteredCountries: any[];
+    filteredCountries!: any[];
 
-    groupedCities: SelectItemGroup[];
+    groupedCities!: SelectItemGroup[];
 
-    constructor(private countryService: CountryService, private filterService: FilterService) {}
+    constructor(private countryService: CountryService) {}
 
     ngOnInit() {
         this.countryService.getCountries().then((countries) => {
@@ -180,19 +184,8 @@ export class AutoCompleteDemo {
 
         this.filteredCountries = filtered;
     }
-}
+}`,
+        service: ['CountryService']
 
-@Injectable()
-export class CountryService {
-
-    constructor(private http: Http) {}
-
-    getCountries() {
-        return this.http.get('showcase/resources/data/countries.json')
-                    .toPromise()
-                    .then(res => <any[]> res.json().data)
-                    .then(data => { return data; });
-    }
-}`
     };
 }
