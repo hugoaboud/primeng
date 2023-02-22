@@ -1,23 +1,24 @@
-import pkg from 'package.json'
+import pkg from 'package.json';
 import { services } from './services';
 import { Code } from 'src/app/showcase/domain/code';
 
-export interface Props { 
+export interface Props {
     code?: Code;
     title?: string;
     description?: string;
     service?: object;
     extPages?: object;
     component?: string;
-    extFiles?: object
+    extFiles?: object;
 }
 
 const app_dependencies = pkg ? pkg.devDependencies : {};
 
 const PrimeNG = {
     version: '15.2.0',
-    description: 'PrimeNG is an open source UI library for Vue featuring a rich set of 80+ components, a theme designer, various theme alternatives such as Material, Bootstrap, Tailwind, premium templates and professional support. In addition, it integrates with PrimeBlock, which has 370+ ready to use UI blocks to build spectacular applications in no time.'
-}
+    description:
+        'PrimeNG is an open source UI library for Vue featuring a rich set of 80+ components, a theme designer, various theme alternatives such as Material, Bootstrap, Tailwind, premium templates and professional support. In addition, it integrates with PrimeBlock, which has 370+ ready to use UI blocks to build spectacular applications in no time.'
+};
 
 const getAppDependencies = () => {
     const dependencies = {};
@@ -28,22 +29,22 @@ const getAppDependencies = () => {
     }
 
     return dependencies;
-}
+};
 
 const getDependencies = () => {
     const appDependencies = getAppDependencies();
 
-    const dependencies =  {
+    const dependencies = {
         primeng: PrimeNG.version,
-        ...appDependencies,
+        ...appDependencies
     };
 
     return dependencies;
-}
+};
 
-const checkDependency = (dep: string) =>  {
+const checkDependency = (dep: string) => {
     return !(dep.startsWith('jasmine') || dep.startsWith('del') || dep.startsWith('gulp') || dep.startsWith('jspdf') || dep.startsWith('prism') || dep.startsWith('del') || dep.startsWith('@stackblitz'));
-}
+};
 
 const getServiceFiles = () => {
     const serviceFiles = {};
@@ -52,7 +53,7 @@ const getServiceFiles = () => {
     }
 
     return serviceFiles;
-}
+};
 
 const staticStyles = {
     global: `html {
@@ -360,7 +361,7 @@ import 'zone.js';
 /***************************************************************************************************
 * APPLICATION IMPORTS
 */
-`
+`;
 const test_ts = `
 // This file is required by karma.conf.js and loads recursively all the .spec and framework files
 
@@ -436,7 +437,7 @@ export const environment = {
     production: true
 };`;
 
-const angular_json =`
+const angular_json = `
 {
     "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
     "version": 1,
@@ -590,7 +591,7 @@ const tsconfig_app_json = `{
     "include": [
       "src/**/*.d.ts"
     ]
-}`
+}`;
 
 const tsconfig_json = `{
     "compileOnSave": false,
@@ -660,26 +661,26 @@ not ios_saf 15.2-15.3
 not safari 15.2-15.3`;
 
 const defaultFiles = {
-    'src/main.ts': {content: main_ts},
-    'src/polyfills.ts': {content: polyfills_ts},
-    'src/test.ts': {content:test_ts},
-    'tsconfig.json': {content:tsconfig_json},
-    'tsconfig.app.json': {content:tsconfig_app_json},
-    'tsconfig.spec.json': {content:tsconfig_spec_json},
-    '.editorconfig': {content:editorconfig},
-    'src/environments/environment.ts': {content:environment_ts},
-    'src/environments/environment.prod.ts': {content:environment_prod_ts},
-    'angular.json': {content: angular_json},
-    '.browserslistrc': {content:browserlistrc},
-    'src/app/app.module.ts': {content:app_module_ts},
-    'src/index.html': {content:index_html},
-    'src/karma.conf.js': {content:karma_conf_js},
-    'src/app/app.component.spec.ts': {content:app_component_spec_ts},
-    'src/styles.scss': {content:staticStyles.global},
-    'src/flags.css': {content:staticStyles.flags}
+    'src/main.ts': { content: main_ts },
+    'src/polyfills.ts': { content: polyfills_ts },
+    'src/test.ts': { content: test_ts },
+    'tsconfig.json': { content: tsconfig_json },
+    'tsconfig.app.json': { content: tsconfig_app_json },
+    'tsconfig.spec.json': { content: tsconfig_spec_json },
+    '.editorconfig': { content: editorconfig },
+    'src/environments/environment.ts': { content: environment_ts },
+    'src/environments/environment.prod.ts': { content: environment_prod_ts },
+    'angular.json': { content: angular_json },
+    '.browserslistrc': { content: browserlistrc },
+    'src/app/app.module.ts': { content: app_module_ts },
+    'src/index.html': { content: index_html },
+    'src/karma.conf.js': { content: karma_conf_js },
+    'src/app/app.component.spec.ts': { content: app_component_spec_ts },
+    'src/styles.scss': { content: staticStyles.global },
+    'src/flags.css': { content: staticStyles.flags }
 };
 
-const getAngularApp =  (props: Props = {}) => {
+const getAngularApp = (props: Props = {}) => {
     const { code, service, extFiles, extPages } = props;
     const dependencies = getDependencies();
 
@@ -690,22 +691,21 @@ const getAngularApp =  (props: Props = {}) => {
                 description: 'asdasdas',
                 keywords: [],
                 scripts: {
-                    "ng": "ng",
-                    "start": "ng serve",
-                    "build": "ng build",
-                    "test": "ng test",
+                    ng: 'ng',
+                    start: 'ng serve',
+                    build: 'ng build',
+                    test: 'ng test'
                 },
                 dependencies
             }
         },
-        'src/app/app.component.html': {content: code.html},
-        'src/app/app.component.ts': {content:code.typescript},
-        'src/app/app.component.scss': {content:code.scss ?? ''},
+        'src/app/app.component.html': { content: code.html },
+        'src/app/app.component.ts': { content: code.typescript },
+        'src/app/app.component.scss': { content: code.scss ?? '' },
         ...defaultFiles
-    }
+    };
 
     return { files, dependencies, pkg };
-}
-
+};
 
 export { getAngularApp };

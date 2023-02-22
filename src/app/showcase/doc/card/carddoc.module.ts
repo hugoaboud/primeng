@@ -17,4 +17,4 @@ import { TemplatesDocComponent } from './templatesdoc';
     exports: [AppDocModule],
     declarations: [ImportDocComponent, BasicDocComponent, AdvancedDocComponent, StyleDocComponent, PropsDocComponent, TemplatesDocComponent]
 })
-export class CardDocModule { }
+export class CardDocModule {}
