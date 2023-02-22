@@ -1,99 +1,96 @@
 import { Component } from '@angular/core';
-import { SelectItemGroup } from 'primeng/api';
-import { CountryService } from '../../service/country.service';
-
-interface City {
-    name: string;
-    code: string;
-}
-
-interface Country {
-    name: string;
-    code: string;
-}
+import { BasicDocComponent } from '../../doc/multiselect/basicdoc';
+import { ChipsDocComponent } from '../../doc/multiselect/chipsdoc';
+import { DisabledDocComponent } from '../../doc/multiselect/disableddoc';
+import { EventsDocComponent } from '../../doc/multiselect/eventsdoc';
+import { FilterDocComponent } from '../../doc/multiselect/filterdoc';
+import { FloatLabelDocComponent } from '../../doc/multiselect/floatlabeldoc';
+import { GroupDocComponent } from '../../doc/multiselect/groupdoc';
+import { ImportDocComponent } from '../../doc/multiselect/importdoc';
+import { InvalidDocComponent } from '../../doc/multiselect/invaliddoc';
+import { PropsDocComponent } from '../../doc/multiselect/propsdoc';
+import { StyleDocComponent } from '../../doc/multiselect/styledoc';
+import { TemplateDocComponent } from '../../doc/multiselect/templatedoc';
+import { TemplatesDocComponent } from '../../doc/multiselect/templatesdoc';
+import { VirtualScrollDocComponent } from '../../doc/multiselect/virtualscrolldoc';
 
 @Component({
     templateUrl: './multiselectdemo.html',
     styleUrls: ['./multiselectdemo.scss']
 })
 export class MultiSelectDemo {
-    selectedCities1: City[];
-
-    selectedCities2: City[];
-
-    selectedCities3: any[];
-
-    selectedCities4: any[];
-
-    selectedCountries1: Country[];
-
-    selectedCountries2: Country[];
-
-    cities: City[];
-
-    groupedCities: SelectItemGroup[];
-
-    countries: City[];
-
-    virtualCountries: Country[];
-
-    constructor(private countryService: CountryService) {
-        this.cities = [
-            { name: 'New York', code: 'NY' },
-            { name: 'Rome', code: 'RM' },
-            { name: 'London', code: 'LDN' },
-            { name: 'Istanbul', code: 'IST' },
-            { name: 'Paris', code: 'PRS' }
-        ];
-
-        this.countries = [
-            { name: 'Australia', code: 'AU' },
-            { name: 'Brazil', code: 'BR' },
-            { name: 'China', code: 'CN' },
-            { name: 'Egypt', code: 'EG' },
-            { name: 'France', code: 'FR' },
-            { name: 'Germany', code: 'DE' },
-            { name: 'India', code: 'IN' },
-            { name: 'Japan', code: 'JP' },
-            { name: 'Spain', code: 'ES' },
-            { name: 'United States', code: 'US' }
-        ];
-
-        this.groupedCities = [
-            {
-                label: 'Germany',
-                value: 'de',
-                items: [
-                    { label: 'Berlin', value: 'Berlin' },
-                    { label: 'Frankfurt', value: 'Frankfurt' },
-                    { label: 'Hamburg', value: 'Hamburg' },
-                    { label: 'Munich', value: 'Munich' }
-                ]
-            },
-            {
-                label: 'USA',
-                value: 'us',
-                items: [
-                    { label: 'Chicago', value: 'Chicago' },
-                    { label: 'Los Angeles', value: 'Los Angeles' },
-                    { label: 'New York', value: 'New York' },
-                    { label: 'San Francisco', value: 'San Francisco' }
-                ]
-            },
-            {
-                label: 'Japan',
-                value: 'jp',
-                items: [
-                    { label: 'Kyoto', value: 'Kyoto' },
-                    { label: 'Osaka', value: 'Osaka' },
-                    { label: 'Tokyo', value: 'Tokyo' },
-                    { label: 'Yokohama', value: 'Yokohama' }
-                ]
-            }
-        ];
-
-        this.countryService.getCountries().then((countries) => {
-            this.virtualCountries = countries;
-        });
-    }
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'chips',
+            label: 'Chips',
+            component: ChipsDocComponent
+        },
+        {
+            id: 'group',
+            label: 'Group',
+            component: GroupDocComponent
+        },
+        {
+            id: 'template',
+            label: 'Template',
+            component: TemplateDocComponent
+        },
+        {
+            id: 'filter',
+            label: 'Filter',
+            component: FilterDocComponent
+        },
+        {
+            id: 'virtualscroll',
+            label: 'VirtualScroll',
+            component: VirtualScrollDocComponent
+        },
+        {
+            id: 'floatlabel',
+            label: 'Float Label',
+            component: FloatLabelDocComponent
+        },
+        {
+            id: 'invalid',
+            label: 'Invalid',
+            component: InvalidDocComponent
+        },
+        {
+            id: 'disabled',
+            label: 'Disabled',
+            component: DisabledDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        }
+    ];
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDocComponent
+        }
+    ];
 }

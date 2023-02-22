@@ -1,38 +1,60 @@
 import { Component } from '@angular/core';
+import { BasicDocComponent } from '../../doc/selectbutton/basicdoc';
+import { DisabledDocComponent } from '../../doc/selectbutton/disableddoc';
+import { EventsDocComponent } from '../../doc/selectbutton/eventsdoc';
+import { ImportDocComponent } from '../../doc/selectbutton/importdoc';
+import { InvalidDocComponent } from '../../doc/selectbutton/invaliddoc';
+import { MultipleDocComponent } from '../../doc/selectbutton/multipledoc';
+import { PropsDocComponent } from '../../doc/selectbutton/propsdoc';
+import { TemplateDocComponent } from '../../doc/selectbutton/templatedoc';
 
 @Component({
     templateUrl: './selectbuttondemo.html'
 })
 export class SelectButtonDemo {
-    stateOptions: any[];
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'multiple',
+            label: 'Multiple',
+            component: MultipleDocComponent
+        },
+        {
+            id: 'template',
+            label: 'Template',
+            component: TemplateDocComponent
+        },
+        {
+            id: 'invalid',
+            label: 'Invalid',
+            component: InvalidDocComponent
+        },
+        {
+            id: 'disabled',
+            label: 'Disabled',
+            component: DisabledDocComponent
+        }
+    ];
 
-    paymentOptions: any[];
-
-    justifyOptions: any[];
-
-    value1: string = 'off';
-
-    value2: number;
-
-    value3: any;
-
-    constructor() {
-        this.stateOptions = [
-            { label: 'Off', value: 'off' },
-            { label: 'On', value: 'on' }
-        ];
-
-        this.paymentOptions = [
-            { name: 'Option 1', value: 1 },
-            { name: 'Option 2', value: 2 },
-            { name: 'Option 3', value: 3 }
-        ];
-
-        this.justifyOptions = [
-            { icon: 'pi pi-align-left', justify: 'Left' },
-            { icon: 'pi pi-align-right', justify: 'Right' },
-            { icon: 'pi pi-align-center', justify: 'Center' },
-            { icon: 'pi pi-align-justify', justify: 'Justify' }
-        ];
-    }
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
+        }
+    ];
 }
