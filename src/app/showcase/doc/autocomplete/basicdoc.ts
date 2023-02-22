@@ -106,13 +106,12 @@ export class BasicDocComponent implements OnInit {
         typescript: `
 import { Component, Input, OnInit } from '@angular/core';
 import { SelectItemGroup } from 'primeng/api';
-import { CountryService } from '../service/countryservice';
+import { CountryService } from 'src/service/countryservice';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    providers: [CountryService]
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
     countries!: any[];
