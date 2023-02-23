@@ -4,7 +4,7 @@ import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
 import { Code } from 'src/app/showcase/domain/code';
 import { CodeHighlighterComponent } from '../codehighlighter/app.codehighlighter.component';
-import { useStackBlitz } from '../codeeditor';
+import { useStackBlitz, useCodeSandbox } from '../codeeditor';
 @Component({
     selector: 'app-code',
     templateUrl: './app.code.component.html'
@@ -73,7 +73,11 @@ export class AppCodeComponent {
         }
     }
 
-    showCodesandbox() {}
+    openCodeSandbox() {
+        if (this.code) {
+            useCodeSandbox({code: this.code});
+        }
+    }
 }
 
 @NgModule({

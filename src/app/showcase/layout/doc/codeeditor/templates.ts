@@ -109,6 +109,7 @@ const index_html = `
         <base href="/">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://unpkg.com/primeicons/primeicons.css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
     <body>
@@ -369,7 +370,7 @@ const angular_json = `
                 "src/styles.scss",
                 "node_modules/primeicons/primeicons.css",
                 "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-                "node_modules/primeng/resources/primeng.min.css",
+                "node_modules/primeng/resources/primeng.min.css"
               ],
               "scripts": [],
               "allowedCommonJsDependencies": [
@@ -482,8 +483,7 @@ const getAngularApp =  (props: Props = {}) => {
     const dependencies = getDependencies();
 
 
-    const app_module_ts = `
-import { NgModule } from '@angular/core';
+    const app_module_ts = `import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -687,6 +687,7 @@ export class AppModule {}`;
             content: {
                 name: 'primeng-demo',
                 description: 'PrimeNG Demo',
+                licence: "MIT",
                 keywords: [],
                 scripts: {
                     ng: 'ng',

@@ -38,7 +38,7 @@
 
         <button pButton pTooltip="Edit in CodeSandbox" tooltipPosition="bottom"
             tooltipStyleClass="doc-section-code-tooltip" *ngIf="!hideCodeSandbox"
-            class="p-button-rounded p-button-text text-sm p-button-plain  p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center">
+            class="p-button-rounded p-button-text text-sm p-button-plain  p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center" (click)="openCodeSandbox()">
             <svg role="img" viewBox="0 0 24 24" width="16" height="16" fill="var(--text-color-secondary)"
                 style="display: block">
                 <path
@@ -48,8 +48,7 @@
 
         <button pButton pTooltip="Edit in StackBlitz" tooltipPosition="bottom"
             tooltipStyleClass="doc-section-code-tooltip" *ngIf="!hideStackBlitz"
-            (click)="openStackBlitz()"
-            class="p-button-rounded p-button-text text-sm p-button-plain  p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center">
+            class="p-button-rounded p-button-text text-sm p-button-plain  p-0 w-3rem h-3rem inline-flex align-items-center justify-content-center" (click)="openStackBlitz()">
             <svg role="img" viewBox="0 0 24 24" width="16" height="16" fill="var(--text-color-secondary)"
                 style="display: block">
                 <path d="M0 15.98H8.15844L3.40299 27.26L19 11.1945H10.7979L15.5098 0L0 15.98Z" />

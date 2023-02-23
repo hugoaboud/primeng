@@ -2,6 +2,28 @@ import sdk from '@stackblitz/sdk';
 import { getAngularApp } from './templates';
 import { Props } from './templates';
 
+const useCodeSandbox = (props: Props) => {
+    const { files } = getAngularApp(props);
+
+    files['sandbox.config.json'] = {
+        content: {
+            infiniteLoopProtection: false
+        }
+    };
+
+    fetch('https://codesandbox.io/api/v1/sandboxes/define?json=1', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+        },
+        body: JSON.stringify({files: files, sourceFileName: 'src/app/app.component.ts'})
+    })
+        .then((response) => response.json())
+        .then((data) => window.open(`https://codesandbox.io/s/${data.sandbox_id}`, '_blank'));
+};
+
+
 const useStackBlitz = (props: Props) => {
 
     const { files } = getAngularApp(props)
@@ -25,4 +47,4 @@ const useStackBlitz = (props: Props) => {
     sdk.openProject(project, options)
 };
 
-export { useStackBlitz };
+export { useStackBlitz, useCodeSandbox };
