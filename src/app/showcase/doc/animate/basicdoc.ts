@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'animate-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -16,13 +16,13 @@ import { Code } from '../../domain/code';
             </div>
             <div class="h-30rem"></div>
             <div pAnimate enterClass="flipup" class="flex justify-content-center align-items-center h-20rem w-20rem border-round shadow-2 animation-duration-1000 animation-ease-out">
-                <span class="text-900 text-3xl font-bold">flipup</span>
+                <span class="text-900 text-3xl font-bold">flip up</span>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="animate-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class AnimateBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -33,7 +33,7 @@ export class BasicDocComponent {
     <span class="text-900 text-3xl font-bold">flip</span>
 </div>`,
         html: `
-<div class="card">
+<div class="card flex flex-column align-items-center">
     <div pAnimate enterClass="flip" leaveClass="fadeoutleft" class="flex justify-content-center align-items-center h-20rem w-20rem border-round shadow-2 animation-duration-1000 animation-ease-out">
         <span class="text-900 text-3xl font-bold">flip</span>
     </div>
@@ -46,10 +46,10 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './animatedemo.html'
+    selector: 'animate-basic-demo',
+    templateUrl: './animate-basic-demo.html',
+    styleUrls: ['./animate-basic-demo.scss']
 })
-
-export class AnimateDemo {
-}`
+export class AnimateBasicDemo {}`
     };
 }

@@ -8,4 +8,5 @@ export interface Code {
     routeFiles?: object;
     component?: string;
     service?: string[];
+    imports?: string[];
 }

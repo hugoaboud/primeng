@@ -2,13 +2,13 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'import-doc',
+    selector: 'animate-import-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"> </app-docsectiontext>
         <app-code [code]="code" [hideToggleCode]="true"></app-code>
     </div>`
 })
-export class ImportDocComponent {
+export class AnimateImportDemo {
     @Input() id: string;
 
     @Input() title: string;

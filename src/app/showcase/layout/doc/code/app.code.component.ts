@@ -16,7 +16,7 @@ export class AppCodeComponent {
 
     @Input() dependencies!: any;
 
-    @Input() component!: string;
+    @Input() selector!: string;
 
     @Input() extFiles!: any;
 
@@ -69,13 +69,13 @@ export class AppCodeComponent {
 
     openStackBlitz() {
         if (this.code) {
-            useStackBlitz({ code: this.code });
+            useStackBlitz({ code: this.code, selector: this.selector });
         }
     }
 
     openCodeSandbox() {
         if (this.code) {
-            useCodeSandbox({code: this.code});
+            useCodeSandbox({code: this.code, selector: this.selector});
         }
     }
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ImportDocComponent } from '../../doc/animate/importdoc';
-import { BasicDocComponent } from '../../doc/animate/basicdoc';
+import { AnimateImportDemo } from '../../doc/animate/importdoc';
+import { AnimateBasicDemo } from '../../doc/animate/basicdoc';
 import { PropsDocComponent } from '../../doc/animate/propsdoc';
 
 @Component({
@@ -11,12 +11,12 @@ export class AnimateDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: AnimateImportDemo
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: AnimateBasicDemo
         }
     ];
 

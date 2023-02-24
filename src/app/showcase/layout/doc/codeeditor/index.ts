@@ -7,7 +7,12 @@ const useCodeSandbox = (props: Props) => {
 
     files['sandbox.config.json'] = {
         content: {
-            infiniteLoopProtection: false
+
+            infiniteLoopProtection: false,
+            template: 'node',
+            container: {
+                node: '16'
+            }
         }
     };
 
@@ -25,12 +30,12 @@ const useCodeSandbox = (props: Props) => {
 
 
 const useStackBlitz = (props: Props) => {
-
-    const { files } = getAngularApp(props)
+    const { files } = getAngularApp(props);
 
     let _files = {};
-    Object.entries(files).forEach(([k, v]) => (_files[`${k}`] = typeof v.content === 'object' ? JSON.stringify(v.content, null, 2) : v.content));
 
+    Object.entries(files).forEach(([k, v]) => (_files[`${k}`] = typeof v.content === 'object' ? JSON.stringify(v.content, null, 2) : v.content));
+    
     const project = {
         title: 'PrimeNG Demo',
         template: 'node',
