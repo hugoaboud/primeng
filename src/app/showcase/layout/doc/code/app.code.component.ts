@@ -18,7 +18,7 @@ export class AppCodeComponent {
 
     @Input() selector!: string;
 
-    @Input() extFiles!: ExtFile[];
+    @Input() extFiles: ExtFile[] = [];
 
     @Input() hideToggleCode: boolean = false;
 
