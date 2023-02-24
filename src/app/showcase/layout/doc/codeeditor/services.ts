@@ -40,7 +40,7 @@ export class CarService {
         return 2000 + Math.floor(Math.random() * Math.floor(19));
     }
 };`,
-    CountryService:`import { Injectable } from '@angular/core';
+    CountryService: `import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CountryService {

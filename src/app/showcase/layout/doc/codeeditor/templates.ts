@@ -430,7 +430,7 @@ not safari 15.2-15.3`;
 
 const importServices = (service: string[]) => {
     return service.map((s) => `import { ${s} } from 'src/service/${s.toLowerCase()}';`).join('');
-}
+};
 
 const getComponentName = (selector: string) => {
     return selector.split('-').map(el => el.charAt(0).toUpperCase() + el.slice(1)).join('');
@@ -612,11 +612,19 @@ ${code.service ? importServices(code.service) : ''}
     TooltipModule,
     TreeModule,
     TreeTableModule,
+<<<<<<< HEAD
     AnimateModule,
     RouterModule.forRoot([{ path: '', component: ${componentName} }])],
     declarations: [ ${componentName} ],
     bootstrap: [ ${componentName} ],
     providers: [ ${code.service && code.service.length ? code.service.map(s => s).join(', ') : ''} ]
+=======
+    RouterModule.forRoot([{path: '', component: AppComponent}])
+    ],
+    declarations: [ AppComponent ],
+    bootstrap: [ AppComponent ],
+    providers: [ ${code.service && code.service.length ? code.service.map((s) => s).join(', ') : ''} ]
+>>>>>>> fe4725e58c47e16116ad486f9d62fc9e31b4d415
 })
 
 export class AppModule {}`;
@@ -689,7 +697,6 @@ export class AppModule {}`;
     }
 
     return { files };
-}
-
+};
 
 export { getAngularApp };

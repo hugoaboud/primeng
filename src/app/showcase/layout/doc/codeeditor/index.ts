@@ -49,7 +49,7 @@ const useStackBlitz = (props: Props) => {
         openFile: 'src/app/app.component.html'
     };
     // @ts-ignore
-    sdk.openProject(project, options)
+    sdk.openProject(project, options);
 };
 
 export { useStackBlitz, useCodeSandbox };

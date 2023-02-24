@@ -184,7 +184,14 @@ export class AppComponent implements OnInit {
         this.filteredCountries = filtered;
     }
 }`,
-        service: ['CountryService']
+        service: ['CountryService'],
 
+        data: `
+//CountryService
+{
+    "name": "Afghanistan",
+    "code": "AF"
+}
+...`
     };
 }
