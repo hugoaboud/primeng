@@ -26,11 +26,6 @@ export class AutoFocusDemo {
             id: 'props',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'AutoFocus', pathname: '/modules/autofocus.html' }]
         }
     ];
 }
