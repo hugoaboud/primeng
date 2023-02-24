@@ -37,7 +37,7 @@ import { ProductService } from '../../service/productservice';
                         <ng-template pTemplate="body" let-rowData let-product>
                             <tr [pSelectableRow]="rowData">
                                 <td>{{ product.name }}</td>
-                                <td><img src="assets/showcase/images/demo/product/{{ product.image }}" [alt]="product.image" class="w-5rem shadow-2" /></td>
+                                <td><img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.image" class="w-5rem shadow-2" /></td>
                                 <td>{{ product.price }}</td>
                             </tr>
                         </ng-template>
@@ -99,7 +99,7 @@ export class DataTableDocComponent implements OnInit {
             <ng-template pTemplate="body" let-rowData let-product>
                 <tr [pSelectableRow]="rowData">
                     <td>{{product.name}}</td>
-                    <td><img src="assets/showcase/images/demo/product/{{product.image}}" [alt]="product.image" class="w-5rem shadow-2"/></td>
+                    <td><img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}"[alt]="product.image" class="w-5rem shadow-2"/></td>
                     <td>{{product.price}}</td>
                 </tr>
             </ng-template>
@@ -134,7 +134,7 @@ export class DataTableDocComponent implements OnInit {
                 <ng-template pTemplate="body" let-rowData let-product>
                     <tr [pSelectableRow]="rowData">
                         <td>{{product.name}}</td>
-                        <td><img src="assets/showcase/images/demo/product/{{product.image}}" [alt]="product.image" class="w-5rem shadow-2"/></td>
+                        <td><img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}"[alt]="product.image" class="w-5rem shadow-2"/></td>
                         <td>{{product.price}}</td>
                     </tr>
                 </ng-template>
