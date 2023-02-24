@@ -1,6 +1,6 @@
 import pkg from 'package.json';
 import { services } from './services';
-import { Code } from 'src/app/showcase/domain/code';
+import { Code, ExtFile } from 'src/app/showcase/domain/code';
 
 export interface Props {
     code?: Code;
@@ -8,7 +8,7 @@ export interface Props {
     description?: string;
     service?: string[];
     extPages?: object;
-    extFiles?: object;
+    extFiles?: ExtFile[];
     selector?: string;
 }
 
@@ -45,6 +45,25 @@ const getDependencies = () => {
 const checkDependency = (dep: string) => {
     return !(dep.startsWith('jasmine') || dep.startsWith('del') || dep.startsWith('gulp') || dep.startsWith('jspdf') || dep.startsWith('prism') || dep.startsWith('del') || dep.startsWith('@stackblitz'));
 };
+
+const importServices = (service: string[]) => {
+    return service.map((s) => `import { ${s} } from 'src/service/${s.toLowerCase()}';`).join('');
+};
+
+const getComponentName = (selector: string) => {
+    return selector.split('-').map(el => el.charAt(0).toUpperCase() + el.slice(1)).join('');
+}
+
+const getExternalFiles = (files: ExtFile[]) => {
+    const extFiles = {};
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        extFiles[file.path] = { content: file.content };
+
+    }
+
+    return extFiles;
+}
 
 const staticStyles = {
     global: `html {
@@ -428,18 +447,11 @@ Firefox ESR
 not ios_saf 15.2-15.3
 not safari 15.2-15.3`;
 
-const importServices = (service: string[]) => {
-    return service.map((s) => `import { ${s} } from 'src/service/${s.toLowerCase()}';`).join('');
-};
-
-const getComponentName = (selector: string) => {
-    return selector.split('-').map(el => el.charAt(0).toUpperCase() + el.slice(1)).join('');
-}
-
 const getAngularApp =  (props: Props = {}) => {
     const { code, extFiles, extPages, selector } = props;
     const dependencies = getDependencies();
     const componentName = getComponentName(selector);
+    const externalFiles = getExternalFiles(extFiles);
 
     const app_module_ts = `import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -447,7 +459,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ${componentName} } from './${selector}';
+import { ${componentName} } from 'src/app/demo/${selector}';
 
 // Import PrimeNG modules
 import { AccordionModule } from 'primeng/accordion';
@@ -612,19 +624,11 @@ ${code.service ? importServices(code.service) : ''}
     TooltipModule,
     TreeModule,
     TreeTableModule,
-<<<<<<< HEAD
     AnimateModule,
     RouterModule.forRoot([{ path: '', component: ${componentName} }])],
     declarations: [ ${componentName} ],
     bootstrap: [ ${componentName} ],
     providers: [ ${code.service && code.service.length ? code.service.map(s => s).join(', ') : ''} ]
-=======
-    RouterModule.forRoot([{path: '', component: AppComponent}])
-    ],
-    declarations: [ AppComponent ],
-    bootstrap: [ AppComponent ],
-    providers: [ ${code.service && code.service.length ? code.service.map((s) => s).join(', ') : ''} ]
->>>>>>> fe4725e58c47e16116ad486f9d62fc9e31b4d415
 })
 
 export class AppModule {}`;
@@ -682,10 +686,11 @@ export class AppModule {}`;
                 dependencies
             }
         },
-        [`src/app/${selector}.html`]: {content: code.html.trim()},
-        [`src/app/${selector}.ts`]: {content:code.typescript.trim()},
-        [`src/app/${selector}.scss`]: {content:code.scss ? code.scss.trim() : ''},
-        ...defaultFiles
+        [`src/app/demo/${selector}.html`]: {content: code.html.trim()},
+        [`src/app/demo/${selector}.ts`]: {content:code.typescript.trim()},
+        [`src/app/demo/${selector}.scss`]: {content:code.scss ? code.scss.trim() : ''},
+        ...defaultFiles,
+        ...externalFiles
     };
 
     if (code.service) {

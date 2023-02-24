@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, NgModule } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
-import { Code } from 'src/app/showcase/domain/code';
+import { Code, ExtFile } from 'src/app/showcase/domain/code';
 import { CodeHighlighterComponent } from '../codehighlighter/app.codehighlighter.component';
 import { useStackBlitz, useCodeSandbox } from '../codeeditor';
 @Component({
@@ -18,7 +18,7 @@ export class AppCodeComponent {
 
     @Input() selector!: string;
 
-    @Input() extFiles!: any;
+    @Input() extFiles!: ExtFile[];
 
     @Input() hideToggleCode: boolean = false;
 
@@ -69,13 +69,13 @@ export class AppCodeComponent {
 
     openStackBlitz() {
         if (this.code) {
-            useStackBlitz({ code: this.code, selector: this.selector });
+            useStackBlitz({ code: this.code, selector: this.selector, extFiles: this.extFiles });
         }
     }
 
     openCodeSandbox() {
         if (this.code) {
-            useCodeSandbox({code: this.code, selector: this.selector});
+            useCodeSandbox({code: this.code, selector: this.selector, extFiles: this.extFiles});
         }
     }
 }
