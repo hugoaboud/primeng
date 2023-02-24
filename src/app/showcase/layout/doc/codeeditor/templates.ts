@@ -51,19 +51,23 @@ const importServices = (service: string[]) => {
 };
 
 const getComponentName = (selector: string) => {
-    return selector.split('-').map(el => el.charAt(0).toUpperCase() + el.slice(1)).join('');
-}
+    return selector
+        .split('-')
+        .map((el) => el.charAt(0).toUpperCase() + el.slice(1))
+        .join('');
+};
 
 const getExternalFiles = (files: ExtFile[]) => {
     const extFiles = {};
-    for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-        extFiles[file.path] = { content: file.content };
-
+    if (files && files.length > 0) {
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            extFiles[file.path] = { content: file.content };
+        }
     }
 
     return extFiles;
-}
+};
 
 const staticStyles = {
     global: `html {
@@ -447,7 +451,7 @@ Firefox ESR
 not ios_saf 15.2-15.3
 not safari 15.2-15.3`;
 
-const getAngularApp =  (props: Props = {}) => {
+const getAngularApp = (props: Props = {}) => {
     const { code, extFiles, extPages, selector } = props;
     const dependencies = getDependencies();
     const componentName = getComponentName(selector);
@@ -628,7 +632,7 @@ ${code.service ? importServices(code.service) : ''}
     RouterModule.forRoot([{ path: '', component: ${componentName} }])],
     declarations: [ ${componentName} ],
     bootstrap: [ ${componentName} ],
-    providers: [ ${code.service && code.service.length ? code.service.map(s => s).join(', ') : ''} ]
+    providers: [ ${code.service && code.service.length ? code.service.map((s) => s).join(', ') : ''} ]
 })
 
 export class AppModule {}`;
@@ -667,7 +671,7 @@ export class AppModule {}`;
         'src/index.html': { content: index_html },
         'src/karma.conf.js': { content: karma_conf_js },
         'src/styles.scss': { content: staticStyles.global },
-        'src/flags.css': { content: staticStyles.flags },
+        'src/flags.css': { content: staticStyles.flags }
     };
 
     const files = {
@@ -675,7 +679,7 @@ export class AppModule {}`;
             content: {
                 name: 'primeng-demo',
                 description: 'PrimeNG Demo',
-                licence: "MIT",
+                licence: 'MIT',
                 keywords: [],
                 scripts: {
                     ng: 'ng',
@@ -686,9 +690,9 @@ export class AppModule {}`;
                 dependencies
             }
         },
-        [`src/app/demo/${selector}.html`]: {content: code.html.trim()},
-        [`src/app/demo/${selector}.ts`]: {content:code.typescript.trim()},
-        [`src/app/demo/${selector}.scss`]: {content:code.scss ? code.scss.trim() : ''},
+        [`src/app/demo/${selector}.html`]: { content: code.html.trim() },
+        [`src/app/demo/${selector}.ts`]: { content: code.typescript.trim() },
+        [`src/app/demo/${selector}.scss`]: { content: code.scss ? code.scss.trim() : '' },
         ...defaultFiles,
         ...externalFiles
     };
