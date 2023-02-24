@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { ImportDocComponent } from '../../doc/carousel/importdoc';
-import { BasicDocComponent } from '../../doc/carousel/basicdoc';
+import { CarouselBasicDemo } from '../../doc/carousel/basicdoc';
 import { PropsDocComponent } from '../../doc/carousel/propsdoc';
 import { StyleDocComponent } from '../../doc/carousel/styledoc';
-import { CircularDocComponent } from '../../doc/carousel/circulardoc';
-import { NumScrollDocComponent } from '../../doc/carousel/numscrolldoc';
+import { CarouselCircularDemo } from '../../doc/carousel/circulardoc';
+import { NumScrollDemo } from '../../doc/carousel/numscrolldoc';
 import { ResponsiveDocComponent } from '../../doc/carousel/responsivedoc';
-import { VerticalDocComponent } from '../../doc/carousel/verticaldoc';
+import { CarouselVerticalDemoComponent } from '../../doc/carousel/verticaldoc';
+import { CarouselCustomContentDemo } from '../../doc/carousel/templatedoc';
 
 @Component({
     templateUrl: './carouseldemo.html',
@@ -22,17 +23,22 @@ export class CarouselDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: CarouselBasicDemo
         },
         {
             id: 'circular',
             label: 'Circular',
-            component: CircularDocComponent
+            component: CarouselCircularDemo
         },
         {
             id: 'numscroll',
             label: 'Num Scroll',
-            component: NumScrollDocComponent
+            component: NumScrollDemo
+        },
+        {
+            id: 'custom',
+            label: 'Custom Content',
+            component: CarouselCustomContentDemo
         },
         {
             id: 'responsive',
@@ -42,7 +48,7 @@ export class CarouselDemo {
         {
             id: 'vertical',
             label: 'Vertical',
-            component: VerticalDocComponent
+            component: CarouselVerticalDemoComponent
         },
         {
             id: 'style',
@@ -56,11 +62,6 @@ export class CarouselDemo {
             id: 'props',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Carousel', pathname: '/modules/carousel.html' }]
         }
     ];
 }

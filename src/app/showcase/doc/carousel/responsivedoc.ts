@@ -19,7 +19,7 @@ import { ProductService } from '../../service/productservice';
                     <div class="product-item">
                         <div class="product-item-content">
                             <div class="mb-3">
-                                <img src="assets/showcase/images/demo/product/{{ product.image }}" [alt]="product.name" class="product-image" />
+                                <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="product-image" />
                             </div>
                             <div>
                                 <h4 class="mb-1">{{ product.name }}</h4>
@@ -36,9 +36,8 @@ import { ProductService } from '../../service/productservice';
                 </ng-template>
             </p-carousel>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [ProductService]
+        <app-code [code]="code" selector="carousel-responsive-demo" [extFiles]="extFiles"></app-code>
+    </div>`
 })
 export class ResponsiveDocComponent implements OnInit {
     @Input() id: string;
@@ -79,7 +78,23 @@ export class ResponsiveDocComponent implements OnInit {
         basic: `
 <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions">
     <ng-template let-product pTemplate="item">
-        //content
+        <div class="product-item">
+            <div class="product-item-content">
+                <div class="mb-3">
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="product-image" />
+                </div>
+                <div>
+                    <h4 class="mb-1">{{ product.name }}</h4>
+                    <h6 class="mt-0 mb-3">{{ product.price }}</h6>
+                    <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{ product.inventoryStatus }}</span>
+                    <div class="car-buttons mt-5">
+                        <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                        <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                        <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </ng-template>
 </p-carousel>`,
         html: `
@@ -89,12 +104,12 @@ export class ResponsiveDocComponent implements OnInit {
             <div class="product-item">
                 <div class="product-item-content">
                     <div class="mb-3">
-                        <img src="assets/showcase/images/demo/product/{{product.image}}" [alt]="product.name" class="product-image" />
+                        <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="product-image" />
                     </div>
                     <div>
-                        <h4 class="mb-1">{{product.name}}</h4>
-                        <h6 class="mt-0 mb-3">{{product.price}}</h6>
-                        <span [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+                        <h4 class="mb-1">{{ product.name }}</h4>
+                        <h6 class="mt-0 mb-3">{{ product.price }}</h6>
+                        <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{ product.inventoryStatus }}</span>
                         <div class="car-buttons mt-5">
                             <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
                             <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
@@ -109,18 +124,17 @@ export class ResponsiveDocComponent implements OnInit {
         typescript: `
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../domain/product';
-import { ProductService } from '../../service/product.service';
+import { ProductService } from '../../service/productservice';
 
 @Component({
-    templateUrl: './carouseldemo.html',
-    styleUrls: ['./carouseldemo.scss']
-    providers: [ProductService]
+    selector: 'carousel-responsive-demo',
+    templateUrl: './carousel-responsive-demo.html',
+    styleUrls: ['./carousel-responsive-demo.scss']
 })
+export class CarouselResponsiveDemo {
+    products!: Product[];
 
-export class CarouselDemo {
-    products: Product[];
-
-    responsiveOptions: any[];
+    responsiveOptions!: any[];
 
     constructor(private productService: ProductService) {}
 
@@ -179,6 +193,28 @@ export class CarouselDemo {
     inventoryStatus: 'INSTOCK',
     rating: 5
 },
-...`
+...`,
+        service: ['ProductService']
     };
+
+
+    extFiles = [
+        {
+            path: 'src/domain/product.ts',
+            content: `
+export interface Product {
+    id?: string;
+    code?: string;
+    name?: string;
+    description?: string;
+    price?: number;
+    quantity?: number;
+    inventoryStatus?: string;
+    category?: string;
+    image?: string;
+    rating?: number;
+}`
+        }
+    ]
+
 }
