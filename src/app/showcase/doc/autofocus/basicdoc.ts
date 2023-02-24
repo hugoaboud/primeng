@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'autofocus-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>AutoFocus is applied to any focusable input element on initial load. It's disabled by default and needs to be enabled manually.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <input type="text" pInputText pAutoFocus [autofocus]="true" placeholder="Automatically focused" />
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="autoFocus-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class AutoFocusBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -29,7 +29,8 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './autofocusdemo.html'
+    selector:'autofocus-basic-demo'
+    templateUrl: './autofocus-basic-demo.html'
 })
 
 export class AutoFocusDemo {

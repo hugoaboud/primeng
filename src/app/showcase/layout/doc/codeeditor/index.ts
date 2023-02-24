@@ -42,7 +42,7 @@ const useStackBlitz = (props: Props) => {
         description:
             'PrimeNG is an open source UI library for Angular featuring a rich set of 90+ components, a theme designer, various theme alternatives such as Material, Bootstrap, Tailwind, premium templates and professional support. In addition, it integrates with PrimeBlock, which has 370+ ready to use UI blocks to build spectacular applications in no time.',
         files: _files
-    };
+    }
 
     const options = {
         newWindow: true,

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ImportDocComponent } from '../../doc/autofocus/importdoc';
-import { BasicDocComponent } from '../../doc/autofocus/basicdoc';
+import { AutoFocusBasicDemo } from '../../doc/autofocus/basicdoc';
 import { PropsDocComponent } from '../../doc/autofocus/propsdoc';
 
 @Component({
@@ -17,7 +17,7 @@ export class AutoFocusDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: AutoFocusBasicDemo
         }
     ];
 
