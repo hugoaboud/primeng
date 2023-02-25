@@ -27,6 +27,7 @@ import { AppFooterComponent } from './footer/app.footer.component';
 import { AppMenuModule } from './menu/app.menu.module';
 import { AppNewsComponent } from './news/app.news.component';
 import { AppTopbarModule } from './topbar/app.topbar.module';
+
 @NgModule({
     declarations: [AppComponent, AppNewsComponent, AppFooterComponent, AppMainComponent],
     imports: [FormsModule, ReactiveFormsModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, LandingModule, AppDemoActionsModule, AppConfigModule, AppTopbarModule, AppMenuModule],

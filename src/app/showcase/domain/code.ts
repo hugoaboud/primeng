@@ -5,7 +5,7 @@ export interface Code {
     scss?: string;
     data?: string;
     module?: string;
-    routeFiles?: object;
+    routerModule?: string;
     component?: string;
     service?: string[];
     imports?: string[];
@@ -15,4 +15,8 @@ export interface Code {
 export interface ExtFile {
     path: string;
     content: string;
+}
+
+export interface RouteFile extends ExtFile {
+    name: string;
 }

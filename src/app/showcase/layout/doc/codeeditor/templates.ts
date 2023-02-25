@@ -1,6 +1,6 @@
 import pkg from 'package.json';
 import { services } from './services';
-import { Code, ExtFile } from 'src/app/showcase/domain/code';
+import { Code, ExtFile, RouteFile } from 'src/app/showcase/domain/code';
 
 export interface Props {
     code?: Code;
@@ -9,6 +9,7 @@ export interface Props {
     service?: string[];
     extPages?: object;
     extFiles?: ExtFile[];
+    routeFiles?: RouteFile[];
     selector?: string;
 }
 
@@ -67,6 +68,15 @@ const getExternalFiles = (files: ExtFile[]) => {
     }
 
     return extFiles;
+};
+
+const getRouteFiles = (files: RouteFile[]) => {
+    let routeFiles = '';
+    files.forEach((file) => {
+        routeFiles += `import { ${file.name} } from 'src/app/demo/${file.name.toLowerCase()}';\n`;
+    });
+
+    return routeFiles;
 };
 
 const staticStyles = {
@@ -452,10 +462,15 @@ not ios_saf 15.2-15.3
 not safari 15.2-15.3`;
 
 const getAngularApp = (props: Props = {}) => {
-    const { code, extFiles, extPages, selector } = props;
+    const { code, extFiles, routeFiles, selector } = props;
     const dependencies = getDependencies();
     const componentName = getComponentName(selector);
     const externalFiles = getExternalFiles(extFiles);
+    const _routeFiles = getExternalFiles(routeFiles);
+    const routeImports = getRouteFiles(routeFiles);
+    const routerModule = code.routerModule ? code.routerModule : `RouterModule.forRoot([{ path: '', component: ${componentName} }])`;
+    const declarations = routeFiles && routeFiles.length ? (componentName ? routeFiles.map((r) => r.name).join(', ') + ',' + componentName : routeFiles.map((r) => r.name).join(', ')) : `${componentName}`;
+    const providers = code.service && code.service.length ? code.service.map((s) => s).join(', ') : '';
 
     const app_module_ts = `import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -464,6 +479,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ${componentName} } from 'src/app/demo/${selector}';
+${routeImports}
 
 // Import PrimeNG modules
 import { AccordionModule } from 'primeng/accordion';
@@ -543,6 +559,7 @@ import { TooltipModule } from 'primeng/tooltip';
 import { TreeModule } from 'primeng/tree';
 import { TreeTableModule } from 'primeng/treetable';
 import { AnimateModule } from 'primeng/animate';
+import { CardModule } from 'primeng/card';
 ${code.service ? importServices(code.service) : ''}
 
 @NgModule({
@@ -629,10 +646,11 @@ ${code.service ? importServices(code.service) : ''}
     TreeModule,
     TreeTableModule,
     AnimateModule,
-    RouterModule.forRoot([{ path: '', component: ${componentName} }])],
-    declarations: [ ${componentName} ],
+    CardModule,
+    ${routerModule}],
+    declarations: [ ${declarations} ],
     bootstrap: [ ${componentName} ],
-    providers: [ ${code.service && code.service.length ? code.service.map((s) => s).join(', ') : ''} ]
+    providers: [ ${providers} ]
 })
 
 export class AppModule {}`;
@@ -694,7 +712,8 @@ export class AppModule {}`;
         [`src/app/demo/${selector}.ts`]: { content: code.typescript.trim() },
         [`src/app/demo/${selector}.scss`]: { content: code.scss ? code.scss.trim() : '' },
         ...defaultFiles,
-        ...externalFiles
+        ...externalFiles,
+        ..._routeFiles
     };
 
     if (code.service) {

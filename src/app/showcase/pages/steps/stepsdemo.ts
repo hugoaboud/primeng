@@ -7,6 +7,7 @@ import { MethodsDocComponent } from '../../doc/steps/methodsdoc';
 import { PropsDocComponent } from '../../doc/steps/propsdoc';
 import { StyleDocComponent } from '../../doc/steps/styledoc';
 import { EventsDocComponent } from '../../doc/steps/eventsdoc';
+import { StepsRoutingDemo } from '../../doc/steps/routingdoc';
 
 @Component({
     templateUrl: './stepsdemo.html',
@@ -28,6 +29,11 @@ export class StepsDemo {
             id: 'interactive',
             label: 'Interactive',
             component: InteractiveDocComponent
+        },
+        {
+            id: 'routing',
+            label: 'Routing',
+            component: StepsRoutingDemo
         },
         {
             id: 'style',
