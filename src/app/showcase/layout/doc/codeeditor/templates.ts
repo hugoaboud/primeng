@@ -7,7 +7,6 @@ export interface Props {
     title?: string;
     description?: string;
     service?: string[];
-    extPages?: object;
     extFiles?: ExtFile[];
     routeFiles?: RouteFile[];
     selector?: string;
