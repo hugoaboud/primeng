@@ -197,7 +197,6 @@ export class CarouselResponsiveDemo {
         service: ['ProductService']
     };
 
-
     extFiles = [
         {
             path: 'src/domain/product.ts',
@@ -215,6 +214,5 @@ export interface Product {
     rating?: number;
 }`
         }
-    ]
-
+    ];
 }

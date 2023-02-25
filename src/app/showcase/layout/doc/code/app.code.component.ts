@@ -77,7 +77,7 @@ export class AppCodeComponent {
 
     openCodeSandbox() {
         if (this.code) {
-            useCodeSandbox({code: this.code, selector: this.selector, extFiles: this.extFiles, routeFiles: this.routeFiles});
+            useCodeSandbox({ code: this.code, selector: this.selector, extFiles: this.extFiles, routeFiles: this.routeFiles });
         }
     }
 }

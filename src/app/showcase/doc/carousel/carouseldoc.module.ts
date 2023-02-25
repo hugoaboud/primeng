@@ -18,7 +18,7 @@ import { CarouselVerticalDemoComponent } from './verticaldoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, CarouselModule, ButtonModule],
-    declarations: [ImportDocComponent, CarouselBasicDemo, CarouselCircularDemo, EventsDocComponent,NumScrollDemo, PropsDocComponent, StyleDocComponent, ResponsiveDocComponent, CarouselCustomContentDemo, CarouselVerticalDemoComponent],
+    declarations: [ImportDocComponent, CarouselBasicDemo, CarouselCircularDemo, EventsDocComponent, NumScrollDemo, PropsDocComponent, StyleDocComponent, ResponsiveDocComponent, CarouselCustomContentDemo, CarouselVerticalDemoComponent],
     exports: [AppDocModule]
 })
 export class CarouselDocModule {}

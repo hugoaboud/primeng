@@ -46,7 +46,7 @@ const checkDependency = (dep: string) => {
     return !(dep.startsWith('jasmine') || dep.startsWith('del') || dep.startsWith('gulp') || dep.startsWith('jspdf') || dep.startsWith('prism') || dep.startsWith('del') || dep.startsWith('@stackblitz'));
 };
 
-const importServices = (service: string[]) => {
+const getServiceImports = (service: string[]) => {
     return service.map((s) => `import { ${s} } from 'src/service/${s.toLowerCase()}';`).join('');
 };
 
@@ -69,13 +69,13 @@ const getExternalFiles = (files: ExtFile[]) => {
     return extFiles;
 };
 
-const getRouteFiles = (files: RouteFile[]) => {
+const getRouteImports = (files: RouteFile[], selector?: string) => {
     let routeFiles = '';
     files.forEach((file) => {
         routeFiles += `import { ${file.name} } from 'src/app/demo/${file.name.toLowerCase()}';\n`;
     });
 
-    return routeFiles;
+    return selector ? routeFiles + `import { ${getComponentName(selector)} } from 'src/app/demo/${selector}';` : routeFiles;
 };
 
 const staticStyles = {
@@ -466,7 +466,8 @@ const getAngularApp = (props: Props = {}) => {
     const componentName = getComponentName(selector);
     const externalFiles = getExternalFiles(extFiles);
     const _routeFiles = getExternalFiles(routeFiles);
-    const routeImports = getRouteFiles(routeFiles);
+    const routeImports = getRouteImports(routeFiles, selector);
+    const serviceImports = code.service ? getServiceImports(code.service) : '';
     const routerModule = code.routerModule ? code.routerModule : `RouterModule.forRoot([{ path: '', component: ${componentName} }])`;
     const declarations = routeFiles && routeFiles.length ? (componentName ? routeFiles.map((r) => r.name).join(', ') + ',' + componentName : routeFiles.map((r) => r.name).join(', ')) : `${componentName}`;
     const providers = code.service && code.service.length ? code.service.map((s) => s).join(', ') : '';
@@ -477,7 +478,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ${componentName} } from 'src/app/demo/${selector}';
 ${routeImports}
 
 // Import PrimeNG modules
@@ -559,7 +559,7 @@ import { TreeModule } from 'primeng/tree';
 import { TreeTableModule } from 'primeng/treetable';
 import { AnimateModule } from 'primeng/animate';
 import { CardModule } from 'primeng/card';
-${code.service ? importServices(code.service) : ''}
+${serviceImports}
 
 @NgModule({
   imports: [
@@ -694,8 +694,8 @@ export class AppModule {}`;
     const files = {
         'package.json': {
             content: {
-                name: 'primeng-demo',
-                description: 'PrimeNG Demo',
+                name: `primeng-${selector}`,
+                description: `PrimeNG ${componentName}`,
                 licence: 'MIT',
                 keywords: [],
                 scripts: {
@@ -723,7 +723,7 @@ export class AppModule {}`;
         });
     }
 
-    return { files };
+    return { files, title: `PrimeNG ${componentName}` };
 };
 
 export { getAngularApp };

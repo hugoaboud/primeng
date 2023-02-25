@@ -190,8 +190,8 @@ export class NumScrollDemo implements OnInit {
     rating: 5
 },
 ...`,
-    service: ['ProductService']
-};
+        service: ['ProductService']
+    };
 
     extFiles = [
         {
@@ -210,5 +210,5 @@ image?: string;
 rating?: number;
 }`
         }
-    ]   
+    ];
 }

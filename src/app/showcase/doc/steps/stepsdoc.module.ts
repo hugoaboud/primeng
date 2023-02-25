@@ -27,20 +27,22 @@ import { StyleDocComponent } from './styledoc';
 import { TicketService } from '../../service/ticketservice';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        AppCodeModule,
-        StepsModule,
-        ToastModule,
-        AppDocModule,
-        FormsModule,
-        DropdownModule,
-        InputTextModule,
-        InputMaskModule,
-        CheckboxModule,
-        CardModule
+    imports: [CommonModule, AppCodeModule, StepsModule, ToastModule, AppDocModule, FormsModule, DropdownModule, InputTextModule, InputMaskModule, CheckboxModule, CardModule],
+    declarations: [
+        BasicDocComponent,
+        ImportDocComponent,
+        MenuItemDocComponent,
+        MethodsDocComponent,
+        PropsDocComponent,
+        StyleDocComponent,
+        InteractiveDocComponent,
+        EventsDocComponent,
+        ConfirmationDemo,
+        PaymentDemo,
+        PersonalDemo,
+        SeatDemo,
+        StepsRoutingDemo
     ],
-    declarations: [BasicDocComponent, ImportDocComponent, MenuItemDocComponent, MethodsDocComponent, PropsDocComponent, StyleDocComponent, InteractiveDocComponent, EventsDocComponent, ConfirmationDemo, PaymentDemo, PersonalDemo, SeatDemo, StepsRoutingDemo],
     exports: [AppDocModule],
     providers: [TicketService]
 })

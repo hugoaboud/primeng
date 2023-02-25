@@ -449,5 +449,4 @@ export class ConfirmationDemo implements OnInit {
 }`
         }
     ];
-
 }

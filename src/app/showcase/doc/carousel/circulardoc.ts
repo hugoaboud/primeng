@@ -36,7 +36,6 @@ import { ProductService } from '../../service/productservice';
     </div>`
 })
 export class CarouselCircularDemo implements OnInit {
-
     @Input() id: string;
 
     @Input() title: string;
@@ -194,7 +193,7 @@ export class CarouselCircularDemo implements OnInit{
         service: ['ProductService']
     };
 
-        extFiles = [
+    extFiles = [
         {
             path: 'src/domain/product.ts',
             content: `
