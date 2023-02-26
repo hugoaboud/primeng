@@ -5,8 +5,7 @@ import { AppMainComponent } from './app.main.component';
 
 const routerOptions: ExtraOptions = {
     anchorScrolling: 'enabled',
-    scrollPositionRestoration: 'enabled',
-    useHash: false
+    scrollPositionRestoration: 'enabled'
 };
 
 const routes: Routes = [

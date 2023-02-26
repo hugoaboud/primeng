@@ -1,8 +1,8 @@
 <h2 *ngIf="level === 2" class="doc-section-label" [id]="id">{{title}}
-    <a [id]="id" href="#" class="hidden">#</a>
+    <a [id]="id" (click)="navigate()" class="cursor-pointer">#</a>
 </h2>
 <h3 *ngIf="level === 3" class="doc-section-label" [id]="id">{{title}}
-    <a [id]="id" href="#" class="hidden">#</a>
+    <a [id]="id" (click)="navigate()">#</a>
 </h3>
 <div class="doc-section-description">
     <ng-content></ng-content>
