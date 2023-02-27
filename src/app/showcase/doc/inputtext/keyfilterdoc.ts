@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'keyfilter-doc',
+    selector: 'inputtext-keyfilter-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>InputText has built-in key filtering support to block certain keys, refer to <a href="/keyfilter">keyfilter</a> page for more information.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <input pInputText pKeyFilter="int" placeholder="Integers" [(ngModel)]="value" />
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputtext-keyfilter-demo"></app-code>
     </div>`
 })
 export class KeyFilterDocComponent {
@@ -33,10 +33,11 @@ export class KeyFilterDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputtextdemo.html'
+    selector: 'inputtext-keyfilter-demo',
+    templateUrl: './inputtext-keyfilter-demo.html',
+    styleUrls: ['./inputtext-keyfilter-demo.scss']
 })
-
-export class InputTextDemo {
+export class InputtextKeyfilterDemo {
     value: number;
 }`
     };

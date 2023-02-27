@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'inputtext-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>InputText is applied to an input field with pInputText directive.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <input type="text" pInputText [(ngModel)]="value" />
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputtext-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent {
@@ -33,10 +33,11 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputtextdemo.html'
+    selector: 'inputtext-basic-demo',
+    templateUrl: './inputtext-basic-demo.html',
+    styleUrls: ['./inputtext-basic-demo.scss']
 })
-
-export class InputTextDemo {
+export class InputtextBasicDemo {
     value: string;
 }`
     };
