@@ -18,6 +18,6 @@ import { PropsDocComponent } from './propsdoc';
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, BadgeModule, ButtonModule],
     declarations: [ImportDocComponent, BasicDocComponent, ButtonDocComponent, DirectiveDocComponent, PositionDocComponent, SeverityDocComponent, SizeDocComponent, StyleDocComponent, PropsDocComponent],
-    exports: [ImportDocComponent, BasicDocComponent, ButtonDocComponent, DirectiveDocComponent, PositionDocComponent, SeverityDocComponent, SizeDocComponent, StyleDocComponent, PropsDocComponent]
+    exports: [AppDocModule]
 })
 export class BadgeDocModule {}

@@ -7,7 +7,7 @@ import { AvatarDemo } from './avatardemo';
 import { AvatarDemoRoutingModule } from './avatardemo-routing.module';
 
 @NgModule({
-    imports: [CommonModule, AvatarDemoRoutingModule, AppDemoActionsModule, AppDocModule, AvatarDocModule],
+    imports: [CommonModule, AvatarDemoRoutingModule, AppDemoActionsModule, AvatarDocModule],
     declarations: [AvatarDemo]
 })
 export class AvatarDemoModule {}
