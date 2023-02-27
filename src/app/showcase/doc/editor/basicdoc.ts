@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'editor-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Two-way value binding is defined with ngModel.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-editor [(ngModel)]="text" [style]="{ height: '320px' }"></p-editor>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="editor-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent {
@@ -33,10 +33,11 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './editordemo.html'
+    selector: 'editor-basic-demo',
+    templateUrl: './editor-basic-demo.html',
+    styleUrls: ['./editor-basic-demo.scss']
 })
-
-export class EditorDemo {
+export class EditorBasicDemo {
     text: string;
 }`
     };

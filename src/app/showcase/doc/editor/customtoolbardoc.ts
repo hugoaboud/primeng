@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'customtoolbar-doc',
+    selector: 'editor-customtoolbar-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Editor provides a default toolbar with common options, to customize it define your elements inside the header element. Refer to <a href="http://quilljs.com/docs/modules/toolbar/">Quill documentation</a> for available controls.</p>
@@ -18,7 +18,7 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-editor>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="editor-customtoolbar-demo"></app-code>
     </div>`
 })
 export class CustomToolbarDocComponent {
@@ -57,10 +57,12 @@ export class CustomToolbarDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './editordemo.html'
+    selector: 'editor-customtoolbar-demo',
+    templateUrl: './editor-customtoolbar-demo.html',
+    styleUrls: ['./editor-customtoolbar-demo.scss']
 })
 
-export class EditorDemo {
+export class EditorCustomtoolbarDemo {
     text: string = 'Hello World!';
 }`
     };
