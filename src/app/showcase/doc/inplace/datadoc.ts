@@ -4,7 +4,7 @@ import { Code } from '../../domain/code';
 import { CarService } from '../../service/carservice';
 
 @Component({
-    selector: 'data-doc',
+    selector: 'inplace-data-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
         <div class="card">
@@ -37,10 +37,10 @@ import { CarService } from '../../service/carservice';
                 </ng-template>
             </p-inplace>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inplace-data-demo"></app-code>
     </div>`
 })
-export class DataDocComponent {
+export class InplaceDataDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -100,10 +100,10 @@ import { Car } from '../../domain/car';
 import { CarService } from '../../service/car.service';
 
 @Component({
-    templateUrl: './inplacedemo.html'
+    selector: 'inplace-data-demo',
+    templateUrl: './inplace-data-demo.html'
 })
-
-export class InplaceDemo {
+export class InplaceDataDemo {
     cars: Car[];
 
     constructor(private carService: CarService) {}

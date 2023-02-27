@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'input-doc',
+    selector: 'inplace-input-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Inplace can be used within a form to display a value as read only before making it editable. The <i>closable</i> property adds a close button next to the content to switch back to read only mode.</p>
@@ -15,10 +15,10 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-inplace>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inplace-input-demo"></app-code>
     </div>`
 })
-export class InputDocComponent {
+export class InplaceInputDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -46,10 +46,9 @@ export class InputDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inplacedemo.html'
+    selector: 'inplace-input-demo',
+    templateUrl: './inplace-input-demo.html'
 })
-
-export class InplaceDemo {
-}`
+export class InplaceInputDemo {}`
     };
 }

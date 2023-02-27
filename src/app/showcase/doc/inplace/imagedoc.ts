@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'image-doc',
+    selector: 'inplace-image-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Any content such as an image can be placed inside an Inplace.</p>
@@ -20,10 +20,10 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-inplace>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inplace-image-doc"></app-code>
     </div>`
 })
-export class ImageDocComponent {
+export class InplaceImageDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -59,10 +59,9 @@ export class ImageDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inplacedemo.html'
+    selector: 'inplace-image-doc',
+    templateUrl: './inplace-image-doc.html'
 })
-
-export class InplaceDemo {
-}`
+export class InplaceImageDemo {}`
     };
 }

@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'inplace-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p><i>Inplace</i> component requires <i>display</i> and <i>content</i> templates to define the content of each state.</p>
@@ -20,10 +20,10 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-inplace>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inplace-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class InplaceBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -56,10 +56,9 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inplacedemo.html'
+    selector: 'inplace-basic-demo',
+    templateUrl: './inplace-basic-demo'
 })
-
-export class InplaceDemo {
-}`
+export class InplaceBasicDemo {}`
     };
 }
