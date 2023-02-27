@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'badge-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Content of the badge is specified using the <i>value</i> property.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-badge [value]="2"></p-badge>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="badge-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class BadgeBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -29,10 +29,10 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './badgedemo.html'
+    selector: 'badge-basic-demo',
+    templateUrl: './badge-basic-demo.html'
 })
 
-export class BadgeDemo {
-}`
+export class BadgeBasicDemo {}`
     };
 }

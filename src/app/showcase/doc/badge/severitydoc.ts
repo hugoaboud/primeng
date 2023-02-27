@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'severity-doc',
+    selector: 'badge-severity-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Severity defines the color of the badge, possible values are <i>success</i>, <i>info</i>, <i>warning</i> and <i>danger</i></p>
@@ -13,10 +13,10 @@ import { Code } from '../../domain/code';
             <p-badge [value]="3" severity="warning"></p-badge>
             <p-badge [value]="12" severity="danger"></p-badge>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="badge-severity-demo"></app-code>
     </div>`
 })
-export class SeverityDocComponent {
+export class BadgeSeverityDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -35,10 +35,9 @@ export class SeverityDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './badgedemo.html'
+    selector: 'badge-severity-demo',
+    templateUrl: './badge-severity-demo.html'
 })
-
-export class BadgeDemo {
-}`
+export class BadgeSeverityDemo {}`
     };
 }

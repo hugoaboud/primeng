@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { ImportDocComponent } from '../../doc/badge/importdoc';
-import { SizeDocComponent } from '../../doc/badge/sizedoc';
-import { BasicDocComponent } from '../../doc/badge/basicdoc';
-import { ButtonDocComponent } from '../../doc/badge/buttondoc';
-import { DirectiveDocComponent } from '../../doc/badge/directivedoc';
-import { PositionDocComponent } from '../../doc/badge/positiondoc';
-import { SeverityDocComponent } from '../../doc/badge/severitydoc';
+import { BadgeSizeDemo } from '../../doc/badge/sizedoc';
+import { BadgeBasicDemo } from '../../doc/badge/basicdoc';
+import { BadgeButtonDemo } from '../../doc/badge/buttondoc';
+import { BadgeDirectiveDemo } from '../../doc/badge/directivedoc';
+import { BadgePositionDemo } from '../../doc/badge/positiondoc';
+import { BadgeSeverityDemo } from '../../doc/badge/severitydoc';
 import { StyleDocComponent } from '../../doc/badge/styledoc';
 import { PropsDocComponent } from '../../doc/badge/propsdoc';
 
@@ -22,32 +22,32 @@ export class BadgeDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BadgeBasicDemo
         },
         {
             id: 'directive',
             label: 'Directive',
-            component: DirectiveDocComponent
+            component: BadgeDirectiveDemo
         },
         {
             id: 'severity',
             label: 'Severity',
-            component: SeverityDocComponent
+            component: BadgeSeverityDemo
         },
         {
             id: 'size',
             label: 'Size',
-            component: SizeDocComponent
+            component: BadgeSizeDemo
         },
         {
             id: 'position',
             label: 'Position',
-            component: PositionDocComponent
+            component: BadgePositionDemo
         },
         {
             id: 'button',
             label: 'Button',
-            component: ButtonDocComponent
+            component: BadgeButtonDemo
         },
         {
             id: 'style',

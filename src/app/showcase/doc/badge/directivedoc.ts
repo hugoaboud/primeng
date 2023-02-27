@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'directive-doc',
+    selector: 'badge-directive-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Content of the badge is specified using the <i>value</i> property.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <i class="pi pi-bell text-3xl" pBadge value="2"></i>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="badge-directive-demo"></app-code>
     </div>`
 })
-export class DirectiveDocComponent {
+export class BadgeDirectiveDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -29,10 +29,9 @@ export class DirectiveDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './badgedemo.html'
+    selector: 'badge-directive-demo',
+    templateUrl: './badge-directive-demo.html'
 })
-
-export class BadgeDemo {
-}`
+export class BadgeDirectiveDemo {}`
     };
 }

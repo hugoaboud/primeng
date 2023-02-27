@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'size-doc',
+    selector: 'badge-size-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Badge sizes are adjusted with the <i>size</i> property that accepts <i>large</i> and <i>xlarge</i> as the possible alternatives to the default size. Currently sizes only apply to component mode.</p>
@@ -12,10 +12,10 @@ import { Code } from '../../domain/code';
             <p-badge value="4" size="large" severity="warning"></p-badge>
             <p-badge value="6" size="xlarge" severity="success"></p-badge>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="badge-size-demo"></app-code>
     </div>`
 })
-export class SizeDocComponent {
+export class BadgeSizeDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -33,10 +33,9 @@ export class SizeDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './badgedemo.html'
+    selector: 'badge-size-demo',
+    templateUrl: './badge-size-demo.html'
 })
-
-export class BadgeDemo {
-}`
+export class BadgeSizeDemo {}`
     };
 }
