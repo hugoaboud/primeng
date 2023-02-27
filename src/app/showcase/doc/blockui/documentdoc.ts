@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'document-doc',
+    selector: 'block-ui-document-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Enabling <i>fullScreen</i> property controls the document.</p>
@@ -11,10 +11,10 @@ import { Code } from '../../domain/code';
             <p-blockUI [blocked]="blockedDocument"></p-blockUI>
             <button type="button" pButton pRipple label="Block" (click)="blockDocument()"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="block-ui-document-demo"></app-code>
     </div>`
 })
-export class DocumentDocComponent {
+export class BlockUIDocumentDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -40,10 +40,10 @@ export class DocumentDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './blockuidemo.html'
+    selector: 'block-ui-document-demo',
+    templateUrl: './block-ui-document-demo.html'
 })
-
-export class BlockUIDemo {
+export class BlockUIDocumentDemo {
     blockedDocument: boolean = false;
 
     blockDocument() {

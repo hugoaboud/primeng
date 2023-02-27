@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'block-ui-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>The element to block should be placed as a child of BlockUI and <i>blocked</i> property is required to control the state.</p>
@@ -20,10 +20,10 @@ import { Code } from '../../domain/code';
                 </p>
             </p-panel>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="block-ui-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class BlockUIBasicDemo {
     blockedPanel: boolean = false;
 
     @Input() id: string;
@@ -61,10 +61,10 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './blockuidemo.html'
+    selector: 'block-ui-basic-demo',
+    templateUrl: './block-ui-basic-demo.html'
 })
-
-export class BlockUIDemo {
+export class BlockUIBasicDemo {
     blockedPanel: boolean = false;
 }`
     };
