@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'dropdown-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -26,7 +26,7 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-dropdown>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="dropdown-template-demo"></app-code>
     </div>`
 })
 export class TemplateDocComponent {
@@ -92,9 +92,11 @@ export class TemplateDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './dropdowndemo.html'
+    selector: 'dropdown-template-demo',
+    templateUrl: './dropdown-template-demo.html',
+    styleUrls: ['./dropdown-template-demo.scss']
 })
-export class DropdownDemo {
+export class DropdownTemplateDemo {
     countries: any[];
 
     selectedCountry: string;

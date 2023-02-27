@@ -3,7 +3,7 @@ import { SelectItemGroup } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'group-doc',
+    selector: 'dropdown-group-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
         <div class="card flex justify-content-center">
@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-dropdown>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="dropdown-group-demo"></app-code>
     </div>`
 })
 export class GroupDocComponent {
@@ -92,9 +92,11 @@ import { SelectItemGroup } from 'primeng/api';
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './dropdowndemo.html'
+    selector: 'dropdown-group-demo',
+    templateUrl: './dropdown-group-demo.html',
+    styleUrls: ['./dropdown-group-demo.scss']
 })
-export class DropdownDemo {
+export class DropdownGroupDemo {
     groupedCities: SelectItemGroup[];
 
     selectedCity: string;
