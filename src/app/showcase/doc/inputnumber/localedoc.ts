@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'locale-doc',
+    selector: 'inputnumber-locale-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Localization information such as grouping and decimal symbols are defined with the <i>locale</i> property which defaults to the user locale.</p>
@@ -25,7 +25,7 @@ import { Code } from '../../domain/code';
                 <p-inputNumber [(ngModel)]="value4" inputId="locale-indian" mode="decimal" locale="en-IN" [minFractionDigits]="2"> </p-inputNumber>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputnumber-locale-demo"></app-code>
     </div>`
 })
 export class LocaleDocComponent {
@@ -72,10 +72,11 @@ export class LocaleDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputnumberdemo.html'
+    selector: 'inputnumber-locale-demo',
+    templateUrl: './inputnumber-locale-demo.html',
+    styleUrls: ['./inputnumber-locale-demo.scss']
 })
-
-export class InputNumberDemo {
+export class InputnumberLocaleDemo {
     value1: number = 151351;
 
     value2: number = 115744;

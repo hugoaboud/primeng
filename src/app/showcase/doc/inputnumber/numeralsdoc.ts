@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'numerals-doc',
+    selector: 'inputnumber-numerals-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
         <div class="card flex flex-wrap gap-3 p-fluid">
@@ -23,7 +23,7 @@ import { Code } from '../../domain/code';
                 <p-inputNumber [(ngModel)]="value4" inputId="minmax" inputId="minmax" mode="decimal" [min]="0" [max]="100"> </p-inputNumber>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputnumber-numerals-demo"></app-code>
     </div>`
 })
 export class NumeralsDocComponent {
@@ -71,10 +71,11 @@ export class NumeralsDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputnumberdemo.html'
+    selector: 'inputnumber-numerals-demo',
+    templateUrl: './inputnumber-numerals-demo.html',
+    styleUrls: ['./inputnumber-numerals-demo.scss']
 })
-
-export class InputNumberDemo {
+export class InputnumberNumeralsDemo {
     value1: number = 42723;
 
     value2: number = 58151;
