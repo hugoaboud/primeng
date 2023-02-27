@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'format-doc',
+    selector: 'colorpicker-format-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Default color format to use in value binding is "hex" and other possible values are "rgb" and "hsb". Example below has 3 colorpickers having default values with different formats.</p>
@@ -24,7 +24,7 @@ import { Code } from '../../domain/code';
                 <span>{{ 'h:' + colorHSB.h + ' s:' + colorHSB.s + ' b:' + colorHSB.b }}</span>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="colorpicker-format-demo"></app-code>
     </div>`
 })
 export class FormatDocComponent {
@@ -67,9 +67,11 @@ export class FormatDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './colorpickerdemo.html'
+    selector: 'colorpicker-format-demo',
+    templateUrl: './colorpicker-format-demo.html',
+    styleUrls: ['./colorpicker-format-demo.scss']
 })
-export class ColorPickerDemo {
+export class ColorpickerFormatDemo {
     color: string = '#6466f1';
 
     colorRGB: any = { r: 100, g: 102, b: 241 };

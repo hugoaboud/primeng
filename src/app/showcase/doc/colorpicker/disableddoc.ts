@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'disabled-doc',
+    selector: 'colorpicker-disabled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>When <i>disabled</i> is present, the element cannot be edited and focused.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-colorPicker [(ngModel)]="color" [disabled]="true"></p-colorPicker>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="colorpicker-disabled-demo"></app-code>
     </div>`
 })
 export class DisabledDocComponent {
@@ -33,10 +33,11 @@ export class DisabledDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './colorpickerdemo.html'
+    selector: 'colorpicker-disabled-demo',
+    templateUrl: './colorpicker-disabled-demo.html',
+    styleUrls: ['./colorpicker-disabled-demo.scss']
 })
-
-export class ColorPickerDemo {
+export class ColorpickerDisabledDemo {
     color: string;
 }`
     };
