@@ -4,10 +4,10 @@ import { CarouselBasicDemo } from '../../doc/carousel/basicdoc';
 import { PropsDocComponent } from '../../doc/carousel/propsdoc';
 import { StyleDocComponent } from '../../doc/carousel/styledoc';
 import { CarouselCircularDemo } from '../../doc/carousel/circulardoc';
-import { NumScrollDemo } from '../../doc/carousel/numscrolldoc';
+import { CarouselNumScrollDemo } from '../../doc/carousel/numscrolldoc';
 import { ResponsiveDocComponent } from '../../doc/carousel/responsivedoc';
-import { CarouselVerticalDemoComponent } from '../../doc/carousel/verticaldoc';
-import { CarouselCustomContentDemo } from '../../doc/carousel/templatedoc';
+import { CarouselVerticalDemo } from '../../doc/carousel/verticaldoc';
+import { CarouselTemplateDemo } from '../../doc/carousel/templatedoc';
 
 @Component({
     templateUrl: './carouseldemo.html',
@@ -33,12 +33,12 @@ export class CarouselDemo {
         {
             id: 'numscroll',
             label: 'Num Scroll',
-            component: NumScrollDemo
+            component: CarouselNumScrollDemo
         },
         {
             id: 'custom',
             label: 'Custom Content',
-            component: CarouselCustomContentDemo
+            component: CarouselTemplateDemo
         },
         {
             id: 'responsive',
@@ -48,7 +48,7 @@ export class CarouselDemo {
         {
             id: 'vertical',
             label: 'Vertical',
-            component: CarouselVerticalDemoComponent
+            component: CarouselVerticalDemo
         },
         {
             id: 'style',

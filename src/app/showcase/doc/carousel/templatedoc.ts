@@ -4,7 +4,7 @@ import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
 
 @Component({
-    selector: 'carousel-custom-content-demo',
+    selector: 'carousel-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Custom content projection is available using the <i>header</i> and <i>footer</i> templates.</p>
@@ -38,10 +38,10 @@ import { ProductService } from '../../service/productservice';
                 </ng-template>
             </p-carousel>
         </div>
-        <app-code [code]="code" selector="carousel-custom-content-demo" [extFiles]="extFiles"></app-code>
+        <app-code [code]="code" selector="carousel-template-demo" [extFiles]="extFiles"></app-code>
     </div>`
 })
-export class CarouselCustomContentDemo implements OnInit {
+export class CarouselTemplateDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -141,11 +141,11 @@ import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
 
 @Component({
-    selector: 'carousel-custom-content-demo',
-    templateUrl: './carousel-custom-content-demo.html',
-    styleUrls: ['./carousel-custom-content-demo.scss']
+    selector: 'carousel-template-demo',
+    templateUrl: './carousel-template-demo.html',
+    styleUrls: ['./carousel-template-demo.scss']
 })
-export class CarouselCustomContentDemo implements OnInit{
+export class CarouselTemplateDemo implements OnInit{
     products!: Product[];
 
     responsiveOptions!: any[];

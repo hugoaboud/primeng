@@ -33,8 +33,7 @@ import { ProductService } from '../../service/productservice';
             </p-carousel>
         </div>
         <app-code [code]="code" selector="carousel-basic-demo" [extFiles]="extFiles"></app-code>
-    </div>`,
-    providers: [ProductService]
+    </div>`
 })
 export class CarouselBasicDemo implements OnInit {
     @Input() id: string;

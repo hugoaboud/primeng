@@ -4,7 +4,7 @@ import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
 
 @Component({
-    selector: 'num-scroll-demo',
+    selector: 'carousel-num-scroll-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Number of items to scroll is specified with the <i>numScroll</i> option.</p>
@@ -32,10 +32,10 @@ import { ProductService } from '../../service/productservice';
                 </ng-template>
             </p-carousel>
         </div>
-        <app-code [code]="code" selector="num-scroll-demo" [extFiles]="extFiles"></app-code>
+        <app-code [code]="code" selector="carousel-num-scroll-demo" [extFiles]="extFiles"></app-code>
     </div>`
 })
-export class NumScrollDemo implements OnInit {
+export class CarouselNumScrollDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -123,11 +123,11 @@ import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
 
 @Component({
-    selector: 'num-scroll-demo',
-    templateUrl: './num-scroll-demo.html',
-    styleUrls: ['./num-scroll-demo.scss']
+    selector: 'carousel-num-scroll-demo',
+    templateUrl: './carousel-num-scroll-demo.html',
+    styleUrls: ['./carousel-num-scroll-demo.scss']
 })
-export class NumScrollDemo implements OnInit {
+export class CarouselNumScrollDemo implements OnInit {
     products!: Product[];
 
     responsiveOptions!: any[];
