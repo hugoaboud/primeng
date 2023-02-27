@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { Product } from '../../domain/product';
 
 @Component({
-    selector: 'dropindicator-doc',
+    selector: 'drag-drop-drop-indicator-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>When a suitable draggable enters a droppable area, the area gets <i>p-draggable-enter</i> class that can be used to style the droppable section.</p>
@@ -25,7 +25,7 @@ import { Product } from '../../domain/product';
                 </ul>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="drag-drop-drop-indicator-demo" [extFiles]="extFiles"></app-code>
     </div>`
 })
 export class DropIndicatorDocComponent {
@@ -112,13 +112,14 @@ export class DropIndicatorDocComponent {
         typescript: `
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../domain/product';
+import { ProductService } from '../../service/productservice';
 
 @Component({
-    templateUrl: './dragdropdemo.html',
-    styleUrls: ['./dragdropdemo.scss']
+    selector: 'drag-drop-drop-indicator-demo',
+    templateUrl: './drag-drop-drop-indicator-demo.html',
+    styleUrls: ['./drag-drop-drop-indicator-demo.scss']
 })
-
-export class DragDropDemo implements OnInit {
+export class DragDropDropIndicatorDemo implements OnInit {
 
     availableProducts!: Product[];
 
@@ -164,19 +165,6 @@ export class DragDropDemo implements OnInit {
         return index;
     }
 }`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { DragDropModule } from 'primeng/dragdrop';
-import { DragDropDemo } from './dragdropdemo';
-import { DragDropDemoRoutingModule } from './dragdropdemo-routing.module';
-
-@NgModule({
-    imports: [CommonModule, DragDropDemoRoutingModule, DragDropModule, FormsModule],
-    declarations: [DragDropDemo]
-})
-export class DragDropDemoModule {}`,
         scss: `
 :host ::ng-deep {
     .drop-column {
@@ -191,6 +179,26 @@ export class DragDropDemoModule {}`,
     [pDraggable] {
         cursor: move;
     }
-}`
+}`,
+        service: ['ProductService']
     };
+
+    extFiles = [
+        {
+            path: 'src/domain/product.ts',
+            content: `
+export interface Product {
+    id?: string;
+    code?: string;
+    name?: string;
+    description?: string;
+    price?: number;
+    quantity?: number;
+    inventoryStatus?: string;
+    category?: string;
+    image?: string;
+    rating?: number;
+}`
+    }
+        ];
 }

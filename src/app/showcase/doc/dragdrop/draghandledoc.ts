@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'draghandle-doc',
+    selector: 'drag-drop-drag-handle-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p><i>dragHandle</i> is used to restrict dragging unless mousedown occurs on the specified element. Panel below can only be dragged using its header.</p>
@@ -12,10 +12,10 @@ import { Code } from '../../domain/code';
                 <p-panel header="Drag Header"> Content </p-panel>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="drag-drop-drag-handle-demo" [extFiles]="extFiles"></app-code>
     </div>`
 })
-export class DragHandleDocComponent {
+export class DragDropDragHandleDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -39,29 +39,36 @@ export class DragHandleDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './dragdropdemo.html',
-    styleUrls: ['./dragdropdemo.scss']
+    selector: 'drag-drop-drag-handle-demo',
+    templateUrl: './drag-drop-drag-handle-demo.html',
+    styleUrls: ['./drag-drop-drag-handle-demo.scss']
 })
-
-export class DragDropDemo {}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { DragDropModule } from 'primeng/dragdrop';
-import { PanelModule } from 'primeng/panel';
-import { DragDropDemo } from './dragdropdemo';
-import { DragDropDemoRoutingModule } from './dragdropdemo-routing.module';
-
-@NgModule({
-    imports: [CommonModule, DragDropDemoRoutingModule, DragDropModule, FormsModule, PanelModule],
-    declarations: [DragDropDemo]
-})
-export class DragDropDemoModule {}`,
+export class DragDropDragHandleDemo {}`,
         scss: `
 :host ::ng-deep {
     [pDraggable] {
         cursor: move;
     }
-}`
+}`,
+        service: ['ProductService']
     };
+
+    extFiles = [
+        {
+            path: 'src/domain/product.ts',
+            content: `
+export interface Product {
+    id?: string;
+    code?: string;
+    name?: string;
+    description?: string;
+    price?: number;
+    quantity?: number;
+    inventoryStatus?: string;
+    category?: string;
+    image?: string;
+    rating?: number;
+}`
+    }
+        ];
 }

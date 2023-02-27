@@ -4,7 +4,7 @@ import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
 
 @Component({
-    selector: 'datatable-doc',
+    selector: 'drag-drop-data-table-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Drag and Drop to Table</p>
@@ -49,11 +49,10 @@ import { ProductService } from '../../service/productservice';
                 </p-table>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [ProductService]
+        <app-code [code]="code" selector="drag-drop-data-table-demo" [extFiles]="extFiles"></app-code>
+    </div>`
 })
-export class DataTableDocComponent implements OnInit {
+export class DragDropDataTableDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -185,14 +184,14 @@ export class DataTableDocComponent implements OnInit {
         typescript: `
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../domain/product';
-import { ProductService } from '../../service/product.service';
+import { ProductService } from '../../service/productservice';
 
 @Component({
-    templateUrl: './dragdropdemo.html',
-    styleUrls: ['./dragdropdemo.scss'],
-    providers: [ProductService]
+    selector: 'drag-drop-data-table-demo',
+    templateUrl: './drag-drop-data-table-demo.html',
+    styleUrls: ['./drag-drop-data-table-demo.scss']
 })
-export class DragDropDemo implements OnInit {
+export class DragDropDataTableDemo implements OnInit {
 
     availableProducts!: Product[];
 
@@ -235,21 +234,6 @@ export class DragDropDemo implements OnInit {
         return index;
     } 
 }`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { DragDropModule } from 'primeng/dragdrop';
-import { TableModule } from 'primeng/table';
-import { DragDropDemo } from './dragdropdemo';
-import { DragDropDemoRoutingModule } from './dragdropdemo-routing.module';
-
-@NgModule({
-    imports: [CommonModule, DragDropDemoRoutingModule, TableModule, DragDropModule, FormsModule],
-    declarations: [DragDropDemo]
-})
-export class DragDropDemoModule {}`,
         scss: `
 :host ::ng-deep {
     .drag-column {
@@ -333,6 +317,26 @@ export class DragDropDemoModule {}`,
     "inventoryStatus": "INSTOCK",
     "rating": 5
 },
-...`
+...`,
+        service: ['ProductService']
     };
+
+    extFiles = [
+    {
+        path: 'src/domain/product.ts',
+        content: `
+export interface Product {
+    id?: string;
+    code?: string;
+    name?: string;
+    description?: string;
+    price?: number;
+    quantity?: number;
+    inventoryStatus?: string;
+    category?: string;
+    image?: string;
+    rating?: number;
+}`
+    }
+        ];
 }
