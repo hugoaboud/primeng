@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'icon-doc',
+    selector: 'calendar-icon-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>An additional icon is displayed next to the input field when <i>showIcon</i> is present.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-calendar [(ngModel)]="date" [showIcon]="true"></p-calendar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="calendar-icon-demo"></app-code>
     </div>`
 })
 export class IconDocComponent {
@@ -33,10 +33,11 @@ export class IconDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './calendardemo.html'
+    selector: 'calendar-icon-demo',
+    templateUrl: './calendar-icon-demo.html',
+    styleUrls: ['./calendar-icon-demo.scss']
 })
-
-export class CalendarDemo {
+export class CalendarIconDemo {
     date: Date;
 }`
     };

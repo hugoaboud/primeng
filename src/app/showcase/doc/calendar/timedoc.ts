@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'time-doc',
+    selector: 'calendar-time-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>TimePicker is enabled with <i>showTime</i> property and 24 (default) or 12 hour mode is configured using <i>hourFormat</i> option.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-calendar [(ngModel)]="date" [showTime]="true" [showSeconds]="true"></p-calendar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="calendar-time-demo"></app-code>
     </div>`
 })
 export class TimeDocComponent {
@@ -33,10 +33,12 @@ export class TimeDocComponent {
 import { Component } from '@angular/core'
 
 @Component({
-    templateUrl: './calendardemo.html'
+    selector: 'calendar-time-demo',
+    templateUrl: './calendar-time-demo.html',
+    styleUrls: ['./calendar-time-demo.scss']
 })
 
-export class CalendarDemo {
+export class CalendarTimeDemo {
     date: Date[];
 }`
     };

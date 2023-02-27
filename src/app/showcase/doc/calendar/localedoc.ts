@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'locale-doc',
+    selector: 'calendar-local-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Locale based settings such as labels, dateFormat and firstDayOfWeek are derived from the global Locale configuration. In case, a certain calendar needs to be customized, locale property can be used to override the global setting.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-calendar [(ngModel)]="date" dateFormat="dd.mm.yy" locale="es"></p-calendar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="calendar-local-demo"></app-code>
     </div>`
 })
 export class LocaleDocComponent {
@@ -33,10 +33,11 @@ export class LocaleDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './calendardemo.html'
+    selector: 'calendar-local-demo',
+    templateUrl: './calendar-local-demo.html',
+    styleUrls: ['./calendar-local-demo.scss']
 })
-
-export class CalendarDemo {
+export class CalendarLocalDemo {
     date: Date;
 }`
     };
