@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'multiple-doc',
+    selector: 'checkbox-multiple-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Multiple mode is enabled by default, ngModel property refers to an array to bind the selected values.</p>
@@ -21,7 +21,7 @@ import { Code } from '../../domain/code';
                 <label for="la">Los Angeles</label>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="checkbox-multiple-demo"></app-code>
     </div>`
 })
 export class MultipleDocComponent {
@@ -68,10 +68,12 @@ export class MultipleDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './checkboxdemo.html'
+    selector: 'checkbox-multiple-demo',
+    templateUrl: './checkbox-multiple-demo.html',
+    styleUrls: ['./checkbox-multiple-demo.scss']
 })
 
-export class CheckboxDemo {
+export class CheckboxMultipleDemo {
     selectedCities: string[] = [];
 }`
     };
