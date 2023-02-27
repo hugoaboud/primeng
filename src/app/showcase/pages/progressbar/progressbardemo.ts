@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/progressbar/basicdoc';
+import { ProgressBarBasicDemo } from '../../doc/progressbar/basicdoc';
 import { StyleDocComponent } from '../../doc/progressbar/styledoc';
 import { ImportDocComponent } from '../../doc/progressbar/importdoc';
-import { IndeterminateDocComponent } from '../../doc/progressbar/indeterminatedoc';
-import { DynamicDocComponent } from '../../doc/progressbar/dynamicdoc';
+import { ProgressBarIndeterminateDemo } from '../../doc/progressbar/indeterminatedoc';
+import { ProgressBarDynamicDemo } from '../../doc/progressbar/dynamicdoc';
 import { PropsDocComponent } from '../../doc/progressbar/propsdoc';
 
 @Component({
@@ -19,17 +19,17 @@ export class ProgressBarDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: ProgressBarBasicDemo
         },
         {
             id: 'dynamic',
             label: 'Dynamic',
-            component: DynamicDocComponent
+            component: ProgressBarDynamicDemo
         },
         {
             id: 'indeterminate',
             label: 'Indeterminate',
-            component: IndeterminateDocComponent
+            component: ProgressBarIndeterminateDemo
         },
         {
             id: 'style',

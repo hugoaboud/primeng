@@ -3,7 +3,7 @@ import { MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'progress-bar-dynamic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Value is reactive so updating it dynamically changes the bar as well.</p>
@@ -12,11 +12,11 @@ import { Code } from '../../domain/code';
             <p-toast></p-toast>
             <p-progressBar [value]="value"></p-progressBar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="progress-bar-dynamic-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
-export class DynamicDocComponent implements OnInit {
+export class ProgressBarDynamicDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -49,11 +49,12 @@ import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './progressbardemo.html',
+    selector: 'progress-bar-dynamic-demo',
+    templateUrl: './progress-bar-dynamic-demo.html',
     providers: [MessageService]
 })
 
-export class ProgressBarDemo implements OnInit {
+export class ProgressBarDynamicDemo implements OnInit {
     value: number = 0;
 
     constructor(private messageService: MessageService) {}
@@ -68,6 +69,7 @@ export class ProgressBarDemo implements OnInit {
             }
         }, 2000);
     }
-}`
+}`,
+    service: ['MessageService']
     };
 }

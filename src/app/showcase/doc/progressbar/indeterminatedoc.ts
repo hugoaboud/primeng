@@ -3,7 +3,7 @@ import { MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'indeterminate-doc',
+    selector: 'progress-bar-indeterminate-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>For progresses with no value to track, set the <i>mode</i> property to <i>indeterminate</i>.</p>
@@ -11,10 +11,11 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-progressBar mode="indeterminate" [style]="{ height: '6px' }"></p-progressBar>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`
+        <app-code [code]="code" selector="progress-bar-indeterminate-demo"></app-code>
+    </div>`,
+    providers: [MessageService]
 })
-export class IndeterminateDocComponent {
+export class ProgressBarIndeterminateDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -28,11 +29,13 @@ export class IndeterminateDocComponent {
 </div>`,
         typescript: `
 import { Component } from '@angular/core';
+import { MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './progressbardemo.html'
+    selector: 'progress-bar-indeterminate-demo',
+    templateUrl: './progress-bar-indeterminate-demo.html',
+    providers: [MessageService]
 })
-
-export class ProgressBarDemo {}`
+export class ProgressBarIndeterminateDemo {}`
     };
 }
