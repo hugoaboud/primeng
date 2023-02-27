@@ -23,7 +23,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="block-ui-basic-demo"></app-code>
     </div>`
 })
-export class BlockUIBasicDemo {
+export class BlockUiBasicDemo {
     blockedPanel: boolean = false;
 
     @Input() id: string;
@@ -64,7 +64,7 @@ import { Component } from '@angular/core';
     selector: 'block-ui-basic-demo',
     templateUrl: './block-ui-basic-demo.html'
 })
-export class BlockUIBasicDemo {
+export class BlockUiBasicDemo {
     blockedPanel: boolean = false;
 }`
     };

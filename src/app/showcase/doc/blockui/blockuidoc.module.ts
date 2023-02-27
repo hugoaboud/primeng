@@ -6,15 +6,15 @@ import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BlockUIBasicDemo } from './basicdoc';
-import { BlockUIDocumentDemo } from './documentdoc';
+import { BlockUiBasicDemo } from './basicdoc';
+import { BlockUiDocumentDemo } from './documentdoc';
 import { ImportDocComponent } from './importdoc';
 import { PropsDocComponent } from './propsdoc';
 import { StyleDocComponent } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, PanelModule, ButtonModule, BlockUIModule],
-    declarations: [ImportDocComponent, BlockUIBasicDemo, BlockUIDocumentDemo, StyleDocComponent, PropsDocComponent],
+    declarations: [ImportDocComponent, BlockUiBasicDemo, BlockUiDocumentDemo, StyleDocComponent, PropsDocComponent],
     exports: [AppDocModule]
 })
 export class BlockUIDocModule {}

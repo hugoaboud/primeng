@@ -14,7 +14,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="block-ui-document-demo"></app-code>
     </div>`
 })
-export class BlockUIDocumentDemo {
+export class BlockUiDocumentDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -43,7 +43,7 @@ import { Component } from '@angular/core';
     selector: 'block-ui-document-demo',
     templateUrl: './block-ui-document-demo.html'
 })
-export class BlockUIDocumentDemo {
+export class BlockUiDocumentDemo {
     blockedDocument: boolean = false;
 
     blockDocument() {

@@ -559,6 +559,7 @@ import { TreeModule } from 'primeng/tree';
 import { TreeTableModule } from 'primeng/treetable';
 import { AnimateModule } from 'primeng/animate';
 import { CardModule } from 'primeng/card';
+import { BlockUIModule } from 'primeng/blockui';
 ${serviceImports}
 
 @NgModule({
@@ -569,6 +570,7 @@ ${serviceImports}
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    BlockUIModule,
     AccordionModule,
     AutoCompleteModule,
     BadgeModule,
