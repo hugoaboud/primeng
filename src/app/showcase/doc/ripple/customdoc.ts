@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'custom-doc',
+    selector: 'ripple-custom-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Styling Demo Content.</p>
@@ -15,7 +15,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code"></app-code>
     </div>`
 })
-export class CustomDocComponent {
+export class RippleCustomDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -33,11 +33,11 @@ export class CustomDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './rippledemo.html'
-    styleUrls: ['./rippledemo.scss']
+    templateUrl: './ripple-custom-demo.html'
+    styleUrls: ['./ripple-custom-demo.scss']
 })
 
-export class RippleDemo {
+export class RippleCustomDemo {
 }`,
         scss: `
 :host ::ng-deep .card-container {

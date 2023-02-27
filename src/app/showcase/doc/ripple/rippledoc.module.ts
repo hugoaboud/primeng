@@ -4,14 +4,14 @@ import { RouterModule } from '@angular/router';
 import { RippleModule } from 'primeng/ripple';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { CustomDocComponent } from './customdoc';
-import { DefaultDocComponent } from './defaultdoc';
+import { RippleCustomDemo } from './customdoc';
+import { RippleDefaultDemo } from './defaultdoc';
 import { ImportDocComponent } from './importdoc';
 import { StyleDocComponent } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, RippleModule],
-    declarations: [DefaultDocComponent, ImportDocComponent, StyleDocComponent, CustomDocComponent],
-    exports: [DefaultDocComponent, ImportDocComponent, StyleDocComponent, CustomDocComponent]
+    declarations: [RippleDefaultDemo, ImportDocComponent, StyleDocComponent, RippleCustomDemo],
+    exports: [AppDocModule]
 })
 export class RippleDocModule {}
