@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/terminal/basicdoc';
+import { TerminalBasicDemo } from '../../doc/terminal/basicdoc';
 import { PropsDocComponent } from '../../doc/terminal/propsdoc';
 import { StyleDocComponent } from '../../doc/terminal/styledoc';
 import { ImportDocComponent } from '../../doc/terminal/importdoc';
@@ -17,7 +17,7 @@ export class TerminalDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: TerminalBasicDemo
         },
         {
             id: 'style',
@@ -31,11 +31,6 @@ export class TerminalDemo {
             id: 'props',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Terminal', pathname: '/modules/terminal.html' }]
         }
     ];
 }
