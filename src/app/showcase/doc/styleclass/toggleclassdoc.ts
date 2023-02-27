@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'toggleclass-doc',
+    selector: 'style-class-toggle-class-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -14,10 +14,10 @@ import { Code } from '../../domain/code';
             <button pButton label="Toggle p-disabled" pStyleClass="@next" toggleClass="p-disabled"></button>
             <input type="text" pInputText class="block mt-3" />
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="style-class-toggle-class-demo"></app-code>
     </div>`
 })
-export class ToggleClassDocComponent {
+export class StyleClassToggleClassDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -35,8 +35,10 @@ export class ToggleClassDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './styleclassdemo.html'
+    selector: 'style-class-toggle-class-demo',
+    templateUrl: './style-class-toggle-class-demo.html',
+    styleUrls: ['./style-class-toggle-class-demo.scss']
 })
-export class StyleClassDemo {}`
+export class StyleClassToggleClassDemo {}`
     };
 }

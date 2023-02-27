@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'animation-doc',
+    selector: 'styleclass-animation-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -20,10 +20,10 @@ import { Code } from '../../domain/code';
                 <div class="flex bg-green-500 text-white align-items-center justify-content-center py-3 border-round-md mt-3 font-bold shadow-2 w-8rem h-8rem">Content</div>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="style-class-animation-demo"></app-code>
     </div>`
 })
-export class AnimationDocComponent {
+export class StyleClassAnimationDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -53,8 +53,10 @@ export class AnimationDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './styleclassdemo.html'
+    selector: './style-class-animation-demo',
+    templateUrl: './style-class-animation-demo.html',
+    styleUrls: ['./style-class-animation-demo.scss']
 })
-export class StyleClassDemo {}`
+export class StyleClassAnimationDemo {}`
     };
 }
