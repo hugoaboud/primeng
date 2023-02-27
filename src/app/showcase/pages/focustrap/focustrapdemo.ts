@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PropsDocComponent } from '../../doc/focustrap/propsdoc';
-import { BasicDocComponent } from '../../doc/focustrap/basicdoc';
+import { FocusTrapBasicDemo } from '../../doc/focustrap/basicdoc';
 import { ImportDocComponent } from '../../doc/focustrap/importdoc';
 
 @Component({
@@ -16,14 +16,14 @@ export class FocusTrapDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: FocusTrapBasicDemo
         }
     ];
 
     apiDocs = [
         {
-            id: 'basic',
-            label: 'Basic',
+            id: 'props',
+            label: 'Properties',
             component: PropsDocComponent
         }
     ];

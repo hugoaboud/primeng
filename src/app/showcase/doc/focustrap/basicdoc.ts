@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'focus-trap-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>FocusTrap is applied to a container element with the <i>pFocusTrap</i> directive.</p>
@@ -36,10 +36,10 @@ import { Code } from '../../domain/code';
                 <p-dropdown [options]="cities" [(ngModel)]="selectedCity" placeholder="Select a City" optionLabel="name" [showClear]="true"></p-dropdown>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="focus-trap-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class FocusTrapBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -103,9 +103,10 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './focustrapdemo.html'
+    selector: 'focus-trap-basic-demo',
+    templateUrl: './focus-trap-basic-demo.html'
 })
-export class FocusTrapDemo {
+export class FocusTrapBasicDemo {
     selectedCity!: string;
 
     cities = [
@@ -115,21 +116,6 @@ export class FocusTrapDemo {
         { name: 'Istanbul', code: 'IST' },
         { name: 'Paris', code: 'PRS' }
     ];
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ButtonModule } from 'primeng/button';
-import { InputTextModule } from 'primeng/inputtext';
-import { DropdownModule } from 'primeng/dropdown';
-import { FocusTrapModule } from 'primeng/focustrap';
-
-@NgModule({
-    imports: [CommonModule, FormsModule, ButtonModule, InputTextModule, DropdownModule, FocusTrapModule],
-    declarations: [FocusTrapDemo]
-})
-export class FocusTrapDemoModule {}
-`
+}`
     };
 }
