@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'chips-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Chips requires an array as its model.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card p-fluid">
             <p-chips [(ngModel)]="values"></p-chips>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chips-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent {
@@ -33,10 +33,12 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './chipsdemo.html'
+    selector: 'chips-basic-demo',
+    templateUrl: './chips-basic-demo.html',
+    styleUrls: ['./chips-basic-demo.scss']
 })
 
-export class ChipsDemo {
+export class ChipsBasicDemo {
     values: string[];
 }`
     };

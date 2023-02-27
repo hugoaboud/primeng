@@ -2,13 +2,13 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'regexpseperator-doc',
+    selector: 'chips-regexpseperator-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"> </app-docsectiontext>
         <div class="card p-fluid">
             <p-chips [(ngModel)]="values" [separator]="separatorExp" placeholder="Hint: a, b c"></p-chips>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chips-regexpseperator-demo"></app-code>
     </div>`
 })
 export class RegexpSeperatorDocComponent {
@@ -33,10 +33,11 @@ export class RegexpSeperatorDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './chipsdemo.html'
+    selector: 'chips-regexpseperator-demo',
+    templateUrl: './chips-regexpseperator-demo.html',
+    styleUrls: ['./chips-regexpseperator-demo.scss']
 })
-
-export class ChipsDemo {
+export class ChipsRegexpseperatorDemo {
     values: string[];
 
     separatorExp: RegExp = /,| /;
