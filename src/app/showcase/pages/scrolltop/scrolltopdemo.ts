@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { ImportDocComponent } from '../../doc/scrolltop/importdoc';
-import { BasicDocComponent } from '../../doc/scrolltop/basicdoc';
+import { ScrollTopBasicDemo } from '../../doc/scrolltop/basicdoc';
 import { PropsDocComponent } from '../../doc/scrolltop/propsdoc';
 import { StyleDocComponent } from '../../doc/scrolltop/styledoc';
-import { ElementDocComponent } from '../../doc/scrolltop/elementdoc';
+import { ScrollTopElementDemo } from '../../doc/scrolltop/elementdoc';
 
 @Component({
     templateUrl: './scrolltopdemo.html',
@@ -19,12 +19,12 @@ export class ScrollTopDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: ScrollTopBasicDemo
         },
         {
             id: 'element',
             label: 'Target Element',
-            component: ElementDocComponent
+            component: ScrollTopElementDemo
         },
         {
             id: 'style',

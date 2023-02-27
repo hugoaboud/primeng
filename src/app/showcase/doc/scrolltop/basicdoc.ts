@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'scroll-top-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>ScrollTop listens window scroll by default.</p>
@@ -12,10 +12,10 @@ import { Code } from '../../domain/code';
             <i class="pi pi-angle-down fadeout animation-duration-1000 animation-iteration-infinite" style="fontsize: 2rem"></i>
             <p-scrollTop></p-scrollTop>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="scroll-top-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class ScrollTopBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -33,9 +33,9 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './scrolltopdemo.html',
-    styleUrls: ['./scrolltopdemo.scss']
+    selector: 'scroll-top-basic-demo',
+    templateUrl: './scroll-top-basic-demo.html'
 })
-export class ScrollTopDemo {}`
+export class ScrollTopBasicDemo {}`
     };
 }

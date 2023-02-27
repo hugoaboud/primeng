@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'element-doc',
+    selector: 'scroll-top-element-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Setting the <i>target</i> property to <i>parent</i> binds ScrollTop to its parent element that has scrolling content.</p>
@@ -19,10 +19,10 @@ import { Code } from '../../domain/code';
                 <p-scrollTop target="parent" styleClass="custom-scrolltop" [threshold]="100" icon="pi pi-arrow-up"></p-scrollTop>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="scroll-top-element-demo"></app-code>
     </div>`
 })
-export class ElementDocComponent {
+export class ScrollTopElementDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -47,9 +47,9 @@ export class ElementDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './scrolltopdemo.html',
-    styleUrls: ['./scrolltopdemo.scss']
+    selector: 'scroll-top-element-demo',
+    templateUrl: './scroll-top-element-demo.html'
 })
-export class ScrollTopDemo {}`
+export class ScrollTopElementDemo {}`
     };
 }
