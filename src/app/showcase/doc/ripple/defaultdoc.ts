@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card card-container flex justify-content-center align-items-center">
             <div pRipple class="card text-primary bg-primary flex select-none justify-content-center align-items-center shadow-2">Default</div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="ripple-default-demo"></app-code>
     </div>`
 })
 export class RippleDefaultDemo {
@@ -29,7 +29,7 @@ export class RippleDefaultDemo {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './ripple-default-demo.html'
+    templateUrl: './ripple-default-demo.html',
     styleUrls: ['./ripple-default-demo.scss']
 })
 

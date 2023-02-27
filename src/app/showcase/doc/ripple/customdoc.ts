@@ -12,7 +12,7 @@ import { Code } from '../../domain/code';
             <div pRipple class="card styled-box-orange shadow-2">Orange</div>
             <div pRipple class="card styled-box-purple shadow-2">Purple</div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="ripple-custom-demo"></app-code>
     </div>`
 })
 export class RippleCustomDemo {
@@ -33,7 +33,7 @@ export class RippleCustomDemo {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './ripple-custom-demo.html'
+    templateUrl: './ripple-custom-demo.html',
     styleUrls: ['./ripple-custom-demo.scss']
 })
 
