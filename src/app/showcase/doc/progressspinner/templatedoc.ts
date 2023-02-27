@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'custom-doc',
+    selector: 'progress-spinner-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>ProgressSpinner can be customized with styling property like <i>styleClass</i>, <i>strokeWidth</i> and <i>fill</i>.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-progressSpinner styleClass="w-4rem h-4rem" strokeWidth="8" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="progress-spinner-template-demo"></app-code>
     </div>`
 })
-export class CustomDocComponent {
+export class ProgressSpinnerTemplateDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -29,10 +29,9 @@ export class CustomDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './progresspinnerdemo.html'
+    selector: 'progress-spinner-template-demo',
+    templateUrl: './progress-spinner-template-demo.html'
 })
-
-export class ProgressSpinnerDemo {
-}`
+export class ProgressSpinnerTemplateDemo {}`
     };
 }

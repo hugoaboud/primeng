@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { ImportDocComponent } from '../../doc/avatar/importdoc';
-import { BasicDocComponent } from '../../doc/progressspinner/basicdoc';
+import { ProgressSpinnerBasicDemo } from '../../doc/progressspinner/basicdoc';
 import { StyleDocComponent } from '../../doc/progressspinner/styledoc';
-import { CustomDocComponent } from '../../doc/progressspinner/customdoc';
+import { ProgressSpinnerTemplateDemo } from '../../doc/progressspinner/templatedoc';
 import { PropsDocComponent } from '../../doc/progressspinner/propsdoc';
 
 @Component({
@@ -19,12 +19,12 @@ export class ProgressSpinnerDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: ProgressSpinnerBasicDemo
         },
         {
-            id: 'custom',
-            label: 'Custom',
-            component: CustomDocComponent
+            id: 'templating',
+            label: 'Template',
+            component: ProgressSpinnerTemplateDemo
         },
         {
             id: 'style',
@@ -38,11 +38,6 @@ export class ProgressSpinnerDemo {
             id: 'props',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'ProgressSpinner', pathname: '/modules/progressspinner.html' }]
         }
     ];
 }
