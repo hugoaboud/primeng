@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
             <p-toast></p-toast>
             <div pDefer (onLoad)="onLoad()">
                 <ng-template>
-                    <img class="w-full md:w-30rem md:block md:mx-auto" src="assets/showcase/images/demo/nature/nature1.jpg" alt="Prime" />
+                    <img class="w-full md:w-30rem md:block md:mx-auto" src="https://primefaces.org/cdn/primeng/images/demo/nature/nature1.jpg" alt="Prime" />
                 </ng-template>
             </div>
         </div>
@@ -36,7 +36,7 @@ export class BasicDocComponent {
         basic: `
 <div pDefer (onLoad)="onLoad()">
     <ng-template>
-        <img class="w-full md:w-30rem md:block md:mx-auto" src="assets/showcase/images/demo/nature/nature1.jpg" alt="Prime" />
+        <img class="w-full md:w-30rem md:block md:mx-auto" src="https://primefaces.org/cdn/primeng/images/demo/nature/nature1.jpg" alt="Prime" />
     </ng-template>
 </div>`,
         html: `
@@ -47,7 +47,7 @@ export class BasicDocComponent {
     <p-toast></p-toast>
     <div pDefer (onLoad)="initData()">
         <ng-template>
-            <img class="w-full md:w-30rem md:block md:mx-auto" src="assets/showcase/images/demo/nature/nature1.jpg" alt="Prime" />
+            <img class="w-full md:w-30rem md:block md:mx-auto" src="https://primefaces.org/cdn/primeng/images/demo/nature/nature1.jpg" alt="Prime" />
         </ng-template>
     </div>
 </div>`,

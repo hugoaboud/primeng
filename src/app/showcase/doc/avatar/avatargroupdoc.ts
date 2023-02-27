@@ -2,25 +2,25 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'avatargroup-doc',
+    selector: 'avatar-group-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Grouping is available by wrapping multiple Avatar components inside an AvatarGroup.</p>
         </app-docsectiontext>
         <div class="card justify-content-center">
             <p-avatarGroup styleClass="mb-3">
-                <p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" size="large" shape="circle"></p-avatar>
-                <p-avatar image="assets/showcase/images/demo/avatar/asiyajavayant.png" size="large" shape="circle"></p-avatar>
-                <p-avatar image="assets/showcase/images/demo/avatar/onyamalimba.png" size="large" shape="circle"></p-avatar>
-                <p-avatar image="assets/showcase/images/demo/avatar/ionibowcher.png" size="large" shape="circle"></p-avatar>
-                <p-avatar image="assets/showcase/images/demo/avatar/xuxuefeng.png" size="large" shape="circle"></p-avatar>
+                <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" size="large" shape="circle"></p-avatar>
+                <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/asiyajavayant.png" size="large" shape="circle"></p-avatar>
+                <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/onyamalimba.png" size="large" shape="circle"></p-avatar>
+                <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/ionibowcher.png" size="large" shape="circle"></p-avatar>
+                <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png" size="large" shape="circle"></p-avatar>
                 <p-avatar label="+2" shape="circle" size="large" [style]="{ 'background-color': '#9c27b0', color: '#ffffff' }"></p-avatar>
             </p-avatarGroup>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="avatar-group-demo"></app-code>
     </div>`
 })
-export class AvatarGroupDocComponent {
+export class AvatarGroupDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -28,17 +28,17 @@ export class AvatarGroupDocComponent {
     code: Code = {
         basic: `
 <p-avatarGroup styleClass="mb-3">
-    <p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" size="large" shape="circle"></p-avatar>
-    <p-avatar image="assets/showcase/images/demo/avatar/asiyajavayant.png" size="large" shape="circle"></p-avatar>
+    <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" size="large" shape="circle"></p-avatar>
+    <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/asiyajavayant.png" size="large" shape="circle"></p-avatar>
 </p-avatarGroup>`,
         html: `
 <div class="card justify-content-center">
     <p-avatarGroup styleClass="mb-3">
-        <p-avatar image="assets/showcase/images/demo/avatar/amyelsner.png" size="large" shape="circle"></p-avatar>
-        <p-avatar image="assets/showcase/images/demo/avatar/asiyajavayant.png" size="large" shape="circle"></p-avatar>
-        <p-avatar image="assets/showcase/images/demo/avatar/onyamalimba.png" size="large" shape="circle"></p-avatar>
-        <p-avatar image="assets/showcase/images/demo/avatar/ionibowcher.png" size="large" shape="circle"></p-avatar>
-        <p-avatar image="assets/showcase/images/demo/avatar/xuxuefeng.png" size="large" shape="circle"></p-avatar>
+        <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" size="large" shape="circle"></p-avatar>
+        <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/asiyajavayant.png" size="large" shape="circle"></p-avatar>
+        <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/onyamalimba.png" size="large" shape="circle"></p-avatar>
+        <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/ionibowcher.png" size="large" shape="circle"></p-avatar>
+        <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png" size="large" shape="circle"></p-avatar>
         <p-avatar label="+2" shape="circle" size="large" [style]="{ 'background-color': '#9c27b0', color: '#ffffff' }"></p-avatar>
     </p-avatarGroup>
 </div>`,
@@ -46,12 +46,9 @@ export class AvatarGroupDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './avatardemo.html'
+    selector: 'avatar-group-demo',
+    templateUrl: './avatar-group-demo.html'
 })
-
-export class AvatarDemo {
-}`,
-        module: `
-import { AvatarGroupModule } from 'primeng/avatargroup';`
+export class AvatarGroupDemo {}`
     };
 }

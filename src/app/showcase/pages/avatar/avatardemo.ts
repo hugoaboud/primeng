@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { ImportDocComponent } from 'src/app/showcase/doc/avatar/importdoc';
-import { LabelDocComponent } from 'src/app/showcase/doc/avatar/labeldoc';
-import { AvatarGroupDocComponent } from '../../doc/avatar/avatargroupdoc';
+import { AvatarLabelDemo } from 'src/app/showcase/doc/avatar/labeldoc';
+import { AvatarGroupDemo } from '../../doc/avatar/avatargroupdoc';
 import { AvatarStyleDocComponent } from '../../doc/avatar/avatarstyledoc';
 import { AvatarGroupStyleDocComponent } from '../../doc/avatar/avatargroupstyledoc';
-import { IconDocComponent } from '../../doc/avatar/icondoc';
-import { ImageDocComponent } from '../../doc/avatar/imagedoc';
-import { ShapeDocComponent } from '../../doc/avatar/shapedoc';
-import { SizeDocComponent } from '../../doc/avatar/sizedoc';
-import { BadgeDocComponent } from '../../doc/avatar/badgedoc';
-import { TemplatingDocComponent } from '../../doc/avatar/templatingdoc';
+import { AvatarIconDemo } from '../../doc/avatar/icondoc';
+import { AvatarImageDemo } from '../../doc/avatar/imagedoc';
+import { AvatarShapeDemo } from '../../doc/avatar/shapedoc';
+import { AvatarSizeDemo } from '../../doc/avatar/sizedoc';
+import { AvatarBadgeDemo } from '../../doc/avatar/badgedoc';
+import { AvatarTemplatingDemo } from '../../doc/avatar/templatingdoc';
 import { AvatarPropsDocComponent } from '../../doc/avatar/avatarpropsdoc';
 import { AvatarGroupPropsDocComponent } from '../../doc/avatar/avatargrouppropsdoc';
 import { EventsDocComponent } from '../../doc/avatar/eventsdoc';
@@ -27,42 +27,42 @@ export class AvatarDemo {
         {
             id: 'label',
             label: 'Label',
-            component: LabelDocComponent
+            component: AvatarLabelDemo
         },
         {
             id: 'icon',
             label: 'Icon',
-            component: IconDocComponent
+            component: AvatarIconDemo
         },
         {
             id: 'image',
             label: 'Image',
-            component: ImageDocComponent
+            component: AvatarImageDemo
         },
         {
             id: 'size',
             label: 'Sizes',
-            component: SizeDocComponent
+            component: AvatarSizeDemo
         },
         {
             id: 'avatargroup',
             label: 'AvatarGroup',
-            component: AvatarGroupDocComponent
+            component: AvatarGroupDemo
         },
         {
             id: 'shape',
             label: 'Shape',
-            component: ShapeDocComponent
+            component: AvatarShapeDemo
         },
         {
             id: 'badge',
             label: 'Badge',
-            component: BadgeDocComponent
+            component: AvatarBadgeDemo
         },
         {
             id: 'templating',
-            label: 'Templating',
-            component: TemplatingDocComponent
+            label: 'Custom Content',
+            component: AvatarTemplatingDemo
         },
         {
             id: 'stylingofavatar',

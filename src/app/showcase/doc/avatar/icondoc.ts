@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'icon-doc',
+    selector: 'avatar-icon-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A font icon is displayed as an Avatar with the <i>icon</i> property.</p>
@@ -25,10 +25,10 @@ import { Code } from '../../domain/code';
                 <p-avatar icon="pi pi-user" pBadge value="4" severity="success" styleClass="mr-2" size="large"></p-avatar>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="avatar-icon-demo"></app-code>
     </div>`
 })
-export class IconDocComponent {
+export class AvatarIconDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -59,10 +59,10 @@ export class IconDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './avatardemo.html'
+    selector: 'avatar-icon-demo',
+    templateUrl: './avatar-icon-demo.html'
 })
 
-export class AvatarDemo {
-}`
+export class AvatarIconDemo {}`
     };
 }

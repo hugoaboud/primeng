@@ -16,7 +16,7 @@ import { ProductService } from '../../service/productservice';
             <p-button (click)="op.toggle($event)" icon="pi pi-search" label="Search"></p-button>
             <div *ngIf="selectedProduct" class="p-5 surface-card shadow-2 border-round">
                 <div class="relative">
-                    <img src="assets/showcase/images/demo/product/{{ selectedProduct.image }}" [alt]="selectedProduct.name" />
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ selectedProduct.image }}" [alt]="selectedProduct.name" />
                 </div>
                 <div class="flex align-items-center justify-content-between mt-3 mb-2">
                     <span class="text-900 font-medium text-xl">{{ selectedProduct.name }}</span>
@@ -78,7 +78,7 @@ export class DataTableDocComponent implements OnInit {
 <p-button (click)="op.toggle($event)" icon="pi pi-search" label="Search"></p-button>
 <div *ngIf="selectedProduct" class="p-5 surface-card shadow-2 border-round">
     <div class="relative">
-        <img src="assets/showcase/images/demo/product/{{ selectedProduct.image }}" [alt]="selectedProduct.name" />
+        <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ selectedProduct.image }}" [alt]="selectedProduct.name" />
     </div>
     <div class="flex align-items-center justify-content-between mt-3 mb-2">
         <span class="text-900 font-medium text-xl">{{selectedProduct.name}}</span>
@@ -113,7 +113,7 @@ export class DataTableDocComponent implements OnInit {
     <p-button (click)="op.toggle($event)" icon="pi pi-search" label="Search"></p-button>
     <div *ngIf="selectedProduct" class="p-5 surface-card shadow-2 border-round">
         <div class="relative">
-            <img src="assets/showcase/images/demo/product/{{ selectedProduct.image }}" [alt]="selectedProduct.name" />
+            <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ selectedProduct.image }}" [alt]="selectedProduct.name" />
         </div>
         <div class="flex align-items-center justify-content-between mt-3 mb-2">
             <span class="text-900 font-medium text-xl">{{selectedProduct.name}}</span>

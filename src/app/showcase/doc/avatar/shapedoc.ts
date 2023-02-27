@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'shape-doc',
+    selector: 'avatar-shape-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Avatar comes in two different styles specified with the <i>shape</i> property, <i>square</i> is the default and <i>circle</i> is the alternative.</p>
@@ -11,17 +11,18 @@ import { Code } from '../../domain/code';
             <p-avatar label="P" shape="circle"></p-avatar>
             <p-avatar label="T"></p-avatar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="avatar-shape-demo"></app-code>
     </div>`
 })
-export class ShapeDocComponent {
+export class AvatarShapeDemo {
     @Input() id: string;
 
     @Input() title: string;
 
     code: Code = {
         basic: `
-<p-avatar label="P" shape="circle"></p-avatar>`,
+<p-avatar label="P" shape="circle"></p-avatar>
+<p-avatar label="T"></p-avatar>`,
         html: `
 <div class="card flex justify-content-center gap-2">
     <p-avatar label="P" shape="circle"></p-avatar>
@@ -31,10 +32,10 @@ export class ShapeDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './avatardemo.html'
+    selector: 'avatar-shape-demo',
+    templateUrl: './avatar-shape-demo.html'
 })
 
-export class AvatarDemo {
-}`
+export class AvatarShapeDemo {}`
     };
 }

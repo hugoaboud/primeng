@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'templating-doc',
+    selector: 'avatar-templating-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Content can easily be customized with the dynamic content instead of using the built-in modes.</p>
@@ -12,10 +12,10 @@ import { Code } from '../../domain/code';
                 <span class="text-base">Content</span>
             </p-avatar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="avatar-templating-demo"></app-code>
     </div>`
 })
-export class TemplatingDocComponent {
+export class AvatarTemplatingDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -35,10 +35,10 @@ export class TemplatingDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './avatardemo.html'
+    selector: 'avatar-templating-demo',
+    templateUrl: './avatar-templating-demo.html'
 })
 
-export class AvatarDemo {
-}`
+export class AvatarTemplatingDemo {}`
     };
 }
