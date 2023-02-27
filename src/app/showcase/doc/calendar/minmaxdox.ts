@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'minmax-doc',
+    selector: 'calendar-minmax-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Boundaries for the permitted dates that can be entered are defined with <i>minDate</i> and <i>maxDate</i> properties.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-calendar [(ngModel)]="date" [minDate]="minDate" [maxDate]="maxDate" [readonlyInput]="true"></p-calendar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="calendar-minmax-demo"></app-code>
     </div>`
 })
 export class MinMaxDocComponent {
@@ -53,9 +53,11 @@ export class MinMaxDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './calendardemo.html'
+    selector: 'calendar-minmax-demo',
+    templateUrl: './calendar-minmax-demo.html',
+    styleUrls: ['./calendar-minmax-demo.scss']
 })
-export class CalendarDemo {        
+export class CalendarMinmaxDemo {        
     date: Date;
     
     minDate: Date;

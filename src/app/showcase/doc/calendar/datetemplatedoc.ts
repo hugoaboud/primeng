@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'datetemplate-doc',
+    selector: 'calendar-datetemplate-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
         <div class="card flex justify-content-center">
@@ -12,7 +12,7 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-calendar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="calendar-datetemplate-demo"></app-code>
     </div>`
 })
 export class DateTemplateDocComponent {
@@ -43,10 +43,11 @@ export class DateTemplateDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './calendardemo.html'
+    selector: 'calendar-datetemplate-demo',
+    templateUrl: './calendar-datetemplate-demo.html',
+    styleUrls: ['./calendar-datetemplate-demo.scss']
 })
-
-export class CalendarDemo {
+export class CalendarDatetemplateDemo {
     date: Date[];
 }`
     };

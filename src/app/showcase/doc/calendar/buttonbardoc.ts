@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'buttonbar-doc',
+    selector: 'calendar-buttonbar-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>When <i>showButtonBar</i> is present, today and clear buttons are displayed at the footer.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-calendar [(ngModel)]="date" [showButtonBar]="true"></p-calendar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="calendar-buttonbar-demo"></app-code>
     </div>`
 })
 export class ButtonBarDocComponent {
@@ -33,10 +33,12 @@ export class ButtonBarDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './calendardemo.html'
+    selector: 'calendar-buttonbar-demo',
+    templateUrl: './calendar-buttonbar-demo.html',
+    styleUrls: ['./calendar-buttonbar-demo.scss']
 })
 
-export class CalendarDemo {
+export class CalendarButtonbarDemo {
     date: Date[];
 }`
     };

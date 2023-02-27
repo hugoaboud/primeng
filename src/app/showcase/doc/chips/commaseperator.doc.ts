@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'commaseperator-doc',
+    selector: 'chips-commaseperator-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A new chip is added when enter key is pressed, separator property allows definining an additional key. Currently only valid value is , to create a new item when comma key is pressed.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card p-fluid">
             <p-chips [(ngModel)]="values" separator="," placeholder="Hint: a, b, c"></p-chips>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chips-commaseperator-demo"></app-code>
     </div>`
 })
 export class CommaSeperatorDocComponent {
@@ -33,10 +33,12 @@ export class CommaSeperatorDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './chipsdemo.html'
+    selector: 'chips-commaseperator-demo',
+    templateUrl: './chips-commaseperator-demo.html',
+    styleUrls: ['./chips-commaseperator-demo.scss']
 })
 
-export class ChipsDemo {
+export class ChipsCommaseperatorDemo {
     values: string[];
 }`
     };

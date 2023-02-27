@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'checkbox-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Checkbox can either be used in multiple selection with other checkboxes or as a single checkbox to provide a boolean value.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-checkbox [(ngModel)]="checked" [binary]="true" inputId="binary"></p-checkbox>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="checkbox-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent {
@@ -33,10 +33,12 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './checkboxdemo.html'
+    selector: 'checkbox-basic-demo',
+    templateUrl: './checkbox-basic-demo.html',
+    styleUrls: ['./checkbox-basic-demo.scss']
 })
 
-export class CheckboxDemo {
+export class CheckboxBasicDemo {
     checked: boolean;
 }`
     };

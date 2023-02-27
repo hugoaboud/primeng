@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'month-doc',
+    selector: 'calendar-month-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Month only picker is enabled by specifying view as month in addition to a suitable dateFormat.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-calendar [(ngModel)]="date" view="month" dateFormat="mm/yy" [readonlyInput]="true"></p-calendar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="calendar-month-demo"></app-code>
     </div>`
 })
 export class MonthDocComponent {
@@ -33,10 +33,11 @@ export class MonthDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './calendardemo.html'
+    selector: 'calendar-month-demo',
+    templateUrl: './calendar-month-demo.html',
+    styleUrls: ['./calendar-month-demo.scss']
 })
-
-export class CalendarDemo {
+export class CalendarMonthDemo {
     date: Date[];
 }`
     };

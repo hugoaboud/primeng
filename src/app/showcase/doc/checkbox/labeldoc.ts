@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'label-doc',
+    selector: 'checkbox-label-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>The label attribute provides a label text for the checkbox. This label is also clickable and toggles the checked state.</p>
@@ -11,7 +11,7 @@ import { Code } from '../../domain/code';
             <p-checkbox name="groupname" value="val1" label="Value 1" [(ngModel)]="selectedValues"></p-checkbox>
             <p-checkbox name="groupname" value="val2" label="Value 2" [(ngModel)]="selectedValues"></p-checkbox>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="checkbox-label-demo"></app-code>
     </div>`
 })
 export class LabelDocComponent {
@@ -36,10 +36,12 @@ export class LabelDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './checkboxdemo.html'
+    selector: 'checkbox-label-demo',
+    templateUrl: './checkbox-label-demo.html',
+    styleUrls: ['./checkbox-label-demo.scss']
 })
 
-export class CheckboxDemo {
+export class CheckboxLabelDemo {
     selectedValues: string[] = [];
 }`
     };

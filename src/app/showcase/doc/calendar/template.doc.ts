@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'calendar-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Calendar UI accepts custom content using header and footer templates.</p>
@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
                 <ng-template pTemplate="footer">Footer</ng-template>
             </p-calendar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="calendar-template-demo"></app-code>
     </div>`
 })
 export class TemplateDocComponent {
@@ -42,10 +42,12 @@ export class TemplateDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './calendardemo.html'
+    selector: 'calendar-template-demo',
+    templateUrl: './calendar-template-demo.html',
+    styleUrls: ['./calendar-template-demo.scss']
 })
 
-export class CalendarDemo {
+export class CalendarTemplateDemo {
     date: Date[];
 }`
     };

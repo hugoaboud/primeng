@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'chips-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A chip is customized using a <i>ng-template</i> element where the value is passed as the implicit variable.</p>
@@ -12,7 +12,7 @@ import { Code } from '../../domain/code';
                 <ng-template let-item pTemplate="item"> {{ item }} - (active) <i class="pi pi-user ml-2"></i> </ng-template>
             </p-chips>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chips-template-demo"></app-code>
     </div>`
 })
 export class TemplateDocComponent {
@@ -39,10 +39,12 @@ export class TemplateDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './chipsdemo.html'
+    selector: 'chips-template-demo',
+    templateUrl: './chips-template-demo.html',
+    styleUrls: ['./chips-template-demo.scss']
 })
 
-export class ChipsDemo {
+export class ChipsTemplateDemo {
     values: string[];
 }`
     };

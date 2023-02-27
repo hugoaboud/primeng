@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'cascadeselect-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Content of an item can be customized with the <i>option</i> template.</p>
@@ -19,7 +19,7 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-cascadeSelect>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="cascadeselect-template-demo"></app-code>
     </div>`
 })
 export class TemplateDocComponent {
@@ -139,9 +139,11 @@ export class TemplateDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './cascadeselectdemo.html'
+    selector: 'cascadeselect-template-demo',
+    templateUrl: './cascadeselect-template-demo.html',
+    styleUrls: ['./cascadeselect-template-demo.scss']
 })
-export class CascadeSelectDemo {
+export class CascadeselectTemplateDemo {
     countries: any[];
 
     selectedCity: any;

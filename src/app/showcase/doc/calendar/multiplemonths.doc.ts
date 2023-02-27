@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'multiplemonths-doc',
+    selector: 'calendar-multiplemonths-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Displaying multiple months is enabled by setting <i>numberOfMonths</i> property to a value greater than 1.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-calendar [(ngModel)]="date" [numberOfMonths]="3"></p-calendar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="calendar-multiplemonths-demo"></app-code>
     </div>`
 })
 export class MultipleMonthDocComponent {
@@ -33,10 +33,12 @@ export class MultipleMonthDocComponent {
 import { Component } from '@angular/core'
 
 @Component({
-    templateUrl: './calendardemo.html'
+    selector: 'calendar-multiplemonths-demo',
+    templateUrl: './calendar-multiplemonths-demo.html',
+    styleUrls: ['./calendar-multiplemonths-demo.scss']
 })
 
-export class CalendarDemo {
+export class CalendarMultiplemonthsDemo {
     date: Date[];
 }`
     };

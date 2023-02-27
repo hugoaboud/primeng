@@ -7,7 +7,7 @@ interface City {
 }
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'dropdown-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Dropdown requires a value to bind and a collection of options.</p>
@@ -15,7 +15,7 @@ interface City {
         <div class="card flex justify-content-center">
             <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-dropdown>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="dropdown-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent {
@@ -53,22 +53,23 @@ interface City {
     name: string;
     code: string;
 }
-
 @Component({
-    templateUrl: './dropdowndemo.html'
+    selector: 'dropdown-basic-demo',
+    templateUrl: './dropdown-basic-demo.html',
+    styleUrls: ['./dropdown-basic-demo.scss']
 })
-export class DropdownDemo {
+export class DropdownBasicDemo {
     cities: City[];
 
     selectedCity: City;
 
     constructor() {
         this.cities = [
-            {name: 'New York', code: 'NY'},
-            {name: 'Rome', code: 'RM'},
-            {name: 'London', code: 'LDN'},
-            {name: 'Istanbul', code: 'IST'},
-            {name: 'Paris', code: 'PRS'}
+            { name: 'New York', code: 'NY' },
+            { name: 'Rome', code: 'RM' },
+            { name: 'London', code: 'LDN' },
+            { name: 'Istanbul', code: 'IST' },
+            { name: 'Paris', code: 'PRS' }
         ];
     }
 }`

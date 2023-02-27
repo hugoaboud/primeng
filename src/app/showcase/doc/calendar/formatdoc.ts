@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'format-doc',
+    selector: 'calendar-format-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Default date format is <i>mm/dd/yy</i> which can be customized using the <i>dateFormat</i> property. Following options can be a part of the format.</p>
@@ -29,7 +29,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-calendar [(ngModel)]="date" dateFormat="dd.mm.yy"></p-calendar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="calendar-format-demo"></app-code>
     </div>`
 })
 export class FormatDocComponent {
@@ -52,10 +52,11 @@ export class FormatDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './calendardemo.html'
+    selector: 'calendar-format-demo',
+    templateUrl: './calendar-format-demo.html',
+    styleUrls: ['./calendar-format-demo.scss']
 })
-
-export class CalendarDemo {
+export class CalendarFormatDemo {
     date: Date;
 }`
     };

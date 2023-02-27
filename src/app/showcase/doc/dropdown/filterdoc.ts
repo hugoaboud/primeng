@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'filter-doc',
+    selector: 'dropdown-filter-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Dropdown provides built-in filtering that is enabled by adding the <i>filter</i> property.</p>
@@ -23,7 +23,7 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-dropdown>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="dropdown-filter-demo"></app-code>
     </div>`
 })
 export class FilterDocComponent {
@@ -89,9 +89,11 @@ export class FilterDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './dropdowndemo.html'
+    selector: 'dropdown-filter-demo',
+    templateUrl: './dropdown-filter-demo.html',
+    styleUrls: ['./dropdown-filter-demo.scss']
 })
-export class DropdownDemo {
+export class DropdownFilterDemo {
     countries: any[];
 
     selectedCountry: string;
