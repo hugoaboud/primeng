@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'cascadeselect-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-cascadeSelect [(ngModel)]="selectedCity" [options]="countries" optionLabel="cname" optionGroupLabel="name" [optionGroupChildren]="['states', 'cities']" [style]="{ minWidth: '14rem' }" placeholder="Select a City"></p-cascadeSelect>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="cascadeselect-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent {
@@ -115,9 +115,11 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './cascadeselectdemo.html'
+    selector: 'cascadeselect-basic-demo',
+    templateUrl: './cascadeselect-basic-demo.html',
+    styleUrls: ['./cascadeselect-basic-demo.scss']
 })
-export class CascadeSelectDemo {
+export class CascadeselectBasicDemo {
     countries: any[];
 
     selectedCity: any;
