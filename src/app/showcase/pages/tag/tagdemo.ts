@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { IconDocComponent } from '../../doc/tag/icondoc';
+import { TagIconDemo } from '../../doc/tag/icondoc';
 import { ImportDocComponent } from '../../doc/tag/importdoc';
-import { SeverityDocComponent } from '../../doc/tag/severitydoc';
-import { BasicDocComponent } from '../../doc/tag/basicdoc';
+import { TagSeverityDemo } from '../../doc/tag/severitydoc';
+import { TagBasicDDemo } from '../../doc/tag/basicdoc';
 import { PropsDocComponent } from '../../doc/tag/propsdoc';
 import { StyleDocComponent } from '../../doc/tag/styledoc';
-import { PillDocComponent } from '../../doc/tag/pilldoc';
-import { TemplateDocComponent } from '../../doc/tag/templatedoc';
+import { TagPillDemo } from '../../doc/tag/pilldoc';
+import { TagTemplateDemo } from '../../doc/tag/templatedoc';
 
 @Component({
     templateUrl: './tagdemo.html'
@@ -21,27 +21,27 @@ export class TagDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: TagBasicDDemo
         },
         {
             id: 'severity',
             label: 'Severity',
-            component: SeverityDocComponent
+            component: TagSeverityDemo
         },
         {
             id: 'pill',
             label: 'Pill',
-            component: PillDocComponent
+            component: TagPillDemo
         },
         {
             id: 'icon',
             label: 'Icon',
-            component: IconDocComponent
+            component: TagIconDemo
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: TagTemplateDemo
         },
         {
             id: 'style',

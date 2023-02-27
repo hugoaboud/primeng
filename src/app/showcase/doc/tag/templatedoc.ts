@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'tag-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Children of the component are passed as the content for templating.</p>
@@ -16,10 +16,10 @@ import { Code } from '../../domain/code';
                 </div>
             </p-tag>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tag-template-demo"></app-code>
     </div>`
 })
-export class TemplateDocComponent {
+export class TagTemplateDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -47,8 +47,9 @@ export class TemplateDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './tagdemo.html'
+    selector: 'tag-template-demo',
+    templateUrl: './tag-template-demo.html'
 })
-export class TagDemo {}`
+export class TagTemplateDemo {}`
     };
 }

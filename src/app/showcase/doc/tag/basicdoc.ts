@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'tag-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Label of the tag is defined with the <i>value</i> property.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-tag value="New"></p-tag>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tag-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class TagBasicDDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -29,8 +29,9 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './tagdemo.html'
+    selector: 'tag-basic-demo',
+    templateUrl: './tag-basic-demo.html'
 })
-export class TagDemo {}`
+export class TagBasicDemo {}`
     };
 }

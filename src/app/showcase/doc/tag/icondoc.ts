@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'icon-doc',
+    selector: 'tag-icon-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A font icon next to the value can be displayed with the <i>icon</i> property.</p>
@@ -14,10 +14,10 @@ import { Code } from '../../domain/code';
             <p-tag icon="pi pi-exclamation-triangle" severity="warning" value="Warning"></p-tag>
             <p-tag icon="pi pi-times" severity="danger" value="Danger"></p-tag>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tag-icon-demo"></app-code>
     </div>`
 })
-export class IconDocComponent {
+export class TagIconDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -37,8 +37,9 @@ export class IconDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './tagdemo.html'
+    selector: 'tag-icon-demo',
+    templateUrl: './tag-icon-demo.html'
 })
-export class TagDemo {}`
+export class TagIconDemo {}`
     };
 }

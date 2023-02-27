@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'pill-doc',
+    selector: 'tag-pill-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Enabling <i>rounded</i>, displays a tag as a pill.</p>
@@ -14,10 +14,10 @@ import { Code } from '../../domain/code';
             <p-tag severity="warning" value="Warning" [rounded]="true"></p-tag>
             <p-tag severity="danger" value="Danger" [rounded]="true"></p-tag>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tag-pill-demo"></app-code>
     </div>`
 })
-export class PillDocComponent {
+export class TagPillDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -37,8 +37,9 @@ export class PillDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './tagdemo.html'
+    selector: 'tag-pill-demo',
+    templateUrl: './tag-pill-demo.html'
 })
-export class TagDemo {}`
+export class TagPillDemo {}`
     };
 }
