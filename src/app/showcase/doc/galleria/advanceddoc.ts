@@ -4,7 +4,7 @@ import { Code } from '../../domain/code';
 import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    selector: 'advanced-doc',
+    selector: 'galleria-advanced-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Galleria can be extended further to implement complex requirements.</p>
@@ -45,11 +45,10 @@ import { PhotoService } from '../../service/photoservice';
                 </ng-template>
             </p-galleria>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [PhotoService]
+        <app-code [code]="code" selector="galleria-advanced-demo"></app-code>
+    </div>`
 })
-export class AdvancedDocComponent implements OnInit, OnDestroy {
+export class GalleriaAdvancedDemo implements OnInit, OnDestroy {
     @Input() id: string;
 
     @Input() title: string;
@@ -214,15 +213,14 @@ export class AdvancedDocComponent implements OnInit, OnDestroy {
         typescript: `
 import { ChangeDetectorRef, Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Galleria } from 'primeng/galleria';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './galleriademo.html',
-    styleUrls: ['./galleriademo.scss'],
-    providers: [PhotoService]
+    selector: 'galleria-advanced-demo',
+    templateUrl: './galleria-advanced-demo.html',
+    styleUrls: ['./galleria-advanced-demo.scss']
 })
-
-export class GalleriaDemo implements OnInit, OnDestroy {
+export class GalleriaAdvancedDemo implements OnInit, OnDestroy {
     images: any[];
 
     responsiveOptions: any[] = [
@@ -321,6 +319,7 @@ export class GalleriaDemo implements OnInit, OnDestroy {
             }
         }
     }
-}`
+}`,
+        service: ['PhotoService']
     };
 }

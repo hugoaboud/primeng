@@ -3,7 +3,7 @@ import { Code } from '../../../domain/code';
 import { PhotoService } from '../../../service/photoservice';
 
 @Component({
-    selector: 'withthumbnails-doc',
+    selector: 'galleria-with-thumbnails-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
             <p>Full screen mode is enabled by adding <i>fullScreen</i> property.</p>
@@ -21,11 +21,10 @@ import { PhotoService } from '../../../service/photoservice';
                 </ng-template>
             </p-galleria>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [PhotoService]
+        <app-code [code]="code" selector="galleria-with-thumbnails-demo"></app-code>
+    </div>`
 })
-export class WithThumbnailsDocComponent implements OnInit {
+export class GalleriaWithThumbnailsDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -88,15 +87,14 @@ export class WithThumbnailsDocComponent implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './galleriademo.html',
-    styleUrls: ['./galleriademo.scss'],
-    providers: [PhotoService]
+    selector: 'galleria-with-thumbnails-demo',
+    templateUrl: './galleria-with-thumbnails-demo.html',
+    styleUrls: ['./galleria-with-thumbnails-demo.scss']
 })
-
-export class GalleriaDemo implements OnInit {
+export class GalleriaWithThumbnailsDemo implements OnInit {
     displayBasic: boolean;
 
     images: any[];
@@ -134,6 +132,7 @@ export class GalleriaDemo implements OnInit {
     alt: 'Description for Image 1',
     title: 'Title 1'
 },
-...`
+...`,
+        service: ['PhotoService']
     };
 }

@@ -3,7 +3,7 @@ import { Code } from '../../../domain/code';
 import { PhotoService } from '../../../service/photoservice';
 
 @Component({
-    selector: 'clickevent-doc',
+    selector: 'galleria-indicator-click-event-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
             <p>Indicators are displayed at the bottom by enabling <i>showIndicators</i> property and interacted with the click event by default.</p>
@@ -15,11 +15,10 @@ import { PhotoService } from '../../../service/photoservice';
                 </ng-template>
             </p-galleria>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [PhotoService]
+        <app-code [code]="code" selector="galleria-indicator-click-event-demo"></app-code>
+    </div>`
 })
-export class ClickEventDocComponent implements OnInit {
+export class GalleriaIndicatorClickEventDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -66,15 +65,14 @@ export class ClickEventDocComponent implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './galleriademo.html',
-    styleUrls: ['./galleriademo.scss'],
-    providers: [PhotoService]
+    selector: 'galleria-indicator-click-event-demo',
+    templateUrl: './galleria-indicator-click-event-demo.html',
+    styleUrls: ['./galleria-indicator-click-event-demo.scss']
 })
-
-export class GalleriaDemo implements OnInit {
+export class GalleriaIndicatorClickEventDemo implements OnInit {
     images: any[];
 
     responsiveOptions: any[] = [
@@ -108,6 +106,7 @@ export class GalleriaDemo implements OnInit {
     alt: 'Description for Image 1',
     title: 'Title 1'
 },
-...`
+...`,
+        service: ['PhotoService']
     };
 }

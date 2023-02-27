@@ -3,7 +3,7 @@ import { Code } from '../../../domain/code';
 import { PhotoService } from '../../../service/photoservice';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'galleria-indicator-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
             <p>Indicator content can be customized with the <i>indicator</i> template.</p>
@@ -20,11 +20,10 @@ import { PhotoService } from '../../../service/photoservice';
                 </ng-template>
             </p-galleria>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [PhotoService]
+        <app-code [code]="code" selector="galleria-indicator-template-demo"></app-code>
+    </div>`
 })
-export class TemplateDocComponent implements OnInit {
+export class GalleriaIndicatorTemplateDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -81,15 +80,14 @@ export class TemplateDocComponent implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './galleriademo.html',
-    styleUrls: ['./galleriademo.scss'],
-    providers: [PhotoService]
+    selector: 'galleria-indicator-template-demo',
+    templateUrl: './galleria-indicator-template-demo.html',
+    styleUrls: ['./galleria-indicator-template-demo.scss']
 })
-
-export class GalleriaDemo implements OnInit {
+export class GalleriaIndicatorTemplateDemo implements OnInit {
     images: any[];
 
     responsiveOptions: any[] = [
@@ -123,6 +121,7 @@ export class GalleriaDemo implements OnInit {
     alt: 'Description for Image 1',
     title: 'Title 1'
 },
-...`
+...`,
+        service: ['PhotoService']
     };
 }

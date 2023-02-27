@@ -3,7 +3,7 @@ import { Code } from '../../../domain/code';
 import { PhotoService } from '../../../service/photoservice';
 
 @Component({
-    selector: 'positioned-doc',
+    selector: 'galleria-indicator-positioned-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
             <p>
@@ -32,11 +32,10 @@ import { PhotoService } from '../../../service/photoservice';
                 </ng-template>
             </p-galleria>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [PhotoService]
+        <app-code [code]="code" selector="galleria-indicator-positioned-demo"></app-code>
+    </div>`
 })
-export class PositionedDocComponent implements OnInit {
+export class GalleriaIndicatorPositionedDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -120,15 +119,14 @@ export class PositionedDocComponent implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './galleriademo.html',
-    styleUrls: ['./galleriademo.scss'],
-    providers: [PhotoService]
+    selector: 'galleria-indicator-positioned-demo',
+    templateUrl: './galleria-indicator-positioned-demo.html',
+    styleUrls: ['./galleria-indicator-positioned-demo.scss']
 })
-
-export class GalleriaDemo implements OnInit {
+export class GalleriaIndicatorPositionedDemo implements OnInit {
     images: any[];
 
     position: string = 'top';
@@ -185,6 +183,7 @@ export class GalleriaDemo implements OnInit {
     alt: 'Description for Image 1',
     title: 'Title 1'
 },
-...`
+...`,
+        service: ['PhotoService']
     };
 }

@@ -6,87 +6,61 @@ import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { GalleriaModule } from 'primeng/galleria';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
-import { AdvancedDocComponent } from './advanceddoc';
-import { AutoplayDocComponent } from './autoplaydoc';
-import { BasicDocComponent } from './basicdoc';
-import { CaptionDocComponent } from './captiondoc';
-import { ControlledDocComponent } from './controlleddoc';
-import { CustomContentDocComponent } from './fullscreen/customcontentdoc';
+import { GalleriaAdvancedDemo } from './advanceddoc';
+import { GalleriaAutoplayDemo } from './autoplaydoc';
+import { GalleriaBasicDemo } from './basicdoc';
+import { GalleriaCaptionDemo } from './captiondoc';
+import { GalleriaControlledDemo } from './controlleddoc';
+import { GalleriaFullScreenTemplateDemo } from './fullscreen/customcontentdoc';
 import { FullScreenDocComponent } from './fullscreen/fullscreendoc';
-import { WithoutThumbnailsDocComponent } from './fullscreen/withoutthumbnailsdoc';
-import { WithThumbnailsDocComponent } from './fullscreen/withthumbnailsdoc';
+import { GalleriaWithoutThumbnailsDemo } from './fullscreen/withoutthumbnailsdoc';
+import { GalleriaWithThumbnailsDemo } from './fullscreen/withthumbnailsdoc';
 import { ImportDocComponent } from './importdoc';
-import { ClickEventDocComponent } from './indicator/clickeventdoc';
-import { HoverEventDocComponent } from './indicator/hovereventdoc';
+import { GalleriaIndicatorClickEventDemo } from './indicator/clickeventdoc';
+import { GalleriaIndicatorHoverEventDemo } from './indicator/hovereventdoc';
 import { IndicatorDocComponent } from './indicator/indicatordoc';
-import { PositionedDocComponent } from './indicator/positioneddoc';
-import { TemplateDocComponent } from './indicator/templatedoc';
+import { GalleriaIndicatorPositionedDemo } from './indicator/positioneddoc';
+import { GalleriaIndicatorTemplateDemo } from './indicator/templatedoc';
 import { HoverDocComponent } from './navigator/hoverdoc';
 import { IndicatorsDocComponent } from './navigator/indicatorsdoc';
 import { ItemThumbnailsDocComponent } from './navigator/itemthumbnailsdoc';
 import { ItemWithoutThumbnailsDocComponent } from './navigator/itemwithoutthumbnailsdoc';
 import { NavigatorDocComponent } from './navigator/navigatordoc';
 import { PropsDocComponent } from './propsdoc';
-import { ResponsiveDocComponent } from './responsivedoc';
+import { GalleriaResponsiveDemo } from './responsivedoc';
 import { StyleDocComponent } from './styledoc';
-import { ThumbnailDocComponent } from './thumbnaildoc';
+import { GalleriaThumbnailDemo } from './thumbnaildoc';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { CheckboxModule } from 'primeng/checkbox';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, GalleriaModule, FormsModule, ButtonModule, RadioButtonModule, CheckboxModule],
     declarations: [
-        AdvancedDocComponent,
-        AutoplayDocComponent,
-        BasicDocComponent,
-        CaptionDocComponent,
-        ControlledDocComponent,
-        CustomContentDocComponent,
+        GalleriaAdvancedDemo,
+        GalleriaAutoplayDemo,
+        GalleriaBasicDemo,
+        GalleriaCaptionDemo,
+        GalleriaControlledDemo,
+        GalleriaFullScreenTemplateDemo,
         FullScreenDocComponent,
-        WithoutThumbnailsDocComponent,
-        WithThumbnailsDocComponent,
+        GalleriaWithoutThumbnailsDemo,
+        GalleriaWithThumbnailsDemo,
         ImportDocComponent,
-        ClickEventDocComponent,
-        HoverEventDocComponent,
+        GalleriaIndicatorClickEventDemo,
+        GalleriaIndicatorHoverEventDemo,
         IndicatorDocComponent,
-        PositionedDocComponent,
-        TemplateDocComponent,
+        GalleriaIndicatorPositionedDemo,
+        GalleriaIndicatorTemplateDemo,
         HoverDocComponent,
         IndicatorsDocComponent,
         ItemThumbnailsDocComponent,
         ItemWithoutThumbnailsDocComponent,
         NavigatorDocComponent,
         PropsDocComponent,
-        ResponsiveDocComponent,
+        GalleriaResponsiveDemo,
         StyleDocComponent,
-        ThumbnailDocComponent
+        GalleriaThumbnailDemo
     ],
-    exports: [
-        AdvancedDocComponent,
-        AutoplayDocComponent,
-        BasicDocComponent,
-        CaptionDocComponent,
-        ControlledDocComponent,
-        CustomContentDocComponent,
-        FullScreenDocComponent,
-        WithoutThumbnailsDocComponent,
-        WithThumbnailsDocComponent,
-        ImportDocComponent,
-        ClickEventDocComponent,
-        HoverEventDocComponent,
-        IndicatorDocComponent,
-        PositionedDocComponent,
-        TemplateDocComponent,
-        HoverDocComponent,
-        IndicatorsDocComponent,
-        ItemThumbnailsDocComponent,
-        ItemWithoutThumbnailsDocComponent,
-        NavigatorDocComponent,
-        PropsDocComponent,
-        ResponsiveDocComponent,
-        StyleDocComponent,
-        ThumbnailDocComponent,
-        AppDocModule
-    ]
+    exports: [AppDocModule]
 })
 export class GalleriaDocModule {}

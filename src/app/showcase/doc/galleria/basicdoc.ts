@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'galleria-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Galleria requires a <i>value</i> as a collection of images, <i>item</i> template for the higher resolution image and <i>thumbnail</i> template to display as a thumbnail.</p>
@@ -20,11 +20,10 @@ import { PhotoService } from '../../service/photoservice';
                 </ng-template>
             </p-galleria>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [PhotoService]
+        <app-code [code]="code" selector="galleria-basic-demo"></app-code>
+    </div>`
 })
-export class BasicDocComponent implements OnInit {
+export class GalleriaBasicDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -80,15 +79,14 @@ export class BasicDocComponent implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './galleriademo.html',
-    styleUrls: ['./galleriademo.scss'],
-    providers: [PhotoService]
+    selector: 'galleria-basic-demo',
+    templateUrl: './galleria-basic-demo.html',
+    styleUrls: ['./galleria-basic-demo.scss']
 })
-
-export class GalleriaDemo implements OnInit {
+export class GalleriaBasicDemo implements OnInit {
     images: any[];
     
     responsiveOptions: any[];
@@ -121,6 +119,7 @@ export class GalleriaDemo implements OnInit {
     alt: 'Description for Image 1',
     title: 'Title 1'
 },
-...`
+...`,
+        service: ['PhotoService']
     };
 }

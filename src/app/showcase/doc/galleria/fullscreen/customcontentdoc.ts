@@ -3,7 +3,7 @@ import { Code } from '../../../domain/code';
 import { PhotoService } from '../../../service/photoservice';
 
 @Component({
-    selector: 'customcontent-doc',
+    selector: 'galleria-full-secreen-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
             <p>Using <i>activeIndex</i>, Galleria is displayed with a specific initial image.</p>
@@ -31,11 +31,10 @@ import { PhotoService } from '../../../service/photoservice';
                 </ng-template>
             </p-galleria>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [PhotoService]
+        <app-code [code]="code" selector="galleria-full-secreen-template-demo"></app-code>
+    </div>`
 })
-export class CustomContentDocComponent implements OnInit {
+export class GalleriaFullScreenTemplateDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -121,15 +120,14 @@ export class CustomContentDocComponent implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './galleriademo.html',
-    styleUrls: ['./galleriademo.scss'],
-    providers: [PhotoService]
+    selector: 'galleria-full-secreen-template-demo',
+    templateUrl: './galleria-full-secreen-template-demo.html',
+    styleUrls: ['./galleria-full-secreen-template-demo.scss']
 })
-
-export class GalleriaDemo implements OnInit {
+export class GalleriaFullScreenTemplateDemo implements OnInit {
     displayCustom: boolean;
 
     activeIndex: number = 0;
@@ -174,6 +172,7 @@ export class GalleriaDemo implements OnInit {
     alt: 'Description for Image 1',
     title: 'Title 1'
 },
-...`
+...`,
+        service: ['PhotoService']
     };
 }

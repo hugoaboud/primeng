@@ -477,7 +477,7 @@ import { MenuItem, MessageService } from 'primeng/api';
 import { TerminalService } from 'primeng/terminal';
 import { Subscription } from 'rxjs';
 import { NodeService } from '../../service/node.service';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
     templateUrl: './dockdemo.html',

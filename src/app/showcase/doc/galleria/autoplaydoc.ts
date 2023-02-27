@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    selector: 'autoplay-doc',
+    selector: 'galleria-autoplay-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A slideshow implementation is defined by adding <i>circular</i> and <i>autoPlay</i> properties.</p>
@@ -20,11 +20,10 @@ import { PhotoService } from '../../service/photoservice';
                 </ng-template>
             </p-galleria>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [PhotoService]
+        <app-code [code]="code" selector="galleria-autoplay-demo"></app-code>
+    </div>`
 })
-export class AutoplayDocComponent implements OnInit {
+export class GalleriaAutoplayDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -79,15 +78,14 @@ export class AutoplayDocComponent implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './galleriademo.html',
-    styleUrls: ['./galleriademo.scss'],
-    providers: [PhotoService]
+    selector: 'galleria-autoplay-demo',
+    templateUrl: './galleria-autoplay-demo.html',
+    styleUrls: ['./galleria-autoplay-demo.scss']
 })
-
-export class GalleriaDemo implements OnInit {
+export class GalleriaAutoplayDemo implements OnInit {
     images: any[];
 
     responsiveOptions: any[] = [
@@ -119,6 +117,7 @@ export class GalleriaDemo implements OnInit {
     alt: 'Description for Image 1',
     title: 'Title 1'
 },
-...`
+...`,
+        service: ['PhotoService']
     };
 }

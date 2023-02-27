@@ -66,7 +66,7 @@ export class ItemWithoutThumbnailsDocComponent implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
     templateUrl: './galleriademo.html',

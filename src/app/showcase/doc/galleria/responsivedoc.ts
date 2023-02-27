@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    selector: 'responsive-doc',
+    selector: 'galleria-responsive-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Galleria responsiveness is defined with the <i>responsiveOptions</i> property.</p>
@@ -20,11 +20,10 @@ import { PhotoService } from '../../service/photoservice';
                 </ng-template>
             </p-galleria>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [PhotoService]
+        <app-code [code]="code" selector="galleria-responsive-demo"></app-code>
+    </div>`
 })
-export class ResponsiveDocComponent implements OnInit {
+export class GalleriaResponsiveDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -79,15 +78,14 @@ export class ResponsiveDocComponent implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './galleriademo.html',
-    styleUrls: ['./galleriademo.scss'],
-    providers: [PhotoService]
+    selector: 'galleria-responsive-demo',
+    templateUrl: './galleria-responsive-demo.html',
+    styleUrls: ['./galleria-responsive-demo.scss']
 })
-
-export class GalleriaDemo implements OnInit {
+export class GalleriaResponsiveDemo implements OnInit {
     images: any[];
 
     responsiveOptions: any[] = [

@@ -3,7 +3,7 @@ import { Code } from '../../../domain/code';
 import { PhotoService } from '../../../service/photoservice';
 
 @Component({
-    selector: 'hoverevent-doc',
+    selector: 'galleria-indicator-hover-event-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
             <p>Indicators can be activated on hover instead of click if <i>changeItemOnIndicatorHover</i> is added.</p>
@@ -15,11 +15,10 @@ import { PhotoService } from '../../../service/photoservice';
                 </ng-template>
             </p-galleria>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [PhotoService]
+        <app-code [code]="code" selector="galleria-indicator-hover-event-demo"></app-code>
+    </div>`
 })
-export class HoverEventDocComponent implements OnInit {
+export class GalleriaIndicatorHoverEventDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -66,15 +65,14 @@ export class HoverEventDocComponent implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './galleriademo.html',
-    styleUrls: ['./galleriademo.scss'],
-    providers: [PhotoService]
+    selector: 'galleria-indicator-hover-event-demo',
+    templateUrl: './galleria-indicator-hover-event-demo.html',
+    styleUrls: ['./galleria-indicator-hover-event-demo.scss']
 })
-
-export class GalleriaDemo implements OnInit {
+export class GalleriaIndicatorHoverEventDemo implements OnInit {
     images: any[];
 
     responsiveOptions: any[] = [
@@ -108,6 +106,7 @@ export class GalleriaDemo implements OnInit {
     alt: 'Description for Image 1',
     title: 'Title 1'
 },
-...`
+...`,
+        service: ['PhotoService']
     };
 }

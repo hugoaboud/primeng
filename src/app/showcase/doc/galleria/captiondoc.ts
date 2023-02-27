@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    selector: 'caption-doc',
+    selector: 'galleria-caption-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Description of an image is specified with the <i>caption</i> template.</p>
@@ -24,11 +24,10 @@ import { PhotoService } from '../../service/photoservice';
                 </ng-template>
             </p-galleria>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [PhotoService]
+        <app-code [code]="code" selector="galleria-caption-demo"></app-code>
+    </div>`
 })
-export class CaptionDocComponent implements OnInit {
+export class GalleriaCaptionDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -88,15 +87,13 @@ export class CaptionDocComponent implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './galleriademo.html',
-    styleUrls: ['./galleriademo.scss'],
-    providers: [PhotoService]
+    templateUrl: './galleria-caption-demo.html',
+    styleUrls: ['./galleria-caption-demo.scss']
 })
-
-export class GalleriaDemo implements OnInit {
+export class GalleriaCaptionDemo implements OnInit {
     images: any[];
 
     responsiveOptions: any[] = [
@@ -128,6 +125,7 @@ export class GalleriaDemo implements OnInit {
     alt: 'Description for Image 1',
     title: 'Title 1'
 },
-...`
+...`,
+        service: ['PhotoService']
     };
 }

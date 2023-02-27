@@ -1,28 +1,28 @@
 import { Component } from '@angular/core';
-import { AdvancedDocComponent } from '../../doc/galleria/advanceddoc';
-import { AutoplayDocComponent } from '../../doc/galleria/autoplaydoc';
-import { BasicDocComponent } from '../../doc/galleria/basicdoc';
-import { CaptionDocComponent } from '../../doc/galleria/captiondoc';
-import { ControlledDocComponent } from '../../doc/galleria/controlleddoc';
-import { CustomContentDocComponent } from '../../doc/galleria/fullscreen/customcontentdoc';
+import { GalleriaAdvancedDemo } from '../../doc/galleria/advanceddoc';
+import { GalleriaAutoplayDemo } from '../../doc/galleria/autoplaydoc';
+import { GalleriaBasicDemo } from '../../doc/galleria/basicdoc';
+import { GalleriaCaptionDemo } from '../../doc/galleria/captiondoc';
+import { GalleriaControlledDemo } from '../../doc/galleria/controlleddoc';
+import { GalleriaFullScreenTemplateDemo } from '../../doc/galleria/fullscreen/customcontentdoc';
 import { FullScreenDocComponent } from '../../doc/galleria/fullscreen/fullscreendoc';
-import { WithoutThumbnailsDocComponent } from '../../doc/galleria/fullscreen/withoutthumbnailsdoc';
-import { WithThumbnailsDocComponent } from '../../doc/galleria/fullscreen/withthumbnailsdoc';
+import { GalleriaWithoutThumbnailsDemo } from '../../doc/galleria/fullscreen/withoutthumbnailsdoc';
+import { GalleriaWithThumbnailsDemo } from '../../doc/galleria/fullscreen/withthumbnailsdoc';
 import { ImportDocComponent } from '../../doc/galleria/importdoc';
-import { ClickEventDocComponent } from '../../doc/galleria/indicator/clickeventdoc';
-import { HoverEventDocComponent } from '../../doc/galleria/indicator/hovereventdoc';
+import { GalleriaIndicatorClickEventDemo } from '../../doc/galleria/indicator/clickeventdoc';
+import { GalleriaIndicatorHoverEventDemo } from '../../doc/galleria/indicator/hovereventdoc';
 import { IndicatorDocComponent } from '../../doc/galleria/indicator/indicatordoc';
-import { PositionedDocComponent } from '../../doc/galleria/indicator/positioneddoc';
-import { TemplateDocComponent } from '../../doc/galleria/indicator/templatedoc';
+import { GalleriaIndicatorPositionedDemo } from '../../doc/galleria/indicator/positioneddoc';
+import { GalleriaIndicatorTemplateDemo } from '../../doc/galleria/indicator/templatedoc';
 import { HoverDocComponent } from '../../doc/galleria/navigator/hoverdoc';
 import { IndicatorsDocComponent } from '../../doc/galleria/navigator/indicatorsdoc';
 import { ItemThumbnailsDocComponent } from '../../doc/galleria/navigator/itemthumbnailsdoc';
 import { ItemWithoutThumbnailsDocComponent } from '../../doc/galleria/navigator/itemwithoutthumbnailsdoc';
 import { NavigatorDocComponent } from '../../doc/galleria/navigator/navigatordoc';
 import { PropsDocComponent } from '../../doc/galleria/propsdoc';
-import { ResponsiveDocComponent } from '../../doc/galleria/responsivedoc';
+import { GalleriaResponsiveDemo } from '../../doc/galleria/responsivedoc';
 import { StyleDocComponent } from '../../doc/galleria/styledoc';
-import { ThumbnailDocComponent } from '../../doc/galleria/thumbnaildoc';
+import { GalleriaThumbnailDemo } from '../../doc/galleria/thumbnaildoc';
 
 @Component({
     templateUrl: './galleriademo.html',
@@ -38,12 +38,12 @@ export class GalleriaDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: GalleriaBasicDemo
         },
         {
             id: 'controlled',
             label: 'Controlled',
-            component: ControlledDocComponent
+            component: GalleriaControlledDemo
         },
         {
             id: 'indicator',
@@ -53,34 +53,34 @@ export class GalleriaDemo {
                 {
                     id: 'clickevent',
                     label: 'Click Event',
-                    component: ClickEventDocComponent
+                    component: GalleriaIndicatorClickEventDemo
                 },
                 {
                     id: 'hoverevent',
                     label: 'Hover Event',
-                    component: HoverEventDocComponent
+                    component: GalleriaIndicatorHoverEventDemo
                 },
                 {
                     id: 'positioned',
                     label: 'Positioned',
-                    component: PositionedDocComponent
+                    component: GalleriaIndicatorPositionedDemo
                 },
                 {
                     id: 'template',
                     label: 'Templating',
-                    component: TemplateDocComponent
+                    component: GalleriaIndicatorTemplateDemo
                 }
             ]
         },
         {
             id: 'thumbnail',
             label: 'Thumbnail',
-            component: ThumbnailDocComponent
+            component: GalleriaThumbnailDemo
         },
         {
             id: 'responsive',
             label: 'Responsive',
-            component: ResponsiveDocComponent
+            component: GalleriaResponsiveDemo
         },
         {
             id: 'fullscreen',
@@ -90,17 +90,17 @@ export class GalleriaDemo {
                 {
                     id: 'withthumbnails',
                     label: 'With Thumbnails',
-                    component: WithThumbnailsDocComponent
+                    component: GalleriaWithThumbnailsDemo
                 },
                 {
                     id: 'withtouthumbnails',
                     label: 'Without Thumbnails',
-                    component: WithoutThumbnailsDocComponent
+                    component: GalleriaWithoutThumbnailsDemo
                 },
                 {
                     id: 'customcontent',
                     label: 'Custom Content',
-                    component: CustomContentDocComponent
+                    component: GalleriaFullScreenTemplateDemo
                 }
             ]
         },
@@ -134,17 +134,17 @@ export class GalleriaDemo {
         {
             id: 'autoplay',
             label: 'AutoPlay',
-            component: AutoplayDocComponent
+            component: GalleriaAutoplayDemo
         },
         {
             id: 'caption',
             label: 'Caption',
-            component: CaptionDocComponent
+            component: GalleriaCaptionDemo
         },
         {
             id: 'advanced',
             label: 'Advanced',
-            component: AdvancedDocComponent
+            component: GalleriaAdvancedDemo
         },
         {
             id: 'style',

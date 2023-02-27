@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    selector: 'controlled-doc',
+    selector: 'galleria-controlled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Galleria can be controlled programmatically using the <i>activeIndex</i> property.</p>
@@ -24,11 +24,10 @@ import { PhotoService } from '../../service/photoservice';
                 </ng-template>
             </p-galleria>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [PhotoService]
+        <app-code [code]="code" selector="galleria-controlled-demo"></app-code>
+    </div>`
 })
-export class ControlledDocComponent implements OnInit {
+export class GalleriaControlledDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -111,15 +110,13 @@ export class ControlledDocComponent implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './galleriademo.html',
-    styleUrls: ['./galleriademo.scss'],
-    providers: [PhotoService]
+    templateUrl: './galleria-controlled-demo.html',
+    styleUrls: ['./galleria-controlled-demo.scss']
 })
-
-export class GalleriaDemo implements OnInit {
+export class GalleriaControlledDemo implements OnInit {
     images: any[];
 
     get activeIndex(): number {
@@ -171,6 +168,7 @@ export class GalleriaDemo implements OnInit {
     alt: 'Description for Image 1',
     title: 'Title 1'
 },
-...`
+...`,
+        service: ['PhotoService']
     };
 }

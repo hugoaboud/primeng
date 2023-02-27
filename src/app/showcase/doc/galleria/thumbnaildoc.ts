@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    selector: 'thumbnail-doc',
+    selector: 'galleria-thumbnail-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Galleria can be controlled programmatically using the <i>activeIndex</i> property.</p>
@@ -23,11 +23,10 @@ import { PhotoService } from '../../service/photoservice';
                 </ng-template>
             </p-galleria>
         </div>
-        <app-code [code]="code"></app-code>
-    </div>`,
-    providers: [PhotoService]
+        <app-code [code]="code" selector="galleria-thumbnail-demo"></app-code>
+    </div>`
 })
-export class ThumbnailDocComponent implements OnInit {
+export class GalleriaThumbnailDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -106,15 +105,14 @@ export class ThumbnailDocComponent implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { PhotoService } from '../../service/photo.service';
+import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './galleriademo.html',
-    styleUrls: ['./galleriademo.scss'],
-    providers: [PhotoService]
+    selector: 'galleria-thumbnail-demo',
+    templateUrl: './galleria-thumbnail-demo.html',
+    styleUrls: ['./galleria-thumbnail-demo.scss']
 })
-
-export class GalleriaDemo implements OnInit {
+export class GalleriaThumbnailDemo implements OnInit {
     images: any[];
 
     position: string = 'bottom';
@@ -167,6 +165,7 @@ export class GalleriaDemo implements OnInit {
     alt: 'Description for Image 1',
     title: 'Title 1'
 },
-...`
+...`,
+        service: ['PhotoService']
     };
 }
