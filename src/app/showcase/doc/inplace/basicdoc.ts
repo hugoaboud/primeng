@@ -57,7 +57,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'inplace-basic-demo',
-    templateUrl: './inplace-basic-demo'
+    templateUrl: './inplace-basic-demo.html'
 })
 export class InplaceBasicDemo {}`
     };
