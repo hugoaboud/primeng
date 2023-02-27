@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'checkbox-doc',
+    selector: 'inputgroup-checkbox-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Checkbox and RadioButton components can be combined with an input element under the same group.</p>
@@ -24,7 +24,7 @@ import { Code } from '../../domain/code';
                 <span class="p-inputgroup-addon"><p-radioButton name="category" value="site"></p-radioButton></span>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputgroup-checkbox-demo"></app-code>
     </div>`
 })
 export class CheckboxDocComponent {
@@ -71,10 +71,12 @@ export class CheckboxDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputgroupdemo.html'
+    selector: 'inputgroup-checkbox-demo',
+    templateUrl: './inputgroup-checkbox-demo.html',
+    styleUrls: ['./inputgroup-checkbox-demo.scss']
 })
 
-export class InputGroupDemo {
+export class InputgroupCheckboxDemo {
 }`
     };
 }

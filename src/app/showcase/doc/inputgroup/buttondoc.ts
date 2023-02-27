@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'button-doc',
+    selector: 'inputgroup-button-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Buttons can be placed at either side of an input element.</p>
@@ -24,7 +24,7 @@ import { Code } from '../../domain/code';
                 <button type="button" pButton icon="pi pi-times" styleClass="p-button-danger"></button>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputgroup-button-demo"></app-code>
     </div>`
 })
 export class ButtonDocComponent {
@@ -75,10 +75,11 @@ export class ButtonDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputgroupdemo.html'
+    selector: 'inputgroup-button-demo',
+    templateUrl: './inputgroup-button-demo.html',
+    styleUrls: ['./inputgroup-button-demo.scss']
 })
-
-export class InputGroupDemo {
+export class InputgroupButtonDemo {
 }`
     };
 }
