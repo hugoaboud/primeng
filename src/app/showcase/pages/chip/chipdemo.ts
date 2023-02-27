@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { IconDocComponent } from '../../doc/chip/icondoc';
-import { ImageDocComponent } from '../../doc/chip/imagedoc';
+import { ChipIconDemo } from '../../doc/chip/icondoc';
+import { ChipImageDemo } from '../../doc/chip/imagedoc';
 import { ImportDocComponent } from '../../doc/chip/importdoc';
-import { TemplatingDocComponent } from '../../doc/chip/templatingdoc';
-import { BasicDocComponent } from '../../doc/chip/basicdoc';
+import { ChipTemplatingDemo } from '../../doc/chip/templatingdoc';
+import { ChipBasicDemo } from '../../doc/chip/basicdoc';
 import { StyleDocComponent } from '../../doc/chip/styledoc';
 import { PropsDocComponent } from '../../doc/chip/propsdoc';
 import { EventsDocComponent } from '../../doc/chip/eventsdoc';
@@ -22,22 +22,22 @@ export class ChipDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: ChipBasicDemo
         },
         {
             id: 'icon',
             label: 'Icon',
-            component: IconDocComponent
+            component: ChipIconDemo
         },
         {
             id: 'image',
             label: 'Image',
-            component: ImageDocComponent
+            component: ChipImageDemo
         },
         {
-            id: 'template',
-            label: 'Template',
-            component: TemplatingDocComponent
+            id: 'custom',
+            label: 'Custom Content',
+            component: ChipTemplatingDemo
         },
         {
             id: 'style',
@@ -56,11 +56,6 @@ export class ChipDemo {
             id: 'events',
             label: 'Events',
             component: EventsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Chip', pathname: '/modules/chip.html' }]
         }
     ];
 }

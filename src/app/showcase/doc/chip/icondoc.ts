@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'icon-doc',
+    selector: 'chip-icon-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A font icon next to the label can be displayed with the <i>icon</i> property.</p>
@@ -13,10 +13,10 @@ import { Code } from '../../domain/code';
             <p-chip label="Google" icon="pi pi-google"></p-chip>
             <p-chip label="Microsoft" icon="pi pi-microsoft" [removable]="true"></p-chip>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chip-icon-demo"></app-code>
     </div>`
 })
-export class IconDocComponent {
+export class ChipIconDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -35,9 +35,9 @@ export class IconDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './chipdemo.html',
-    styleUrls: ['chipdemo.scss']
+    selector: 'chip-icon-demo',
+    templateUrl: './chip-icon-demo.html'
 })
-export class ChipDemo {}`
+export class ChipIconDemo {}`
     };
 }

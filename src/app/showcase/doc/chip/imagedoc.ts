@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'image-doc',
+    selector: 'chip-image-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>The <i>image</i> property is used to display an image like an avatar.</p>
@@ -13,10 +13,10 @@ import { Code } from '../../domain/code';
             <p-chip label="Onyama Limba" image="https://primefaces.org/cdn/primeng/images/demo/avatar/onyamalimba.png"></p-chip>
             <p-chip label="Xuxue Feng" image="https://primefaces.org/cdn/primeng/images/demo/avatar/xuxuefeng.png" [removable]="true"></p-chip>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chip-image-demo"></app-code>
     </div>`
 })
-export class ImageDocComponent {
+export class ChipImageDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -35,9 +35,9 @@ export class ImageDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './chipdemo.html',
-    styleUrls: ['chipdemo.scss']
+    selector: 'chip-image-demo',
+    templateUrl: './chip-image-demo.html'
 })
-export class ChipDemo {}`
+export class ChipImageDemo {}`
     };
 }

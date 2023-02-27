@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'chip-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -16,10 +16,10 @@ import { Code } from '../../domain/code';
             <p-chip label="Mystery"></p-chip>
             <p-chip label="Thriller" [removable]="true"></p-chip>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chip-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class ChipBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -38,9 +38,9 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './chipdemo.html',
-    styleUrls: ['chipdemo.scss']
+    selector: 'chip-basic-demo',
+    templateUrl: './chip-basic-demo.html'
 })
-export class ChipDemo {}`
+export class ChipBasicDemo {}`
     };
 }
