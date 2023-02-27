@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'invalid-doc',
+    selector: 'inputmask-invalid-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Invalid state style is added using the <i>ng-invalid</i> and <i>ng-dirty</i> class to indicate a failed validation.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-inputMask mask="999-99-9999" [(ngModel)]="value" class="ng-invalid ng-dirty"></p-inputMask>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputmask-invalid-demo"></app-code>
     </div>`
 })
 export class InvalidDocComponent {
@@ -33,10 +33,11 @@ export class InvalidDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputmaskdemo.html'
+    selector: 'inputmask-invalid-demo',
+    templateUrl: './inputmask-invalid-demo.html',
+    styleUrls: ['./inputmask-invalid-demo.scss']
 })
-
-export class InputMaskDemo {
+export class InputmaskInvalidDemo {
     value: string;
 }`
     };
