@@ -560,6 +560,7 @@ import { TreeTableModule } from 'primeng/treetable';
 import { AnimateModule } from 'primeng/animate';
 import { CardModule } from 'primeng/card';
 import { BlockUIModule } from 'primeng/blockui';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 ${serviceImports}
 
 @NgModule({
@@ -570,11 +571,11 @@ ${serviceImports}
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    BlockUIModule,
     AccordionModule,
     AutoCompleteModule,
     BadgeModule,
     BreadcrumbModule,
+    BlockUIModule,
     ButtonModule,
     CalendarModule,
     CarouselModule,
@@ -621,6 +622,7 @@ ${serviceImports}
     PanelMenuModule,
     PasswordModule,
     PickListModule,
+    ProgressSpinnerModule,
     ProgressBarModule,
     RadioButtonModule,
     RatingModule,

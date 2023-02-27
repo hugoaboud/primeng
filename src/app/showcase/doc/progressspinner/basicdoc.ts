@@ -30,7 +30,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'progress-spinner-basic-demo',
-    templateUrl: './progresspinnerdemo.html'
+    templateUrl: './progress-spinner-basic-demo.html'
 })
 
 export class ProgressSpinnerBasicDemo {}`
