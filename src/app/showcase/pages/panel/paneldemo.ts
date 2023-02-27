@@ -1,61 +1,60 @@
-import { Component, OnInit } from '@angular/core';
-import { MessageService } from 'primeng/api';
-import { MenuItem } from 'primeng/api';
+import { Component } from '@angular/core';
+import { TemplateDocComponent } from '../../doc/panel/templatedoc';
+import { BasicDocComponent } from '../../doc/panel/basicdoc';
+import { ImportDocComponent } from '../../doc/panel/importdoc';
+import { ToggleableDocComponent } from '../../doc/panel/toggleabledoc';
+import { StyleDocComponent } from '../../doc/panel/styledoc';
+import { PropsDocComponent } from '../../doc/panel/propsdoc';
+import { EventsDocComponent } from '../../doc/panel/eventsdoc';
+import { TemplatesDocComponent } from '../../doc/panel/templatesdoc';
 
 @Component({
-    templateUrl: './paneldemo.html',
-    providers: [MessageService],
-    styleUrls: ['./paneldemo.scss']
+    templateUrl: './paneldemo.html'
 })
-export class PanelDemo implements OnInit {
-    items: MenuItem[];
+export class PanelDemo {
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'toggleable',
+            label: 'Toggleable',
+            component: ToggleableDocComponent
+        },
+        {
+            id: 'template',
+            label: 'Template',
+            component: TemplateDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        }
+    ];
 
-    constructor(private messageService: MessageService) {}
-
-    ngOnInit() {
-        this.items = [
-            {
-                label: 'Options',
-                items: [
-                    {
-                        label: 'Update',
-                        icon: 'pi pi-refresh',
-                        command: () => {
-                            this.update();
-                        }
-                    },
-                    {
-                        label: 'Delete',
-                        icon: 'pi pi-times',
-                        command: () => {
-                            this.delete();
-                        }
-                    }
-                ]
-            },
-            {
-                label: 'Navigate',
-                items: [
-                    {
-                        label: 'Angular',
-                        icon: 'pi pi-external-link',
-                        url: 'http://angular.io'
-                    },
-                    {
-                        label: 'Router',
-                        icon: 'pi pi-upload',
-                        routerLink: '/fileupload'
-                    }
-                ]
-            }
-        ];
-    }
-
-    update() {
-        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Data Updated' });
-    }
-
-    delete() {
-        this.messageService.add({ severity: 'warn', summary: 'Delete', detail: 'Data Deleted' });
-    }
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDocComponent
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDocComponent
+        }
+    ];
 }

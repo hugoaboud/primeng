@@ -1,32 +1,42 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { Component } from '@angular/core';
+import { StyleDocComponent } from '../../doc/toolbar/styledoc';
+import { BasicDocComponent } from '../../doc/toolbar/basicdoc';
+import { ImportDocComponent } from '../../doc/toolbar/importdoc';
+import { PropsDocComponent } from '../../doc/toolbar/propsdoc';
+import { TemplatesDocComponent } from '../../doc/toolbar/templatesdoc';
 
 @Component({
     templateUrl: './toolbardemo.html'
 })
-export class ToolbarDemo implements OnInit {
-    items: MenuItem[];
+export class ToolbarDemo {
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        }
+    ];
 
-    ngOnInit() {
-        this.items = [
-            {
-                label: 'Update',
-                icon: 'pi pi-refresh'
-            },
-            {
-                label: 'Delete',
-                icon: 'pi pi-times'
-            },
-            {
-                label: 'Angular',
-                icon: 'pi pi-external-link',
-                url: 'http://angular.io'
-            },
-            {
-                label: 'Router',
-                icon: 'pi pi-upload',
-                routerLink: '/fileupload'
-            }
-        ];
-    }
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDocComponent
+        }
+    ];
 }
