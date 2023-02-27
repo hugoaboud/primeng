@@ -322,9 +322,9 @@ export class DragDropDataTableDemo implements OnInit {
     };
 
     extFiles = [
-    {
-        path: 'src/domain/product.ts',
-        content: `
+        {
+            path: 'src/domain/product.ts',
+            content: `
 export interface Product {
     id?: string;
     code?: string;
@@ -337,6 +337,6 @@ export interface Product {
     image?: string;
     rating?: number;
 }`
-    }
-        ];
+        }
+    ];
 }
