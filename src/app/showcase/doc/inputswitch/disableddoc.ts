@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'invalid-doc',
+    selector: 'inputswitch-disabled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>When <i>disabled</i> is present, the element cannot be edited and focused.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-inputSwitch [(ngModel)]="checked" [disabled]="true"></p-inputSwitch>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputswitch-disabled-demo"></app-code>
     </div>`
 })
 export class DisabledDocComponent {
@@ -33,10 +33,12 @@ export class DisabledDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputswitchdemo.html'
+    selector: 'inputswitch-disabled-demo',
+    templateUrl: './inputswitch-disabled-demo.html',
+    styleUrls: ['./inputswitch-disabled-demo.scss']
 })
 
-export class InputSwitchDemo {
+export class InputswitchDisabledDemo {
     checked: boolean;
 }`
     };
