@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'inputtextarea-floatlabel-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A floating label appears on top of the input field when focused.</p>
@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
                 <label for="float-input">Summary</label>
             </span>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputtextarea-floatlabel-demo"></app-code>
     </div>`
 })
 export class FloatlabelDocComponent {
@@ -40,10 +40,12 @@ export class FloatlabelDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './textareademo.html'
+    selector: 'inputtextarea-floatlabel-demo',
+    templateUrl: './inputtextarea-floatlabel-demo.html',
+    styleUrls: ['./inputtextarea-floatlabel-demo.scss']
 })
 
-export class TextareaDemo {
+export class InputtextareaFloatlabelDemo {
 }`
     };
 }
