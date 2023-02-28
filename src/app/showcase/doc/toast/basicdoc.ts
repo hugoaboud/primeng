@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'toast-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -15,11 +15,11 @@ import { Code } from '../../domain/code';
             <p-toast></p-toast>
             <button type="button" pButton pRipple (click)="show()" label="Show"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="toast-basic-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
-export class BasicDocComponent {
+export class ToastBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -41,32 +41,20 @@ export class BasicDocComponent {
 </div>`,
         typescript: `
 import { Component } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './toastdemo.html',
+    selector: 'toast-basic-demo',
+    templateUrl: './toast-basic-demo.html',
     providers: [MessageService]
 })
-export class ToastDemo {
+export class ToastBasicDemo {
 
     constructor(private messageService: MessageService) {}
 
     show() {
         this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Message Content' });
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ToastModule } from 'primeng/toast';
-import { RippleModule } from 'primeng/ripple';
-import { ButtonModule } from 'primeng/button';
-import { ToastDemo } from './toastdemo';
-
-@NgModule({
-    imports: [CommonModule, ToastModule, ButtonModule, RippleModule],
-    declarations: [ToastDemo]
-})
-export class ToastDemoModule {}`
+}`
     };
 }

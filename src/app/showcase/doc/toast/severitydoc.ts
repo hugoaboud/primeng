@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'severity-doc',
+    selector: 'toast-severity-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -18,11 +18,11 @@ import { Code } from '../../domain/code';
             <button type="button" pButton pRipple (click)="showWarn()" label="Warn" class="p-button-warning"></button>
             <button type="button" pButton pRipple (click)="showError()" label="Error" class="p-button-danger"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="toast-severity-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
-export class SeverityDocComponent {
+export class ToastSeverityDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -62,13 +62,14 @@ export class SeverityDocComponent {
 </div>`,
         typescript: `
 import { Component } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './toastdemo.html',
+    selector: 'toast-severity-demo',
+    templateUrl: './toast-severity-demo.html',
     providers: [MessageService]
 })
-export class ToastDemo {
+export class ToastSeverityDemo {
 
     constructor(private messageService: MessageService) {}
 

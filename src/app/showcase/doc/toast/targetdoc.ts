@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'target-doc',
+    selector: 'toast-target-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A page may have multiple toast components, in case you'd like to target a specific message to a particular toast, use the <i>key</i> property so that toast and the message can match.</p>
@@ -14,11 +14,11 @@ import { Code } from '../../domain/code';
             <button type="button" pButton pRipple (click)="showToast1()" label="Show Success"></button>
             <button type="button" pButton pRipple (click)="showToast2()" label="Show Warning" class="p-button-warning"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="toast-target-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
-export class TargetDocComponent {
+export class ToastTargetDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -50,13 +50,14 @@ export class TargetDocComponent {
 </div>`,
         typescript: `
 import { Component } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './toastdemo.html',
+    selector: 'toast-target-demo',
+    templateUrl: './toast-target-demo.html',
     providers: [MessageService]
 })
-export class ToastDemo {
+export class ToastTargetDemo {
 
     constructor(private messageService: MessageService) {}
 
@@ -69,19 +70,6 @@ export class ToastDemo {
         this.messageService.clear();
         this.messageService.add({ key: 'toast2', severity: 'warn', summary: 'Warning', detail: 'key: toast2' });
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ToastModule } from 'primeng/toast';
-import { RippleModule } from 'primeng/ripple';
-import { ButtonModule } from 'primeng/button';
-import { ToastDemo } from './toastdemo';
-
-@NgModule({
-    imports: [CommonModule, ToastModule, ButtonModule, RippleModule],
-    declarations: [ToastDemo]
-})
-export class ToastDemoModule {}`
+}`
     };
 }

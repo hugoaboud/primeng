@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'animation-doc',
+    selector: 'toast-animation-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Transition of the animations can be customized using the <i>showTransitionOptions</i>, <i>hideTransitionOptions</i>, <i>showTransformOptions</i> and <i>hideTransformOptions</i> properties.</p>
@@ -12,11 +12,11 @@ import { Code } from '../../domain/code';
             <p-toast [showTransformOptions]="'translateY(100%)'" [showTransitionOptions]="'1000ms'" [hideTransitionOptions]="'1000ms'" [showTransformOptions]="'translateX(100%)'"></p-toast>
             <button type="button" pButton pRipple (click)="show()" label="Show"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="toast-animation-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
-export class AnimationDocComponent {
+export class ToastAnimationDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -38,13 +38,14 @@ export class AnimationDocComponent {
 </div>`,
         typescript: `
 import { Component } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './toastdemo.html',
+    selector: 'toast-animation-demo',
+    templateUrl: './toast-animation-demo.html',
     providers: [MessageService]
 })
-export class ToastDemo {
+export class ToastAnimationDemo {
 
     constructor(private messageService: MessageService) {}
 

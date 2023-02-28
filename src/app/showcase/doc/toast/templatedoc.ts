@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'toast-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Templating allows customizing the content where the message instance is available as the implicit variable.</p>
@@ -30,11 +30,11 @@ import { Code } from '../../domain/code';
             </p-toast>
             <button type="button" pButton pRipple (click)="showConfirm()" label="Confirm"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="toast-template-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
-export class TemplateDocComponent {
+export class ToastTemplateDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -101,32 +101,20 @@ export class TemplateDocComponent {
 </div>`,
         typescript: `
 import { Component } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './toastdemo.html',
+    selector: 'toast-template-demo',
+    templateUrl: './toast-template-demo.html',
     providers: [MessageService]
 })
-export class ToastDemo {
+export class ToastTemplateDemo {
 
     constructor(private messageService: MessageService) {}
 
     showSticky() {
         this.messageService.add({ severity: 'info', summary: 'Sticky', detail: 'Message Content', sticky: true });
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ToastModule } from 'primeng/toast';
-import { RippleModule } from 'primeng/ripple';
-import { ButtonModule } from 'primeng/button';
-import { ToastDemo } from './toastdemo';
-
-@NgModule({
-    imports: [CommonModule, ToastModule, ButtonModule, RippleModule],
-    declarations: [ToastDemo]
-})
-export class ToastDemoModule {}`
+}`
     };
 }

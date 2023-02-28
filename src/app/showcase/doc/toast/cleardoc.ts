@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'clear-doc',
+    selector: 'toast-clear-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -16,11 +16,11 @@ import { Code } from '../../domain/code';
             <button type="button" pButton pRipple (click)="show()" label="Show"></button>
             <button type="button" pButton pRipple (click)="clear()" label="Clear" class="p-button-secondary"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="toast-clear-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
-export class ClearDocComponent {
+export class ToastClearDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -48,13 +48,14 @@ export class ClearDocComponent {
 </div>`,
         typescript: `
 import { Component } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './toastdemo.html',
+    selector: 'toast-clear-demo',
+    templateUrl: './toast-clear-demo.html',
     providers: [MessageService]
 })
-export class ToastDemo {
+export class ToastClearDemo {
 
     constructor(private messageService: MessageService) {}
 
@@ -65,19 +66,6 @@ export class ToastDemo {
     clear() {
         this.messageService.clear();
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ToastModule } from 'primeng/toast';
-import { RippleModule } from 'primeng/ripple';
-import { ButtonModule } from 'primeng/button';
-import { ToastDemo } from './toastdemo';
-
-@NgModule({
-    imports: [CommonModule, ToastModule, ButtonModule, RippleModule],
-    declarations: [ToastDemo]
-})
-export class ToastDemoModule {}`
+}`
     };
 }

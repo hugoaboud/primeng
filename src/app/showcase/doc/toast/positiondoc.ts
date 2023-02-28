@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'position-doc',
+    selector: 'toast-position-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Location of the toast is customized with the <i>position</i> property. Valid values are <i>top-left</i>, <i>top-center</i>, <i>top-right</i>, <i>bottom-left</i>, <i>bottom-center</i>, <i>bottom-right</i> and <i>center</i>.</p>
@@ -16,11 +16,11 @@ import { Code } from '../../domain/code';
             <button type="button" pButton pRipple (click)="showTopCenter()" label="Top Center" class="p-button-warning"></button>
             <button type="button" pButton pRipple (click)="showBottomCenter()" label="Bottom Center" class="p-button-success"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="toast-position-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
-export class PositionDocComponent {
+export class ToastPositionDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -56,13 +56,14 @@ export class PositionDocComponent {
 </div>`,
         typescript: `
 import { Component } from '@angular/core';
-import { MessageService } from 'src/app/components/api/messageservice';
+import { MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './toastdemo.html',
+    selector: 'toast-position-demo',
+    templateUrl: './toast-position-demo.html',
     providers: [MessageService]
 })
-export class ToastDemo {
+export class ToastPositionDemo {
 
     constructor(private messageService: MessageService) {}
 
