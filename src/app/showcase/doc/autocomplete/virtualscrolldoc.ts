@@ -2,13 +2,13 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'virtualscroll-doc',
+    selector: 'autocomplete-virtualscroll-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
         <div class="card flex justify-content-center">
             <p-autoComplete [(ngModel)]="selectedItem" [virtualScroll]="true" [suggestions]="filteredItems" [virtualScrollItemSize]="34" (completeMethod)="filterItems($event)" field="label" [dropdown]="true"> </p-autoComplete>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="autocomplete-virtualscroll-demo"></app-code>
     </div>`
 })
 export class VirtualScrollDocComponent {
@@ -54,13 +54,14 @@ export class VirtualScrollDocComponent {
 </div>`,
 
         typescript: `
-import { SelectItemGroup } from 'primeng/api';
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './autocompletedemo.html'
+    selector: 'autocomplete-virtualscroll-demo',
+    templateUrl: './autocomplete-virtualscroll-demo.html',
+    styleUrls: ['./autocomplete-virtualscroll-demo.scss']
 })
-export class AutoCompleteDemo {
+export class AutocompleteVirtualscrollDemo {
     selectedItem: any;
 
     filteredItems: any[];

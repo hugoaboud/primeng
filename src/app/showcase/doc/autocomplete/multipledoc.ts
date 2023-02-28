@@ -4,7 +4,7 @@ import { Code } from '../../domain/code';
 import { CountryService } from '../../service/countryservice';
 
 @Component({
-    selector: 'multiplescroll-doc',
+    selector: 'autocomplete-multiplescroll-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
         <div class="card">
@@ -12,7 +12,7 @@ import { CountryService } from '../../service/countryservice';
                 <p-autoComplete [(ngModel)]="selectedCountries" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [multiple]="true"> </p-autoComplete>
             </span>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="autocomplete-multiplescroll-demo"></app-code>
     </div>`
 })
 export class MultipleDocComponent {
@@ -108,11 +108,14 @@ export class MultipleDocComponent {
         typescript: `
 import { SelectItemGroup } from 'primeng/api';
 import { Component } from '@angular/core';
+import { CountryService } from 'src/service/countryservice';
 
 @Component({
-    templateUrl: './autocompletedemo.html'
+    selector: 'autocomplete-multiplescroll-demo',
+    templateUrl: './autocomplete-multiplescroll-demo.html',
+    styleUrls: ['./autocomplete-multiplescroll-demo.scss']
 })
-export class AutoCompleteDemo {
+export class AutocompleteMultiplescrollDemo {
     countries: any[];
 
     items: any[];
@@ -183,21 +186,16 @@ export class AutoCompleteDemo {
 
         this.filteredCountries = filtered;
     }
-}
-
-@Injectable()
-export class CountryService {
-
-    constructor(private http: Http) {}
-
-    getCountries() {
-        return this.http.get('showcase/resources/data/countries.json')
-                    .toPromise()
-                    .then(res => <any[]> res.json().data)
-                    .then(data => { return data; });
-    }
 }`,
-        module: `
-import { SelectItemGroup } from 'primeng/api';`
+
+        service: ['CountryService'],
+
+        data: `
+//CountryService
+{
+"name": "Afghanistan",
+"code": "AF"
+}
+...`
     };
 }

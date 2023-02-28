@@ -4,7 +4,7 @@ import { Code } from '../../domain/code';
 import { CountryService } from '../../service/countryservice';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'autocomplete-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
         <div class="card flex justify-content-center">
@@ -17,7 +17,7 @@ import { CountryService } from '../../service/countryservice';
                 </ng-template>
             </p-autoComplete>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="autocomplete-template-demo"></app-code>
     </div>`
 })
 export class TemplateDocComponent {
@@ -121,13 +121,16 @@ export class TemplateDocComponent {
 </div>`,
 
         typescript: `
-import { SelectItemGroup } from 'primeng/api';
 import { Component } from '@angular/core';
+import { SelectItemGroup } from 'primeng/api';
+import { CountryService } from 'src/service/countryservice';
 
 @Component({
-    templateUrl: './autocompletedemo.html'
+    selector: 'autocomplete-template-demo',
+    templateUrl: './autocomplete-template-demo.html',
+    styleUrls: ['./autocomplete-template-demo.scss']
 })
-export class AutoCompleteDemo {
+export class AutocompleteTemplateDemo {
     countries: any[];
 
     items: any[];
@@ -197,22 +200,16 @@ export class AutoCompleteDemo {
 
         this.filteredCountries = filtered;
     }
-}
-
-@Injectable()
-export class CountryService {
-
-    constructor(private http: Http) {}
-
-    getCountries() {
-        return this.http.get('showcase/resources/data/countries.json')
-                    .toPromise()
-                    .then(res => <any[]> res.json().data)
-                    .then(data => { return data; });
-    }
 }`,
 
-        module: `
-import { SelectItemGroup } from 'primeng/api';`
+        service: ['CountryService'],
+
+        data: `
+//CountryService
+{
+    "name": "Afghanistan",
+    "code": "AF"
+}
+...`
     };
 }
