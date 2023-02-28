@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'dialog-modal-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Mask layer behind the Dialog can be turned on by setting the <i>modal</i> property to <i>true</i>.</p>
@@ -16,10 +16,10 @@ import { Code } from '../../domain/code';
                 </p>
             </p-dialog>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="dialog-modal-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class DialogModalDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -55,28 +55,16 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './dialogdemo.html'
+    selector: 'dialog-modal-demo',
+    templateUrl: './dialog-modal-demo.html'
 })
-export class DialogDemo {
+export class DialogModalDemo {
 
     visible!: boolean;
 
     showDialog() {
         this.visible = true;
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { DialogModule } from 'primeng/dialog';
-import { ButtonModule } from 'primeng/button';
-import { DialogDemo } from './dialogdemo';
-
-@NgModule({
-    imports: [CommonModule, DialogModule, ButtonModule],
-    declarations: [DialogDemo]
-})
-export class DialogDemoModule {}`
+}`
     };
 }

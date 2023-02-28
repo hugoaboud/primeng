@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'maximizable-doc',
+    selector: 'dialog-maximizable-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Setting <i>maximizable</i> property to <i>true</i> enables the full screen mode.</p>
@@ -16,10 +16,10 @@ import { Code } from '../../domain/code';
                 </p>
             </p-dialog>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="dialog-maximizable-demo"></app-code>
     </div>`
 })
-export class MaximizableDocComponent {
+export class DialogMaximizableDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -55,28 +55,16 @@ export class MaximizableDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './dialogdemo.html'
+    selector: 'dialog-maximizable-demo',
+    templateUrl: './dialog-maximizable-demo.html'
 })
-export class DialogDemo {
+export class DialogMaximizableDemo {
 
     visible!: boolean;
 
     showDialog() {
         this.visible = true;
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { DialogModule } from 'primeng/dialog';
-import { ButtonModule } from 'primeng/button';
-import { DialogDemo } from './dialogdemo';
-
-@NgModule({
-    imports: [CommonModule, DialogModule, ButtonModule],
-    declarations: [DialogDemo]
-})
-export class DialogDemoModule {}`
+}`
     };
 }

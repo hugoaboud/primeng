@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'custom-doc',
+    selector: 'dialog-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Dialog can be customized using <i>header</i> and <i>footer</i> templates.</p>
@@ -22,10 +22,10 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-dialog>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="dialog-template-demo"></app-code>
     </div>`
 })
-export class CustomDocComponent {
+export class DialogTemplateDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -73,28 +73,16 @@ export class CustomDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './dialogdemo.html'
+    selector: 'dialog-template-demo',
+    templateUrl: './dialog-template-demo.html'
 })
-export class DialogDemo {
+export class DialogTemplateDemo {
 
     visible!: boolean;
 
     showDialog() {
         this.visible = true;
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { DialogModule } from 'primeng/dialog';
-import { ButtonModule } from 'primeng/button';
-import { DialogDemo } from './dialogdemo';
-
-@NgModule({
-    imports: [CommonModule, DialogModule, ButtonModule],
-    declarations: [DialogDemo]
-})
-export class DialogDemoModule {}`
+}`
     };
 }

@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'position-doc',
+    selector: 'dialog-position-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>The <i>position</i> property is used to display a Dialog at all edges and corners of the screen.</p>
@@ -29,10 +29,10 @@ import { Code } from '../../domain/code';
                 </p>
             </p-dialog>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="dialog-position-demo"></app-code>
     </div>`
 })
-export class PositionDocComponent {
+export class DialogPositionDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -97,9 +97,10 @@ export class PositionDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './dialogdemo.html'
+    selector: 'dialog-position-demo',
+    templateUrl: './dialog-position-demo.html'
 })
-export class DialogDemo {
+export class DialogPositionDemo {
 
     visible!: boolean;
 

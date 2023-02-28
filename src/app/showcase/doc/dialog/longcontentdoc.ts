@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'longcontent-doc',
+    selector: 'dialog-long-content-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Dialog automatically displays a scroller when content exceeeds viewport.</p>
@@ -30,10 +30,10 @@ import { Code } from '../../domain/code';
                 </p>
             </p-dialog>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="dialog-long-content-demo"></app-code>
     </div>`
 })
-export class LongContentDocComponent {
+export class DialogLongContentDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -97,28 +97,16 @@ export class LongContentDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './dialogdemo.html'
+    selector: 'dialog-long-content-demo',
+    templateUrl: './dialog-long-content-demo.html'
 })
-export class DialogDemo {
+export class DialogLongContentDemo {
 
     visible!: boolean;
 
     showDialog() {
         this.visible = true;
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { DialogModule } from 'primeng/dialog';
-import { ButtonModule } from 'primeng/button';
-import { DialogDemo } from './dialogdemo';
-
-@NgModule({
-    imports: [CommonModule, DialogModule, ButtonModule],
-    declarations: [DialogDemo]
-})
-export class DialogDemoModule {}`
+}`
     };
 }

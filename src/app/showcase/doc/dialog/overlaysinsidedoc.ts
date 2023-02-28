@@ -7,7 +7,7 @@ interface City {
 }
 
 @Component({
-    selector: 'overlaysinside-doc',
+    selector: 'dialog-overlays-inside-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -23,10 +23,10 @@ interface City {
                 </div>
             </p-dialog>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="dialog-overlays-inside-demo"></app-code>
     </div>`
 })
-export class OverlaysInsideDocComponent implements OnInit {
+export class DialogOverlaysInsideDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -79,9 +79,10 @@ interface City {
 }
 
 @Component({
-    templateUrl: './dialogdemo.html'
+    selector: 'dialog-overlays-inside-demo',
+    templateUrl: './dialog-overlays-inside-demo.html'
 })
-export class DialogDemo implements OnInit {
+export class DialogOverlaysInsideDemo implements OnInit {
 
     cities!: City[];
 
@@ -102,21 +103,6 @@ export class DialogDemo implements OnInit {
     showDialog() {
         this.visible = true;
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { DialogModule } from 'primeng/dialog';
-import { ButtonModule } from 'primeng/button';
-import { DropdownModule } from 'primeng/dropdown';
-import { DialogDemo } from './dialogdemo';
-
-@NgModule({
-    imports: [CommonModule, DialogModule, FormsModule, ButtonModule, DropdownModule],
-    declarations: [DialogDemo]
-})
-export class DialogDemoModule {}`
+}`
     };
 }
