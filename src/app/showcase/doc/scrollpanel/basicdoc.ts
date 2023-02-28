@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'scroll-panel-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>ScrollPanel is defined using dimensions for the scrollable viewport.</p>
@@ -23,10 +23,10 @@ import { Code } from '../../domain/code';
                 </p>
             </p-scrollPanel>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="scroll-panel-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class ScrollPanelBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -70,10 +70,9 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'scroll-panel-basic-demo',
+    templateUrl: './scroll-panel-basic-demo.html'
 })
-export class AppComponent {}`
+export class ScrollPanelBasicDemo {}`
     };
 }

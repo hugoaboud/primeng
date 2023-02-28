@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'custom-doc',
+    selector: 'scroll-panel-custom-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Scrollbar visuals can be styled for a unified look across different platforms.</p>
@@ -45,10 +45,10 @@ import { Code } from '../../domain/code';
                 </div>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="scroll-panel-custom-demo"></app-code>
     </div>`
 })
-export class CustomDocComponent {
+export class ScrollPanelCustomDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -111,10 +111,9 @@ export class CustomDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'scroll-panel-custom-demo',
+    templateUrl: './scroll-panel-custom-demo.html'
 })
-export class AppComponent {}`
+export class ScrollPanelCustomDemo {}`
     };
 }
