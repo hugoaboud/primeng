@@ -5,8 +5,8 @@
             "icon": "pi pi-home",
             "children": [
                 {
-                    "name": "Get Started",
-                    "routerLink": "/setup"
+                    "name": "Installation",
+                    "routerLink": "/installation"
                 },
                 {
                     "name": "Examples",
