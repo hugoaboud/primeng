@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'button-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Custom content inside a button is defined as children.</p>
@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
                 <span class="ml-2 font-bold">PrimeNG</span>
             </p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="button-template-demo"></app-code>
     </div>`
 })
 export class TemplateDocComponent {
@@ -40,8 +40,10 @@ export class TemplateDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './templatedemo.html'
+    selector: 'button-template-demo',
+    templateUrl: './button-template-demo.html',
+    styleUrls: ['./button-template-demo.scss']
 })
-export class TemplateDemo { }`
+export class ButtonTemplateDemo { }`
     };
 }

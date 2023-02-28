@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'outlined-doc',
+    selector: 'button-outlined-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Outlined buttons display a border without a background initially.</p>
@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
             <button pButton type="button" label="Help" class="p-button-outlined p-button-help"></button>
             <button pButton type="button" label="Danger" class="p-button-outlined p-button-danger"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="button-outlined-demo"></app-code>
     </div>`
 })
 export class OutlinedDocComponent {
@@ -49,8 +49,10 @@ export class OutlinedDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './outlineddemo.html'
+    selector: 'button-outlined-demo',
+    templateUrl: './button-outlined-demo.html',
+    styleUrls: ['./button-outlined-demo.scss']
 })
-export class OutlinedDemo { }`
+export class ButtonOutlinedDemo { }`
     };
 }

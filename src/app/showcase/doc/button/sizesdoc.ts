@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'sizes-doc',
+    selector: 'button-sizes-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Button provides <i>small</i> and <i>large</i> sizes as alternatives to the standard.</p>
@@ -12,7 +12,7 @@ import { Code } from '../../domain/code';
             <p-button label="Normal" icon="pi pi-check" styleClass="p-button"></p-button>
             <p-button label="Large" icon="pi pi-check" styleClass="p-button-lg"></p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="button-sizes-demo"></app-code>
     </div>`
 })
 export class SizesDocComponent {
@@ -37,8 +37,10 @@ export class SizesDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './sizesdemo.html'
+    selector: 'button-sizes-demo',
+    templateUrl: './button-sizes-demo.html',
+    styleUrls: ['./button-sizes-demo.scss']
 })
-export class SizesDemo { }`
+export class ButtonSizesDemo { }`
     };
 }

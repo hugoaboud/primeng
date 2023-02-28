@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'text-doc',
+    selector: 'button-text-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Text buttons are displayed as textual elements.</p>
@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
             <button pButton type="button" label="Help" class="p-button-help p-button-text"></button>
             <button pButton type="button" label="Danger" class="p-button-danger p-button-text"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="button-text-demo"></app-code>
     </div>`
 })
 export class TextDocComponent {
@@ -49,8 +49,10 @@ export class TextDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './textdemo.html'
+    selector: 'button-text-demo',
+    templateUrl: './button-text-demo.html',
+    styleUrls: ['./button-text-demo.scss']
 })
-export class TextDemo { }`
+export class ButtonTextDemo { }`
     };
 }

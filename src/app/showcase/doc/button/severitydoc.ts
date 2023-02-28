@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'severity-doc',
+    selector: 'button-severity-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Severity defines the type of button.</p>
@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
             <button pButton type="button" label="Help" class="p-button-help"></button>
             <button pButton type="button" label="Danger" class="p-button-danger"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="button-severity-demo"></app-code>
     </div>`
 })
 export class SeverityDocComponent {
@@ -49,8 +49,10 @@ export class SeverityDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './severitydemo.html'
+    selector: 'button-severity-demo',
+    templateUrl: './button-severity-demo.html',
+    styleUrls: ['./button-severity-demo.scss']
 })
-export class SeverityDemo { }`
+export class ButtonSeverityDemo { }`
     };
 }

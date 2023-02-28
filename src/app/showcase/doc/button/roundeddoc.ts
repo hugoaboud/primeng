@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'rounded-doc',
+    selector: 'button-rounded-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Rounded buttons have a circular border radius.</p>
@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
             <button pButton type="button" label="Help" class="p-button-rounded p-button-help"></button>
             <button pButton type="button" label="Danger" class="p-button-rounded p-button-danger"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="button-rounded-demo"></app-code>
     </div>`
 })
 export class RoundedDocComponent {
@@ -49,8 +49,10 @@ export class RoundedDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './roundeddemo.html'
+    selector: 'button-rounded-demo',
+    templateUrl: './button-rounded-demo.html',
+    styleUrls: ['./button-rounded-demo.scss']
 })
-export class RoundedDemo { }`
+export class ButtonRoundedDemo { }`
     };
 }

@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'buttonset-doc',
+    selector: 'button-buttonset-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Multiple buttons are grouped when wrapped inside an element with <i>p-buttonset</i> class.</p>
@@ -14,7 +14,7 @@ import { Code } from '../../domain/code';
                 <button pButton pRipple label="Cancel" icon="pi pi-times"></button>
             </span>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="button-buttonset-demo"></app-code>
     </div>`
 })
 export class ButtonsetDocComponent {
@@ -43,8 +43,10 @@ export class ButtonsetDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './buttonsetdemo.html'
+    selector: 'button-buttonset-demo',
+    templateUrl: './button-buttonset-demo.html',
+    styleUrls: ['./button-buttonset-demo.scss']
 })
-export class ButtonsetDemo { }`
+export class ButtonButtonsetDemo { }`
     };
 }
