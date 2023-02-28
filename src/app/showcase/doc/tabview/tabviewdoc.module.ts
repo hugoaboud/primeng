@@ -20,18 +20,6 @@ import { TemplatesDocComponent } from './templatesdoc';
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, TabViewModule, RouterModule, ButtonModule],
     exports: [AppDocModule],
-    declarations: [
-        ImportDocComponent,
-        TabViewBasicDemo,
-        TabViewControlledDemo,
-        TabViewDisabledDemo,
-        TabViewTemplateDemo,
-        TabViewClosableDemo,
-        ScrollableDocComponent,
-        StyleDocComponent,
-        PropsDocComponent,
-        EventsDocComponent,
-        TemplatesDocComponent
-    ]
+    declarations: [ImportDocComponent, TabViewBasicDemo, TabViewControlledDemo, TabViewDisabledDemo, TabViewTemplateDemo, TabViewClosableDemo, ScrollableDocComponent, StyleDocComponent, PropsDocComponent, EventsDocComponent, TemplatesDocComponent]
 })
 export class TabViewDocModule {}
