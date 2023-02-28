@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'mask-doc',
+    selector: 'inputmask-mask-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -24,7 +24,7 @@ import { Code } from '../../domain/code';
                 <p-inputMask mask="a*-999-a999" [(ngModel)]="value3" placeholder="a*-999-a999"></p-inputMask>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputmask-mask-demo"></app-code>
     </div>`
 })
 export class MaskDocComponent {
@@ -71,10 +71,11 @@ export class MaskDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputmaskdemo.html'
+    selector: 'inputmask-mask-demo',
+    templateUrl: './inputmask-mask-demo.html',
+    styleUrls: ['./inputmask-mask-demo.scss']
 })
-
-export class InputMaskDemo {
+export class InputmaskMaskDemo {
     value1: string;
 
     value2: string;

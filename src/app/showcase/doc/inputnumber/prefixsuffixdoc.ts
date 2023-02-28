@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'prefixsuffix-doc',
+    selector: 'inputnumber-prefixsuffix-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Custom texts e.g. units can be placed before or after the input section with the <i>prefix</i> and <i>suffix</i> properties.</p>
@@ -25,7 +25,7 @@ import { Code } from '../../domain/code';
                 <p-inputNumber [(ngModel)]="value4" prefix="↑ " inputId="temperature" suffix="℃" [min]="0" [max]="40"> </p-inputNumber>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputnumber-prefixsuffix-demo"></app-code>
     </div>`
 })
 export class PrefixSuffixDocComponent {
@@ -72,10 +72,12 @@ export class PrefixSuffixDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputnumberdemo.html'
+    selector: 'inputnumber-prefixsuffix-demo',
+    templateUrl: './inputnumber-prefixsuffix-demo.html',
+    styleUrls: ['./inputnumber-prefixsuffix-demo.scss']
 })
 
-export class InputNumberDemo {
+export class InputnumberPrefixsuffixDemo {
     value1: number = 20;
 
     value2: number = 50;

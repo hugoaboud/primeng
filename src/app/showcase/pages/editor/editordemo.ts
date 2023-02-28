@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { BasicDocComponent } from '../../doc/editor/basicdoc';
 import { CustomToolbarDocComponent } from '../../doc/editor/customtoolbardoc';
-import { EventsDocComponent } from '../../doc/editor/events';
+import { EventsDocComponent } from '../../doc/editor/eventsdoc';
 import { ImportDocComponent } from '../../doc/editor/importdoc';
 import { MethodsDocComponent } from '../../doc/editor/methodsdoc';
 import { PropsDocComponent } from '../../doc/editor/propsdoc';

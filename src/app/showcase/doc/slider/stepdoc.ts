@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'step-doc',
+    selector: 'slider-step-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Size of each movement is defined with the <i>step</i> property.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-slider [(ngModel)]="value" [step]="20"></p-slider>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="slider-step-demo"></app-code>
     </div>`
 })
 export class StepDocComponent {
@@ -33,9 +33,11 @@ export class StepDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './stepdemo.html'
+    selector: 'slider-step-demo',
+    templateUrl: './slider-step-demo.html',
+    styleUrls: ['./slider-step-demo.scss']
 })
-export class StepDemo {
+export class SliderStepDemo {
     value: number;
 }`
     };

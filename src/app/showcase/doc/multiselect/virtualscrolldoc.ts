@@ -7,7 +7,7 @@ interface Country {
 }
 
 @Component({
-    selector: 'virtualscroll-doc',
+    selector: 'multiselect-virtualscroll-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -25,7 +25,7 @@ interface Country {
                 </ng-template>
             </p-multiSelect>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="multiselect-virtualscroll-demo"></app-code>
     </div>`
 })
 export class VirtualScrollDocComponent {
@@ -76,9 +76,11 @@ interface Country {
 }
 
 @Component({
-    templateUrl: './multiselectdemo.html'
+    selector: 'multiselect-virtualscroll-demo',
+    templateUrl: './multiselect-virtualscroll-demo.html',
+    styleUrls: ['./multiselect-virtualscroll-demo.scss']
 })
-export class MultiSelectDemo {
+export class MultiselectVirtualscrollDemo {
 
     virtualCountries: Country[];
 

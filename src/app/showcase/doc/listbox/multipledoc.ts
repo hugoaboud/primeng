@@ -7,7 +7,7 @@ interface City {
 }
 
 @Component({
-    selector: 'multiple-doc',
+    selector: 'listbox-multiple-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -18,7 +18,7 @@ interface City {
         <div class="card flex justify-content-center">
             <p-listbox [options]="cities" [(ngModel)]="selectedCities" optionLabel="name" [style]="{ width: '15rem' }" [multiple]="true" [metaKeySelection]="false"></p-listbox>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="listbox-multiple-demo"></app-code>
     </div>`
 })
 export class MultipleDocComponent {
@@ -60,9 +60,11 @@ interface City {
 }
 
 @Component({
-    templateUrl: './listboxdemo.html'
+    selector: 'listbox-multiple-demo',
+    templateUrl: './listbox-multiple-demo.html',
+    styleUrls: ['./listbox-multiple-demo.scss']
 })
-export class ListboxDemo {
+export class ListboxMultipleDemo {
     cities: City[];
 
     selectedCities: City[];

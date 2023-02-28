@@ -7,7 +7,7 @@ interface City {
 }
 
 @Component({
-    selector: 'chips-doc',
+    selector: 'multiselect-chips-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Selected values are displayed as a comma separated list by default, setting <i>display</i> as <i>chip</i> displays them as chips.</p>
@@ -15,7 +15,7 @@ interface City {
         <div class="card flex justify-content-center">
             <p-multiSelect [options]="cities" [(ngModel)]="selectedCities" defaultLabel="Select a City" optionLabel="name" display="chip"></p-multiSelect>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="multiselect-chips-demo"></app-code>
     </div>`
 })
 export class ChipsDocComponent {
@@ -55,11 +55,11 @@ interface City {
 }
 
 @Component({
-    templateUrl: './multiselectdemo.html'
+    selector: 'multiselect-chips-demo',
+    templateUrl: './multiselect-chips-demo.html',
+    styleUrls: ['./multiselect-chips-demo.scss']
 })
-
-export class MultiSelectDemo {
-
+export class MultiselectChipsDemo {
     cities: City[];
 
     selectedCities: City[];

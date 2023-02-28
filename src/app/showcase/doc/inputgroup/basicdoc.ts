@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'inputgroup-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
         <div class="card flex flex-column md:flex-row gap-3">
@@ -22,7 +22,7 @@ import { Code } from '../../domain/code';
                 <input type="text" pInputText placeholder="Website" />
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputgroup-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent {
@@ -73,10 +73,11 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputgroupdemo.html'
+    selector: 'inputgroup-basic-demo',
+    templateUrl: './inputgroup-basic-demo.html',
+    styleUrls: ['./inputgroup-basic-demo.scss']
 })
-
-export class InputGroupDemo {
+export class InputgroupBasicDemo {
 }`
     };
 }

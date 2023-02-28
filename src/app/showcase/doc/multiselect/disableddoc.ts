@@ -7,7 +7,7 @@ interface City {
 }
 
 @Component({
-    selector: 'disabled-doc',
+    selector: 'multiselect-disabled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>When <i>disabled</i> is present, the element cannot be edited and focused.</p>
@@ -15,7 +15,7 @@ interface City {
         <div class="card flex justify-content-center">
             <p-multiSelect [options]="cities" [(ngModel)]="selectedCities" [disabled]="true" optionLabel="name"></p-multiSelect>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="multiselect-disabled-demo"></app-code>
     </div>`
 })
 export class DisabledDocComponent {
@@ -55,9 +55,11 @@ interface City {
 }
 
 @Component({
-    templateUrl: './multiselectdemo.html'
+    selector: 'multiselect-disabled-demo',
+    templateUrl: './multiselect-disabled-demo.html',
+    styleUrls: ['./multiselect-disabled-demo.scss']
 })
-export class MultiSelectDemo {
+export class MultiselectDisabledDemo {
 
     cities: City[];
 

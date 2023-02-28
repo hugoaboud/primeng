@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'rating-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Templating allows customizing the content where the icon instance is available as the implicit variable.</p>
@@ -20,7 +20,7 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-rating>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="rating-template-demo"></app-code>
     </div>`
 })
 export class TemplateDocComponent {
@@ -63,9 +63,11 @@ export class TemplateDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './ratingdemo.html'
+    selector: 'rating-template-demo',
+    templateUrl: './rating-template-demo.html',
+    styleUrls: ['./rating-template-demo.scss']
 })
-export class RatingDemo {
+export class RatingTemplateDemo {
     value: number;
 }`
     };

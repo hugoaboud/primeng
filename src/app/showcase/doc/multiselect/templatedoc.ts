@@ -7,7 +7,7 @@ interface Country {
 }
 
 @Component({
-    selector: 'template-doc',
+    selector: 'multiselect-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Available options and the selected options support templating with <i>pTemplate</i> properties respectively. In addition, header, footer and filter sections can be templated as well.</p>
@@ -29,7 +29,7 @@ interface Country {
                 </ng-template>
             </p-multiSelect>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="multiselect-template-demo"></app-code>
     </div>`
 })
 export class TemplateDocComponent {
@@ -102,10 +102,11 @@ interface Country {
 }
 
 @Component({
-    templateUrl: './multiselectdemo.html'
+    selector: 'multiselect-template-demo',
+    templateUrl: './multiselect-template-demo.html',
+    styleUrls: ['./multiselect-template-demo.scss']
 })
-
-export class MultiSelectDemo {
+export class MultiselectTemplateDemo {
 
     countries: Country[];
 

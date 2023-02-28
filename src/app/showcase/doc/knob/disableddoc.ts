@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'disabled-doc',
+    selector: 'knob-disabled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>When <i>disabled</i> is present, a visual hint is applied to indicate that the Knob cannot be interacted with.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-knob [(ngModel)]="value" [disabled]="true"></p-knob>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="knob-disabled-demo"></app-code>
     </div>`
 })
 export class DisabledDocComponent {
@@ -33,10 +33,11 @@ export class DisabledDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './knobdemo.html'
+    selector: 'knob-disabled-demo',
+    templateUrl: './knob-disabled-demo.html',
+    styleUrls: ['./knob-disabled-demo.scss']
 })
-
-export class KnobDemo {
+export class KnobDisabledDemo {
     value: number = 75;
 }`
     };

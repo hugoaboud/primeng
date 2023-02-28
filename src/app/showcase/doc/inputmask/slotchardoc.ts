@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'slotchar-doc',
+    selector: 'inputmask-slotchar-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Default placeholder for a mask is underscore that can be customized using <i>slotChar</i> property.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-inputMask [(ngModel)]="value" mask="99/99/9999" placeholder="99/99/9999" slotChar="mm/dd/yyyy"></p-inputMask>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputmask-slotchar-demo"></app-code>
     </div>`
 })
 export class SlotCharDocComponent {
@@ -33,10 +33,11 @@ export class SlotCharDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputmaskdemo.html'
+    selector: 'inputmask-slotchar-demo',
+    templateUrl: './inputmask-slotchar-demo.html',
+    styleUrls: ['./inputmask-slotchar-demo.scss']
 })
-
-export class InputMaskDemo {
+export class InputmaskSlotcharDemo {
     value: string;
 }`
     };

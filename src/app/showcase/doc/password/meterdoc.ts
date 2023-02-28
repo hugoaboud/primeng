@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'meter-doc',
+    selector: 'password-meter-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Strength meter is displayed as a popup while a value is being entered.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-password [(ngModel)]="value"></p-password>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="password-meter-demo"></app-code>
     </div>`
 })
 export class MeterDocComponent {
@@ -33,10 +33,11 @@ export class MeterDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './passworddemo.html'
+    selector: 'password-meter-demo',
+    templateUrl: './password-meter-demo.html',
+    styleUrls: ['./password-meter-demo.scss']
 })
-
-export class PasswordDemo {
+export class PasswordMeterDemo {
     value: string;
 }`
     };

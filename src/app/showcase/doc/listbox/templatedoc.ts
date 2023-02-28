@@ -7,7 +7,7 @@ interface Country {
 }
 
 @Component({
-    selector: 'template-doc',
+    selector: 'listbox-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id"> </app-docsectiontext>
         <div class="card flex justify-content-center">
@@ -20,7 +20,7 @@ interface Country {
                 </ng-template>
             </p-listbox>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="listbox-template-demo"></app-code>
     </div>`
 })
 export class TemplateDocComponent {
@@ -79,9 +79,11 @@ interface Country {
 }
 
 @Component({
-    templateUrl: './listboxdemo.html'
+    selector: 'listbox-template-demo',
+    templateUrl: './listbox-template-demo.html',
+    styleUrls: ['./listbox-template-demo.scss']
 })
-export class ListboxDemo {
+export class ListboxTemplateDemo {
     countries: Country[];
 
     selectedCountry: Country;

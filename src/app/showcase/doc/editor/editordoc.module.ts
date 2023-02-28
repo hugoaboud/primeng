@@ -12,7 +12,7 @@ import { EditorModule } from 'primeng/editor';
 import { ReadOnlyDocComponent } from './readonlydoc';
 import { CustomToolbarDocComponent } from './customtoolbardoc';
 import { PropsDocComponent } from './propsdoc';
-import { EventsDocComponent } from './events';
+import { EventsDocComponent } from './eventsdoc';
 import { MethodsDocComponent } from './methodsdoc';
 import { StyleDocComponent } from './styledoc';
 

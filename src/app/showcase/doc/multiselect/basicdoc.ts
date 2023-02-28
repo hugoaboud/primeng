@@ -7,7 +7,7 @@ interface City {
 }
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'multiselect-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>MultiSelect requires a value to bind and a collection of options.</p>
@@ -15,7 +15,7 @@ interface City {
         <div class="card flex justify-content-center">
             <p-multiSelect [options]="cities" [(ngModel)]="selectedCities" optionLabel="name"></p-multiSelect>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="multiselect-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent {
@@ -55,10 +55,11 @@ interface City {
 }
 
 @Component({
-    templateUrl: './multiselectdemo.html'
+    selector: 'multiselect-basic-demo',
+    templateUrl: './multiselect-basic-demo.html',
+    styleUrls: ['./multiselect-basic-demo.scss']
 })
-
-export class MultiSelectDemo {
+export class MultiselectBasicDemo {
 
     cities: City[];
 

@@ -70,6 +70,6 @@ export class ProgressBarDynamicDemo implements OnInit {
         }, 2000);
     }
 }`,
-    service: ['MessageService']
+        service: ['MessageService']
     };
 }

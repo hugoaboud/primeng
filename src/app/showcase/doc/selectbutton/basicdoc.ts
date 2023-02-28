@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'select-button-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>SelectButton requires a value to bind and a collection of options.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-selectButton [options]="stateOptions" [(ngModel)]="value" optionLabel="label" optionValue="value"></p-selectButton>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="select-button-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent {
@@ -38,10 +38,12 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './basicdemo.html'
+    selector: 'select-button-basic-demo',
+    templateUrl: './select-button-basic-demo.html',
+    styleUrls: ['./select-button-basic-demo.scss']
 })
 
-export class BasicDemo {
+export class SelectButtonBasicDemo {
     stateOptions: any[] = [{label: 'Off', value: 'off'}, {label: 'On', value: 'on'}];
 
     value: string = 'off';

@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'icons-doc',
+    selector: 'inputtext-icons-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Icons can be placed inside an input element by wrapping both the input and the icon with an element that has either <i>.p-input-icon-left</i> or <i>p-input-icon-right</i> class.</p>
@@ -18,7 +18,7 @@ import { Code } from '../../domain/code';
                 <input type="text" pInputText [(ngModel)]="value2" />
             </span>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputtext-icons-demo"></app-code>
     </div>`
 })
 export class IconsDocComponent {
@@ -54,10 +54,12 @@ export class IconsDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputtextdemo.html'
+    selector: 'inputtext-icons-demo',
+    templateUrl: './inputtext-icons-demo.html',
+    styleUrls: ['./inputtext-icons-demo.scss']
 })
 
-export class InputTextDemo {
+export class InputtextIconsDemo {
     value: string;
     value2: string;
 }`

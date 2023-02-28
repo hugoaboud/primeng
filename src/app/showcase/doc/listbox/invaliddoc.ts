@@ -7,7 +7,7 @@ interface City {
 }
 
 @Component({
-    selector: 'invalid-doc',
+    selector: 'listbox-invalid-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Invalid state style is added using the <i>ng-invalid</i> and <i>ng-dirty</i> class to indicate a failed validation.</p>
@@ -15,7 +15,7 @@ interface City {
         <div class="card flex justify-content-center">
             <p-listbox [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" class="ng-invalid ng-dirty" [style]="{ width: '15rem' }"></p-listbox>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="listbox-invalid-demo"></app-code>
     </div>`
 })
 export class InvalidDocComponent {
@@ -55,9 +55,11 @@ interface City {
 }
 
 @Component({
-    templateUrl: './listboxdemo.html'
+    selector: 'listbox-invalid-demo',
+    templateUrl: './listbox-invalid-demo.html',
+    styleUrls: ['./listbox-invalid-demo.scss']
 })
-export class ListboxDemo {
+export class ListboxInvalidDemo {
     cities: City[];
 
     selectedCity: City;

@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'invalid-doc',
+    selector: 'radio-button-invalid-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Invalid state style is added using the <i>ng-invalid</i> and <i>ng-dirty</i> class to indicate a failed validation.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-radioButton class="ng-invalid ng-dirty" [ngModel]="checked"></p-radioButton>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="radio-button-invalid-demo"></app-code>
     </div>`
 })
 export class InvalidDocComponent {
@@ -33,8 +33,10 @@ export class InvalidDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './passworddemo.html'
+    selector: 'radio-button-invalid-demo',
+    templateUrl: './radio-button-invalid-demo.html',
+    styleUrls: ['./radio-button-invalid-demo.scss']
 })
-export class PasswordDemo { }`
+export class RadioButtonInvalidDemo { }`
     };
 }

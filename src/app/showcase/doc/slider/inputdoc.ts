@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'input-doc',
+    selector: 'slider-input-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Slider is connected to an input field using two-way binding.</p>
@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
                 <p-slider [(ngModel)]="value" class="w-full"></p-slider>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="slider-input-demo"></app-code>
     </div>`
 })
 export class InputDocComponent {
@@ -42,9 +42,11 @@ export class InputDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputdemo.html'
+    selector: 'slider-input-demo',
+    templateUrl: './slider-input-demo.html',
+    styleUrls: ['./slider-input-demo.scss']
 })
-export class InputDemo {
+export class SliderInputDemo {
     value: number = 50;
 }`
     };

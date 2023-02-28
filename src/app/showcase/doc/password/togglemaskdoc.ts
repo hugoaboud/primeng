@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'togglemask-doc',
+    selector: 'password-togglemask-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>When <i>toggleMask</i> is present, an icon is displayed to show the value as plain text.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-password [(ngModel)]="value" [toggleMask]="true"></p-password>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="password-togglemask-demo"></app-code>
     </div>`
 })
 export class TogglemaskDocComponent {
@@ -33,10 +33,12 @@ export class TogglemaskDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './passworddemo.html'
+    selector: 'password-togglemask-demo',
+    templateUrl: './password-togglemask-demo.html',
+    styleUrls: ['./password-togglemask-demo.scss']
 })
 
-export class PasswordDemo {
+export class PasswordTogglemaskDemo {
     value: string;
 }`
     };

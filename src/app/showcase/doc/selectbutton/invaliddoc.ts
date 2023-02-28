@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'invalid-doc',
+    selector: 'select-button-invalid-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Invalid state style is added using the <i>ng-invalid</i> and <i>ng-dirty</i> class to indicate a failed validation.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-selectButton [options]="stateOptions" [(ngModel)]="value" optionLabel="label" optionValue="value" class="ng-invalid ng-dirty"></p-selectButton>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="select-button-invalid-demo"></app-code>
     </div>`
 })
 export class InvalidDocComponent {
@@ -38,10 +38,12 @@ export class InvalidDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './invaliddemo.html'
+    selector: 'select-button-invalid-demo',
+    templateUrl: './select-button-invalid-demo.html',
+    styleUrls: ['./select-button-invalid-demo.scss']
 })
 
-export class InvalidDemo {
+export class SelectButtonInvalidDemo {
     stateOptions: any[] = [{label: 'Off', value: 'off'}, {label: 'On', value: 'on'}];
 
     value: string = 'off';

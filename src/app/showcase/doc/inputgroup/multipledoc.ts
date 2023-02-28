@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'multiple-doc',
+    selector: 'inputgroup-multiple-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Multiple add-ons can be placed inside the same group.</p>
@@ -20,7 +20,7 @@ import { Code } from '../../domain/code';
                 <span class="p-inputgroup-addon">.00</span>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="inputgroup-multiple-demo"></app-code>
     </div>`
 })
 export class MultipleDocComponent {
@@ -63,10 +63,11 @@ export class MultipleDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './inputgroupdemo.html'
+    selector: 'inputgroup-multiple-demo',
+    templateUrl: './inputgroup-multiple-demo.html',
+    styleUrls: ['./inputgroup-multiple-demo.scss']
 })
-
-export class InputGroupDemo {
+export class InputgroupMultipleDemo {
 }`
     };
 }
