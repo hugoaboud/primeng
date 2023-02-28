@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/tooltip/basicdoc';
+import { TooltipBasicDemo } from '../../doc/tooltip/basicdoc';
 import { ImportDocComponent } from '../../doc/tooltip/importdoc';
 import { PropsDocComponent } from '../../doc/tooltip/propsdoc';
 import { StyleDocComponent } from '../../doc/tooltip/styledoc';
-import { PositionDocComponent } from '../../doc/tooltip/positiondoc';
-import { EventDocComponent } from '../../doc/tooltip/eventdoc';
-import { AutoHideDocComponent } from '../../doc/tooltip/autohidedoc';
-import { DelayDocComponent } from '../../doc/tooltip/delaydoc';
-import { OptionsDocComponent } from '../../doc/tooltip/optionsdoc';
+import { TooltipPositionDemo } from '../../doc/tooltip/positiondoc';
+import { TooltipEventDemo } from '../../doc/tooltip/eventdoc';
+import { TooltipAutoHideDemo } from '../../doc/tooltip/autohidedoc';
+import { TooltipDelayDemo } from '../../doc/tooltip/delaydoc';
+import { TooltipOptionsDemo } from '../../doc/tooltip/optionsdoc';
 
 @Component({
     templateUrl: './tooltipdemo.html'
@@ -22,32 +22,32 @@ export class TooltipDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: TooltipBasicDemo
         },
         {
             id: 'position',
             label: 'Position',
-            component: PositionDocComponent
+            component: TooltipPositionDemo
         },
         {
             id: 'event',
             label: 'Events',
-            component: EventDocComponent
+            component: TooltipEventDemo
         },
         {
             id: 'autohide',
             label: 'Auto Hide',
-            component: AutoHideDocComponent
+            component: TooltipAutoHideDemo
         },
         {
             id: 'delay',
             label: 'Delay',
-            component: DelayDocComponent
+            component: TooltipDelayDemo
         },
         {
             id: 'options',
             label: 'Tooltip Options',
-            component: OptionsDocComponent
+            component: TooltipOptionsDemo
         },
         {
             id: 'style',

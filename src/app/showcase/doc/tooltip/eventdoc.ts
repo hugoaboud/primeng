@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'event-doc',
+    selector: 'tooltip-event-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Tooltip gets displayed on <i>hover</i> event of its target by default, other option is the <i>focus</i> event to display and blur to hide.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card flex flex-wrap justify-content-center gap-2">
             <input type="text" pInputText pTooltip="Enter your username" tooltipEvent="focus" placeholder="focus to display tooltip" />
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tooltip-event-demo"></app-code>
     </div>`
 })
-export class EventDocComponent {
+export class TooltipEventDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -31,21 +31,9 @@ export class EventDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './tooltipdemo.html'
+    selector: 'tooltip-event-demo',
+    templateUrl: './tooltip-event-demo.html'
 })
-export class TooltipDemo {}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { TooltipModule } from 'primeng/tooltip';
-import { InputTextModule } from 'primeng/inputtext';
-import { TooltipDemo } from './tooltipdemo';
-
-@NgModule({
-    imports: [CommonModule, TooltipModule, InputTextModule],
-    declarations: [TooltipDemo]
-})
-export class TooltipDemoModule {}`
+export class TooltipEventDemo {}`
     };
 }

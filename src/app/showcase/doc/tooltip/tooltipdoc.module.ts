@@ -6,19 +6,19 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
+import { TooltipBasicDemo } from './basicdoc';
 import { ImportDocComponent } from './importdoc';
 import { PropsDocComponent } from './propsdoc';
 import { StyleDocComponent } from './styledoc';
-import { PositionDocComponent } from './positiondoc';
-import { EventDocComponent } from './eventdoc';
-import { AutoHideDocComponent } from './autohidedoc';
-import { DelayDocComponent } from './delaydoc';
-import { OptionsDocComponent } from './optionsdoc';
+import { TooltipPositionDemo } from './positiondoc';
+import { TooltipEventDemo } from './eventdoc';
+import { TooltipAutoHideDemo } from './autohidedoc';
+import { TooltipDelayDemo } from './delaydoc';
+import { TooltipOptionsDemo } from './optionsdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, TooltipModule, ButtonModule, InputTextModule, AppDocModule],
-    declarations: [BasicDocComponent, ImportDocComponent, PropsDocComponent, StyleDocComponent, PositionDocComponent, EventDocComponent, AutoHideDocComponent, DelayDocComponent, OptionsDocComponent],
+    declarations: [TooltipBasicDemo, ImportDocComponent, PropsDocComponent, StyleDocComponent, TooltipPositionDemo, TooltipEventDemo, TooltipAutoHideDemo, TooltipDelayDemo, TooltipOptionsDemo],
     exports: [AppDocModule]
 })
 export class TooltipDocModule {}

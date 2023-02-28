@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'position-doc',
+    selector: 'tooltip-position-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Position of the tooltip is specified using <i>tooltipPosition</i> attribute. Valid values are <i>top</i>, <i>bottom</i>, <i>right</i> and <i>left</i>. Default position of the tooltip is <i>right</i>.</p>
@@ -13,10 +13,10 @@ import { Code } from '../../domain/code';
             <input type="text" pInputText pTooltip="Enter your username" tooltipPosition="top" placeholder="Top" />
             <input type="text" pInputText pTooltip="Enter your username" tooltipPosition="bottom" placeholder="Bottom" />
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tooltip-position-demo"></app-code>
     </div>`
 })
-export class PositionDocComponent {
+export class TooltipPositionDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -40,21 +40,9 @@ export class PositionDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './tooltipdemo.html'
+    selector: 'tooltip-position-demo',
+    templateUrl: './tooltip-position-demo.html'
 })
-export class TooltipDemo {}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { TooltipModule } from 'primeng/tooltip';
-import { InputTextModule } from 'primeng/inputtext';
-import { TooltipDemo } from './tooltipdemo';
-
-@NgModule({
-    imports: [CommonModule, TooltipModule, InputTextModule],
-    declarations: [TooltipDemo]
-})
-export class TooltipDemoModule {}`
+export class TooltipPositionDemo {}`
     };
 }
