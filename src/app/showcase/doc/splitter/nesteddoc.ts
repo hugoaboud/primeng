@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'nested-doc',
+    selector: 'splitter-nested-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Splitters can be combined to create advanced layouts.</p>
@@ -31,10 +31,10 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-splitter>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="splitter-nested-demo"></app-code>
     </div>`
 })
-export class NestedDocComponent {
+export class SplitterNestedDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -95,10 +95,9 @@ export class NestedDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'splitter-nested-demo',
+    templateUrl: './splitter-nested-demo.html'
 })
-export class AppComponent {}`
+export class SplitterNestedDemo {}`
     };
 }

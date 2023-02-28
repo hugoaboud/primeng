@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'vertical-doc',
+    selector: 'splitter-vertical-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Panels are displayed as stacked by setting the <i>layout</i> to <i>vertical</i>.</p>
@@ -17,10 +17,10 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-splitter>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="splitter-vertical-demo"></app-code>
     </div>`
 })
-export class VerticalDocComponent {
+export class SplitterVerticalDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -52,10 +52,9 @@ div class="card">
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'splitter-vertical-demo',
+    templateUrl: './splitter-vertical-demo.html'
 })
-export class AppComponent {}`
+export class SplitterVerticalDemo {}`
     };
 }
