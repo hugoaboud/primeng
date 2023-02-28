@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/sidebar/basicdoc';
-import { CustomDocComponent } from '../../doc/sidebar/customdoc';
+import { SidebarBasicDemo } from '../../doc/sidebar/basicdoc';
+import { SidebarTemplateDemo } from '../../doc/sidebar/templatedoc';
 import { EventsDocComponent } from '../../doc/sidebar/eventsdoc';
 import { ImportDocComponent } from '../../doc/sidebar/importdoc';
 import { PropsDocComponent } from '../../doc/sidebar/propsdoc';
 import { StyleDocComponent } from '../../doc/sidebar/styledoc';
 import { TemplatesDocComponent } from '../../doc/sidebar/templatesdoc';
-import { PositionDocComponent } from '../../doc/sidebar/positiondoc';
-import { FullScreenDocComponent } from '../../doc/sidebar/fullscreendoc';
-import { SizeDocComponent } from '../../doc/sidebar/sizedoc';
+import { SidebarPositionDemo } from '../../doc/sidebar/positiondoc';
+import { SidebarFullScreenDemo } from '../../doc/sidebar/fullscreendoc';
+import { SidebarSizeDemo } from '../../doc/sidebar/sizedoc';
 
 @Component({
     templateUrl: './sidebardemo.html'
@@ -23,27 +23,27 @@ export class SidebarDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: SidebarBasicDemo
         },
         {
             id: 'position',
             label: 'Position',
-            component: PositionDocComponent
+            component: SidebarPositionDemo
         },
         {
             id: 'fullscreen',
             label: 'Full Screen',
-            component: FullScreenDocComponent
+            component: SidebarFullScreenDemo
         },
         {
             id: 'size',
             label: 'Size',
-            component: SizeDocComponent
+            component: SidebarSizeDemo
         },
         {
-            id: 'custom',
-            label: 'Custom Content',
-            component: CustomDocComponent
+            id: 'template',
+            label: 'Template',
+            component: SidebarTemplateDemo
         },
         {
             id: 'style',

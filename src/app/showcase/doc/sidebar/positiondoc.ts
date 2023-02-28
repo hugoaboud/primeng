@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'position-doc',
+    selector: 'sidebar-position-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Sidebar location is configured with the <i>position</i> property that can take <i>left</i>, <i>right</i>, <i>top</i> and <i>bottom</i> as a value.</p>
@@ -29,10 +29,10 @@ import { Code } from '../../domain/code';
             <p-button type="button" class="mr-2" (click)="sidebarVisible3 = true" icon="pi pi-arrow-down"></p-button>
             <p-button type="button" class="mr-2" (click)="sidebarVisible4 = true" icon="pi pi-arrow-up"></p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="sidebar-position-demo"></app-code>
     </div>`
 })
-export class PositionDocComponent {
+export class SidebarPositionDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -96,9 +96,10 @@ export class PositionDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './sidebardemo.html'
+    selector: 'sidebar-position-demo',
+    templateUrl: './sidebar-position-demo.html'
 })
-export class SidebarDemo {
+export class SidebarPositionDemo {
     sidebarVisible1!: boolean;
     
     sidebarVisible2!: boolean;
@@ -106,20 +107,6 @@ export class SidebarDemo {
     sidebarVisible3!: boolean;
     
     sidebarVisible4!: boolean;
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ButtonModule } from 'primeng/button';
-import { SidebarModule } from 'primeng/sidebar';
-import { SidebarDemo } from './sidebardemo';
-
-@NgModule({
-    imports: [CommonModule, SidebarModule, FormsModule, ButtonModule],
-    declarations: [SidebarDemo]
-})
-export class SidebarDemoModule {}`
+}`
     };
 }

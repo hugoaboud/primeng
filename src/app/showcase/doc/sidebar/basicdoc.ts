@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'sidebar-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Sidebar is used as a container and visibility is controlled with a binding to <i>visible</i>.</p>
@@ -17,10 +17,10 @@ import { Code } from '../../domain/code';
             </p-sidebar>
             <p-button (click)="sidebarVisible = true" icon="pi pi-arrow-right"></p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="sidebar-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class SidebarBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -54,24 +54,11 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './sidebardemo.html'
+    selector: 'sidebar-basic-demo',
+    templateUrl: './sidebar-basic-demo.html'
 })
-export class SidebarDemo {
+export class SidebarBasicDemo {
     sidebarVisible!: boolean;
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ButtonModule } from 'primeng/button';
-import { SidebarModule } from 'primeng/sidebar';
-import { SidebarDemo } from './sidebardemo';
-
-@NgModule({
-    imports: [CommonModule, SidebarModule, FormsModule, ButtonModule],
-    declarations: [SidebarDemo]
-})
-export class SidebarDemoModule {}`
+}`
     };
 }

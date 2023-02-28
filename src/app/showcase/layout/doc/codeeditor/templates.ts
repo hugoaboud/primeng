@@ -540,6 +540,7 @@ import { RatingModule } from 'primeng/rating';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { SidebarModule } from 'primeng/sidebar';
 import { SkeletonModule } from 'primeng/skeleton';
 import { SlideMenuModule } from 'primeng/slidemenu';
 import { SliderModule } from 'primeng/slider';
@@ -631,6 +632,7 @@ ${serviceImports}
     RadioButtonModule,
     RatingModule,
     SelectButtonModule,
+    SidebarModule,
     ScrollPanelModule,
     ScrollTopModule,
     SkeletonModule,

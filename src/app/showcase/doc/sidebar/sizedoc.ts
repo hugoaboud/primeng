@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'size-doc',
+    selector: 'sidebar-size-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Sidebar dimension can be defined with <i>style</i> or <i>styleClass</i> properties which can also be responsive when used with a CSS utility library like PrimeFlex.</p>
@@ -16,10 +16,10 @@ import { Code } from '../../domain/code';
             </p-sidebar>
             <p-button (click)="sidebarVisible = true" icon="pi pi-arrow-right"></p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="sidebar-size-demo"></app-code>
     </div>`
 })
-export class SizeDocComponent {
+export class SidebarSizeDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -51,24 +51,11 @@ export class SizeDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './sidebardemo.html'
+    selector: 'sidebar-size-demo',
+    templateUrl: './sidebar-size-demo.html'
 })
-export class SidebarDemo {
+export class SidebarSizeDemo {
     sidebarVisible!: boolean;
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ButtonModule } from 'primeng/button';
-import { SidebarModule } from 'primeng/sidebar';
-import { SidebarDemo } from './sidebardemo';
-
-@NgModule({
-    imports: [CommonModule, SidebarModule, FormsModule, ButtonModule],
-    declarations: [SidebarDemo]
-})
-export class SidebarDemoModule {}`
+}`
     };
 }

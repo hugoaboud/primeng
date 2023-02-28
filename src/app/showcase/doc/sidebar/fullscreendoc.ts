@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'fullscreen-doc',
+    selector: 'sidebar-full-screen-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Sidebar can cover the whole page when <i>fullScreen</i> property is enabled.</p>
@@ -13,10 +13,10 @@ import { Code } from '../../domain/code';
             </p-sidebar>
             <p-button (click)="sidebarVisible = true" icon="pi pi-th-large"></p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="sidebar-full-screen-demo"></app-code>
     </div>`
 })
-export class FullScreenDocComponent {
+export class SidebarFullScreenDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -42,24 +42,11 @@ export class FullScreenDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './sidebardemo.html'
+    selector: 'sidebar-full-screen-demo',
+    templateUrl: './sidebar-full-screen-demo.html'
 })
-export class SidebarDemo {
+export class SidebarFullScreenDemo {
     sidebarVisible!: boolean;
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ButtonModule } from 'primeng/button';
-import { SidebarModule } from 'primeng/sidebar';
-import { SidebarDemo } from './sidebardemo';
-
-@NgModule({
-    imports: [CommonModule, SidebarModule, FormsModule, ButtonModule],
-    declarations: [SidebarDemo]
-})
-export class SidebarDemoModule {}`
+}`
     };
 }
