@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'popup-doc',
+    selector: 'tiered-menu-popup-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Popup mode is enabled by adding <i>popup</i> property and calling <i>toggle</i> method with an event of the target.</p>
@@ -12,10 +12,10 @@ import { Code } from '../../domain/code';
             <button #btn type="button" pButton icon="pi pi-bars" label="Show" (click)="menu.toggle($event)"></button>
             <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tiered-menu-popup-demo"></app-code>
     </div>`
 })
-export class PopupDocComponent implements OnInit {
+export class TieredMenuPopupDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -167,9 +167,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './tieredmenudemo.html'
+    selector: 'tiered-menu-popup-demo',
+    templateUrl: './tiered-menu-popup-demo.html'
 })
-export class TieredMenuDemo implements OnInit {
+export class TieredMenuPopupDemo implements OnInit {
     
     items!: MenuItem[];
     
@@ -301,19 +302,6 @@ export class TieredMenuDemo implements OnInit {
             }
         ];
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { TieredMenuModule } from 'primeng/tieredmenu';
-import { ButtonModule } from 'primeng/button';
-import { TieredMenuDemo } from './tieredmenudemo';
-
-@NgModule({
-    imports: [CommonModule, TieredMenuModule, ButtonModule],
-    declarations: [TieredMenuDemo]
-})
-export class TieredMenuDemoModule {}`
+}`
     };
 }
