@@ -5,17 +5,16 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputMaskModule } from 'primeng/inputmask';
 import { CheckboxModule } from 'primeng/checkbox';
-import { RouterModule } from '@angular/router';
 import { StepsModule } from 'primeng/steps';
 import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
+import { StepsBasicDemo } from './basicdoc';
 import { ConfirmationDemo } from './confirmationdemo';
 import { EventsDocComponent } from './eventsdoc';
 import { ImportDocComponent } from './importdoc';
-import { InteractiveDocComponent } from './interactivedoc';
+import { StepsInteractiveDemo } from './interactivedoc';
 import { MenuItemDocComponent } from './menuitemdoc';
 import { MethodsDocComponent } from './methodsdoc';
 import { PaymentDemo } from './paymentdemo';
@@ -29,13 +28,13 @@ import { TicketService } from '../../service/ticketservice';
 @NgModule({
     imports: [CommonModule, AppCodeModule, StepsModule, ToastModule, AppDocModule, FormsModule, DropdownModule, InputTextModule, InputMaskModule, CheckboxModule, CardModule],
     declarations: [
-        BasicDocComponent,
+        StepsBasicDemo,
         ImportDocComponent,
         MenuItemDocComponent,
         MethodsDocComponent,
         PropsDocComponent,
         StyleDocComponent,
-        InteractiveDocComponent,
+        StepsInteractiveDemo,
         EventsDocComponent,
         ConfirmationDemo,
         PaymentDemo,

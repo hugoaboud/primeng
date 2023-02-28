@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'steps-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Steps requires a collection of menuitems as its <i>model</i>.</p>
@@ -11,10 +11,10 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-steps [model]="items" [readonly]="true"></p-steps>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="steps-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent implements OnInit {
+export class StepsBasicDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -56,9 +56,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './stepsdemo.html'
+    selector: 'steps-basic-demo',
+    templateUrl: './steps-basic-demo.html'
 })
-export class StepsDemo implements OnInit {
+export class StepsBasicDemo implements OnInit {
 
     items!: MenuItem[];
 
@@ -82,18 +83,6 @@ export class StepsDemo implements OnInit {
             }
         ];
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { StepsModule } from 'primeng/steps';
-import { StepsDemo } from './stepsdemo';
-
-@NgModule({
-    imports: [CommonModule, StepsModule],
-    declarations: [SlideMenuDemo]
-})
-export class StepsDemoModule {}`
+}`
     };
 }

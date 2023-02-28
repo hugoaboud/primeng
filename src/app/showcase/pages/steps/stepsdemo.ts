@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/steps/basicdoc';
+import { StepsBasicDemo } from '../../doc/steps/basicdoc';
 import { ImportDocComponent } from '../../doc/steps/importdoc';
-import { InteractiveDocComponent } from '../../doc/steps/interactivedoc';
+import { StepsInteractiveDemo } from '../../doc/steps/interactivedoc';
 import { MenuItemDocComponent } from '../../doc/steps/menuitemdoc';
 import { MethodsDocComponent } from '../../doc/steps/methodsdoc';
 import { PropsDocComponent } from '../../doc/steps/propsdoc';
@@ -23,12 +23,12 @@ export class StepsDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: StepsBasicDemo
         },
         {
             id: 'interactive',
             label: 'Interactive',
-            component: InteractiveDocComponent
+            component: StepsInteractiveDemo
         },
         {
             id: 'routing',

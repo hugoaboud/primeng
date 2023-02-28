@@ -3,7 +3,7 @@ import { MenuItem, MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'interactive-doc',
+    selector: 'steps-interactive-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>In order to add interactivity to the component, disable <i>readonly</i> and use a binding to <i>activeIndex</i> along with <i>activeIndexChange</i> to control the Steps.</p>
@@ -12,11 +12,11 @@ import { Code } from '../../domain/code';
             <p-toast></p-toast>
             <p-steps [model]="items" [readonly]="false" [activeIndex]="activeIndex" (activeIndexChange)="onActiveIndexChange($event)"></p-steps>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="steps-interactive-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
-export class InteractiveDocComponent implements OnInit {
+export class StepsInteractiveDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -68,10 +68,11 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem, MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './stepsdemo.html',
+    selector: 'steps-interactive-demo',
+    templateUrl: './steps-interactive-demo.html',
     providers: [MessageService]
 })
-export class StepsDemo implements OnInit {
+export class StepsInteractiveDemo implements OnInit {
 
     items!: MenuItem[];
 
@@ -103,19 +104,6 @@ export class StepsDemo implements OnInit {
             }
         ];
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { StepsModule } from 'primeng/steps';
-import { ToastModule } from 'primeng/toast'
-import { StepsDemo } from './stepsdemo';
-
-@NgModule({
-    imports: [CommonModule, StepsModule, ToastModule],
-    declarations: [SlideMenuDemo]
-})
-export class StepsDemoModule {}`
+}`
     };
 }
