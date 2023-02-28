@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'custom-doc',
+    selector: 'overlay-panel-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Content of the OverlayPanel is defined by <i>content</i> template.</p>
@@ -15,10 +15,10 @@ import { Code } from '../../domain/code';
             </p-overlayPanel>
             <p-button (click)="op.toggle($event)" icon="pi pi-image" label="Show"></p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="overlay-panel-template-demo"></app-code>
     </div>`
 })
-export class CustomDocComponent {
+export class OverlayPanelTemplateDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -46,21 +46,9 @@ export class CustomDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './overlaypaneldemo.html'
+    selector: 'overlay-panel-template-demo',
+    templateUrl: './overlay-panel-template-demo.html'
 })
-export class OverlayPanelDemo {}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ButtonModule } from 'primeng/button'; 
-import { OverlayPanelModule } from 'primeng/overlaypanel';
-import { OverlayPanelDemo } from './overlaypaneldemo';
-
-@NgModule({
-    imports: [CommonModule, OverlayPanelModule, ButtonModule],
-    declarations: [OverlayPanelDemo]
-})
-export class OverlayPanelDemoModule {}`
+export class OverlayPanelTemplateDemo {}`
     };
 }

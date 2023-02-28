@@ -6,7 +6,7 @@ import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
 
 @Component({
-    selector: 'datatable-doc',
+    selector: 'overlay-panel-data-table-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>An example that displays a DataTable inside a popup to select an item.</p>
@@ -45,11 +45,11 @@ import { ProductService } from '../../service/productservice';
                 </ng-template>
             </p-overlayPanel>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="overlay-panel-data-table-demo" [extFiles]="extFiles"></app-code>
     </div>`,
-    providers: [ProductService, MessageService]
+    providers: [MessageService]
 })
-export class DataTableDocComponent implements OnInit {
+export class OverlayPanelDataTableDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -148,12 +148,14 @@ import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { OverlayPanel } from 'primeng/overlaypanel';
 import { Product } from '../../domain/product';
-import { ProductService } from '../../service/product.service';
+import { ProductService } from '../../service/productservice';
 
 @Component({
-    templateUrl: './overlaypaneldemo.html'
+    selector: 'overlay-panel-data-table-demo',
+    templateUrl: './overlay-panel-data-table-demo.html',
+    providers: [ MessageService ]
 })
-export class OverlayPanelDemo implements OnInit {
+export class OverlayPanelDataTableDemo implements OnInit {
 
     products!: Product[];
 
@@ -173,20 +175,25 @@ export class OverlayPanelDemo implements OnInit {
         op.hide();
     }
 }`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ButtonModule } from 'primeng/button'; 
-import { TableModule } from 'primeng/table';
-import { ToastModule } from 'primeng/toast';
-import { OverlayPanelModule } from 'primeng/overlaypanel';
-import { OverlayPanelDemo } from './overlaypaneldemo';
-
-@NgModule({
-    imports: [CommonModule, OverlayPanelModule, ButtonModule, TableModule, ToastModule],
-    declarations: [OverlayPanelDemo]
-})
-export class OverlayPanelDemoModule {}`
+        service: ['ProductService']
     };
+
+    extFiles = [
+        {
+            path: 'src/domain/product.ts',
+            content: `
+export interface Product {
+    id?: string;
+    code?: string;
+    name?: string;
+    description?: string;
+    price?: number;
+    quantity?: number;
+    inventoryStatus?: string;
+    category?: string;
+    image?: string;
+    rating?: number;
+}`
+        }
+            ];
 }

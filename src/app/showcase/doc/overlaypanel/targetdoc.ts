@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'target-doc',
+    selector: 'overlay-panel-target-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -19,10 +19,10 @@ import { Code } from '../../domain/code';
                 <img src="https://primefaces.org/cdn/primeng/images/demo/product/bamboo-watch.jpg" alt="product" />
             </p-overlayPanel>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="overlay-panel-target-demo"></app-code>
     </div>`
 })
-export class TargetDocComponent {
+export class OverlayPanelTargetDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -52,21 +52,9 @@ export class TargetDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './overlaypaneldemo.html'
+    selector: 'overlay-panel-target-demo',
+    templateUrl: './overlay-panel-target-demo.html'
 })
-export class OverlayPanelDemo {}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ButtonModule } from 'primeng/button'; 
-import { OverlayPanelModule } from 'primeng/overlaypanel';
-import { OverlayPanelDemo } from './overlaypaneldemo';
-
-@NgModule({
-    imports: [CommonModule, OverlayPanelModule, ButtonModule],
-    declarations: [OverlayPanelDemo]
-})
-export class OverlayPanelDemoModule {}`
+export class OverlayPanelTargetDemo {}`
     };
 }

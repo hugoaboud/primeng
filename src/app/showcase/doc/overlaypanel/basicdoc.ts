@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'overlay-panel-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>OverlayPanel is accessed via its reference and visibility is controlled using <i>toggle</i>, <i>show</i> and <i>hide</i> methods with an event of the target.</p>
@@ -13,10 +13,10 @@ import { Code } from '../../domain/code';
             </p-overlayPanel>
             <p-button (click)="op.toggle($event)" icon="pi pi-image" label="Show"></p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="overlay-panel-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class OverlayPanelBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -40,21 +40,9 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './overlaypaneldemo.html'
+    selector: 'overlay-panel-basic-demo',
+    templateUrl: './overlay-panel-basic-demo.html'
 })
-export class OverlayPanelDemo {}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ButtonModule } from 'primeng/button'; 
-import { OverlayPanelModule } from 'primeng/overlaypanel';
-import { OverlayPanelDemo } from './overlaypaneldemo';
-
-@NgModule({
-    imports: [CommonModule, OverlayPanelModule, ButtonModule],
-    declarations: [OverlayPanelDemo]
-})
-export class OverlayPanelDemoModule {}`
+export class OverlayPanelBasicDemo {}`
     };
 }

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/overlaypanel/basicdoc';
+import { OverlayPanelBasicDemo } from '../../doc/overlaypanel/basicdoc';
 import { ImportDocComponent } from '../../doc/overlaypanel/importdoc';
 import { PropsDocComponent } from '../../doc/overlaypanel/propsdoc';
 import { StyleDocComponent } from '../../doc/overlaypanel/styledoc';
 import { TemplatesDocComponent } from '../../doc/overlaypanel/templatesdoc';
-import { DataTableDocComponent } from '../../doc/overlaypanel/datatabledoc';
-import { CustomDocComponent } from '../../doc/overlaypanel/customdoc';
-import { TargetDocComponent } from '../../doc/overlaypanel/targetdoc';
+import { OverlayPanelDataTableDemo } from '../../doc/overlaypanel/datatabledoc';
+import { OverlayPanelTemplateDemo } from '../../doc/overlaypanel/templatedoc';
+import { OverlayPanelTargetDemo } from '../../doc/overlaypanel/targetdoc';
 import { EventsDocComponent } from '../../doc/overlaypanel/eventsdoc';
 import { MethodsDocComponent } from '../../doc/overlaypanel/methodsdoc';
 
@@ -23,22 +23,22 @@ export class OverlayPanelDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: OverlayPanelBasicDemo
         },
         {
             id: 'target',
             label: 'Target',
-            component: TargetDocComponent
+            component: OverlayPanelTargetDemo
         },
         {
-            id: 'custom',
-            label: 'Custom Content',
-            component: CustomDocComponent
+            id: 'template',
+            label: 'Template',
+            component: OverlayPanelTemplateDemo
         },
         {
             id: 'datatable',
             label: 'DataTable',
-            component: DataTableDocComponent
+            component: OverlayPanelDataTableDemo
         },
         {
             id: 'style',
