@@ -90,7 +90,7 @@ export class ToolbarBasicDemo implements OnInit {
 </div>`,
 
         typescript: `
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
