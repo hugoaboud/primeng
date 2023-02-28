@@ -7,7 +7,7 @@ interface City {
 }
 
 @Component({
-    selector: 'disabled-doc',
+    selector: 'listbox-disabled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>When <i>disabled</i> is present, the element cannot be edited and focused.</p>
@@ -15,7 +15,7 @@ interface City {
         <div class="card flex justify-content-center">
             <p-listbox [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [disabled]="true" [style]="{ width: '15rem' }"></p-listbox>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="listbox-disabled-demo"></app-code>
     </div>`
 })
 export class DisabledDocComponent {
@@ -55,9 +55,11 @@ interface City {
 }
 
 @Component({
-    templateUrl: './listboxdemo.html'
+    selector: 'listbox-disabled-demo',
+    templateUrl: './listbox-disabled-demo.html',
+    styleUrls: ['./listbox-disabled-demo.scss']
 })
-export class ListboxDemo {
+export class ListboxDisabledDemo {
     cities: City[];
 
     selectedCity: City;
