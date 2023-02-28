@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'controlled-doc',
+    selector: 'tab-menu-controlled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>For controlled mode, use <i>activeItem</i> property along with <i>activeItemChange</i> event are needed to manage the active item.</p>
@@ -12,10 +12,10 @@ import { Code } from '../../domain/code';
             <button type="button" pButton pRipple label="Activate Last" (click)="activateLast()" class="mb-3"></button>
             <p-tabMenu [model]="items" [activeItem]="activeItem" (activeItemChange)="onActiveItemChange($event)"></p-tabMenu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tab-menu-controlled-demo"></app-code>
     </div>`
 })
-export class ControlledDocComponent implements OnInit {
+export class TabMenuControlledDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -60,9 +60,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './tabmenudemo.html'
+    selector: 'tab-menu-controlled-demo',
+    templateUrl: './tab-menu-controlled-demo.html'
 })
-export class TabMenuDemo implements OnInit {
+export class TabMenuControlledDemo implements OnInit {
 
     items!: MenuItem[];
 

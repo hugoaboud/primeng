@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'custom-doc',
+    selector: 'tab-menu-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>TabMenu supports templating via the <i>item</i> template which gets the menuitem instance and the index.</p>
@@ -13,10 +13,10 @@ import { Code } from '../../domain/code';
                 <ng-template pTemplate="item" let-item let-i="index"> {{ i }} - Custom {{ item.label }} </ng-template>
             </p-tabMenu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tab-menu-template-demo"></app-code>
     </div>`
 })
-export class CustomDocComponent implements OnInit {
+export class TabMenuTemplateDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -59,9 +59,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './tabmenudemo.html'
+    selector: 'tab-menu-template-demo',
+    templateUrl: './tab-menu-template-demo.html'
 })
-export class TabMenuDemo implements OnInit {
+export class TabMenuTemplateDemo implements OnInit {
 
     items!: MenuItem[];
 

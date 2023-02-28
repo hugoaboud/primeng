@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { ControlledDocComponent } from '../../doc/tabmenu/controlleddoc';
-import { ActiveDocComponent } from '../../doc/tabmenu/activedoc';
-import { BasicDocComponent } from '../../doc/tabmenu/basicdoc';
+import { TabMenuControlledDemo } from '../../doc/tabmenu/controlleddoc';
+import { TabMenuActiveDemo } from '../../doc/tabmenu/activedoc';
+import { TabMenuBasicDemo } from '../../doc/tabmenu/basicdoc';
 import { EventsDocComponent } from '../../doc/tabmenu/eventsdoc';
 import { ImportDocComponent } from '../../doc/tabmenu/importdoc';
 import { MenuItemDocComponent } from '../../doc/tabmenu/menuitemdoc';
 import { PropsDocComponent } from '../../doc/tabmenu/propsdoc';
 import { StyleDocComponent } from '../../doc/tabmenu/styledoc';
-import { ScrollableDocComponent } from '../../doc/tabmenu/scrollabledoc';
-import { CustomDocComponent } from '../../doc/tabmenu/customdoc';
+import { TabMenuScrollableDemo } from '../../doc/tabmenu/scrollabledoc';
+import { TabMenuTemplateDemo } from '../../doc/tabmenu/templatedoc';
+import { TemplatesDocComponent } from '../../doc/tabmenu/templatesdoc';
 
 @Component({
     templateUrl: './tabmenudemo.html'
@@ -23,27 +24,27 @@ export class TabMenuDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: TabMenuBasicDemo
         },
         {
             id: 'active',
             label: 'Active Item',
-            component: ActiveDocComponent
+            component: TabMenuActiveDemo
         },
         {
             id: 'controlled',
             label: 'Controlled',
-            component: ControlledDocComponent
+            component: TabMenuControlledDemo
         },
         {
             id: 'scrollable',
             label: 'Scrollable',
-            component: ScrollableDocComponent
+            component: TabMenuScrollableDemo
         },
         {
-            id: 'custom',
-            label: 'Custom Content',
-            component: CustomDocComponent
+            id: 'template',
+            label: 'Template',
+            component: TabMenuTemplateDemo
         },
         {
             id: 'style',
@@ -57,6 +58,11 @@ export class TabMenuDemo {
             id: 'props',
             label: 'Properties',
             component: PropsDocComponent
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDocComponent
         },
         {
             id: 'events',

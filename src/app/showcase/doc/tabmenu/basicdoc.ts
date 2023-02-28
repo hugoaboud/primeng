@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'tab-menu-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>TabMenu requires a collection of menuitems as its model.</p>
@@ -11,10 +11,10 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-tabMenu [model]="items"></p-tabMenu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tab-menu-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent implements OnInit {
+export class TabMenuBasicDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -45,9 +45,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './tabmenudemo.html'
+    selector: 'tab-menu-basic-demo',
+    templateUrl: './tab-menu-basic-demo.html'
 })
-export class TabMenuDemo implements OnInit {
+export class TabMenuBasicDemo implements OnInit {
 
     items!: MenuItem[];
 
@@ -60,18 +61,6 @@ export class TabMenuDemo implements OnInit {
             { label: 'Settings', icon: 'pi pi-fw pi-cog' }
         ];
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { TabMenuModule } from 'primeng/tabmenu';
-import { TabMenuDemo } from './tabmenudemo';
-
-@NgModule({
-    imports: [CommonModule, TabMenuModule],
-    declarations: [TabMenuDemo]
-})
-export class TabMenuDemoModule {}`
+}`
     };
 }

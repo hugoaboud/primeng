@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'scrollable-doc',
+    selector: 'tab-menu-scrollable-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Setting <i>scrollable</i> property to <i>true</i> enables scrolling if content overflows.</p>
@@ -11,10 +11,10 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-tabMenu [scrollable]="true" [model]="items" [activeItem]="activeItem"></p-tabMenu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tab-menu-scrollable-demo"></app-code>
     </div>`
 })
-export class ScrollableDocComponent implements OnInit {
+export class TabMenuScrollableDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -42,9 +42,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './tabmenudemo.html'
+    selector: 'tab-menu-scrollable-demo',
+    templateUrl: './tab-menu-scrollable-demo.html'
 })
-export class TabMenuDemo implements OnInit {
+export class TabMenuScrollableDemo implements OnInit {
 
     items!: MenuItem[];
 
