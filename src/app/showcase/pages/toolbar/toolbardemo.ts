@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { StyleDocComponent } from '../../doc/toolbar/styledoc';
-import { BasicDocComponent } from '../../doc/toolbar/basicdoc';
 import { ImportDocComponent } from '../../doc/toolbar/importdoc';
 import { PropsDocComponent } from '../../doc/toolbar/propsdoc';
 import { TemplatesDocComponent } from '../../doc/toolbar/templatesdoc';
+import { ToolbarBasicDemo } from '../../doc/toolbar/basicdoc';
 
 @Component({
     templateUrl: './toolbardemo.html'
@@ -18,7 +18,7 @@ export class ToolbarDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: ToolbarBasicDemo
         },
         {
             id: 'style',
