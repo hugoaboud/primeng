@@ -37,7 +37,7 @@ export class SplitterHorizontalDemo {
 </p-splitter>`,
 
         html: `
-div class="card">
+<div class="card">
     <p-splitter [style]="{ height: '300px' }" styleClass="mb-5">
         <ng-template pTemplate>
             <div class="col flex align-items-center justify-content-center">Panel 1</div>
