@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'context-menu-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>ContextMenu can be attached to a particular element whose local template variable name is defined using the <i>target</i> property.</p>
@@ -12,10 +12,10 @@ import { Code } from '../../domain/code';
             <img #img src="https://primefaces.org/cdn/primeng/images/demo/nature/nature3.jpg" alt="Logo" aria-haspopup="true" />
             <p-contextMenu [target]="img" [model]="items"></p-contextMenu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="context-menu-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent implements OnInit {
+export class ContextMenuBasicDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -167,7 +167,8 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './contextmenudemo.html'
+    selector: 'context-menu-basic-demo',
+    templateUrl: './context-menu-basic-demo.html'
 })
 export class ContextMenuDemo implements OnInit {
 
@@ -301,18 +302,6 @@ export class ContextMenuDemo implements OnInit {
             }
         ];
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ContextMenuModule } from 'primeng/contextmenu';
-import { ContextMenuDemo } from './contextmenudemo';
-
-@NgModule({
-    imports: [CommonModule, ContextMenuModule],
-    declarations: [ContextMenuDemo]
-})
-export class ContextMenuDemoModule {}`
+}`
     };
 }

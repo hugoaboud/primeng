@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'triggerevent-doc',
+    selector: 'context-menu-trigger-event-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Trigger event of context menu can be replaced by a different event with <i>triggerEvent</i> property. Default value of <i>triggerEvent</i> is <i>contextmenu</i>.</p>
@@ -12,10 +12,10 @@ import { Code } from '../../domain/code';
             <img #img src="https://primefaces.org/cdn/primeng/images/demo/nature/nature3.jpg" alt="Logo" aria-haspopup="true" />
             <p-contextMenu [target]="img" [model]="items" triggerEvent="click"></p-contextMenu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="context-menu-trigger-event-demo"></app-code>
     </div>`
 })
-export class TriggerEventDocComponent implements OnInit {
+export class ContextMenuTriggerEventDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -167,9 +167,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './contextmenudemo.html'
+    selector: 'context-menu-trigger-event-demo',
+    templateUrl: './context-menu-trigger-event-demo.html'
 })
-export class ContextMenuDemo implements OnInit {
+export class ContextMenuTriggerEventDemo implements OnInit {
 
     items!: MenuItem[];
 

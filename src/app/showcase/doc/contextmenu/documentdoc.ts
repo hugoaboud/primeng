@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'document-doc',
+    selector: 'context-menu-document-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Setting <i>global</i> property to <i>true</i> attaches the context menu to the document.</p>
@@ -12,10 +12,10 @@ import { Code } from '../../domain/code';
             <p class="mb-0">Right-Click anywhere on this page to view the global ContextMenu.</p>
             <p-contextMenu [model]="items" [global]="true"></p-contextMenu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="context-menu-document-demo"></app-code>
     </div>`
 })
-export class DocumentDocComponent implements OnInit {
+export class ContextMenuDocumentDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -166,9 +166,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './contextmenudemo.html'
+    selector: 'context-menu-document-demo',
+    templateUrl: './context-menu-document-demo.html'
 })
-export class ContextMenuDemo implements OnInit {
+export class ContextMenuDocumentDemo implements OnInit {
 
     items!: MenuItem[];
 
