@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    selector: 'disabled-doc',
+    selector: 'tree-select-disabled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>When <i>disabled</i> is present, the element cannot be edited and focused.</p>
@@ -11,7 +11,7 @@ import { NodeService } from '../../service/nodeservice';
         <div class="card flex justify-content-center">
             <p-treeSelect class="md:w-20rem w-full" containerStyleClass="w-full" [(ngModel)]="selectedNodes" [options]="nodes" [disabled]="true" placeholder="Select Item"></p-treeSelect>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tree-select-disabled-demo"></app-code>
     </div>`
 })
 export class DisabledDocComponent {
@@ -38,12 +38,14 @@ export class DisabledDocComponent {
 
         typescript: `
 import { Component } from '@angular/core';
+import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    templateUrl: './disableddemo.html'
+    selector: 'tree-select-disabled-demo',
+    templateUrl: './tree-select-disabled-demo.html',
+    styleUrls: ['./tree-select-disabled-demo.scss'],
 })
-
-export class DisabledDemo {
+export class TreeSelectDisabledDemo {
     nodes: any[];
 
     selectedNodes: any;
@@ -52,6 +54,8 @@ export class DisabledDemo {
         this.nodeService.getFiles().then((files) => (this.nodes = files));
     }
 }`,
+
+        service: ['NodeService'],
 
         data: `
     /* NodeService */

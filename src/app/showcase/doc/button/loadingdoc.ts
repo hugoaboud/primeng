@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'loading-doc',
+    selector: 'button-loading-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Busy state is controlled with the <i>loading</i> property.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-button label="Submit" [loading]="loading" (click)="load()"></p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="button-loading-demo"></app-code>
     </div>`
 })
 export class LoadingDocComponent {
@@ -41,9 +41,11 @@ export class LoadingDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './loadingdemo.html'
+    selector: 'button-loading-demo',
+    templateUrl: './button-loading-demo.html',
+    styleUrls: ['./button-loading-demo.scss']
 })
-export class LoadingDemo {
+export class ButtonLoadingDemo {
     loading: boolean = false;
 
     load() {

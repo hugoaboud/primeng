@@ -96,6 +96,6 @@ import { Component } from '@angular/core';
     selector: 'messages-inline-demo',
     templateUrl: './messages-inline-demo.html'
 })
-export class MessagesInlineDemo { }`,
+export class MessagesInlineDemo { }`
     };
 }

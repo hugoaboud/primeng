@@ -21,20 +21,7 @@ import { StyleDocComponent } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, MenuModule, ToastModule, ButtonModule, AppDocModule],
-    declarations: [
-        MenuBasicDemo,
-        MenuCommandDemo,
-        MenuCustomContentDemo,
-        EventsDocComponent,
-        MenuGroupDemo,
-        ImportDocComponent,
-        MenuItemDocComponent,
-        MethodsDocComponent,
-        MenuNavigationDemo,
-        MenuPopupDemo,
-        PropsDocComponent,
-        StyleDocComponent
-    ],
+    declarations: [MenuBasicDemo, MenuCommandDemo, MenuCustomContentDemo, EventsDocComponent, MenuGroupDemo, ImportDocComponent, MenuItemDocComponent, MethodsDocComponent, MenuNavigationDemo, MenuPopupDemo, PropsDocComponent, StyleDocComponent],
     exports: [AppDocModule]
 })
 export class MenuDocModule {}

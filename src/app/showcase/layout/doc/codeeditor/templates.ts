@@ -558,7 +558,9 @@ import { ToastModule } from 'primeng/toast';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { ToolbarModule } from 'primeng/toolbar';
 import { TooltipModule } from 'primeng/tooltip';
+import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
 import { TreeModule } from 'primeng/tree';
+import { TreeSelectModule } from 'primeng/treeselect';
 import { TreeTableModule } from 'primeng/treetable';
 import { AnimateModule } from 'primeng/animate';
 import { CardModule } from 'primeng/card';
@@ -652,7 +654,9 @@ ${serviceImports}
     ToggleButtonModule,
     ToolbarModule,
     TooltipModule,
+    TriStateCheckboxModule,
     TreeModule,
+    TreeSelectModule,
     TreeTableModule,
     AnimateModule,
     CardModule,

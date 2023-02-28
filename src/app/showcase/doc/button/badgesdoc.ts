@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'badges-doc',
+    selector: 'button-badges-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Buttons have built-in <i>badge</i> support with badge and <i>badgeClass</i> properties.</p>
@@ -11,7 +11,7 @@ import { Code } from '../../domain/code';
             <p-button label="Emails" badge="8"></p-button>
             <p-button label="Messages" icon="pi pi-users" styleClass="p-button-warning" badge="8" badgeClass="p-badge-danger"></p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="button-badges-demo"></app-code>
     </div>`
 })
 export class BadgesDocComponent {
@@ -34,8 +34,10 @@ export class BadgesDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './badgesdemo.html'
+    selector: 'button-badges-demo',
+    templateUrl: './button-badges-demo.html',
+    styleUrls: ['./button-badges-demo.scss']
 })
-export class BadgesDemo { }`
+export class ButtonBadgesDemo { }`
     };
 }

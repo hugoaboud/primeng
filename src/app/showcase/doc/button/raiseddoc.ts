@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'raised-doc',
+    selector: 'button-raised-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Raised buttons display a shadow to indicate elevation.</p>
@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
             <button pButton type="button" label="Help" class="p-button-raised p-button-help"></button>
             <button pButton type="button" label="Danger" class="p-button-raised p-button-danger"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="button-raised-demo"></app-code>
     </div>`
 })
 export class RaisedDocComponent {
@@ -49,8 +49,10 @@ export class RaisedDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './raiseddemo.html'
+    selector: 'button-raised-demo',
+    templateUrl: './button-raised-demo.html',
+    styleUrls: ['./button-raised-demo.scss']
 })
-export class RaisedDemo { }`
+export class ButtonRaisedDemo { }`
     };
 }

@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'icons-doc',
+    selector: 'button-icons-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Icon of a button is specified with <i>icon</i> property and position is configured using <i>iconPos</i> attribute.</p>
@@ -12,7 +12,7 @@ import { Code } from '../../domain/code';
             <p-button label="Submit" icon="pi pi-check"></p-button>
             <p-button label="Submit" icon="pi pi-check" iconPos="right"></p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="button-icons-demo"></app-code>
     </div>`
 })
 export class IconsDocComponent {
@@ -37,8 +37,10 @@ export class IconsDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './iconsdemo.html'
+    selector: 'button-icons-demo',
+    templateUrl: './button-icons-demo.html',
+    styleUrls: ['./button-icons-demo.scss']
 })
-export class IconsDemo { }`
+export class ButtonIconsDemo { }`
     };
 }

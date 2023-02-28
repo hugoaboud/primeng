@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'icononly-doc',
+    selector: 'button-icon-only-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Buttons can have icons without labels.</p>
@@ -54,7 +54,7 @@ import { Code } from '../../domain/code';
                 <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text"></button>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="button-icon-only-demo"></app-code>
     </div>`
 })
 export class IconOnlyDocComponent {
@@ -157,8 +157,10 @@ export class IconOnlyDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './icononlydemo.html'
+    selector: 'button-icon-only-demo',
+    templateUrl: './button-icon-only-demo.html',
+    styleUrls: ['./button-icon-only-demo.scss']
 })
-export class IconOnlyDemo { }`
+export class ButtonIconOnlyDemo { }`
     };
 }

@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    selector: 'filter-doc',
+    selector: 'tree-select-filter-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -15,7 +15,7 @@ import { NodeService } from '../../service/nodeservice';
         <div class="card flex justify-content-center">
             <p-treeSelect class="md:w-20rem w-full" containerStyleClass="w-full" [(ngModel)]="selectedNodes" [options]="nodes" placeholder="Select Item" [filter]="true" [filterInputAutoFocus]="true"></p-treeSelect>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tree-select-filter-demo"></app-code>
     </div>`
 })
 export class FilterDocComponent {
@@ -42,12 +42,15 @@ export class FilterDocComponent {
 
         typescript: `
 import { Component } from '@angular/core';
+import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    templateUrl: './filterdemo.html'
+    selector: 'tree-select-filter-demo',
+    templateUrl: './tree-select-filter-demo.html',
+    styleUrls: ['./tree-select-filter-demo.scss'],
 })
 
-export class FilterDemo {
+export class TreeSelectFilterDemo {
     nodes: any[];
 
     selectedNodes: any;
@@ -56,6 +59,8 @@ export class FilterDemo {
         this.nodeService.getFiles().then((files) => (this.nodes = files));
     }
 }`,
+
+        service: ['NodeService'],
 
         data: `
     /* NodeService */

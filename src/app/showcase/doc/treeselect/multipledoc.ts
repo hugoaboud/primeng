@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    selector: 'multiple-doc',
+    selector: 'tree-select-multiple-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -16,7 +16,7 @@ import { NodeService } from '../../service/nodeservice';
         <div class="card flex justify-content-center">
             <p-treeSelect class="w-full md:w-20rem" containerStyleClass="w-full" [(ngModel)]="selectedNodes" [options]="nodes" [metaKeySelection]="false" selectionMode="multiple" placeholder="Select Item"></p-treeSelect>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tree-select-multiple-demo"></app-code>
     </div>`
 })
 export class MultipleDocComponent {
@@ -51,12 +51,14 @@ export class MultipleDocComponent {
 
         typescript: `
 import { Component } from '@angular/core';
+import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    templateUrl: './multipledemo.html'
+    selector: 'tree-select-multiple-demo',
+    templateUrl: './tree-select-multiple-demo.html',
+    styleUrls: ['./tree-select-multiple-demo.scss'],
 })
-
-export class MultipleDemo {
+export class TreeSelectMultipleDemo {
     nodes: any[];
 
     selectedNodes: any;
@@ -65,6 +67,8 @@ export class MultipleDemo {
         this.nodeService.getFiles().then((files) => (this.nodes = files));
     }
 }`,
+
+        service: ['NodeService'],
 
         data: `
     /* NodeService */

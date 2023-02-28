@@ -20,7 +20,20 @@ import { TemplatesDocComponent } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, TabMenuModule, ButtonModule, RippleModule, AppDocModule],
-    declarations: [TabMenuBasicDemo, TemplatesDocComponent, EventsDocComponent, TabMenuScrollableDemo, ImportDocComponent, MenuItemDocComponent, PropsDocComponent, StyleDocComponent, TabMenuControlledDemo, TabMenuActiveDemo, TabMenuTemplateDemo, TemplatesDocComponent],
+    declarations: [
+        TabMenuBasicDemo,
+        TemplatesDocComponent,
+        EventsDocComponent,
+        TabMenuScrollableDemo,
+        ImportDocComponent,
+        MenuItemDocComponent,
+        PropsDocComponent,
+        StyleDocComponent,
+        TabMenuControlledDemo,
+        TabMenuActiveDemo,
+        TabMenuTemplateDemo,
+        TemplatesDocComponent
+    ],
     exports: [AppDocModule]
 })
 export class TabMenuDocModule {}

@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'raisedtext-doc',
+    selector: 'button-raisedtext-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Text buttons can be displayed as raised for elevation.</p>
@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
             <button pButton type="button" label="Help" class="p-button-raised p-button-text p-button-help"></button>
             <button pButton type="button" label="Danger" class="p-button-raised p-button-text p-button-danger"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="button-raisedtext-demo"></app-code>
     </div>`
 })
 export class RaisedTextDocComponent {
@@ -49,8 +49,10 @@ export class RaisedTextDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './raisedtextdemo.html'
+    selector: 'button-raisedtext-demo',
+    templateUrl: './button-raisedtext-demo.html',
+    styleUrls: ['./button-raisedtext-demo.scss']
 })
-export class RaisedTextDemo { }`
+export class ButtonRaisedtextDemo { }`
     };
 }

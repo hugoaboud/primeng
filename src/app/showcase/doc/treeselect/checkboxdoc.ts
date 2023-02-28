@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    selector: 'checkbox-doc',
+    selector: 'tree-select-checkbox-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -15,7 +15,7 @@ import { NodeService } from '../../service/nodeservice';
         <div class="card flex justify-content-center">
             <p-treeSelect class="w-full md:w-20rem" containerStyleClass="w-full" [(ngModel)]="selectedNodes" [options]="nodes" display="chip" [metaKeySelection]="false" selectionMode="checkbox" placeholder="Select Item"></p-treeSelect>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tree-select-checkbox-demo"></app-code>
     </div>`
 })
 export class CheckboxDocComponent {
@@ -52,12 +52,15 @@ export class CheckboxDocComponent {
 
         typescript: `
 import { Component } from '@angular/core';
+import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    templateUrl: './checkboxdemo.html'
+    selector: 'tree-select-checkbox-demo',
+    templateUrl: './tree-select-checkbox-demo.html',
+    styleUrls: ['./tree-select-checkbox-demo.scss'],
 })
 
-export class CheckboxDemo {
+export class TreeSelectCheckboxDemo {
     nodes: any[];
 
     selectedNodes: any;
@@ -66,6 +69,8 @@ export class CheckboxDemo {
         this.nodeService.getFiles().then((files) => (this.nodes = files));
     }
 }`,
+
+        service: ['NodeService'],
 
         data: `
     /* NodeService */

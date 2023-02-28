@@ -116,7 +116,7 @@ export class DynamicDialogBasicDemo implements OnDestroy {
 
         service: ['ProductService']
     };
-    
+
     extFiles = [
         {
             path: 'src/domain/product.ts',
@@ -185,5 +185,5 @@ export class ProductListDemo implements OnInit {
     }
 }`
         }
-    ]
+    ];
 }
