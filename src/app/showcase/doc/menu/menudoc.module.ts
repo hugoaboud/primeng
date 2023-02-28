@@ -6,32 +6,32 @@ import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { CustomDocComponent } from './customdoc';
-import { CommandDocComponent } from './commanddoc';
+import { MenuBasicDemo } from './basicdoc';
+import { MenuCustomContentDemo } from './customdoc';
+import { MenuCommandDemo } from './commanddoc';
 import { EventsDocComponent } from './eventsdoc';
 import { MethodsDocComponent } from './methodsdoc';
-import { GroupDocComponent } from './groupdoc';
+import { MenuGroupDemo } from './groupdoc';
 import { ImportDocComponent } from './importdoc';
 import { MenuItemDocComponent } from './menuitemdoc';
-import { NavigationDocComponent } from './navigationdoc';
-import { PopupDocComponent } from './popupdoc';
+import { MenuNavigationDemo } from './navigationdoc';
+import { MenuPopupDemo } from './popupdoc';
 import { PropsDocComponent } from './propsdoc';
 import { StyleDocComponent } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, MenuModule, ToastModule, ButtonModule, AppDocModule],
     declarations: [
-        BasicDocComponent,
-        CommandDocComponent,
-        CustomDocComponent,
+        MenuBasicDemo,
+        MenuCommandDemo,
+        MenuCustomContentDemo,
         EventsDocComponent,
-        GroupDocComponent,
+        MenuGroupDemo,
         ImportDocComponent,
         MenuItemDocComponent,
         MethodsDocComponent,
-        NavigationDocComponent,
-        PopupDocComponent,
+        MenuNavigationDemo,
+        MenuPopupDemo,
         PropsDocComponent,
         StyleDocComponent
     ],

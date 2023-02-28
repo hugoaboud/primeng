@@ -3,7 +3,7 @@ import { MenuItem, MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'group-doc',
+    selector: 'menu-group-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Menu supports one level of nesting by defining children with <i>items</i> property.</p>
@@ -12,11 +12,11 @@ import { Code } from '../../domain/code';
             <p-toast></p-toast>
             <p-menu [model]="items"></p-menu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="menu-group-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
-export class GroupDocComponent implements OnInit {
+export class MenuGroupDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -88,10 +88,11 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem, MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './menudemo.html',
+    selector: 'menu-group-demo',
+    templateUrl: './menu-group-demo.html',
     providers: [MessageService]
 })
-export class MenuDemo implements OnInit {
+export class MenuGroupDemo implements OnInit {
 
     items!: MenuItem[];
 
@@ -143,19 +144,6 @@ export class MenuDemo implements OnInit {
     delete() {
         this.messageService.add({ severity: 'warn', summary: 'Delete', detail: 'Data Deleted' });
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { MenuModule } from 'primeng/menu';
-import { ToastModule } from 'primeng/toast';
-import { MenuDemo } from './menudemo';
-
-@NgModule({
-    imports: [CommonModule, MenuModule, ToastModule],
-    declarations: [MenuDemo]
-})
-export class MenuDemoModule {}`
+}`
     };
 }

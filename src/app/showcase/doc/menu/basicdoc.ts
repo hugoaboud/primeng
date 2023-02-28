@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'menu-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Menu requires a collection of menuitems as its <i>model</i>.</p>
@@ -11,10 +11,10 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-menu [model]="items"></p-menu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="menu-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent implements OnInit {
+export class MenuBasicDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -48,9 +48,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './menudemo.html'
+    selector: 'menu-basic-demo',
+    templateUrl: './menu-basic-demo.html'
 })
-export class MenuDemo implements OnInit {
+export class MenuBasicDemo implements OnInit {
 
     items!: MenuItem[];
 
@@ -66,18 +67,6 @@ export class MenuDemo implements OnInit {
             }
         ];
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { MenuModule } from 'primeng/menu';
-import { MenuDemo } from './menudemo';
-
-@NgModule({
-    imports: [CommonModule, MenuModule],
-    declarations: [MenuDemo]
-})
-export class MenuDemoModule {}`
+}`
     };
 }

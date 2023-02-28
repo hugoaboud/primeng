@@ -3,7 +3,7 @@ import { MenuItem, MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'popup-doc',
+    selector: 'menu-popup-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Popup mode is enabled by setting <i>popup</i> property to <i>true</i> and calling <i>toggle</i> method with an event of the target.</p>
@@ -13,11 +13,11 @@ import { Code } from '../../domain/code';
             <p-menu #menu [model]="items" [popup]="true"></p-menu>
             <button pButton type="button" (click)="menu.toggle($event)" icon="pi pi-bars" label="Show"></button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="menu-popup-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
-export class PopupDocComponent implements OnInit {
+export class MenuPopupDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -91,10 +91,11 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem, MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './menudemo.html',
+    selector: 'menu-popup-demo',
+    templateUrl: './menu-popup-demo.html',
     providers: [MessageService]
 })
-export class MenuDemo implements OnInit {
+export class MenuPopupDemo implements OnInit {
     
     items!: MenuItem[];
 
@@ -146,21 +147,6 @@ export class MenuDemo implements OnInit {
     delete() {
         this.messageService.add({ severity: 'warn', summary: 'Delete', detail: 'Data Deleted' });
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { MenuModule } from 'primeng/menu';
-import { ButtonModule } from 'primeng/button';
-import { ToastModule } from 'primeng/toast';
-import { MenuDemo } from 'primeng/menu';
-
-@NgModule({
-    imports: [CommonModule, MenuModule, ToastModule, ButtonModule],
-    declarations: [MenuDemo]
-})
-export class MenuDocModule {}
-`
+}`
     };
 }

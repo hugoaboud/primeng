@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'custom-doc',
+    selector: 'menu-custom-content-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Label of a menuitem both supports simple strings and html values as well. By default, html values are escaped, use <i>escape</i> property to allow html.</p>
@@ -11,10 +11,10 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-menu [model]="items"></p-menu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="menu-custom-content-demo"></app-code>
     </div>`
 })
-export class CustomDocComponent implements OnInit {
+export class MenuCustomContentDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -70,9 +70,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './menudemo.html'
+    selector: 'menu-custom-content-demo',
+    templateUrl: './menu-custom-content-demo.html'
 })
-export class MenuDemo implements OnInit {
+export class MenuCustomContentDemo implements OnInit {
 
     items!: MenuItem[];
     
@@ -110,19 +111,6 @@ export class MenuDemo implements OnInit {
             }
         ];
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { MenuModule } from 'primeng/menu';
-import { MenuDemo } from 'primeng/menu';
-
-@NgModule({
-    imports: [CommonModule, MenuModule],
-    declarations: [MenuDemo]
-})
-export class MenuDocModule {}
-`
+}`
     };
 }

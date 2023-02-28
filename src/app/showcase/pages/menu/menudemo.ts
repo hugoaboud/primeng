@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/menu/basicdoc';
-import { CustomDocComponent } from '../../doc/menu/customdoc';
-import { CommandDocComponent } from '../../doc/menu/commanddoc';
+import { MenuBasicDemo } from '../../doc/menu/basicdoc';
+import { MenuCustomContentDemo } from '../../doc/menu/customdoc';
+import { MenuCommandDemo } from '../../doc/menu/commanddoc';
 import { EventsDocComponent } from '../../doc/menu/eventsdoc';
 import { MethodsDocComponent } from '../../doc/menu/methodsdoc';
-import { GroupDocComponent } from '../../doc/menu/groupdoc';
+import { MenuGroupDemo } from '../../doc/menu/groupdoc';
 import { ImportDocComponent } from '../../doc/menu/importdoc';
 import { MenuItemDocComponent } from '../../doc/menu/menuitemdoc';
-import { NavigationDocComponent } from '../../doc/menu/navigationdoc';
-import { PopupDocComponent } from '../../doc/menu/popupdoc';
+import { MenuNavigationDemo } from '../../doc/menu/navigationdoc';
+import { MenuPopupDemo } from '../../doc/menu/popupdoc';
 import { PropsDocComponent } from '../../doc/menu/propsdoc';
 import { StyleDocComponent } from '../../doc/menu/styledoc';
 
@@ -25,32 +25,32 @@ export class MenuDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: MenuBasicDemo
         },
         {
             id: 'group',
             label: 'Group',
-            component: GroupDocComponent
+            component: MenuGroupDemo
         },
         {
             id: 'popup',
             label: 'Popup',
-            component: PopupDocComponent
+            component: MenuPopupDemo
         },
         {
             id: 'custom',
             label: 'Custom Content',
-            component: CustomDocComponent
+            component: MenuCustomContentDemo
         },
         {
             id: 'navigation',
             label: 'Navigation',
-            component: NavigationDocComponent
+            component: MenuNavigationDemo
         },
         {
             id: 'command',
             label: 'Command',
-            component: CommandDocComponent
+            component: MenuCommandDemo
         },
         {
             id: 'style',
