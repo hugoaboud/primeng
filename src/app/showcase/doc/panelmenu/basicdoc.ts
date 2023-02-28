@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'panel-menu-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>PanelMenu requires a collection of menuitems as its <i>model</i>.</p>
@@ -11,10 +11,10 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-panelMenu [model]="items" [style]="{ width: '300px' }"></p-panelMenu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="panel-menu-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent implements OnInit {
+export class PanelMenuBasicDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -154,9 +154,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './panelmenudemo.html'
+    selector: 'panel-menu-basic-demo',
+    templateUrl: './panel-menu-basic-demo.html'
 })
-export class PanelMenuDemo implements OnInit {
+export class PanelMenuBasicDemo implements OnInit {
 
     items!: MenuItem[];
 
@@ -278,18 +279,6 @@ export class PanelMenuDemo implements OnInit {
             }
         ];
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { PanelMenuModule } from 'primeng/panelmenu';
-import { PanelMenuDemo } from './panelmenudemo';
-
-@NgModule({
-    imports: [CommonModule, PanelMenuModule],
-    declarations: [PanelMenuDemo]
-})
-export class PanelMenuDemoModule {}`
+}`
     };
 }
