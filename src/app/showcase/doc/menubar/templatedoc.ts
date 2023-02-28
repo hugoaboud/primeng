@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'custom-doc',
+    selector: 'menubar-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Custom content can be placed inside the menubar using the <i>start</i> and <i>end</i> templates.</p>
@@ -11,17 +11,17 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-menubar [model]="items">
                 <ng-template pTemplate="start">
-                    <img src="assets/showcase/images/primeng.svg" height="40" class="mr-2" />
+                    <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
                 </ng-template>
                 <ng-template pTemplate="end">
                     <input type="text" pInputText placeholder="Search" />
                 </ng-template>
             </p-menubar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="menubar-template-demo"></app-code>
     </div>`
 })
-export class CustomDocComponent implements OnInit {
+export class MenubarTemplateDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -158,7 +158,7 @@ export class CustomDocComponent implements OnInit {
         basic: `
 <p-menubar [model]="items">
     <ng-template pTemplate="start">
-        <img src="assets/showcase/images/primeng.svg" height="40" class="mr-2" />
+        <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
     </ng-template>
     <ng-template pTemplate="end">
         <input type="text" pInputText placeholder="Search" />
@@ -169,7 +169,7 @@ export class CustomDocComponent implements OnInit {
 <div class="card">
     <p-menubar [model]="items">
         <ng-template pTemplate="start">
-            <img src="assets/showcase/images/primeng.svg" height="40" class="mr-2" />
+            <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
         </ng-template>
         <ng-template pTemplate="end">
             <input type="text" pInputText placeholder="Search" />
@@ -182,9 +182,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './menubardemo.html'
+    selector: 'menubar-template-demo',
+    templateUrl: './menubar-template-demo.html'
 })
-export class MenubarDemo implements OnInit {
+export class MenubarTemplateDemo implements OnInit {
 
     items!: MenuItem[];
 
@@ -313,19 +314,6 @@ export class MenubarDemo implements OnInit {
             }
         ];
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { MenubarModule } from 'primeng/menubar';
-import { MenubarDemo } from './menubardemo';
-import { InputTextModule } from 'primeng/inputtext';
-
-@NgModule({
-    imports: [CommonModule, MenubarModule, InputTextModule],
-    declarations: [MenubarDemo]
-})
-export class MenubarDemoModule {}`
+}`
     };
 }

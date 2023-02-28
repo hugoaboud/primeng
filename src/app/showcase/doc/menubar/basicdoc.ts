@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'menubar-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Menubar requires nested menuitems as its model.</p>
@@ -11,10 +11,10 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-menubar [model]="items"></p-menubar>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="menubar-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent implements OnInit {
+export class MenubarBasicDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -161,9 +161,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './menubardemo.html'
+    selector: 'menubar-basic-demo',
+    templateUrl: './menubar-basic-demo.html'
 })
-export class MenubarDemo implements OnInit {
+export class MenubarBasicDemo implements OnInit {
 
     items!: MenuItem[];
 
@@ -292,18 +293,6 @@ export class MenubarDemo implements OnInit {
             }
         ];
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { MenubarModule } from 'primeng/menubar';
-import { MenubarDemo } from './menubardemo';
-
-@NgModule({
-    imports: [CommonModule, MenubarModule],
-    declarations: [MenubarDemo]
-})
-export class MenubarDemoModule {}`
+}`
     };
 }
