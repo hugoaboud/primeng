@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'breadcrumb-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Breadcrumb provides contextual information about page hierarchy.</p>
@@ -11,10 +11,10 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
         </div>
-        <app-code [code]="code" [title]="title"></app-code>
+        <app-code [code]="code" selector="breadcrumb-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent implements OnInit {
+export class BreadcrumbBasicDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -43,11 +43,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'breadcrumb-basic-demo',
+    templateUrl: './breadcrumb-basic-demo.html'
 })
-export class AppComponent implements OnInit {
+export class BreadcrumbBasicDemo implements OnInit {
 
     items!: MenuItem[];
 
@@ -58,19 +57,6 @@ export class AppComponent implements OnInit {
 
         this.home = { icon: 'pi pi-home', routerLink: '/' };
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { MenuModule } from 'primeng/menu';
-import { MenuDemo } from './menudemo';
-
-@NgModule({
-    imports: [CommonModule, RouterModule, BreadcrumbModule],
-    declarations: [BreadcrumbDemo]
-})
-export class BreadcrumbDemoModule {}`
+}`
     };
 }

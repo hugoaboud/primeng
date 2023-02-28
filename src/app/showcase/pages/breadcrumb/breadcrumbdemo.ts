@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { StyleDocComponent } from '../../doc/breadcrumb/styledoc';
-import { BasicDocComponent } from '../../doc/breadcrumb/basicdoc';
+import { BreadcrumbBasicDemo } from '../../doc/breadcrumb/basicdoc';
 import { EventsDocComponent } from '../../doc/breadcrumb/eventsdoc';
 import { ImportDocComponent } from '../../doc/breadcrumb/importdoc';
 import { MenuItemDocComponent } from '../../doc/breadcrumb/menuitemdoc';
@@ -19,7 +19,7 @@ export class BreadcrumbDemo {
         {
             basic: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BreadcrumbBasicDemo
         },
         {
             id: 'style',
