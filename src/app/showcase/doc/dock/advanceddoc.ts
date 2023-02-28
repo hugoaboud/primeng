@@ -7,7 +7,7 @@ import { NodeService } from '../../service/nodeservice';
 import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    selector: 'advanced-doc',
+    selector: 'dock-advanced-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -64,11 +64,11 @@ import { PhotoService } from '../../service/photoservice';
                 </p-galleria>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="dock-advanced-demo"></app-code>
     </div>`,
     providers: [MessageService, TerminalService, PhotoService, NodeService]
 })
-export class AdvancedDocComponent implements OnInit, OnDestroy {
+export class DockAdvancedDemo implements OnInit, OnDestroy {
     @Input() id: string;
 
     @Input() title: string;
@@ -104,7 +104,7 @@ export class AdvancedDocComponent implements OnInit, OnDestroy {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/finder.svg',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/finder.svg',
                 command: () => {
                     this.displayFinder = true;
                 }
@@ -118,7 +118,7 @@ export class AdvancedDocComponent implements OnInit, OnDestroy {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/terminal.svg',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/terminal.svg',
                 command: () => {
                     this.displayTerminal = true;
                 }
@@ -132,7 +132,7 @@ export class AdvancedDocComponent implements OnInit, OnDestroy {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/appstore.svg',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/appstore.svg',
                 command: () => {
                     this.messageService.add({ severity: 'error', summary: 'An unexpected error occurred while signing in.', detail: 'UNTRUSTED_CERT_TITLE' });
                 }
@@ -146,7 +146,7 @@ export class AdvancedDocComponent implements OnInit, OnDestroy {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/safari.svg',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/safari.svg',
                 command: () => {
                     this.messageService.add({ severity: 'warn', summary: 'Safari has stopped working' });
                 }
@@ -160,7 +160,7 @@ export class AdvancedDocComponent implements OnInit, OnDestroy {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/photos.svg',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/photos.svg',
                 command: () => {
                     this.displayGalleria = true;
                 }
@@ -174,7 +174,7 @@ export class AdvancedDocComponent implements OnInit, OnDestroy {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/github.svg'
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/github.svg'
             },
             {
                 label: 'Trash',
@@ -185,7 +185,7 @@ export class AdvancedDocComponent implements OnInit, OnDestroy {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/trash.png',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/trash.png',
                 command: () => {
                     this.messageService.add({ severity: 'info', summary: 'Empty Trash' });
                 }
@@ -476,15 +476,16 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MenuItem, MessageService } from 'primeng/api';
 import { TerminalService } from 'primeng/terminal';
 import { Subscription } from 'rxjs';
-import { NodeService } from '../../service/node.service';
+import { NodeService } from '../../service/nodeservice';
 import { PhotoService } from '../../service/photoservice';
 
 @Component({
-    templateUrl: './dockdemo.html',
-    styleUrls: ['./dockdemo.scss'],
-    providers: [MessageService, TerminalService, PhotoService, NodeService]
+    selector: 'dock-advanced-demo',
+    templateUrl: './dock-advanced-demo.html',
+    styleUrls: ['./dock-advanced-demo.scss'],
+    providers: [MessageService, TerminalService]
 })
-export class DockDemo implements OnInit {
+export class DockAdvancedDemo implements OnInit {
 
     displayTerminal!: boolean;
 
@@ -517,7 +518,7 @@ export class DockDemo implements OnInit {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/finder.svg',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/finder.svg',
                 command: () => {
                     this.displayFinder = true;
                 }
@@ -531,7 +532,7 @@ export class DockDemo implements OnInit {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/terminal.svg',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/terminal.svg',
                 command: () => {
                     this.displayTerminal = true;
                 }
@@ -545,7 +546,7 @@ export class DockDemo implements OnInit {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/appstore.svg',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/appstore.svg',
                 command: () => {
                     this.messageService.add({ severity: 'error', summary: 'An unexpected error occurred while signing in.', detail: 'UNTRUSTED_CERT_TITLE' });
                 }
@@ -559,7 +560,7 @@ export class DockDemo implements OnInit {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/safari.svg',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/safari.svg',
                 command: () => {
                     this.messageService.add({ severity: 'warn', summary: 'Safari has stopped working' });
                 }
@@ -573,7 +574,7 @@ export class DockDemo implements OnInit {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/photos.svg',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/photos.svg',
                 command: () => {
                     this.displayGalleria = true;
                 }
@@ -587,7 +588,7 @@ export class DockDemo implements OnInit {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/github.svg'
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/github.svg'
             },
             {
                 label: 'Trash',
@@ -598,7 +599,7 @@ export class DockDemo implements OnInit {
                     positionLeft: 15,
                     showDelay: 1000
                 },
-                icon: 'assets/showcase/images/dock/trash.png',
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/trash.png',
                 command: () => {
                     this.messageService.add({ severity: 'info', summary: 'Empty Trash' });
                 }
@@ -783,34 +784,13 @@ export class DockDemo implements OnInit {
         }
     }
 }`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { DialogModule } from 'primeng/dialog';
-import { DockModule } from 'primeng/dock';
-import { GalleriaModule } from 'primeng/galleria';
-import { MenubarModule } from 'primeng/menubar';
-import { TerminalModule } from 'primeng/terminal';
-import { TreeModule } from 'primeng/tree';
-import { RadioButtonModule } from 'primeng/radiobutton';
-import { ToastModule } from 'primeng/toast';
-import { DockDemo } from './dockdemo';
-
-@NgModule({
-    imports: [CommonModule, RouterModule, DockModule, FormsModule, RadioButtonModule, MenubarModule, ToastModule, DialogModule, GalleriaModule, TerminalModule, TreeModule],
-    declarations: [DockDemo]
-})
-export class DockDemoModule {}`,
         scss: `
 :host ::ng-deep {
     .dock-window {
         width: 100%;
         height: 450px;
         position: relative;
-        background-image: url('../../../../assets/showcase/images/dock/window.jpg');
+        background-image: url('https://primefaces.org/cdn/primeng/images/dock/window.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -912,6 +892,7 @@ export class DockDemoModule {}`,
             background-color: var(--surface-900);
         }
     }
-}`
+}`,
+        service: ['PhotoService', 'NodeService']
     };
 }

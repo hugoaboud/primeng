@@ -502,6 +502,7 @@ import { DataViewModule } from 'primeng/dataview';
 import { VirtualScrollerModule } from 'primeng/virtualscroller';
 import { DialogModule } from 'primeng/dialog';
 import { DividerModule } from 'primeng/divider';
+import { DockModule } from 'primeng/dock';
 import { DragDropModule } from 'primeng/dragdrop';
 import { DropdownModule } from 'primeng/dropdown';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
@@ -593,6 +594,7 @@ ${serviceImports}
     DataViewModule,
     DialogModule,
     DividerModule,
+    DockModule,
     DragDropModule,
     DropdownModule,
     DynamicDialogModule,

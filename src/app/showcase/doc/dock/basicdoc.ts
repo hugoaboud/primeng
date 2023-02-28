@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'dock-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -23,10 +23,10 @@ import { Code } from '../../domain/code';
                 </p-dock>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="dock-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent implements OnInit {
+export class DockBasicDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -58,19 +58,19 @@ export class BasicDocComponent implements OnInit {
         this.items = [
             {
                 label: 'Finder',
-                icon: 'assets/showcase/images/dock/finder.svg'
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/finder.svg'
             },
             {
                 label: 'App Store',
-                icon: 'assets/showcase/images/dock/appstore.svg'
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/appstore.svg'
             },
             {
                 label: 'Photos',
-                icon: 'assets/showcase/images/dock/photos.svg'
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/photos.svg'
             },
             {
                 label: 'Trash',
-                icon: 'assets/showcase/images/dock/trash.png'
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/trash.png'
             }
         ];
     }
@@ -102,9 +102,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './dockdemo.html'
+    selector: 'dock-basic-demo',
+    templateUrl: './dock-basic-demo.html'
 })
-export class DockDemo implements OnInit {
+export class DockBasicDemo implements OnInit {
 
     items!: MenuItem[];
 
@@ -133,38 +134,23 @@ export class DockDemo implements OnInit {
         this.items = [
             {
                 label: 'Finder',
-                icon: 'assets/showcase/images/dock/finder.svg'
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/finder.svg'
             },
             {
                 label: 'App Store',
-                icon: 'assets/showcase/images/dock/appstore.svg'
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/appstore.svg'
             },
             {
                 label: 'Photos',
-                icon: 'assets/showcase/images/dock/photos.svg'
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/photos.svg'
             },
             {
                 label: 'Trash',
-                icon: 'assets/showcase/images/dock/trash.png'
+                icon: 'https://primefaces.org/cdn/primeng/images/dock/trash.png'
             }
         ];
     }
 }`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { DockModule } from 'primeng/dock';
-import { RadioButtonModule } from 'primeng/radiobutton';
-import { DockDemo } from './dockdemo';
-
-@NgModule({
-    imports: [CommonModule, FormsModule, RouterModule, DockModule, RadioButtonModule],
-    declarations: [DockDemo]
-})
-export class DockDemoModule {}`,
 
         scss: `
 :host ::ng-deep {
@@ -172,7 +158,7 @@ export class DockDemoModule {}`,
         width: 100%;
         height: 450px;
         position: relative;
-        background-image: url('../../../../assets/showcase/images/dock/window.jpg');
+        background-image: url('https://primefaces.org/cdn/primeng/images/dock/window.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }

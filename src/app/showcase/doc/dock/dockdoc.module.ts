@@ -13,8 +13,8 @@ import { ToastModule } from 'primeng/toast';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { StyleDocComponent } from './styledoc';
-import { AdvancedDocComponent } from './advanceddoc';
-import { BasicDocComponent } from './basicdoc';
+import { DockAdvancedDemo } from './advanceddoc';
+import { DockBasicDemo } from './basicdoc';
 import { EventsDocComponent } from './eventsdoc';
 import { ImportDocComponent } from './importdoc';
 import { MenuItemDocComponent } from './menuitemdoc';
@@ -23,7 +23,7 @@ import { PropsDocComponent } from './propsdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, DockModule, FormsModule, RadioButtonModule, MenubarModule, ToastModule, DialogModule, GalleriaModule, TerminalModule, TreeModule, AppDocModule],
-    declarations: [AdvancedDocComponent, BasicDocComponent, EventsDocComponent, ImportDocComponent, MenuItemDocComponent, MethodsDocComponent, PropsDocComponent, StyleDocComponent],
+    declarations: [DockAdvancedDemo, DockBasicDemo, EventsDocComponent, ImportDocComponent, MenuItemDocComponent, MethodsDocComponent, PropsDocComponent, StyleDocComponent],
     exports: [AppDocModule]
 })
 export class DockDocModule {}

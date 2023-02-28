@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { StyleDocComponent } from '../../doc/dock/styledoc';
-import { AdvancedDocComponent } from '../../doc/dock/advanceddoc';
-import { BasicDocComponent } from '../../doc/dock/basicdoc';
+import { DockAdvancedDemo } from '../../doc/dock/advanceddoc';
+import { DockBasicDemo } from '../../doc/dock/basicdoc';
 import { EventsDocComponent } from '../../doc/dock/eventsdoc';
 import { ImportDocComponent } from '../../doc/dock/importdoc';
 import { MenuItemDocComponent } from '../../doc/dock/menuitemdoc';
@@ -22,12 +22,12 @@ export class DockDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: DockBasicDemo
         },
         {
             id: 'advanced',
             label: 'Advanced',
-            component: AdvancedDocComponent
+            component: DockAdvancedDemo
         },
         {
             id: 'style',

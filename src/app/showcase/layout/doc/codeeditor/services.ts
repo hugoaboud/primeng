@@ -9788,6 +9788,10 @@ export class NodeService {
     getTreeNodes() {
         return Promise.resolve(this.getTreeNodesData());
     }
+
+    getFiles() {
+        return Promise.resolve(this.getTreeNodesData());
+    }
 };`,
     PhotoService: `import { Injectable } from '@angular/core';
 
