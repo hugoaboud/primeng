@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'chart-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -13,10 +13,10 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-chart type="bar" [data]="basicData" [options]="basicOptions"></p-chart>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chart-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class ChartBasicDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -84,10 +84,13 @@ export class BasicDocComponent {
     <p-chart type="bar" [data]="basicData" [options]="basicOptions"></p-chart>
 </div>`,
         typescript: `
-import { Component } from '@angular/core';
-import { Code } from '../../domain/code';
+import { Component, OnInit } from '@angular/core';
 
-export class ChartDemo {
+@Component({
+    selector: 'chart-basic-demo',
+    templateUrl: './chart-basic-demo.html'
+})
+export class ChartBasicDemo implements OnInit {
 
     basicData!: any;
 
@@ -143,17 +146,6 @@ export class ChartDemo {
             }
         };
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ChartModule } from 'primeng/chart';
-import { ChartDemo } from './chartdemo';
-
-@NgModule({
-    imports: [CommonModule, ChartModule],
-    declarations: [ChartDemo]
-})
-export class ChartDemoModule {}`
+}`
     };
 }

@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'multiaxis-doc',
+    selector: 'chart-multi-axis-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Multiple axes can be added using the <i>scales</i> option.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-chart type="line" [data]="data" [options]="options"></p-chart>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chart-multi-axis-demo"></app-code>
     </div>`
 })
-export class MultiAxisDocComponent {
+export class ChartMultiAxiDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -105,13 +105,13 @@ export class MultiAxisDocComponent {
     <p-chart type="line" [data]="data" [options]="options"></p-chart>
 </div>`,
         typescript: `
-import { Component } from '@angular/core';
-import { Code } from '../../domain/code';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-    templateUrl: './chartdemo.html'
+    selector: 'chart-multi-axis-demo',
+    templateUrl: './chart-multi-axis-demo.html'
 })
-export class ChartDemo {
+export class ChartMultiAxiDemo implements OnInit {
 
     data!: any;
 
@@ -191,17 +191,6 @@ export class ChartDemo {
             }
         };
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ChartModule } from 'primeng/chart';
-import { ChartDemo } from './chartdemo';
-
-@NgModule({
-    imports: [CommonModule, ChartModule],
-    declarations: [ChartDemo]
-})
-export class ChartDemoModule {}`
+}`
     };
 }

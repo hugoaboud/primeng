@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'combo-doc',
+    selector: 'chart-combo-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Different chart types can be combined in the same graph usign the <i>type</i> option of a dataset.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-chart type="line" [data]="data" [options]="options"></p-chart>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chart-combo-demo"></app-code>
     </div>`
 })
-export class ComboDocComponent {
+export class ChartComboDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -96,13 +96,13 @@ export class ComboDocComponent {
     <p-chart type="line" [data]="data" [options]="options"></p-chart>
 </div>`,
         typescript: `
-import { Component } from '@angular/core';
-import { Code } from '../../domain/code';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-    templateUrl: './chartdemo.html'
+    selector: 'chart-combo-demo',
+    templateUrl: './chart-combo-demo.html'
 })
-export class ChartDemo {
+export class ChartComboDemo implements OnInit {
 
     data!: any;
 
@@ -173,17 +173,6 @@ export class ChartDemo {
             }
         };
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ChartModule } from 'primeng/chart';
-import { ChartDemo } from './chartdemo';
-
-@NgModule({
-    imports: [CommonModule, ChartModule],
-    declarations: [ChartDemo]
-})
-export class ChartDemoModule {}`
+}`
     };
 }

@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { ChartjsDocComponent } from '../../doc/chart/chartjsdoc';
 import { ImportDocComponent } from '../../doc/chart/importdoc';
-import { BasicDocComponent } from '../../doc/chart/basicdoc';
-import { PieDocComponent } from '../../doc/chart/piedoc';
-import { DoughnutDocComponent } from '../../doc/chart/doughnutdoc';
-import { ComboDocComponent } from '../../doc/chart/combodoc';
-import { HorizontalBarDocComponent } from '../../doc/chart/horizontalbardoc';
-import { LineDocComponent } from '../../doc/chart/linedoc';
-import { MultiAxisDocComponent } from '../../doc/chart/multiaxisdoc';
-import { PolarAreaDocComponent } from '../../doc/chart/polarareadoc';
-import { RadarDocComponent } from '../../doc/chart/radardoc';
-import { StackedBarDocComponent } from '../../doc/chart/stackedbardoc';
-import { VerticalBarDocComponent } from '../../doc/chart/verticalbardoc';
-import { LineStyleDocComponent } from '../../doc/chart/linestyledoc';
+import { ChartBasicDemo } from '../../doc/chart/basicdoc';
+import { ChartPieDemo } from '../../doc/chart/piedoc';
+import { ChartDoughnutDemo } from '../../doc/chart/doughnutdoc';
+import { ChartComboDemo } from '../../doc/chart/combodoc';
+import { ChartHorizontalBarDemo } from '../../doc/chart/horizontalbardoc';
+import { ChartLineDemo } from '../../doc/chart/linedoc';
+import { ChartMultiAxiDemo } from '../../doc/chart/multiaxisdoc';
+import { ChartPolarAreaDemo } from '../../doc/chart/polarareadoc';
+import { ChartRadarDemo } from '../../doc/chart/radardoc';
+import { ChartStackedBarDemo } from '../../doc/chart/stackedbardoc';
+import { ChartVerticalBarDemo } from '../../doc/chart/verticalbardoc';
+import { ChartLineStyleDemo } from '../../doc/chart/linestyledoc';
 import { PropsDocComponent } from '../../doc/chart/propsdoc';
 import { MethodsDocComponent } from '../../doc/chart/methodsdoc';
 
@@ -34,67 +34,62 @@ export class ChartDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: ChartBasicDemo
         },
         {
             id: 'pie',
             label: 'Pie',
-            component: PieDocComponent
+            component: ChartPieDemo
         },
         {
             id: 'doughnut',
             label: 'Doughnut',
-            component: DoughnutDocComponent
+            component: ChartDoughnutDemo
         },
         {
             id: 'verticalbar',
             label: 'Vertical Bar',
-            component: VerticalBarDocComponent
+            component: ChartVerticalBarDemo
         },
         {
             id: 'horizontalbar',
             label: 'Horizontal Bar',
-            component: HorizontalBarDocComponent
+            component: ChartHorizontalBarDemo
         },
         {
             id: 'stackedbar',
             label: 'Stacked Bar',
-            component: StackedBarDocComponent
+            component: ChartStackedBarDemo
         },
         {
             id: 'line',
             label: 'Line',
-            component: LineDocComponent
-        },
-        {
-            id: 'line',
-            label: 'Line',
-            component: LineDocComponent
+            component: ChartLineDemo
         },
         {
             id: 'multiaxis',
             label: 'MultiAxis',
-            component: MultiAxisDocComponent
+            component: ChartMultiAxiDemo
         },
         {
             id: 'linestyles',
             label: 'Line Styles',
-            component: LineStyleDocComponent
+            component: ChartLineStyleDemo
         },
         {
             id: 'polararea',
             label: 'Polar Area',
-            component: PolarAreaDocComponent
+            component: ChartPolarAreaDemo
         },
         {
             id: 'Radar',
             label: 'Radar',
-            component: RadarDocComponent
+            component: ChartRadarDemo
         },
         {
             id: 'combo',
             label: 'Combo',
-            component: ComboDocComponent
+            component: ChartComboDemo
         }
     ];
 

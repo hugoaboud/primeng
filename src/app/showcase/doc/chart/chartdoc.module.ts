@@ -4,42 +4,42 @@ import { RouterModule } from '@angular/router';
 import { ChartModule } from 'primeng/chart';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
+import { ChartBasicDemo } from './basicdoc';
 import { ChartjsDocComponent } from './chartjsdoc';
-import { ComboDocComponent } from './combodoc';
-import { DoughnutDocComponent } from './doughnutdoc';
-import { HorizontalBarDocComponent } from './horizontalbardoc';
+import { ChartComboDemo } from './combodoc';
+import { ChartDoughnutDemo } from './doughnutdoc';
+import { ChartHorizontalBarDemo } from './horizontalbardoc';
 import { ImportDocComponent } from './importdoc';
-import { LineDocComponent } from './linedoc';
-import { LineStyleDocComponent } from './linestyledoc';
+import { ChartLineDemo } from './linedoc';
+import { ChartLineStyleDemo } from './linestyledoc';
 import { MethodsDocComponent } from './methodsdoc';
-import { MultiAxisDocComponent } from './multiaxisdoc';
-import { PieDocComponent } from './piedoc';
-import { PolarAreaDocComponent } from './polarareadoc';
+import { ChartMultiAxiDemo } from './multiaxisdoc';
+import { ChartPieDemo } from './piedoc';
+import { ChartPolarAreaDemo } from './polarareadoc';
 import { PropsDocComponent } from './propsdoc';
-import { RadarDocComponent } from './radardoc';
-import { StackedBarDocComponent } from './stackedbardoc';
-import { VerticalBarDocComponent } from './verticalbardoc';
+import { ChartRadarDemo } from './radardoc';
+import { ChartStackedBarDemo } from './stackedbardoc';
+import { ChartVerticalBarDemo } from './verticalbardoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, ChartModule, AppDocModule],
     declarations: [
-        BasicDocComponent,
+        ChartBasicDemo,
         ChartjsDocComponent,
-        ComboDocComponent,
-        DoughnutDocComponent,
-        HorizontalBarDocComponent,
+        ChartComboDemo,
+        ChartDoughnutDemo,
+        ChartHorizontalBarDemo,
         ImportDocComponent,
-        LineDocComponent,
-        LineStyleDocComponent,
+        ChartLineDemo,
+        ChartLineStyleDemo,
         MethodsDocComponent,
-        MultiAxisDocComponent,
-        PieDocComponent,
-        PolarAreaDocComponent,
+        ChartMultiAxiDemo,
+        ChartPieDemo,
+        ChartPolarAreaDemo,
         PropsDocComponent,
-        RadarDocComponent,
-        StackedBarDocComponent,
-        VerticalBarDocComponent
+        ChartRadarDemo,
+        ChartStackedBarDemo,
+        ChartVerticalBarDemo
     ],
     exports: [AppDocModule]
 })

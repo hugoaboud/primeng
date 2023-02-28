@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'verticalbar-doc',
+    selector: 'chart-vertical-bar-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A bar chart or bar graph is a chart that presents grouped data with rectangular bars with lengths proportional to the values that they represent.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-chart type="bar" [data]="data" [options]="options"></p-chart>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chart-vertical-bar-demo"></app-code>
     </div>`
 })
-export class VerticalBarDocComponent {
+export class ChartVerticalBarDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -90,13 +90,13 @@ export class VerticalBarDocComponent {
     <p-chart type="bar" [data]="data" [options]="options"></p-chart>
 </div>`,
         typescript: `
-import { Component } from '@angular/core';
-import { Code } from '../../domain/code';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-    templateUrl: './chartdemo.html'
+    selector: 'chart-vertical-bar-demo',
+    templateUrl: './chart-vertical-bar-demo.html'
 })
-export class ChartDemo {
+export class ChartVerticalBarDemo implements OnInit {
 
     data!: any;
 

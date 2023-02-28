@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'doughnut-doc',
+    selector: 'chart-doughnut-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A doughnut chart is a variant of the pie chart, with a blank center allowing for additional information about the data as a whole to be included.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-chart type="doughnut" [data]="data" [options]="options"></p-chart>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chart-doughnut-demo"></app-code>
     </div>`
 })
-export class DoughnutDocComponent {
+export class ChartDoughnutDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -57,13 +57,13 @@ export class DoughnutDocComponent {
     <p-chart type="doughnut" [data]="data" [options]="options"></p-chart>
 </div>`,
         typescript: `
-import { Component } from '@angular/core';
-import { Code } from '../../domain/code';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-    templateUrl: './chartdemo.html'
+    selector: 'chart-doughnut-demo',
+    templateUrl: './chart-doughnut-demo.html'
 })
-export class ChartDemo {
+export class ChartDoughnutDemo implements OnInit {
 
     data!: any;
 
@@ -96,17 +96,6 @@ export class ChartDemo {
             }
         };
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ChartModule } from 'primeng/chart';
-import { ChartDemo } from './chartdemo';
-
-@NgModule({
-    imports: [CommonModule, ChartModule],
-    declarations: [ChartDemo]
-})
-export class ChartDemoModule {}`
+}`
     };
 }

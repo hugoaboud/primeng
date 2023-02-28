@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'horizontalbar-doc',
+    selector: 'chart-horizontal-bar-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A bar chart is rendered horizontally when <i>indexAxis</i> option is set as <i>y</i>.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-chart type="bar" [data]="data" [options]="options"></p-chart>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chart-horizontal-bar-demo"></app-code>
     </div>`
 })
-export class HorizontalBarDocComponent {
+export class ChartHorizontalBarDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -91,12 +91,13 @@ export class HorizontalBarDocComponent {
     <p-chart type="bar" [data]="data" [options]="options"></p-chart>
 </div>`,
         typescript: `
-import { Component } from '@angular/core';
-import { Code } from '../../domain/code';
+import { Component, OnInit } from '@angular/core';
+
 @Component({
-    templateUrl: './chartdemo.html'
+    selector: 'chart-horizontal-bar-demo',
+    templateUrl: './chart-horizontal-bar-demo.html'
 })
-export class ChartDemo {
+export class ChartHorizontalBarDemo implements OnInit {
 
     data!: any;
 
@@ -162,17 +163,6 @@ export class ChartDemo {
             }
         };
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ChartModule } from 'primeng/chart';
-import { ChartDemo } from './chartdemo';
-
-@NgModule({
-    imports: [CommonModule, ChartModule],
-    declarations: [ChartDemo]
-})
-export class ChartDemoModule {}`
+}`
     };
 }

@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'radar-doc',
+    selector: 'chart-radar-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A radar chart is a graphical method of displaying multivariate data in the form of a two-dimensional chart of three or more quantitative variables represented on axes starting from the same point.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-chart type="radar" [data]="data" [options]="options"></p-chart>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chart-radar-demo"></app-code>
     </div>`
 })
-export class RadarDocComponent {
+export class ChartRadarDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -80,13 +80,13 @@ export class RadarDocComponent {
     <p-chart type="radar" [data]="data" [options]="options"></p-chart>
 </div>`,
         typescript: `
-import { Component } from '@angular/core';
-import { Code } from '../../domain/code';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-    templateUrl: './chartdemo.html'
+    selector: 'chart-radar-demo',
+    templateUrl: './chart-radar-demo.html'
 })
-export class ChartDemo {
+export class ChartRadarDemo implements OnInit {
 
     data!: any;
 
@@ -141,17 +141,6 @@ export class ChartDemo {
             }
         };
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ChartModule } from 'primeng/chart';
-import { ChartDemo } from './chartdemo';
-
-@NgModule({
-    imports: [CommonModule, ChartModule],
-    declarations: [ChartDemo]
-})
-export class ChartDemoModule {}`
+}`
     };
 }

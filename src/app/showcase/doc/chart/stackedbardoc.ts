@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'stackedbar-doc',
+    selector: 'chart-stacked-bar-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Bars can be stacked on top of each other when <i>stacked</i> option of a scale is enabled.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-chart type="bar" [data]="data" [options]="options"></p-chart>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chart-stacked-bar-demo"></app-code>
     </div>`
 })
-export class StackedBarDocComponent {
+export class ChartStackedBarDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -99,13 +99,13 @@ export class StackedBarDocComponent {
     <p-chart type="bar" [data]="data" [options]="options"></p-chart>
 </div>`,
         typescript: `
-import { Component } from '@angular/core';
-import { Code } from '../../domain/code';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-    templateUrl: './chartdemo.html'
+    selector: 'chart-stacked-bar-demo',
+    templateUrl: './chart-stacked-bar-demo.html'
 })
-export class ChartDemo {
+export class ChartStackedBarDemo implements OnInit {
 
     data!: any;
 
@@ -179,17 +179,6 @@ export class ChartDemo {
             }
         };
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ChartModule } from 'primeng/chart';
-import { ChartDemo } from './chartdemo';
-
-@NgModule({
-    imports: [CommonModule, ChartModule],
-    declarations: [ChartDemo]
-})
-export class ChartDemoModule {}`
+}`
     };
 }

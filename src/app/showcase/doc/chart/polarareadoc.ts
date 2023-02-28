@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'polararea-doc',
+    selector: 'chart-polar-area-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Polar area charts are similar to pie charts, but each segment has the same angle - the radius of the segment differs depending on the value.</p>
@@ -10,10 +10,10 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-chart type="polarArea" [data]="data" [options]="options"></p-chart>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="chart-polar-area-demo"></app-code>
     </div>`
 })
-export class PolarAreaDocComponent {
+export class ChartPolarAreaDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -70,13 +70,13 @@ export class PolarAreaDocComponent {
     <p-chart type="polarArea" [data]="data" [options]="options"></p-chart>
 </div>`,
         typescript: `
-import { Component } from '@angular/core';
-import { Code } from '../../domain/code';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-    templateUrl: './chartdemo.html'
+    selector: 'chart-polar-area-demo',
+    templateUrl: './chart-polar-area-demo.html'
 })
-export class ChartDemo {
+export class ChartPolarAreaDemo implements OnInit {
 
     data!: any;
 
@@ -121,17 +121,6 @@ export class ChartDemo {
             }
         };
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ChartModule } from 'primeng/chart';
-import { ChartDemo } from './chartdemo';
-
-@NgModule({
-    imports: [CommonModule, ChartModule],
-    declarations: [ChartDemo]
-})
-export class ChartDemoModule {}`
+}`
     };
 }
