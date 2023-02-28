@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'panel-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Header and Footers sections can be customized using <i>header</i> and <i>footer</i> templates.</p>
@@ -14,10 +14,10 @@ import { Code } from '../../domain/code';
                 <ng-template pTemplate="footer"> Footer content here </ng-template>
             </p-panel>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="panel-template-demo"></app-code>
     </div>`
 })
-export class TemplateDocComponent {
+export class PanelTemplateDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -43,10 +43,9 @@ export class TemplateDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'panel-template-demo',
+    templateUrl: './panel-template-demo.html'
 })
-export class AppComponent {}`
+export class PanelTemplateDemo {}`
     };
 }

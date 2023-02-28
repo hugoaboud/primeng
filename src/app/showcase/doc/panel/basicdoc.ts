@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'panel-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A simple Panel is created with a <i>header</i> property along with the content as children.</p>
@@ -15,10 +15,10 @@ import { Code } from '../../domain/code';
                 </p>
             </p-panel>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="panel-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class PanelBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -46,10 +46,9 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'panel-basic-demo',
+    templateUrl: './panel-basic-demo.html'
 })
-export class AppComponent {}`
+export class PanelBasicDemo {}`
     };
 }

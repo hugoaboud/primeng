@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'toggleable-doc',
+    selector: 'panel-toggleable-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -18,10 +18,10 @@ import { Code } from '../../domain/code';
                 </p>
             </p-panel>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="panel-toggleable-demo"></app-code>
     </div>`
 })
-export class ToggleableDocComponent {
+export class PanelToggleableDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -49,10 +49,9 @@ export class ToggleableDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'panel-toggleable-demo',
+    templateUrl: './panel-toggleable-demo.html'
 })
-export class AppComponent {}`
+export class PanelToggleableDemo {}`
     };
 }
