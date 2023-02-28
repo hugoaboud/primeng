@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'card-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A simple Card is created with a <i>header</i> property along with the content as children.</p>
@@ -15,10 +15,10 @@ import { Code } from '../../domain/code';
                 </p>
             </p-card>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="card-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class CardBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -46,8 +46,9 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './basicdemo.html'
+    selector: 'card-basic-demo',
+    templateUrl: './card-basic-demo.html'
 })
-export class BasicDemo {}`
+export class CardBasicDemo {}`
     };
 }

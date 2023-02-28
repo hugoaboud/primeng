@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'advanced-doc',
+    selector: 'card-advanced-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Card content can be customized further with <i>subHeader</i>, <i>header</i> and <i>footer</i> properties.</p>
@@ -22,10 +22,10 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-card>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="card-advanced-demo"></app-code>
     </div>`
 })
-export class AdvancedDocComponent {
+export class CardAdvancedDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -67,8 +67,9 @@ export class AdvancedDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './advanceddemo.html'
+    selector: 'card-advanced-demo',
+    templateUrl: './card-advanced-demo.html'
 })
-export class AdvancedDemo {}`
+export class CardAdvancedDemo {}`
     };
 }
