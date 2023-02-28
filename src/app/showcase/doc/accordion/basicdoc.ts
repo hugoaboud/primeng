@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'accordion-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Accordion consists of one or more AccordionTab elements which are collapsed by default. Tab to expand initially can be defined with the <i>activeIndex</i> property.</p>
@@ -29,10 +29,10 @@ import { Code } from '../../domain/code';
                 </p-accordionTab>
             </p-accordion>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="accordion-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class AccordionBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -88,8 +88,9 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './basicdemo.html'
+    selector: 'accordion-basic-demo',
+    templateUrl: './accordion-basic-demo.html'
 })
-export class BasicDemo {}`
+export class AccordionBasicDemo {}`
     };
 }

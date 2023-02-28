@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'multiple-doc',
+    selector: 'accordion-multiple-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Only one tab at a time can be active by default, enabling <i>multiple</i> property changes this behavior to allow multiple tabs. In this case <i>activeIndex</i> needs to be an array.</p>
@@ -29,10 +29,10 @@ import { Code } from '../../domain/code';
                 </p-accordionTab>
             </p-accordion>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="accordion-multiple-demo"></app-code>
     </div>`
 })
-export class MultipleDocComponent {
+export class AccordionMultipleDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -88,8 +88,9 @@ export class MultipleDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './multipledemo.html'
+    selector: 'accordion-multiple-demo',
+    templateUrl: './accordion-multiple-demo.html'
 })
-export class MultipleDemo {}`
+export class AccordionMultipleDemo {}`
     };
 }

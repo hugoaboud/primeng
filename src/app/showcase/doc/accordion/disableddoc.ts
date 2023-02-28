@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'disabled-doc',
+    selector: 'accordion-disabled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Enabling <i>disabled</i> property of an AccordionTab prevents user interaction.</p>
@@ -29,10 +29,10 @@ import { Code } from '../../domain/code';
                 </p-accordionTab>
             </p-accordion>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="accordion-disabled-demo"></app-code>
     </div>`
 })
-export class DisabledDocComponent {
+export class AccordionDisabledDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -88,8 +88,9 @@ export class DisabledDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './disableddemo.html'
+    selector: 'accordion-disabled-demo',
+    templateUrl: './accordion-disabled-demo.html'
 })
-export class DisabledDemo {}`
+export class AccordionDisabledDemo {}`
     };
 }

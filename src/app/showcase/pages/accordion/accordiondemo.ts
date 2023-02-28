@@ -1,19 +1,17 @@
 import { Component } from '@angular/core';
-import { MessageService } from 'primeng/api';
-import { BasicDocComponent } from '../../doc/accordion/basicdoc';
-import { ControlledDocComponent } from '../../doc/accordion/controlleddoc';
-import { DisabledDocComponent } from '../../doc/accordion/disableddoc';
+import { AccordionBasicDemo } from '../../doc/accordion/basicdoc';
+import { AccordionControlledDemo } from '../../doc/accordion/controlleddoc';
+import { AccordionDisabledDemo } from '../../doc/accordion/disableddoc';
 import { EventsDocComponent } from '../../doc/accordion/eventsdoc';
 import { ImportDocComponent } from '../../doc/accordion/importdoc';
-import { MultipleDocComponent } from '../../doc/accordion/multipledoc';
+import { AccordionMultipleDemo } from '../../doc/accordion/multipledoc';
 import { PropsDocComponent } from '../../doc/accordion/propsdoc';
 import { StyleDocComponent } from '../../doc/accordion/styledoc';
-import { TemplateDocComponent } from '../../doc/accordion/templatedoc';
+import { AccordionTemplateDemo } from '../../doc/accordion/templatedoc';
 import { TemplatesDocComponent } from '../../doc/accordion/templatesdoc';
 
 @Component({
     templateUrl: './accordiondemo.html',
-    providers: [MessageService],
     styleUrls: ['./accordiondemo.scss']
 })
 export class AccordionDemo {
@@ -26,27 +24,27 @@ export class AccordionDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: AccordionBasicDemo
         },
         {
             id: 'multiple',
             label: 'Multiple',
-            component: MultipleDocComponent
+            component: AccordionMultipleDemo
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: AccordionDisabledDemo
         },
         {
             id: 'controlled',
             label: 'Controlled',
-            component: ControlledDocComponent
+            component: AccordionControlledDemo
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: AccordionTemplateDemo
         },
         {
             id: 'style',

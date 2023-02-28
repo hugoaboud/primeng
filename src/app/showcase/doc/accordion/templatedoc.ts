@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'accordion-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Title section of a tab is customized with the <i>header</i> property.</p>
@@ -56,10 +56,10 @@ import { Code } from '../../domain/code';
                 </p-accordionTab>
             </p-accordion>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="accordion-template-demo"></app-code>
     </div>`
 })
-export class TemplateDocComponent {
+export class AccordionTemplateDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -169,8 +169,9 @@ export class TemplateDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './templatedemo.html'
+    selector: 'accordion-template-demo',
+    templateUrl: './accordion-template-demo.html'
 })
-export class TemplateDemo {}`
+export class AccordionTemplateDemo {}`
     };
 }
