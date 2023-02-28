@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'toggleable-doc',
+    selector: 'fieldset-toggleable-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Content of the fieldset can be expanded and collapsed using <i>toggleable</i> option, default state is defined with collapsed option.</p>
@@ -15,10 +15,10 @@ import { Code } from '../../domain/code';
                 </p>
             </p-fieldset>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="fieldset-toggleable-demo"></app-code>
     </div>`
 })
-export class ToggleableDocComponent {
+export class FieldsetToggleableDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -46,10 +46,9 @@ export class ToggleableDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'fieldset-toggleable-demo',
+    templateUrl: './fieldset-toggleable-demo.html'
 })
-export class AppComponent {}`
+export class FieldsetToggleableDemo {}`
     };
 }

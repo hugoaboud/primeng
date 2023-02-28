@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'fieldset-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Legend section can also be defined with custom content instead of primitive values.</p>
@@ -18,10 +18,10 @@ import { Code } from '../../domain/code';
                 Content
             </p-fieldset>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="fieldset-template-demo"></app-code>
     </div>`
 })
-export class TemplateDocComponent {
+export class FieldsetTemplateDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -55,10 +55,9 @@ export class TemplateDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'fieldset-template-demo',
+    templateUrl: './fieldset-template-demo.html'
 })
-export class AppComponent {}`
+export class FieldsetTemplateDemo {}`
     };
 }

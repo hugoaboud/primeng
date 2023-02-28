@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'fieldset-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>PrimeIcons is available at npm, run the following command to download it to your project.</p>
@@ -15,10 +15,10 @@ import { Code } from '../../domain/code';
                 </p>
             </p-fieldset>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="fieldset-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class FieldsetBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -46,10 +46,9 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'fieldset-basic-demo',
+    templateUrl: './fieldset-basic-demo.html'
 })
-export class AppComponent {}`
+export class FieldsetBasicDemo {}`
     };
 }
