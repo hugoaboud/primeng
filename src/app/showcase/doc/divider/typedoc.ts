@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'type-doc',
+    selector: 'divider-type-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Style of the border is configured with the <i>type</i> property that can either be <i>solid</i>, <i>dotted</i> or <i>dashed</i>.</p>
@@ -34,10 +34,10 @@ import { Code } from '../../domain/code';
                 voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Donec vel volutpat ipsum. Integer nunc magna, posuere ut tincidunt eget, egestas vitae sapien. Morbi dapibus luctus odio.
             </p>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="divider-type-demo"></app-code>
     </div>`
 })
-export class TypeDocComponent {
+export class DividerTypeDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -91,10 +91,9 @@ export class TypeDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'divider-type-demo',
+    templateUrl: './divider-type-demo.html'
 })
-export class AppComponent {}`
+export class DividerTypeDemo {}`
     };
 }

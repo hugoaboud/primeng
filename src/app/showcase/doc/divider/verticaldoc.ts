@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'vertical-doc',
+    selector: 'divider-vertical-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Vertical divider is enabled by setting the <i>layout</i> property as <i>vertical</i>.</p>
@@ -27,10 +27,10 @@ import { Code } from '../../domain/code';
                 officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.
             </p>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="divider-vertical-demo"></app-code>
     </div>`
 })
-export class VerticalDocComponent {
+export class DividerVerticalDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -74,10 +74,9 @@ export class VerticalDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'divider-vertical-demo',
+    templateUrl: './divider-vertical-demo.html'
 })
-export class AppComponent {}`
+export class DividerVerticalDemo {}`
     };
 }

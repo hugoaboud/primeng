@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'divider-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Divider is basically placed between the items to separate.</p>
@@ -34,10 +34,10 @@ import { Code } from '../../domain/code';
                 voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Donec vel volutpat ipsum. Integer nunc magna, posuere ut tincidunt eget, egestas vitae sapien. Morbi dapibus luctus odio.
             </p>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="divider-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class DividerBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -91,10 +91,9 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'divider-basic-demo',
+    templateUrl: './divider-basic-demo.html'
 })
-export class AppComponent {}`
+export class DividerBasicDemo {}`
     };
 }

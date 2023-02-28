@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'login-doc',
+    selector: 'divider-login-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Sample implementation of a login form using a divider with content.</p>
@@ -32,10 +32,10 @@ import { Code } from '../../domain/code';
                 </div>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="divider-login-demo"></app-code>
     </div>`
 })
-export class LoginDocComponent {
+export class DividerLoginDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -97,10 +97,9 @@ export class LoginDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'divider-login-demo',
+    templateUrl: './divider-login-demo.html'
 })
-export class AppComponent {}`
+export class DividerLoginDemo {}`
     };
 }

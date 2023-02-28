@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'content-doc',
+    selector: 'divider-content-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -46,10 +46,10 @@ import { Code } from '../../domain/code';
                 voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Donec vel volutpat ipsum. Integer nunc magna, posuere ut tincidunt eget, egestas vitae sapien. Morbi dapibus luctus odio.
             </p>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="divider-content-demo"></app-code>
     </div>`
 })
-export class ContentDocComponent {
+export class DividerContentDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -121,10 +121,9 @@ export class ContentDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'divider-content-demo',
+    templateUrl: './divider-content-demo.html'
 })
-export class AppComponent {}`
+export class DividerContentDemo {}`
     };
 }
