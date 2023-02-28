@@ -3,7 +3,7 @@ import { MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'popup-doc',
+    selector: 'slide-menu-popup-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Popup mode is enabled by adding <i>popup</i> property and calling <i>toggle</i> method with an event of the target.</p>
@@ -12,10 +12,10 @@ import { Code } from '../../domain/code';
             <button type="button" pButton icon="pi pi-bars" label="Show" (click)="menu.toggle($event)"></button>
             <p-slideMenu #menu [model]="items" [popup]="true" [viewportHeight]="250" [menuWidth]="175"></p-slideMenu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="slide-menu-popup-demo"></app-code>
     </div>`
 })
-export class PopupDocComponent implements OnInit {
+export class SlideMenuPopupDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -167,9 +167,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './slidemenudemo.html'
+    selector: 'slide-menu-popup-demo',
+    templateUrl: './slide-menu-popup-demo.html'
 })
-export class SlideMenuDemo implements OnInit {
+export class SlideMenuPopupDemo implements OnInit {
 
     items!: MenuItem[];
 
@@ -301,18 +302,6 @@ export class SlideMenuDemo implements OnInit {
             }
         ];
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { SlideMenuModule } from 'primeng/slidemenu';
-import { SlideMenuDemo } from './slidemenudemo';
-
-@NgModule({
-    imports: [CommonModule, SlideMenuModule],
-    declarations: [SlideMenuDemo]
-})
-export class SlideMenuDemoModule {}`
+}`
     };
 }

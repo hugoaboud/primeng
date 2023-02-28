@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PopupDocComponent } from '../../doc/slidemenu/popupdoc';
-import { BasicDocComponent } from '../../doc/slidemenu/basicdoc';
+import { SlideMenuPopupDemo } from '../../doc/slidemenu/popupdoc';
+import { SlideMenuBasicDemo } from '../../doc/slidemenu/basicdoc';
 import { ImportDocComponent } from '../../doc/slidemenu/importdoc';
 import { MenuItemDocComponent } from '../../doc/slidemenu/menuitemdoc';
 import { MethodsDocComponent } from '../../doc/slidemenu/methodsdoc';
@@ -20,12 +20,12 @@ export class SlideMenuDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: SlideMenuBasicDemo
         },
         {
             id: 'popup',
             label: 'Popup',
-            component: PopupDocComponent
+            component: SlideMenuPopupDemo
         },
         {
             id: 'style',
