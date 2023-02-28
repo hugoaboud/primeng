@@ -3,7 +3,7 @@ import { Message, MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'service-doc',
+    selector: 'messages-service-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -19,11 +19,11 @@ import { Code } from '../../domain/code';
             </div>
             <p-messages></p-messages>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="messages-service-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
-export class ServiceDocComponent {
+export class MessagesServiceDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -67,10 +67,11 @@ import { Component, OnInit } from '@angular/core';
 import { Message, MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './messagesdemo.html',
+    selector: 'messages-service-demo',
+    templateUrl: './messages-service-demo.html',
     providers: [MessageService]
 })
-export class MessagesDemo {
+export class MessagesServiceDemo {
 
     constructor(private messageService: MessageService) {}
 
@@ -88,20 +89,6 @@ export class MessagesDemo {
     clear() {
         this.messageService.clear();
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { MessagesModule } from 'primeng/messages';
-import { ButtonModule } from 'primeng/button';
-import { MessagesDemo } from './messagesdemo';
-import { MessagesDemoRoutingModule } from './messagesdemo-routing.module';
-
-@NgModule({
-    imports: [CommonModule, MessagesDemoRoutingModule, MessagesModule, ButtonModule],
-    declarations: [MessagesDemo]
-})
-export class MessagesDemoModule {}
-`
+}`
     };
 }

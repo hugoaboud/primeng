@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'static-doc',
+    selector: 'messages-static-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Alternative way to provide the content for the messages is templating. In this case value property and message service is ignored and only static is displayed.</p>
@@ -15,10 +15,10 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-messages>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector=""></app-code>
     </div>`
 })
-export class StaticDocComponent {
+export class MessagesStaticDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -44,21 +44,9 @@ export class StaticDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './messagesdemo.html'
+    selector: 'messages-static-demo',
+    templateUrl: './messages-static-demo.html'
 })
-export class MessagesDemo { }`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { MessagesModule } from 'primeng/messages';
-import { MessagesDemo } from './messagesdemo';
-import { MessagesDemoRoutingModule } from './messagesdemo-routing.module';
-
-@NgModule({
-    imports: [CommonModule, MessagesDemoRoutingModule, MessagesModule],
-    declarations: [MessagesDemo]
-})
-export class MessagesDemoModule {}
-`
+export class MessagesStaticDemo { }`
     };
 }

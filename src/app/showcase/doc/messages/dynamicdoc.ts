@@ -1,9 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Message } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'dynamic-doc',
+    selector: 'messages-dynamic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A binding to the value property is required to provide messages to the component.</p>
@@ -13,10 +13,10 @@ import { Code } from '../../domain/code';
             <button type="button" pButton pRipple (click)="clearMessages()" icon="pi pi-times" label="Clear" class="p-button-secondary"></button>
             <p-messages [(value)]="messages" [enableService]="false" [closable]="false"></p-messages>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="messages-dynamic-demo"></app-code>
     </div>`
 })
-export class DynamicDocComponent {
+export class MessagesDynamicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -52,9 +52,10 @@ import { Component, OnInit } from '@angular/core';
 import { Message } from 'primeng/api';
 
 @Component({
-    templateUrl: './messagesdemo.html'
+    selector: 'messages-dynamic-demo',
+    templateUrl: './messages-dynamic-demo.html'
 })
-export class MessagesDemo {
+export class MessagesDynamicDemo {
     messages!: Message[];
 
     addMessages() {
@@ -69,20 +70,6 @@ export class MessagesDemo {
     clearMessages() {
         this.messages = [];
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { MessagesModule } from 'primeng/messages';
-import { ButtonModule } from 'primeng/button';
-import { MessagesDemo } from './messagesdemo';
-import { MessagesDemoRoutingModule } from './messagesdemo-routing.module';
-
-@NgModule({
-    imports: [CommonModule, MessagesDemoRoutingModule, MessagesModule, ButtonModule],
-    declarations: [MessagesDemo]
-})
-export class MessagesDemoModule {}
-`
+}`
     };
 }

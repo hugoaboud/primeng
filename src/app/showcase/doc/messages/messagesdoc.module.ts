@@ -7,35 +7,35 @@ import { MessageModule } from 'primeng/message';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { ImportDocComponent } from './importdoc';
-import { BasicDocComponent } from './basicdoc';
+import { MessagesBasicDemo } from './basicdoc';
 import { MessagesStyleDocComponent } from './messagesstyledoc';
 import { MessageStyleDocComponent } from './messagestyledoc';
 import { MessagesPropsDocComponent } from './messagespropsdoc';
 import { MessagePropsDocComponent } from './messagepropsdoc';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
-import { SeverityDocComponent } from './severitydoc';
-import { ClosableDocComponent } from './closabledoc';
-import { StaticDocComponent } from './staticdoc';
-import { DynamicDocComponent } from './dynamicdoc';
-import { ServiceDocComponent } from './servicedoc';
-import { InlineDocComponent } from './inlinedoc';
-import { AnimationDocComponent } from './animationdoc';
+import { MessagesSeverityDemo } from './severitydoc';
+import { MessagesClosableDemo } from './closabledoc';
+import { MessagesStaticDemo } from './staticdoc';
+import { MessagesDynamicDemo } from './dynamicdoc';
+import { MessagesServiceDemo } from './servicedoc';
+import { MessagesInlineDemo } from './inlinedoc';
+import { MessagesAnimationDemo } from './animationdoc';
 import { TemplatesDocComponent } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, FormsModule, RouterModule, MessagesModule, ButtonModule, MessageModule, InputTextModule, AppDocModule],
     declarations: [
-        BasicDocComponent,
+        MessagesBasicDemo,
         ImportDocComponent,
-        ClosableDocComponent,
-        StaticDocComponent,
-        DynamicDocComponent,
-        ServiceDocComponent,
-        SeverityDocComponent,
-        InlineDocComponent,
+        MessagesClosableDemo,
+        MessagesStaticDemo,
+        MessagesDynamicDemo,
+        MessagesServiceDemo,
+        MessagesSeverityDemo,
+        MessagesInlineDemo,
         MessagesStyleDocComponent,
-        AnimationDocComponent,
+        MessagesAnimationDemo,
         MessageStyleDocComponent,
         MessagesPropsDocComponent,
         MessagePropsDocComponent,

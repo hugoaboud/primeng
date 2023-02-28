@@ -3,7 +3,7 @@ import { Message } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'inline-doc',
+    selector: 'messages-inline-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p><i>p-message</i> component is used to display inline messages mostly within forms.</p>
@@ -32,10 +32,10 @@ import { Code } from '../../domain/code';
                 <small id="username-help" class="p-error">Username is not available.</small>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="messages-inline-demo"></app-code>
     </div>`
 })
-export class InlineDocComponent {
+export class MessagesInlineDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -93,20 +93,9 @@ export class InlineDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './messagesdemo.html'
+    selector: 'messages-inline-demo',
+    templateUrl: './messages-inline-demo.html'
 })
-export class MessagesDemo { }`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { MessageModule } from 'primeng/message';
-import { MessagesDemo } from './messagesdemo';
-import { MessagesDemoRoutingModule } from './messagesdemo-routing.module';
-
-@NgModule({
-    imports: [CommonModule, MessagesDemoRoutingModule, MessageModule],
-    declarations: [MessagesDemo]
-})
-export class MessagesDemoModule {}`
+export class MessagesInlineDemo { }`,
     };
 }

@@ -3,7 +3,7 @@ import { Message } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'closable-doc',
+    selector: 'messages-closable-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -15,10 +15,10 @@ import { Code } from '../../domain/code';
             <p-messages [(value)]="messages1" [enableService]="false" [closable]="false"></p-messages>
             <p-messages [(value)]="messages2" [enableService]="false"></p-messages>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="messages-closable-demo"></app-code>
     </div>`
 })
-export class ClosableDocComponent implements OnInit {
+export class MessagesClosableDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -53,9 +53,10 @@ import { Component, OnInit } from '@angular/core';
 import { Message } from 'primeng/api';
 
 @Component({
-    templateUrl: './messagesdemo.html'
+    selector: 'messages-closable-demo',
+    templateUrl: './messages-closable-demo.html'
 })
-export class MessagesDemo implements OnInit {
+export class MessagesClosableDemo implements OnInit {
     messages1!: Message[];
 
     messages2!: Message[];
@@ -71,19 +72,6 @@ export class MessagesDemo implements OnInit {
             { severity: 'error', summary: 'Error', detail: 'Closable Message Content' },
         ];
     }
-}`,
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { MessagesModule } from 'primeng/messages';
-import { MessagesDemo } from './messagesdemo';
-import { MessagesDemoRoutingModule } from './messagesdemo-routing.module';
-
-@NgModule({
-    imports: [CommonModule, MessagesDemoRoutingModule, MessagesModule],
-    declarations: [MessagesDemo]
-})
-export class MessagesDemoModule {}
-`
+}`
     };
 }
