@@ -9,9 +9,7 @@ import { Code } from '../../domain/code';
         </app-docsectiontext>
         <div class="card flex justify-content-center">
             <p-image src="https://primefaces.org/cdn/primeng/images/galleria/galleria1.jpg" alt="Image" width="250">
-                <ng-template pTemplate="indicator">
-                    Indicator Content
-                </ng-template>
+                <ng-template pTemplate="indicator"> Indicator Content </ng-template>
             </p-image>
         </div>
         <app-code [code]="code" selector="image-indicator-template-demo"></app-code>

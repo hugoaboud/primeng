@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'tree-select-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>TreeSelect component requires an array of TreeNode objects as its <i>options</i> and keys of the nodes as its value.</p>
@@ -11,7 +11,7 @@ import { NodeService } from '../../service/nodeservice';
         <div class="card flex justify-content-center">
             <p-treeSelect class="md:w-20rem w-full" containerStyleClass="w-full" [(ngModel)]="selectedNodes" [options]="nodes" placeholder="Select Item"></p-treeSelect>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tree-select-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent {
@@ -38,12 +38,14 @@ export class BasicDocComponent {
 
         typescript: `
 import { Component } from '@angular/core';
+import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    templateUrl: './basicdemo.html'
+    selector: 'tree-select-basic-demo',
+    templateUrl: './tree-select-basic-demo.html',
+    styleUrls: ['./tree-select-basic-demo.scss'],
 })
-
-export class BasicDemo {
+export class TreeSelectBasicDemo {
     nodes: any[];
 
     selectedNodes: any;
@@ -52,6 +54,8 @@ export class BasicDemo {
         this.nodeService.getFiles().then((files) => (this.nodes = files));
     }
 }`,
+
+        service: ['NodeService'],
 
         data: `
     /* NodeService */

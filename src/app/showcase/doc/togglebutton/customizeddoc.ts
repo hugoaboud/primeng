@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'customized-doc',
+    selector: 'toggle-button-customized-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Icons and Labels can be customized using <i>onLabel</i>, <i>offLabel</i>, <i>onIcon</i> and <i>offIcon</i> properties.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-toggleButton [(ngModel)]="checked" onLabel="I confirm" offLabel="I reject" onIcon="pi pi-check" offIcon="pi pi-times" [style]="{ width: '10em' }"></p-toggleButton>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="toggle-button-customized-demo"></app-code>
     </div>`
 })
 export class CustomizedDocComponent {
@@ -33,9 +33,11 @@ export class CustomizedDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './customizeddemo.html'
+    selector: 'toggle-button-customized-demo',
+    templateUrl: './toggle-button-customized-demo.html',
+    styleUrls: ['./toggle-button-customized-demo.scss']
 })
-export class CustomizedDemo {
+export class ToggleButtonCustomizedDemo {
     checked: boolean = false;
 }`
     };

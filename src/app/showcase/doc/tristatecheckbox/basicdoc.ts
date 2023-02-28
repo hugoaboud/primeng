@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'tri-state-checkbox-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>TriStateCheckbox is defined using p-triStateCheckbox element and requires a value binding via ngModel.</p>
@@ -11,7 +11,7 @@ import { Code } from '../../domain/code';
             <p-triStateCheckbox [(ngModel)]="value"></p-triStateCheckbox>
             <label>{{ value == null ? 'null' : value }}</label>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tri-state-checkbox-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent {
@@ -35,9 +35,11 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './basicdemo.html'
+    selector: 'tri-state-checkbox-basic-demo',
+    templateUrl: './tri-state-checkbox-basic-demo.html',
+    styleUrls: ['./tri-state-checkbox-basic-demo.scss']
 })
-export class BasicDemo {
+export class TriStateCheckboxBasicDemo {
     value: string;
 }`
     };

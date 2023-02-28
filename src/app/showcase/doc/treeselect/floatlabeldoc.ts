@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    selector: 'floatlabel-doc',
+    selector: 'tree-select-floatlabel-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A floating label appears on top of the input field when focused.</p>
@@ -14,7 +14,7 @@ import { NodeService } from '../../service/nodeservice';
                 <label for="treeselect">TreeSelect</label>
             </span>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tree-select-floatlabel-demo"></app-code>
     </div>`
 })
 export class FloatLabelDocComponent {
@@ -47,12 +47,15 @@ export class FloatLabelDocComponent {
 
         typescript: `
 import { Component } from '@angular/core';
+import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    templateUrl: './floatlabeldemo.html'
+    selector: 'tree-select-floatlabel-demo',
+    templateUrl: './tree-select-floatlabel-demo.html',
+    styleUrls: ['./tree-select-floatlabel-demo.scss'],
 })
 
-export class FloatlabelDemo {
+export class TreeSelectFloatlabelDemo {
     nodes: any[];
 
     selectedNodes: any;
@@ -61,6 +64,8 @@ export class FloatlabelDemo {
         this.nodeService.getFiles().then((files) => (this.nodes = files));
     }
 }`,
+
+        service: ['NodeService'],
 
         data: `
     /* NodeService */

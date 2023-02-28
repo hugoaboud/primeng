@@ -3,7 +3,7 @@ import { Code } from '../../domain/code';
 import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    selector: 'invalid-doc',
+    selector: 'tree-select-invalid-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Invalid state style is added using the <i>ng-invalid</i> and <i>ng-dirty</i> class to indicate a failed validation.</p>
@@ -11,7 +11,7 @@ import { NodeService } from '../../service/nodeservice';
         <div class="card flex justify-content-center">
             <p-treeSelect class="md:w-20rem w-full ng-invalid ng-dirty" containerStyleClass="w-full" [(ngModel)]="selectedNodes" [options]="nodes" placeholder="Select Item"></p-treeSelect>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tree-select-invalid-demo"></app-code>
     </div>`
 })
 export class InvalidDocComponent {
@@ -38,12 +38,15 @@ export class InvalidDocComponent {
 
         typescript: `
 import { Component } from '@angular/core';
+import { NodeService } from '../../service/nodeservice';
 
 @Component({
-    templateUrl: './invaliddemo.html'
+    selector: 'tree-select-invalid-demo',
+    templateUrl: './tree-select-invalid-demo.html',
+    styleUrls: ['./tree-select-invalid-demo.scss'],
 })
 
-export class InvalidDemo {
+export class TreeSelectInvalidDemo {
     nodes: any[];
 
     selectedNodes: any;
@@ -52,6 +55,8 @@ export class InvalidDemo {
         this.nodeService.getFiles().then((files) => (this.nodes = files));
     }
 }`,
+
+        service: ['NodeService'],
 
         data: `
     /* NodeService */
