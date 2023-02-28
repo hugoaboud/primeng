@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { DisabledDocComponent } from '../../doc/tabview/disableddoc';
-import { BasicDocComponent } from '../../doc/tabview/basicdoc';
-import { ControlledDocComponent } from '../../doc/tabview/controlleddoc';
+import { TabViewDisabledDemo } from '../../doc/tabview/disableddoc';
+import { TabViewBasicDemo } from '../../doc/tabview/basicdoc';
+import { TabViewControlledDemo } from '../../doc/tabview/controlleddoc';
 import { ImportDocComponent } from '../../doc/tabview/importdoc';
-import { CustomTemplateDocComponent } from '../../doc/tabview/customtemplatedoc';
-import { ClosableDocComponent } from '../../doc/tabview/closabledoc';
+import { TabViewTemplateDemo } from '../../doc/tabview/customtemplatedoc';
+import { TabViewClosableDemo } from '../../doc/tabview/closabledoc';
 import { ScrollableDocComponent } from '../../doc/tabview/scrollabledoc';
 import { StyleDocComponent } from '../../doc/tabview/styledoc';
 import { PropsDocComponent } from '../../doc/tabview/propsdoc';
@@ -25,27 +25,27 @@ export class TabViewDemo {
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: TabViewBasicDemo
         },
         {
             id: 'controlled',
             label: 'Controlled',
-            component: ControlledDocComponent
+            component: TabViewControlledDemo
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: TabViewDisabledDemo
         },
         {
-            id: 'customtemplate',
-            label: 'Custom Template',
-            component: CustomTemplateDocComponent
+            id: 'template',
+            label: 'Template',
+            component: TabViewTemplateDemo
         },
         {
             id: 'closable',
             label: 'Closable',
-            component: ClosableDocComponent
+            component: TabViewClosableDemo
         },
         {
             id: 'scrollable',

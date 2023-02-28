@@ -5,12 +5,12 @@ import { ButtonModule } from 'primeng/button';
 import { TabViewModule } from 'primeng/tabview';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { ControlledDocComponent } from './controlleddoc';
-import { DisabledDocComponent } from './disableddoc';
-import { CustomTemplateDocComponent } from './customtemplatedoc';
+import { TabViewBasicDemo } from './basicdoc';
+import { TabViewControlledDemo } from './controlleddoc';
+import { TabViewDisabledDemo } from './disableddoc';
+import { TabViewTemplateDemo } from './customtemplatedoc';
 import { ImportDocComponent } from './importdoc';
-import { ClosableDocComponent } from './closabledoc';
+import { TabViewClosableDemo } from './closabledoc';
 import { ScrollableDocComponent } from './scrollabledoc';
 import { StyleDocComponent } from './styledoc';
 import { PropsDocComponent } from './propsdoc';
@@ -22,11 +22,11 @@ import { TemplatesDocComponent } from './templatesdoc';
     exports: [AppDocModule],
     declarations: [
         ImportDocComponent,
-        BasicDocComponent,
-        ControlledDocComponent,
-        DisabledDocComponent,
-        CustomTemplateDocComponent,
-        ClosableDocComponent,
+        TabViewBasicDemo,
+        TabViewControlledDemo,
+        TabViewDisabledDemo,
+        TabViewTemplateDemo,
+        TabViewClosableDemo,
         ScrollableDocComponent,
         StyleDocComponent,
         PropsDocComponent,

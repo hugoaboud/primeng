@@ -14,7 +14,7 @@ import { Code } from '../../domain/code';
                 </p-tabPanel>
             </p-tabView>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector=""></app-code>
     </div>`
 })
 export class ScrollableDocComponent {

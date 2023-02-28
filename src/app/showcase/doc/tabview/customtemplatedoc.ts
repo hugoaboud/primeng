@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'customtemplate-doc',
+    selector: 'tab-view-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Header of a tab supports templating to place custom html content instead of strings as well.</p>
@@ -42,10 +42,10 @@ import { Code } from '../../domain/code';
                 </p-tabPanel>
             </p-tabView>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tab-view-template-demo"></app-code>
     </div>`
 })
-export class CustomTemplateDocComponent {
+export class TabViewTemplateDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -127,10 +127,9 @@ export class CustomTemplateDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'tab-view-template-demo',
+    templateUrl: './tab-view-template-demo.html'
 })
-export class AppComponent {}`
+export class TabViewTemplateDemo {}`
     };
 }

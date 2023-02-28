@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'controlled-doc',
+    selector: 'tab-view-controlled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>TabView can be controlled programmatically using a binding to activeIndex update the active index.</p>
@@ -34,10 +34,10 @@ import { Code } from '../../domain/code';
                 </p-tabPanel>
             </p-tabView>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tab-view-controlled-demo"></app-code>
     </div>`
 })
-export class ControlledDocComponent {
+export class TabViewControlledDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -105,11 +105,10 @@ export class ControlledDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'tab-view-controlled-demo',
+    templateUrl: './tab-view-controlled-demo.html'
 })
-export class AppComponent {
+export class TabViewControlledDemo {
     activeIndex: number = 0;
 }`
     };

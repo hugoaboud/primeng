@@ -2,10 +2,10 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'tab-view-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>TabView consists of one or more TabPanel elements.</p>
+            <p>TabView consists of one or more <i>TabPanel</i> elements.</p>
         </app-docsectiontext>
         <div class="card">
             <p-tabView>
@@ -29,10 +29,10 @@ import { Code } from '../../domain/code';
                 </p-tabPanel>
             </p-tabView>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tab-view-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class TabViewBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -88,10 +88,9 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'tab-view-basic-demo',
+    templateUrl: './tab-view-basic-demo.html'
 })
-export class AppComponent {}`
+export class TabViewBasicDemo {}`
     };
 }

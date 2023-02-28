@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'disabled-doc',
+    selector: 'tab-view-disabled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Enabling <i>disabled</i> property of a TabPanel prevents user interaction.</p>
@@ -30,10 +30,10 @@ import { Code } from '../../domain/code';
                 <p-tabPanel [disabled]="true" header="Header IV"> </p-tabPanel>
             </p-tabView>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="tab-view-disabled-demo"></app-code>
     </div>`
 })
-export class DisabledDocComponent {
+export class TabViewDisabledDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -91,10 +91,9 @@ export class DisabledDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'tab-view-disabled-demo',
+    templateUrl: './tab-view-disabled-demo.html'
 })
-export class AppComponent {}`
+export class TabViewDisabledDemo {}`
     };
 }
