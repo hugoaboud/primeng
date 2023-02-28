@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'vertical-doc',
+    selector: 'slider-vertical-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Default layout of slider is <i>horizontal</i>, use <i>orientation</i> property for the alternative <i>vertical</i> mode.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-slider [(ngModel)]="value" orientation="vertical"></p-slider>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="slider-vertical-demo"></app-code>
     </div>`
 })
 export class VerticalDocComponent {
@@ -33,9 +33,11 @@ export class VerticalDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './verticaldemo.html'
+    selector: 'slider-vertical-demo',
+    templateUrl: './slider-vertical-demo.html',
+    styleUrls: ['./slider-vertical-demo.scss']
 })
-export class VerticalDemo {
+export class SliderVerticalDemo {
     value: number;
 }`
     };

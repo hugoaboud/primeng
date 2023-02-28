@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'rating-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Two-way value binding is defined using <i>ngModel</i>.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-rating [(ngModel)]="value"></p-rating>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="rating-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent {
@@ -33,9 +33,11 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './ratingdemo.html'
+    selector: 'rating-basic-demo',
+    templateUrl: './rating-basic-demo.html',
+    styleUrls: ['./rating-basic-demo.scss']
 })
-export class RatingDemo {
+export class RatingBasicDemo {
     value: number;
 }`
     };

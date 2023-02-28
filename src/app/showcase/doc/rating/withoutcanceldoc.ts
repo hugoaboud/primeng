@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'withoutcancel-doc',
+    selector: 'rating-withoutcancel-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>A cancel icon is displayed to reset the value by default, set <i>cancel</i> as false to remove this option.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-rating [(ngModel)]="value" [cancel]="false"></p-rating>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="rating-withoutcancel-demo"></app-code>
     </div>`
 })
 export class WithoutCancelDocComponent {
@@ -33,9 +33,11 @@ export class WithoutCancelDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './ratingdemo.html'
+    selector: 'rating-withoutcancel-demo',
+    templateUrl: './rating-withoutcancel-demo.html',
+    styleUrls: ['./rating-withoutcancel-demo.scss']
 })
-export class RatingDemo {
+export class RatingWithoutcancelDemo {
     value: number;
 }`
     };

@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'readonly-doc',
+    selector: 'rating-readonly-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>When <i>readOnly</i> present, value cannot be edited.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-rating [(ngModel)]="value" [readonly]="true" [cancel]="false"></p-rating>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="rating-readonly-demo"></app-code>
     </div>`
 })
 export class ReadOnlyDocComponent {
@@ -33,9 +33,11 @@ export class ReadOnlyDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './ratingdemo.html'
+    selector: 'rating-readonly-demo',
+    templateUrl: './rating-readonly-demo.html',
+    styleUrls: ['./rating-readonly-demo.scss']
 })
-export class RatingDemo {
+export class RatingReadonlyDemo {
     value: number = 5;
 }`
     };
