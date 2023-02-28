@@ -6,7 +6,7 @@ import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
+import { ConfirmPopupBasicDemo } from './basicdoc';
 import { ImportDocComponent } from './importdoc';
 import { PropsDocComponent } from './propsdoc';
 import { StyleDocComponent } from './styledoc';
@@ -15,7 +15,7 @@ import { ConfirmationApiDocComponent } from './confirmationapidoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, ConfirmPopupModule, ButtonModule, ToastModule, AppDocModule],
-    declarations: [BasicDocComponent, ImportDocComponent, PropsDocComponent, StyleDocComponent, ServiceDocComponent, ConfirmationApiDocComponent],
+    declarations: [ConfirmPopupBasicDemo, ImportDocComponent, PropsDocComponent, StyleDocComponent, ServiceDocComponent, ConfirmationApiDocComponent],
     exports: [AppDocModule]
 })
 export class ConfirmPopupDocModule {}
