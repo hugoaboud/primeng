@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'disabled-doc',
+    selector: 'radio-button-disabled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>When <i>disabled</i> is present, the element cannot be edited and focused.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-radioButton [disabled]="true" [ngModel]="checked"></p-radioButton>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="radio-button-disabled-demo"></app-code>
     </div>`
 })
 export class DisabledDocComponent {
@@ -33,8 +33,10 @@ export class DisabledDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './passworddemo.html'
+    selector: 'radio-button-disabled-demo',
+    templateUrl: './radio-button-disabled-demo.html',
+    styleUrls: ['./radio-button-disabled-demo.scss']
 })
-export class PasswordDemo { }`
+export class RadioButtonDisabledDemo { }`
     };
 }
