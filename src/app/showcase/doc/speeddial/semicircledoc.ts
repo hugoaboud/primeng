@@ -3,7 +3,7 @@ import { MenuItem, MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'semicircle-doc',
+    selector: 'speeddial-semi-circle-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>When <i>type</i> is defined as <i>semi-circle</i>, items are displayed in a half-circle around the button.</p>
@@ -17,7 +17,7 @@ import { Code } from '../../domain/code';
                 <p-speedDial [model]="items" direction="right" [radius]="80" type="semi-circle"></p-speedDial>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="speeddial-semi-circle-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
@@ -84,10 +84,12 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem, MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './semicircledemo.html',
+    selector: 'speeddial-semi-circle-demo',
+    templateUrl: './speeddial-semi-circle-demo.html',
+    styleUrls: ['./speeddial-semi-circle-demo.scss'],
     providers: [MessageService]
 })
-export class SemiCircleDemo implements OnInit {
+export class SpeeddialSemiCircleDemo implements OnInit {
     items: MenuItem[];
 
     constructor(private messageService: MessageService) {}
@@ -146,6 +148,7 @@ export class SemiCircleDemo implements OnInit {
             left: 0;
             top: calc(50% - 2rem);
         }
+    }
 }`
     };
 }

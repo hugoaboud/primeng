@@ -3,7 +3,7 @@ import { MenuItem, MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'linear-doc',
+    selector: 'speeddial-linear-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>SpeedDial items are defined with the <i>model</i> property based on MenuModel API. Default orientation of the items is linear and <i>direction</i> property is used to define the position of the items related to the button.</p>
@@ -17,7 +17,7 @@ import { Code } from '../../domain/code';
                 <p-speedDial [model]="items" direction="right"></p-speedDial>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="speeddial-linear-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
@@ -84,10 +84,12 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem, MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './lineardemo.html',
+    selector: 'speeddial-linear-demo',
+    templateUrl: './speeddial-linear-demo.html',
+    styleUrls: ['./speeddial-linear-demo.scss'],
     providers: [MessageService]
 })
-export class LinearDemo implements OnInit {
+export class SpeeddialLinearDemo implements OnInit {
     items: MenuItem[];
 
     constructor(private messageService: MessageService) {}
@@ -146,6 +148,7 @@ export class LinearDemo implements OnInit {
             left: 0;
             top: calc(50% - 2rem);
         }
+    }
 }`
     };
 }

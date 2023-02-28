@@ -544,6 +544,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { SkeletonModule } from 'primeng/skeleton';
 import { SlideMenuModule } from 'primeng/slidemenu';
 import { SliderModule } from 'primeng/slider';
+import { SpeedDialModule } from 'primeng/speeddial';
 import { SpinnerModule } from 'primeng/spinner';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { SplitterModule } from 'primeng/splitter';
@@ -640,6 +641,7 @@ ${serviceImports}
     SkeletonModule,
     SlideMenuModule,
     SliderModule,
+    SpeedDialModule,
     SpinnerModule,
     SplitterModule,
     SplitButtonModule,
