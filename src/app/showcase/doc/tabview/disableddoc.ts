@@ -5,7 +5,7 @@ import { Code } from '../../domain/code';
     selector: 'tab-view-disabled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>Enabling <i>disabled</i> property of a TabPanel prevents user interaction.</p>
+            <p>Setting <i>disabled</i> property to <i>true</i> of a <i>TabPanel</i> prevents user interaction.</p>
         </app-docsectiontext>
         <div class="card">
             <p-tabView>

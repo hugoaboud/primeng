@@ -5,7 +5,7 @@ import { Code } from '../../domain/code';
     selector: 'tab-view-controlled-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>TabView can be controlled programmatically using a binding to activeIndex update the active index.</p>
+            <p>TabView can be controlled programmatically using a binding to <i>activeIndex</i> update the active index.</p>
         </app-docsectiontext>
         <div class="card">
             <div style="padding: .5em 0 1em 0">
