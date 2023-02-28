@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'stroke-doc',
+    selector: 'knob-stroke-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>The border size is specified with the <i>strokeWidth</i> property as a number in pixels.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-knob [(ngModel)]="value" [strokeWidth]="5"></p-knob>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="knob-stroke-demo"></app-code>
     </div>`
 })
 export class StrokeDocComponent {
@@ -33,10 +33,12 @@ export class StrokeDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './knobdemo.html'
+    selector: 'knob-stroke-demo',
+    templateUrl: './knob-stroke-demo.html',
+    styleUrls: ['./knob-stroke-demo.scss']
 })
 
-export class KnobDemo {
+export class KnobStrokeDemo {
     value: number = 40;
 }`
     };

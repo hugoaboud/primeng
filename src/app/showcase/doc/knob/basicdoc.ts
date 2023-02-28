@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'knob-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Knob is an input component and used with the standard <i>ngModel</i> directive.</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-knob [(ngModel)]="value"></p-knob>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="knob-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent {
@@ -33,10 +33,11 @@ export class BasicDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './knobdemo.html'
+    selector: 'knob-basic-demo',
+    templateUrl: './knob-basic-demo.html',
+    styleUrls: ['./knob-basic-demo.scss']
 })
-
-export class KnobDemo {
+export class KnobBasicDemo {
     value: number;
 }`
     };

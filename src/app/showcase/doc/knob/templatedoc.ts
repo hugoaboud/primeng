@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'template-doc',
+    selector: 'knob-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Label is a string template that can be customized with the <i>valueTemplate</i> property having 60 as the placeholder .</p>
@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <div class="card flex justify-content-center">
             <p-knob [(ngModel)]="value" valueTemplate="{value}%"></p-knob>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="knob-template-demo"></app-code>
     </div>`
 })
 export class TemplateDocComponent {
@@ -33,10 +33,11 @@ export class TemplateDocComponent {
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl: './knobdemo.html'
+    selector: 'knob-template-demo',
+    templateUrl: './knob-template-demo.html',
+    styleUrls: ['./knob-template-demo.scss']
 })
-
-export class KnobDemo {
+export class KnobTemplateDemo {
     value: number = 60;
 }`
     };
