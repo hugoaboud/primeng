@@ -3,7 +3,7 @@ import { MegaMenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'vertical-doc',
+    selector: 'mega-menu-vertical-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Layout of the MegaMenu is changed with the <i>orientation</i> property that accepts <i>horizontal</i> and <i>vertical</i> as options.</p>
@@ -11,10 +11,10 @@ import { Code } from '../../domain/code';
         <div class="card">
             <p-megaMenu [model]="items" orientation="vertical"></p-megaMenu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="mega-menu-vertical-demo"></app-code>
     </div>`
 })
-export class VerticalDocComponent implements OnInit {
+export class MegaMenuVerticalDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -154,9 +154,10 @@ import { Component, OnInit } from '@angular/core';
 import { MegaMenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './megamenudemo.html'
+    selector: 'mega-menu-vertical-demo',
+    templateUrl: './mega-menu-vertical-demo.html'
 })
-export class MegaMenuDemo implements OnInit {
+export class MegaMenuVerticalDemo implements OnInit {
 
     items: MegaMenuItem[];
 
@@ -278,18 +279,6 @@ export class MegaMenuDemo implements OnInit {
             }
         ];
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { MegaMenuModule } from 'primeng/megamenu';
-import { MegaMenuDemo } from './megamenudemo';
-
-@NgModule({
-    imports: [CommonModule, MegaMenuModule],
-    declarations: [MegaMenuDemo]
-})
-export class MegaMenuDemoModule {}`
+}`
     };
 }

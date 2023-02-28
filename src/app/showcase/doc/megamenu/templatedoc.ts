@@ -3,7 +3,7 @@ import { MegaMenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'custom-doc',
+    selector: 'mega-menu-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Custom content can be placed between p-megaMenu tags. Megamenu should be <i>horizontal</i> for custom content.</p>
@@ -18,10 +18,10 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-megaMenu>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="mega-menu-template-demo"></app-code>
     </div>`
 })
-export class CustomDocComponent implements OnInit {
+export class MegaMenuTemplateDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -175,9 +175,10 @@ import { Component, OnInit } from '@angular/core';
 import { MegaMenuItem } from 'primeng/api';
 
 @Component({
-    templateUrl: './megamenudemo.html'
+    selector: 'mega-menu-template-demo',
+    templateUrl: './mega-menu-template-demo.html'
 })
-export class MegaMenuDemo implements OnInit {
+export class MegaMenuTemplateDemo implements OnInit {
 
     items: MegaMenuItem[];
 
@@ -299,20 +300,6 @@ export class MegaMenuDemo implements OnInit {
             }
         ];
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { MegaMenuModule } from 'primeng/megamenu';
-import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
-import { MegaMenuDemo } from './megamenudemo';
-
-@NgModule({
-    imports: [CommonModule, MegaMenuModule, InputTextModule, ButtonModule],
-    declarations: [MegaMenuDemo]
-})
-export class MegaMenuDemoModule {}`
+}`
     };
 }
