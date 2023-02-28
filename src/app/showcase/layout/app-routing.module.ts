@@ -14,8 +14,8 @@ const routes: Routes = [
         path: '',
         component: AppMainComponent,
         children: [
-            { path: '', redirectTo: 'setup', pathMatch: 'full' },
-            { path: 'setup', loadChildren: () => import('../pages/setup/setup.module').then((m) => m.SetupModule) },
+            { path: '', redirectTo: 'installation', pathMatch: 'full' },
+            { path: 'installation', loadChildren: () => import('../pages/installation/installation.module').then((m) => m.InstallationModule) },
             { path: 'roadmap', loadChildren: () => import('../pages/roadmap/roadmap.module').then((m) => m.RoadmapModule) },
             { path: 'theming', loadChildren: () => import('../pages/theming/theming.module').then((m) => m.ThemingModule) },
             { path: 'icons', loadChildren: () => import('../pages/icons/icons.module').then((m) => m.IconsModule) },
