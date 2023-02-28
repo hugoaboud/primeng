@@ -13,7 +13,7 @@ import { ImportDocComponent } from './importdoc';
 import { PropsDocComponent } from './propsdoc';
 import { StyleDocComponent } from './styledoc';
 import { ProductListDemo } from './productlistdemo';
-import { BasicDocComponent } from './basicdoc';
+import { DynamicDialogBasicDemo } from './basicdoc';
 import { UsageDocComponent } from './usagedoc';
 import { PassingDataDocComponent } from './passingdatadoc';
 import { CloseDocComponent } from './closedoc';
@@ -27,7 +27,7 @@ import { EventsDocComponent } from './eventsdoc';
         ImportDocComponent,
         PropsDocComponent,
         StyleDocComponent,
-        BasicDocComponent,
+        DynamicDialogBasicDemo,
         ProductListDemo,
         UsageDocComponent,
         PassingDataDocComponent,

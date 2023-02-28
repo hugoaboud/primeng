@@ -36,7 +36,7 @@ import { ProductService } from '../../service/productservice';
                 </ng-template>
             </p-table>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" [hideStackBlitz]="true" [hideCodeSandbox]="true"></app-code>
     </div> `,
     providers: [ProductService, DynamicDialogRef]
 })

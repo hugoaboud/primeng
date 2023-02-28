@@ -76,26 +76,6 @@ export class DynamicDialogDemo {
             }
         });
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { DynamicDialogModule } from 'primeng/dynamicdialog';
-import { ButtonModule } from 'primeng/button';
-import { TableModule } from 'primeng/table';
-import { DynamicDialogDemo } from './dynamicdialogdemo';
-import { ProductListDemo } from './productlistdemo';
-
-@NgModule({
-    imports: [CommonModule, FormsModule, DynamicDialogModule, ButtonModule, TableModule],
-    declarations: [
-        DynamicDialogDemo,
-        ProductListDemo
-    ],
-    entryComponents: [ProductListDemo]
-})
-export class DynamicDialogDemoModule {}`
+}`
     };
 }

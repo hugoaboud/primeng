@@ -6,7 +6,7 @@ import { Product } from '../../domain/product';
 import { ProductListDemo } from './productlistdemo';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'dynamic-dialog-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -19,11 +19,11 @@ import { ProductListDemo } from './productlistdemo';
             <p-toast></p-toast>
             <p-button (click)="show()" icon="pi pi-info-circle" label="Show"></p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="dynamic-dialog-basic-demo" [extFiles]="extFiles" [routeFiles]="routeFiles"></app-code>
     </div>`,
     providers: [DialogService, MessageService]
 })
-export class BasicDocComponent implements OnDestroy {
+export class DynamicDialogBasicDemo implements OnDestroy {
     @Input() id: string;
 
     @Input() title: string;
@@ -77,10 +77,11 @@ import { Product } from '../../domain/product';
 import { ProductListDemo } from './productlistdemo';
 
 @Component({
-    templateUrl: './dynamicdialogdemo.html',
+    selector: 'dynamic-dialog-basic-demo',
+    templateUrl: './dynamic-dialog-basic-demo.html',
     providers: [DialogService, MessageService]
 })
-export class DynamicDialogDemo implements OnDestroy {
+export class DynamicDialogBasicDemo implements OnDestroy {
     
     constructor(public dialogService: DialogService, public messageService: MessageService) {}
 
@@ -113,25 +114,76 @@ export class DynamicDialogDemo implements OnDestroy {
     }
 }`,
 
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { DynamicDialogModule } from 'primeng/dynamicdialog';
-import { ButtonModule } from 'primeng/button';
-import { TableModule } from 'primeng/table';
-import { ToastModule } from 'primeng/toast';
-import { DynamicDialogDemo } from './dynamicdialogdemo';
-import { ProductListDemo } from './productlistdemo';
-
-@NgModule({
-    imports: [CommonModule, FormsModule, DynamicDialogModule, ButtonModule, ToastModule, TableModule],
-    declarations: [
-        DynamicDialogDemo,
-        ProductListDemo
-    ],
-    entryComponents: [ProductListDemo]
-})
-export class DynamicDialogDemoModule {}`
+        service: ['ProductService']
     };
+    
+    extFiles = [
+        {
+            path: 'src/domain/product.ts',
+            content: `
+export interface Product {
+    id?: string;
+    code?: string;
+    name?: string;
+    description?: string;
+    price?: number;
+    quantity?: number;
+    inventoryStatus?: string;
+    category?: string;
+    image?: string;
+    rating?: number;
+}`
+        }
+    ];
+
+    routeFiles = [
+        {
+            path: 'src/app/demo/productlistdemo.ts',
+            name: 'ProductListDemo',
+            content: `import { Component, OnInit } from '@angular/core';
+import { DynamicDialogRef } from 'primeng/dynamicdialog';
+import { Product } from '../../domain/product';
+import { ProductService } from '../../service/productservice';
+
+@Component({
+    template: \` <p-table [value]="products" responsiveLayout="scroll" [paginator]="true" [rows]="5" [responsive]="true">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="name">Name <p-sortIcon field="vin"></p-sortIcon></th>
+                <th pSortableColumn="year">Image</th>
+                <th pSortableColumn="price">Brand <p-sortIcon field="price"></p-sortIcon></th>
+                <th pSortableColumn="inventoryStatus">Status <p-sortIcon field="inventoryStatus"></p-sortIcon></th>
+                <th style="width:4em"></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{ product.name }}</td>
+                <td><img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.image" class="w-4rem h-4rem shadow-2" /></td>
+                <td>{{ product.price }}</td>
+                <td>
+                    <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{ product.inventoryStatus }}</span>
+                </td>
+                <td>
+                    <button type="button" pButton icon="pi pi-plus" (click)="selectProduct(product)"></button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>\`
+})
+export class ProductListDemo implements OnInit {
+    products: Product[];
+
+    constructor(private productService: ProductService, public ref: DynamicDialogRef) {}
+
+    ngOnInit() {
+        this.productService.getProductsSmall().then((products) => (this.products = products));
+    }
+
+    selectProduct(product: Product) {
+        this.ref.close(product);
+    }
+}`
+        }
+    ]
 }
