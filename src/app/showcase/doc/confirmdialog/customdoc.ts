@@ -3,7 +3,7 @@ import { ConfirmationService, MessageService, ConfirmEventType } from 'primeng/a
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'custom-doc',
+    selector: 'confirm-dialog-template-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -28,11 +28,11 @@ import { Code } from '../../domain/code';
             </p-confirmDialog>
             <p-button pRipple (click)="confirm1()" icon="pi pi-check" label="Confirm"></p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="confirm-dialog-template-demo"></app-code>
     </div>`,
     providers: [ConfirmationService, MessageService]
 })
-export class CustomDocComponent {
+export class ConfirmDialogTemplateDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -89,15 +89,15 @@ export class CustomDocComponent {
 </div>`,
 
         typescript: `
-import { Component, OnInit } from '@angular/core';
-import { ConfirmationService, MessageService } from 'primeng/api';
-import { Code } from '../../domain/code';
+import { Component } from '@angular/core';
+import { ConfirmationService, MessageService, ConfirmEventType } from 'primeng/api';
         
 @Component({
-    templateUrl: './confirmdialogdemo.html',
+    selector: 'confirm-dialog-template-demo',
+    templateUrl: './confirm-dialog-template-demo.html',
     providers: [ConfirmationService, MessageService]
 })
-export class ConfirmDialogDemo {
+export class ConfirmDialogTemplateDemo {
 
     constructor(private confirmationService: ConfirmationService, private messageService: MessageService) {}
 
@@ -120,20 +120,6 @@ export class ConfirmDialogDemo {
             }
         });
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { ToastModule } from 'primeng/toast';
-import { ConfirmDialogModule } from 'primeng/confirmdialog';
-import { ConfirmDialogDemo } from './confirmdialogdemo';
-
-@NgModule({
-    imports: [CommonModule, ConfirmDialogModule, ButtonModule, ToastModule],
-    declarations: [ConfirmDialogDemo],
-})
-export class ConfirmDialogDemoModule {}`
+}`
     };
 }

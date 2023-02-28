@@ -3,7 +3,7 @@ import { ConfirmationService, MessageService, ConfirmEventType } from 'primeng/a
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'confirm-dialog-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>ConfirmDialog is defined using <i>p-confirmDialog</i> tag and an instance of <i>ConfirmationService</i> is required to display it bycalling confirm method.</p>
@@ -14,11 +14,11 @@ import { Code } from '../../domain/code';
             <p-button pRipple (click)="confirm1()" icon="pi pi-check" label="Confirm"></p-button>
             <p-button pRipple (click)="confirm2()" icon="pi pi-times" label="Delete"></p-button>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="confirm-dialog-basic-demo"></app-code>
     </div>`,
     providers: [ConfirmationService, MessageService]
 })
-export class BasicDocComponent {
+export class ConfirmDialogBasicDemo {
     @Input() id: string;
 
     @Input() title: string;
@@ -83,15 +83,15 @@ export class BasicDocComponent {
 </div>`,
 
         typescript: `
-import { Component, OnInit } from '@angular/core';
-import { ConfirmationService, MessageService } from 'primeng/api';
-import { Code } from '../../domain/code';
+import { Component } from '@angular/core';
+import { ConfirmationService, MessageService, ConfirmEventType } from 'primeng/api';
         
 @Component({
-    templateUrl: './confirmdialogdemo.html',
+    selector: 'confirm-dialog-basic-demo',
+    templateUrl: './confirm-dialog-basic-demo.html',
     providers: [ConfirmationService, MessageService]
 })
-export class ConfirmDialogDemo {
+export class ConfirmDialogBasicDemo {
 
     constructor(private confirmationService: ConfirmationService, private messageService: MessageService) {}
 
@@ -136,20 +136,6 @@ export class ConfirmDialogDemo {
             }
         });
     }
-}`,
-
-        module: `
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { ToastModule } from 'primeng/toast';
-import { ConfirmDialogModule } from 'primeng/confirmdialog';
-import { ConfirmDialogDemo } from './confirmdialogdemo';
-
-@NgModule({
-    imports: [CommonModule, ConfirmDialogModule, ButtonModule, ToastModule],
-    declarations: [ConfirmDialogDemo],
-})
-export class ConfirmDialogDemoModule {}`
+}`
     };
 }
