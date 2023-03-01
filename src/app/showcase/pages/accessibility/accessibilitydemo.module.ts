@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { CheckboxModule } from 'primeng/checkbox';
-import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
+import { AccessibilityDocModule } from '../../doc/accessibility/accessibilitydoc.module';
 import { AccessibilityDemoRoutingModule } from './accessibilitydemo-routing.module';
 import { AccessibilityDemoComponent } from './accessibilitydemo.component';
 
 @NgModule({
-    imports: [CommonModule, CheckboxModule, AccessibilityDemoRoutingModule, AppCodeModule],
+    imports: [CommonModule, AccessibilityDemoRoutingModule, AccessibilityDocModule],
     declarations: [AccessibilityDemoComponent]
 })
 export class AccessibilityDemoModule {}
