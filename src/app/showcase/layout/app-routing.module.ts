@@ -16,6 +16,7 @@ const routes: Routes = [
         children: [
             { path: '', redirectTo: 'installation', pathMatch: 'full' },
             { path: 'installation', loadChildren: () => import('../pages/installation/installation.module').then((m) => m.InstallationModule) },
+            { path: 'locale', loadChildren: () => import('../pages/locale/locale.module').then((m) => m.LocaleModule) },
             { path: 'roadmap', loadChildren: () => import('../pages/roadmap/roadmap.module').then((m) => m.RoadmapModule) },
             { path: 'theming', loadChildren: () => import('../pages/theming/theming.module').then((m) => m.ThemingModule) },
             { path: 'icons', loadChildren: () => import('../pages/icons/icons.module').then((m) => m.IconsModule) },
