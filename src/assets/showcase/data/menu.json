@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "name": "Overview",
+            "name": "Getting Started",
             "icon": "pi pi-home",
             "children": [
                 {
@@ -9,8 +9,16 @@
                     "routerLink": "/installation"
                 },
                 {
-                    "name": "Examples",
-                    "href": "https://github.com/primefaces/primeng-examples"
+                    "name": "Configuration",
+                    "routerLink": "/configuration"
+                },
+                {
+                    "name": "Overlay",
+                    "routerLink": "/overlay"
+                },
+                {
+                    "name": "FilterService",
+                    "routerLink": "/filterservice"
                 },
                 {
                     "name": "Locale",
