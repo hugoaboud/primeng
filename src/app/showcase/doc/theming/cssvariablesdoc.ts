@@ -1,0 +1,16 @@
+import { Component, Input } from '@angular/core';
+
+@Component({
+    selector: 'css-variables-doc',
+    template: ` <div>
+        <app-docsectiontext [title]="title" [id]="id">
+            <p>Each PrimeNG theme exports numerous CSS variables, refer to <a routerLink="/colors">Colors</a> page for more details.</p>
+        </app-docsectiontext>
+    </div>`
+})
+export class CSSVariablesDocComponent {
+    @Input() id: string;
+
+    @Input() title: string;
+
+}
