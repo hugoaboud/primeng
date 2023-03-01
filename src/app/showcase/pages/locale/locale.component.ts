@@ -35,5 +35,5 @@ export class LocaleComponent {
             label: 'API',
             component: ApiDocComponent
         }
-    ]
+    ];
 }

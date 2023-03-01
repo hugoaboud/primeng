@@ -5,13 +5,12 @@ import { Code } from '../../domain/code';
     selector: 'download-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-        <p>PrimeNG is available for download at <a href="https://www.npmjs.com/package/primeng">npm</a>.</p>
+            <p>PrimeNG is available for download at <a href="https://www.npmjs.com/package/primeng">npm</a>.</p>
         </app-docsectiontext>
         <app-code [code]="code" [hideToggleCode]="true"></app-code>
     </div>`
 })
 export class DownloadDocComponent {
-
     @Input() id: string;
 
     @Input() title: string;
@@ -23,6 +22,6 @@ npm install primeng primeicons
 
 // with yarn
 yarn add primeng primeicons
-`,
+`
     };
 }

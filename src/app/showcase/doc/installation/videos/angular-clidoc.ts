@@ -12,7 +12,6 @@ import { Component, Input } from '@angular/core';
     </div>`
 })
 export class AngularCliDocComponent {
-
     @Input() id: string;
 
     @Input() title: string;

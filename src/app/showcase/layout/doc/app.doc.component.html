@@ -1,5 +1,5 @@
 <div class="doc-component">
-    <ul class="doc-tabmenu">
+    <ul class="doc-tabmenu" *ngIf="docs && apiDocs">
         <li [ngClass]="{'doc-tabmenu-active': activeTab === 0}">
             <button type="button" (click)="activeTab = 0">COMPONENT</button>
         </li>
