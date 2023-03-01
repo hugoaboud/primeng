@@ -16,7 +16,7 @@ import { MultipleDocComponent } from './multipledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, FormsModule, InputTextModule, ButtonModule, CheckboxModule, RadioButtonModule],
-    exports: [AppDocModule, ImportDocComponent, BasicDocComponent, MultipleDocComponent, ButtonDocComponent, CheckboxDocComponent],
+    exports: [AppDocModule],
     declarations: [ImportDocComponent, BasicDocComponent, MultipleDocComponent, ButtonDocComponent, CheckboxDocComponent]
 })
 export class InputGroupDocModule {}

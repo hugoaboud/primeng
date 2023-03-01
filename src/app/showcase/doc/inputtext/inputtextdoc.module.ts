@@ -20,6 +20,6 @@ import { StyleDocComponent } from './styledoc';
 @NgModule({
     imports: [CommonModule, AppCodeModule, InputTextModule, FormsModule, AppDocModule, KeyFilterModule],
     declarations: [BasicDocComponent, DisabledDocComponent, FloatLabelDocComponent, HelpTextDocComponent, IconsDocComponent, InvalidDocComponent, KeyFilterDocComponent, SizesDocComponent, ImportDocComponent, PropsDocComponent, StyleDocComponent],
-    exports: [ImportDocComponent, BasicDocComponent, DisabledDocComponent, FloatLabelDocComponent, HelpTextDocComponent, IconsDocComponent, InvalidDocComponent, KeyFilterDocComponent, SizesDocComponent, PropsDocComponent, StyleDocComponent]
+    exports: [AppDocModule]
 })
 export class InputtextDocModule {}

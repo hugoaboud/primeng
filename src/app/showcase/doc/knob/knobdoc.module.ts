@@ -21,22 +21,7 @@ import { StyleDocComponent } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, FormsModule, AppCodeModule, AppDocModule, KnobModule],
-    exports: [
-        AppDocModule,
-        ImportDocComponent,
-        BasicDocComponent,
-        MinMaxDocComponent,
-        StepDocComponent,
-        TemplateDocComponent,
-        StrokeDocComponent,
-        SizeDocComponent,
-        ColorDocComponent,
-        ReadonlyDocComponent,
-        DisabledDocComponent,
-        PropsDocComponent,
-        EventsDocComponent,
-        StyleDocComponent
-    ],
+    exports: [AppDocModule],
     declarations: [
         ImportDocComponent,
         BasicDocComponent,

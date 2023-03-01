@@ -20,21 +20,7 @@ import { TemplatesDocComponent } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, ListboxModule, FormsModule, AppDocModule],
-    exports: [
-        AppDocModule,
-        ImportDocComponent,
-        BasicDocComponent,
-        MultipleDocComponent,
-        TemplateDocComponent,
-        InvalidDocComponent,
-        DisabledDocComponent,
-        FilterDocComponent,
-        GroupDocComponent,
-        PropsDocComponent,
-        EventsDocComponent,
-        TemplatesDocComponent,
-        StyleDocComponent
-    ],
+    exports: [AppDocModule],
     declarations: [
         ImportDocComponent,
         BasicDocComponent,
