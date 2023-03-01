@@ -1,48 +1,45 @@
-import { Component, OnInit } from '@angular/core';
-import { FilterMatchMode, FilterService, SelectItem } from 'primeng/api';
-import { Car } from '../../domain/car';
-import { CarService } from '../../service/carservice';
+import { Component } from '@angular/core';
+import { ApiDocComponent } from '../../doc/filterservice/apidoc';
+import { BuiltInConstraintsDocComponent } from '../../doc/filterservice/builtinconstraintsdoc';
+import { CustomConstraintsDocComponent } from '../../doc/filterservice/customconstraintsdoc';
+import { ImportDocComponent } from '../../doc/filterservice/importdoc';
+import { UsageDocComponent } from '../../doc/filterservice/usagedoc';
+import { FilterServiceTableIntegrationDemo } from '../../doc/filterservice/tableintegrationdoc';
 
 @Component({
     templateUrl: './filterservicedemo.html'
 })
-export class FilterServiceDemo implements OnInit {
-    cars: Car[];
-
-    cols: any[];
-
-    matchModeOptions: SelectItem[];
-
-    constructor(private carService: CarService, private filterService: FilterService) {}
-
-    ngOnInit() {
-        const customFilterName = 'custom-equals';
-
-        this.filterService.register(customFilterName, (value, filter): boolean => {
-            if (filter === undefined || filter === null || filter.trim() === '') {
-                return true;
-            }
-
-            if (value === undefined || value === null) {
-                return false;
-            }
-
-            return value.toString() === filter.toString();
-        });
-
-        this.cols = [
-            { field: 'year', header: 'Year' },
-            { field: 'brand', header: 'Brand' },
-            { field: 'color', header: 'Color' },
-            { field: 'vin', header: 'Vin' }
-        ];
-
-        this.matchModeOptions = [
-            { label: 'Custom Equals', value: customFilterName },
-            { label: 'Starts With', value: FilterMatchMode.STARTS_WITH },
-            { label: 'Contains', value: FilterMatchMode.CONTAINS }
-        ];
-
-        this.carService.getCarsMedium().then((cars) => (this.cars = cars));
-    }
+export class FilterServiceDemo {
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'usage',
+            label: 'Usage',
+            component: UsageDocComponent
+        },
+        {
+            id: 'builtinconstraints',
+            label: 'Built-in Constraints',
+            component: BuiltInConstraintsDocComponent
+        },
+        {
+            id: 'customconstraints',
+            label: 'Custom Constraints',
+            component: CustomConstraintsDocComponent
+        },
+        {
+            id: 'table-integration',
+            label: 'Table Integration',
+            component: FilterServiceTableIntegrationDemo
+        },
+        {
+            id: 'api',
+            label: 'FilterService API',
+            component: ApiDocComponent
+        }
+    ];
 }
