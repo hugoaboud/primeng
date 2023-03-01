@@ -4,7 +4,9 @@ import { Code } from '../../domain/code';
 @Component({
     selector: 'inputnumber-numerals-demo',
     template: ` <div>
-        <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
+        <app-docsectiontext [title]="title" [id]="id">
+            <p>InputNumber is used with the standard v-model directive. Component always provides a number type although formatting on the input is a string.</p>
+        </app-docsectiontext>
         <div class="card flex flex-wrap gap-3 p-fluid">
             <div class="flex-auto">
                 <label class="mb-2 font-bold block" for="integeronly">Integer Only</label>

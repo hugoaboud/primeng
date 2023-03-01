@@ -6,7 +6,7 @@ import { Code } from '../../domain/code';
     selector: 'split-button-outlined-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>Text buttons are displayed as textual elements.</p>
+            <p>Outlined buttons display a border without a background initially.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center flex-wrap gap-3">
             <p-toast></p-toast>

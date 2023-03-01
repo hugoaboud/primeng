@@ -10,7 +10,9 @@ interface Country {
 @Component({
     selector: 'listbox-group-demo',
     template: ` <div>
-        <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
+        <app-docsectiontext [title]="title" [id]="id">
+            <p>Options can be grouped when a nested data structures is provided.</p>
+        </app-docsectiontext>
         <div class="card flex justify-content-center">
             <p-listbox [options]="groupedCities" [group]="true" [(ngModel)]="selectedCountry" [listStyle]="{ 'max-height': '250px' }" [style]="{ width: '15rem' }">
                 <ng-template let-group pTemplate="group">

@@ -6,7 +6,7 @@ import { Code } from '../../domain/code';
     selector: 'split-button-severity-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>SplitButton has a default action button and a collection of additional options defined by the <i>model</i> property based on MenuModel API.</p>
+            <p>Severity defines the type of button.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center flex-wrap gap-3">
             <p-toast></p-toast>

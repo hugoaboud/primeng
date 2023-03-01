@@ -6,7 +6,9 @@ import { CountryService } from '../../service/countryservice';
 @Component({
     selector: 'autocomplete-template-demo',
     template: ` <div>
-        <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
+        <app-docsectiontext [title]="title" [id]="id">
+            <p>Autocomplete is customized using a <i>ng-template</i> element where the value is passed as the implicit variable.</p>
+        </app-docsectiontext>
         <div class="card flex justify-content-center">
             <p-autoComplete [(ngModel)]="selectedCountryAdvanced" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [dropdown]="true">
                 <ng-template let-country pTemplate="item">
