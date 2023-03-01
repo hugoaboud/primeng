@@ -9,7 +9,9 @@ interface Country {
 @Component({
     selector: 'listbox-template-demo',
     template: ` <div>
-        <app-docsectiontext [title]="title" [id]="id"> </app-docsectiontext>
+        <app-docsectiontext [title]="title" [id]="id">
+            <p>Custom content for an option is displayed with the <i>pTemplate</i> property that takes an option as a parameter.</p>
+        </app-docsectiontext>
         <div class="card flex justify-content-center">
             <p-listbox [options]="countries" [(ngModel)]="selectedCountry" optionLabel="name" [listStyle]="{ 'max-height': '250px' }" [style]="{ width: '15rem' }">
                 <ng-template let-country pTemplate="item">

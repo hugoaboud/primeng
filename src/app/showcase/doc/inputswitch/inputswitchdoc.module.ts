@@ -15,7 +15,7 @@ import { StyleDocComponent } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, FormsModule, InputSwitchModule],
-    exports: [AppDocModule, ImportDocComponent, BasicDocComponent, PreselectionDocComponent, DisabledDocComponent, PropsDocComponent, EventsDocComponent, StyleDocComponent],
+    exports: [AppDocModule],
     declarations: [ImportDocComponent, BasicDocComponent, PreselectionDocComponent, DisabledDocComponent, PropsDocComponent, EventsDocComponent, StyleDocComponent]
 })
 export class InputSwitchDocModule {}

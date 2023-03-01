@@ -3,7 +3,7 @@ import { MenuItem, MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'custom-doc',
+    selector: 'speeddial-custom-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>SpeedDial sample with an outlined button, custom icons and <i>transitionDelay</i>.</p>
@@ -14,7 +14,7 @@ import { Code } from '../../domain/code';
                 <p-speedDial [model]="items" direction="up" transitionDelay="80" showIcon="pi pi-bars" hideIcon="pi pi-times" buttonClassName="p-button-outlined"></p-speedDial>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="speeddial-custom-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
@@ -75,10 +75,12 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem, MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './customdemo.html',
+    selector: 'speeddial-custom-demo',
+    templateUrl: './speeddial-custom-demo.html',
+    styleUrls: ['./speeddial-custom-demo.scss'],
     providers: [MessageService]
 })
-export class CustomDemo implements OnInit {
+export class SpeeddialCustomDemo implements OnInit {
     items: MenuItem[];
 
     constructor(private messageService: MessageService) {}

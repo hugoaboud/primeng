@@ -10,7 +10,9 @@ interface City {
 @Component({
     selector: 'multiselect-group-demo',
     template: ` <div>
-        <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
+        <app-docsectiontext [title]="title" [id]="id">
+            <p>Options can be grouped when a nested data structures is provided.</p>
+        </app-docsectiontext>
         <div class="card flex justify-content-center">
             <p-multiSelect [options]="groupedCities" [group]="true" [(ngModel)]="selectedCities" defaultLabel="Select a City" scrollHeight="250px" display="chip">
                 <ng-template let-group pTemplate="group">

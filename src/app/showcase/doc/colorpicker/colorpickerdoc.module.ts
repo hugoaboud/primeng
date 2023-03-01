@@ -16,7 +16,7 @@ import { EventsDocComponent } from './eventsdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, FormsModule, ColorPickerModule],
-    exports: [AppDocModule, ImportDocComponent, BasicDocComponent, InlineDocComponent, FormatDocComponent, DisabledDocComponent, PropsDocComponent, StyleDocComponent, EventsDocComponent],
+    exports: [AppDocModule],
     declarations: [ImportDocComponent, BasicDocComponent, InlineDocComponent, FormatDocComponent, DisabledDocComponent, PropsDocComponent, StyleDocComponent, EventsDocComponent]
 })
 export class ColorPickerDocModule {}

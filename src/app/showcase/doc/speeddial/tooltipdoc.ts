@@ -3,7 +3,7 @@ import { MenuItem, MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'tooltip-doc',
+    selector: 'speeddial-tooltip-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Items display a tooltip on hober when a standalone <a href="#" [routerLink]="['/tooltip']">Tooltip</a> is present with a target that matches the items.</p>
@@ -15,7 +15,7 @@ import { Code } from '../../domain/code';
                 <p-speedDial [model]="tooltipItems" className="speeddial-left" direction="up"></p-speedDial>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="speeddial-tooltip-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
@@ -142,10 +142,12 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem, MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './tooltipdemo.html',
+    selector: 'speeddial-tooltip-demo',
+    templateUrl: './speeddial-tooltip-demo.html',
+    styleUrls: ['./speeddial-tooltip-demo.scss'],
     providers: [MessageService]
 })
-export class TooltipDemo implements OnInit {
+export class SpeeddialTooltipDemo implements OnInit {
     tooltipItems: MenuItem[];
 
     leftTooltipItems: MenuItem[];

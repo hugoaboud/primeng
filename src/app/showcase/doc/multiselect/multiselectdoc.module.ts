@@ -22,23 +22,7 @@ import { VirtualScrollDocComponent } from './virtualscrolldoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, MultiSelectModule, FormsModule, AppDocModule],
-    exports: [
-        AppDocModule,
-        ImportDocComponent,
-        BasicDocComponent,
-        ChipsDocComponent,
-        GroupDocComponent,
-        FilterDocComponent,
-        TemplateDocComponent,
-        VirtualScrollDocComponent,
-        FloatLabelDocComponent,
-        InvalidDocComponent,
-        DisabledDocComponent,
-        StyleDocComponent,
-        PropsDocComponent,
-        EventsDocComponent,
-        TemplatesDocComponent
-    ],
+    exports: [AppDocModule],
     declarations: [
         ImportDocComponent,
         BasicDocComponent,

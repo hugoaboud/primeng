@@ -16,7 +16,7 @@ import { PropsDocComponent } from './propsdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, FormsModule, AppCodeModule, AppDocModule, CheckboxModule],
-    exports: [ImportDocComponent, BasicDocComponent, MultipleDocComponent, LabelDocComponent, DynamicDocComponent, DisabledDocComponent, StyleDocComponent, PropsDocComponent],
+    exports: [ImportDocComponent],
     declarations: [ImportDocComponent, BasicDocComponent, MultipleDocComponent, LabelDocComponent, DynamicDocComponent, DisabledDocComponent, StyleDocComponent, PropsDocComponent]
 })
 export class CheckboxDocModule {}

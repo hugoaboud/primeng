@@ -18,7 +18,7 @@ import { StyleDocComponent } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, EditorModule, FormsModule, DropdownModule],
-    exports: [AppDocModule, ImportDocComponent, QuillDocComponent, BasicDocComponent, ReadOnlyDocComponent, CustomToolbarDocComponent, PropsDocComponent, EventsDocComponent, MethodsDocComponent, StyleDocComponent],
+    exports: [AppDocModule],
     declarations: [ImportDocComponent, QuillDocComponent, BasicDocComponent, ReadOnlyDocComponent, CustomToolbarDocComponent, PropsDocComponent, EventsDocComponent, MethodsDocComponent, StyleDocComponent]
 })
 export class EditorDocModule {}

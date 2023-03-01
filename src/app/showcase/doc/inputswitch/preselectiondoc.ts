@@ -4,7 +4,9 @@ import { Code } from '../../domain/code';
 @Component({
     selector: 'inputswitch-preselection-demo',
     template: ` <div>
-        <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
+        <app-docsectiontext [title]="title" [id]="id">
+            <p>Enabling <i>ngModel</i> property displays the component as active initially.</p>
+        </app-docsectiontext>
         <div class="card flex justify-content-center">
             <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
         </div>

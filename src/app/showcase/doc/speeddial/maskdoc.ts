@@ -3,7 +3,7 @@ import { MenuItem, MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'mask-doc',
+    selector: 'speeddial-mask-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Adding <i>mask</i> property displays a modal layer behind the popup items.</p>
@@ -14,7 +14,7 @@ import { Code } from '../../domain/code';
                 <p-speedDial [model]="items" direction="up" [mask]="true"></p-speedDial>
             </div>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="speeddial-mask-demo"></app-code>
     </div>`,
     providers: [MessageService]
 })
@@ -75,10 +75,12 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem, MessageService } from 'primeng/api';
 
 @Component({
-    templateUrl: './maskdemo.html',
+    selector: 'speeddial-mask-demo',
+    templateUrl: './speeddial-mask-demo.html',
+    styleUrls: ['./speeddial-mask-demo.scss'],
     providers: [MessageService]
 })
-export class MaskDemo implements OnInit {
+export class SpeeddialMaskDemo implements OnInit {
     items: MenuItem[];
 
     constructor(private messageService: MessageService) {}

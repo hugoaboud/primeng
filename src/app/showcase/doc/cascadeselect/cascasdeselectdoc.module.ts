@@ -14,7 +14,7 @@ import { TemplateDocComponent } from './templatedoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, CascadeSelectModule, FormsModule, AppCodeModule, AppDocModule],
-    exports: [AppDocModule, ImportDocComponent, BasicDocComponent, TemplateDocComponent, StyleDocComponent, PropsDocComponent, EventsDocComponent],
+    exports: [AppDocModule],
     declarations: [ImportDocComponent, BasicDocComponent, TemplateDocComponent, StyleDocComponent, PropsDocComponent, EventsDocComponent]
 })
 export class CascadeSelectDocModule {}

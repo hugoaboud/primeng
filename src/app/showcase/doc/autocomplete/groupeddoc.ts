@@ -3,9 +3,11 @@ import { FilterService, SelectItemGroup } from 'primeng/api';
 import { Code } from '../../domain/code';
 
 @Component({
-    selector: 'grouped-doc',
+    selector: 'autocomplete-grouped-demo',
     template: ` <div>
-        <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
+        <app-docsectiontext [title]="title" [id]="id">
+            <p>Option groups are specified with the <i>optionGroupLabel</i> and <i>optionGroupChildren</i> properties.</p>
+        </app-docsectiontext>
         <div class="card flex justify-content-center">
             <p-autoComplete [(ngModel)]="selectedCity" [group]="true" [suggestions]="filteredGroups" (completeMethod)="filterGroupedCity($event)" field="label" [dropdown]="true">
                 <ng-template let-group pTemplate="group">
@@ -16,7 +18,7 @@ import { Code } from '../../domain/code';
                 </ng-template>
             </p-autoComplete>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="autocomplete-grouped-demo"></app-code>
     </div>`
 })
 export class GroupedDocComponent {
@@ -118,17 +120,15 @@ export class GroupedDocComponent {
 </div>`,
 
         typescript: `
-import { SelectItemGroup } from 'primeng/api';
 import { Component } from '@angular/core';
+import { FilterService, SelectItemGroup } from 'primeng/api';
 
 @Component({
-    templateUrl: './autocompletedemo.html'
+    selector: 'autocomplete-grouped-demo',
+    templateUrl: './autocomplete-grouped-demo.html',
+    styleUrls: ['./autocomplete-grouped-demo.scss']
 })
-export class AutoCompleteDemo {
-    @Input() id: string;
-
-    @Input() title: string;
-
+export class AutocompleteGroupedDemo {
     selectedCity: any;
 
     filteredGroups: any[];
@@ -176,7 +176,6 @@ export class AutoCompleteDemo {
         }
     }
 
-
     filterGroupedCity(event) {
         let query = event.query;
         let filteredGroups = [];
@@ -195,18 +194,6 @@ export class AutoCompleteDemo {
         this.filteredGroups = filteredGroups;
     }     
 }
-
-@Injectable()
-export class CountryService {
-
-    constructor(private http: Http) {}
-
-    getCountries() {
-        return this.http.get('showcase/resources/data/countries.json')
-                    .toPromise()
-                    .then(res => <any[]> res.json().data)
-                    .then(data => { return data; });
-    }
-}`
+`
     };
 }

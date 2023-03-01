@@ -4,7 +4,7 @@ import { Code } from '../../domain/code';
 import { CountryService } from '../../service/countryservice';
 
 @Component({
-    selector: 'basic-doc',
+    selector: 'autocomplete-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
@@ -15,7 +15,7 @@ import { CountryService } from '../../service/countryservice';
         <div class="card flex justify-content-center">
             <p-autoComplete [(ngModel)]="selectedCountry" [showEmptyMessage]="true" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [minLength]="1"></p-autoComplete>
         </div>
-        <app-code [code]="code"></app-code>
+        <app-code [code]="code" selector="autocomplete-basic-demo"></app-code>
     </div>`
 })
 export class BasicDocComponent implements OnInit {
@@ -109,11 +109,11 @@ import { SelectItemGroup } from 'primeng/api';
 import { CountryService } from 'src/service/countryservice';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    selector: 'autocomplete-basic-demo',
+    templateUrl: './autocomplete-basic-demo.html',
+    styleUrls: ['./autocomplete-basic-demo.scss']
 })
-export class AppComponent implements OnInit {
+export class AutocompleteBasicDemo implements OnInit {
     countries!: any[];
 
     items!: any[];

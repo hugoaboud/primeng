@@ -544,6 +544,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { SkeletonModule } from 'primeng/skeleton';
 import { SlideMenuModule } from 'primeng/slidemenu';
 import { SliderModule } from 'primeng/slider';
+import { SpeedDialModule } from 'primeng/speeddial';
 import { SpinnerModule } from 'primeng/spinner';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { SplitterModule } from 'primeng/splitter';
@@ -554,6 +555,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { TagModule } from 'primeng/tag';
 import { TerminalModule } from 'primeng/terminal';
 import { TieredMenuModule } from 'primeng/tieredmenu';
+import { TimelineModule } from 'primeng/timeline';
 import { ToastModule } from 'primeng/toast';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { ToolbarModule } from 'primeng/toolbar';
@@ -640,6 +642,7 @@ ${serviceImports}
     SkeletonModule,
     SlideMenuModule,
     SliderModule,
+    SpeedDialModule,
     SpinnerModule,
     SplitterModule,
     SplitButtonModule,
@@ -650,6 +653,7 @@ ${serviceImports}
     TagModule,
     TerminalModule,
     TieredMenuModule,
+    TimelineModule,
     ToastModule,
     ToggleButtonModule,
     ToolbarModule,

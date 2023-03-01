@@ -1,23 +1,66 @@
-import { Component, OnInit } from '@angular/core';
-import { PrimeIcons } from 'primeng/api';
+import { Component } from '@angular/core';
+import { TemplateDocComponent } from '../../doc/timeline/templatedoc';
+import { AlignmentDocComponent } from '../../doc/timeline/alignmentdoc';
+import { BasicDocComponent } from '../../doc/timeline/basicdoc';
+import { ImportDocComponent } from '../../doc/timeline/importdoc';
+import { OppositeDocComponent } from '../../doc/timeline/oppositedoc';
+import { HorizontalDocComponent } from '../../doc/timeline/horizontaldoc';
+import { StyleDocComponent } from '../../doc/timeline/styledoc';
+import { PropsDocComponent } from '../../doc/timeline/propsdoc';
+import { TemplatesDocComponent } from '../../doc/timeline/templatesdoc';
 
 @Component({
-    templateUrl: './timelinedemo.html',
-    styleUrls: ['./timelinedemo.scss']
+    templateUrl: './timelinedemo.html'
 })
-export class TimelineDemo implements OnInit {
-    events1: any[];
+export class TimelineDemo {
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDocComponent
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDocComponent
+        },
+        {
+            id: 'alignment',
+            label: 'Alignment',
+            component: AlignmentDocComponent
+        },
+        {
+            id: 'opposite',
+            label: 'Opposite',
+            component: OppositeDocComponent
+        },
+        {
+            id: 'template',
+            label: 'Template',
+            component: TemplateDocComponent
+        },
+        {
+            id: 'horizontal',
+            label: 'Horizontal',
+            component: HorizontalDocComponent
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDocComponent
+        }
+    ];
 
-    events2: any[];
-
-    ngOnInit() {
-        this.events1 = [
-            { status: 'Ordered', date: '15/10/2020 10:30', icon: PrimeIcons.SHOPPING_CART, color: '#9C27B0', image: 'game-controller.jpg' },
-            { status: 'Processing', date: '15/10/2020 14:00', icon: PrimeIcons.COG, color: '#673AB7' },
-            { status: 'Shipped', date: '15/10/2020 16:15', icon: PrimeIcons.ENVELOPE, color: '#FF9800' },
-            { status: 'Delivered', date: '16/10/2020 10:00', icon: PrimeIcons.CHECK, color: '#607D8B' }
-        ];
-
-        this.events2 = ['2020', '2021', '2022', '2023'];
-    }
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDocComponent
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDocComponent
+        }
+    ];
 }

@@ -18,7 +18,7 @@ import { StyleDocComponent } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, InputTextModule, FormsModule, InputTextareaModule, AppDocModule, KeyFilterModule],
-    exports: [AppDocModule, ImportDocComponent, BasicDocComponent, AutoResizeDocComponent, FloatlabelDocComponent, DisabledDocComponent, KeyfilterDocComponent, PropsDocComponent, EventsDocComponent, StyleDocComponent],
+    exports: [AppDocModule],
     declarations: [ImportDocComponent, BasicDocComponent, AutoResizeDocComponent, FloatlabelDocComponent, DisabledDocComponent, KeyfilterDocComponent, PropsDocComponent, EventsDocComponent, StyleDocComponent]
 })
 export class InputtextareaDocModule {}
