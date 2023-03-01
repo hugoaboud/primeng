@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core';
         </app-docsectiontext>
         <h3>Good Contrast</h3>
 
-        <p>Color contrast between the background and the foreground content should be sufficient enough to ensure readability. Example below displays two cases with good and bad samples.</p>
+        <p class="doc-section-description">Color contrast between the background and the foreground content should be sufficient enough to ensure readability. Example below displays two cases with good and bad samples.</p>
         
         <div class="flex">
             <div class="h-8rem w-8rem flex justify-content-center align-items-center mr-5 font-bold bg-blue-600" style="border-radius: 10px;">
@@ -23,7 +23,7 @@ import { Component, Input } from '@angular/core';
         </div>
 
         <h3>Vibration</h3>
-        <p>Color vibration is leads to an illusion of motion due to choosing colors that have low visibility against each other. Color combinations
+        <p class="doc-section-description">Color vibration is leads to an illusion of motion due to choosing colors that have low visibility against each other. Color combinations
             need to be picked with caution to avoid vibration.
         </p>
     
@@ -34,7 +34,7 @@ import { Component, Input } from '@angular/core';
         </div>
     
         <h3>Dark Mode</h3>
-        <p>Highly saturated colors should be avoided when used within a dark design scheme as they cause eye strain. Instead desaturated colors should be preferred.</p>
+        <p class="doc-section-description">Highly saturated colors should be avoided when used within a dark design scheme as they cause eye strain. Instead desaturated colors should be preferred.</p>
         
         <div class="flex">
             <div class="h-8rem w-8rem flex flex-column justify-content-center align-items-center mr-5 font-bold bg-gray-900" style="border-radius: 10px;">
