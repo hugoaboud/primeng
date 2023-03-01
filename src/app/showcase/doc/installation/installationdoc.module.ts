@@ -8,7 +8,7 @@ import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { DownloadDocComponent } from './downloaddoc';
 import { StylesDocComponent } from './stylesdoc';
 import { UsageDocComponent } from './usagedoc';
-import { AngularCliDocComponent } from './videos/angular-clidoc';
+import { AngularCliDocComponent } from './angular-clidoc';
 import { VideosDocComponent } from './videos/videosdoc';
 
 @NgModule({
