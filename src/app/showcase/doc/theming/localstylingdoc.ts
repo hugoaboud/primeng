@@ -6,8 +6,8 @@ import { Code } from '../../domain/code';
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
-                Theming styles the components globally, in case you required to change the style of a certain component for a specific use case use the class property and override the defaults.
-                Example below changes the background of the panel. Note that this is only for local styling, if you require to change the background color of all the panels, a custom theme is a far better choice.
+                Theming styles the components globally, in case you required to change the style of a certain component for a specific use case use the class property and override the defaults. Example below changes the background of the panel. Note
+                that this is only for local styling, if you require to change the background color of all the panels, a custom theme is a far better choice.
             </p>
         </app-docsectiontext>
         <app-code [code]="code1" [hideToggleCode]="true"></app-code>
@@ -25,7 +25,7 @@ export class LocalStylingDocComponent {
     code1: Code = {
         basic: `
 <p-panel header="Custom Header" styleClass="dark-panel"/>`
-    }
+    };
 
     code2: Code = {
         basic: `
@@ -34,7 +34,7 @@ export class LocalStylingDocComponent {
         background: #212121;
     }
 }`
-    }
+    };
 
     code3: Code = {
         basic: `
@@ -43,6 +43,5 @@ export class LocalStylingDocComponent {
         background: #212121;
     }
 }`
-    }
-
+    };
 }

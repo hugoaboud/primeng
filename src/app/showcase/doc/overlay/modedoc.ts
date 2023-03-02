@@ -5,7 +5,10 @@ import { Code } from '../../domain/code';
     selector: 'mode-doc',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>It has two valid values; <i>overlay</i> and <i>modal</i>. In overlay mode, a container element is opened like overlaypanel or dropdown's panel. In modal mode, the container element behaves like popup. This behaviour is similar to a dialog component.</p>
+            <p>
+                It has two valid values; <i>overlay</i> and <i>modal</i>. In overlay mode, a container element is opened like overlaypanel or dropdown's panel. In modal mode, the container element behaves like popup. This behaviour is similar to a
+                dialog component.
+            </p>
         </app-docsectiontext>
         <app-code [code]="code" [hideToggleCode]="true"></app-code>
     </div>`
@@ -34,7 +37,7 @@ export class AppComponent implements OnInit {
     }
 
 }`
-    }
+    };
 
     code2: Code = {
         basic: `
@@ -54,5 +57,5 @@ const responsiveOptions: ResponsiveOverlayOptions = {
 this.primengConfig.overlayOptions: OverlayOptions = {
     responsive: responsiveOptions
 };`
-    }
+    };
 }

@@ -12,5 +12,4 @@ export class CSSVariablesDocComponent {
     @Input() id: string;
 
     @Input() title: string;
-
 }

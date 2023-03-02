@@ -4,12 +4,7 @@ import { TeamRoutingModule } from './team-routing.module';
 import { TeamComponent } from './team.component';
 
 @NgModule({
-  declarations: [
-    TeamComponent
-  ],
-  imports: [
-    CommonModule,
-    TeamRoutingModule
-  ]
+    declarations: [TeamComponent],
+    imports: [CommonModule, TeamRoutingModule]
 })
-export class TeamModule { }
+export class TeamModule {}

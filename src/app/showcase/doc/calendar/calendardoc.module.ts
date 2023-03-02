@@ -29,8 +29,7 @@ import { MethodsDocComponent } from './methodsdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, FormsModule, CalendarModule],
-    exports: [
-        AppDocModule],
+    exports: [AppDocModule],
     declarations: [
         ImportDocComponent,
         BasicDocComponent,

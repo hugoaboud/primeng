@@ -22,6 +22,21 @@ import { TransitionOptionsDocComponent } from './transitionoptionsdoc';
 @NgModule({
     imports: [CommonModule, AppCodeModule, OverlayModule, ButtonModule, AppDocModule],
     exports: [AppDocModule],
-    declarations: [AppendToDocComponent, AutoZIndexDocComponent, BaseZIndexDocComponent, OverlayBasicDemo, EventsDocComponent,HideOnEscapeDocComponent,ImportDocComponent,ModeDocComponent, OptionsDocComponent, ResponsiveDocComponent, StyleDocComponent, TargetDocComponent, OverlayTemplateDemo, TransitionOptionsDocComponent]
+    declarations: [
+        AppendToDocComponent,
+        AutoZIndexDocComponent,
+        BaseZIndexDocComponent,
+        OverlayBasicDemo,
+        EventsDocComponent,
+        HideOnEscapeDocComponent,
+        ImportDocComponent,
+        ModeDocComponent,
+        OptionsDocComponent,
+        ResponsiveDocComponent,
+        StyleDocComponent,
+        TargetDocComponent,
+        OverlayTemplateDemo,
+        TransitionOptionsDocComponent
+    ]
 })
 export class OverlayDocModule {}
