@@ -1,5 +1,8 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, Inject, Input, NgZone, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { DOCUMENT, Location } from '@angular/common';
+import { Router } from '@angular/router';
+import { Component, ElementRef, Inject, Input, NgZone, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { DomHandler } from 'primeng/dom';
+import { ObjectUtils } from 'primeng/utils';
 import { Subscription } from 'rxjs';
 import { Doc } from 'src/app/showcase/domain/doc';
 
@@ -10,68 +13,89 @@ import { Doc } from 'src/app/showcase/domain/doc';
 export class AppDocSectionNavComponent implements OnInit, OnDestroy {
     @Input() docs!: Doc[];
 
-    visible!: boolean;
-
     subscription!: Subscription;
-
-    activeTab!: string;
 
     scrollListener!: any;
 
-    constructor(@Inject(DOCUMENT) private document: Document, private zone: NgZone, private renderer: Renderer2) {}
+    activeId!: string;
+
+    isScrollBlocked: boolean = false;
+
+    topbarHeight: number = 0;
+
+    scrollEndTimer!: any;
+
+    @ViewChild('nav') nav: ElementRef;
+
+    constructor(@Inject(DOCUMENT) private document: Document, private location: Location, private zone: NgZone, private renderer: Renderer2, private router: Router) {}
 
     ngOnInit(): void {
-        const sections = document.querySelectorAll('section'); // Get all sections on the page
-        const hash = window.location.hash.substring(1); // Get the initial hash
+        const hash = window.location.hash.substring(1);
+        const hasHash = ObjectUtils.isNotEmpty(hash);
+        const id = hasHash ? hash : (this.docs[0] || {}).id;
 
-        if (hash) {
-            this.activeTab = hash;
-            this.scrollTo(hash);
-        } else if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
-            this.activeTab = this.getId(sections[0].querySelector('.doc-section-label'));
-        }
+        this.activeId = id;
+        hasHash &&
+            setTimeout(() => {
+                this.scrollToLabelById(id);
+            }, 1);
 
         this.zone.runOutsideAngular(() => {
             this.scrollListener = this.renderer.listen(this.document, 'scroll', (event: any) => {
                 this.onScroll();
             });
-        });
-    }
-
-    scrollTo(id) {
-        this.document.getElementById(id).parentElement.scrollIntoView({ block: 'start', behavior: 'smooth' });
-    }
-
-    getId(section): string {
-        return section.querySelector('a').getAttribute('id');
+        })
     }
 
     onScroll() {
-        const sections = this.document.querySelectorAll('section');
-        const topbarEl = this.document.getElementsByClassName('layout-topbar')[0];
+        if (!this.isScrollBlocked) {
+            const labels = this.document.querySelectorAll(':is(h1,h2,h3).doc-section-label');
+            const windowScrollTop = DomHandler.getWindowScrollTop();
 
-        sections.forEach((section) => {
-            const sectionLabelEl = section.querySelectorAll('.doc-section-label');
-            const isScrolledTo = (section) => window.scrollY >= section.offsetTop - topbarEl.clientHeight - 20 && window.scrollY < section.offsetTop + section.offsetHeight - topbarEl.clientHeight - 20;
-            if (isScrolledTo(section)) {
-                // Check if the section has multiple child elements
-                if (sectionLabelEl.length > 1) {
-                    sectionLabelEl.forEach((child) => {
-                        // Check if the child element is currently scrolled to
-                        if (isScrolledTo(child)) {
-                            // Set the active tab to the id of the currently scrolled to child element
-                            this.activeTab = this.getId(child);
-                        }
-                    });
-                } else {
-                    this.activeTab = this.getId(sectionLabelEl[0]);
+            labels.forEach((label) => {
+                const { top } = DomHandler.getOffset(label);
+                const threshold = this.getThreshold(label);
+
+                if (top - threshold <= windowScrollTop) {
+                    const link = DomHandler.findSingle(label, 'a');
+
+                    this.activeId = link.id;
                 }
-            }
-        });
+            });
+        }
+
+        clearTimeout(this.scrollEndTimer);
+        this.scrollEndTimer = setTimeout(() => {
+            this.isScrollBlocked = false;
+
+            const activeItem = DomHandler.findSingle(this.nav.nativeElement, '.active-navbar-item');
+
+            activeItem && activeItem.scrollIntoView({ block: 'nearest', inline: 'start' });
+        }, 50);
     }
 
     onButtonClick(doc) {
-        this.scrollTo(doc.id);
+        this.activeId = doc.id;
+        setTimeout(() => {
+            this.scrollToLabelById(doc.id);
+            this.isScrollBlocked = true;
+        }, 1);
+    }
+
+    getThreshold(label) {
+        if (!this.topbarHeight) {
+            const topbar = DomHandler.findSingle(this.document.body, '.layout-topbar');
+
+            this.topbarHeight = topbar ? DomHandler.getHeight(topbar) : 0;
+        }
+
+        return this.topbarHeight + DomHandler.getHeight(label) * 3.5;
+    }
+
+    scrollToLabelById(id){
+        const label = this.document.getElementById(id);
+        label && label.scrollIntoView({block: 'start', behavior: 'smooth'});
+        this.location.go(this.location.path().split('#')[0] + '#' + id);
     }
 
     ngOnDestroy() {
