@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
     selector: 'app-docsectiontext',
@@ -12,17 +12,17 @@ export class AppDocSectionTextComponent {
 
     @Input() level: number = 2;
 
-    constructor(public router: Router) {}
+    constructor(public location: Location) {}
 
     navigate(event) {
-        this.router.navigate([this.router.url.split('#')[0]], { fragment: this.id });
-        const parentElement = event.currentTarget.parentElement;
         const hash = window.location.hash.substring(1);
-
+        this.location.go(this.location.path().split('#')[0] + '#' + this.id);
+        const parentElement = event.currentTarget.parentElement;
+        
         setTimeout(() => {
-            parentElement.scrollIntoView({ block: 'start' });
+            parentElement.scrollIntoView({ block: 'start', behavior: 'smooth'});
         }, 0);
-
+        
         hash === this.id && event.preventDefault();
     }
 }
