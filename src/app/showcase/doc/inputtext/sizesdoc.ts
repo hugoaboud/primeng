@@ -15,7 +15,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputtext-sizes-demo"></app-code>
     </div>`
 })
-export class SizesDocComponent {
+export class SizesDoc {
     value: string;
 
     value2: string;

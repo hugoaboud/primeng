@@ -12,23 +12,23 @@ import { GalleriaBasicDemo } from './basicdoc';
 import { GalleriaCaptionDemo } from './captiondoc';
 import { GalleriaControlledDemo } from './controlleddoc';
 import { GalleriaFullScreenTemplateDemo } from './fullscreen/customcontentdoc';
-import { FullScreenDocComponent } from './fullscreen/fullscreendoc';
+import { FullScreenDoc } from './fullscreen/fullscreendoc';
 import { GalleriaWithoutThumbnailsDemo } from './fullscreen/withoutthumbnailsdoc';
 import { GalleriaWithThumbnailsDemo } from './fullscreen/withthumbnailsdoc';
-import { ImportDocComponent } from './importdoc';
+import { ImportDoc } from './importdoc';
 import { GalleriaIndicatorClickEventDemo } from './indicator/clickeventdoc';
 import { GalleriaIndicatorHoverEventDemo } from './indicator/hovereventdoc';
-import { IndicatorDocComponent } from './indicator/indicatordoc';
+import { IndicatorDoc } from './indicator/indicatordoc';
 import { GalleriaIndicatorPositionedDemo } from './indicator/positioneddoc';
 import { GalleriaIndicatorTemplateDemo } from './indicator/templatedoc';
-import { HoverDocComponent } from './navigator/hoverdoc';
-import { IndicatorsDocComponent } from './navigator/indicatorsdoc';
-import { ItemThumbnailsDocComponent } from './navigator/itemthumbnailsdoc';
-import { ItemWithoutThumbnailsDocComponent } from './navigator/itemwithoutthumbnailsdoc';
-import { NavigatorDocComponent } from './navigator/navigatordoc';
-import { PropsDocComponent } from './propsdoc';
+import { HoverDoc } from './navigator/hoverdoc';
+import { IndicatorsDoc } from './navigator/indicatorsdoc';
+import { ItemThumbnailsDoc } from './navigator/itemthumbnailsdoc';
+import { ItemWithoutThumbnailsDoc } from './navigator/itemwithoutthumbnailsdoc';
+import { NavigatorDoc } from './navigator/navigatordoc';
+import { PropsDoc } from './propsdoc';
 import { GalleriaResponsiveDemo } from './responsivedoc';
-import { StyleDocComponent } from './styledoc';
+import { StyleDoc } from './styledoc';
 import { GalleriaThumbnailDemo } from './thumbnaildoc';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { CheckboxModule } from 'primeng/checkbox';
@@ -42,23 +42,23 @@ import { CheckboxModule } from 'primeng/checkbox';
         GalleriaCaptionDemo,
         GalleriaControlledDemo,
         GalleriaFullScreenTemplateDemo,
-        FullScreenDocComponent,
+        FullScreenDoc,
         GalleriaWithoutThumbnailsDemo,
         GalleriaWithThumbnailsDemo,
-        ImportDocComponent,
+        ImportDoc,
         GalleriaIndicatorClickEventDemo,
         GalleriaIndicatorHoverEventDemo,
-        IndicatorDocComponent,
+        IndicatorDoc,
         GalleriaIndicatorPositionedDemo,
         GalleriaIndicatorTemplateDemo,
-        HoverDocComponent,
-        IndicatorsDocComponent,
-        ItemThumbnailsDocComponent,
-        ItemWithoutThumbnailsDocComponent,
-        NavigatorDocComponent,
-        PropsDocComponent,
+        HoverDoc,
+        IndicatorsDoc,
+        ItemThumbnailsDoc,
+        ItemWithoutThumbnailsDoc,
+        NavigatorDoc,
+        PropsDoc,
         GalleriaResponsiveDemo,
-        StyleDocComponent,
+        StyleDoc,
         GalleriaThumbnailDemo
     ],
     exports: [AppDocModule]

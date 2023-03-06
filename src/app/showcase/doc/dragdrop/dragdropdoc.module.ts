@@ -3,22 +3,22 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { ImportDocComponent } from './importdoc';
+import { ImportDoc } from './importdoc';
 import { DragDropDataTableDemo } from './datatabledoc';
 import { DragDropModule } from 'primeng/dragdrop';
 import { TableModule } from 'primeng/table';
 import { DragDropBasicDemo } from './basicdoc';
-import { DropIndicatorDocComponent } from './dropindicatordoc';
+import { DropIndicatorDoc } from './dropindicatordoc';
 import { PanelModule } from 'primeng/panel';
 import { DragDropDragHandleDemo } from './draghandledoc';
-import { DraggableEventsDocComponent } from './draggableeventsdoc';
-import { DraggablePropsDocComponent } from './draggablepropsdoc';
-import { DroppableEventsDocComponent } from './droppableeventsdoc';
-import { DroppablePropsDocComponent } from './droppablepropsdoc';
+import { DraggableEventsDoc } from './draggableeventsdoc';
+import { DraggablePropsDoc } from './draggablepropsdoc';
+import { DroppableEventsDoc } from './droppableeventsdoc';
+import { DroppablePropsDoc } from './droppablepropsdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, DragDropModule, TableModule, FormsModule, PanelModule],
-    declarations: [DragDropBasicDemo, DragDropDataTableDemo, ImportDocComponent, DropIndicatorDocComponent, DragDropDragHandleDemo, DraggableEventsDocComponent, DraggablePropsDocComponent, DroppableEventsDocComponent, DroppablePropsDocComponent],
+    declarations: [DragDropBasicDemo, DragDropDataTableDemo, ImportDoc, DropIndicatorDoc, DragDropDragHandleDemo, DraggableEventsDoc, DraggablePropsDoc, DroppableEventsDoc, DroppablePropsDoc],
     exports: [AppDocModule]
 })
 export class DragDropDocModule {}

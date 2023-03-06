@@ -5,16 +5,16 @@ import { RouterModule } from '@angular/router';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
-import { TemplateDocComponent } from './templatedoc';
+import { BasicDoc } from './basicdoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
+import { TemplateDoc } from './templatedoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, CascadeSelectModule, FormsModule, AppCodeModule, AppDocModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, BasicDocComponent, TemplateDocComponent, StyleDocComponent, PropsDocComponent, EventsDocComponent]
+    declarations: [ImportDoc, BasicDoc, TemplateDoc, StyleDoc, PropsDoc, EventsDoc]
 })
 export class CascadeSelectDocModule {}

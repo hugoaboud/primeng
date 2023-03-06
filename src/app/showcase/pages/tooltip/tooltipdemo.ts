@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { TooltipBasicDemo } from '../../doc/tooltip/basicdoc';
-import { ImportDocComponent } from '../../doc/tooltip/importdoc';
-import { PropsDocComponent } from '../../doc/tooltip/propsdoc';
-import { StyleDocComponent } from '../../doc/tooltip/styledoc';
+import { ImportDoc } from '../../doc/tooltip/importdoc';
+import { PropsDoc } from '../../doc/tooltip/propsdoc';
+import { StyleDoc } from '../../doc/tooltip/styledoc';
 import { TooltipPositionDemo } from '../../doc/tooltip/positiondoc';
 import { TooltipEventDemo } from '../../doc/tooltip/eventdoc';
 import { TooltipAutoHideDemo } from '../../doc/tooltip/autohidedoc';
@@ -17,7 +17,7 @@ export class TooltipDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -52,7 +52,7 @@ export class TooltipDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -60,7 +60,7 @@ export class TooltipDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

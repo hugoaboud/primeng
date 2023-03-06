@@ -4,18 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { DisabledDocComponent } from './disableddoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
-import { InvalidDocComponent } from './invaliddoc';
-import { MultipleDocComponent } from './multipledoc';
-import { PropsDocComponent } from './propsdoc';
-import { TemplateDocComponent } from './templatedoc';
+import { BasicDoc } from './basicdoc';
+import { DisabledDoc } from './disableddoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { InvalidDoc } from './invaliddoc';
+import { MultipleDoc } from './multipledoc';
+import { PropsDoc } from './propsdoc';
+import { TemplateDoc } from './templatedoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, SelectButtonModule, FormsModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, BasicDocComponent, MultipleDocComponent, TemplateDocComponent, InvalidDocComponent, DisabledDocComponent, PropsDocComponent, EventsDocComponent]
+    declarations: [ImportDoc, BasicDoc, MultipleDoc, TemplateDoc, InvalidDoc, DisabledDoc, PropsDoc, EventsDoc]
 })
 export class SelectButtonDocModule {}

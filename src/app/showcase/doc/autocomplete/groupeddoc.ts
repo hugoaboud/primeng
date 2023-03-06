@@ -21,7 +21,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="autocomplete-grouped-demo"></app-code>
     </div>`
 })
-export class GroupedDocComponent {
+export class GroupedDoc {
     @Input() id: string;
 
     @Input() title: string;

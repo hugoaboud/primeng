@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="password-togglemask-demo"></app-code>
     </div>`
 })
-export class TogglemaskDocComponent {
+export class TogglemaskDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ImportDocComponent } from '../../doc/autofocus/importdoc';
+import { ImportDoc } from '../../doc/autofocus/importdoc';
 import { AutoFocusBasicDemo } from '../../doc/autofocus/basicdoc';
-import { PropsDocComponent } from '../../doc/autofocus/propsdoc';
+import { PropsDoc } from '../../doc/autofocus/propsdoc';
 
 @Component({
     selector: 'autofocusdemo',
@@ -12,7 +12,7 @@ export class AutoFocusDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -25,7 +25,7 @@ export class AutoFocusDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

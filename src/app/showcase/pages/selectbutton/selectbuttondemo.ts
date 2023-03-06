@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/selectbutton/basicdoc';
-import { DisabledDocComponent } from '../../doc/selectbutton/disableddoc';
-import { EventsDocComponent } from '../../doc/selectbutton/eventsdoc';
-import { ImportDocComponent } from '../../doc/selectbutton/importdoc';
-import { InvalidDocComponent } from '../../doc/selectbutton/invaliddoc';
-import { MultipleDocComponent } from '../../doc/selectbutton/multipledoc';
-import { PropsDocComponent } from '../../doc/selectbutton/propsdoc';
-import { TemplateDocComponent } from '../../doc/selectbutton/templatedoc';
+import { BasicDoc } from '../../doc/selectbutton/basicdoc';
+import { DisabledDoc } from '../../doc/selectbutton/disableddoc';
+import { EventsDoc } from '../../doc/selectbutton/eventsdoc';
+import { ImportDoc } from '../../doc/selectbutton/importdoc';
+import { InvalidDoc } from '../../doc/selectbutton/invaliddoc';
+import { MultipleDoc } from '../../doc/selectbutton/multipledoc';
+import { PropsDoc } from '../../doc/selectbutton/propsdoc';
+import { TemplateDoc } from '../../doc/selectbutton/templatedoc';
 
 @Component({
     templateUrl: './selectbuttondemo.html'
@@ -16,32 +16,32 @@ export class SelectButtonDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'multiple',
             label: 'Multiple',
-            component: MultipleDocComponent
+            component: MultipleDoc
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: TemplateDoc
         },
         {
             id: 'invalid',
             label: 'Invalid',
-            component: InvalidDocComponent
+            component: InvalidDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         }
     ];
 
@@ -49,12 +49,12 @@ export class SelectButtonDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputswitch-preselection-demo"></app-code>
     </div>`
 })
-export class PreselectionDocComponent {
+export class PreselectionDoc {
     @Input() id: string;
 
     @Input() title: string;

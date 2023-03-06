@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { DownloadDocComponent } from '../../doc/installation/downloaddoc';
-import { StylesDocComponent } from '../../doc/installation/stylesdoc';
-import { UsageDocComponent } from '../../doc/installation/usagedoc';
-import { AngularCliDocComponent } from '../../doc/installation/angular-clidoc';
-import { VideosDocComponent } from '../../doc/installation/videos/videosdoc';
+import { DownloadDoc } from '../../doc/installation/downloaddoc';
+import { StylesDoc } from '../../doc/installation/stylesdoc';
+import { UsageDoc } from '../../doc/installation/usagedoc';
+import { AngularCliDoc } from '../../doc/installation/angular-clidoc';
+import { VideosDoc } from '../../doc/installation/videos/videosdoc';
 
 @Component({
     templateUrl: './installation.html'
@@ -13,27 +13,27 @@ export class InstallationComponent {
         {
             id: 'download',
             label: 'Download',
-            component: DownloadDocComponent
+            component: DownloadDoc
         },
         {
             id: 'angular-cli',
             label: 'Angular CLI Integration',
-            component: AngularCliDocComponent
+            component: AngularCliDoc
         },
         {
             id: 'styles',
             label: 'Styles',
-            component: StylesDocComponent
+            component: StylesDoc
         },
         {
             id: 'usage',
             label: 'Usage',
-            component: UsageDocComponent
+            component: UsageDoc
         },
         {
             id: 'videos',
             label: 'Videos',
-            component: VideosDocComponent
+            component: VideosDoc
         }
     ];
 }

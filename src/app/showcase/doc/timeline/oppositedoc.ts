@@ -20,7 +20,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="timeline-opposite-demo"></app-code>
     </div>`
 })
-export class OppositeDocComponent {
+export class OppositeDoc {
     @Input() id: string;
 
     @Input() title: string;

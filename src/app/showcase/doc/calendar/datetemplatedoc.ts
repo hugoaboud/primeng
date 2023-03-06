@@ -17,7 +17,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="calendar-datetemplate-demo"></app-code>
     </div>`
 })
-export class DateTemplateDocComponent {
+export class DateTemplateDoc {
     @Input() id: string;
 
     @Input() title: string;

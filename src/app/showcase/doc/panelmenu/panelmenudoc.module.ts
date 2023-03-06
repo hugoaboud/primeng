@@ -5,15 +5,15 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { PanelMenuBasicDemo } from './basicdoc';
-import { ImportDocComponent } from './importdoc';
-import { MenuItemDocComponent } from './menuitemdoc';
+import { ImportDoc } from './importdoc';
+import { MenuItemDoc } from './menuitemdoc';
 import { PanelMenuMultipleDemo } from './multipledoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, PanelMenuModule, AppDocModule],
-    declarations: [PanelMenuBasicDemo, ImportDocComponent, PanelMenuMultipleDemo, MenuItemDocComponent, PropsDocComponent, StyleDocComponent],
+    declarations: [PanelMenuBasicDemo, ImportDoc, PanelMenuMultipleDemo, MenuItemDoc, PropsDoc, StyleDoc],
     exports: [AppDocModule]
 })
 export class PanelMenuDocModule {}

@@ -15,7 +15,7 @@ import { Code } from '../../domain/code';
         </app-docsectiontext>
     </div>`
 })
-export class SemanticHTMLDocComponent {
+export class SemanticHTMLDoc {
     @Input() id: string;
 
     @Input() title: string;

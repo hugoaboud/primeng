@@ -75,7 +75,7 @@ import { AppConfigService } from '../../service/appconfigservice';
         `
     ]
 })
-export class SurfacesDocComponent implements OnInit, OnDestroy {
+export class SurfacesDoc implements OnInit, OnDestroy {
     @Input() id: string;
 
     @Input() title: string;

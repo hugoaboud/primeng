@@ -6,15 +6,15 @@ import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { ScrollPanelBasicDemo } from './basicdoc';
 import { ScrollPanelCustomDemo } from './customdoc';
-import { ImportDocComponent } from './importdoc';
-import { MethodsDocComponent } from './methodsdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { ImportDoc } from './importdoc';
+import { MethodsDoc } from './methodsdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
+import { TemplatesDoc } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, ScrollPanelModule, RouterModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, ScrollPanelBasicDemo, ScrollPanelCustomDemo, StyleDocComponent, PropsDocComponent, MethodsDocComponent, TemplatesDocComponent]
+    declarations: [ImportDoc, ScrollPanelBasicDemo, ScrollPanelCustomDemo, StyleDoc, PropsDoc, MethodsDoc, TemplatesDoc]
 })
 export class ScrollPanelDocModule {}

@@ -15,7 +15,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="button-sizes-demo"></app-code>
     </div>`
 })
-export class SizesDocComponent {
+export class SizesDoc {
     @Input() id: string;
 
     @Input() title: string;

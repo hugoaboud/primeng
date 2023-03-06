@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { DisabledDocComponent } from '../../doc/radiobutton/disableddoc';
-import { DynamicDocComponent } from '../../doc/radiobutton/dynamicdoc';
-import { EventsDocComponent } from '../../doc/radiobutton/eventsdoc';
-import { GroupDocComponent } from '../../doc/radiobutton/groupdoc';
-import { ImportDocComponent } from '../../doc/radiobutton/importdoc';
-import { InvalidDocComponent } from '../../doc/radiobutton/invaliddoc';
-import { MethodsDocComponent } from '../../doc/radiobutton/methodsdoc';
-import { PropsDocComponent } from '../../doc/radiobutton/propsdoc';
-import { StyleDocComponent } from '../../doc/radiobutton/styledoc';
+import { DisabledDoc } from '../../doc/radiobutton/disableddoc';
+import { DynamicDoc } from '../../doc/radiobutton/dynamicdoc';
+import { EventsDoc } from '../../doc/radiobutton/eventsdoc';
+import { GroupDoc } from '../../doc/radiobutton/groupdoc';
+import { ImportDoc } from '../../doc/radiobutton/importdoc';
+import { InvalidDoc } from '../../doc/radiobutton/invaliddoc';
+import { MethodsDoc } from '../../doc/radiobutton/methodsdoc';
+import { PropsDoc } from '../../doc/radiobutton/propsdoc';
+import { StyleDoc } from '../../doc/radiobutton/styledoc';
 
 @Component({
     templateUrl: './radiobuttondemo.html'
@@ -17,32 +17,32 @@ export class RadioButtonDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'group',
             label: 'Group',
-            component: GroupDocComponent
+            component: GroupDoc
         },
         {
             id: 'dynamic',
             label: 'Dynamic',
-            component: DynamicDocComponent
+            component: DynamicDoc
         },
         {
             id: 'invalid',
             label: 'Invalid',
-            component: InvalidDocComponent
+            component: InvalidDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -50,17 +50,17 @@ export class RadioButtonDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         }
     ];
 }

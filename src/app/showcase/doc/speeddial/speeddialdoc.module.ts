@@ -6,35 +6,35 @@ import { ToastModule } from 'primeng/toast';
 import { TooltipModule } from 'primeng/tooltip';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { CircleDocComponent } from './circledoc';
-import { CustomDocComponent } from './customdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
-import { LinearDocComponent } from './lineardoc';
-import { MaskDocComponent } from './maskdoc';
-import { PropsDocComponent } from './propsdoc';
-import { QuarterCircleDocComponent } from './quartercircledoc';
-import { SemiCircleDocComponent } from './semicircledoc';
-import { StyleDocComponent } from './styledoc';
-import { TemplatesDocComponent } from './templatesdoc';
-import { TooltipDocComponent } from './tooltipdoc';
+import { CircleDoc } from './circledoc';
+import { CustomDoc } from './customdoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { LinearDoc } from './lineardoc';
+import { MaskDoc } from './maskdoc';
+import { PropsDoc } from './propsdoc';
+import { QuarterCircleDoc } from './quartercircledoc';
+import { SemiCircleDoc } from './semicircledoc';
+import { StyleDoc } from './styledoc';
+import { TemplatesDoc } from './templatesdoc';
+import { TooltipDoc } from './tooltipdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, SpeedDialModule, MessagesModule, ToastModule, TooltipModule],
     exports: [AppDocModule],
     declarations: [
-        ImportDocComponent,
-        LinearDocComponent,
-        CircleDocComponent,
-        SemiCircleDocComponent,
-        QuarterCircleDocComponent,
-        TooltipDocComponent,
-        MaskDocComponent,
-        CustomDocComponent,
-        StyleDocComponent,
-        PropsDocComponent,
-        TemplatesDocComponent,
-        EventsDocComponent
+        ImportDoc,
+        LinearDoc,
+        CircleDoc,
+        SemiCircleDoc,
+        QuarterCircleDoc,
+        TooltipDoc,
+        MaskDoc,
+        CustomDoc,
+        StyleDoc,
+        PropsDoc,
+        TemplatesDoc,
+        EventsDoc
     ]
 })
 export class SpeedDialDocModule {}

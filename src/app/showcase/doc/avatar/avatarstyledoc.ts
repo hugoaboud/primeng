@@ -48,7 +48,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class AvatarStyleDocComponent {
+export class AvatarStyleDoc {
     @Input() id: string;
 
     @Input() title: string;

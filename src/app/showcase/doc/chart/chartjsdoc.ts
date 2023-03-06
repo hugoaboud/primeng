@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" [hideToggleCode]="true"></app-code>
     </div>`
 })
-export class ChartjsDocComponent {
+export class ChartjsDoc {
     @Input() id: string;
 
     @Input() title: string;

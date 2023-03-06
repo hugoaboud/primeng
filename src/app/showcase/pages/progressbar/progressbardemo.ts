@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { ProgressBarBasicDemo } from '../../doc/progressbar/basicdoc';
-import { StyleDocComponent } from '../../doc/progressbar/styledoc';
-import { ImportDocComponent } from '../../doc/progressbar/importdoc';
+import { StyleDoc } from '../../doc/progressbar/styledoc';
+import { ImportDoc } from '../../doc/progressbar/importdoc';
 import { ProgressBarIndeterminateDemo } from '../../doc/progressbar/indeterminatedoc';
 import { ProgressBarDynamicDemo } from '../../doc/progressbar/dynamicdoc';
-import { PropsDocComponent } from '../../doc/progressbar/propsdoc';
+import { PropsDoc } from '../../doc/progressbar/propsdoc';
 
 @Component({
     templateUrl: './progressbardemo.html'
@@ -14,7 +14,7 @@ export class ProgressBarDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -34,7 +34,7 @@ export class ProgressBarDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -42,7 +42,7 @@ export class ProgressBarDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

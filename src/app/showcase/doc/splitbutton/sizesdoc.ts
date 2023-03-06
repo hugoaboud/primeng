@@ -18,7 +18,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [MessageService]
 })
-export class SizesDocComponent {
+export class SizesDoc {
     @Input() id: string;
 
     @Input() title: string;

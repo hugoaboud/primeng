@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { DisabledDocComponent } from 'src/app/showcase/doc/inputtext/disableddoc';
-import { FloatLabelDocComponent } from 'src/app/showcase/doc/inputtext/floatlabeldoc';
-import { HelpTextDocComponent } from 'src/app/showcase/doc/inputtext/helptextdoc';
-import { IconsDocComponent } from 'src/app/showcase/doc/inputtext/iconsdoc';
-import { ImportDocComponent } from 'src/app/showcase/doc/inputtext/importdoc';
-import { InvalidDocComponent } from 'src/app/showcase/doc/inputtext/invaliddoc';
-import { SizesDocComponent } from 'src/app/showcase/doc/inputtext/sizesdoc';
-import { BasicDocComponent } from '../../doc/inputtext/basicdoc';
-import { KeyFilterDocComponent } from '../../doc/inputtext/keyfilterdoc';
-import { PropsDocComponent } from '../../doc/inputtext/propsdoc';
-import { StyleDocComponent } from '../../doc/inputtext/styledoc';
+import { DisabledDoc } from 'src/app/showcase/doc/inputtext/disableddoc';
+import { FloatLabelDoc } from 'src/app/showcase/doc/inputtext/floatlabeldoc';
+import { HelpTextDoc } from 'src/app/showcase/doc/inputtext/helptextdoc';
+import { IconsDoc } from 'src/app/showcase/doc/inputtext/iconsdoc';
+import { ImportDoc } from 'src/app/showcase/doc/inputtext/importdoc';
+import { InvalidDoc } from 'src/app/showcase/doc/inputtext/invaliddoc';
+import { SizesDoc } from 'src/app/showcase/doc/inputtext/sizesdoc';
+import { BasicDoc } from '../../doc/inputtext/basicdoc';
+import { KeyFilterDoc } from '../../doc/inputtext/keyfilterdoc';
+import { PropsDoc } from '../../doc/inputtext/propsdoc';
+import { StyleDoc } from '../../doc/inputtext/styledoc';
 
 @Component({
     templateUrl: './inputtextdemo.html',
@@ -34,52 +34,52 @@ export class InputTextDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'icons',
             label: 'Icons',
-            component: IconsDocComponent
+            component: IconsDoc
         },
         {
             id: 'keyfilter',
             label: 'Key Filter',
-            component: KeyFilterDocComponent
+            component: KeyFilterDoc
         },
         {
             id: 'sizes',
             label: 'Sizes',
-            component: SizesDocComponent
+            component: SizesDoc
         },
         {
             id: 'helptext',
             label: 'Help Text',
-            component: HelpTextDocComponent
+            component: HelpTextDoc
         },
         {
             id: 'floatlabel',
             label: 'Float Label',
-            component: FloatLabelDocComponent
+            component: FloatLabelDoc
         },
         {
             id: 'invalid',
             label: 'Invalid',
-            component: InvalidDocComponent
+            component: InvalidDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -87,7 +87,7 @@ export class InputTextDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

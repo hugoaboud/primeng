@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ChartjsDocComponent } from '../../doc/chart/chartjsdoc';
-import { ImportDocComponent } from '../../doc/chart/importdoc';
+import { ChartjsDoc } from '../../doc/chart/chartjsdoc';
+import { ImportDoc } from '../../doc/chart/importdoc';
 import { ChartBasicDemo } from '../../doc/chart/basicdoc';
 import { ChartPieDemo } from '../../doc/chart/piedoc';
 import { ChartDoughnutDemo } from '../../doc/chart/doughnutdoc';
@@ -13,8 +13,8 @@ import { ChartRadarDemo } from '../../doc/chart/radardoc';
 import { ChartStackedBarDemo } from '../../doc/chart/stackedbardoc';
 import { ChartVerticalBarDemo } from '../../doc/chart/verticalbardoc';
 import { ChartLineStyleDemo } from '../../doc/chart/linestyledoc';
-import { PropsDocComponent } from '../../doc/chart/propsdoc';
-import { MethodsDocComponent } from '../../doc/chart/methodsdoc';
+import { PropsDoc } from '../../doc/chart/propsdoc';
+import { MethodsDoc } from '../../doc/chart/methodsdoc';
 
 @Component({
     templateUrl: './chartdemo.html'
@@ -24,12 +24,12 @@ export class ChartDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'chartjs',
             label: 'Chart.js',
-            component: ChartjsDocComponent
+            component: ChartjsDoc
         },
         {
             id: 'basic',
@@ -97,12 +97,12 @@ export class ChartDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         }
     ];
 }

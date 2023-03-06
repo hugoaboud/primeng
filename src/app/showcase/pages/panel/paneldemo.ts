@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { PanelTemplateDemo } from '../../doc/panel/templatedoc';
 import { PanelBasicDemo } from '../../doc/panel/basicdoc';
-import { ImportDocComponent } from '../../doc/panel/importdoc';
+import { ImportDoc } from '../../doc/panel/importdoc';
 import { PanelToggleableDemo } from '../../doc/panel/toggleabledoc';
-import { StyleDocComponent } from '../../doc/panel/styledoc';
-import { PropsDocComponent } from '../../doc/panel/propsdoc';
-import { EventsDocComponent } from '../../doc/panel/eventsdoc';
-import { TemplatesDocComponent } from '../../doc/panel/templatesdoc';
+import { StyleDoc } from '../../doc/panel/styledoc';
+import { PropsDoc } from '../../doc/panel/propsdoc';
+import { EventsDoc } from '../../doc/panel/eventsdoc';
+import { TemplatesDoc } from '../../doc/panel/templatesdoc';
 
 @Component({
     templateUrl: './paneldemo.html'
@@ -16,7 +16,7 @@ export class PanelDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -36,7 +36,7 @@ export class PanelDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -44,17 +44,17 @@ export class PanelDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

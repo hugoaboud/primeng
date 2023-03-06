@@ -7,14 +7,14 @@ import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { CardAdvancedDemo } from './advanceddoc';
 import { CardBasicDemo } from './basicdoc';
-import { ImportDocComponent } from './importdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { ImportDoc } from './importdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
+import { TemplatesDoc } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, CardModule, ButtonModule, RouterModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, CardBasicDemo, CardAdvancedDemo, StyleDocComponent, PropsDocComponent, TemplatesDocComponent]
+    declarations: [ImportDoc, CardBasicDemo, CardAdvancedDemo, StyleDoc, PropsDoc, TemplatesDoc]
 })
 export class CardDocModule {}

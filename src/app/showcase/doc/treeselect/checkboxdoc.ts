@@ -18,7 +18,7 @@ import { NodeService } from '../../service/nodeservice';
         <app-code [code]="code" selector="tree-select-checkbox-demo"></app-code>
     </div>`
 })
-export class CheckboxDocComponent {
+export class CheckboxDoc {
     @Input() id: string;
 
     @Input() title: string;

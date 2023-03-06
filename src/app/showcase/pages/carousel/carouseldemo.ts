@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { ImportDocComponent } from '../../doc/carousel/importdoc';
+import { ImportDoc } from '../../doc/carousel/importdoc';
 import { CarouselBasicDemo } from '../../doc/carousel/basicdoc';
-import { PropsDocComponent } from '../../doc/carousel/propsdoc';
-import { StyleDocComponent } from '../../doc/carousel/styledoc';
+import { PropsDoc } from '../../doc/carousel/propsdoc';
+import { StyleDoc } from '../../doc/carousel/styledoc';
 import { CarouselCircularDemo } from '../../doc/carousel/circulardoc';
 import { CarouselNumScrollDemo } from '../../doc/carousel/numscrolldoc';
-import { ResponsiveDocComponent } from '../../doc/carousel/responsivedoc';
+import { ResponsiveDoc } from '../../doc/carousel/responsivedoc';
 import { CarouselVerticalDemo } from '../../doc/carousel/verticaldoc';
 import { CarouselTemplateDemo } from '../../doc/carousel/templatedoc';
 
@@ -18,7 +18,7 @@ export class CarouselDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -43,7 +43,7 @@ export class CarouselDemo {
         {
             id: 'responsive',
             label: 'Responsive',
-            component: ResponsiveDocComponent
+            component: ResponsiveDoc
         },
         {
             id: 'vertical',
@@ -53,7 +53,7 @@ export class CarouselDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -61,7 +61,7 @@ export class CarouselDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

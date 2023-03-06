@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { MessageService } from 'primeng/api';
-import { EventsDocComponent } from '../../doc/defer/eventsdoc';
-import { BasicDocComponent } from '../../doc/defer/basicdoc';
-import { ImportDocComponent } from '../../doc/defer/importdoc';
-import { DataTableDocComponent } from '../../doc/defer/datatabledoc';
+import { EventsDoc } from '../../doc/defer/eventsdoc';
+import { BasicDoc } from '../../doc/defer/basicdoc';
+import { ImportDoc } from '../../doc/defer/importdoc';
+import { DataTableDoc } from '../../doc/defer/datatabledoc';
 import { CarService } from '../../service/carservice';
 import { Car } from '../domain/car';
 
@@ -25,17 +25,17 @@ export class DeferDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'datatable',
             label: 'DataTable',
-            component: DataTableDocComponent
+            component: DataTableDoc
         }
     ];
 
@@ -43,7 +43,7 @@ export class DeferDemo {
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

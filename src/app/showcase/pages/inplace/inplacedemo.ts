@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { EventsDocComponent } from '../../doc/inplace/eventsdoc';
+import { EventsDoc } from '../../doc/inplace/eventsdoc';
 import { InplaceImageDemo } from '../../doc/inplace/imagedoc';
-import { PropsDocComponent } from '../../doc/inplace/propsdoc';
-import { StyleDocComponent } from '../../doc/inplace/styledoc';
+import { PropsDoc } from '../../doc/inplace/propsdoc';
+import { StyleDoc } from '../../doc/inplace/styledoc';
 import { InplaceBasicDemo } from '../../doc/inplace/basicdoc';
 import { InplaceDataDemo } from '../../doc/inplace/datadoc';
-import { ImportDocComponent } from '../../doc/inplace/importdoc';
+import { ImportDoc } from '../../doc/inplace/importdoc';
 import { InplaceInputDemo } from '../../doc/inplace/inputdoc';
-import { MethodsDocComponent } from '../../doc/inplace/methodsdoc';
+import { MethodsDoc } from '../../doc/inplace/methodsdoc';
 
 @Component({
     templateUrl: './inplacedemo.html'
@@ -17,7 +17,7 @@ export class InplaceDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -42,7 +42,7 @@ export class InplaceDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -50,17 +50,17 @@ export class InplaceDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         }
     ];
 }

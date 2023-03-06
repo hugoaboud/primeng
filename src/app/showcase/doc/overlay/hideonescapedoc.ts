@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
         </app-docsectiontext>
     </div>`
 })
-export class HideOnEscapeDocComponent {
+export class HideOnEscapeDoc {
     @Input() id: string;
 
     @Input() title: string;

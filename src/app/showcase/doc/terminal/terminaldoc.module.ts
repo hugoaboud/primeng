@@ -5,13 +5,13 @@ import { TerminalModule } from 'primeng/terminal';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { TerminalBasicDemo } from './basicdoc';
-import { ImportDocComponent } from './importdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { ImportDoc } from './importdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, TerminalModule],
-    declarations: [ImportDocComponent, TerminalBasicDemo, StyleDocComponent, PropsDocComponent],
+    declarations: [ImportDoc, TerminalBasicDemo, StyleDoc, PropsDoc],
     exports: [AppDocModule]
 })
 export class TerminalDocModule {}

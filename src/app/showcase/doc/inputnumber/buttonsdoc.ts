@@ -40,7 +40,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputnumber-buttons-demo"></app-code>
     </div>`
 })
-export class ButtonsDocComponent {
+export class ButtonsDoc {
     @Input() id: string;
 
     @Input() title: string;

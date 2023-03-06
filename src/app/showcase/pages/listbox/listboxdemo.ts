@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/listbox/basicdoc';
-import { DisabledDocComponent } from '../../doc/listbox/disableddoc';
-import { EventsDocComponent } from '../../doc/listbox/eventsdoc';
-import { FilterDocComponent } from '../../doc/listbox/filterdoc';
-import { GroupDocComponent } from '../../doc/listbox/groupdoc';
-import { ImportDocComponent } from '../../doc/listbox/importdoc';
-import { InvalidDocComponent } from '../../doc/listbox/invaliddoc';
-import { MultipleDocComponent } from '../../doc/listbox/multipledoc';
-import { PropsDocComponent } from '../../doc/listbox/propsdoc';
-import { StyleDocComponent } from '../../doc/listbox/styledoc';
-import { TemplateDocComponent } from '../../doc/listbox/templatedoc';
-import { TemplatesDocComponent } from '../../doc/listbox/templatesdoc';
+import { BasicDoc } from '../../doc/listbox/basicdoc';
+import { DisabledDoc } from '../../doc/listbox/disableddoc';
+import { EventsDoc } from '../../doc/listbox/eventsdoc';
+import { FilterDoc } from '../../doc/listbox/filterdoc';
+import { GroupDoc } from '../../doc/listbox/groupdoc';
+import { ImportDoc } from '../../doc/listbox/importdoc';
+import { InvalidDoc } from '../../doc/listbox/invaliddoc';
+import { MultipleDoc } from '../../doc/listbox/multipledoc';
+import { PropsDoc } from '../../doc/listbox/propsdoc';
+import { StyleDoc } from '../../doc/listbox/styledoc';
+import { TemplateDoc } from '../../doc/listbox/templatedoc';
+import { TemplatesDoc } from '../../doc/listbox/templatesdoc';
 @Component({
     templateUrl: './listboxdemo.html'
 })
@@ -19,47 +19,47 @@ export class ListboxDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'multiple',
             label: 'Multiple',
-            component: MultipleDocComponent
+            component: MultipleDoc
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: TemplateDoc
         },
         {
             id: 'group',
             label: 'Group',
-            component: GroupDocComponent
+            component: GroupDoc
         },
         {
             id: 'filter',
             label: 'Filter',
-            component: FilterDocComponent
+            component: FilterDoc
         },
         {
             id: 'invalid',
             label: 'Invalid',
-            component: InvalidDocComponent
+            component: InvalidDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -67,17 +67,17 @@ export class ListboxDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

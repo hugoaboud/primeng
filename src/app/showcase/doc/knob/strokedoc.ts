@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="knob-stroke-demo"></app-code>
     </div>`
 })
-export class StrokeDocComponent {
+export class StrokeDoc {
     @Input() id: string;
 
     @Input() title: string;

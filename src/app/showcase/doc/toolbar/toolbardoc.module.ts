@@ -7,14 +7,14 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { ToolbarBasicDemo } from './basicdoc';
-import { ImportDocComponent } from './importdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { ImportDoc } from './importdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
+import { TemplatesDoc } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, ToolbarModule, RouterModule, ButtonModule, SplitButtonModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, ToolbarBasicDemo, StyleDocComponent, PropsDocComponent, TemplatesDocComponent]
+    declarations: [ImportDoc, ToolbarBasicDemo, StyleDoc, PropsDoc, TemplatesDoc]
 })
 export class ToolbarDocModule {}

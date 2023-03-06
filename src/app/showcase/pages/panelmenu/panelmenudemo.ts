@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { PanelMenuBasicDemo } from '../../doc/panelmenu/basicdoc';
-import { ImportDocComponent } from '../../doc/panelmenu/importdoc';
-import { MenuItemDocComponent } from '../../doc/panelmenu/menuitemdoc';
-import { PropsDocComponent } from '../../doc/panelmenu/propsdoc';
-import { StyleDocComponent } from '../../doc/panelmenu/styledoc';
+import { ImportDoc } from '../../doc/panelmenu/importdoc';
+import { MenuItemDoc } from '../../doc/panelmenu/menuitemdoc';
+import { PropsDoc } from '../../doc/panelmenu/propsdoc';
+import { StyleDoc } from '../../doc/panelmenu/styledoc';
 import { PanelMenuMultipleDemo } from '../../doc/panelmenu/multipledoc';
 
 @Component({
@@ -14,7 +14,7 @@ export class PanelMenuDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -29,7 +29,7 @@ export class PanelMenuDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -37,12 +37,12 @@ export class PanelMenuDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'menuitem',
             label: 'MenuItem API',
-            component: MenuItemDocComponent
+            component: MenuItemDoc
         }
     ];
 }

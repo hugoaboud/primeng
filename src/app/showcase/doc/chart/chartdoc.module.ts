@@ -5,18 +5,18 @@ import { ChartModule } from 'primeng/chart';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { ChartBasicDemo } from './basicdoc';
-import { ChartjsDocComponent } from './chartjsdoc';
+import { ChartjsDoc } from './chartjsdoc';
 import { ChartComboDemo } from './combodoc';
 import { ChartDoughnutDemo } from './doughnutdoc';
 import { ChartHorizontalBarDemo } from './horizontalbardoc';
-import { ImportDocComponent } from './importdoc';
+import { ImportDoc } from './importdoc';
 import { ChartLineDemo } from './linedoc';
 import { ChartLineStyleDemo } from './linestyledoc';
-import { MethodsDocComponent } from './methodsdoc';
+import { MethodsDoc } from './methodsdoc';
 import { ChartMultiAxiDemo } from './multiaxisdoc';
 import { ChartPieDemo } from './piedoc';
 import { ChartPolarAreaDemo } from './polarareadoc';
-import { PropsDocComponent } from './propsdoc';
+import { PropsDoc } from './propsdoc';
 import { ChartRadarDemo } from './radardoc';
 import { ChartStackedBarDemo } from './stackedbardoc';
 import { ChartVerticalBarDemo } from './verticalbardoc';
@@ -25,18 +25,18 @@ import { ChartVerticalBarDemo } from './verticalbardoc';
     imports: [CommonModule, RouterModule, AppCodeModule, ChartModule, AppDocModule],
     declarations: [
         ChartBasicDemo,
-        ChartjsDocComponent,
+        ChartjsDoc,
         ChartComboDemo,
         ChartDoughnutDemo,
         ChartHorizontalBarDemo,
-        ImportDocComponent,
+        ImportDoc,
         ChartLineDemo,
         ChartLineStyleDemo,
-        MethodsDocComponent,
+        MethodsDoc,
         ChartMultiAxiDemo,
         ChartPieDemo,
         ChartPolarAreaDemo,
-        PropsDocComponent,
+        PropsDoc,
         ChartRadarDemo,
         ChartStackedBarDemo,
         ChartVerticalBarDemo

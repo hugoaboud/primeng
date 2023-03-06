@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
         </app-docsectiontext>
     </div>`
 })
-export class FullScreenDocComponent {
+export class FullScreenDoc {
     @Input() id: string;
 
     @Input() title: string;

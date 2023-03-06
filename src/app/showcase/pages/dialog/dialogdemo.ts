@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { DialogBasicDemo } from '../../doc/dialog/basicdoc';
-import { EventsDocComponent } from '../../doc/dialog/eventsdoc';
-import { ImportDocComponent } from '../../doc/dialog/importdoc';
+import { EventsDoc } from '../../doc/dialog/eventsdoc';
+import { ImportDoc } from '../../doc/dialog/importdoc';
 import { DialogLongContentDemo } from '../../doc/dialog/longcontentdoc';
-import { PropsDocComponent } from '../../doc/dialog/propsdoc';
-import { StyleDocComponent } from '../../doc/dialog/styledoc';
+import { PropsDoc } from '../../doc/dialog/propsdoc';
+import { StyleDoc } from '../../doc/dialog/styledoc';
 import { DialogResponsiveDemo } from '../../doc/dialog/responsivedoc';
 import { DialogPositionDemo } from '../../doc/dialog/positiondoc';
 import { DialogMaximizableDemo } from '../../doc/dialog/maximizabledoc';
@@ -20,7 +20,7 @@ export class DialogDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -65,7 +65,7 @@ export class DialogDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -73,12 +73,12 @@ export class DialogDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 

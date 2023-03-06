@@ -12,7 +12,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [DialogService]
 })
-export class UsageDocComponent {
+export class UsageDoc {
     @Input() id: string;
 
     @Input() title: string;

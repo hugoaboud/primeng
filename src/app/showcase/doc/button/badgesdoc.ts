@@ -14,7 +14,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="button-badges-demo"></app-code>
     </div>`
 })
-export class BadgesDocComponent {
+export class BadgesDoc {
     @Input() id: string;
 
     @Input() title: string;

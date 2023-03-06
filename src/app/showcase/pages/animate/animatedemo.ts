@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AnimateImportDemo } from '../../doc/animate/importdoc';
 import { AnimateBasicDemo } from '../../doc/animate/basicdoc';
-import { PropsDocComponent } from '../../doc/animate/propsdoc';
+import { PropsDoc } from '../../doc/animate/propsdoc';
 
 @Component({
     templateUrl: './animatedemo.html'
@@ -24,7 +24,7 @@ export class AnimateDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

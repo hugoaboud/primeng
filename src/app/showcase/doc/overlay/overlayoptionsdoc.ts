@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
         <app-docsectiontext [title]="title" [id]="id"></app-docsectiontext>
     </div>`
 })
-export class OptionsDocComponent {
+export class OptionsDoc {
     @Input() id: string;
 
     @Input() title: string;

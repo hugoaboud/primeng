@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
         </app-docsectiontext>
     </div>`
 })
-export class IndicatorDocComponent {
+export class IndicatorDoc {
     @Input() id: string;
 
     @Input() title: string;

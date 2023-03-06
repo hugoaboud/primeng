@@ -21,7 +21,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="dropdown-group-demo"></app-code>
     </div>`
 })
-export class GroupDocComponent {
+export class GroupDoc {
     @Input() id: string;
 
     @Input() title: string;

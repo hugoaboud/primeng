@@ -28,7 +28,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputnumber-prefixsuffix-demo"></app-code>
     </div>`
 })
-export class PrefixSuffixDocComponent {
+export class PrefixSuffixDoc {
     @Input() id: string;
 
     @Input() title: string;

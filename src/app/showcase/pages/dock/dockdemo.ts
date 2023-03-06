@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { StyleDocComponent } from '../../doc/dock/styledoc';
+import { StyleDoc } from '../../doc/dock/styledoc';
 import { DockAdvancedDemo } from '../../doc/dock/advanceddoc';
 import { DockBasicDemo } from '../../doc/dock/basicdoc';
-import { EventsDocComponent } from '../../doc/dock/eventsdoc';
-import { ImportDocComponent } from '../../doc/dock/importdoc';
-import { MenuItemDocComponent } from '../../doc/dock/menuitemdoc';
-import { MethodsDocComponent } from '../../doc/dock/methodsdoc';
-import { PropsDocComponent } from '../../doc/dock/propsdoc';
+import { EventsDoc } from '../../doc/dock/eventsdoc';
+import { ImportDoc } from '../../doc/dock/importdoc';
+import { MenuItemDoc } from '../../doc/dock/menuitemdoc';
+import { MethodsDoc } from '../../doc/dock/methodsdoc';
+import { PropsDoc } from '../../doc/dock/propsdoc';
 
 @Component({
     templateUrl: './dockdemo.html',
@@ -17,7 +17,7 @@ export class DockDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -32,7 +32,7 @@ export class DockDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -40,22 +40,22 @@ export class DockDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'menuitem',
             label: 'MenuItem API',
-            component: MenuItemDocComponent
+            component: MenuItemDoc
         }
     ];
 }

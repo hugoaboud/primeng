@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { DividerBasicDemo } from '../../doc/divider/basicdoc';
 import { DividerContentDemo } from '../../doc/divider/contentdoc';
-import { ImportDocComponent } from '../../doc/divider/importdoc';
+import { ImportDoc } from '../../doc/divider/importdoc';
 import { DividerLoginDemo } from '../../doc/divider/logindoc';
-import { PropsDocComponent } from '../../doc/divider/propsdoc';
-import { StyleDocComponent } from '../../doc/divider/styledoc';
+import { PropsDoc } from '../../doc/divider/propsdoc';
+import { StyleDoc } from '../../doc/divider/styledoc';
 import { DividerTypeDemo } from '../../doc/divider/typedoc';
 import { DividerVerticalDemo } from '../../doc/divider/verticaldoc';
 
@@ -16,7 +16,7 @@ export class DividerDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -46,14 +46,14 @@ export class DividerDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
     apiDocs = [
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

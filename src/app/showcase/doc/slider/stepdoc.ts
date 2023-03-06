@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="slider-step-demo"></app-code>
     </div>`
 })
-export class StepDocComponent {
+export class StepDoc {
     @Input() id: string;
 
     @Input() title: string;

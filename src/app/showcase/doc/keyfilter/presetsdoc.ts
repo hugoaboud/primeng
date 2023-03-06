@@ -40,7 +40,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="key-filter-presets-demo"></app-code>
     </div>`
 })
-export class PresetsDocComponent {
+export class PresetsDoc {
     @Input() id: string;
 
     @Input() title: string;

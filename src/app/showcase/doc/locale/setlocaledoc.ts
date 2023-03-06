@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" [hideToggleCode]="true"></app-code>
     </div>`
 })
-export class SetLocaleDocComponent {
+export class SetLocaleDoc {
     @Input() id: string;
 
     @Input() title: string;

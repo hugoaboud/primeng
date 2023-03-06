@@ -20,7 +20,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="key-filter-regex-demo"></app-code>
     </div>`
 })
-export class RegexDocComponent {
+export class RegexDoc {
     @Input() id: string;
 
     @Input() title: string;

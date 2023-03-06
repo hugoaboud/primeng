@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="editor-readonly-demo"></app-code>
     </div>`
 })
-export class ReadOnlyDocComponent {
+export class ReadOnlyDoc {
     @Input() id: string;
 
     @Input() title: string;

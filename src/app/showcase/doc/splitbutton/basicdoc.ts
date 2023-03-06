@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [MessageService]
 })
-export class BasicDocComponent {
+export class BasicDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="autocomplete-virtualscroll-demo"></app-code>
     </div>`
 })
-export class VirtualScrollDocComponent {
+export class VirtualScrollDoc {
     @Input() id: string;
 
     @Input() title: string;

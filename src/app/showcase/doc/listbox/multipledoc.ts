@@ -21,7 +21,7 @@ interface City {
         <app-code [code]="code" selector="listbox-multiple-demo"></app-code>
     </div>`
 })
-export class MultipleDocComponent {
+export class MultipleDoc {
     @Input() id: string;
 
     @Input() title: string;

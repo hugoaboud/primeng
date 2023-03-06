@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/togglebutton/basicdoc';
-import { CustomizedDocComponent } from '../../doc/togglebutton/customizeddoc';
-import { EventsDocComponent } from '../../doc/togglebutton/eventsdoc';
-import { ImportDocComponent } from '../../doc/togglebutton/importdoc';
-import { PropsDocComponent } from '../../doc/togglebutton/propsdoc';
-import { StyleDocComponent } from '../../doc/togglebutton/styledoc';
+import { BasicDoc } from '../../doc/togglebutton/basicdoc';
+import { CustomizedDoc } from '../../doc/togglebutton/customizeddoc';
+import { EventsDoc } from '../../doc/togglebutton/eventsdoc';
+import { ImportDoc } from '../../doc/togglebutton/importdoc';
+import { PropsDoc } from '../../doc/togglebutton/propsdoc';
+import { StyleDoc } from '../../doc/togglebutton/styledoc';
 
 @Component({
     templateUrl: './togglebuttondemo.html'
@@ -14,22 +14,22 @@ export class ToggleButtonDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'customized',
             label: 'Customized',
-            component: CustomizedDocComponent
+            component: CustomizedDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -37,12 +37,12 @@ export class ToggleButtonDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

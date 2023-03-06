@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ApiDocComponent } from '../../doc/filterservice/apidoc';
-import { BuiltInConstraintsDocComponent } from '../../doc/filterservice/builtinconstraintsdoc';
-import { CustomConstraintsDocComponent } from '../../doc/filterservice/customconstraintsdoc';
-import { ImportDocComponent } from '../../doc/filterservice/importdoc';
-import { UsageDocComponent } from '../../doc/filterservice/usagedoc';
+import { ApiDoc } from '../../doc/filterservice/apidoc';
+import { BuiltInConstraintsDoc } from '../../doc/filterservice/builtinconstraintsdoc';
+import { CustomConstraintsDoc } from '../../doc/filterservice/customconstraintsdoc';
+import { ImportDoc } from '../../doc/filterservice/importdoc';
+import { UsageDoc } from '../../doc/filterservice/usagedoc';
 import { FilterServiceTableIntegrationDemo } from '../../doc/filterservice/tableintegrationdoc';
 
 @Component({
@@ -14,22 +14,22 @@ export class FilterServiceDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'usage',
             label: 'Usage',
-            component: UsageDocComponent
+            component: UsageDoc
         },
         {
             id: 'builtinconstraints',
             label: 'Built-in Constraints',
-            component: BuiltInConstraintsDocComponent
+            component: BuiltInConstraintsDoc
         },
         {
             id: 'customconstraints',
             label: 'Custom Constraints',
-            component: CustomConstraintsDocComponent
+            component: CustomConstraintsDoc
         },
         {
             id: 'table-integration',
@@ -39,7 +39,7 @@ export class FilterServiceDemo {
         {
             id: 'api',
             label: 'FilterService API',
-            component: ApiDocComponent
+            component: ApiDoc
         }
     ];
 }

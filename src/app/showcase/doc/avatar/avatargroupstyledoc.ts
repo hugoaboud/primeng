@@ -22,7 +22,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class AvatarGroupStyleDocComponent {
+export class AvatarGroupStyleDoc {
     @Input() id: string;
 
     @Input() title: string;

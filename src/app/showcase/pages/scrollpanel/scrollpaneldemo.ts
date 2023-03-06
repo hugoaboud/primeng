@@ -1,11 +1,11 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { ScrollPanelBasicDemo } from '../../doc/scrollpanel/basicdoc';
-import { ImportDocComponent } from '../../doc/scrollpanel/importdoc';
+import { ImportDoc } from '../../doc/scrollpanel/importdoc';
 import { ScrollPanelCustomDemo } from '../../doc/scrollpanel/customdoc';
-import { StyleDocComponent } from '../../doc/scrollpanel/styledoc';
-import { PropsDocComponent } from '../../doc/scrollpanel/propsdoc';
-import { MethodsDocComponent } from '../../doc/scrollpanel/methodsdoc';
-import { TemplatesDocComponent } from '../../doc/scrollpanel/templatesdoc';
+import { StyleDoc } from '../../doc/scrollpanel/styledoc';
+import { PropsDoc } from '../../doc/scrollpanel/propsdoc';
+import { MethodsDoc } from '../../doc/scrollpanel/methodsdoc';
+import { TemplatesDoc } from '../../doc/scrollpanel/templatesdoc';
 
 @Component({
     templateUrl: './scrollpaneldemo.html',
@@ -17,7 +17,7 @@ export class ScrollPanelDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -32,7 +32,7 @@ export class ScrollPanelDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -40,17 +40,17 @@ export class ScrollPanelDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

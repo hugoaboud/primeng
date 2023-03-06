@@ -12,18 +12,18 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { ToastModule } from 'primeng/toast';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { StyleDocComponent } from './styledoc';
+import { StyleDoc } from './styledoc';
 import { DockAdvancedDemo } from './advanceddoc';
 import { DockBasicDemo } from './basicdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
-import { MenuItemDocComponent } from './menuitemdoc';
-import { MethodsDocComponent } from './methodsdoc';
-import { PropsDocComponent } from './propsdoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { MenuItemDoc } from './menuitemdoc';
+import { MethodsDoc } from './methodsdoc';
+import { PropsDoc } from './propsdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, DockModule, FormsModule, RadioButtonModule, MenubarModule, ToastModule, DialogModule, GalleriaModule, TerminalModule, TreeModule, AppDocModule],
-    declarations: [DockAdvancedDemo, DockBasicDemo, EventsDocComponent, ImportDocComponent, MenuItemDocComponent, MethodsDocComponent, PropsDocComponent, StyleDocComponent],
+    declarations: [DockAdvancedDemo, DockBasicDemo, EventsDoc, ImportDoc, MenuItemDoc, MethodsDoc, PropsDoc, StyleDoc],
     exports: [AppDocModule]
 })
 export class DockDocModule {}

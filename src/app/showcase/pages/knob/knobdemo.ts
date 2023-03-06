@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/knob/basicdoc';
-import { ColorDocComponent } from '../../doc/knob/colordoc';
-import { DisabledDocComponent } from '../../doc/knob/disableddoc';
-import { EventsDocComponent } from '../../doc/knob/eventsdoc';
-import { ImportDocComponent } from '../../doc/knob/importdoc';
-import { MinMaxDocComponent } from '../../doc/knob/minmaxdoc';
-import { PropsDocComponent } from '../../doc/knob/propsdoc';
-import { ReadonlyDocComponent } from '../../doc/knob/readonlydoc';
-import { SizeDocComponent } from '../../doc/knob/sizedoc';
-import { StepDocComponent } from '../../doc/knob/stepdoc';
-import { StrokeDocComponent } from '../../doc/knob/strokedoc';
-import { StyleDocComponent } from '../../doc/knob/styledoc';
-import { TemplateDocComponent } from '../../doc/knob/templatedoc';
+import { BasicDoc } from '../../doc/knob/basicdoc';
+import { ColorDoc } from '../../doc/knob/colordoc';
+import { DisabledDoc } from '../../doc/knob/disableddoc';
+import { EventsDoc } from '../../doc/knob/eventsdoc';
+import { ImportDoc } from '../../doc/knob/importdoc';
+import { MinMaxDoc } from '../../doc/knob/minmaxdoc';
+import { PropsDoc } from '../../doc/knob/propsdoc';
+import { ReadonlyDoc } from '../../doc/knob/readonlydoc';
+import { SizeDoc } from '../../doc/knob/sizedoc';
+import { StepDoc } from '../../doc/knob/stepdoc';
+import { StrokeDoc } from '../../doc/knob/strokedoc';
+import { StyleDoc } from '../../doc/knob/styledoc';
+import { TemplateDoc } from '../../doc/knob/templatedoc';
 
 @Component({
     templateUrl: './knobdemo.html'
@@ -21,57 +21,57 @@ export class KnobDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'minmax',
             label: 'Min/Max',
-            component: MinMaxDocComponent
+            component: MinMaxDoc
         },
         {
             id: 'step',
             label: 'Step',
-            component: StepDocComponent
+            component: StepDoc
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: TemplateDoc
         },
         {
             id: 'stroke',
             label: 'Stroke',
-            component: StrokeDocComponent
+            component: StrokeDoc
         },
         {
             id: 'size',
             label: 'Size',
-            component: SizeDocComponent
+            component: SizeDoc
         },
         {
             id: 'color',
             label: 'Color',
-            component: ColorDocComponent
+            component: ColorDoc
         },
         {
             id: 'readonly',
             label: 'ReadOnly',
-            component: ReadonlyDocComponent
+            component: ReadonlyDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -79,12 +79,12 @@ export class KnobDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

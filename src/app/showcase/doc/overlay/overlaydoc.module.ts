@@ -5,38 +5,38 @@ import { OverlayModule } from 'primeng/overlay';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { OverlayBasicDemo } from './basicdoc';
-import { AppendToDocComponent } from './appendtodoc';
-import { AutoZIndexDocComponent } from './autozindexdoc';
-import { BaseZIndexDocComponent } from './basezindexdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { HideOnEscapeDocComponent } from './hideonescapedoc';
-import { ImportDocComponent } from './importdoc';
-import { ModeDocComponent } from './modedoc';
-import { OptionsDocComponent } from './overlayoptionsdoc';
-import { ResponsiveDocComponent } from './responsivedoc';
-import { StyleDocComponent } from './styledoc';
-import { TargetDocComponent } from './targetdoc';
+import { AppendToDoc } from './appendtodoc';
+import { AutoZIndexDoc } from './autozindexdoc';
+import { BaseZIndexDoc } from './basezindexdoc';
+import { EventsDoc } from './eventsdoc';
+import { HideOnEscapeDoc } from './hideonescapedoc';
+import { ImportDoc } from './importdoc';
+import { ModeDoc } from './modedoc';
+import { OptionsDoc } from './overlayoptionsdoc';
+import { ResponsiveDoc } from './responsivedoc';
+import { StyleDoc } from './styledoc';
+import { TargetDoc } from './targetdoc';
 import { OverlayTemplateDemo } from './templatedoc';
-import { TransitionOptionsDocComponent } from './transitionoptionsdoc';
+import { TransitionOptionsDoc } from './transitionoptionsdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, OverlayModule, ButtonModule, AppDocModule],
     exports: [AppDocModule],
     declarations: [
-        AppendToDocComponent,
-        AutoZIndexDocComponent,
-        BaseZIndexDocComponent,
+        AppendToDoc,
+        AutoZIndexDoc,
+        BaseZIndexDoc,
         OverlayBasicDemo,
-        EventsDocComponent,
-        HideOnEscapeDocComponent,
-        ImportDocComponent,
-        ModeDocComponent,
-        OptionsDocComponent,
-        ResponsiveDocComponent,
-        StyleDocComponent,
-        TargetDocComponent,
+        EventsDoc,
+        HideOnEscapeDoc,
+        ImportDoc,
+        ModeDoc,
+        OptionsDoc,
+        ResponsiveDoc,
+        StyleDoc,
+        TargetDoc,
         OverlayTemplateDemo,
-        TransitionOptionsDocComponent
+        TransitionOptionsDoc
     ]
 })
 export class OverlayDocModule {}

@@ -7,15 +7,15 @@ import { ToastModule } from 'primeng/toast';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { ConfirmPopupBasicDemo } from './basicdoc';
-import { ImportDocComponent } from './importdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
-import { ServiceDocComponent } from './servicedoc';
-import { ConfirmationApiDocComponent } from './confirmationapidoc';
+import { ImportDoc } from './importdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
+import { ServiceDoc } from './servicedoc';
+import { ConfirmationApiDoc } from './confirmationapidoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, ConfirmPopupModule, ButtonModule, ToastModule, AppDocModule],
-    declarations: [ConfirmPopupBasicDemo, ImportDocComponent, PropsDocComponent, StyleDocComponent, ServiceDocComponent, ConfirmationApiDocComponent],
+    declarations: [ConfirmPopupBasicDemo, ImportDoc, PropsDoc, StyleDoc, ServiceDoc, ConfirmationApiDoc],
     exports: [AppDocModule]
 })
 export class ConfirmPopupDocModule {}

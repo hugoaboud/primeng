@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ImportDocComponent } from '../../doc/styleclass/importdoc';
-import { PropsDocComponent } from '../../doc/styleclass/propsdoc';
+import { ImportDoc } from '../../doc/styleclass/importdoc';
+import { PropsDoc } from '../../doc/styleclass/propsdoc';
 import { StyleClassAnimationDemo } from '../../doc/styleclass/animationdoc';
 import { StyleClassToggleClassDemo } from '../../doc/styleclass/toggleclassdoc';
 
@@ -12,7 +12,7 @@ export class StyleClassDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'toggleclass',
@@ -30,7 +30,7 @@ export class StyleClassDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

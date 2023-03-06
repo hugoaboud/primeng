@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { TieredMenuBasicDemo } from '../../doc/tieredmenu/basicdoc';
-import { EventsDocComponent } from '../../doc/tieredmenu/eventsdoc';
-import { ImportDocComponent } from '../../doc/tieredmenu/importdoc';
-import { MenuItemDocComponent } from '../../doc/tieredmenu/menuitemdoc';
+import { EventsDoc } from '../../doc/tieredmenu/eventsdoc';
+import { ImportDoc } from '../../doc/tieredmenu/importdoc';
+import { MenuItemDoc } from '../../doc/tieredmenu/menuitemdoc';
 import { TieredMenuPopupDemo } from '../../doc/tieredmenu/popupdoc';
-import { PropsDocComponent } from '../../doc/tieredmenu/propsdoc';
-import { StyleDocComponent } from '../../doc/tieredmenu/styledoc';
-import { MethodsDocComponent } from '../../doc/tieredmenu/methodsdoc';
+import { PropsDoc } from '../../doc/tieredmenu/propsdoc';
+import { StyleDoc } from '../../doc/tieredmenu/styledoc';
+import { MethodsDoc } from '../../doc/tieredmenu/methodsdoc';
 
 @Component({
     templateUrl: './tieredmenudemo.html'
@@ -16,7 +16,7 @@ export class TieredMenuDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -31,7 +31,7 @@ export class TieredMenuDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -39,22 +39,22 @@ export class TieredMenuDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'menuitem',
             label: 'MenuItem API',
-            component: MenuItemDocComponent
+            component: MenuItemDoc
         }
     ];
 }

@@ -21,7 +21,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [MessageService]
 })
-export class LinearDocComponent implements OnInit {
+export class LinearDoc implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

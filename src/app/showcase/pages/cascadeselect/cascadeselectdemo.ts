@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/cascadeselect/basicdoc';
-import { EventsDocComponent } from '../../doc/cascadeselect/eventsdoc';
-import { ImportDocComponent } from '../../doc/cascadeselect/importdoc';
-import { PropsDocComponent } from '../../doc/cascadeselect/propsdoc';
-import { StyleDocComponent } from '../../doc/cascadeselect/styledoc';
-import { TemplateDocComponent } from '../../doc/cascadeselect/templatedoc';
+import { BasicDoc } from '../../doc/cascadeselect/basicdoc';
+import { EventsDoc } from '../../doc/cascadeselect/eventsdoc';
+import { ImportDoc } from '../../doc/cascadeselect/importdoc';
+import { PropsDoc } from '../../doc/cascadeselect/propsdoc';
+import { StyleDoc } from '../../doc/cascadeselect/styledoc';
+import { TemplateDoc } from '../../doc/cascadeselect/templatedoc';
 
 @Component({
     templateUrl: './cascadeselectdemo.html'
@@ -14,22 +14,22 @@ export class CascadeSelectDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: TemplateDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -37,12 +37,12 @@ export class CascadeSelectDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

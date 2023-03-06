@@ -38,7 +38,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class DraggablePropsDocComponent {
+export class DraggablePropsDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="calendar-local-demo"></app-code>
     </div>`
 })
-export class LocaleDocComponent {
+export class LocaleDoc {
     @Input() id: string;
 
     @Input() title: string;

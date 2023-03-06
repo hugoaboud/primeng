@@ -4,18 +4,18 @@ import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { ArchitectureDocComponent } from './architecturedoc';
-import { CSSVariablesDocComponent } from './cssvariablesdoc';
-import { DesignerDocComponent } from './designerdoc';
-import { LocalStylingDocComponent } from './localstylingdoc';
-import { PrimeFlexDocComponent } from './primeflexdoc';
-import { ScalingDocComponent } from './scalingdoc';
-import { ThemesDocComponent } from './themesdoc';
-import { UtilsDocComponent } from './utilsdoc';
+import { ArchitectureDoc } from './architecturedoc';
+import { CSSVariablesDoc } from './cssvariablesdoc';
+import { DesignerDoc } from './designerdoc';
+import { LocalStylingDoc } from './localstylingdoc';
+import { PrimeFlexDoc } from './primeflexdoc';
+import { ScalingDoc } from './scalingdoc';
+import { ThemesDoc } from './themesdoc';
+import { UtilsDoc } from './utilsdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, ButtonModule],
-    declarations: [ArchitectureDocComponent, CSSVariablesDocComponent, DesignerDocComponent, LocalStylingDocComponent, PrimeFlexDocComponent, ScalingDocComponent, ThemesDocComponent, UtilsDocComponent],
+    declarations: [ArchitectureDoc, CSSVariablesDoc, DesignerDoc, LocalStylingDoc, PrimeFlexDoc, ScalingDoc, ThemesDoc, UtilsDoc],
     exports: [AppDocModule]
 })
 export class ThemingDocModule {}

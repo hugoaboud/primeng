@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { SplitterSizeDemo } from '../../doc/splitter/sizedoc';
 import { SplitterHorizontalDemo } from '../../doc/splitter/horizontaldoc';
-import { ImportDocComponent } from '../../doc/splitter/importdoc';
+import { ImportDoc } from '../../doc/splitter/importdoc';
 import { SplitterVerticalDemo } from '../../doc/splitter/verticaldoc';
 import { SplitterNestedDemo } from '../../doc/splitter/nesteddoc';
-import { StyleDocComponent } from '../../doc/splitter/styledoc';
-import { PropsDocComponent } from '../../doc/splitter/propsdoc';
-import { EventsDocComponent } from '../../doc/splitter/eventsdoc';
-import { TemplatesDocComponent } from '../../doc/splitter/templatesdoc';
+import { StyleDoc } from '../../doc/splitter/styledoc';
+import { PropsDoc } from '../../doc/splitter/propsdoc';
+import { EventsDoc } from '../../doc/splitter/eventsdoc';
+import { TemplatesDoc } from '../../doc/splitter/templatesdoc';
 
 @Component({
     templateUrl: './splitterdemo.html'
@@ -17,7 +17,7 @@ export class SplitterDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'horizontal',
@@ -42,7 +42,7 @@ export class SplitterDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -50,17 +50,17 @@ export class SplitterDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

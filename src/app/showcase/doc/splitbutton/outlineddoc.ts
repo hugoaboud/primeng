@@ -22,7 +22,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [MessageService]
 })
-export class OutlinedDocComponent {
+export class OutlinedDoc {
     @Input() id: string;
 
     @Input() title: string;

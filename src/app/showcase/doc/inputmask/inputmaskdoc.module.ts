@@ -5,35 +5,35 @@ import { RouterModule } from '@angular/router';
 import { InputMaskModule } from 'primeng/inputmask';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { DisabledDocComponent } from './disableddoc';
-import { EventsDocComponent } from './eventsdoc';
-import { FloatlabelDocComponent } from './floatlabeldoc';
-import { ImportDocComponent } from './importdoc';
-import { InvalidDocComponent } from './invaliddoc';
-import { MaskDocComponent } from './maskdoc';
-import { MethodsDocComponent } from './methodsdoc';
-import { OptionalDocComponent } from './optionaldoc';
-import { PropsDocComponent } from './propsdoc';
-import { SlotCharDocComponent } from './slotchardoc';
-import { StyleDocComponent } from './styledoc';
+import { BasicDoc } from './basicdoc';
+import { DisabledDoc } from './disableddoc';
+import { EventsDoc } from './eventsdoc';
+import { FloatlabelDoc } from './floatlabeldoc';
+import { ImportDoc } from './importdoc';
+import { InvalidDoc } from './invaliddoc';
+import { MaskDoc } from './maskdoc';
+import { MethodsDoc } from './methodsdoc';
+import { OptionalDoc } from './optionaldoc';
+import { PropsDoc } from './propsdoc';
+import { SlotCharDoc } from './slotchardoc';
+import { StyleDoc } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, FormsModule, InputMaskModule, RouterModule, AppCodeModule, AppDocModule],
     exports: [AppDocModule],
     declarations: [
-        ImportDocComponent,
-        BasicDocComponent,
-        MaskDocComponent,
-        SlotCharDocComponent,
-        OptionalDocComponent,
-        FloatlabelDocComponent,
-        DisabledDocComponent,
-        InvalidDocComponent,
-        PropsDocComponent,
-        EventsDocComponent,
-        MethodsDocComponent,
-        StyleDocComponent
+        ImportDoc,
+        BasicDoc,
+        MaskDoc,
+        SlotCharDoc,
+        OptionalDoc,
+        FloatlabelDoc,
+        DisabledDoc,
+        InvalidDoc,
+        PropsDoc,
+        EventsDoc,
+        MethodsDoc,
+        StyleDoc
     ]
 })
 export class InputMaskDocModule {}

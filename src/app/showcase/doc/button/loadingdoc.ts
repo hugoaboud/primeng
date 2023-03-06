@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="button-loading-demo"></app-code>
     </div>`
 })
-export class LoadingDocComponent {
+export class LoadingDoc {
     @Input() id: string;
 
     @Input() title: string;

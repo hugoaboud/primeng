@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { ImportDocComponent } from '../../doc/badge/importdoc';
+import { ImportDoc } from '../../doc/badge/importdoc';
 import { BadgeSizeDemo } from '../../doc/badge/sizedoc';
 import { BadgeBasicDemo } from '../../doc/badge/basicdoc';
 import { BadgeButtonDemo } from '../../doc/badge/buttondoc';
 import { BadgeDirectiveDemo } from '../../doc/badge/directivedoc';
 import { BadgePositionDemo } from '../../doc/badge/positiondoc';
 import { BadgeSeverityDemo } from '../../doc/badge/severitydoc';
-import { StyleDocComponent } from '../../doc/badge/styledoc';
-import { PropsDocComponent } from '../../doc/badge/propsdoc';
+import { StyleDoc } from '../../doc/badge/styledoc';
+import { PropsDoc } from '../../doc/badge/propsdoc';
 
 @Component({
     templateUrl: './badgedemo.html'
@@ -17,7 +17,7 @@ export class BadgeDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -52,7 +52,7 @@ export class BadgeDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -60,7 +60,7 @@ export class BadgeDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

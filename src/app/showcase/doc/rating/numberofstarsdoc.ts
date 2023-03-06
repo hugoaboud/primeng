@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="rating-numberofstars-demo"></app-code>
     </div>`
 })
-export class NumberOfStarsDocComponent {
+export class NumberOfStarsDoc {
     @Input() id: string;
 
     @Input() title: string;

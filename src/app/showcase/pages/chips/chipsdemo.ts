@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { ImportDocComponent } from '../../doc/chips/importdoc';
-import { BasicDocComponent } from '../../doc/chips/basicdoc';
-import { CommaSeperatorDocComponent } from '../../doc/chips/commaseperator.doc';
-import { RegexpSeperatorDocComponent } from '../../doc/chips/regexpseperator.doc';
-import { TemplateDocComponent } from '../../doc/chips/templatedoc';
-import { StyleDocComponent } from '../../doc/chips/styledoc';
-import { PropsDocComponent } from '../../doc/chips/propsdoc';
+import { ImportDoc } from '../../doc/chips/importdoc';
+import { BasicDoc } from '../../doc/chips/basicdoc';
+import { CommaSeperatorDoc } from '../../doc/chips/commaseperator.doc';
+import { RegexpSeperatorDoc } from '../../doc/chips/regexpseperator.doc';
+import { TemplateDoc } from '../../doc/chips/templatedoc';
+import { StyleDoc } from '../../doc/chips/styledoc';
+import { PropsDoc } from '../../doc/chips/propsdoc';
 
 @Component({
     templateUrl: './chipsdemo.html'
@@ -15,32 +15,32 @@ export class ChipsDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'commaseperator',
             label: 'Comma Seperator',
-            component: CommaSeperatorDocComponent
+            component: CommaSeperatorDoc
         },
         {
             id: 'regexpseperator',
             label: 'RegExp Seperator',
-            component: RegexpSeperatorDocComponent
+            component: RegexpSeperatorDoc
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: TemplateDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -48,7 +48,7 @@ export class ChipsDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

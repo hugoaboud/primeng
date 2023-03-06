@@ -8,7 +8,7 @@ import { Code } from '../../domain/code';
         <app-code [hideToggleCode]="true" [hideStackBlitz]="true" [hideCodeSandbox]="true" [code]="code"></app-code>
     </div>`
 })
-export class ImportDocComponent {
+export class ImportDoc {
     value1: string;
 
     @Input() id: string;

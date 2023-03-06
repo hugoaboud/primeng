@@ -5,16 +5,16 @@ import { RouterModule } from '@angular/router';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { CustomizedDocComponent } from './customizeddoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { BasicDoc } from './basicdoc';
+import { CustomizedDoc } from './customizeddoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, ToggleButtonModule, FormsModule, RouterModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, BasicDocComponent, CustomizedDocComponent, PropsDocComponent, EventsDocComponent, StyleDocComponent]
+    declarations: [ImportDoc, BasicDoc, CustomizedDoc, PropsDoc, EventsDoc, StyleDoc]
 })
 export class ToggleButtonDocModule {}

@@ -17,7 +17,7 @@ import { NodeService } from '../../service/nodeservice';
         <app-code [code]="code" selector="tree-select-floatlabel-demo"></app-code>
     </div>`
 })
-export class FloatLabelDocComponent {
+export class FloatLabelDoc {
     @Input() id: string;
 
     @Input() title: string;

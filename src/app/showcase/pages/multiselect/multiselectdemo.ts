@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/multiselect/basicdoc';
-import { ChipsDocComponent } from '../../doc/multiselect/chipsdoc';
-import { DisabledDocComponent } from '../../doc/multiselect/disableddoc';
-import { EventsDocComponent } from '../../doc/multiselect/eventsdoc';
-import { FilterDocComponent } from '../../doc/multiselect/filterdoc';
-import { FloatLabelDocComponent } from '../../doc/multiselect/floatlabeldoc';
-import { GroupDocComponent } from '../../doc/multiselect/groupdoc';
-import { ImportDocComponent } from '../../doc/multiselect/importdoc';
-import { InvalidDocComponent } from '../../doc/multiselect/invaliddoc';
-import { PropsDocComponent } from '../../doc/multiselect/propsdoc';
-import { StyleDocComponent } from '../../doc/multiselect/styledoc';
-import { TemplateDocComponent } from '../../doc/multiselect/templatedoc';
-import { TemplatesDocComponent } from '../../doc/multiselect/templatesdoc';
-import { VirtualScrollDocComponent } from '../../doc/multiselect/virtualscrolldoc';
+import { BasicDoc } from '../../doc/multiselect/basicdoc';
+import { ChipsDoc } from '../../doc/multiselect/chipsdoc';
+import { DisabledDoc } from '../../doc/multiselect/disableddoc';
+import { EventsDoc } from '../../doc/multiselect/eventsdoc';
+import { FilterDoc } from '../../doc/multiselect/filterdoc';
+import { FloatLabelDoc } from '../../doc/multiselect/floatlabeldoc';
+import { GroupDoc } from '../../doc/multiselect/groupdoc';
+import { ImportDoc } from '../../doc/multiselect/importdoc';
+import { InvalidDoc } from '../../doc/multiselect/invaliddoc';
+import { PropsDoc } from '../../doc/multiselect/propsdoc';
+import { StyleDoc } from '../../doc/multiselect/styledoc';
+import { TemplateDoc } from '../../doc/multiselect/templatedoc';
+import { TemplatesDoc } from '../../doc/multiselect/templatesdoc';
+import { VirtualScrollDoc } from '../../doc/multiselect/virtualscrolldoc';
 
 @Component({
     templateUrl: './multiselectdemo.html',
@@ -23,74 +23,74 @@ export class MultiSelectDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'chips',
             label: 'Chips',
-            component: ChipsDocComponent
+            component: ChipsDoc
         },
         {
             id: 'group',
             label: 'Group',
-            component: GroupDocComponent
+            component: GroupDoc
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: TemplateDoc
         },
         {
             id: 'filter',
             label: 'Filter',
-            component: FilterDocComponent
+            component: FilterDoc
         },
         {
             id: 'virtualscroll',
             label: 'VirtualScroll',
-            component: VirtualScrollDocComponent
+            component: VirtualScrollDoc
         },
         {
             id: 'floatlabel',
             label: 'Float Label',
-            component: FloatLabelDocComponent
+            component: FloatLabelDoc
         },
         {
             id: 'invalid',
             label: 'Invalid',
-            component: InvalidDocComponent
+            component: InvalidDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
     apiDocs = [
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

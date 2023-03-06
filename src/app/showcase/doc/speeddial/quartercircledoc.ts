@@ -21,7 +21,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [MessageService]
 })
-export class QuarterCircleDocComponent implements OnInit {
+export class QuarterCircleDoc implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

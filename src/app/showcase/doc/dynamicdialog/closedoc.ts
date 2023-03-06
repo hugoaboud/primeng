@@ -18,7 +18,7 @@ import { ProductListDemo } from './productlistdemo';
     </div>`,
     providers: [DialogService, MessageService]
 })
-export class CloseDocComponent {
+export class CloseDoc {
     @Input() id: string;
 
     @Input() title: string;

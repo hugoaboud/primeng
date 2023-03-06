@@ -5,17 +5,17 @@ import { RouterModule } from '@angular/router';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { ImportDocComponent } from './importdoc';
-import { DisabledDocComponent } from './disableddoc';
-import { PreselectionDocComponent } from './preselectiondoc';
-import { PropsDocComponent } from './propsdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { StyleDocComponent } from './styledoc';
+import { BasicDoc } from './basicdoc';
+import { ImportDoc } from './importdoc';
+import { DisabledDoc } from './disableddoc';
+import { PreselectionDoc } from './preselectiondoc';
+import { PropsDoc } from './propsdoc';
+import { EventsDoc } from './eventsdoc';
+import { StyleDoc } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, FormsModule, InputSwitchModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, BasicDocComponent, PreselectionDocComponent, DisabledDocComponent, PropsDocComponent, EventsDocComponent, StyleDocComponent]
+    declarations: [ImportDoc, BasicDoc, PreselectionDoc, DisabledDoc, PropsDoc, EventsDoc, StyleDoc]
 })
 export class InputSwitchDocModule {}

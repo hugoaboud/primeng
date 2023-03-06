@@ -47,7 +47,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class MessageStyleDocComponent {
+export class MessageStyleDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -20,7 +20,7 @@ import { TableFlexibleScrollDemo } from '../../doc/table/flexiblescrolldoc';
 import { TableFrozenColumnsDemo } from '../../doc/table/frozencolumnsdoc';
 import { TableFrozenRowsDemo } from '../../doc/table/frozenrowsdoc';
 import { TableGridlinesDemo } from '../../doc/table/gridlinesdoc';
-import { ImportDocComponent } from '../../doc/table/importdoc';
+import { ImportDoc } from '../../doc/table/importdoc';
 import { TableHorizontalAndVerticalScrollDemo } from '../../doc/table/horizontalandverticaldoc';
 import { TableLazyLoadDemo } from '../../doc/table/lazyloaddoc';
 import { TableMultipleSelectionDemo } from '../../doc/table/multipleselectiondoc';
@@ -48,11 +48,11 @@ import { TableVirtualScrollDemo } from '../../doc/table/virtualscrolldoc';
 import { TableVirtualScrollLazyDemo } from '../../doc/table/virtualscrolllazydoc';
 import { TableColumnResizeFitModeDemo } from '../../doc/table/columnresizefitmodedoc';
 import { TableSelectionEventsDemo } from '../../doc/table/selectioneventsdoc';
-import { PropsDocComponent } from '../../doc/table/propsdoc';
-import { EventsDocComponent } from '../../doc/table/eventsdoc';
-import { StylingDocComponent } from '../../doc/table/stylingdoc';
-import { MethodsDocComponent } from '../../doc/table/methodsdoc';
-import { TemplatesDocComponent } from '../../doc/table/templatesdoc';
+import { PropsDoc } from '../../doc/table/propsdoc';
+import { EventsDoc } from '../../doc/table/eventsdoc';
+import { StylingDoc } from '../../doc/table/stylingdoc';
+import { MethodsDoc } from '../../doc/table/methodsdoc';
+import { TemplatesDoc } from '../../doc/table/templatesdoc';
 
 @Component({
     templateUrl: './tabledemo.html',
@@ -63,7 +63,7 @@ export class TableDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -374,7 +374,7 @@ export class TableDemo {
         {
             id: 'styling',
             label: 'Styling',
-            component: StylingDocComponent
+            component: StylingDoc
         }
     ];
 
@@ -382,22 +382,22 @@ export class TableDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

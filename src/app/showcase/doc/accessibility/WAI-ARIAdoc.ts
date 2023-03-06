@@ -37,7 +37,7 @@ import { Code } from '../../domain/code';
         </div>
     </div>`
 })
-export class WAIARIADocComponent {
+export class WAIARIADoc {
     @Input() id: string;
 
     @Input() title: string;

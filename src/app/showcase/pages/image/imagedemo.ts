@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { EventsDocComponent } from '../../doc/Image/eventsdoc';
-import { ImportDocComponent } from '../../doc/Image/importdoc';
-import { PropsDocComponent } from '../../doc/Image/propsdoc';
-import { StyleDocComponent } from '../../doc/Image/styledoc';
-import { TemplatesDocComponent } from '../../doc/Image/templatesdoc';
+import { EventsDoc } from '../../doc/Image/eventsdoc';
+import { ImportDoc } from '../../doc/Image/importdoc';
+import { PropsDoc } from '../../doc/Image/propsdoc';
+import { StyleDoc } from '../../doc/Image/styledoc';
+import { TemplatesDoc } from '../../doc/Image/templatesdoc';
 import { ImageBasicDemo } from '../../doc/Image/basicdoc';
 import { ImageIndicatorTemplateDemo } from '../../doc/Image/indicatortemplatedoc';
 
@@ -15,7 +15,7 @@ export class ImageDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -30,7 +30,7 @@ export class ImageDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -38,17 +38,17 @@ export class ImageDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

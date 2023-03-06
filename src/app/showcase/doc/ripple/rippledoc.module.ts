@@ -6,12 +6,12 @@ import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { RippleCustomDemo } from './customdoc';
 import { RippleDefaultDemo } from './defaultdoc';
-import { ImportDocComponent } from './importdoc';
-import { StyleDocComponent } from './styledoc';
+import { ImportDoc } from './importdoc';
+import { StyleDoc } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, RippleModule],
-    declarations: [RippleDefaultDemo, ImportDocComponent, StyleDocComponent, RippleCustomDemo],
+    declarations: [RippleDefaultDemo, ImportDoc, StyleDoc, RippleCustomDemo],
     exports: [AppDocModule]
 })
 export class RippleDocModule {}

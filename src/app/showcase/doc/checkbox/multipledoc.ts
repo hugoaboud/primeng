@@ -24,7 +24,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="checkbox-multiple-demo"></app-code>
     </div>`
 })
-export class MultipleDocComponent {
+export class MultipleDoc {
     @Input() id: string;
 
     @Input() title: string;

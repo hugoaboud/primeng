@@ -6,21 +6,21 @@ import { RippleModule } from 'primeng/ripple';
 import { ToastModule } from 'primeng/toast';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { ImportDocComponent } from './importdoc';
+import { ImportDoc } from './importdoc';
 import { ToastAnimationDemo } from './animationdoc';
 import { ToastBasicDemo } from './basicdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { InterfaceDocComponent } from './interfacedoc';
+import { EventsDoc } from './eventsdoc';
+import { InterfaceDoc } from './interfacedoc';
 import { ToastMultipleDemo } from './multipledoc';
 import { ToastPositionDemo } from './positiondoc';
-import { PropsDocComponent } from './propsdoc';
+import { PropsDoc } from './propsdoc';
 import { ToastResponsiveDemo } from './responsivedoc';
 import { ToastSeverityDemo } from './severitydoc';
 import { ToastStickyDemo } from './stickydoc';
-import { StyleDocComponent } from './styledoc';
+import { StyleDoc } from './styledoc';
 import { ToastTargetDemo } from './targetdoc';
 import { ToastTemplateDemo } from './templatedoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { TemplatesDoc } from './templatesdoc';
 import { ToastClearDemo } from './cleardoc';
 
 @NgModule({
@@ -28,19 +28,19 @@ import { ToastClearDemo } from './cleardoc';
     declarations: [
         ToastAnimationDemo,
         ToastBasicDemo,
-        EventsDocComponent,
-        ImportDocComponent,
-        InterfaceDocComponent,
+        EventsDoc,
+        ImportDoc,
+        InterfaceDoc,
         ToastMultipleDemo,
         ToastPositionDemo,
-        PropsDocComponent,
+        PropsDoc,
         ToastResponsiveDemo,
         ToastSeverityDemo,
         ToastStickyDemo,
-        StyleDocComponent,
+        StyleDoc,
         ToastTargetDemo,
         ToastTemplateDemo,
-        TemplatesDocComponent,
+        TemplatesDoc,
         ToastClearDemo
     ],
     exports: [AppDocModule]

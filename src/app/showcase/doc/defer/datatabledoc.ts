@@ -41,7 +41,7 @@ import { CarService } from '../../service/carservice';
     </div>`,
     providers: [MessageService, CarService]
 })
-export class DataTableDocComponent {
+export class DataTableDoc {
     @Input() id: string;
 
     @Input() title: string;

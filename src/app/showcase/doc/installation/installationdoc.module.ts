@@ -5,15 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { DownloadDocComponent } from './downloaddoc';
-import { StylesDocComponent } from './stylesdoc';
-import { UsageDocComponent } from './usagedoc';
-import { AngularCliDocComponent } from './angular-clidoc';
-import { VideosDocComponent } from './videos/videosdoc';
+import { DownloadDoc } from './downloaddoc';
+import { StylesDoc } from './stylesdoc';
+import { UsageDoc } from './usagedoc';
+import { AngularCliDoc } from './angular-clidoc';
+import { VideosDoc } from './videos/videosdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, FormsModule, AppDocModule, ButtonModule],
-    declarations: [DownloadDocComponent, StylesDocComponent, UsageDocComponent, VideosDocComponent, AngularCliDocComponent],
+    declarations: [DownloadDoc, StylesDoc, UsageDoc, VideosDoc, AngularCliDoc],
     exports: [AppDocModule]
 })
 export class InstallationDocModule {}

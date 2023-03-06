@@ -22,7 +22,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code4" [hideToggleCode]="true"></app-code>
     </div>`
 })
-export class FormControlsDocComponent {
+export class FormControlsDoc {
     @Input() id: string;
 
     @Input() title: string;

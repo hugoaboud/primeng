@@ -341,7 +341,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class PropsDocComponent {
+export class PropsDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -27,7 +27,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputgroup-button-demo"></app-code>
     </div>`
 })
-export class ButtonDocComponent {
+export class ButtonDoc {
     @Input() id: string;
 
     @Input() title: string;

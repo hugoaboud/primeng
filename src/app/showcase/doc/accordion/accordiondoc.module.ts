@@ -8,17 +8,17 @@ import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { AccordionBasicDemo } from './basicdoc';
 import { AccordionControlledDemo } from './controlleddoc';
 import { AccordionDisabledDemo } from './disableddoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
 import { AccordionMultipleDemo } from './multipledoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 import { AccordionTemplateDemo } from './templatedoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { TemplatesDoc } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, AccordionModule, ButtonModule, RouterModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, AccordionBasicDemo, AccordionMultipleDemo, AccordionDisabledDemo, AccordionControlledDemo, AccordionTemplateDemo, StyleDocComponent, PropsDocComponent, EventsDocComponent, TemplatesDocComponent]
+    declarations: [ImportDoc, AccordionBasicDemo, AccordionMultipleDemo, AccordionDisabledDemo, AccordionControlledDemo, AccordionTemplateDemo, StyleDoc, PropsDoc, EventsDoc, TemplatesDoc]
 })
 export class AccordionDocModule {}

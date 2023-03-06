@@ -48,7 +48,7 @@ import { Component, Input } from '@angular/core';
         </app-docsectiontext>
     </div>`
 })
-export class StyleDocComponent {
+export class StyleDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -46,7 +46,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code"></app-code>
     </div>`
 })
-export class ShapesDocComponent {
+export class ShapesDoc {
     @Input() id: string;
 
     @Input() title: string;

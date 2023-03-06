@@ -7,14 +7,14 @@ import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { ProgressBarBasicDemo } from './basicdoc';
 import { ProgressBarDynamicDemo } from './dynamicdoc';
-import { ImportDocComponent } from './importdoc';
+import { ImportDoc } from './importdoc';
 import { ProgressBarIndeterminateDemo } from './indeterminatedoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, ProgressBarModule, ToastModule],
-    declarations: [ProgressBarBasicDemo, ProgressBarDynamicDemo, ImportDocComponent, ProgressBarIndeterminateDemo, PropsDocComponent, StyleDocComponent],
+    declarations: [ProgressBarBasicDemo, ProgressBarDynamicDemo, ImportDoc, ProgressBarIndeterminateDemo, PropsDoc, StyleDoc],
     exports: [AppDocModule]
 })
 export class ProgressBarDocModule {}

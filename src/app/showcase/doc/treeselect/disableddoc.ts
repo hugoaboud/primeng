@@ -14,7 +14,7 @@ import { NodeService } from '../../service/nodeservice';
         <app-code [code]="code" selector="tree-select-disabled-demo"></app-code>
     </div>`
 })
-export class DisabledDocComponent {
+export class DisabledDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -48,7 +48,7 @@ import { TableFlexibleScrollDemo } from './flexiblescrolldoc';
 import { TableFrozenColumnsDemo } from './frozencolumnsdoc';
 import { TableFrozenRowsDemo } from './frozenrowsdoc';
 import { TableGridlinesDemo } from './gridlinesdoc';
-import { ImportDocComponent } from './importdoc';
+import { ImportDoc } from './importdoc';
 import { TableHorizontalAndVerticalScrollDemo } from './horizontalandverticaldoc';
 import { TableLazyLoadDemo } from './lazyloaddoc';
 import { TableMultipleSelectionDemo } from './multipleselectiondoc';
@@ -76,11 +76,11 @@ import { TableVerticalScrollDemo } from './verticalscrolldoc';
 import { TableVirtualScrollDemo } from './virtualscrolldoc';
 import { TableVirtualScrollLazyDemo } from './virtualscrolllazydoc';
 import { TableColumnResizeFitModeDemo } from './columnresizefitmodedoc';
-import { PropsDocComponent } from './propsdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { StylingDocComponent } from './stylingdoc';
-import { MethodsDocComponent } from './methodsdoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { PropsDoc } from './propsdoc';
+import { EventsDoc } from './eventsdoc';
+import { StylingDoc } from './stylingdoc';
+import { MethodsDoc } from './methodsdoc';
+import { TemplatesDoc } from './templatesdoc';
 import { TableSelectionEventsDemo } from './selectioneventsdoc';
 
 @NgModule({
@@ -115,7 +115,7 @@ import { TableSelectionEventsDemo } from './selectioneventsdoc';
         AppDocModule
     ],
     declarations: [
-        ImportDocComponent,
+        ImportDoc,
         TableBasicDemo,
         TableDynamicDemo,
         TableCellEditDemo,
@@ -167,11 +167,11 @@ import { TableSelectionEventsDemo } from './selectioneventsdoc';
         TableVerticalScrollDemo,
         TableVirtualScrollDemo,
         TableVirtualScrollLazyDemo,
-        PropsDocComponent,
-        EventsDocComponent,
-        StylingDocComponent,
-        MethodsDocComponent,
-        TemplatesDocComponent,
+        PropsDoc,
+        EventsDoc,
+        StylingDoc,
+        MethodsDoc,
+        TemplatesDoc,
         TableSelectionEventsDemo
     ],
     exports: [AppDocModule]

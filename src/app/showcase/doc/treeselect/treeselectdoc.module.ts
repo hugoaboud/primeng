@@ -5,35 +5,35 @@ import { RouterModule } from '@angular/router';
 import { TreeSelectModule } from 'primeng/treeselect';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { CheckboxDocComponent } from './checkboxdoc';
-import { DisabledDocComponent } from './disableddoc';
-import { EventsDocComponent } from './eventsdoc';
-import { FilterDocComponent } from './filterdoc';
-import { FloatLabelDocComponent } from './floatlabeldoc';
-import { ImportDocComponent } from './importdoc';
-import { InvalidDocComponent } from './invaliddoc';
-import { MultipleDocComponent } from './multipledoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { BasicDoc } from './basicdoc';
+import { CheckboxDoc } from './checkboxdoc';
+import { DisabledDoc } from './disableddoc';
+import { EventsDoc } from './eventsdoc';
+import { FilterDoc } from './filterdoc';
+import { FloatLabelDoc } from './floatlabeldoc';
+import { ImportDoc } from './importdoc';
+import { InvalidDoc } from './invaliddoc';
+import { MultipleDoc } from './multipledoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
+import { TemplatesDoc } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, TreeSelectModule, FormsModule, RouterModule],
     exports: [AppDocModule],
     declarations: [
-        ImportDocComponent,
-        BasicDocComponent,
-        MultipleDocComponent,
-        CheckboxDocComponent,
-        FilterDocComponent,
-        FloatLabelDocComponent,
-        InvalidDocComponent,
-        DisabledDocComponent,
-        PropsDocComponent,
-        EventsDocComponent,
-        TemplatesDocComponent,
-        StyleDocComponent
+        ImportDoc,
+        BasicDoc,
+        MultipleDoc,
+        CheckboxDoc,
+        FilterDoc,
+        FloatLabelDoc,
+        InvalidDoc,
+        DisabledDoc,
+        PropsDoc,
+        EventsDoc,
+        TemplatesDoc,
+        StyleDoc
     ]
 })
 export class TreeSelectDocModule {}

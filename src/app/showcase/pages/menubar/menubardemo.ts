@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { MenubarTemplateDemo } from '../../doc/menubar/templatedoc';
 import { MenubarBasicDemo } from '../../doc/menubar/basicdoc';
-import { ImportDocComponent } from '../../doc/menubar/importdoc';
-import { MenuItemDocComponent } from '../../doc/menubar/menuitemdoc';
-import { PropsDocComponent } from '../../doc/menubar/propsdoc';
-import { StyleDocComponent } from '../../doc/menubar/styledoc';
-import { TemplatesDocComponent } from '../../doc/menubar/templatesdoc';
+import { ImportDoc } from '../../doc/menubar/importdoc';
+import { MenuItemDoc } from '../../doc/menubar/menuitemdoc';
+import { PropsDoc } from '../../doc/menubar/propsdoc';
+import { StyleDoc } from '../../doc/menubar/styledoc';
+import { TemplatesDoc } from '../../doc/menubar/templatesdoc';
 
 @Component({
     templateUrl: './menubardemo.html'
@@ -15,7 +15,7 @@ export class MenubarDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -30,7 +30,7 @@ export class MenubarDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -38,17 +38,17 @@ export class MenubarDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         },
         {
             id: 'menuitem',
             label: 'MenuItem API',
-            component: MenuItemDocComponent
+            component: MenuItemDoc
         }
     ];
 }

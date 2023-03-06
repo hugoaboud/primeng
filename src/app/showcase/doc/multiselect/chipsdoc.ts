@@ -18,7 +18,7 @@ interface City {
         <app-code [code]="code" selector="multiselect-chips-demo"></app-code>
     </div>`
 })
-export class ChipsDocComponent {
+export class ChipsDoc {
     @Input() id: string;
 
     @Input() title: string;

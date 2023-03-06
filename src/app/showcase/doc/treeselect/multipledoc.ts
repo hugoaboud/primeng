@@ -19,7 +19,7 @@ import { NodeService } from '../../service/nodeservice';
         <app-code [code]="code" selector="tree-select-multiple-demo"></app-code>
     </div>`
 })
-export class MultipleDocComponent {
+export class MultipleDoc {
     @Input() id: string;
 
     @Input() title: string;

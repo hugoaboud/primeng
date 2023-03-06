@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="rating-withoutcancel-demo"></app-code>
     </div>`
 })
-export class WithoutCancelDocComponent {
+export class WithoutCancelDoc {
     @Input() id: string;
 
     @Input() title: string;

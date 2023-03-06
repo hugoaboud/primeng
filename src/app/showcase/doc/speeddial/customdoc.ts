@@ -18,7 +18,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [MessageService]
 })
-export class CustomDocComponent implements OnInit {
+export class CustomDoc implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

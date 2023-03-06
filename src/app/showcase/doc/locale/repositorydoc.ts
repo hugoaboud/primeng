@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core';
         </app-docsectiontext>
     </div>`
 })
-export class RepositoryDocComponent {
+export class RepositoryDoc {
     @Input() id: string;
 
     @Input() title: string;

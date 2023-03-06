@@ -18,7 +18,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code2" [hideToggleCode]="true"></app-code>
     </div>`
 })
-export class ScalingDocComponent {
+export class ScalingDoc {
     @Input() id: string;
 
     @Input() title: string;

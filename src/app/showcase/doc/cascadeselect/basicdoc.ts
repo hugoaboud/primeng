@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="cascadeselect-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class BasicDoc {
     @Input() id: string;
 
     @Input() title: string;

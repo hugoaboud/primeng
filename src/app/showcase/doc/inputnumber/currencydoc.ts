@@ -31,7 +31,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputnumber-currency-demo"></app-code>
     </div>`
 })
-export class CurrencyDocComponent {
+export class CurrencyDoc {
     @Input() id: string;
 
     @Input() title: string;

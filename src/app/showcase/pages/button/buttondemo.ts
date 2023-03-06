@@ -1,24 +1,24 @@
 import { Component } from '@angular/core';
-import { BadgesDocComponent } from '../../doc/button/badgesdoc';
-import { BasicDocComponent } from '../../doc/button/basicdoc';
-import { ButtonsetDocComponent } from '../../doc/button/buttonsetdoc';
-import { DisabledDocComponent } from '../../doc/button/disableddoc';
-import { IconsDocComponent } from '../../doc/button/iconsdoc';
-import { IconOnlyDocComponent } from '../../doc/button/iconsonlydoc';
-import { ImportDocComponent } from '../../doc/button/importdoc';
-import { LinkDocComponent } from '../../doc/button/linkdoc';
-import { LoadingDocComponent } from '../../doc/button/loadingdoc';
-import { OutlinedDocComponent } from '../../doc/button/outlineddoc';
-import { PropsDocComponent } from '../../doc/button/propsdoc';
-import { RaisedDocComponent } from '../../doc/button/raiseddoc';
-import { RaisedTextDocComponent } from '../../doc/button/raisedtextdoc';
-import { RoundedDocComponent } from '../../doc/button/roundeddoc';
-import { SeverityDocComponent } from '../../doc/button/severitydoc';
-import { SizesDocComponent } from '../../doc/button/sizesdoc';
-import { StyleDocComponent } from '../../doc/button/styledoc';
-import { TemplateDocComponent } from '../../doc/button/templatedoc';
-import { TemplatesDocComponent } from '../../doc/button/templatesdoc';
-import { TextDocComponent } from '../../doc/button/textdoc';
+import { BadgesDoc } from '../../doc/button/badgesdoc';
+import { BasicDoc } from '../../doc/button/basicdoc';
+import { ButtonsetDoc } from '../../doc/button/buttonsetdoc';
+import { DisabledDoc } from '../../doc/button/disableddoc';
+import { IconsDoc } from '../../doc/button/iconsdoc';
+import { IconOnlyDoc } from '../../doc/button/iconsonlydoc';
+import { ImportDoc } from '../../doc/button/importdoc';
+import { LinkDoc } from '../../doc/button/linkdoc';
+import { LoadingDoc } from '../../doc/button/loadingdoc';
+import { OutlinedDoc } from '../../doc/button/outlineddoc';
+import { PropsDoc } from '../../doc/button/propsdoc';
+import { RaisedDoc } from '../../doc/button/raiseddoc';
+import { RaisedTextDoc } from '../../doc/button/raisedtextdoc';
+import { RoundedDoc } from '../../doc/button/roundeddoc';
+import { SeverityDoc } from '../../doc/button/severitydoc';
+import { SizesDoc } from '../../doc/button/sizesdoc';
+import { StyleDoc } from '../../doc/button/styledoc';
+import { TemplateDoc } from '../../doc/button/templatedoc';
+import { TemplatesDoc } from '../../doc/button/templatesdoc';
+import { TextDoc } from '../../doc/button/textdoc';
 
 @Component({
     templateUrl: './buttondemo.html',
@@ -29,92 +29,92 @@ export class ButtonDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'link',
             label: 'Link',
-            component: LinkDocComponent
+            component: LinkDoc
         },
         {
             id: 'icons',
             label: 'Icons',
-            component: IconsDocComponent
+            component: IconsDoc
         },
         {
             id: 'loading',
             label: 'Loading',
-            component: LoadingDocComponent
+            component: LoadingDoc
         },
         {
             id: 'severity',
             label: 'Severity',
-            component: SeverityDocComponent
+            component: SeverityDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'raised',
             label: 'Raised',
-            component: RaisedDocComponent
+            component: RaisedDoc
         },
         {
             id: 'rounded',
             label: 'Rounded',
-            component: RoundedDocComponent
+            component: RoundedDoc
         },
         {
             id: 'text',
             label: 'Text',
-            component: TextDocComponent
+            component: TextDoc
         },
         {
             id: 'raisedtext',
             label: 'Raised Text',
-            component: RaisedTextDocComponent
+            component: RaisedTextDoc
         },
         {
             id: 'outlined',
             label: 'Outlined',
-            component: OutlinedDocComponent
+            component: OutlinedDoc
         },
         {
             id: 'icononly',
             label: 'Icon Only',
-            component: IconOnlyDocComponent
+            component: IconOnlyDoc
         },
         {
             id: 'badges',
             label: 'Badges',
-            component: BadgesDocComponent
+            component: BadgesDoc
         },
         {
             id: 'buttonset',
             label: 'Button Set',
-            component: ButtonsetDocComponent
+            component: ButtonsetDoc
         },
         {
             id: 'sizes',
             label: 'Sizes',
-            component: SizesDocComponent
+            component: SizesDoc
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: TemplateDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -122,12 +122,12 @@ export class ButtonDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

@@ -28,7 +28,7 @@ interface Country {
         <app-code [code]="code" selector="multiselect-virtualscroll-demo"></app-code>
     </div>`
 })
-export class VirtualScrollDocComponent {
+export class VirtualScrollDoc {
     @Input() id: string;
 
     @Input() title: string;

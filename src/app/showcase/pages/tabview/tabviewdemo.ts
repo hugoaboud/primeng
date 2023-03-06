@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { TabViewDisabledDemo } from '../../doc/tabview/disableddoc';
 import { TabViewBasicDemo } from '../../doc/tabview/basicdoc';
 import { TabViewControlledDemo } from '../../doc/tabview/controlleddoc';
-import { ImportDocComponent } from '../../doc/tabview/importdoc';
+import { ImportDoc } from '../../doc/tabview/importdoc';
 import { TabViewTemplateDemo } from '../../doc/tabview/customtemplatedoc';
 import { TabViewClosableDemo } from '../../doc/tabview/closabledoc';
-import { ScrollableDocComponent } from '../../doc/tabview/scrollabledoc';
-import { StyleDocComponent } from '../../doc/tabview/styledoc';
-import { PropsDocComponent } from '../../doc/tabview/propsdoc';
-import { EventsDocComponent } from '../../doc/tabview/eventsdoc';
-import { TemplatesDocComponent } from '../../doc/tabview/templatesdoc';
+import { ScrollableDoc } from '../../doc/tabview/scrollabledoc';
+import { StyleDoc } from '../../doc/tabview/styledoc';
+import { PropsDoc } from '../../doc/tabview/propsdoc';
+import { EventsDoc } from '../../doc/tabview/eventsdoc';
+import { TemplatesDoc } from '../../doc/tabview/templatesdoc';
 
 @Component({
     templateUrl: './tabviewdemo.html',
@@ -20,7 +20,7 @@ export class TabViewDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -50,12 +50,12 @@ export class TabViewDemo {
         {
             id: 'scrollable',
             label: 'Scrollable',
-            component: ScrollableDocComponent
+            component: ScrollableDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -63,17 +63,17 @@ export class TabViewDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

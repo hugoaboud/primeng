@@ -23,7 +23,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [MessageService]
 })
-export class TextDocComponent {
+export class TextDoc {
     @Input() id: string;
 
     @Input() title: string;

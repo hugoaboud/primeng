@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { StyleDocComponent } from '../../doc/breadcrumb/styledoc';
+import { StyleDoc } from '../../doc/breadcrumb/styledoc';
 import { BreadcrumbBasicDemo } from '../../doc/breadcrumb/basicdoc';
-import { EventsDocComponent } from '../../doc/breadcrumb/eventsdoc';
-import { ImportDocComponent } from '../../doc/breadcrumb/importdoc';
-import { MenuItemDocComponent } from '../../doc/breadcrumb/menuitemdoc';
-import { PropsDocComponent } from '../../doc/breadcrumb/propsdoc';
+import { EventsDoc } from '../../doc/breadcrumb/eventsdoc';
+import { ImportDoc } from '../../doc/breadcrumb/importdoc';
+import { MenuItemDoc } from '../../doc/breadcrumb/menuitemdoc';
+import { PropsDoc } from '../../doc/breadcrumb/propsdoc';
 
 @Component({
     templateUrl: './breadcrumbdemo.html'
@@ -14,7 +14,7 @@ export class BreadcrumbDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             basic: 'basic',
@@ -24,7 +24,7 @@ export class BreadcrumbDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -32,22 +32,22 @@ export class BreadcrumbDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'menuitem',
             label: 'MenuItem API',
-            component: MenuItemDocComponent
+            component: MenuItemDoc
         }
     ];
 }

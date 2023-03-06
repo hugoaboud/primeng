@@ -12,30 +12,30 @@ import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { StepsBasicDemo } from './basicdoc';
 import { ConfirmationDemo } from './confirmationdemo';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
 import { StepsInteractiveDemo } from './interactivedoc';
-import { MenuItemDocComponent } from './menuitemdoc';
-import { MethodsDocComponent } from './methodsdoc';
+import { MenuItemDoc } from './menuitemdoc';
+import { MethodsDoc } from './methodsdoc';
 import { PaymentDemo } from './paymentdemo';
 import { PersonalDemo } from './personaldemo';
-import { PropsDocComponent } from './propsdoc';
+import { PropsDoc } from './propsdoc';
 import { StepsRoutingDemo } from './routingdoc';
 import { SeatDemo } from './seatdemo';
-import { StyleDocComponent } from './styledoc';
+import { StyleDoc } from './styledoc';
 import { TicketService } from '../../service/ticketservice';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, StepsModule, ToastModule, AppDocModule, FormsModule, DropdownModule, InputTextModule, InputMaskModule, CheckboxModule, CardModule],
     declarations: [
         StepsBasicDemo,
-        ImportDocComponent,
-        MenuItemDocComponent,
-        MethodsDocComponent,
-        PropsDocComponent,
-        StyleDocComponent,
+        ImportDoc,
+        MenuItemDoc,
+        MethodsDoc,
+        PropsDoc,
+        StyleDoc,
         StepsInteractiveDemo,
-        EventsDocComponent,
+        EventsDoc,
         ConfirmationDemo,
         PaymentDemo,
         PersonalDemo,

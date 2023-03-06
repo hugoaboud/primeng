@@ -6,16 +6,16 @@ import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { MenubarTemplateDemo } from './templatedoc';
 import { MenubarBasicDemo } from './basicdoc';
-import { ImportDocComponent } from './importdoc';
-import { MenuItemDocComponent } from './menuitemdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { ImportDoc } from './importdoc';
+import { MenuItemDoc } from './menuitemdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
+import { TemplatesDoc } from './templatesdoc';
 import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, MenubarModule, InputTextModule, AppDocModule],
-    declarations: [MenubarBasicDemo, ImportDocComponent, MenuItemDocComponent, PropsDocComponent, StyleDocComponent, MenubarTemplateDemo, TemplatesDocComponent],
+    declarations: [MenubarBasicDemo, ImportDoc, MenuItemDoc, PropsDoc, StyleDoc, MenubarTemplateDemo, TemplatesDoc],
     exports: [AppDocModule]
 })
 export class MenubarDocModule {}

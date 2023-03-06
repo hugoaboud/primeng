@@ -9,17 +9,17 @@ import { TabViewBasicDemo } from './basicdoc';
 import { TabViewControlledDemo } from './controlleddoc';
 import { TabViewDisabledDemo } from './disableddoc';
 import { TabViewTemplateDemo } from './customtemplatedoc';
-import { ImportDocComponent } from './importdoc';
+import { ImportDoc } from './importdoc';
 import { TabViewClosableDemo } from './closabledoc';
-import { ScrollableDocComponent } from './scrollabledoc';
-import { StyleDocComponent } from './styledoc';
-import { PropsDocComponent } from './propsdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { ScrollableDoc } from './scrollabledoc';
+import { StyleDoc } from './styledoc';
+import { PropsDoc } from './propsdoc';
+import { EventsDoc } from './eventsdoc';
+import { TemplatesDoc } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, TabViewModule, RouterModule, ButtonModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, TabViewBasicDemo, TabViewControlledDemo, TabViewDisabledDemo, TabViewTemplateDemo, TabViewClosableDemo, ScrollableDocComponent, StyleDocComponent, PropsDocComponent, EventsDocComponent, TemplatesDocComponent]
+    declarations: [ImportDoc, TabViewBasicDemo, TabViewControlledDemo, TabViewDisabledDemo, TabViewTemplateDemo, TabViewClosableDemo, ScrollableDoc, StyleDoc, PropsDoc, EventsDoc, TemplatesDoc]
 })
 export class TabViewDocModule {}

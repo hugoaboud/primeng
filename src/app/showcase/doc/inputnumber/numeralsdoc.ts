@@ -28,7 +28,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputnumber-numerals-demo"></app-code>
     </div>`
 })
-export class NumeralsDocComponent {
+export class NumeralsDoc {
     @Input() id: string;
 
     @Input() title: string;

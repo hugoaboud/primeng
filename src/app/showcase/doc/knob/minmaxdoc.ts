@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="knob-minmax-demo"></app-code>
     </div>`
 })
-export class MinMaxDocComponent {
+export class MinMaxDoc {
     @Input() id: string;
 
     @Input() title: string;

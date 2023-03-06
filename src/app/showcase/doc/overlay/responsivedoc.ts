@@ -29,7 +29,7 @@ import { Code } from '../../domain/code';
         </div>
     </div>`
 })
-export class ResponsiveDocComponent {
+export class ResponsiveDoc {
     @Input() id: string;
 
     @Input() title: string;

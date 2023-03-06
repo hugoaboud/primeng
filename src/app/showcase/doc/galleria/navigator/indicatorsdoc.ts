@@ -24,7 +24,7 @@ import { PhotoService } from '../../../service/photoservice';
     </div>`,
     providers: [PhotoService]
 })
-export class IndicatorsDocComponent implements OnInit {
+export class IndicatorsDoc implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/treeselect/basicdoc';
-import { CheckboxDocComponent } from '../../doc/treeselect/checkboxdoc';
-import { DisabledDocComponent } from '../../doc/treeselect/disableddoc';
-import { EventsDocComponent } from '../../doc/treeselect/eventsdoc';
-import { FilterDocComponent } from '../../doc/treeselect/filterdoc';
-import { FloatLabelDocComponent } from '../../doc/treeselect/floatlabeldoc';
-import { ImportDocComponent } from '../../doc/treeselect/importdoc';
-import { InvalidDocComponent } from '../../doc/treeselect/invaliddoc';
-import { MultipleDocComponent } from '../../doc/treeselect/multipledoc';
-import { PropsDocComponent } from '../../doc/treeselect/propsdoc';
-import { StyleDocComponent } from '../../doc/treeselect/styledoc';
-import { TemplatesDocComponent } from '../../doc/treeselect/templatesdoc';
+import { BasicDoc } from '../../doc/treeselect/basicdoc';
+import { CheckboxDoc } from '../../doc/treeselect/checkboxdoc';
+import { DisabledDoc } from '../../doc/treeselect/disableddoc';
+import { EventsDoc } from '../../doc/treeselect/eventsdoc';
+import { FilterDoc } from '../../doc/treeselect/filterdoc';
+import { FloatLabelDoc } from '../../doc/treeselect/floatlabeldoc';
+import { ImportDoc } from '../../doc/treeselect/importdoc';
+import { InvalidDoc } from '../../doc/treeselect/invaliddoc';
+import { MultipleDoc } from '../../doc/treeselect/multipledoc';
+import { PropsDoc } from '../../doc/treeselect/propsdoc';
+import { StyleDoc } from '../../doc/treeselect/styledoc';
+import { TemplatesDoc } from '../../doc/treeselect/templatesdoc';
 
 @Component({
     templateUrl: './treeselectdemo.html'
@@ -20,47 +20,47 @@ export class TreeSelectDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'multiple',
             label: 'Multiple',
-            component: MultipleDocComponent
+            component: MultipleDoc
         },
         {
             id: 'checkbox',
             label: 'Checkbox',
-            component: CheckboxDocComponent
+            component: CheckboxDoc
         },
         {
             id: 'filter',
             label: 'Filter',
-            component: FilterDocComponent
+            component: FilterDoc
         },
         {
             id: 'floatlabel',
             label: 'Float Label',
-            component: FloatLabelDocComponent
+            component: FloatLabelDoc
         },
         {
             id: 'invalid',
             label: 'Invalid',
-            component: InvalidDocComponent
+            component: InvalidDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -68,17 +68,17 @@ export class TreeSelectDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

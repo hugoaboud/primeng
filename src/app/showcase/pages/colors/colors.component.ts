@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { OverviewDocComponent } from '../../doc/colors/overviewdoc';
-import { PaletteDocComponent } from '../../doc/colors/palettedoc';
-import { SurfacesDocComponent } from '../../doc/colors/surfacesdoc';
+import { OverviewDoc } from '../../doc/colors/overviewdoc';
+import { PaletteDoc } from '../../doc/colors/palettedoc';
+import { SurfacesDoc } from '../../doc/colors/surfacesdoc';
 
 @Component({
     templateUrl: './colors.component.html'
@@ -11,17 +11,17 @@ export class ColorsDemoComponent {
         {
             id: 'overview',
             label: 'Overview',
-            component: OverviewDocComponent
+            component: OverviewDoc
         },
         {
             id: 'surfaces',
             label: 'Surfaces',
-            component: SurfacesDocComponent
+            component: SurfacesDoc
         },
         {
             id: 'palette',
             label: 'Palette',
-            component: PaletteDocComponent
+            component: PaletteDoc
         }
     ];
 }

@@ -22,7 +22,7 @@ import { CountryService } from '../../service/countryservice';
         <app-code [code]="code" selector="autocomplete-template-demo"></app-code>
     </div>`
 })
-export class TemplateDocComponent {
+export class TemplateDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputmask-slotchar-demo"></app-code>
     </div>`
 })
-export class SlotCharDocComponent {
+export class SlotCharDoc {
     @Input() id: string;
 
     @Input() title: string;

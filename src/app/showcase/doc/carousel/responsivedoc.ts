@@ -39,7 +39,7 @@ import { ProductService } from '../../service/productservice';
         <app-code [code]="code" selector="carousel-responsive-demo" [extFiles]="extFiles"></app-code>
     </div>`
 })
-export class ResponsiveDocComponent implements OnInit {
+export class ResponsiveDoc implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

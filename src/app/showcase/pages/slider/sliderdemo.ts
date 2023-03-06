@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/slider/basicdoc';
-import { EventsDocComponent } from '../../doc/slider/eventsdoc';
-import { ImportDocComponent } from '../../doc/slider/importdoc';
-import { InputDocComponent } from '../../doc/slider/inputdoc';
-import { PropsDocComponent } from '../../doc/slider/propsdoc';
-import { RangeDocComponent } from '../../doc/slider/rangedoc';
-import { StepDocComponent } from '../../doc/slider/stepdoc';
-import { StyleDocComponent } from '../../doc/slider/styledoc';
-import { VerticalDocComponent } from '../../doc/slider/verticaldoc';
+import { BasicDoc } from '../../doc/slider/basicdoc';
+import { EventsDoc } from '../../doc/slider/eventsdoc';
+import { ImportDoc } from '../../doc/slider/importdoc';
+import { InputDoc } from '../../doc/slider/inputdoc';
+import { PropsDoc } from '../../doc/slider/propsdoc';
+import { RangeDoc } from '../../doc/slider/rangedoc';
+import { StepDoc } from '../../doc/slider/stepdoc';
+import { StyleDoc } from '../../doc/slider/styledoc';
+import { VerticalDoc } from '../../doc/slider/verticaldoc';
 
 @Component({
     templateUrl: './sliderdemo.html',
@@ -18,37 +18,37 @@ export class SliderDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'input',
             label: 'Input',
-            component: InputDocComponent
+            component: InputDoc
         },
         {
             id: 'step',
             label: 'Step',
-            component: StepDocComponent
+            component: StepDoc
         },
         {
             id: 'range',
             label: 'Range',
-            component: RangeDocComponent
+            component: RangeDoc
         },
         {
             id: 'vertical',
             label: 'Vertical',
-            component: VerticalDocComponent
+            component: VerticalDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -56,12 +56,12 @@ export class SliderDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

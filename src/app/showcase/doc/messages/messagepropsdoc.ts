@@ -50,7 +50,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class MessagePropsDocComponent {
+export class MessagePropsDoc {
     @Input() id: string;
 
     @Input() title: string;

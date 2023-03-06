@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="chips-commaseperator-demo"></app-code>
     </div>`
 })
-export class CommaSeperatorDocComponent {
+export class CommaSeperatorDoc {
     @Input() id: string;
 
     @Input() title: string;

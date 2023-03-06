@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { ImportDocComponent } from './importdoc';
-import { DisabledDocComponent } from './disableddoc';
-import { PropsDocComponent } from './propsdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { StyleDocComponent } from './styledoc';
+import { BasicDoc } from './basicdoc';
+import { ImportDoc } from './importdoc';
+import { DisabledDoc } from './disableddoc';
+import { PropsDoc } from './propsdoc';
+import { EventsDoc } from './eventsdoc';
+import { StyleDoc } from './styledoc';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, TriStateCheckboxModule, FormsModule, RouterModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, BasicDocComponent, DisabledDocComponent, PropsDocComponent, EventsDocComponent, StyleDocComponent]
+    declarations: [ImportDoc, BasicDoc, DisabledDoc, PropsDoc, EventsDoc, StyleDoc]
 })
 export class TristatecheckboxDocModule {}

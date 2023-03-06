@@ -5,21 +5,21 @@ import { InputTextModule } from 'primeng/inputtext';
 import { KeyFilterModule } from 'primeng/keyfilter';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { DisabledDocComponent } from './disableddoc';
-import { FloatLabelDocComponent } from './floatlabeldoc';
-import { HelpTextDocComponent } from './helptextdoc';
-import { IconsDocComponent } from './iconsdoc';
-import { ImportDocComponent } from './importdoc';
-import { InvalidDocComponent } from './invaliddoc';
-import { KeyFilterDocComponent } from './keyfilterdoc';
-import { PropsDocComponent } from './propsdoc';
-import { SizesDocComponent } from './sizesdoc';
-import { StyleDocComponent } from './styledoc';
+import { BasicDoc } from './basicdoc';
+import { DisabledDoc } from './disableddoc';
+import { FloatLabelDoc } from './floatlabeldoc';
+import { HelpTextDoc } from './helptextdoc';
+import { IconsDoc } from './iconsdoc';
+import { ImportDoc } from './importdoc';
+import { InvalidDoc } from './invaliddoc';
+import { KeyFilterDoc } from './keyfilterdoc';
+import { PropsDoc } from './propsdoc';
+import { SizesDoc } from './sizesdoc';
+import { StyleDoc } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, InputTextModule, FormsModule, AppDocModule, KeyFilterModule],
-    declarations: [BasicDocComponent, DisabledDocComponent, FloatLabelDocComponent, HelpTextDocComponent, IconsDocComponent, InvalidDocComponent, KeyFilterDocComponent, SizesDocComponent, ImportDocComponent, PropsDocComponent, StyleDocComponent],
+    declarations: [BasicDoc, DisabledDoc, FloatLabelDoc, HelpTextDoc, IconsDoc, InvalidDoc, KeyFilterDoc, SizesDoc, ImportDoc, PropsDoc, StyleDoc],
     exports: [AppDocModule]
 })
 export class InputtextDocModule {}

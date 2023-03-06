@@ -43,7 +43,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class ColorsDocComponent {
+export class ColorsDoc {
     @Input() id: string;
 
     @Input() title: string;

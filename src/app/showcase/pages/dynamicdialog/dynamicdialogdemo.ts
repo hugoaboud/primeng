@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { OpenDocComponent } from '../../doc/dynamicdialog/opendoc';
-import { ImportDocComponent } from '../../doc/dynamicdialog/importdoc';
-import { PropsDocComponent } from '../../doc/dynamicdialog/propsdoc';
-import { StyleDocComponent } from '../../doc/dynamicdialog/styledoc';
+import { OpenDoc } from '../../doc/dynamicdialog/opendoc';
+import { ImportDoc } from '../../doc/dynamicdialog/importdoc';
+import { PropsDoc } from '../../doc/dynamicdialog/propsdoc';
+import { StyleDoc } from '../../doc/dynamicdialog/styledoc';
 import { DynamicDialogBasicDemo } from '../../doc/dynamicdialog/basicdoc';
-import { UsageDocComponent } from '../../doc/dynamicdialog/usagedoc';
-import { PassingDataDocComponent } from '../../doc/dynamicdialog/passingdatadoc';
-import { CloseDocComponent } from '../../doc/dynamicdialog/closedoc';
+import { UsageDoc } from '../../doc/dynamicdialog/usagedoc';
+import { PassingDataDoc } from '../../doc/dynamicdialog/passingdatadoc';
+import { CloseDoc } from '../../doc/dynamicdialog/closedoc';
 import { ProductListDemoDoc } from '../../doc/dynamicdialog/productlistdemodoc';
-import { EventsDocComponent } from '../../doc/dynamicdialog/eventsdoc';
+import { EventsDoc } from '../../doc/dynamicdialog/eventsdoc';
 
 @Component({
     templateUrl: './dynamicdialogdemo.html'
@@ -18,7 +18,7 @@ export class DynamicDialogDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -28,22 +28,22 @@ export class DynamicDialogDemo {
         {
             id: 'usage',
             label: 'Usage',
-            component: UsageDocComponent
+            component: UsageDoc
         },
         {
             id: 'open',
             label: 'Opening a Dialog',
-            component: OpenDocComponent
+            component: OpenDoc
         },
         {
             id: 'passingdata',
             label: 'Passing Data',
-            component: PassingDataDocComponent
+            component: PassingDataDoc
         },
         {
             id: 'close',
             label: 'Closing a Dialog',
-            component: CloseDocComponent
+            component: CloseDoc
         },
         {
             id: 'productlistdemo',
@@ -53,7 +53,7 @@ export class DynamicDialogDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -61,12 +61,12 @@ export class DynamicDialogDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

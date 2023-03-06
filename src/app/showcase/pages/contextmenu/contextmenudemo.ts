@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { ContextMenuBasicDemo } from '../../doc/contextmenu/basicdoc';
 import { ContextMenuDocumentDemo } from '../../doc/contextmenu/documentdoc';
-import { EventsDocComponent } from '../../doc/contextmenu/eventsdoc';
-import { ImportDocComponent } from '../../doc/contextmenu/importdoc';
-import { MenuItemDocComponent } from '../../doc/contextmenu/menuitemdoc';
-import { MethodsDocComponent } from '../../doc/contextmenu/methodsdoc';
-import { PropsDocComponent } from '../../doc/contextmenu/propsdoc';
-import { StyleDocComponent } from '../../doc/contextmenu/styledoc';
+import { EventsDoc } from '../../doc/contextmenu/eventsdoc';
+import { ImportDoc } from '../../doc/contextmenu/importdoc';
+import { MenuItemDoc } from '../../doc/contextmenu/menuitemdoc';
+import { MethodsDoc } from '../../doc/contextmenu/methodsdoc';
+import { PropsDoc } from '../../doc/contextmenu/propsdoc';
+import { StyleDoc } from '../../doc/contextmenu/styledoc';
 import { ContextMenuTriggerEventDemo } from '../../doc/contextmenu/triggereventdoc';
 
 @Component({
@@ -17,7 +17,7 @@ export class ContextMenuDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -37,7 +37,7 @@ export class ContextMenuDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -45,22 +45,22 @@ export class ContextMenuDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'menuitem',
             label: 'MenuItem API',
-            component: MenuItemDocComponent
+            component: MenuItemDoc
         }
     ];
 }

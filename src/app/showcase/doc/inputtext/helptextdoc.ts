@@ -17,7 +17,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputtext-helptext-demo"></app-code>
     </div>`
 })
-export class HelpTextDocComponent {
+export class HelpTextDoc {
     value: string;
 
     @Input() id: string;

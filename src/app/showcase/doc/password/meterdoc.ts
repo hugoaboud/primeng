@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="password-meter-demo"></app-code>
     </div>`
 })
-export class MeterDocComponent {
+export class MeterDoc {
     @Input() id: string;
 
     @Input() title: string;

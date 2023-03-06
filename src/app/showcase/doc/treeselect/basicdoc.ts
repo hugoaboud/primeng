@@ -14,7 +14,7 @@ import { NodeService } from '../../service/nodeservice';
         <app-code [code]="code" selector="tree-select-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class BasicDoc {
     @Input() id: string;
 
     @Input() title: string;

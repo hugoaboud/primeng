@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { StepsBasicDemo } from '../../doc/steps/basicdoc';
-import { ImportDocComponent } from '../../doc/steps/importdoc';
+import { ImportDoc } from '../../doc/steps/importdoc';
 import { StepsInteractiveDemo } from '../../doc/steps/interactivedoc';
-import { MenuItemDocComponent } from '../../doc/steps/menuitemdoc';
-import { MethodsDocComponent } from '../../doc/steps/methodsdoc';
-import { PropsDocComponent } from '../../doc/steps/propsdoc';
-import { StyleDocComponent } from '../../doc/steps/styledoc';
-import { EventsDocComponent } from '../../doc/steps/eventsdoc';
+import { MenuItemDoc } from '../../doc/steps/menuitemdoc';
+import { MethodsDoc } from '../../doc/steps/methodsdoc';
+import { PropsDoc } from '../../doc/steps/propsdoc';
+import { StyleDoc } from '../../doc/steps/styledoc';
+import { EventsDoc } from '../../doc/steps/eventsdoc';
 import { StepsRoutingDemo } from '../../doc/steps/routingdoc';
 
 @Component({
@@ -18,7 +18,7 @@ export class StepsDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -38,7 +38,7 @@ export class StepsDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -46,22 +46,22 @@ export class StepsDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'menuitem',
             label: 'MenuItem API',
-            component: MenuItemDocComponent
+            component: MenuItemDoc
         }
     ];
 }

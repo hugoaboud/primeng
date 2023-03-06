@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { ConfirmDialogBasicDemo } from '../../doc/confirmdialog/basicdoc';
-import { EventsDocComponent } from '../../doc/confirmdialog/eventsdoc';
-import { ImportDocComponent } from '../../doc/confirmdialog/importdoc';
-import { PropsDocComponent } from '../../doc/confirmdialog/propsdoc';
-import { StyleDocComponent } from '../../doc/confirmdialog/styledoc';
+import { EventsDoc } from '../../doc/confirmdialog/eventsdoc';
+import { ImportDoc } from '../../doc/confirmdialog/importdoc';
+import { PropsDoc } from '../../doc/confirmdialog/propsdoc';
+import { StyleDoc } from '../../doc/confirmdialog/styledoc';
 import { ConfirmDialogPositionDemo } from '../../doc/confirmdialog/positiondoc';
 import { ConfirmDialogTemplateDemo } from '../../doc/confirmdialog/customdoc';
-import { ServiceDocComponent } from '../../doc/confirmdialog/servicedoc';
-import { TemplatesDocComponent } from '../../doc/confirmdialog/templatesdoc';
+import { ServiceDoc } from '../../doc/confirmdialog/servicedoc';
+import { TemplatesDoc } from '../../doc/confirmdialog/templatesdoc';
 
 @Component({
     templateUrl: './confirmdialogdemo.html'
@@ -17,7 +17,7 @@ export class ConfirmDialogDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -37,7 +37,7 @@ export class ConfirmDialogDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -45,22 +45,22 @@ export class ConfirmDialogDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         },
         {
             id: 'service',
             label: 'Confirmation Service',
-            component: ServiceDocComponent
+            component: ServiceDoc
         }
     ];
 }

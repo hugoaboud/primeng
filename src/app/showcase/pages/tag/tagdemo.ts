@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { TagIconDemo } from '../../doc/tag/icondoc';
-import { ImportDocComponent } from '../../doc/tag/importdoc';
+import { ImportDoc } from '../../doc/tag/importdoc';
 import { TagSeverityDemo } from '../../doc/tag/severitydoc';
 import { TagBasicDDemo } from '../../doc/tag/basicdoc';
-import { PropsDocComponent } from '../../doc/tag/propsdoc';
-import { StyleDocComponent } from '../../doc/tag/styledoc';
+import { PropsDoc } from '../../doc/tag/propsdoc';
+import { StyleDoc } from '../../doc/tag/styledoc';
 import { TagPillDemo } from '../../doc/tag/pilldoc';
 import { TagTemplateDemo } from '../../doc/tag/templatedoc';
 
@@ -16,7 +16,7 @@ export class TagDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -46,7 +46,7 @@ export class TagDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -54,7 +54,7 @@ export class TagDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

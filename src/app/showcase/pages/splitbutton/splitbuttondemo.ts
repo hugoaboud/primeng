@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
-import { TextDocComponent } from '../../doc/splitbutton/textdoc';
-import { BasicDocComponent } from '../../doc/splitbutton/basicdoc';
-import { ImportDocComponent } from '../../doc/splitbutton/importdoc';
-import { NestedDocComponent } from '../../doc/splitbutton/nesteddoc';
-import { RaisedDocComponent } from '../../doc/splitbutton/raiseddoc';
-import { RoundedDocComponent } from '../../doc/splitbutton/roundeddoc';
-import { SeverityDocComponent } from '../../doc/splitbutton/severitydoc';
-import { RaisedTextDocComponent } from '../../doc/splitbutton/raisedtextdoc';
-import { OutlinedDocComponent } from '../../doc/splitbutton/outlineddoc';
-import { SizesDocComponent } from '../../doc/splitbutton/sizesdoc';
-import { DisabledDocComponent } from '../../doc/splitbutton/disableddoc';
-import { StyleDocComponent } from '../../doc/splitbutton/styledoc';
-import { PropsDocComponent } from '../../doc/splitbutton/propsdoc';
-import { EventsDocComponent } from '../../doc/splitbutton/eventsdoc';
-import { TemplatesDocComponent } from '../../doc/splitbutton/templatesdoc';
+import { TextDoc } from '../../doc/splitbutton/textdoc';
+import { BasicDoc } from '../../doc/splitbutton/basicdoc';
+import { ImportDoc } from '../../doc/splitbutton/importdoc';
+import { NestedDoc } from '../../doc/splitbutton/nesteddoc';
+import { RaisedDoc } from '../../doc/splitbutton/raiseddoc';
+import { RoundedDoc } from '../../doc/splitbutton/roundeddoc';
+import { SeverityDoc } from '../../doc/splitbutton/severitydoc';
+import { RaisedTextDoc } from '../../doc/splitbutton/raisedtextdoc';
+import { OutlinedDoc } from '../../doc/splitbutton/outlineddoc';
+import { SizesDoc } from '../../doc/splitbutton/sizesdoc';
+import { DisabledDoc } from '../../doc/splitbutton/disableddoc';
+import { StyleDoc } from '../../doc/splitbutton/styledoc';
+import { PropsDoc } from '../../doc/splitbutton/propsdoc';
+import { EventsDoc } from '../../doc/splitbutton/eventsdoc';
+import { TemplatesDoc } from '../../doc/splitbutton/templatesdoc';
 
 @Component({
     templateUrl: './splitbuttondemo.html'
@@ -23,62 +23,62 @@ export class SplitButtonDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'nested',
             label: 'Nested',
-            component: NestedDocComponent
+            component: NestedDoc
         },
         {
             id: 'severity',
             label: 'Severity',
-            component: SeverityDocComponent
+            component: SeverityDoc
         },
         {
             id: 'raised',
             label: 'Raised',
-            component: RaisedDocComponent
+            component: RaisedDoc
         },
         {
             id: 'rounded',
             label: 'Rounded',
-            component: RoundedDocComponent
+            component: RoundedDoc
         },
         {
             id: 'text',
             label: 'Text',
-            component: TextDocComponent
+            component: TextDoc
         },
         {
             id: 'raisedtext',
             label: 'Raised Text',
-            component: RaisedTextDocComponent
+            component: RaisedTextDoc
         },
         {
             id: 'outlined',
             label: 'Outlined',
-            component: OutlinedDocComponent
+            component: OutlinedDoc
         },
         {
             id: 'sizes',
             label: 'Sizes',
-            component: SizesDocComponent
+            component: SizesDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -86,17 +86,17 @@ export class SplitButtonDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

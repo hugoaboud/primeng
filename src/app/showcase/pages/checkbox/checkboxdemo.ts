@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { LabelDocComponent } from '../../doc/checkbox/labeldoc';
-import { BasicDocComponent } from '../../doc/checkbox/basicdoc';
-import { ImportDocComponent } from '../../doc/checkbox/importdoc';
-import { MultipleDocComponent } from '../../doc/checkbox/multipledoc';
-import { DynamicDocComponent } from '../../doc/checkbox/dynamicdoc';
-import { DisabledDocComponent } from '../../doc/checkbox/disableddoc';
-import { StyleDocComponent } from '../../doc/checkbox/styledoc';
-import { PropsDocComponent } from '../../doc/checkbox/propsdoc';
+import { LabelDoc } from '../../doc/checkbox/labeldoc';
+import { BasicDoc } from '../../doc/checkbox/basicdoc';
+import { ImportDoc } from '../../doc/checkbox/importdoc';
+import { MultipleDoc } from '../../doc/checkbox/multipledoc';
+import { DynamicDoc } from '../../doc/checkbox/dynamicdoc';
+import { DisabledDoc } from '../../doc/checkbox/disableddoc';
+import { StyleDoc } from '../../doc/checkbox/styledoc';
+import { PropsDoc } from '../../doc/checkbox/propsdoc';
 
 @Component({
     templateUrl: './checkboxdemo.html'
@@ -16,37 +16,37 @@ export class CheckboxDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'multiple',
             label: 'Multiple',
-            component: MultipleDocComponent
+            component: MultipleDoc
         },
         {
             id: 'label',
             label: 'Label',
-            component: LabelDocComponent
+            component: LabelDoc
         },
         {
             id: 'dynamic',
             label: 'Dynamic',
-            component: DynamicDocComponent
+            component: DynamicDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -54,7 +54,7 @@ export class CheckboxDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

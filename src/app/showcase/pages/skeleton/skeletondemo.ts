@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { PropsDocComponent } from '../../doc/skeleton/propsdoc';
-import { StyleDocComponent } from '../../doc/skeleton/styledoc';
-import { CardDocComponent } from '../../doc/skeleton/carddoc';
-import { DataTableDocComponent } from '../../doc/skeleton/datatabledoc';
-import { ImportDocComponent } from '../../doc/skeleton/importdoc';
-import { ListDocComponent } from '../../doc/skeleton/listdoc';
-import { ShapesDocComponent } from '../../doc/skeleton/shapesdoc';
+import { PropsDoc } from '../../doc/skeleton/propsdoc';
+import { StyleDoc } from '../../doc/skeleton/styledoc';
+import { CardDoc } from '../../doc/skeleton/carddoc';
+import { DataTableDoc } from '../../doc/skeleton/datatabledoc';
+import { ImportDoc } from '../../doc/skeleton/importdoc';
+import { ListDoc } from '../../doc/skeleton/listdoc';
+import { ShapesDoc } from '../../doc/skeleton/shapesdoc';
 
 @Component({
     templateUrl: './skeletondemo.html',
@@ -16,32 +16,32 @@ export class SkeletonDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'shapes',
             label: 'Shapes',
-            component: ShapesDocComponent
+            component: ShapesDoc
         },
         {
             id: 'card',
             label: 'Card',
-            component: CardDocComponent
+            component: CardDoc
         },
         {
             id: 'list',
             label: 'List',
-            component: ListDocComponent
+            component: ListDoc
         },
         {
             id: 'datatable',
             label: 'DataTable',
-            component: DataTableDocComponent
+            component: DataTableDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -49,7 +49,7 @@ export class SkeletonDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

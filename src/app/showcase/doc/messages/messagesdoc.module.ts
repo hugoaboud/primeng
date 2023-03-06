@@ -6,12 +6,12 @@ import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { ImportDocComponent } from './importdoc';
+import { ImportDoc } from './importdoc';
 import { MessagesBasicDemo } from './basicdoc';
-import { MessagesStyleDocComponent } from './messagesstyledoc';
-import { MessageStyleDocComponent } from './messagestyledoc';
-import { MessagesPropsDocComponent } from './messagespropsdoc';
-import { MessagePropsDocComponent } from './messagepropsdoc';
+import { MessagesStyleDoc } from './messagesstyledoc';
+import { MessageStyleDoc } from './messagestyledoc';
+import { MessagesPropsDoc } from './messagespropsdoc';
+import { MessagePropsDoc } from './messagepropsdoc';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { MessagesSeverityDemo } from './severitydoc';
@@ -21,25 +21,25 @@ import { MessagesDynamicDemo } from './dynamicdoc';
 import { MessagesServiceDemo } from './servicedoc';
 import { MessagesInlineDemo } from './inlinedoc';
 import { MessagesAnimationDemo } from './animationdoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { TemplatesDoc } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, FormsModule, RouterModule, MessagesModule, ButtonModule, MessageModule, InputTextModule, AppDocModule],
     declarations: [
         MessagesBasicDemo,
-        ImportDocComponent,
+        ImportDoc,
         MessagesClosableDemo,
         MessagesStaticDemo,
         MessagesDynamicDemo,
         MessagesServiceDemo,
         MessagesSeverityDemo,
         MessagesInlineDemo,
-        MessagesStyleDocComponent,
+        MessagesStyleDoc,
         MessagesAnimationDemo,
-        MessageStyleDocComponent,
-        MessagesPropsDocComponent,
-        MessagePropsDocComponent,
-        TemplatesDocComponent
+        MessageStyleDoc,
+        MessagesPropsDoc,
+        MessagePropsDoc,
+        TemplatesDoc
     ],
     exports: [AppDocModule]
 })

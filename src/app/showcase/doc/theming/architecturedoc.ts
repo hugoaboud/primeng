@@ -14,7 +14,7 @@ import { Component, Input } from '@angular/core';
         <img alt="Architecture" src="assets/showcase/images/architecture.jpg" class="w-full mb-5" />
     </div>`
 })
-export class ArchitectureDocComponent {
+export class ArchitectureDoc {
     @Input() id: string;
 
     @Input() title: string;

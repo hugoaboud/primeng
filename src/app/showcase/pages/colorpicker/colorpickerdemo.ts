@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { InlineDocComponent } from '../../doc/colorpicker/inlinedoc';
-import { BasicDocComponent } from '../../doc/colorpicker/basicdoc';
-import { ImportDocComponent } from '../../doc/colorpicker/importdoc';
-import { FormatDocComponent } from '../../doc/colorpicker/formatdoc';
-import { DisabledDocComponent } from '../../doc/colorpicker/disableddoc';
-import { PropsDocComponent } from '../../doc/colorpicker/propsdoc';
-import { StyleDocComponent } from '../../doc/colorpicker/styledoc';
-import { EventsDocComponent } from '../../doc/colorpicker/eventsdoc';
+import { InlineDoc } from '../../doc/colorpicker/inlinedoc';
+import { BasicDoc } from '../../doc/colorpicker/basicdoc';
+import { ImportDoc } from '../../doc/colorpicker/importdoc';
+import { FormatDoc } from '../../doc/colorpicker/formatdoc';
+import { DisabledDoc } from '../../doc/colorpicker/disableddoc';
+import { PropsDoc } from '../../doc/colorpicker/propsdoc';
+import { StyleDoc } from '../../doc/colorpicker/styledoc';
+import { EventsDoc } from '../../doc/colorpicker/eventsdoc';
 
 @Component({
     templateUrl: './colorpickerdemo.html'
@@ -16,32 +16,32 @@ export class ColorPickerDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'inline',
             label: 'Inline',
-            component: InlineDocComponent
+            component: InlineDoc
         },
         {
             id: 'format',
             label: 'Format',
-            component: FormatDocComponent
+            component: FormatDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -49,12 +49,12 @@ export class ColorPickerDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

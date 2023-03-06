@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class VideosDocComponent {
+export class VideosDoc {
     @Input() id: string;
 
     @Input() title: string;

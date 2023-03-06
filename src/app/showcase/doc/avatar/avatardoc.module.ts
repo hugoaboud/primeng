@@ -11,35 +11,35 @@ import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { AvatarGroupDemo } from './avatargroupdoc';
 import { AvatarIconDemo } from './icondoc';
 import { AvatarImageDemo } from './imagedoc';
-import { ImportDocComponent } from './importdoc';
+import { ImportDoc } from './importdoc';
 import { AvatarLabelDemo } from './labeldoc';
-import { AvatarStyleDocComponent } from './avatarstyledoc';
+import { AvatarStyleDoc } from './avatarstyledoc';
 import { AvatarShapeDemo } from './shapedoc';
 import { AvatarSizeDemo } from './sizedoc';
 import { AvatarBadgeDemo } from './badgedoc';
 import { AvatarTemplatingDemo } from './templatingdoc';
-import { AvatarGroupStyleDocComponent } from './avatargroupstyledoc';
-import { AvatarPropsDocComponent } from './avatarpropsdoc';
-import { AvatarGroupPropsDocComponent } from './avatargrouppropsdoc';
-import { EventsDocComponent } from './eventsdoc';
+import { AvatarGroupStyleDoc } from './avatargroupstyledoc';
+import { AvatarPropsDoc } from './avatarpropsdoc';
+import { AvatarGroupPropsDoc } from './avatargrouppropsdoc';
+import { EventsDoc } from './eventsdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, InputTextModule, FormsModule, AppDocModule, AvatarModule, AvatarGroupModule, BadgeModule],
     declarations: [
-        ImportDocComponent,
+        ImportDoc,
         AvatarLabelDemo,
         AvatarIconDemo,
         AvatarGroupDemo,
         AvatarImageDemo,
-        AvatarStyleDocComponent,
-        AvatarGroupStyleDocComponent,
+        AvatarStyleDoc,
+        AvatarGroupStyleDoc,
         AvatarShapeDemo,
         AvatarSizeDemo,
         AvatarBadgeDemo,
         AvatarTemplatingDemo,
-        AvatarPropsDocComponent,
-        AvatarGroupPropsDocComponent,
-        EventsDocComponent
+        AvatarPropsDoc,
+        AvatarGroupPropsDoc,
+        EventsDoc
     ],
     exports: [AppDocModule]
 })

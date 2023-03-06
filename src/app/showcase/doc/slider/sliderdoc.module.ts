@@ -6,19 +6,19 @@ import { InputTextModule } from 'primeng/inputtext';
 import { SliderModule } from 'primeng/slider';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
-import { InputDocComponent } from './inputdoc';
-import { PropsDocComponent } from './propsdoc';
-import { RangeDocComponent } from './rangedoc';
-import { StepDocComponent } from './stepdoc';
-import { StyleDocComponent } from './styledoc';
-import { VerticalDocComponent } from './verticaldoc';
+import { BasicDoc } from './basicdoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { InputDoc } from './inputdoc';
+import { PropsDoc } from './propsdoc';
+import { RangeDoc } from './rangedoc';
+import { StepDoc } from './stepdoc';
+import { StyleDoc } from './styledoc';
+import { VerticalDoc } from './verticaldoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, FormsModule, SliderModule, AppDocModule, InputTextModule, RouterModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, BasicDocComponent, InputDocComponent, StepDocComponent, RangeDocComponent, VerticalDocComponent, StyleDocComponent, PropsDocComponent, EventsDocComponent]
+    declarations: [ImportDoc, BasicDoc, InputDoc, StepDoc, RangeDoc, VerticalDoc, StyleDoc, PropsDoc, EventsDoc]
 })
 export class SliderDocModule {}

@@ -32,7 +32,7 @@ interface Country {
         <app-code [code]="code" selector="multiselect-template-demo"></app-code>
     </div>`
 })
-export class TemplateDocComponent {
+export class TemplateDoc {
     @Input() id: string;
 
     @Input() title: string;

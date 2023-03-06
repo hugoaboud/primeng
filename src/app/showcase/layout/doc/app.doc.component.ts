@@ -5,7 +5,7 @@ import { Doc } from '../../domain/doc';
     selector: 'app-doc',
     templateUrl: './app.doc.component.html'
 })
-export class AppDocComponent {
+export class AppDoc {
     @Input() docs!: Doc[];
 
     @Input() header!: string;

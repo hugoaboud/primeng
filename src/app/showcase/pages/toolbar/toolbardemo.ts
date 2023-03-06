@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { StyleDocComponent } from '../../doc/toolbar/styledoc';
-import { ImportDocComponent } from '../../doc/toolbar/importdoc';
-import { PropsDocComponent } from '../../doc/toolbar/propsdoc';
-import { TemplatesDocComponent } from '../../doc/toolbar/templatesdoc';
+import { StyleDoc } from '../../doc/toolbar/styledoc';
+import { ImportDoc } from '../../doc/toolbar/importdoc';
+import { PropsDoc } from '../../doc/toolbar/propsdoc';
+import { TemplatesDoc } from '../../doc/toolbar/templatesdoc';
 import { ToolbarBasicDemo } from '../../doc/toolbar/basicdoc';
 
 @Component({
@@ -13,7 +13,7 @@ export class ToolbarDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -23,7 +23,7 @@ export class ToolbarDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -31,12 +31,12 @@ export class ToolbarDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

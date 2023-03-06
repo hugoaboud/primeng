@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { BlockUiBasicDemo } from '../../doc/blockui/basicdoc';
 import { BlockUiDocumentDemo } from '../../doc/blockui/documentdoc';
-import { ImportDocComponent } from '../../doc/blockui/importdoc';
-import { PropsDocComponent } from '../../doc/blockui/propsdoc';
-import { StyleDocComponent } from '../../doc/blockui/styledoc';
+import { ImportDoc } from '../../doc/blockui/importdoc';
+import { PropsDoc } from '../../doc/blockui/propsdoc';
+import { StyleDoc } from '../../doc/blockui/styledoc';
 
 @Component({
     templateUrl: './blockuidemo.html',
@@ -57,7 +57,7 @@ export class BlockUIDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -72,7 +72,7 @@ export class BlockUIDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -80,7 +80,7 @@ export class BlockUIDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

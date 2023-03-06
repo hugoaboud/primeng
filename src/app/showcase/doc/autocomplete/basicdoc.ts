@@ -18,7 +18,7 @@ import { CountryService } from '../../service/countryservice';
         <app-code [code]="code" selector="autocomplete-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent implements OnInit {
+export class BasicDoc implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

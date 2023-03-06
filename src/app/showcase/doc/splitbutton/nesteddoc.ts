@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [MessageService]
 })
-export class NestedDocComponent {
+export class NestedDoc {
     @Input() id: string;
 
     @Input() title: string;

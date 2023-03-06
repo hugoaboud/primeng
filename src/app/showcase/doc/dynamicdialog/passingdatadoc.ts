@@ -16,7 +16,7 @@ import { ProductListDemo } from './productlistdemo';
     </div>`,
     providers: [DialogService]
 })
-export class PassingDataDocComponent {
+export class PassingDataDoc {
     @Input() id: string;
 
     @Input() title: string;

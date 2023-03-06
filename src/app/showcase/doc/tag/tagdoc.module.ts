@@ -5,18 +5,18 @@ import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { StyleDocComponent } from './styledoc';
+import { StyleDoc } from './styledoc';
 import { TagBasicDDemo } from './basicdoc';
 import { TagIconDemo } from './icondoc';
-import { ImportDocComponent } from './importdoc';
+import { ImportDoc } from './importdoc';
 import { TagPillDemo } from './pilldoc';
-import { PropsDocComponent } from './propsdoc';
+import { PropsDoc } from './propsdoc';
 import { TagTemplateDemo } from './templatedoc';
 import { TagSeverityDemo } from './severitydoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, TagModule, ButtonModule],
-    declarations: [ImportDocComponent, TagBasicDDemo, TagIconDemo, TagPillDemo, PropsDocComponent, StyleDocComponent, TagTemplateDemo, TagSeverityDemo],
+    declarations: [ImportDoc, TagBasicDDemo, TagIconDemo, TagPillDemo, PropsDoc, StyleDoc, TagTemplateDemo, TagSeverityDemo],
     exports: [AppDocModule]
 })
 export class TagDocModule {}

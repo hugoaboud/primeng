@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { ImportDocComponent } from '../../doc/dragdrop/importdoc';
+import { ImportDoc } from '../../doc/dragdrop/importdoc';
 import { DragDropBasicDemo } from '../../doc/dragdrop/basicdoc';
 import { DragDropDataTableDemo } from '../../doc/dragdrop/datatabledoc';
-import { DropIndicatorDocComponent } from '../../doc/dragdrop/dropindicatordoc';
+import { DropIndicatorDoc } from '../../doc/dragdrop/dropindicatordoc';
 import { DragDropDragHandleDemo } from '../../doc/dragdrop/draghandledoc';
-import { DraggablePropsDocComponent } from '../../doc/dragdrop/draggablepropsdoc';
-import { DraggableEventsDocComponent } from '../../doc/dragdrop/draggableeventsdoc';
-import { DroppablePropsDocComponent } from '../../doc/dragdrop/droppablepropsdoc';
-import { DroppableEventsDocComponent } from '../../doc/dragdrop/droppableeventsdoc';
+import { DraggablePropsDoc } from '../../doc/dragdrop/draggablepropsdoc';
+import { DraggableEventsDoc } from '../../doc/dragdrop/draggableeventsdoc';
+import { DroppablePropsDoc } from '../../doc/dragdrop/droppablepropsdoc';
+import { DroppableEventsDoc } from '../../doc/dragdrop/droppableeventsdoc';
 
 @Component({
     templateUrl: './dragdropdemo.html',
@@ -18,7 +18,7 @@ export class DragDropDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -33,7 +33,7 @@ export class DragDropDemo {
         {
             id: 'dropindicator',
             label: 'Drop Indicator',
-            component: DropIndicatorDocComponent
+            component: DropIndicatorDoc
         },
         {
             id: 'draghandle',
@@ -46,22 +46,22 @@ export class DragDropDemo {
         {
             id: 'draggableprops',
             label: 'Properties of Draggable',
-            component: DraggablePropsDocComponent
+            component: DraggablePropsDoc
         },
         {
             id: 'draggableevents',
             label: 'Events of Draggable',
-            component: DraggableEventsDocComponent
+            component: DraggableEventsDoc
         },
         {
             id: 'droppableprops',
             label: 'Properties of Droppable',
-            component: DroppablePropsDocComponent
+            component: DroppablePropsDoc
         },
         {
             id: 'droppableevents',
             label: 'Events of Droppable',
-            component: DroppableEventsDocComponent
+            component: DroppableEventsDoc
         }
     ];
 }

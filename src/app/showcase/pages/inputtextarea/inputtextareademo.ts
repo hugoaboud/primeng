@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { AutoResizeDocComponent } from '../../doc/inputtextarea/autoresizedoc';
-import { BasicDocComponent } from '../../doc/inputtextarea/basicdoc';
-import { DisabledDocComponent } from '../../doc/inputtextarea/disableddoc';
-import { EventsDocComponent } from '../../doc/inputtextarea/eventsdoc';
-import { FloatlabelDocComponent } from '../../doc/inputtextarea/floatlabeldoc';
-import { ImportDocComponent } from '../../doc/inputtextarea/importdoc';
-import { KeyfilterDocComponent } from '../../doc/inputtextarea/keyfilterdoc';
-import { PropsDocComponent } from '../../doc/inputtextarea/propsdoc';
-import { StyleDocComponent } from '../../doc/inputtextarea/styledoc';
+import { AutoResizeDoc } from '../../doc/inputtextarea/autoresizedoc';
+import { BasicDoc } from '../../doc/inputtextarea/basicdoc';
+import { DisabledDoc } from '../../doc/inputtextarea/disableddoc';
+import { EventsDoc } from '../../doc/inputtextarea/eventsdoc';
+import { FloatlabelDoc } from '../../doc/inputtextarea/floatlabeldoc';
+import { ImportDoc } from '../../doc/inputtextarea/importdoc';
+import { KeyfilterDoc } from '../../doc/inputtextarea/keyfilterdoc';
+import { PropsDoc } from '../../doc/inputtextarea/propsdoc';
+import { StyleDoc } from '../../doc/inputtextarea/styledoc';
 
 @Component({
     templateUrl: './inputtextareademo.html'
@@ -17,49 +17,49 @@ export class InputTextareaDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'autoresize',
             label: 'AutoResize',
-            component: AutoResizeDocComponent
+            component: AutoResizeDoc
         },
         {
             id: 'keyfilter',
             label: 'Key Filter',
-            component: KeyfilterDocComponent
+            component: KeyfilterDoc
         },
         {
             id: 'floatlabel',
             label: 'Float Label',
-            component: FloatlabelDocComponent
+            component: FloatlabelDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
     apiDocs = [
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

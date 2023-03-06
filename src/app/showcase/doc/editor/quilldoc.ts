@@ -10,7 +10,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" [hideToggleCode]="true"></app-code>
     </div>`
 })
-export class QuillDocComponent {
+export class QuillDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -5,53 +5,53 @@ import { FormsModule } from '@angular/forms';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { CalendarModule } from 'primeng/calendar';
-import { ImportDocComponent } from './importdoc';
-import { BasicDocComponent } from './basicdoc';
-import { FormatDocComponent } from './formatdoc';
-import { LocaleDocComponent } from './localedoc';
-import { IconDocComponent } from './icondoc';
-import { MinMaxDocComponent } from './minmaxdox';
-import { MultipleDocComponent } from './multipledoc';
-import { RangeDocComponent } from './rangedoc';
-import { ButtonBarDocComponent } from './buttonbardoc';
-import { TimeDocComponent } from './timedoc';
-import { MonthDocComponent } from './monthdoc';
-import { YearDocComponent } from './yeardoc';
-import { MultipleMonthDocComponent } from './multiplemonths.doc';
-import { TemplateDocComponent } from './template.doc';
-import { InlineDocComponent } from './inlinedoc';
-import { TouchUIDocComponent } from './touchuidoc';
-import { DateTemplateDocComponent } from './datetemplatedoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
-import { EventsDocComponent } from './eventsdoc';
-import { MethodsDocComponent } from './methodsdoc';
+import { ImportDoc } from './importdoc';
+import { BasicDoc } from './basicdoc';
+import { FormatDoc } from './formatdoc';
+import { LocaleDoc } from './localedoc';
+import { IconDoc } from './icondoc';
+import { MinMaxDoc } from './minmaxdox';
+import { MultipleDoc } from './multipledoc';
+import { RangeDoc } from './rangedoc';
+import { ButtonBarDoc } from './buttonbardoc';
+import { TimeDoc } from './timedoc';
+import { MonthDoc } from './monthdoc';
+import { YearDoc } from './yeardoc';
+import { MultipleMonthDoc } from './multiplemonths.doc';
+import { TemplateDoc } from './template.doc';
+import { InlineDoc } from './inlinedoc';
+import { TouchUIDoc } from './touchuidoc';
+import { DateTemplateDoc } from './datetemplatedoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
+import { EventsDoc } from './eventsdoc';
+import { MethodsDoc } from './methodsdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, FormsModule, CalendarModule],
     exports: [AppDocModule],
     declarations: [
-        ImportDocComponent,
-        BasicDocComponent,
-        FormatDocComponent,
-        LocaleDocComponent,
-        IconDocComponent,
-        MinMaxDocComponent,
-        MultipleDocComponent,
-        RangeDocComponent,
-        ButtonBarDocComponent,
-        TimeDocComponent,
-        MonthDocComponent,
-        YearDocComponent,
-        MultipleMonthDocComponent,
-        TemplateDocComponent,
-        InlineDocComponent,
-        TouchUIDocComponent,
-        DateTemplateDocComponent,
-        PropsDocComponent,
-        StyleDocComponent,
-        EventsDocComponent,
-        MethodsDocComponent
+        ImportDoc,
+        BasicDoc,
+        FormatDoc,
+        LocaleDoc,
+        IconDoc,
+        MinMaxDoc,
+        MultipleDoc,
+        RangeDoc,
+        ButtonBarDoc,
+        TimeDoc,
+        MonthDoc,
+        YearDoc,
+        MultipleMonthDoc,
+        TemplateDoc,
+        InlineDoc,
+        TouchUIDoc,
+        DateTemplateDoc,
+        PropsDoc,
+        StyleDoc,
+        EventsDoc,
+        MethodsDoc
     ]
 })
 export class CalendarDocModule {}

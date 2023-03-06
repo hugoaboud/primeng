@@ -202,7 +202,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class ApiDocComponent {
+export class ApiDoc {
     @Input() id: string;
 
     @Input() title: string;

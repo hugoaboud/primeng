@@ -8,15 +8,15 @@ import { InputTextModule } from 'primeng/inputtext';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { ButtonDocComponent } from './buttondoc';
-import { CheckboxDocComponent } from './checkboxdoc';
-import { ImportDocComponent } from './importdoc';
-import { MultipleDocComponent } from './multipledoc';
+import { BasicDoc } from './basicdoc';
+import { ButtonDoc } from './buttondoc';
+import { CheckboxDoc } from './checkboxdoc';
+import { ImportDoc } from './importdoc';
+import { MultipleDoc } from './multipledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, FormsModule, InputTextModule, ButtonModule, CheckboxModule, RadioButtonModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, BasicDocComponent, MultipleDocComponent, ButtonDocComponent, CheckboxDocComponent]
+    declarations: [ImportDoc, BasicDoc, MultipleDoc, ButtonDoc, CheckboxDoc]
 })
 export class InputGroupDocModule {}

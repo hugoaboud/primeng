@@ -6,16 +6,16 @@ import { ButtonModule } from 'primeng/button';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { SlideMenuBasicDemo } from './basicdoc';
-import { ImportDocComponent } from './importdoc';
-import { MenuItemDocComponent } from './menuitemdoc';
-import { MethodsDocComponent } from './methodsdoc';
+import { ImportDoc } from './importdoc';
+import { MenuItemDoc } from './menuitemdoc';
+import { MethodsDoc } from './methodsdoc';
 import { SlideMenuPopupDemo } from './popupdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, SlideMenuModule, ButtonModule, AppDocModule],
-    declarations: [SlideMenuBasicDemo, ImportDocComponent, MenuItemDocComponent, MethodsDocComponent, PropsDocComponent, StyleDocComponent, SlideMenuPopupDemo],
+    declarations: [SlideMenuBasicDemo, ImportDoc, MenuItemDoc, MethodsDoc, PropsDoc, StyleDoc, SlideMenuPopupDemo],
     exports: [AppDocModule]
 })
 export class SlideMenuDocModule {}

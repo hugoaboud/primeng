@@ -11,18 +11,18 @@ import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { FileUploadAdvancedDemo } from './advanceddoc';
 import { FileUploadBasicDemo } from './basicdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
-import { MethodsDocComponent } from './methodsdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { MethodsDoc } from './methodsdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 import { FileUploadTemplateDemo } from './templatedoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { TemplatesDoc } from './templatesdoc';
 import { FileUploadAutoDemo } from './autodoc';
 
 @NgModule({
     imports: [CommonModule, FormsModule, AppCodeModule, AppDocModule, ButtonModule, TagModule, ProgressBarModule, ToastModule, FileUploadModule, RouterModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, FileUploadBasicDemo, FileUploadTemplateDemo, StyleDocComponent, PropsDocComponent, EventsDocComponent, TemplatesDocComponent, FileUploadAdvancedDemo, MethodsDocComponent, FileUploadAutoDemo]
+    declarations: [ImportDoc, FileUploadBasicDemo, FileUploadTemplateDemo, StyleDoc, PropsDoc, EventsDoc, TemplatesDoc, FileUploadAdvancedDemo, MethodsDoc, FileUploadAutoDemo]
 })
 export class FileUploadDocModule {}

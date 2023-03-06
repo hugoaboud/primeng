@@ -52,7 +52,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code"></app-code>
     </div>`
 })
-export class ListDocComponent {
+export class ListDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -30,7 +30,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code"></app-code>
     </div>`
 })
-export class DataTableDocComponent implements OnInit {
+export class DataTableDoc implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

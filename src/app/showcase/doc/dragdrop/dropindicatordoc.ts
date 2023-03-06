@@ -28,7 +28,7 @@ import { Product } from '../../domain/product';
         <app-code [code]="code" selector="drag-drop-drop-indicator-demo" [extFiles]="extFiles"></app-code>
     </div>`
 })
-export class DropIndicatorDocComponent {
+export class DropIndicatorDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -17,7 +17,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code3" [hideToggleCode]="true"></app-code>
     </div>`
 })
-export class LocalStylingDocComponent {
+export class LocalStylingDoc {
     @Input() id: string;
 
     @Input() title: string;

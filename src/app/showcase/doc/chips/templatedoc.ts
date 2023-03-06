@@ -15,7 +15,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="chips-template-demo"></app-code>
     </div>`
 })
-export class TemplateDocComponent {
+export class TemplateDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/inputswitch/basicdoc';
-import { ImportDocComponent } from '../../doc/inputswitch/importdoc';
-import { DisabledDocComponent } from '../../doc/inputswitch/disableddoc';
-import { PreselectionDocComponent } from '../../doc/inputswitch/preselectiondoc';
-import { PropsDocComponent } from '../../doc/inputswitch/propsdoc';
-import { EventsDocComponent } from '../../doc/inputswitch/eventsdoc';
-import { StyleDocComponent } from '../../doc/inputswitch/styledoc';
+import { BasicDoc } from '../../doc/inputswitch/basicdoc';
+import { ImportDoc } from '../../doc/inputswitch/importdoc';
+import { DisabledDoc } from '../../doc/inputswitch/disableddoc';
+import { PreselectionDoc } from '../../doc/inputswitch/preselectiondoc';
+import { PropsDoc } from '../../doc/inputswitch/propsdoc';
+import { EventsDoc } from '../../doc/inputswitch/eventsdoc';
+import { StyleDoc } from '../../doc/inputswitch/styledoc';
 
 @Component({
     templateUrl: './inputswitchdemo.html'
@@ -15,27 +15,27 @@ export class InputSwitchDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'preselection',
             label: 'Preselection',
-            component: PreselectionDocComponent
+            component: PreselectionDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -43,12 +43,12 @@ export class InputSwitchDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

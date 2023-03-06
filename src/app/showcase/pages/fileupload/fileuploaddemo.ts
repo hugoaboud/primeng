@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { FileUploadAdvancedDemo } from '../../doc/fileupload/advanceddoc';
 import { FileUploadAutoDemo } from '../../doc/fileupload/autodoc';
 import { FileUploadBasicDemo } from '../../doc/fileupload/basicdoc';
-import { EventsDocComponent } from '../../doc/fileupload/eventsdoc';
-import { ImportDocComponent } from '../../doc/fileupload/importdoc';
-import { MethodsDocComponent } from '../../doc/fileupload/methodsdoc';
-import { PropsDocComponent } from '../../doc/fileupload/propsdoc';
-import { StyleDocComponent } from '../../doc/fileupload/styledoc';
+import { EventsDoc } from '../../doc/fileupload/eventsdoc';
+import { ImportDoc } from '../../doc/fileupload/importdoc';
+import { MethodsDoc } from '../../doc/fileupload/methodsdoc';
+import { PropsDoc } from '../../doc/fileupload/propsdoc';
+import { StyleDoc } from '../../doc/fileupload/styledoc';
 import { FileUploadTemplateDemo } from '../../doc/fileupload/templatedoc';
-import { TemplatesDocComponent } from '../../doc/fileupload/templatesdoc';
+import { TemplatesDoc } from '../../doc/fileupload/templatesdoc';
 
 @Component({
     templateUrl: './fileuploaddemo.html'
@@ -18,7 +18,7 @@ export class FileUploadDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -43,7 +43,7 @@ export class FileUploadDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -51,22 +51,22 @@ export class FileUploadDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

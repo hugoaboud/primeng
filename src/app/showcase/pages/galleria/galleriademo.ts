@@ -5,23 +5,23 @@ import { GalleriaBasicDemo } from '../../doc/galleria/basicdoc';
 import { GalleriaCaptionDemo } from '../../doc/galleria/captiondoc';
 import { GalleriaControlledDemo } from '../../doc/galleria/controlleddoc';
 import { GalleriaFullScreenTemplateDemo } from '../../doc/galleria/fullscreen/customcontentdoc';
-import { FullScreenDocComponent } from '../../doc/galleria/fullscreen/fullscreendoc';
+import { FullScreenDoc } from '../../doc/galleria/fullscreen/fullscreendoc';
 import { GalleriaWithoutThumbnailsDemo } from '../../doc/galleria/fullscreen/withoutthumbnailsdoc';
 import { GalleriaWithThumbnailsDemo } from '../../doc/galleria/fullscreen/withthumbnailsdoc';
-import { ImportDocComponent } from '../../doc/galleria/importdoc';
+import { ImportDoc } from '../../doc/galleria/importdoc';
 import { GalleriaIndicatorClickEventDemo } from '../../doc/galleria/indicator/clickeventdoc';
 import { GalleriaIndicatorHoverEventDemo } from '../../doc/galleria/indicator/hovereventdoc';
-import { IndicatorDocComponent } from '../../doc/galleria/indicator/indicatordoc';
+import { IndicatorDoc } from '../../doc/galleria/indicator/indicatordoc';
 import { GalleriaIndicatorPositionedDemo } from '../../doc/galleria/indicator/positioneddoc';
 import { GalleriaIndicatorTemplateDemo } from '../../doc/galleria/indicator/templatedoc';
-import { HoverDocComponent } from '../../doc/galleria/navigator/hoverdoc';
-import { IndicatorsDocComponent } from '../../doc/galleria/navigator/indicatorsdoc';
-import { ItemThumbnailsDocComponent } from '../../doc/galleria/navigator/itemthumbnailsdoc';
-import { ItemWithoutThumbnailsDocComponent } from '../../doc/galleria/navigator/itemwithoutthumbnailsdoc';
-import { NavigatorDocComponent } from '../../doc/galleria/navigator/navigatordoc';
-import { PropsDocComponent } from '../../doc/galleria/propsdoc';
+import { HoverDoc } from '../../doc/galleria/navigator/hoverdoc';
+import { IndicatorsDoc } from '../../doc/galleria/navigator/indicatorsdoc';
+import { ItemThumbnailsDoc } from '../../doc/galleria/navigator/itemthumbnailsdoc';
+import { ItemWithoutThumbnailsDoc } from '../../doc/galleria/navigator/itemwithoutthumbnailsdoc';
+import { NavigatorDoc } from '../../doc/galleria/navigator/navigatordoc';
+import { PropsDoc } from '../../doc/galleria/propsdoc';
 import { GalleriaResponsiveDemo } from '../../doc/galleria/responsivedoc';
-import { StyleDocComponent } from '../../doc/galleria/styledoc';
+import { StyleDoc } from '../../doc/galleria/styledoc';
 import { GalleriaThumbnailDemo } from '../../doc/galleria/thumbnaildoc';
 
 @Component({
@@ -33,7 +33,7 @@ export class GalleriaDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -48,7 +48,7 @@ export class GalleriaDemo {
         {
             id: 'indicator',
             label: 'Indicator',
-            component: IndicatorDocComponent,
+            component: IndicatorDoc,
             children: [
                 {
                     id: 'clickevent',
@@ -85,7 +85,7 @@ export class GalleriaDemo {
         {
             id: 'fullscreen',
             label: 'Full Screen',
-            component: FullScreenDocComponent,
+            component: FullScreenDoc,
             children: [
                 {
                     id: 'withthumbnails',
@@ -107,27 +107,27 @@ export class GalleriaDemo {
         {
             id: 'navigator',
             label: 'Navigator',
-            component: NavigatorDocComponent,
+            component: NavigatorDoc,
             children: [
                 {
                     id: 'itemwiththumbnails',
                     label: 'With Thumbnails',
-                    component: ItemThumbnailsDocComponent
+                    component: ItemThumbnailsDoc
                 },
                 {
                     id: 'itemwithtouthumbnails',
                     label: 'Without Thumbnails',
-                    component: ItemWithoutThumbnailsDocComponent
+                    component: ItemWithoutThumbnailsDoc
                 },
                 {
                     id: 'hover',
                     label: 'Display on Hover',
-                    component: HoverDocComponent
+                    component: HoverDoc
                 },
                 {
                     id: 'withindicators',
                     label: 'With Indicators',
-                    component: IndicatorsDocComponent
+                    component: IndicatorsDoc
                 }
             ]
         },
@@ -149,7 +149,7 @@ export class GalleriaDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -157,7 +157,7 @@ export class GalleriaDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

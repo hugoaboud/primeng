@@ -29,7 +29,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="timeline-alignment-demo"></app-code>
     </div>`
 })
-export class AlignmentDocComponent {
+export class AlignmentDoc {
     @Input() id: string;
 
     @Input() title: string;

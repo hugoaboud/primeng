@@ -14,7 +14,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="checkbox-label-demo"></app-code>
     </div>`
 })
-export class LabelDocComponent {
+export class LabelDoc {
     @Input() id: string;
 
     @Input() title: string;

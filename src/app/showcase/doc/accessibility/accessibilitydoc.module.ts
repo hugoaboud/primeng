@@ -5,16 +5,16 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { RouterModule } from '@angular/router';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { ColorsDocComponent } from './colorsdoc';
-import { FormControlsDocComponent } from './formcontrolsdoc';
-import { IntroductionDocComponent } from './introductiondoc';
-import { SemanticHTMLDocComponent } from './semantichtmldoc';
-import { WAIARIADocComponent } from './wai-ariadoc';
-import { WCAGDocComponent } from './WCAGdoc';
+import { ColorsDoc } from './colorsdoc';
+import { FormControlsDoc } from './formcontrolsdoc';
+import { IntroductionDoc } from './introductiondoc';
+import { SemanticHTMLDoc } from './semantichtmldoc';
+import { WAIARIADoc } from './wai-ariadoc';
+import { WCAGDoc } from './WCAGdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, RouterModule, FormsModule, CheckboxModule],
     exports: [AppDocModule],
-    declarations: [ColorsDocComponent, FormControlsDocComponent, IntroductionDocComponent, SemanticHTMLDocComponent, WAIARIADocComponent, WCAGDocComponent]
+    declarations: [ColorsDoc, FormControlsDoc, IntroductionDoc, SemanticHTMLDoc, WAIARIADoc, WCAGDoc]
 })
 export class AccessibilityDocModule {}

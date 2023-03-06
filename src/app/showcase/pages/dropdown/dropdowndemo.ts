@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/dropdown/basicdoc';
-import { DisabledDocComponent } from '../../doc/dropdown/disableddoc';
-import { EditableDocComponent } from '../../doc/dropdown/editabledoc';
-import { FilterDocComponent } from '../../doc/dropdown/filterdoc';
-import { GroupDocComponent } from '../../doc/dropdown/groupdoc';
-import { ImportDocComponent } from '../../doc/dropdown/importdoc';
-import { TemplateDocComponent } from '../../doc/dropdown/templatedoc';
-import { VirtualScrollDocComponent } from '../../doc/dropdown/virtualscrolldoc';
-import { FloatLabelDocComponent } from '../../doc/dropdown/floatlabeldoc';
-import { PropsDocComponent } from '../../doc/dropdown/propsdoc';
-import { StyleDocComponent } from '../../doc/dropdown/styledoc';
-import { EventsDocComponent } from '../../doc/dropdown/eventsdoc';
-import { MethodsDocComponent } from '../../doc/dropdown/methodsdoc';
-import { TemplatesDocComponent } from '../../doc/dropdown/templatesdoc';
+import { BasicDoc } from '../../doc/dropdown/basicdoc';
+import { DisabledDoc } from '../../doc/dropdown/disableddoc';
+import { EditableDoc } from '../../doc/dropdown/editabledoc';
+import { FilterDoc } from '../../doc/dropdown/filterdoc';
+import { GroupDoc } from '../../doc/dropdown/groupdoc';
+import { ImportDoc } from '../../doc/dropdown/importdoc';
+import { TemplateDoc } from '../../doc/dropdown/templatedoc';
+import { VirtualScrollDoc } from '../../doc/dropdown/virtualscrolldoc';
+import { FloatLabelDoc } from '../../doc/dropdown/floatlabeldoc';
+import { PropsDoc } from '../../doc/dropdown/propsdoc';
+import { StyleDoc } from '../../doc/dropdown/styledoc';
+import { EventsDoc } from '../../doc/dropdown/eventsdoc';
+import { MethodsDoc } from '../../doc/dropdown/methodsdoc';
+import { TemplatesDoc } from '../../doc/dropdown/templatesdoc';
 
 @Component({
     templateUrl: './dropdowndemo.html',
@@ -23,52 +23,52 @@ export class DropdownDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'editable',
             label: 'Editable',
-            component: EditableDocComponent
+            component: EditableDoc
         },
         {
             id: 'group',
             label: 'Group',
-            component: GroupDocComponent
+            component: GroupDoc
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: TemplateDoc
         },
         {
             id: 'filter',
             label: 'Filter',
-            component: FilterDocComponent
+            component: FilterDoc
         },
         {
             id: 'virtualscroll',
             label: 'Virtual Scroll',
-            component: VirtualScrollDocComponent
+            component: VirtualScrollDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'floatlabel',
             label: 'Float Label',
-            component: FloatLabelDocComponent
+            component: FloatLabelDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -76,22 +76,22 @@ export class DropdownDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

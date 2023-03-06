@@ -18,7 +18,7 @@ interface City {
         <app-code [code]="code" selector="multiselect-invalid-demo"></app-code>
     </div>`
 })
-export class InvalidDocComponent {
+export class InvalidDoc {
     @Input() id: string;
 
     @Input() title: string;

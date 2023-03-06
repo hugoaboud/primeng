@@ -6,13 +6,13 @@ import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { ProgressSpinnerBasicDemo } from './basicdoc';
 import { ProgressSpinnerTemplateDemo } from './templatedoc';
-import { ImportDocComponent } from './importdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { ImportDoc } from './importdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, ProgressSpinnerModule],
-    declarations: [ProgressSpinnerBasicDemo, ImportDocComponent, ProgressSpinnerTemplateDemo, PropsDocComponent, StyleDocComponent],
+    declarations: [ProgressSpinnerBasicDemo, ImportDoc, ProgressSpinnerTemplateDemo, PropsDoc, StyleDoc],
     exports: [AppDocModule]
 })
 export class ProgressSpinnerDocModule {}

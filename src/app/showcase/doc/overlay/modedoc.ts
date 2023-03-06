@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" [hideToggleCode]="true"></app-code>
     </div>`
 })
-export class ModeDocComponent {
+export class ModeDoc {
     @Input() id: string;
 
     @Input() title: string;

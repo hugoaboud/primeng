@@ -168,7 +168,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class PaletteDocComponent {
+export class PaletteDoc {
     @Input() id: string;
 
     @Input() title: string;

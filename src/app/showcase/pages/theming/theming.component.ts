@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ArchitectureDocComponent } from '../../doc/theming/architecturedoc';
-import { CSSVariablesDocComponent } from '../../doc/theming/cssvariablesdoc';
-import { DesignerDocComponent } from '../../doc/theming/designerdoc';
-import { LocalStylingDocComponent } from '../../doc/theming/localstylingdoc';
-import { PrimeFlexDocComponent } from '../../doc/theming/primeflexdoc';
-import { ScalingDocComponent } from '../../doc/theming/scalingdoc';
-import { ThemesDocComponent } from '../../doc/theming/themesdoc';
-import { UtilsDocComponent } from '../../doc/theming/utilsdoc';
+import { ArchitectureDoc } from '../../doc/theming/architecturedoc';
+import { CSSVariablesDoc } from '../../doc/theming/cssvariablesdoc';
+import { DesignerDoc } from '../../doc/theming/designerdoc';
+import { LocalStylingDoc } from '../../doc/theming/localstylingdoc';
+import { PrimeFlexDoc } from '../../doc/theming/primeflexdoc';
+import { ScalingDoc } from '../../doc/theming/scalingdoc';
+import { ThemesDoc } from '../../doc/theming/themesdoc';
+import { UtilsDoc } from '../../doc/theming/utilsdoc';
 @Component({
     templateUrl: './theming.component.html',
     styleUrls: ['./theming.component.scss']
@@ -16,42 +16,42 @@ export class ThemingComponent {
         {
             id: 'architecture',
             label: 'Architecture',
-            component: ArchitectureDocComponent
+            component: ArchitectureDoc
         },
         {
             id: 'themes',
             label: 'Themes',
-            component: ThemesDocComponent
+            component: ThemesDoc
         },
         {
             id: 'designer',
             label: 'Designer',
-            component: DesignerDocComponent
+            component: DesignerDoc
         },
         {
             id: 'local-styling',
             label: 'Local Styling',
-            component: LocalStylingDocComponent
+            component: LocalStylingDoc
         },
         {
             id: 'scale',
             label: 'Scale',
-            component: ScalingDocComponent
+            component: ScalingDoc
         },
         {
             id: 'primeflex',
             label: 'PrimeFlex',
-            component: PrimeFlexDocComponent
+            component: PrimeFlexDoc
         },
         {
             id: 'utils',
             label: 'Utility Classes',
-            component: UtilsDocComponent
+            component: UtilsDoc
         },
         {
             id: 'css-variables',
             label: 'CSS Variables',
-            component: CSSVariablesDocComponent
+            component: CSSVariablesDoc
         }
     ];
 }

@@ -21,7 +21,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [MessageService]
 })
-export class SemiCircleDocComponent implements OnInit {
+export class SemiCircleDoc implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

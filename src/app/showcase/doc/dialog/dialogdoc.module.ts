@@ -8,10 +8,10 @@ import { DropdownModule } from 'primeng/dropdown';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { DialogBasicDemo } from './basicdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 import { DialogLongContentDemo } from './longcontentdoc';
 import { DialogResponsiveDemo } from './responsivedoc';
 import { DialogPositionDemo } from './positiondoc';
@@ -24,10 +24,10 @@ import { DialogModalDemo } from './modaldoc';
     imports: [CommonModule, AppCodeModule, RouterModule, FormsModule, DialogModule, ButtonModule, DropdownModule, AppDocModule],
     declarations: [
         DialogBasicDemo,
-        EventsDocComponent,
-        ImportDocComponent,
-        PropsDocComponent,
-        StyleDocComponent,
+        EventsDoc,
+        ImportDoc,
+        PropsDoc,
+        StyleDoc,
         DialogLongContentDemo,
         DialogResponsiveDemo,
         DialogPositionDemo,

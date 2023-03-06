@@ -17,7 +17,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector=""></app-code>
     </div>`
 })
-export class ScrollableDocComponent {
+export class ScrollableDoc {
     @Input() id: string;
 
     @Input() title: string;

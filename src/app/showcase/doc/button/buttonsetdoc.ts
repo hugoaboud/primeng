@@ -17,7 +17,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="button-buttonset-demo"></app-code>
     </div>`
 })
-export class ButtonsetDocComponent {
+export class ButtonsetDoc {
     @Input() id: string;
 
     @Input() title: string;

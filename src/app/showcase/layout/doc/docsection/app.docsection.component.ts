@@ -18,7 +18,7 @@ export class AppDocSectionsComponent implements OnInit {
 
     currentDocIndex = -1;
 
-    @ViewChild('docComponent', { read: ViewContainerRef }) docComponent: ViewContainerRef;
+    @ViewChild('Doc', { read: ViewContainerRef }) Doc: ViewContainerRef;
 
     constructor(private cd: ChangeDetectorRef) {}
 
@@ -33,7 +33,7 @@ export class AppDocSectionsComponent implements OnInit {
         this.currentDocIndex = (this.currentDocIndex + 1) % this.docs.length;
         const newComponent: any = this.docs[this.currentDocIndex];
 
-        const viewContainerRef = this.docComponent;
+        const viewContainerRef = this.Doc;
 
         if (newComponent.component !== undefined) {
             let component = viewContainerRef.createComponent<Props>(newComponent.component);

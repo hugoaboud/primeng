@@ -2,15 +2,15 @@ import { Component } from '@angular/core';
 import { MenuBasicDemo } from '../../doc/menu/basicdoc';
 import { MenuCustomContentDemo } from '../../doc/menu/customdoc';
 import { MenuCommandDemo } from '../../doc/menu/commanddoc';
-import { EventsDocComponent } from '../../doc/menu/eventsdoc';
-import { MethodsDocComponent } from '../../doc/menu/methodsdoc';
+import { EventsDoc } from '../../doc/menu/eventsdoc';
+import { MethodsDoc } from '../../doc/menu/methodsdoc';
 import { MenuGroupDemo } from '../../doc/menu/groupdoc';
-import { ImportDocComponent } from '../../doc/menu/importdoc';
-import { MenuItemDocComponent } from '../../doc/menu/menuitemdoc';
+import { ImportDoc } from '../../doc/menu/importdoc';
+import { MenuItemDoc } from '../../doc/menu/menuitemdoc';
 import { MenuNavigationDemo } from '../../doc/menu/navigationdoc';
 import { MenuPopupDemo } from '../../doc/menu/popupdoc';
-import { PropsDocComponent } from '../../doc/menu/propsdoc';
-import { StyleDocComponent } from '../../doc/menu/styledoc';
+import { PropsDoc } from '../../doc/menu/propsdoc';
+import { StyleDoc } from '../../doc/menu/styledoc';
 
 @Component({
     templateUrl: './menudemo.html'
@@ -20,7 +20,7 @@ export class MenuDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -55,7 +55,7 @@ export class MenuDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -63,22 +63,22 @@ export class MenuDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'menuitem',
             label: 'MenuItem API',
-            component: MenuItemDocComponent
+            component: MenuItemDoc
         }
     ];
 }

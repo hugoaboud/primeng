@@ -4,19 +4,19 @@ import { RouterModule } from '@angular/router';
 import { SplitterModule } from 'primeng/splitter';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { EventsDocComponent } from './eventsdoc';
+import { EventsDoc } from './eventsdoc';
 import { SplitterHorizontalDemo } from './horizontaldoc';
-import { ImportDocComponent } from './importdoc';
+import { ImportDoc } from './importdoc';
 import { SplitterNestedDemo } from './nesteddoc';
-import { PropsDocComponent } from './propsdoc';
+import { PropsDoc } from './propsdoc';
 import { SplitterSizeDemo } from './sizedoc';
-import { StyleDocComponent } from './styledoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { StyleDoc } from './styledoc';
+import { TemplatesDoc } from './templatesdoc';
 import { SplitterVerticalDemo } from './verticaldoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, SplitterModule, RouterModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, SplitterHorizontalDemo, SplitterSizeDemo, SplitterVerticalDemo, SplitterNestedDemo, StyleDocComponent, PropsDocComponent, EventsDocComponent, TemplatesDocComponent]
+    declarations: [ImportDoc, SplitterHorizontalDemo, SplitterSizeDemo, SplitterVerticalDemo, SplitterNestedDemo, StyleDoc, PropsDoc, EventsDoc, TemplatesDoc]
 })
 export class SplitterDocModule {}

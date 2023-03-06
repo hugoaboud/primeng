@@ -28,7 +28,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="timeline-horizontal-demo"></app-code>
     </div>`
 })
-export class HorizontalDocComponent {
+export class HorizontalDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -9,30 +9,30 @@ import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { TabMenuActiveDemo } from './activedoc';
 import { TabMenuBasicDemo } from './basicdoc';
 import { TabMenuControlledDemo } from './controlleddoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
-import { MenuItemDocComponent } from './menuitemdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { MenuItemDoc } from './menuitemdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 import { TabMenuScrollableDemo } from './scrollabledoc';
 import { TabMenuTemplateDemo } from './templatedoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { TemplatesDoc } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, TabMenuModule, ButtonModule, RippleModule, AppDocModule],
     declarations: [
         TabMenuBasicDemo,
-        TemplatesDocComponent,
-        EventsDocComponent,
+        TemplatesDoc,
+        EventsDoc,
         TabMenuScrollableDemo,
-        ImportDocComponent,
-        MenuItemDocComponent,
-        PropsDocComponent,
-        StyleDocComponent,
+        ImportDoc,
+        MenuItemDoc,
+        PropsDoc,
+        StyleDoc,
         TabMenuControlledDemo,
         TabMenuActiveDemo,
         TabMenuTemplateDemo,
-        TemplatesDocComponent
+        TemplatesDoc
     ],
     exports: [AppDocModule]
 })

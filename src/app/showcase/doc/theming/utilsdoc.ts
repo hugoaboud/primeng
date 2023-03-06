@@ -48,7 +48,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class UtilsDocComponent {
+export class UtilsDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -24,7 +24,7 @@ import { PhotoService } from '../../../service/photoservice';
     </div>`,
     providers: [PhotoService]
 })
-export class HoverDocComponent implements OnInit {
+export class HoverDoc implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

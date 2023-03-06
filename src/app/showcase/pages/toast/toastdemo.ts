@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
-import { ImportDocComponent } from '../../doc/toast/importdoc';
+import { ImportDoc } from '../../doc/toast/importdoc';
 import { ToastBasicDemo } from '../../doc/toast/basicdoc';
 import { ToastSeverityDemo } from '../../doc/toast/severitydoc';
 import { ToastAnimationDemo } from '../../doc/toast/animationdoc';
-import { EventsDocComponent } from '../../doc/toast/eventsdoc';
-import { InterfaceDocComponent } from '../../doc/toast/interfacedoc';
+import { EventsDoc } from '../../doc/toast/eventsdoc';
+import { InterfaceDoc } from '../../doc/toast/interfacedoc';
 import { ToastMultipleDemo } from '../../doc/toast/multipledoc';
 import { ToastPositionDemo } from '../../doc/toast/positiondoc';
-import { PropsDocComponent } from '../../doc/toast/propsdoc';
+import { PropsDoc } from '../../doc/toast/propsdoc';
 import { ToastResponsiveDemo } from '../../doc/toast/responsivedoc';
 import { ToastStickyDemo } from '../../doc/toast/stickydoc';
-import { StyleDocComponent } from '../../doc/toast/styledoc';
+import { StyleDoc } from '../../doc/toast/styledoc';
 import { ToastTargetDemo } from '../../doc/toast/targetdoc';
 import { ToastTemplateDemo } from '../../doc/toast/templatedoc';
-import { TemplatesDocComponent } from '../../doc/toast/templatesdoc';
+import { TemplatesDoc } from '../../doc/toast/templatesdoc';
 import { ToastClearDemo } from '../../doc/toast/cleardoc';
 
 @Component({
@@ -24,7 +24,7 @@ export class ToastDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -79,7 +79,7 @@ export class ToastDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -87,22 +87,22 @@ export class ToastDemo {
         {
             id: 'interface',
             label: 'Message Interface',
-            component: InterfaceDocComponent
+            component: InterfaceDoc
         },
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

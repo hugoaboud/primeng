@@ -4,38 +4,38 @@ import { RouterModule } from '@angular/router';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { KnobModule } from 'primeng/knob';
-import { ImportDocComponent } from './importdoc';
-import { BasicDocComponent } from './basicdoc';
+import { ImportDoc } from './importdoc';
+import { BasicDoc } from './basicdoc';
 import { FormsModule } from '@angular/forms';
-import { MinMaxDocComponent } from './minmaxdoc';
-import { StepDocComponent } from './stepdoc';
-import { TemplateDocComponent } from './templatedoc';
-import { StrokeDocComponent } from './strokedoc';
-import { SizeDocComponent } from './sizedoc';
-import { ColorDocComponent } from './colordoc';
-import { ReadonlyDocComponent } from './readonlydoc';
-import { DisabledDocComponent } from './disableddoc';
-import { PropsDocComponent } from './propsdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { StyleDocComponent } from './styledoc';
+import { MinMaxDoc } from './minmaxdoc';
+import { StepDoc } from './stepdoc';
+import { TemplateDoc } from './templatedoc';
+import { StrokeDoc } from './strokedoc';
+import { SizeDoc } from './sizedoc';
+import { ColorDoc } from './colordoc';
+import { ReadonlyDoc } from './readonlydoc';
+import { DisabledDoc } from './disableddoc';
+import { PropsDoc } from './propsdoc';
+import { EventsDoc } from './eventsdoc';
+import { StyleDoc } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, FormsModule, AppCodeModule, AppDocModule, KnobModule],
     exports: [AppDocModule],
     declarations: [
-        ImportDocComponent,
-        BasicDocComponent,
-        MinMaxDocComponent,
-        StepDocComponent,
-        TemplateDocComponent,
-        StrokeDocComponent,
-        SizeDocComponent,
-        ColorDocComponent,
-        ReadonlyDocComponent,
-        DisabledDocComponent,
-        PropsDocComponent,
-        EventsDocComponent,
-        StyleDocComponent
+        ImportDoc,
+        BasicDoc,
+        MinMaxDoc,
+        StepDoc,
+        TemplateDoc,
+        StrokeDoc,
+        SizeDoc,
+        ColorDoc,
+        ReadonlyDoc,
+        DisabledDoc,
+        PropsDoc,
+        EventsDoc,
+        StyleDoc
     ]
 })
 export class KnobDocModule {}

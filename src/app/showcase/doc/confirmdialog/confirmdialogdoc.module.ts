@@ -7,18 +7,18 @@ import { ToastModule } from 'primeng/toast';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { ConfirmDialogBasicDemo } from './basicdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 import { ConfirmDialogPositionDemo } from './positiondoc';
 import { ConfirmDialogTemplateDemo } from './customdoc';
-import { ServiceDocComponent } from './servicedoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { ServiceDoc } from './servicedoc';
+import { TemplatesDoc } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, ConfirmDialogModule, ButtonModule, ToastModule, AppDocModule],
-    declarations: [ConfirmDialogBasicDemo, EventsDocComponent, ImportDocComponent, PropsDocComponent, StyleDocComponent, ConfirmDialogPositionDemo, ConfirmDialogTemplateDemo, ServiceDocComponent, TemplatesDocComponent],
+    declarations: [ConfirmDialogBasicDemo, EventsDoc, ImportDoc, PropsDoc, StyleDoc, ConfirmDialogPositionDemo, ConfirmDialogTemplateDemo, ServiceDoc, TemplatesDoc],
     exports: [AppDocModule]
 })
 export class ConfirmDialogDocModule {}

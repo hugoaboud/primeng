@@ -18,7 +18,7 @@ interface City {
         <app-code [code]="code" selector="listbox-filter-demo"></app-code>
     </div>`
 })
-export class FilterDocComponent {
+export class FilterDoc {
     @Input() id: string;
 
     @Input() title: string;

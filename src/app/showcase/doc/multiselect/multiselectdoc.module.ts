@@ -5,39 +5,39 @@ import { RouterModule } from '@angular/router';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { ChipsDocComponent } from './chipsdoc';
-import { DisabledDocComponent } from './disableddoc';
-import { EventsDocComponent } from './eventsdoc';
-import { FilterDocComponent } from './filterdoc';
-import { FloatLabelDocComponent } from './floatlabeldoc';
-import { GroupDocComponent } from './groupdoc';
-import { ImportDocComponent } from './importdoc';
-import { InvalidDocComponent } from './invaliddoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
-import { TemplateDocComponent } from './templatedoc';
-import { TemplatesDocComponent } from './templatesdoc';
-import { VirtualScrollDocComponent } from './virtualscrolldoc';
+import { BasicDoc } from './basicdoc';
+import { ChipsDoc } from './chipsdoc';
+import { DisabledDoc } from './disableddoc';
+import { EventsDoc } from './eventsdoc';
+import { FilterDoc } from './filterdoc';
+import { FloatLabelDoc } from './floatlabeldoc';
+import { GroupDoc } from './groupdoc';
+import { ImportDoc } from './importdoc';
+import { InvalidDoc } from './invaliddoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
+import { TemplateDoc } from './templatedoc';
+import { TemplatesDoc } from './templatesdoc';
+import { VirtualScrollDoc } from './virtualscrolldoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, MultiSelectModule, FormsModule, AppDocModule],
     exports: [AppDocModule],
     declarations: [
-        ImportDocComponent,
-        BasicDocComponent,
-        ChipsDocComponent,
-        GroupDocComponent,
-        FilterDocComponent,
-        TemplateDocComponent,
-        VirtualScrollDocComponent,
-        FloatLabelDocComponent,
-        InvalidDocComponent,
-        DisabledDocComponent,
-        StyleDocComponent,
-        PropsDocComponent,
-        EventsDocComponent,
-        TemplatesDocComponent
+        ImportDoc,
+        BasicDoc,
+        ChipsDoc,
+        GroupDoc,
+        FilterDoc,
+        TemplateDoc,
+        VirtualScrollDoc,
+        FloatLabelDoc,
+        InvalidDoc,
+        DisabledDoc,
+        StyleDoc,
+        PropsDoc,
+        EventsDoc,
+        TemplatesDoc
     ]
 })
 export class MultiSelectDocModule {}

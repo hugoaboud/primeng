@@ -1,18 +1,18 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { LocaleDocComponent } from '../../doc/inputnumber/localedoc';
-import { ImportDocComponent } from '../../doc/inputnumber/importdoc';
-import { NumeralsDocComponent } from '../../doc/inputnumber/numeralsdoc';
-import { CurrencyDocComponent } from '../../doc/inputnumber/currencydoc';
-import { PrefixSuffixDocComponent } from '../../doc/inputnumber/prefixsuffixdoc';
-import { ButtonsDocComponent } from '../../doc/inputnumber/buttonsdoc';
-import { VerticalDocComponent } from '../../doc/inputnumber/verticaldoc';
-import { FloatlabelDocComponent } from '../../doc/inputnumber/floatlabeldoc';
-import { InvalidDocComponent } from '../../doc/inputnumber/invaliddoc';
-import { DisabledDocComponent } from '../../doc/inputnumber/disableddoc';
-import { PropsDocComponent } from '../../doc/inputnumber/propsdoc';
-import { MethodsDocComponent } from '../../doc/inputnumber/methodsdoc';
-import { EventsDocComponent } from '../../doc/inputnumber/eventsdoc';
-import { StyleDocComponent } from '../../doc/inputnumber/styledoc';
+import { LocaleDoc } from '../../doc/inputnumber/localedoc';
+import { ImportDoc } from '../../doc/inputnumber/importdoc';
+import { NumeralsDoc } from '../../doc/inputnumber/numeralsdoc';
+import { CurrencyDoc } from '../../doc/inputnumber/currencydoc';
+import { PrefixSuffixDoc } from '../../doc/inputnumber/prefixsuffixdoc';
+import { ButtonsDoc } from '../../doc/inputnumber/buttonsdoc';
+import { VerticalDoc } from '../../doc/inputnumber/verticaldoc';
+import { FloatlabelDoc } from '../../doc/inputnumber/floatlabeldoc';
+import { InvalidDoc } from '../../doc/inputnumber/invaliddoc';
+import { DisabledDoc } from '../../doc/inputnumber/disableddoc';
+import { PropsDoc } from '../../doc/inputnumber/propsdoc';
+import { MethodsDoc } from '../../doc/inputnumber/methodsdoc';
+import { EventsDoc } from '../../doc/inputnumber/eventsdoc';
+import { StyleDoc } from '../../doc/inputnumber/styledoc';
 
 @Component({
     templateUrl: './inputnumberdemo.html',
@@ -23,57 +23,57 @@ export class InputNumberDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'numeral',
             label: 'Numeral',
-            component: NumeralsDocComponent
+            component: NumeralsDoc
         },
         {
             id: 'locale',
             label: 'Locale',
-            component: LocaleDocComponent
+            component: LocaleDoc
         },
         {
             id: 'currency',
             label: 'Currency',
-            component: CurrencyDocComponent
+            component: CurrencyDoc
         },
         {
             id: 'prefixsuffix',
             label: 'Prefix & Suffix',
-            component: PrefixSuffixDocComponent
+            component: PrefixSuffixDoc
         },
         {
             id: 'buttons',
             label: 'Buttons',
-            component: ButtonsDocComponent
+            component: ButtonsDoc
         },
         {
             id: 'vertical',
             label: 'Vertical',
-            component: VerticalDocComponent
+            component: VerticalDoc
         },
         {
             id: 'floatlabel',
             label: 'Float Label',
-            component: FloatlabelDocComponent
+            component: FloatlabelDoc
         },
         {
             id: 'invalid',
             label: 'Invalid',
-            component: InvalidDocComponent
+            component: InvalidDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -81,13 +81,13 @@ export class InputNumberDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
-        { id: 'methods', label: 'Methods', component: MethodsDocComponent }
+        { id: 'methods', label: 'Methods', component: MethodsDoc }
     ];
 }

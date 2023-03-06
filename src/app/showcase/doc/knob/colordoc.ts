@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="knob-color-demo"></app-code>
     </div>`
 })
-export class ColorDocComponent {
+export class ColorDoc {
     @Input() id: string;
 
     @Input() title: string;

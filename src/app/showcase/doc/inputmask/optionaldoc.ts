@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputmask-optional-demo"></app-code>
     </div>`
 })
-export class OptionalDocComponent {
+export class OptionalDoc {
     @Input() id: string;
 
     @Input() title: string;

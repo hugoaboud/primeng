@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { SlideMenuPopupDemo } from '../../doc/slidemenu/popupdoc';
 import { SlideMenuBasicDemo } from '../../doc/slidemenu/basicdoc';
-import { ImportDocComponent } from '../../doc/slidemenu/importdoc';
-import { MenuItemDocComponent } from '../../doc/slidemenu/menuitemdoc';
-import { MethodsDocComponent } from '../../doc/slidemenu/methodsdoc';
-import { PropsDocComponent } from '../../doc/slidemenu/propsdoc';
-import { StyleDocComponent } from '../../doc/slidemenu/styledoc';
+import { ImportDoc } from '../../doc/slidemenu/importdoc';
+import { MenuItemDoc } from '../../doc/slidemenu/menuitemdoc';
+import { MethodsDoc } from '../../doc/slidemenu/methodsdoc';
+import { PropsDoc } from '../../doc/slidemenu/propsdoc';
+import { StyleDoc } from '../../doc/slidemenu/styledoc';
 
 @Component({
     templateUrl: './slidemenudemo.html'
@@ -15,7 +15,7 @@ export class SlideMenuDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -30,7 +30,7 @@ export class SlideMenuDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -38,17 +38,17 @@ export class SlideMenuDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         },
         {
             id: 'menuitem',
             label: 'MenuItem API',
-            component: MenuItemDocComponent
+            component: MenuItemDoc
         }
     ];
 }

@@ -14,7 +14,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="tri-state-checkbox-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class BasicDoc {
     @Input() id: string;
 
     @Input() title: string;

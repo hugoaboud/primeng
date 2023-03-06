@@ -21,7 +21,7 @@ interface City {
         <app-code [code]="code" selector="multiselect-floatlabel-demo"></app-code>
     </div>`
 })
-export class FloatLabelDocComponent {
+export class FloatLabelDoc {
     @Input() id: string;
 
     @Input() title: string;

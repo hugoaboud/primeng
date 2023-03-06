@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { SidebarBasicDemo } from '../../doc/sidebar/basicdoc';
 import { SidebarTemplateDemo } from '../../doc/sidebar/templatedoc';
-import { EventsDocComponent } from '../../doc/sidebar/eventsdoc';
-import { ImportDocComponent } from '../../doc/sidebar/importdoc';
-import { PropsDocComponent } from '../../doc/sidebar/propsdoc';
-import { StyleDocComponent } from '../../doc/sidebar/styledoc';
-import { TemplatesDocComponent } from '../../doc/sidebar/templatesdoc';
+import { EventsDoc } from '../../doc/sidebar/eventsdoc';
+import { ImportDoc } from '../../doc/sidebar/importdoc';
+import { PropsDoc } from '../../doc/sidebar/propsdoc';
+import { StyleDoc } from '../../doc/sidebar/styledoc';
+import { TemplatesDoc } from '../../doc/sidebar/templatesdoc';
 import { SidebarPositionDemo } from '../../doc/sidebar/positiondoc';
 import { SidebarFullScreenDemo } from '../../doc/sidebar/fullscreendoc';
 import { SidebarSizeDemo } from '../../doc/sidebar/sizedoc';
@@ -18,7 +18,7 @@ export class SidebarDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -48,7 +48,7 @@ export class SidebarDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -56,17 +56,17 @@ export class SidebarDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

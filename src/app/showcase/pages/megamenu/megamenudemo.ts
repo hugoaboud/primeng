@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ImportDocComponent } from '../../doc/megamenu/importdoc';
+import { ImportDoc } from '../../doc/megamenu/importdoc';
 import { MegaMenuBasicDemo } from '../../doc/megamenu/basicdoc';
-import { EventsDocComponent } from '../../doc/megamenu/eventsdoc';
-import { MegaMenuItemDocComponent } from '../../doc/megamenu/megamenuitemdoc';
-import { PropsDocComponent } from '../../doc/megamenu/propsdoc';
-import { StyleDocComponent } from '../../doc/megamenu/styledoc';
+import { EventsDoc } from '../../doc/megamenu/eventsdoc';
+import { MegaMenuItemDoc } from '../../doc/megamenu/megamenuitemdoc';
+import { PropsDoc } from '../../doc/megamenu/propsdoc';
+import { StyleDoc } from '../../doc/megamenu/styledoc';
 import { MegaMenuTemplateDemo } from '../../doc/megamenu/templatedoc';
-import { TemplatesDocComponent } from '../../doc/megamenu/templatesdoc';
+import { TemplatesDoc } from '../../doc/megamenu/templatesdoc';
 import { MegaMenuVerticalDemo } from '../../doc/megamenu/verticaldoc';
 
 @Component({
@@ -17,7 +17,7 @@ export class MegaMenuDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -37,7 +37,7 @@ export class MegaMenuDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -45,22 +45,22 @@ export class MegaMenuDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         },
         {
             id: 'megamenuitem',
             label: 'MegaMenuItem API',
-            component: MegaMenuItemDocComponent
+            component: MegaMenuItemDoc
         }
     ];
 }

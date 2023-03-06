@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ApiDocComponent } from '../../doc/locale/apidoc';
-import { ImportDocComponent } from '../../doc/locale/importdoc';
-import { NgxTranslateDocComponent } from '../../doc/locale/ngx-translatedoc';
-import { RepositoryDocComponent } from '../../doc/locale/repositorydoc';
-import { SetLocaleDocComponent } from '../../doc/locale/setlocaledoc';
+import { ApiDoc } from '../../doc/locale/apidoc';
+import { ImportDoc } from '../../doc/locale/importdoc';
+import { NgxTranslateDoc } from '../../doc/locale/ngx-translatedoc';
+import { RepositoryDoc } from '../../doc/locale/repositorydoc';
+import { SetLocaleDoc } from '../../doc/locale/setlocaledoc';
 
 @Component({
     templateUrl: './locale.component.html'
@@ -13,27 +13,27 @@ export class LocaleComponent {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'set-locale',
             label: 'Set Locale',
-            component: SetLocaleDocComponent
+            component: SetLocaleDoc
         },
         {
             id: 'ngx-translate',
             label: 'ngx-translate',
-            component: NgxTranslateDocComponent
+            component: NgxTranslateDoc
         },
         {
             id: 'repository',
             label: 'Repository',
-            component: RepositoryDocComponent
+            component: RepositoryDoc
         },
         {
             id: 'api',
             label: 'API',
-            component: ApiDocComponent
+            component: ApiDoc
         }
     ];
 }

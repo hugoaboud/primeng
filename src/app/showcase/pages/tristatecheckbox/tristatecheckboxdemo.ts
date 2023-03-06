@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/tristatecheckbox/basicdoc';
-import { ImportDocComponent } from '../../doc/tristatecheckbox/importdoc';
-import { DisabledDocComponent } from '../../doc/tristatecheckbox/disableddoc';
-import { PropsDocComponent } from '../../doc/tristatecheckbox/propsdoc';
-import { EventsDocComponent } from '../../doc/tristatecheckbox/eventsdoc';
-import { StyleDocComponent } from '../../doc/tristatecheckbox/styledoc';
+import { BasicDoc } from '../../doc/tristatecheckbox/basicdoc';
+import { ImportDoc } from '../../doc/tristatecheckbox/importdoc';
+import { DisabledDoc } from '../../doc/tristatecheckbox/disableddoc';
+import { PropsDoc } from '../../doc/tristatecheckbox/propsdoc';
+import { EventsDoc } from '../../doc/tristatecheckbox/eventsdoc';
+import { StyleDoc } from '../../doc/tristatecheckbox/styledoc';
 
 @Component({
     templateUrl: './tristatecheckboxdemo.html'
@@ -14,22 +14,22 @@ export class TriStateCheckboxDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -37,12 +37,12 @@ export class TriStateCheckboxDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

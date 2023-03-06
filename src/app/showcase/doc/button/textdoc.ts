@@ -19,7 +19,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="button-text-demo"></app-code>
     </div>`
 })
-export class TextDocComponent {
+export class TextDoc {
     @Input() id: string;
 
     @Input() title: string;

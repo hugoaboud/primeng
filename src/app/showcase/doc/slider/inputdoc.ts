@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="slider-input-demo"></app-code>
     </div>`
 })
-export class InputDocComponent {
+export class InputDoc {
     @Input() id: string;
 
     @Input() title: string;

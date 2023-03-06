@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="calendar-touchui-demo"></app-code>
     </div>`
 })
-export class TouchUIDocComponent {
+export class TouchUIDoc {
     @Input() id: string;
 
     @Input() title: string;

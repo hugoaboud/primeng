@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { ImportDocComponent } from '../../doc/keyfilter/importdoc';
-import { PresetsDocComponent } from '../../doc/keyfilter/presetsdoc';
-import { PropsDocComponent } from '../../doc/keyfilter/propsdoc';
-import { RegexDocComponent } from '../../doc/keyfilter/regexdoc';
+import { ImportDoc } from '../../doc/keyfilter/importdoc';
+import { PresetsDoc } from '../../doc/keyfilter/presetsdoc';
+import { PropsDoc } from '../../doc/keyfilter/propsdoc';
+import { RegexDoc } from '../../doc/keyfilter/regexdoc';
 
 @Component({
     templateUrl: './keyfilterdemo.html'
@@ -12,17 +12,17 @@ export class KeyFilterDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'presets',
             label: 'Presets',
-            component: PresetsDocComponent
+            component: PresetsDoc
         },
         {
             id: 'regex',
             label: 'Regex',
-            component: RegexDocComponent
+            component: RegexDoc
         }
     ];
 
@@ -30,7 +30,7 @@ export class KeyFilterDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

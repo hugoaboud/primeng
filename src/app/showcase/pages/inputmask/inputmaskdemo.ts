@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/inputmask/basicdoc';
-import { DisabledDocComponent } from '../../doc/inputmask/disableddoc';
-import { EventsDocComponent } from '../../doc/inputmask/eventsdoc';
-import { FloatlabelDocComponent } from '../../doc/inputmask/floatlabeldoc';
-import { ImportDocComponent } from '../../doc/inputmask/importdoc';
-import { InvalidDocComponent } from '../../doc/inputmask/invaliddoc';
-import { MaskDocComponent } from '../../doc/inputmask/maskdoc';
-import { MethodsDocComponent } from '../../doc/inputmask/methodsdoc';
-import { OptionalDocComponent } from '../../doc/inputmask/optionaldoc';
-import { PropsDocComponent } from '../../doc/inputmask/propsdoc';
-import { SlotCharDocComponent } from '../../doc/inputmask/slotchardoc';
-import { StyleDocComponent } from '../../doc/inputmask/styledoc';
+import { BasicDoc } from '../../doc/inputmask/basicdoc';
+import { DisabledDoc } from '../../doc/inputmask/disableddoc';
+import { EventsDoc } from '../../doc/inputmask/eventsdoc';
+import { FloatlabelDoc } from '../../doc/inputmask/floatlabeldoc';
+import { ImportDoc } from '../../doc/inputmask/importdoc';
+import { InvalidDoc } from '../../doc/inputmask/invaliddoc';
+import { MaskDoc } from '../../doc/inputmask/maskdoc';
+import { MethodsDoc } from '../../doc/inputmask/methodsdoc';
+import { OptionalDoc } from '../../doc/inputmask/optionaldoc';
+import { PropsDoc } from '../../doc/inputmask/propsdoc';
+import { SlotCharDoc } from '../../doc/inputmask/slotchardoc';
+import { StyleDoc } from '../../doc/inputmask/styledoc';
 
 @Component({
     templateUrl: './inputmaskdemo.html'
@@ -20,47 +20,47 @@ export class InputMaskDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'mask',
             label: 'Mask',
-            component: MaskDocComponent
+            component: MaskDoc
         },
         {
             id: 'slotchar',
             label: 'Slot Char',
-            component: SlotCharDocComponent
+            component: SlotCharDoc
         },
         {
             id: 'optional',
             label: 'Optional',
-            component: OptionalDocComponent
+            component: OptionalDoc
         },
         {
             id: 'floatlabel',
             label: 'FloatLabel',
-            component: FloatlabelDocComponent
+            component: FloatlabelDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'invalid',
             label: 'Invalid',
-            component: InvalidDocComponent
+            component: InvalidDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -68,17 +68,17 @@ export class InputMaskDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         }
     ];
 }

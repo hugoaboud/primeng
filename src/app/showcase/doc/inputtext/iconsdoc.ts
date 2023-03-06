@@ -21,7 +21,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputtext-icons-demo"></app-code>
     </div>`
 })
-export class IconsDocComponent {
+export class IconsDoc {
     value: string;
 
     value2: string;

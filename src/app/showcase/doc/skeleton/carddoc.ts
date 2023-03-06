@@ -27,7 +27,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code"></app-code>
     </div>`
 })
-export class CardDocComponent {
+export class CardDoc {
     @Input() id: string;
 
     @Input() title: string;

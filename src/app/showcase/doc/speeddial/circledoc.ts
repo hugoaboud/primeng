@@ -18,7 +18,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [MessageService]
 })
-export class CircleDocComponent implements OnInit {
+export class CircleDoc implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

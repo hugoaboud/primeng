@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputtextarea-autoresize-demo"></app-code>
     </div>`
 })
-export class AutoResizeDocComponent {
+export class AutoResizeDoc {
     @Input() id: string;
 
     @Input() title: string;

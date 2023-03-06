@@ -27,7 +27,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class EventsDocComponent {
+export class EventsDoc {
     @Input() id: string;
 
     @Input() title: string;

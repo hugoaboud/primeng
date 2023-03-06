@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/editor/basicdoc';
-import { CustomToolbarDocComponent } from '../../doc/editor/customtoolbardoc';
-import { EventsDocComponent } from '../../doc/editor/eventsdoc';
-import { ImportDocComponent } from '../../doc/editor/importdoc';
-import { MethodsDocComponent } from '../../doc/editor/methodsdoc';
-import { PropsDocComponent } from '../../doc/editor/propsdoc';
-import { QuillDocComponent } from '../../doc/editor/quilldoc';
-import { ReadOnlyDocComponent } from '../../doc/editor/readonlydoc';
-import { StyleDocComponent } from '../../doc/editor/styledoc';
+import { BasicDoc } from '../../doc/editor/basicdoc';
+import { CustomToolbarDoc } from '../../doc/editor/customtoolbardoc';
+import { EventsDoc } from '../../doc/editor/eventsdoc';
+import { ImportDoc } from '../../doc/editor/importdoc';
+import { MethodsDoc } from '../../doc/editor/methodsdoc';
+import { PropsDoc } from '../../doc/editor/propsdoc';
+import { QuillDoc } from '../../doc/editor/quilldoc';
+import { ReadOnlyDoc } from '../../doc/editor/readonlydoc';
+import { StyleDoc } from '../../doc/editor/styledoc';
 
 @Component({
     templateUrl: './editordemo.html'
@@ -17,32 +17,32 @@ export class EditorDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'quill',
             label: 'Quill',
-            component: QuillDocComponent
+            component: QuillDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'readonly',
             label: 'Read Only',
-            component: ReadOnlyDocComponent
+            component: ReadOnlyDoc
         },
         {
             id: 'customtoolbar',
             label: 'Custom Toolbar',
-            component: CustomToolbarDocComponent
+            component: CustomToolbarDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -50,17 +50,17 @@ export class EditorDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         }
     ];
 }

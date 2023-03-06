@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ColorsDocComponent } from '../../doc/accessibility/colorsdoc';
-import { FormControlsDocComponent } from '../../doc/accessibility/formcontrolsdoc';
-import { IntroductionDocComponent } from '../../doc/accessibility/introductiondoc';
-import { SemanticHTMLDocComponent } from '../../doc/accessibility/semantichtmldoc';
-import { WAIARIADocComponent } from '../../doc/accessibility/wai-ariadoc';
-import { WCAGDocComponent } from '../../doc/accessibility/WCAGdoc';
+import { ColorsDoc } from '../../doc/accessibility/colorsdoc';
+import { FormControlsDoc } from '../../doc/accessibility/formcontrolsdoc';
+import { IntroductionDoc } from '../../doc/accessibility/introductiondoc';
+import { SemanticHTMLDoc } from '../../doc/accessibility/semantichtmldoc';
+import { WAIARIADoc } from '../../doc/accessibility/wai-ariadoc';
+import { WCAGDoc } from '../../doc/accessibility/WCAGdoc';
 
 @Component({
     selector: 'accessibility',
@@ -15,32 +15,32 @@ export class AccessibilityDemoComponent {
         {
             id: 'introduction',
             label: 'Introduction',
-            component: IntroductionDocComponent
+            component: IntroductionDoc
         },
         {
             id: 'wcag',
             label: 'WCAG',
-            component: WCAGDocComponent
+            component: WCAGDoc
         },
         {
             id: 'form-controls',
             label: 'Form Controls',
-            component: FormControlsDocComponent
+            component: FormControlsDoc
         },
         {
             id: 'semantic-html',
             label: 'Semantic HTML',
-            component: SemanticHTMLDocComponent
+            component: SemanticHTMLDoc
         },
         {
             id: 'wai-aria',
             label: 'WAI-ARIA',
-            component: WAIARIADocComponent
+            component: WAIARIADoc
         },
         {
             id: 'colors',
             label: 'Colors',
-            component: ColorsDocComponent
+            component: ColorsDoc
         }
     ];
 }

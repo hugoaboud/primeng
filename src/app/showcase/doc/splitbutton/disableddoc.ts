@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [MessageService]
 })
-export class DisabledDocComponent {
+export class DisabledDoc {
     @Input() id: string;
 
     @Input() title: string;

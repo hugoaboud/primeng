@@ -18,7 +18,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [MessageService]
 })
-export class MaskDocComponent implements OnInit {
+export class MaskDoc implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

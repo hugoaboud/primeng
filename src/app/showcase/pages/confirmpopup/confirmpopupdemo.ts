@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { ConfirmPopupBasicDemo } from '../../doc/confirmpopup/basicdoc';
-import { ImportDocComponent } from '../../doc/confirmpopup/importdoc';
-import { PropsDocComponent } from '../../doc/confirmpopup/propsdoc';
-import { StyleDocComponent } from '../../doc/confirmpopup/styledoc';
-import { ServiceDocComponent } from '../../doc/confirmpopup/servicedoc';
-import { ConfirmationApiDocComponent } from '../../doc/confirmpopup/confirmationapidoc';
+import { ImportDoc } from '../../doc/confirmpopup/importdoc';
+import { PropsDoc } from '../../doc/confirmpopup/propsdoc';
+import { StyleDoc } from '../../doc/confirmpopup/styledoc';
+import { ServiceDoc } from '../../doc/confirmpopup/servicedoc';
+import { ConfirmationApiDoc } from '../../doc/confirmpopup/confirmationapidoc';
 
 @Component({
     templateUrl: './confirmpopupdemo.html'
@@ -14,7 +14,7 @@ export class ConfirmPopupDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -24,7 +24,7 @@ export class ConfirmPopupDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -32,17 +32,17 @@ export class ConfirmPopupDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'service',
             label: 'Confirmation Service',
-            component: ServiceDocComponent
+            component: ServiceDoc
         },
         {
             id: 'confirmationapi',
             label: 'Confirmation API',
-            component: ConfirmationApiDocComponent
+            component: ConfirmationApiDoc
         }
     ];
 }

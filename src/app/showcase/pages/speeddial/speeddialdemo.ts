@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { CircleDocComponent } from '../../doc/speeddial/circledoc';
-import { CustomDocComponent } from '../../doc/speeddial/customdoc';
-import { EventsDocComponent } from '../../doc/speeddial/eventsdoc';
-import { ImportDocComponent } from '../../doc/speeddial/importdoc';
-import { LinearDocComponent } from '../../doc/speeddial/lineardoc';
-import { MaskDocComponent } from '../../doc/speeddial/maskdoc';
-import { PropsDocComponent } from '../../doc/speeddial/propsdoc';
-import { QuarterCircleDocComponent } from '../../doc/speeddial/quartercircledoc';
-import { SemiCircleDocComponent } from '../../doc/speeddial/semicircledoc';
-import { StyleDocComponent } from '../../doc/speeddial/styledoc';
-import { TemplatesDocComponent } from '../../doc/speeddial/templatesdoc';
-import { TooltipDocComponent } from '../../doc/speeddial/tooltipdoc';
+import { CircleDoc } from '../../doc/speeddial/circledoc';
+import { CustomDoc } from '../../doc/speeddial/customdoc';
+import { EventsDoc } from '../../doc/speeddial/eventsdoc';
+import { ImportDoc } from '../../doc/speeddial/importdoc';
+import { LinearDoc } from '../../doc/speeddial/lineardoc';
+import { MaskDoc } from '../../doc/speeddial/maskdoc';
+import { PropsDoc } from '../../doc/speeddial/propsdoc';
+import { QuarterCircleDoc } from '../../doc/speeddial/quartercircledoc';
+import { SemiCircleDoc } from '../../doc/speeddial/semicircledoc';
+import { StyleDoc } from '../../doc/speeddial/styledoc';
+import { TemplatesDoc } from '../../doc/speeddial/templatesdoc';
+import { TooltipDoc } from '../../doc/speeddial/tooltipdoc';
 
 @Component({
     templateUrl: './speeddialdemo.html',
@@ -21,47 +21,47 @@ export class SpeedDialDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'linear',
             label: 'Linear',
-            component: LinearDocComponent
+            component: LinearDoc
         },
         {
             id: 'circle',
             label: 'Circle',
-            component: CircleDocComponent
+            component: CircleDoc
         },
         {
             id: 'semicircle',
             label: 'Semi Circle',
-            component: SemiCircleDocComponent
+            component: SemiCircleDoc
         },
         {
             id: 'quartercircle',
             label: 'Quarter Circle',
-            component: QuarterCircleDocComponent
+            component: QuarterCircleDoc
         },
         {
             id: 'tooltip',
             label: 'Tooltip',
-            component: TooltipDocComponent
+            component: TooltipDoc
         },
         {
             id: 'mask',
             label: 'Mask',
-            component: MaskDocComponent
+            component: MaskDoc
         },
         {
             id: 'custom',
             label: 'Custom',
-            component: CustomDocComponent
+            component: CustomDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -69,17 +69,17 @@ export class SpeedDialDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

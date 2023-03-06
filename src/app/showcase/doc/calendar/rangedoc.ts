@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="calendar-range-demo"></app-code>
     </div>`
 })
-export class RangeDocComponent {
+export class RangeDoc {
     @Input() id: string;
 
     @Input() title: string;

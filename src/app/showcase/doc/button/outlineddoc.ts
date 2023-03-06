@@ -19,7 +19,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="button-outlined-demo"></app-code>
     </div>`
 })
-export class OutlinedDocComponent {
+export class OutlinedDoc {
     @Input() id: string;
 
     @Input() title: string;

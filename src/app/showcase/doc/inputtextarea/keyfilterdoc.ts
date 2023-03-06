@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputtextarea-keyfilter-demo"></app-code>
     </div>`
 })
-export class KeyfilterDocComponent {
+export class KeyfilterDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -8,13 +8,13 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { FocusTrapModule } from 'primeng/focustrap';
-import { ImportDocComponent } from './importdoc';
+import { ImportDoc } from './importdoc';
 import { FocusTrapBasicDemo } from './basicdoc';
-import { PropsDocComponent } from './propsdoc';
+import { PropsDoc } from './propsdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, FormsModule, ButtonModule, InputTextModule, DropdownModule, FocusTrapModule],
-    declarations: [ImportDocComponent, FocusTrapBasicDemo, PropsDocComponent],
+    declarations: [ImportDoc, FocusTrapBasicDemo, PropsDoc],
     exports: [AppDocModule]
 })
 export class FocusTrapDocModule {}

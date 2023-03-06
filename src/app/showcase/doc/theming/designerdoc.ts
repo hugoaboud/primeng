@@ -19,7 +19,7 @@ import { Component, Input } from '@angular/core';
         <img alt="PrimeNG Designer" src="https://primefaces.org/cdn/primevue/images/primevue-designer.jpg" class="w-full mb-5" />
     </div>`
 })
-export class DesignerDocComponent {
+export class DesignerDoc {
     @Input() id: string;
 
     @Input() title: string;

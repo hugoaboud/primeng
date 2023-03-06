@@ -34,7 +34,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class DraggableEventsDocComponent {
+export class DraggableEventsDoc {
     @Input() id: string;
 
     @Input() title: string;

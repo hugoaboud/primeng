@@ -23,7 +23,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputnumber-vertical-demo"></app-code>
     </div>`
 })
-export class VerticalDocComponent {
+export class VerticalDoc {
     @Input() id: string;
 
     @Input() title: string;

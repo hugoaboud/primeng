@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="chips-regexpseperator-demo"></app-code>
     </div>`
 })
-export class RegexpSeperatorDocComponent {
+export class RegexpSeperatorDoc {
     @Input() id: string;
 
     @Input() title: string;

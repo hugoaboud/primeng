@@ -18,7 +18,7 @@ interface City {
         <app-code [code]="code" selector="dropdown-disabled-demo"></app-code>
     </div>`
 })
-export class DisabledDocComponent {
+export class DisabledDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -13,7 +13,7 @@ import { ProductListDemo } from './productlistdemo';
     </div>`,
     providers: [DialogService]
 })
-export class OpenDocComponent {
+export class OpenDoc {
     @Input() id: string;
 
     @Input() title: string;

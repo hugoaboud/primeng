@@ -57,7 +57,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="button-icon-only-demo"></app-code>
     </div>`
 })
-export class IconOnlyDocComponent {
+export class IconOnlyDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { TerminalBasicDemo } from '../../doc/terminal/basicdoc';
-import { PropsDocComponent } from '../../doc/terminal/propsdoc';
-import { StyleDocComponent } from '../../doc/terminal/styledoc';
-import { ImportDocComponent } from '../../doc/terminal/importdoc';
+import { PropsDoc } from '../../doc/terminal/propsdoc';
+import { StyleDoc } from '../../doc/terminal/styledoc';
+import { ImportDoc } from '../../doc/terminal/importdoc';
 
 @Component({
     templateUrl: './terminaldemo.html'
@@ -12,7 +12,7 @@ export class TerminalDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -22,7 +22,7 @@ export class TerminalDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -30,7 +30,7 @@ export class TerminalDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

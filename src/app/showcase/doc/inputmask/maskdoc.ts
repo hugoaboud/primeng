@@ -27,7 +27,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputmask-mask-demo"></app-code>
     </div>`
 })
-export class MaskDocComponent {
+export class MaskDoc {
     @Input() id: string;
 
     @Input() title: string;

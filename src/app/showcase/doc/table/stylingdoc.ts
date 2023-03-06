@@ -86,7 +86,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class StylingDocComponent {
+export class StylingDoc {
     @Input() id: string;
 
     @Input() title: string;

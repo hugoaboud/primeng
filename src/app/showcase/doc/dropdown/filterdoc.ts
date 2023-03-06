@@ -26,7 +26,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="dropdown-filter-demo"></app-code>
     </div>`
 })
-export class FilterDocComponent {
+export class FilterDoc {
     @Input() id: string;
 
     @Input() title: string;

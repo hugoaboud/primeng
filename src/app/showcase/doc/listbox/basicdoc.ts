@@ -18,7 +18,7 @@ interface City {
         <app-code [code]="code" selector="listbox-basic-demo"></app-code>
     </div>`
 })
-export class BasicDocComponent {
+export class BasicDoc {
     @Input() id: string;
 
     @Input() title: string;

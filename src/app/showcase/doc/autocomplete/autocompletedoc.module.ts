@@ -5,19 +5,19 @@ import { FormsModule } from '@angular/forms';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { AutoCompleteModule } from 'primeng/autocomplete';
-import { ImportDocComponent } from './importdoc';
-import { BasicDocComponent } from './basicdoc';
-import { TemplateDocComponent } from './templatedoc';
-import { GroupedDocComponent } from './groupeddoc';
-import { VirtualScrollDocComponent } from './virtualscrolldoc';
-import { MultipleDocComponent } from './multipledoc';
-import { StyleDocComponent } from './styledoc';
-import { PropsDocComponent } from './propsdoc';
-import { EventsDocComponent } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { BasicDoc } from './basicdoc';
+import { TemplateDoc } from './templatedoc';
+import { GroupedDoc } from './groupeddoc';
+import { VirtualScrollDoc } from './virtualscrolldoc';
+import { MultipleDoc } from './multipledoc';
+import { StyleDoc } from './styledoc';
+import { PropsDoc } from './propsdoc';
+import { EventsDoc } from './eventsdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, FormsModule, AppDocModule, AutoCompleteModule],
-    exports: [AppDocModule, ImportDocComponent, BasicDocComponent, TemplateDocComponent, GroupedDocComponent, VirtualScrollDocComponent, MultipleDocComponent, StyleDocComponent, PropsDocComponent, EventsDocComponent],
-    declarations: [ImportDocComponent, BasicDocComponent, TemplateDocComponent, GroupedDocComponent, VirtualScrollDocComponent, MultipleDocComponent, StyleDocComponent, PropsDocComponent, EventsDocComponent]
+    exports: [AppDocModule, ImportDoc, BasicDoc, TemplateDoc, GroupedDoc, VirtualScrollDoc, MultipleDoc, StyleDoc, PropsDoc, EventsDoc],
+    declarations: [ImportDoc, BasicDoc, TemplateDoc, GroupedDoc, VirtualScrollDoc, MultipleDoc, StyleDoc, PropsDoc, EventsDoc]
 })
 export class AutoCompleteDocModule {}

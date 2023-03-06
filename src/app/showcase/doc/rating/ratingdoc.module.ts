@@ -5,20 +5,20 @@ import { RouterModule } from '@angular/router';
 import { RatingModule } from 'primeng/rating';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { BasicDocComponent } from './basicdoc';
-import { DisabledDocComponent } from './disableddoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
-import { NumberOfStarsDocComponent } from './numberofstarsdoc';
-import { PropsDocComponent } from './propsdoc';
-import { ReadOnlyDocComponent } from './readonlydoc';
-import { StyleDocComponent } from './styledoc';
-import { TemplateDocComponent } from './templatedoc';
-import { WithoutCancelDocComponent } from './withoutcanceldoc';
+import { BasicDoc } from './basicdoc';
+import { DisabledDoc } from './disableddoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { NumberOfStarsDoc } from './numberofstarsdoc';
+import { PropsDoc } from './propsdoc';
+import { ReadOnlyDoc } from './readonlydoc';
+import { StyleDoc } from './styledoc';
+import { TemplateDoc } from './templatedoc';
+import { WithoutCancelDoc } from './withoutcanceldoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, RatingModule, FormsModule, RouterModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, BasicDocComponent, WithoutCancelDocComponent, NumberOfStarsDocComponent, TemplateDocComponent, ReadOnlyDocComponent, DisabledDocComponent, StyleDocComponent, PropsDocComponent, EventsDocComponent]
+    declarations: [ImportDoc, BasicDoc, WithoutCancelDoc, NumberOfStarsDoc, TemplateDoc, ReadOnlyDoc, DisabledDoc, StyleDoc, PropsDoc, EventsDoc]
 })
 export class RatingDocModule {}

@@ -12,7 +12,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code1" [hideToggleCode]="true"></app-code>
     </div>`
 })
-export class AngularCliDocComponent {
+export class AngularCliDoc {
     @Input() id: string;
 
     @Input() title: string;

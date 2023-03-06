@@ -19,7 +19,7 @@ import { Code } from '../../domain/code';
         </div>
     </div>`
 })
-export class TargetDocComponent {
+export class TargetDoc {
     @Input() id: string;
 
     @Input() title: string;

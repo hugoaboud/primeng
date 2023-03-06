@@ -145,7 +145,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class BuiltInConstraintsDocComponent {
+export class BuiltInConstraintsDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -19,7 +19,7 @@ import { Code } from '../../domain/code';
     </div>`,
     providers: [MessageService]
 })
-export class TooltipDocComponent implements OnInit {
+export class TooltipDoc implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

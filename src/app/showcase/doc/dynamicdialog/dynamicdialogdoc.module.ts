@@ -8,33 +8,33 @@ import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { OpenDocComponent } from './opendoc';
-import { ImportDocComponent } from './importdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { OpenDoc } from './opendoc';
+import { ImportDoc } from './importdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 import { ProductListDemo } from './productlistdemo';
 import { DynamicDialogBasicDemo } from './basicdoc';
-import { UsageDocComponent } from './usagedoc';
-import { PassingDataDocComponent } from './passingdatadoc';
-import { CloseDocComponent } from './closedoc';
+import { UsageDoc } from './usagedoc';
+import { PassingDataDoc } from './passingdatadoc';
+import { CloseDoc } from './closedoc';
 import { ProductListDemoDoc } from './productlistdemodoc';
-import { EventsDocComponent } from './eventsdoc';
+import { EventsDoc } from './eventsdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, FormsModule, DialogModule, ButtonModule, AppDocModule, ToastModule, TableModule],
     declarations: [
-        OpenDocComponent,
-        ImportDocComponent,
-        PropsDocComponent,
-        StyleDocComponent,
+        OpenDoc,
+        ImportDoc,
+        PropsDoc,
+        StyleDoc,
         DynamicDialogBasicDemo,
         ProductListDemo,
-        UsageDocComponent,
-        PassingDataDocComponent,
-        CloseDocComponent,
+        UsageDoc,
+        PassingDataDoc,
+        CloseDoc,
         ProductListDemoDoc,
-        StyleDocComponent,
-        EventsDocComponent
+        StyleDoc,
+        EventsDoc
     ],
     exports: [AppDocModule],
     entryComponents: [ProductListDemo]

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { AnimationsDocComponent } from '../../doc/configuration/animationsdoc';
-import { FilterModeDocComponent } from '../../doc/configuration/filtermodedoc';
-import { ImportDocComponent } from '../../doc/configuration/importdoc';
-import { RippleDocComponent } from '../../doc/configuration/rippledoc';
-import { ZIndexDocComponent } from '../../doc/configuration/zindexdoc';
+import { AnimationsDoc } from '../../doc/configuration/animationsdoc';
+import { FilterModeDoc } from '../../doc/configuration/filtermodedoc';
+import { ImportDoc } from '../../doc/configuration/importdoc';
+import { RippleDoc } from '../../doc/configuration/rippledoc';
+import { ZIndexDoc } from '../../doc/configuration/zindexdoc';
 
 @Component({
     selector: 'configuration',
@@ -14,27 +14,27 @@ export class ConfigurationDemoComponent {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'animations',
             label: 'Animations',
-            component: AnimationsDocComponent
+            component: AnimationsDoc
         },
         {
             id: 'ripple',
             label: 'Ripple',
-            component: RippleDocComponent
+            component: RippleDoc
         },
         {
             id: 'zIndex',
             label: 'ZIndex',
-            component: ZIndexDocComponent
+            component: ZIndexDoc
         },
         {
             id: 'filter-mode',
             label: 'Filter Mode',
-            component: FilterModeDocComponent
+            component: FilterModeDoc
         }
     ];
 }

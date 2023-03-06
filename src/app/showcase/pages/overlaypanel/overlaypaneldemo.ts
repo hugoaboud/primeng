@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { OverlayPanelBasicDemo } from '../../doc/overlaypanel/basicdoc';
-import { ImportDocComponent } from '../../doc/overlaypanel/importdoc';
-import { PropsDocComponent } from '../../doc/overlaypanel/propsdoc';
-import { StyleDocComponent } from '../../doc/overlaypanel/styledoc';
-import { TemplatesDocComponent } from '../../doc/overlaypanel/templatesdoc';
+import { ImportDoc } from '../../doc/overlaypanel/importdoc';
+import { PropsDoc } from '../../doc/overlaypanel/propsdoc';
+import { StyleDoc } from '../../doc/overlaypanel/styledoc';
+import { TemplatesDoc } from '../../doc/overlaypanel/templatesdoc';
 import { OverlayPanelDataTableDemo } from '../../doc/overlaypanel/datatabledoc';
 import { OverlayPanelTemplateDemo } from '../../doc/overlaypanel/templatedoc';
 import { OverlayPanelTargetDemo } from '../../doc/overlaypanel/targetdoc';
-import { EventsDocComponent } from '../../doc/overlaypanel/eventsdoc';
-import { MethodsDocComponent } from '../../doc/overlaypanel/methodsdoc';
+import { EventsDoc } from '../../doc/overlaypanel/eventsdoc';
+import { MethodsDoc } from '../../doc/overlaypanel/methodsdoc';
 
 @Component({
     templateUrl: './overlaypaneldemo.html'
@@ -18,7 +18,7 @@ export class OverlayPanelDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -43,7 +43,7 @@ export class OverlayPanelDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -51,22 +51,22 @@ export class OverlayPanelDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

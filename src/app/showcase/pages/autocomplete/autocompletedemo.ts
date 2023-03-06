@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/autocomplete/basicdoc';
-import { EventsDocComponent } from '../../doc/autocomplete/eventsdoc';
-import { GroupedDocComponent } from '../../doc/autocomplete/groupeddoc';
-import { ImportDocComponent } from '../../doc/autocomplete/importdoc';
-import { MultipleDocComponent } from '../../doc/autocomplete/multipledoc';
-import { PropsDocComponent } from '../../doc/autocomplete/propsdoc';
-import { StyleDocComponent } from '../../doc/autocomplete/styledoc';
-import { TemplateDocComponent } from '../../doc/autocomplete/templatedoc';
-import { VirtualScrollDocComponent } from '../../doc/autocomplete/virtualscrolldoc';
+import { BasicDoc } from '../../doc/autocomplete/basicdoc';
+import { EventsDoc } from '../../doc/autocomplete/eventsdoc';
+import { GroupedDoc } from '../../doc/autocomplete/groupeddoc';
+import { ImportDoc } from '../../doc/autocomplete/importdoc';
+import { MultipleDoc } from '../../doc/autocomplete/multipledoc';
+import { PropsDoc } from '../../doc/autocomplete/propsdoc';
+import { StyleDoc } from '../../doc/autocomplete/styledoc';
+import { TemplateDoc } from '../../doc/autocomplete/templatedoc';
+import { VirtualScrollDoc } from '../../doc/autocomplete/virtualscrolldoc';
 @Component({
     templateUrl: './autocompletedemo.html'
 })
@@ -16,37 +16,37 @@ export class AutoCompleteDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: TemplateDoc
         },
         {
             id: 'grouped',
             label: 'Grouped',
-            component: GroupedDocComponent
+            component: GroupedDoc
         },
         {
             id: 'virtualscroll',
             label: 'Virtual Scroll',
-            component: VirtualScrollDocComponent
+            component: VirtualScrollDoc
         },
         {
             id: 'multiple',
             label: 'Multiple',
-            component: MultipleDocComponent
+            component: MultipleDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -54,12 +54,12 @@ export class AutoCompleteDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

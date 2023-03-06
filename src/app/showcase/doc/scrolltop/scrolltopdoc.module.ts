@@ -6,13 +6,13 @@ import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { ScrollTopBasicDemo } from './basicdoc';
 import { ScrollTopElementDemo } from './elementdoc';
-import { ImportDocComponent } from './importdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { ImportDoc } from './importdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, ScrollTopModule],
-    declarations: [ScrollTopBasicDemo, ScrollTopElementDemo, ImportDocComponent, PropsDocComponent, StyleDocComponent],
+    declarations: [ScrollTopBasicDemo, ScrollTopElementDemo, ImportDoc, PropsDoc, StyleDoc],
     exports: [AppDocModule]
 })
 export class ScrollTopDocModule {}

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { ChipIconDemo } from '../../doc/chip/icondoc';
 import { ChipImageDemo } from '../../doc/chip/imagedoc';
-import { ImportDocComponent } from '../../doc/chip/importdoc';
+import { ImportDoc } from '../../doc/chip/importdoc';
 import { ChipTemplatingDemo } from '../../doc/chip/templatingdoc';
 import { ChipBasicDemo } from '../../doc/chip/basicdoc';
-import { StyleDocComponent } from '../../doc/chip/styledoc';
-import { PropsDocComponent } from '../../doc/chip/propsdoc';
-import { EventsDocComponent } from '../../doc/chip/eventsdoc';
+import { StyleDoc } from '../../doc/chip/styledoc';
+import { PropsDoc } from '../../doc/chip/propsdoc';
+import { EventsDoc } from '../../doc/chip/eventsdoc';
 
 @Component({
     templateUrl: './chipdemo.html',
@@ -17,7 +17,7 @@ export class ChipDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -42,7 +42,7 @@ export class ChipDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -50,12 +50,12 @@ export class ChipDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

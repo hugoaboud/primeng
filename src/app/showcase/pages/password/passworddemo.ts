@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { BasicDocComponent } from '../../doc/password/basicdoc';
-import { DisabledDocComponent } from '../../doc/password/disableddoc';
-import { EventsDocComponent } from '../../doc/password/eventsdoc';
-import { FloatLabelDocComponent } from '../../doc/password/floatlabeldoc';
-import { ImportDocComponent } from '../../doc/password/importdoc';
-import { InvalidDocComponent } from '../../doc/password/invaliddoc';
-import { MeterDocComponent } from '../../doc/password/meterdoc';
-import { PropsDocComponent } from '../../doc/password/propsdoc';
-import { StyleDocComponent } from '../../doc/password/styledoc';
-import { TemplateDocComponent } from '../../doc/password/templatedoc';
-import { TemplatesDocComponent } from '../../doc/password/templatesdoc';
-import { TogglemaskDocComponent } from '../../doc/password/togglemaskdoc';
+import { BasicDoc } from '../../doc/password/basicdoc';
+import { DisabledDoc } from '../../doc/password/disableddoc';
+import { EventsDoc } from '../../doc/password/eventsdoc';
+import { FloatLabelDoc } from '../../doc/password/floatlabeldoc';
+import { ImportDoc } from '../../doc/password/importdoc';
+import { InvalidDoc } from '../../doc/password/invaliddoc';
+import { MeterDoc } from '../../doc/password/meterdoc';
+import { PropsDoc } from '../../doc/password/propsdoc';
+import { StyleDoc } from '../../doc/password/styledoc';
+import { TemplateDoc } from '../../doc/password/templatedoc';
+import { TemplatesDoc } from '../../doc/password/templatesdoc';
+import { TogglemaskDoc } from '../../doc/password/togglemaskdoc';
 
 @Component({
     templateUrl: './passworddemo.html'
@@ -20,47 +20,47 @@ export class PasswordDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'meter',
             label: 'Meter',
-            component: MeterDocComponent
+            component: MeterDoc
         },
         {
             id: 'togglemask',
             label: 'Toggle Mask',
-            component: TogglemaskDocComponent
+            component: TogglemaskDoc
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: TemplateDoc
         },
         {
             id: 'floatlabel',
             label: 'Float Label',
-            component: FloatLabelDocComponent
+            component: FloatLabelDoc
         },
         {
             id: 'invalid',
             label: 'Invalid',
-            component: InvalidDocComponent
+            component: InvalidDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -68,17 +68,17 @@ export class PasswordDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

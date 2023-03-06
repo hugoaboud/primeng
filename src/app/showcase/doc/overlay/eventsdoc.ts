@@ -8,7 +8,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" [hideToggleCode]="true"></app-code>
     </div>`
 })
-export class EventsDocComponent {
+export class EventsDoc {
     @Input() id: string;
 
     @Input() title: string;

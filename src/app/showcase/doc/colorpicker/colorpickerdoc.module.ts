@@ -5,18 +5,18 @@ import { FormsModule } from '@angular/forms';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { ColorPickerModule } from 'primeng/colorpicker';
-import { ImportDocComponent } from './importdoc';
-import { BasicDocComponent } from './basicdoc';
-import { InlineDocComponent } from './inlinedoc';
-import { FormatDocComponent } from './formatdoc';
-import { DisabledDocComponent } from './disableddoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
-import { EventsDocComponent } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { BasicDoc } from './basicdoc';
+import { InlineDoc } from './inlinedoc';
+import { FormatDoc } from './formatdoc';
+import { DisabledDoc } from './disableddoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
+import { EventsDoc } from './eventsdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, FormsModule, ColorPickerModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, BasicDocComponent, InlineDocComponent, FormatDocComponent, DisabledDocComponent, PropsDocComponent, StyleDocComponent, EventsDocComponent]
+    declarations: [ImportDoc, BasicDoc, InlineDoc, FormatDoc, DisabledDoc, PropsDoc, StyleDoc, EventsDoc]
 })
 export class ColorPickerDocModule {}

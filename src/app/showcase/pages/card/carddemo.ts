@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { CardAdvancedDemo } from '../../doc/card/advanceddoc';
 import { CardBasicDemo } from '../../doc/card/basicdoc';
-import { ImportDocComponent } from '../../doc/card/importdoc';
-import { PropsDocComponent } from '../../doc/card/propsdoc';
-import { StyleDocComponent } from '../../doc/card/styledoc';
-import { TemplatesDocComponent } from '../../doc/card/templatesdoc';
+import { ImportDoc } from '../../doc/card/importdoc';
+import { PropsDoc } from '../../doc/card/propsdoc';
+import { StyleDoc } from '../../doc/card/styledoc';
+import { TemplatesDoc } from '../../doc/card/templatesdoc';
 
 @Component({
     templateUrl: './carddemo.html'
@@ -14,7 +14,7 @@ export class CardDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -29,19 +29,19 @@ export class CardDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
     apiDocs = [
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

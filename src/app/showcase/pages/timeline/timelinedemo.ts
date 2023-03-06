@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { TemplateDocComponent } from '../../doc/timeline/templatedoc';
-import { AlignmentDocComponent } from '../../doc/timeline/alignmentdoc';
-import { BasicDocComponent } from '../../doc/timeline/basicdoc';
-import { ImportDocComponent } from '../../doc/timeline/importdoc';
-import { OppositeDocComponent } from '../../doc/timeline/oppositedoc';
-import { HorizontalDocComponent } from '../../doc/timeline/horizontaldoc';
-import { StyleDocComponent } from '../../doc/timeline/styledoc';
-import { PropsDocComponent } from '../../doc/timeline/propsdoc';
-import { TemplatesDocComponent } from '../../doc/timeline/templatesdoc';
+import { TemplateDoc } from '../../doc/timeline/templatedoc';
+import { AlignmentDoc } from '../../doc/timeline/alignmentdoc';
+import { BasicDoc } from '../../doc/timeline/basicdoc';
+import { ImportDoc } from '../../doc/timeline/importdoc';
+import { OppositeDoc } from '../../doc/timeline/oppositedoc';
+import { HorizontalDoc } from '../../doc/timeline/horizontaldoc';
+import { StyleDoc } from '../../doc/timeline/styledoc';
+import { PropsDoc } from '../../doc/timeline/propsdoc';
+import { TemplatesDoc } from '../../doc/timeline/templatesdoc';
 
 @Component({
     templateUrl: './timelinedemo.html'
@@ -17,37 +17,37 @@ export class TimelineDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'alignment',
             label: 'Alignment',
-            component: AlignmentDocComponent
+            component: AlignmentDoc
         },
         {
             id: 'opposite',
             label: 'Opposite',
-            component: OppositeDocComponent
+            component: OppositeDoc
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: TemplateDoc
         },
         {
             id: 'horizontal',
             label: 'Horizontal',
-            component: HorizontalDocComponent
+            component: HorizontalDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -55,12 +55,12 @@ export class TimelineDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

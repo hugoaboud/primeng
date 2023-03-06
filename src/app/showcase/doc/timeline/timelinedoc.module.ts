@@ -3,22 +3,22 @@ import { NgModule } from '@angular/core';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { TimelineModule } from 'primeng/timeline';
-import { ImportDocComponent } from './importdoc';
-import { BasicDocComponent } from './basicdoc';
-import { AlignmentDocComponent } from './alignmentdoc';
-import { OppositeDocComponent } from './oppositedoc';
-import { TemplateDocComponent } from './templatedoc';
+import { ImportDoc } from './importdoc';
+import { BasicDoc } from './basicdoc';
+import { AlignmentDoc } from './alignmentdoc';
+import { OppositeDoc } from './oppositedoc';
+import { TemplateDoc } from './templatedoc';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
-import { HorizontalDocComponent } from './horizontaldoc';
-import { StyleDocComponent } from './styledoc';
+import { HorizontalDoc } from './horizontaldoc';
+import { StyleDoc } from './styledoc';
 import { RouterModule } from '@angular/router';
-import { PropsDocComponent } from './propsdoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { PropsDoc } from './propsdoc';
+import { TemplatesDoc } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, TimelineModule, CardModule, ButtonModule, RouterModule],
     exports: [AppDocModule],
-    declarations: [ImportDocComponent, BasicDocComponent, AlignmentDocComponent, OppositeDocComponent, TemplateDocComponent, HorizontalDocComponent, StyleDocComponent, PropsDocComponent, TemplatesDocComponent]
+    declarations: [ImportDoc, BasicDoc, AlignmentDoc, OppositeDoc, TemplateDoc, HorizontalDoc, StyleDoc, PropsDoc, TemplatesDoc]
 })
 export class TimelineDocModule {}

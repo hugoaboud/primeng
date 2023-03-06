@@ -6,17 +6,17 @@ import { ButtonModule } from 'primeng/button';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { TieredMenuBasicDemo } from './basicdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
-import { MenuItemDocComponent } from './menuitemdoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { MenuItemDoc } from './menuitemdoc';
 import { TieredMenuPopupDemo } from './popupdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
-import { MethodsDocComponent } from './methodsdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
+import { MethodsDoc } from './methodsdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, TieredMenuModule, ButtonModule, AppDocModule],
-    declarations: [TieredMenuBasicDemo, EventsDocComponent, ImportDocComponent, MenuItemDocComponent, TieredMenuPopupDemo, PropsDocComponent, StyleDocComponent, MethodsDocComponent],
+    declarations: [TieredMenuBasicDemo, EventsDoc, ImportDoc, MenuItemDoc, TieredMenuPopupDemo, PropsDoc, StyleDoc, MethodsDoc],
     exports: [AppDocModule]
 })
 export class TieredMenuDocModule {}

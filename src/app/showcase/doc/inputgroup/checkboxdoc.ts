@@ -27,7 +27,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="inputgroup-checkbox-demo"></app-code>
     </div>`
 })
-export class CheckboxDocComponent {
+export class CheckboxDoc {
     @Input() id: string;
 
     @Input() title: string;

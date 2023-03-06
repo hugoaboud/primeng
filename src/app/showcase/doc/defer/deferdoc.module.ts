@@ -7,14 +7,14 @@ import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { DeferModule } from 'primeng/defer';
 import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
-import { ImportDocComponent } from './importdoc';
-import { BasicDocComponent } from './basicdoc';
-import { EventsDocComponent } from './eventsdoc';
-import { DataTableDocComponent } from './datatabledoc';
+import { ImportDoc } from './importdoc';
+import { BasicDoc } from './basicdoc';
+import { EventsDoc } from './eventsdoc';
+import { DataTableDoc } from './datatabledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, FormsModule, DeferModule, TableModule, ToastModule],
-    exports: [ImportDocComponent, BasicDocComponent, EventsDocComponent, DataTableDocComponent, AppDocModule],
-    declarations: [ImportDocComponent, BasicDocComponent, EventsDocComponent, DataTableDocComponent]
+    exports: [ImportDoc, BasicDoc, EventsDoc, DataTableDoc, AppDocModule],
+    declarations: [ImportDoc, BasicDoc, EventsDoc, DataTableDoc]
 })
 export class DeferDocModule {}

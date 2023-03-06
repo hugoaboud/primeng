@@ -32,7 +32,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class AvatarGroupPropsDocComponent {
+export class AvatarGroupPropsDoc {
     @Input() id: string;
 
     @Input() title: string;

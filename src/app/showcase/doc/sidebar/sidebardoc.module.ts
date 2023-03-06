@@ -8,18 +8,18 @@ import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { SidebarBasicDemo } from './basicdoc';
 import { SidebarTemplateDemo } from './templatedoc';
-import { EventsDocComponent } from './eventsdoc';
-import { ImportDocComponent } from './importdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { EventsDoc } from './eventsdoc';
+import { ImportDoc } from './importdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
+import { TemplatesDoc } from './templatesdoc';
 import { SidebarPositionDemo } from './positiondoc';
 import { SidebarFullScreenDemo } from './fullscreendoc';
 import { SidebarSizeDemo } from './sizedoc';
 
 @NgModule({
     imports: [CommonModule, FormsModule, AppCodeModule, RouterModule, SidebarModule, ButtonModule, AppDocModule],
-    declarations: [SidebarBasicDemo, SidebarTemplateDemo, EventsDocComponent, ImportDocComponent, PropsDocComponent, StyleDocComponent, TemplatesDocComponent, SidebarPositionDemo, SidebarFullScreenDemo, SidebarSizeDemo],
+    declarations: [SidebarBasicDemo, SidebarTemplateDemo, EventsDoc, ImportDoc, PropsDoc, StyleDoc, TemplatesDoc, SidebarPositionDemo, SidebarFullScreenDemo, SidebarSizeDemo],
     exports: [AppDocModule]
 })
 export class SidebarDocModule {}

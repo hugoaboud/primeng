@@ -21,7 +21,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="editor-customtoolbar-demo"></app-code>
     </div>`
 })
-export class CustomToolbarDocComponent {
+export class CustomToolbarDoc {
     @Input() id: string;
 
     @Input() title: string;

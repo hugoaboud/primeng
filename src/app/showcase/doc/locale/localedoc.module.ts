@@ -3,15 +3,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { ApiDocComponent } from './apidoc';
-import { ImportDocComponent } from './importdoc';
-import { NgxTranslateDocComponent } from './ngx-translatedoc';
-import { RepositoryDocComponent } from './repositorydoc';
-import { SetLocaleDocComponent } from './setlocaledoc';
+import { ApiDoc } from './apidoc';
+import { ImportDoc } from './importdoc';
+import { NgxTranslateDoc } from './ngx-translatedoc';
+import { RepositoryDoc } from './repositorydoc';
+import { SetLocaleDoc } from './setlocaledoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, AppDocModule],
-    declarations: [ImportDocComponent, ApiDocComponent, NgxTranslateDocComponent, RepositoryDocComponent, SetLocaleDocComponent],
+    declarations: [ImportDoc, ApiDoc, NgxTranslateDoc, RepositoryDoc, SetLocaleDoc],
     exports: [AppDocModule]
 })
 export class LocaleDocModule {}

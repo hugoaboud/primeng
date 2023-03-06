@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { MultipleDocComponent } from '../../doc/inputgroup/multipledoc';
-import { BasicDocComponent } from '../../doc/inputgroup/basicdoc';
-import { ImportDocComponent } from '../../doc/inputgroup/importdoc';
-import { ButtonDocComponent } from '../../doc/inputgroup/buttondoc';
-import { CheckboxDocComponent } from '../../doc/inputgroup/checkboxdoc';
+import { MultipleDoc } from '../../doc/inputgroup/multipledoc';
+import { BasicDoc } from '../../doc/inputgroup/basicdoc';
+import { ImportDoc } from '../../doc/inputgroup/importdoc';
+import { ButtonDoc } from '../../doc/inputgroup/buttondoc';
+import { CheckboxDoc } from '../../doc/inputgroup/checkboxdoc';
 
 @Component({
     templateUrl: './inputgroupdemo.html'
@@ -13,27 +13,27 @@ export class InputGroupDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'multiple',
             label: 'Multiple',
-            component: MultipleDocComponent
+            component: MultipleDoc
         },
         {
             id: 'button',
             label: 'Button',
-            component: ButtonDocComponent
+            component: ButtonDoc
         },
         {
             id: 'checkbox',
             label: 'Checkbox',
-            component: CheckboxDocComponent
+            component: CheckboxDoc
         }
     ];
 }

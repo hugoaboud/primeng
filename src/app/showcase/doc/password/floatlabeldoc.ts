@@ -16,7 +16,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="password-floatlabel-demo"></app-code>
     </div>`
 })
-export class FloatLabelDocComponent {
+export class FloatLabelDoc {
     @Input() id: string;
 
     @Input() title: string;

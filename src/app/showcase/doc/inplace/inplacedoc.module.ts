@@ -7,17 +7,17 @@ import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
 import { InplaceBasicDemo } from './basicdoc';
 import { InplaceDataDemo } from './datadoc';
-import { EventsDocComponent } from './eventsdoc';
+import { EventsDoc } from './eventsdoc';
 import { InplaceImageDemo } from './imagedoc';
-import { ImportDocComponent } from './importdoc';
+import { ImportDoc } from './importdoc';
 import { InplaceInputDemo } from './inputdoc';
-import { MethodsDocComponent } from './methodsdoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
+import { MethodsDoc } from './methodsdoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, InplaceModule, InputTextModule],
-    declarations: [InplaceBasicDemo, InplaceDataDemo, EventsDocComponent, InplaceImageDemo, ImportDocComponent, InplaceInputDemo, MethodsDocComponent, PropsDocComponent, StyleDocComponent],
+    declarations: [InplaceBasicDemo, InplaceDataDemo, EventsDoc, InplaceImageDemo, ImportDoc, InplaceInputDemo, MethodsDoc, PropsDoc, StyleDoc],
     exports: [AppDocModule]
 })
 export class InplaceDocModule {}

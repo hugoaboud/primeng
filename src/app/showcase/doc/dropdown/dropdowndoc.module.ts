@@ -4,40 +4,40 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AppDocModule } from '../../layout/doc/app.doc.module';
 import { AppCodeModule } from '../../layout/doc/code/app.code.component';
-import { ImportDocComponent } from './importdoc';
-import { BasicDocComponent } from './basicdoc';
+import { ImportDoc } from './importdoc';
+import { BasicDoc } from './basicdoc';
 import { DropdownModule } from 'primeng/dropdown';
-import { EditableDocComponent } from './editabledoc';
-import { GroupDocComponent } from './groupdoc';
-import { TemplateDocComponent } from './templatedoc';
-import { DisabledDocComponent } from './disableddoc';
-import { VirtualScrollDocComponent } from './virtualscrolldoc';
-import { FilterDocComponent } from './filterdoc';
-import { FloatLabelDocComponent } from './floatlabeldoc';
-import { PropsDocComponent } from './propsdoc';
-import { StyleDocComponent } from './styledoc';
-import { EventsDocComponent } from './eventsdoc';
-import { MethodsDocComponent } from './methodsdoc';
-import { TemplatesDocComponent } from './templatesdoc';
+import { EditableDoc } from './editabledoc';
+import { GroupDoc } from './groupdoc';
+import { TemplateDoc } from './templatedoc';
+import { DisabledDoc } from './disableddoc';
+import { VirtualScrollDoc } from './virtualscrolldoc';
+import { FilterDoc } from './filterdoc';
+import { FloatLabelDoc } from './floatlabeldoc';
+import { PropsDoc } from './propsdoc';
+import { StyleDoc } from './styledoc';
+import { EventsDoc } from './eventsdoc';
+import { MethodsDoc } from './methodsdoc';
+import { TemplatesDoc } from './templatesdoc';
 
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, FormsModule, DropdownModule],
     exports: [AppDocModule],
     declarations: [
-        ImportDocComponent,
-        BasicDocComponent,
-        EditableDocComponent,
-        GroupDocComponent,
-        TemplateDocComponent,
-        DisabledDocComponent,
-        VirtualScrollDocComponent,
-        FilterDocComponent,
-        FloatLabelDocComponent,
-        PropsDocComponent,
-        StyleDocComponent,
-        EventsDocComponent,
-        MethodsDocComponent,
-        TemplatesDocComponent
+        ImportDoc,
+        BasicDoc,
+        EditableDoc,
+        GroupDoc,
+        TemplateDoc,
+        DisabledDoc,
+        VirtualScrollDoc,
+        FilterDoc,
+        FloatLabelDoc,
+        PropsDoc,
+        StyleDoc,
+        EventsDoc,
+        MethodsDoc,
+        TemplatesDoc
     ]
 })
 export class DropdownDocModule {}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ImportDocComponent } from '../../doc/ripple/importdoc';
-import { StyleDocComponent } from '../../doc/ripple/styledoc';
+import { ImportDoc } from '../../doc/ripple/importdoc';
+import { StyleDoc } from '../../doc/ripple/styledoc';
 import { RippleCustomDemo } from '../../doc/ripple/customdoc';
 import { RippleDefaultDemo } from '../../doc/ripple/defaultdoc';
 
@@ -13,7 +13,7 @@ export class RippleDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'default',
@@ -28,7 +28,7 @@ export class RippleDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 }

@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { DisabledDocComponent } from '../../doc/rating/disableddoc';
-import { BasicDocComponent } from '../../doc/rating/basicdoc';
-import { ImportDocComponent } from '../../doc/rating/importdoc';
-import { NumberOfStarsDocComponent } from '../../doc/rating/numberofstarsdoc';
-import { ReadOnlyDocComponent } from '../../doc/rating/readonlydoc';
-import { TemplateDocComponent } from '../../doc/rating/templatedoc';
-import { WithoutCancelDocComponent } from '../../doc/rating/withoutcanceldoc';
-import { StyleDocComponent } from '../../doc/rating/styledoc';
-import { PropsDocComponent } from '../../doc/rating/propsdoc';
-import { EventsDocComponent } from '../../doc/rating/eventsdoc';
+import { DisabledDoc } from '../../doc/rating/disableddoc';
+import { BasicDoc } from '../../doc/rating/basicdoc';
+import { ImportDoc } from '../../doc/rating/importdoc';
+import { NumberOfStarsDoc } from '../../doc/rating/numberofstarsdoc';
+import { ReadOnlyDoc } from '../../doc/rating/readonlydoc';
+import { TemplateDoc } from '../../doc/rating/templatedoc';
+import { WithoutCancelDoc } from '../../doc/rating/withoutcanceldoc';
+import { StyleDoc } from '../../doc/rating/styledoc';
+import { PropsDoc } from '../../doc/rating/propsdoc';
+import { EventsDoc } from '../../doc/rating/eventsdoc';
 
 @Component({
     templateUrl: './ratingdemo.html'
@@ -18,42 +18,42 @@ export class RatingDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'withoutcancel',
             label: 'Without Cancel',
-            component: WithoutCancelDocComponent
+            component: WithoutCancelDoc
         },
         {
             id: 'numberofstars',
             label: 'Number of Stars',
-            component: NumberOfStarsDocComponent
+            component: NumberOfStarsDoc
         },
         {
             id: 'template',
             label: 'Template',
-            component: TemplateDocComponent
+            component: TemplateDoc
         },
         {
             id: 'readonly',
             label: 'ReadOnly',
-            component: ReadOnlyDocComponent
+            component: ReadOnlyDoc
         },
         {
             id: 'disabled',
             label: 'Disabled',
-            component: DisabledDocComponent
+            component: DisabledDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -61,12 +61,12 @@ export class RatingDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         }
     ];
 }

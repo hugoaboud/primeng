@@ -18,7 +18,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="checkbox-dynamic-demo"></app-code>
     </div>`
 })
-export class DynamicDocComponent {
+export class DynamicDoc {
     @Input() id: string;
 
     @Input() title: string;

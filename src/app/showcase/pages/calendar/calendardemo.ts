@@ -1,25 +1,25 @@
 import { Component } from '@angular/core';
-import { IconDocComponent } from '../../doc/calendar/icondoc';
-import { BasicDocComponent } from '../../doc/calendar/basicdoc';
-import { FormatDocComponent } from '../../doc/calendar/formatdoc';
-import { ImportDocComponent } from '../../doc/calendar/importdoc';
-import { LocaleDocComponent } from '../../doc/calendar/localedoc';
-import { MinMaxDocComponent } from '../../doc/calendar/minmaxdox';
-import { MultipleDocComponent } from '../../doc/calendar/multipledoc';
-import { RangeDocComponent } from '../../doc/calendar/rangedoc';
-import { ButtonBarDocComponent } from '../../doc/calendar/buttonbardoc';
-import { TimeDocComponent } from '../../doc/calendar/timedoc';
-import { MonthDocComponent } from '../../doc/calendar/monthdoc';
-import { YearDocComponent } from '../../doc/calendar/yeardoc';
-import { MultipleMonthDocComponent } from '../../doc/calendar/multiplemonths.doc';
-import { TemplateDocComponent } from '../../doc/calendar/template.doc';
-import { InlineDocComponent } from '../../doc/calendar/inlinedoc';
-import { TouchUIDocComponent } from '../../doc/calendar/touchuidoc';
-import { DateTemplateDocComponent } from '../../doc/calendar/datetemplatedoc';
-import { PropsDocComponent } from '../../doc/calendar/propsdoc';
-import { StyleDocComponent } from '../../doc/calendar/styledoc';
-import { EventsDocComponent } from '../../doc/calendar/eventsdoc';
-import { MethodsDocComponent } from '../../doc/calendar/methodsdoc';
+import { IconDoc } from '../../doc/calendar/icondoc';
+import { BasicDoc } from '../../doc/calendar/basicdoc';
+import { FormatDoc } from '../../doc/calendar/formatdoc';
+import { ImportDoc } from '../../doc/calendar/importdoc';
+import { LocaleDoc } from '../../doc/calendar/localedoc';
+import { MinMaxDoc } from '../../doc/calendar/minmaxdox';
+import { MultipleDoc } from '../../doc/calendar/multipledoc';
+import { RangeDoc } from '../../doc/calendar/rangedoc';
+import { ButtonBarDoc } from '../../doc/calendar/buttonbardoc';
+import { TimeDoc } from '../../doc/calendar/timedoc';
+import { MonthDoc } from '../../doc/calendar/monthdoc';
+import { YearDoc } from '../../doc/calendar/yeardoc';
+import { MultipleMonthDoc } from '../../doc/calendar/multiplemonths.doc';
+import { TemplateDoc } from '../../doc/calendar/template.doc';
+import { InlineDoc } from '../../doc/calendar/inlinedoc';
+import { TouchUIDoc } from '../../doc/calendar/touchuidoc';
+import { DateTemplateDoc } from '../../doc/calendar/datetemplatedoc';
+import { PropsDoc } from '../../doc/calendar/propsdoc';
+import { StyleDoc } from '../../doc/calendar/styledoc';
+import { EventsDoc } from '../../doc/calendar/eventsdoc';
+import { MethodsDoc } from '../../doc/calendar/methodsdoc';
 
 @Component({
     templateUrl: './calendardemo.html'
@@ -29,92 +29,92 @@ export class CalendarDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
             label: 'Basic',
-            component: BasicDocComponent
+            component: BasicDoc
         },
         {
             id: 'format',
             label: 'Format',
-            component: FormatDocComponent
+            component: FormatDoc
         },
         {
             id: 'locale',
             label: 'Locale',
-            component: LocaleDocComponent
+            component: LocaleDoc
         },
         {
             id: 'icon',
             label: 'Icon',
-            component: IconDocComponent
+            component: IconDoc
         },
         {
             id: 'minmax',
             label: 'Min / Max',
-            component: MinMaxDocComponent
+            component: MinMaxDoc
         },
         {
             id: 'multiple',
             label: 'Multiple',
-            component: MultipleDocComponent
+            component: MultipleDoc
         },
         {
             id: 'range',
             label: 'Range',
-            component: RangeDocComponent
+            component: RangeDoc
         },
         {
             id: 'buttonbar',
             label: 'ButtonBar',
-            component: ButtonBarDocComponent
+            component: ButtonBarDoc
         },
         {
             id: 'time',
             label: 'Time',
-            component: TimeDocComponent
+            component: TimeDoc
         },
         {
             id: 'monthpicker',
             label: 'Month Picker',
-            component: MonthDocComponent
+            component: MonthDoc
         },
         {
             id: 'yearpicker',
             label: 'Year Picker',
-            component: YearDocComponent
+            component: YearDoc
         },
         {
             id: 'multiplemonth',
             label: 'Multiple Month',
-            component: MultipleMonthDocComponent
+            component: MultipleMonthDoc
         },
         {
             id: 'customcontent',
             label: 'Custom Content',
-            component: TemplateDocComponent
+            component: TemplateDoc
         },
         {
             id: 'datetemplate',
             label: 'Date Template',
-            component: DateTemplateDocComponent
+            component: DateTemplateDoc
         },
         {
             id: 'touchui',
             label: 'TouchUI',
-            component: TouchUIDocComponent
+            component: TouchUIDoc
         },
         {
             id: 'inline',
             label: 'Inline',
-            component: InlineDocComponent
+            component: InlineDoc
         },
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -122,17 +122,17 @@ export class CalendarDemo {
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'methods',
             label: 'Methods',
-            component: MethodsDocComponent
+            component: MethodsDoc
         }
     ];
 }

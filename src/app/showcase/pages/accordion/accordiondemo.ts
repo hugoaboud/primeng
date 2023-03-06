@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { AccordionBasicDemo } from '../../doc/accordion/basicdoc';
 import { AccordionControlledDemo } from '../../doc/accordion/controlleddoc';
 import { AccordionDisabledDemo } from '../../doc/accordion/disableddoc';
-import { EventsDocComponent } from '../../doc/accordion/eventsdoc';
-import { ImportDocComponent } from '../../doc/accordion/importdoc';
+import { EventsDoc } from '../../doc/accordion/eventsdoc';
+import { ImportDoc } from '../../doc/accordion/importdoc';
 import { AccordionMultipleDemo } from '../../doc/accordion/multipledoc';
-import { PropsDocComponent } from '../../doc/accordion/propsdoc';
-import { StyleDocComponent } from '../../doc/accordion/styledoc';
+import { PropsDoc } from '../../doc/accordion/propsdoc';
+import { StyleDoc } from '../../doc/accordion/styledoc';
 import { AccordionTemplateDemo } from '../../doc/accordion/templatedoc';
-import { TemplatesDocComponent } from '../../doc/accordion/templatesdoc';
+import { TemplatesDoc } from '../../doc/accordion/templatesdoc';
 
 @Component({
     templateUrl: './accordiondemo.html',
@@ -19,7 +19,7 @@ export class AccordionDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -49,24 +49,24 @@ export class AccordionDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
     apiDocs = [
         {
             id: 'properties',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         },
         {
             id: 'events',
             label: 'Events',
-            component: EventsDocComponent
+            component: EventsDoc
         },
         {
             id: 'templates',
             label: 'Templates',
-            component: TemplatesDocComponent
+            component: TemplatesDoc
         }
     ];
 }

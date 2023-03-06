@@ -32,7 +32,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="calendar-format-demo"></app-code>
     </div>`
 })
-export class FormatDocComponent {
+export class FormatDoc {
     @Input() id: string;
 
     @Input() title: string;

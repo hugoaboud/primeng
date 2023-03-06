@@ -13,7 +13,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="calendar-inline-demo"></app-code>
     </div>`
 })
-export class InlineDocComponent {
+export class InlineDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -19,7 +19,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="button-rounded-demo"></app-code>
     </div>`
 })
-export class RoundedDocComponent {
+export class RoundedDoc {
     @Input() id: string;
 
     @Input() title: string;

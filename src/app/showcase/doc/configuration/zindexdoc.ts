@@ -15,7 +15,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" [hideToggleCode]="true"></app-code>
     </div>`
 })
-export class ZIndexDocComponent {
+export class ZIndexDoc {
     @Input() id: string;
 
     @Input() title: string;

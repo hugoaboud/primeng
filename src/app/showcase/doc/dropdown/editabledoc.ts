@@ -18,7 +18,7 @@ interface City {
         <app-code [code]="code" selector="dropdown-editable-demo"></app-code>
     </div>`
 })
-export class EditableDocComponent {
+export class EditableDoc {
     @Input() id: string;
 
     @Input() title: string;

@@ -15,7 +15,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="button-icons-demo"></app-code>
     </div>`
 })
-export class IconsDocComponent {
+export class IconsDoc {
     @Input() id: string;
 
     @Input() title: string;

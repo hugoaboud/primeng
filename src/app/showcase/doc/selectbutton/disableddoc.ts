@@ -14,7 +14,7 @@ import { Code } from '../../domain/code';
         <app-code [code]="code" selector="select-button-disabled-demo"></app-code>
     </div>`
 })
-export class DisabledDocComponent {
+export class DisabledDoc {
     @Input() id: string;
 
     @Input() title: string;

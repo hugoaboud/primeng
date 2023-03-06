@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { ImportDocComponent } from '../../doc/scrolltop/importdoc';
+import { ImportDoc } from '../../doc/scrolltop/importdoc';
 import { ScrollTopBasicDemo } from '../../doc/scrolltop/basicdoc';
-import { PropsDocComponent } from '../../doc/scrolltop/propsdoc';
-import { StyleDocComponent } from '../../doc/scrolltop/styledoc';
+import { PropsDoc } from '../../doc/scrolltop/propsdoc';
+import { StyleDoc } from '../../doc/scrolltop/styledoc';
 import { ScrollTopElementDemo } from '../../doc/scrolltop/elementdoc';
 
 @Component({
@@ -14,7 +14,7 @@ export class ScrollTopDemo {
         {
             id: 'import',
             label: 'Import',
-            component: ImportDocComponent
+            component: ImportDoc
         },
         {
             id: 'basic',
@@ -29,7 +29,7 @@ export class ScrollTopDemo {
         {
             id: 'style',
             label: 'Style',
-            component: StyleDocComponent
+            component: StyleDoc
         }
     ];
 
@@ -37,7 +37,7 @@ export class ScrollTopDemo {
         {
             id: 'props',
             label: 'Properties',
-            component: PropsDocComponent
+            component: PropsDoc
         }
     ];
 }

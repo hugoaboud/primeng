@@ -104,7 +104,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </div>`
 })
-export class ConfirmationApiDocComponent {
+export class ConfirmationApiDoc {
     @Input() id: string;
 
     @Input() title: string;

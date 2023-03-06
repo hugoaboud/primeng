@@ -15,7 +15,7 @@ import { Component, Input } from '@angular/core';
         </app-docsectiontext>
     </div>`
 })
-export class WCAGDocComponent {
+export class WCAGDoc {
     @Input() id: string;
 
     @Input() title: string;
