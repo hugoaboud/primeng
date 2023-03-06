@@ -21,7 +21,7 @@ export class FileUploadAutoDemo {
 
     @Input() title: string;
 
-    constructor(private messageService: MessageService) { }
+    constructor(private messageService: MessageService) {}
 
     onBasicUploadAuto(event) {
         this.messageService.add({ severity: 'info', summary: 'Success', detail: 'File Uploaded with Auto Mode' });

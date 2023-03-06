@@ -33,11 +33,11 @@ export class FileUploadAdvancedDemo {
     constructor(private messageService: MessageService) {}
 
     onUpload(event) {
-        for(let file of event.files) {
+        for (let file of event.files) {
             this.uploadedFiles.push(file);
         }
 
-        this.messageService.add({severity: 'info', summary: 'File Uploaded', detail: ''});
+        this.messageService.add({ severity: 'info', summary: 'File Uploaded', detail: '' });
     }
 
     code: Code = {

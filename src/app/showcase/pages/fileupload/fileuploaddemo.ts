@@ -14,7 +14,6 @@ import { TemplatesDocComponent } from '../../doc/fileupload/templatesdoc';
     templateUrl: './fileuploaddemo.html'
 })
 export class FileUploadDemo {
-
     docs = [
         {
             id: 'import',
