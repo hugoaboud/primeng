@@ -58,7 +58,6 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
 
                 if (top - threshold <= windowScrollTop) {
                     const link = DomHandler.findSingle(label, 'a');
-
                     this.activeId = link.id;
                 }
             });
@@ -94,8 +93,9 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
 
     scrollToLabelById(id){
         const label = this.document.getElementById(id);
-        label && label.scrollIntoView({block: 'start', behavior: 'smooth'});
         this.location.go(this.location.path().split('#')[0] + '#' + id);
+        label && label.parentElement.scrollIntoView({block: 'start', behavior: 'smooth'});
+
     }
 
     ngOnDestroy() {

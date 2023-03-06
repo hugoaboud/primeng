@@ -1,10 +1,12 @@
 import { ChangeDetectorRef, Component, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { AppDocSectionTextComponent } from '../docsectiontext/app.docsectiontext.component';
 import { Doc } from 'src/app/showcase/domain/doc';
 
 interface Props {
     id: string;
     title: string;
     component: any;
+    level?: number;
 }
 
 @Component({
@@ -32,10 +34,17 @@ export class AppDocSectionsComponent implements OnInit {
         const newComponent: any = this.docs[this.currentDocIndex];
 
         const viewContainerRef = this.docComponent;
+
         if (newComponent.component !== undefined) {
             let component = viewContainerRef.createComponent<Props>(newComponent.component);
             component.instance.id = newComponent.id;
             component.instance.title = newComponent.label;
+        }
+        else {
+            let component = viewContainerRef.createComponent(AppDocSectionTextComponent);
+            component.instance.id = newComponent.id;
+            component.instance.title = newComponent.label;
+            component.instance.level = 2;
         }
         if (newComponent.children) {
             for (let i = 0; i < newComponent.children.length; i++) {
