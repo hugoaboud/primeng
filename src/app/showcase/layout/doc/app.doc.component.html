@@ -19,7 +19,14 @@
             <app-docsection-nav [docs]="docs"></app-docsection-nav>
         </div>
         <div *ngIf="activeTab === 1" class="doc-tabpanel">
-            <app-docsection [docs]="apiDocs"></app-docsection>
+            <div class="doc-main">
+                <div class="doc-intro">
+                    <h1>{{header}} API</h1>
+                    <p>API defines helper props, events and others for the PrimeNG {{header}} module.</p>
+                </div>
+                <app-docsection [docs]="apiDocs"></app-docsection>
+            </div>
+            <app-docsection-nav [docs]="apiDocs"></app-docsection-nav>
         </div>
     </div>
 </div>
