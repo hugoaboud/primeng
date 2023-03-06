@@ -8,7 +8,7 @@ import { ProductService } from '../../service/productservice';
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3"></app-docsectiontext>
         <div class="card">
-            <p-table [value]="products" [(selection)]="selectedProducts" dataKey="code" [paginator]="true" [rows]="5" [selectionPageOnly]="true" [tableStyle]="{'min-width': '50rem'}">
+            <p-table [value]="products" [(selection)]="selectedProducts" dataKey="code" [paginator]="true" [rows]="5" [selectionPageOnly]="true" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header">
                     <tr>
                         <th style="width: 4rem">
@@ -25,10 +25,10 @@ import { ProductService } from '../../service/productservice';
                         <td>
                             <p-tableCheckbox [value]="product"></p-tableCheckbox>
                         </td>
-                        <td>{{product.code}}</td>
-                        <td>{{product.name}}</td>
-                        <td>{{product.category}}</td>
-                        <td>{{product.quantity}}</td>
+                        <td>{{ product.code }}</td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.category }}</td>
+                        <td>{{ product.quantity }}</td>
                     </tr>
                 </ng-template>
             </p-table>

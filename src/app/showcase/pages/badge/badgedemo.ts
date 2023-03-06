@@ -61,11 +61,6 @@ export class BadgeDemo {
             id: 'props',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Badge', pathname: '/modules/badge.html' }]
         }
     ];
 }

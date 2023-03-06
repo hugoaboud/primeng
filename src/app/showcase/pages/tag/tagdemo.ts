@@ -55,11 +55,6 @@ export class TagDemo {
             id: 'props',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Tag', pathname: '/modules/tag.html' }]
         }
     ];
 }

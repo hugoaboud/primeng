@@ -31,11 +31,6 @@ export class StyleClassDemo {
             id: 'props',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'StyleClass', pathname: '/modules/styleclass.html' }]
         }
     ];
 }

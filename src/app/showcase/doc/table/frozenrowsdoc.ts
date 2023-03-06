@@ -9,7 +9,7 @@ import { CustomerService } from '../../service/customerservice';
             <p>Frozen rows are used to fix certain rows while scrolling, this data is defined with the <i>frozenValue</i> property.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-table [value]="unlockedCustomers" [frozenValue]="lockedCustomers" [scrollable]="true" scrollHeight="400px" [tableStyle]="{'min-width': '60rem'}">
+            <p-table [value]="unlockedCustomers" [frozenValue]="lockedCustomers" [scrollable]="true" scrollHeight="400px" [tableStyle]="{ 'min-width': '60rem' }">
                 <ng-template pTemplate="header">
                     <tr>
                         <th>Name</th>
@@ -21,23 +21,23 @@ import { CustomerService } from '../../service/customerservice';
                 </ng-template>
                 <ng-template pTemplate="frozenbody" let-customer let-index="rowIndex">
                     <tr>
-                        <td>{{customer.name}}</td>
-                        <td>{{customer.country.name}}</td>
-                        <td>{{customer.company}}</td>
-                        <td>{{customer.representative.name}}</td>
+                        <td>{{ customer.name }}</td>
+                        <td>{{ customer.country.name }}</td>
+                        <td>{{ customer.company }}</td>
+                        <td>{{ customer.representative.name }}</td>
                         <td>
-                            <button pButton pRipple type="button" [icon]="'pi pi-lock-open'" (click)="toggleLock(customer,true,index)" class="p-button-sm p-button-text"></button>
+                            <button pButton pRipple type="button" [icon]="'pi pi-lock-open'" (click)="toggleLock(customer, true, index)" class="p-button-sm p-button-text"></button>
                         </td>
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="body" let-customer let-index="rowIndex">
                     <tr>
-                        <td>{{customer.name}}</td>
-                        <td>{{customer.country.name}}</td>
-                        <td>{{customer.company}}</td>
-                        <td>{{customer.representative.name}}</td>
+                        <td>{{ customer.name }}</td>
+                        <td>{{ customer.country.name }}</td>
+                        <td>{{ customer.company }}</td>
+                        <td>{{ customer.representative.name }}</td>
                         <td>
-                            <button pButton pRipple type="button" [icon]="'pi pi-lock'" [disabled]="lockedCustomers.length >= 2" (click)="toggleLock(customer,false,index)" class="p-button-sm p-button-text"></button>
+                            <button pButton pRipple type="button" [icon]="'pi pi-lock'" [disabled]="lockedCustomers.length >= 2" (click)="toggleLock(customer, false, index)" class="p-button-sm p-button-text"></button>
                         </td>
                     </tr>
                 </ng-template>
@@ -50,7 +50,7 @@ export class TableFrozenRowsDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
-    
+
     unlockedCustomers: any[];
 
     lockedCustomers: any[];

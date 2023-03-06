@@ -44,7 +44,7 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
             this.scrollListener = this.renderer.listen(this.document, 'scroll', (event: any) => {
                 this.onScroll();
             });
-        })
+        });
     }
 
     onScroll() {
@@ -91,11 +91,10 @@ export class AppDocSectionNavComponent implements OnInit, OnDestroy {
         return this.topbarHeight + DomHandler.getHeight(label) * 3.5;
     }
 
-    scrollToLabelById(id){
+    scrollToLabelById(id) {
         const label = this.document.getElementById(id);
         this.location.go(this.location.path().split('#')[0] + '#' + id);
-        label && label.parentElement.scrollIntoView({block: 'start', behavior: 'smooth'});
-
+        label && label.parentElement.scrollIntoView({ block: 'start', behavior: 'smooth' });
     }
 
     ngOnDestroy() {

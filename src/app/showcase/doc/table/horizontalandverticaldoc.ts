@@ -26,15 +26,15 @@ import { CustomerService } from '../../service/customerservice';
                 </ng-template>
                 <ng-template pTemplate="body" let-customer>
                     <tr>
-                        <td>{{customer.id}}</td>
-                        <td>{{customer.name}}</td>
-                        <td>{{customer.country.name}}</td>
-                        <td>{{customer.date}}</td>
-                        <td>{{formatCurrency(customer.balance)}}</td>
-                        <td>{{customer.company}}</td>
-                        <td>{{customer.status}}</td>
-                        <td>{{customer.activity}}</td>
-                        <td>{{customer.representative.name}}</td>
+                        <td>{{ customer.id }}</td>
+                        <td>{{ customer.name }}</td>
+                        <td>{{ customer.country.name }}</td>
+                        <td>{{ customer.date }}</td>
+                        <td>{{ formatCurrency(customer.balance) }}</td>
+                        <td>{{ customer.company }}</td>
+                        <td>{{ customer.status }}</td>
+                        <td>{{ customer.activity }}</td>
+                        <td>{{ customer.representative.name }}</td>
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="footer">
@@ -59,7 +59,7 @@ export class TableHorizontalAndVerticalScrollDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
-    
+
     customers: Customer[];
 
     constructor(private customerService: CustomerService) {}

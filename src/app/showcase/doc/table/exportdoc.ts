@@ -8,30 +8,33 @@ import { ProductService } from '../../service/productservice';
     selector: 'table-export-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>Table can export its data in CSV format using the built-in <i>exportCSV()</i> function. By default, all data is exported. If you'd like to export only the selection then pass a config object with <i>selectionOnly</i> property as true. Note that columns should be dynamic for export functionality to work, and column objects must define field/header properties. </p>
+            <p>
+                Table can export its data in CSV format using the built-in <i>exportCSV()</i> function. By default, all data is exported. If you'd like to export only the selection then pass a config object with <i>selectionOnly</i> property as true.
+                Note that columns should be dynamic for export functionality to work, and column objects must define field/header properties.
+            </p>
             <p>PDF and EXCEL export are also available using 3rd party libraries such as jspdf. Example below demonstrates how to implement all three export options.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-table #dt [columns]="cols" [value]="products" selectionMode="multiple" [(selection)]="selectedProducts" [exportHeader]="'customExportHeader'" [tableStyle]="{'min-width': '50rem'}">
+            <p-table #dt [columns]="cols" [value]="products" selectionMode="multiple" [(selection)]="selectedProducts" [exportHeader]="'customExportHeader'" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="caption">
                     <div class="flex">
                         <button type="button" pButton pRipple icon="pi pi-file" (click)="dt.exportCSV()" class="mr-2" pTooltip="CSV" tooltipPosition="bottom"></button>
-                        <button type="button" pButton pRipple icon="pi pi-file-excel" (click)="exportExcel()" class="p-button-success mr-2"  pTooltip="XLS" tooltipPosition="bottom"></button>
+                        <button type="button" pButton pRipple icon="pi pi-file-excel" (click)="exportExcel()" class="p-button-success mr-2" pTooltip="XLS" tooltipPosition="bottom"></button>
                         <button type="button" pButton pRipple icon="pi pi-file-pdf" (click)="exportPdf()" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
-                        <button type="button" pButton pRipple icon="pi pi-filter" (click)="dt.exportCSV({selectionOnly:true})" class="p-button-info ml-auto" pTooltip="Selection Only" tooltipPosition="bottom"></button>
+                        <button type="button" pButton pRipple icon="pi pi-filter" (click)="dt.exportCSV({ selectionOnly: true })" class="p-button-info ml-auto" pTooltip="Selection Only" tooltipPosition="bottom"></button>
                     </div>
                 </ng-template>
                 <ng-template pTemplate="header" let-columns>
                     <tr>
                         <th *ngFor="let col of columns">
-                            {{col.header}}
+                            {{ col.header }}
                         </th>
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="body" let-rowData let-columns="columns">
                     <tr [pSelectableRow]="rowData">
                         <td *ngFor="let col of columns">
-                            {{rowData[col.field]}}
+                            {{ rowData[col.field] }}
                         </td>
                     </tr>
                 </ng-template>

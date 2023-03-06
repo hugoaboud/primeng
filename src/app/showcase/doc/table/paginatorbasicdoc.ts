@@ -7,7 +7,10 @@ import { Code } from '../../domain/code';
     selector: 'table-paginator-basic-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
-            <p>Pagination is enabled by setting <i>paginator</i> property to <i>true</i> and defining a rows property to specify the number of rows per page. For server side pagination, see the <a [routerLink]="['/table#lazy']">lazy loading</a> example.</p>
+            <p>
+                Pagination is enabled by setting <i>paginator</i> property to <i>true</i> and defining a rows property to specify the number of rows per page. For server side pagination, see the
+                <a [routerLink]="['/table#lazy']">lazy loading</a> example.
+            </p>
         </app-docsectiontext>
         <div class="card">
             <p-table

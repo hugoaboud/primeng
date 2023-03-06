@@ -8,7 +8,7 @@ import { CustomerService } from '../../service/customerservice';
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3"></app-docsectiontext>
         <div class="card">
-            <p-table [value]="customers" [scrollable]="true" scrollHeight="400px" [resizableColumns]="true" styleClass="p-datatable-gridlines" [tableStyle]="{'min-width': '50rem'}">
+            <p-table [value]="customers" [scrollable]="true" scrollHeight="400px" [resizableColumns]="true" styleClass="p-datatable-gridlines" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header">
                     <tr>
                         <th pResizableColumn>Name</th>
@@ -19,10 +19,10 @@ import { CustomerService } from '../../service/customerservice';
                 </ng-template>
                 <ng-template pTemplate="body" let-customer>
                     <tr>
-                        <td>{{customer.name}}</td>
-                        <td>{{customer.country.name}}</td>
-                        <td>{{customer.company}}</td>
-                        <td>{{customer.representative.name}}</td>
+                        <td>{{ customer.name }}</td>
+                        <td>{{ customer.country.name }}</td>
+                        <td>{{ customer.company }}</td>
+                        <td>{{ customer.representative.name }}</td>
                     </tr>
                 </ng-template>
             </p-table>

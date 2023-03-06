@@ -11,10 +11,10 @@ import { ProductService } from '../../service/productservice';
             <p>Following table displays a horizontal scrollbar when viewport is smaller than 50rem.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-table [value]="products" [tableStyle]="{'min-width': '50rem'}">
+            <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header" let-columns>
                     <tr>
-                        <th>Name </th>
+                        <th>Name</th>
                         <th>Price</th>
                         <th>Category</th>
                         <th>Quantity</th>
@@ -24,11 +24,13 @@ import { ProductService } from '../../service/productservice';
                 </ng-template>
                 <ng-template pTemplate="body" let-product let-columns="columns">
                     <tr>
-                        <td>{{product.name}}</td>
-                        <td>{{product.price | currency:'USD'}}</td>
-                        <td>{{product.category}}</td>
-                        <td>{{product.quantity}}</td>
-                        <td><span [class]="'product-badge status-' + (product.inventoryStatus ? product.inventoryStatus.toLowerCase() : '')">{{product.inventoryStatus}}</span></td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.price | currency: 'USD' }}</td>
+                        <td>{{ product.category }}</td>
+                        <td>{{ product.quantity }}</td>
+                        <td>
+                            <span [class]="'product-badge status-' + (product.inventoryStatus ? product.inventoryStatus.toLowerCase() : '')">{{ product.inventoryStatus }}</span>
+                        </td>
                         <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
                     </tr>
                 </ng-template>

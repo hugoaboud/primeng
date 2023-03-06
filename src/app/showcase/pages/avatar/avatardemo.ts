@@ -91,11 +91,6 @@ export class AvatarDemo {
             id: 'events',
             label: 'Events',
             component: EventsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Avatar', pathname: '/modules/avatar.html' }]
         }
     ];
 }

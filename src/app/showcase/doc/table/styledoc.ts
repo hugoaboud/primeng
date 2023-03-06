@@ -10,7 +10,7 @@ import { ProductService } from '../../service/productservice';
             <p>Certain rows or cells can easily be styled based on conditions.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-table [value]="products" [tableStyle]="{'min-width': '50rem'}">
+            <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header">
                     <tr>
                         <th>Code</th>
@@ -20,13 +20,13 @@ import { ProductService } from '../../service/productservice';
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="body" let-product>
-                    <tr [ngClass]="{'row-accessories': product.category === 'Accessories'}">
-                        <td>{{product.code}}</td>
-                        <td>{{product.name}}</td>
-                        <td>{{product.category}}</td>
+                    <tr [ngClass]="{ 'row-accessories': product.category === 'Accessories' }">
+                        <td>{{ product.code }}</td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.category }}</td>
                         <td>
-                            <div [ngClass]="{'outofstock': product.quantity === 0, 'lowstock': (product.quantity > 0 && product.quantity < 10),'instock': product.quantity > 10}">
-                                {{product.quantity}}
+                            <div [ngClass]="{ outofstock: product.quantity === 0, lowstock: product.quantity > 0 && product.quantity < 10, instock: product.quantity > 10 }">
+                                {{ product.quantity }}
                             </div>
                         </td>
                     </tr>

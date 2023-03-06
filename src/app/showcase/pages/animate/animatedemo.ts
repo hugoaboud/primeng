@@ -25,11 +25,6 @@ export class AnimateDemo {
             id: 'props',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Animate', pathname: '/modules/animate.html' }]
         }
     ];
 }

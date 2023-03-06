@@ -8,11 +8,13 @@ import { CustomerService } from '../../service/customerservice';
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>Stateful table allows keeping the state such as page, sort and filtering either at local storage or session storage so that when the page is visited again, table would render the data using the last settings.</p>
-            <p>Change the state of the table e.g paginate, navigate away and then return to this table again to test this feature, the setting is set as <i>session</i> with the <i>stateStorage</i> property so that Table retains the state until the browser is closed. Other alternative is <i>local</i> referring to <i>localStorage</i> for an extended lifetime.</p>
+            <p>
+                Change the state of the table e.g paginate, navigate away and then return to this table again to test this feature, the setting is set as <i>session</i> with the <i>stateStorage</i> property so that Table retains the state until the
+                browser is closed. Other alternative is <i>local</i> referring to <i>localStorage</i> for an extended lifetime.
+            </p>
         </app-docsectiontext>
         <div class="card">
-            <p-table #dt1 [value]="customers" selectionMode="single" [(selection)]="selectedCustomers" dataKey="id" [tableStyle]="{'min-width': '50rem'}"
-                [rows]="5" [paginator]="true" stateStorage="session" stateKey="statedemo-session">
+            <p-table #dt1 [value]="customers" selectionMode="single" [(selection)]="selectedCustomers" dataKey="id" [tableStyle]="{ 'min-width': '50rem' }" [rows]="5" [paginator]="true" stateStorage="session" stateKey="statedemo-session">
                 <ng-template pTemplate="header">
                     <tr>
                         <th pSortableColumn="name" style="width:25%">Name <p-sortIcon field="name"></p-sortIcon></th>
@@ -22,16 +24,16 @@ import { CustomerService } from '../../service/customerservice';
                     </tr>
                     <tr>
                         <th>
-                            <input pInputText type="text" (input)="dt1.filter($event.target.value, 'name', 'contains')" [value]="dt1.filters['name']?.value" placeholder="Search by Name" class="w-full">
+                            <input pInputText type="text" (input)="dt1.filter($event.target.value, 'name', 'contains')" [value]="dt1.filters['name']?.value" placeholder="Search by Name" class="w-full" />
                         </th>
                         <th>
-                            <input pInputText type="text" (input)="dt1.filter($event.target.value, 'country.name', 'contains')" [value]="dt1.filters['country.name']?.value" placeholder="Search by Country" class="w-full">
+                            <input pInputText type="text" (input)="dt1.filter($event.target.value, 'country.name', 'contains')" [value]="dt1.filters['country.name']?.value" placeholder="Search by Country" class="w-full" />
                         </th>
                         <th>
-                            <input pInputText type="text" (input)="dt1.filter($event.target.value, 'representative.name', 'contains')" [value]="dt1.filters['representative.name']?.value" placeholder="Search by Representative" class="w-full">
+                            <input pInputText type="text" (input)="dt1.filter($event.target.value, 'representative.name', 'contains')" [value]="dt1.filters['representative.name']?.value" placeholder="Search by Representative" class="w-full" />
                         </th>
                         <th>
-                            <input pInputText type="text" (input)="dt1.filter($event.target.value, 'status', 'contains')" [value]="dt1.filters['status']?.value" placeholder="Search by Status" class="w-full">
+                            <input pInputText type="text" (input)="dt1.filter($event.target.value, 'status', 'contains')" [value]="dt1.filters['status']?.value" placeholder="Search by Status" class="w-full" />
                         </th>
                     </tr>
                 </ng-template>
@@ -39,21 +41,21 @@ import { CustomerService } from '../../service/customerservice';
                     <tr [pSelectableRow]="customer">
                         <td>
                             <span class="p-column-title">Name</span>
-                            {{customer.name}}
+                            {{ customer.name }}
                         </td>
                         <td>
                             <span class="p-column-title">Country</span>
-                            <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30">
-                            <span class="image-text">{{customer.country.name}}</span>
+                            <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30" />
+                            <span class="image-text">{{ customer.country.name }}</span>
                         </td>
                         <td>
                             <span class="p-column-title">Representative</span>
-                            <img [alt]="customer.representative.name" src="assets/showcase/images/demo/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
-                            <span class="image-text">{{customer.representative.name}}</span>
+                            <img [alt]="customer.representative.name" src="assets/showcase/images/demo/avatar/{{ customer.representative.image }}" width="32" style="vertical-align: middle" />
+                            <span class="image-text">{{ customer.representative.name }}</span>
                         </td>
                         <td>
                             <span class="p-column-title">Status</span>
-                            <span [class]="'customer-badge status-' + customer.status">{{customer.status}}</span>
+                            <span [class]="'customer-badge status-' + customer.status">{{ customer.status }}</span>
                         </td>
                     </tr>
                 </ng-template>

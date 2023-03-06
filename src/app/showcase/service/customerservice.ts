@@ -11,7 +11,7 @@ export class CustomerService {
         return this.http
             .get<any>('assets/showcase/data/customers-small.json')
             .toPromise()
-            .then((res) => <Customer[]>res.data.slice(0,5))
+            .then((res) => <Customer[]>res.data.slice(0, 5))
             .then((data) => {
                 return data;
             });

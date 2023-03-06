@@ -61,11 +61,6 @@ export class EditorDemo {
             id: 'methods',
             label: 'Methods',
             component: MethodsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Editor', pathname: '/modules/editor.html' }]
         }
     ];
 }

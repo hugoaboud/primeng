@@ -34,7 +34,7 @@ import { ProductService } from '../../service/productservice';
         <app-code [code]="code" selector="table-single-column-sort-demo" [extFiles]="extFiles"></app-code>
     </div>`
 })
-export class TableSingleColumnSortDemo implements OnInit{
+export class TableSingleColumnSortDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

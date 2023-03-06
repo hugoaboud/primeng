@@ -60,11 +60,6 @@ export class InputTextareaDemo {
             id: 'events',
             label: 'Events',
             component: EventsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'InputTextArea', pathname: '/modules/inputtextarea.html' }]
         }
     ];
 }

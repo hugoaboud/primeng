@@ -6,7 +6,7 @@ import { CustomerService } from '../../service/customerservice';
 @Component({
     selector: 'table-frozen-columns-demo',
     template: ` <div>
-    <app-docsectiontext [title]="title" [id]="id" [level]="3">
+        <app-docsectiontext [title]="title" [id]="id" [level]="3">
             <p>Certain columns can be frozen by using the <i>pFrozenColumn</i> directive of the table component. In addition, <i>alignFrozen</i> is available to define whether the column should be fixed on the left or right.</p>
         </app-docsectiontext>
         <div class="card">
@@ -28,15 +28,15 @@ import { CustomerService } from '../../service/customerservice';
                 </ng-template>
                 <ng-template pTemplate="body" let-customer>
                     <tr>
-                        <td pFrozenColumn>{{customer.name}}</td>
-                        <td style="min-width:100px">{{customer.id}}</td>
-                        <td>{{customer.country.name}}</td>
-                        <td>{{customer.date}}</td>
-                        <td>{{customer.company}}</td>
-                        <td>{{customer.status}}</td>
-                        <td>{{customer.activity}}</td>
-                        <td >{{customer.representative.name}}</td>
-                        <td alignFrozen="right" pFrozenColumn [frozen]="balanceFrozen">{{formatCurrency(customer.balance)}}</td>
+                        <td pFrozenColumn>{{ customer.name }}</td>
+                        <td style="min-width:100px">{{ customer.id }}</td>
+                        <td>{{ customer.country.name }}</td>
+                        <td>{{ customer.date }}</td>
+                        <td>{{ customer.company }}</td>
+                        <td>{{ customer.status }}</td>
+                        <td>{{ customer.activity }}</td>
+                        <td>{{ customer.representative.name }}</td>
+                        <td alignFrozen="right" pFrozenColumn [frozen]="balanceFrozen">{{ formatCurrency(customer.balance) }}</td>
                     </tr>
                 </ng-template>
             </p-table>
@@ -48,7 +48,7 @@ export class TableFrozenColumnsDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
-    
+
     balanceFrozen: boolean = false;
 
     customers: Customer[];

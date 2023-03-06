@@ -22,18 +22,18 @@ import { CustomerService } from '../../service/customerservice';
                 <ng-template pTemplate="body" let-customer>
                     <tr>
                         <td>
-                            {{customer.name}}
+                            {{ customer.name }}
                         </td>
                         <td>
-                            <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30">
-                            <span class="image-text">{{customer.country.name}}</span>
+                            <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30" />
+                            <span class="image-text">{{ customer.country.name }}</span>
                         </td>
                         <td>
-                            <img [alt]="customer.representative.name" src="assets/showcase/images/demo/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
-                            <span class="image-text">{{customer.representative.name}}</span>
+                            <img [alt]="customer.representative.name" src="assets/showcase/images/demo/avatar/{{ customer.representative.image }}" width="32" style="vertical-align: middle" />
+                            <span class="image-text">{{ customer.representative.name }}</span>
                         </td>
                         <td>
-                            <span [class]="'customer-badge status-' + customer.status">{{customer.status}}</span>
+                            <span [class]="'customer-badge status-' + customer.status">{{ customer.status }}</span>
                         </td>
                     </tr>
                 </ng-template>

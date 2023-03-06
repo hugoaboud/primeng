@@ -44,11 +44,6 @@ export class DeferDemo {
             id: 'events',
             label: 'Events',
             component: EventsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Defer', pathname: '/modules/defer.html' }]
         }
     ];
 }

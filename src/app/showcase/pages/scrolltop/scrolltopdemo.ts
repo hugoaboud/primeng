@@ -38,11 +38,6 @@ export class ScrollTopDemo {
             id: 'props',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'ScrollTop', pathname: '/modules/scrolltop.html' }]
         }
     ];
 }

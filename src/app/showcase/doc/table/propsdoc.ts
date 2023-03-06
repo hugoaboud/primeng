@@ -348,7 +348,7 @@ import { Component, Input } from '@angular/core';
                     </tr>
                     <tr>
                         <td>expandedRowKeys</td>
-                        <td>&#123;[s: string]: boolean;	&#125;</td>
+                        <td>&#123;[s: string]: boolean; &#125;</td>
                         <td>null</td>
                         <td>Map instance to keep the expanded rows where key of the map is the data key of the row.</td>
                     </tr>

@@ -7,10 +7,10 @@ import { ProductService } from '../../service/productservice';
     selector: 'table-radio-button-selection-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
-        <p>Single selection can also be handled using radio buttons.</p>
+            <p>Single selection can also be handled using radio buttons.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-table [value]="products" [(selection)]="selectedProduct" dataKey="code" [tableStyle]="{'min-width': '50rem'}">
+            <p-table [value]="products" [(selection)]="selectedProduct" dataKey="code" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header">
                     <tr>
                         <th style="width: 4rem"></th>
@@ -25,10 +25,10 @@ import { ProductService } from '../../service/productservice';
                         <td>
                             <p-tableRadioButton [value]="product"></p-tableRadioButton>
                         </td>
-                        <td>{{product.code}}</td>
-                        <td>{{product.name}}</td>
-                        <td>{{product.category}}</td>
-                        <td>{{product.quantity}}</td>
+                        <td>{{ product.code }}</td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.category }}</td>
+                        <td>{{ product.quantity }}</td>
                     </tr>
                 </ng-template>
             </p-table>

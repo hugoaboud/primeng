@@ -162,7 +162,7 @@ export class TableDemo {
                     label: 'Filter Row',
                     component: TableFilterRowDemo
                 }
-            ],
+            ]
         },
         {
             id: 'row-selection',
@@ -314,12 +314,12 @@ export class TableDemo {
             label: 'Column Resize',
             children: [
                 {
-                    id:'fit-mode',
+                    id: 'fit-mode',
                     label: 'Fit Mode',
                     component: TableColumnResizeFitModeDemo
                 },
                 {
-                    id:'expand-mode',
+                    id: 'expand-mode',
                     label: 'Expand Mode',
                     component: TableColumnResizeExpandModeDemo
                 },
@@ -400,5 +400,4 @@ export class TableDemo {
             component: TemplatesDocComponent
         }
     ];
-
 }

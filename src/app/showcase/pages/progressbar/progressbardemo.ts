@@ -43,11 +43,6 @@ export class ProgressBarDemo {
             id: 'props',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'ProgressBar', pathname: '/modules/progressbar.html' }]
         }
     ];
 }

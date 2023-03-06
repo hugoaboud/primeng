@@ -7,10 +7,14 @@ import { ProductService } from '../../service/productservice';
     selector: 'table-row-expand-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>Row expansion allows displaying detailed content for a particular row. To use this feature, add a template named rowexpansion and use the <i>pRowToggler</i> directive whose value is the row data instance on an element of your choice whose click event toggles the expansion. This enables providing your custom UI such as buttons, links and so on. Example below uses an anchor with an icon as a toggler. Setting <i>pRowTogglerDisabled</i> as true disables the toggle event for the element.</p>
+            <p>
+                Row expansion allows displaying detailed content for a particular row. To use this feature, add a template named rowexpansion and use the <i>pRowToggler</i> directive whose value is the row data instance on an element of your choice
+                whose click event toggles the expansion. This enables providing your custom UI such as buttons, links and so on. Example below uses an anchor with an icon as a toggler. Setting <i>pRowTogglerDisabled</i> as true disables the toggle
+                event for the element.
+            </p>
         </app-docsectiontext>
         <div class="card">
-            <p-table [value]="products" dataKey="name" [tableStyle]="{'min-width': '60rem'}">
+            <p-table [value]="products" dataKey="name" [tableStyle]="{ 'min-width': '60rem' }">
                 <ng-template pTemplate="header">
                     <tr>
                         <th style="width: 5rem"></th>
@@ -27,12 +31,14 @@ import { ProductService } from '../../service/productservice';
                         <td>
                             <button type="button" pButton pRipple [pRowToggler]="product" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
                         </td>
-                        <td>{{product.name}}</td>
+                        <td>{{ product.name }}</td>
                         <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
-                        <td>{{product.price | currency:'USD'}}</td>
-                        <td>{{product.category}}</td>
+                        <td>{{ product.price | currency: 'USD' }}</td>
+                        <td>{{ product.category }}</td>
                         <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
-                        <td><span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span></td>
+                        <td>
+                            <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{ product.inventoryStatus }}</span>
+                        </td>
                     </tr>
                 </ng-template>
                 <ng-template pTemplate="rowexpansion" let-product>
@@ -52,11 +58,13 @@ import { ProductService } from '../../service/productservice';
                                     </ng-template>
                                     <ng-template pTemplate="body" let-order>
                                         <tr>
-                                            <td>{{order.id}}</td>
-                                            <td>{{order.customer}}</td>
-                                            <td>{{order.id}}</td>
-                                            <td>{{order.amount | currency:'USD'}}</td>
-                                            <td><span [class]="'order-badge order-' + order.status.toLowerCase()">{{order.status}}</span></td>
+                                            <td>{{ order.id }}</td>
+                                            <td>{{ order.customer }}</td>
+                                            <td>{{ order.id }}</td>
+                                            <td>{{ order.amount | currency: 'USD' }}</td>
+                                            <td>
+                                                <span [class]="'order-badge order-' + order.status.toLowerCase()">{{ order.status }}</span>
+                                            </td>
                                             <td><p-button type="button" icon="pi pi-search"></p-button></td>
                                         </tr>
                                     </ng-template>

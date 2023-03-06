@@ -62,11 +62,6 @@ export class DragDropDemo {
             id: 'droppableevents',
             label: 'Events of Droppable',
             component: DroppableEventsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'DragDrop', pathname: '/modules/dragdrop.html' }]
         }
     ];
 }

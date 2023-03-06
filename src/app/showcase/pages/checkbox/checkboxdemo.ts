@@ -12,23 +12,6 @@ import { PropsDocComponent } from '../../doc/checkbox/propsdoc';
     templateUrl: './checkboxdemo.html'
 })
 export class CheckboxDemo {
-    selectedCities: string[] = [];
-
-    selectedCategories: any[] = ['Technology', 'Sports'];
-
-    categories: any[] = [
-        { name: 'Accounting', key: 'A' },
-        { name: 'Marketing', key: 'M' },
-        { name: 'Production', key: 'P' },
-        { name: 'Research', key: 'R' }
-    ];
-
-    checked: boolean = false;
-
-    ngOnInit() {
-        this.selectedCategories = this.categories.slice(1, 3);
-    }
-
     docs = [
         {
             id: 'import',
@@ -72,11 +55,6 @@ export class CheckboxDemo {
             id: 'properties',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Checkbox', pathname: '/modules/checkbox.html' }]
         }
     ];
 }

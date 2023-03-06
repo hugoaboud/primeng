@@ -8,9 +8,13 @@ import { ProductService } from '../../service/productservice';
     selector: 'table-custom-sort-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
-            <p>Instead of using the built-in sorting algorithm a custom sort can be attached by enabling <i>customSort</i> property and defining a sortFunction implementation. This function gets a SortEvent instance that provides the data to sort, <i>sortField</i>, <i>sortOrder</i> and <i>multiSortMeta</i>. </p></app-docsectiontext>
+            <p>
+                Instead of using the built-in sorting algorithm a custom sort can be attached by enabling <i>customSort</i> property and defining a sortFunction implementation. This function gets a SortEvent instance that provides the data to sort,
+                <i>sortField</i>, <i>sortOrder</i> and <i>multiSortMeta</i>.
+            </p></app-docsectiontext
+        >
         <div class="card">
-            <p-table [value]="products" (sortFunction)="customSort($event)" [customSort]="true" [tableStyle]="{'min-width': '60rem'}">
+            <p-table [value]="products" (sortFunction)="customSort($event)" [customSort]="true" [tableStyle]="{ 'min-width': '60rem' }">
                 <ng-template pTemplate="header">
                     <tr>
                         <th pSortableColumn="code" style="width:20%">Code <p-sortIcon field="code"></p-sortIcon></th>
@@ -22,11 +26,11 @@ import { ProductService } from '../../service/productservice';
                 </ng-template>
                 <ng-template pTemplate="body" let-product>
                     <tr>
-                        <td>{{product.code}}</td>
-                        <td>{{product.name}}</td>
-                        <td>{{product.category}}</td>
-                        <td>{{product.quantity}}</td>
-                        <td>{{product.price | currency: 'USD'}}</td>
+                        <td>{{ product.code }}</td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.category }}</td>
+                        <td>{{ product.quantity }}</td>
+                        <td>{{ product.price | currency: 'USD' }}</td>
                     </tr>
                 </ng-template>
             </p-table>
@@ -34,7 +38,7 @@ import { ProductService } from '../../service/productservice';
         <app-code [code]="code" selector="table-custom-sort-demo" [extFiles]="extFiles"></app-code>
     </div>`
 })
-export class TableCustomSortDemo implements OnInit{
+export class TableCustomSortDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

@@ -9,10 +9,9 @@ import { CustomerService } from '../../service/customerservice';
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
             <p>
-                Lazy mode is handy to deal with large datasets, instead of loading the entire data, small chunks of data is loaded by invoking
-                onLazyLoad callback everytime <i>paging</i>, <i>sorting</i> and <i>filtering</i> happens. Sample here loads the data from remote datasource efficiently using lazy loading.
-                Also, the implementation of <i>checkbox selection</i> in lazy tables is left entirely to the user. Since the table component does not know what will happen to the data on the next page or whether there are instant data changes, the selection array can be implemented in several ways.
-                One of them is as in the example below.
+                Lazy mode is handy to deal with large datasets, instead of loading the entire data, small chunks of data is loaded by invoking onLazyLoad callback everytime <i>paging</i>, <i>sorting</i> and <i>filtering</i> happens. Sample here loads
+                the data from remote datasource efficiently using lazy loading. Also, the implementation of <i>checkbox selection</i> in lazy tables is left entirely to the user. Since the table component does not know what will happen to the data on
+                the next page or whether there are instant data changes, the selection array can be implemented in several ways. One of them is as in the example below.
             </p>
         </app-docsectiontext>
         <div class="card">
@@ -151,7 +150,7 @@ export class TableLazyLoadDemo implements OnInit {
             this.selectAll = false;
         }
     }
-    
+
     code: Code = {
         basic: `
 <p-table

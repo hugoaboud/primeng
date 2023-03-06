@@ -39,8 +39,7 @@ export class AppDocSectionsComponent implements OnInit {
             let component = viewContainerRef.createComponent<Props>(newComponent.component);
             component.instance.id = newComponent.id;
             component.instance.title = newComponent.label;
-        }
-        else {
+        } else {
             let component = viewContainerRef.createComponent(AppDocSectionTextComponent);
             component.instance.id = newComponent.id;
             component.instance.title = newComponent.label;

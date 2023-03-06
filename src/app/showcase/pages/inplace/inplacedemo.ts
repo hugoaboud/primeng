@@ -61,11 +61,6 @@ export class InplaceDemo {
             id: 'methods',
             label: 'Methods',
             component: MethodsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Inplace', pathname: '/modules/inplace.html' }]
         }
     ];
 }

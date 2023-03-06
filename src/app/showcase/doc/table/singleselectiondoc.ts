@@ -7,11 +7,17 @@ import { ProductService } from '../../service/productservice';
     selector: 'table-single-selection-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
-            <p>Single row selection is enabled by defining <i>selectionMode</i> as <i>single</i> along with a value binding using <i>selection</i> property. When available, it is suggested to provide a unique identifier of a row with <i>dataKey</i> to optimize performance.</p>
-            <p>By default, metaKey press (e.g. <i>⌘</i>) is necessary to unselect a row however this can be configured with disabling the <i>metaKeySelection</i> property. In touch enabled devices this option has no effect and behavior is same as setting it to false.</p>
+            <p>
+                Single row selection is enabled by defining <i>selectionMode</i> as <i>single</i> along with a value binding using <i>selection</i> property. When available, it is suggested to provide a unique identifier of a row with
+                <i>dataKey</i> to optimize performance.
+            </p>
+            <p>
+                By default, metaKey press (e.g. <i>⌘</i>) is necessary to unselect a row however this can be configured with disabling the <i>metaKeySelection</i> property. In touch enabled devices this option has no effect and behavior is same as
+                setting it to false.
+            </p>
         </app-docsectiontext>
         <div class="card">
-            <p-table [value]="products" selectionMode="single" [(selection)]="selectedProduct" dataKey="code" [tableStyle]="{'min-width': '50rem'}">
+            <p-table [value]="products" selectionMode="single" [(selection)]="selectedProduct" dataKey="code" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header">
                     <tr>
                         <th>Code</th>
@@ -22,10 +28,10 @@ import { ProductService } from '../../service/productservice';
                 </ng-template>
                 <ng-template pTemplate="body" let-product>
                     <tr [pSelectableRow]="product">
-                        <td>{{product.code}}</td>
-                        <td>{{product.name}}</td>
-                        <td>{{product.category}}</td>
-                        <td>{{product.quantity}}</td>
+                        <td>{{ product.code }}</td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.category }}</td>
+                        <td>{{ product.quantity }}</td>
                     </tr>
                 </ng-template>
             </p-table>
@@ -34,7 +40,6 @@ import { ProductService } from '../../service/productservice';
     </div>`
 })
 export class TableSingleSelectionDemo implements OnInit {
-
     @Input() id: string;
 
     @Input() title: string;
@@ -111,7 +116,6 @@ export class TableSingleSelectionDemo implements OnInit{
     }
 
 }`,
-
 
         service: ['ProductService']
     };

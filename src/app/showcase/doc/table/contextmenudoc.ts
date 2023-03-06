@@ -16,7 +16,7 @@ import { ProductService } from '../../service/productservice';
         </app-docsectiontext>
         <div class="card">
             <p-contextMenu #cm [model]="items"></p-contextMenu>
-            <p-table [value]="products" [(contextMenuSelection)]="selectedProduct" [contextMenu]="cm" dataKey="code" [tableStyle]="{'min-width': '50rem'}">
+            <p-table [value]="products" [(contextMenuSelection)]="selectedProduct" [contextMenu]="cm" dataKey="code" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header">
                     <tr>
                         <th>Code</th>
@@ -27,10 +27,10 @@ import { ProductService } from '../../service/productservice';
                 </ng-template>
                 <ng-template pTemplate="body" let-product>
                     <tr [pContextMenuRow]="product">
-                        <td>{{product.code}}</td>
-                        <td>{{product.name}}</td>
-                        <td>{{product.category}}</td>
-                        <td>{{product.price | currency: 'USD'}}</td>
+                        <td>{{ product.code }}</td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.category }}</td>
+                        <td>{{ product.price | currency: 'USD' }}</td>
                     </tr>
                 </ng-template>
             </p-table>

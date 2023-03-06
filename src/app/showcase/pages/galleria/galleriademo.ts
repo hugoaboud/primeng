@@ -158,11 +158,6 @@ export class GalleriaDemo {
             id: 'props',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Galleria', pathname: '/modules/galleria.html' }]
         }
     ];
 }

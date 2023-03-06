@@ -11,16 +11,6 @@ import { PropsDocComponent } from '../../doc/chips/propsdoc';
     templateUrl: './chipsdemo.html'
 })
 export class ChipsDemo {
-    values1: string[];
-
-    values2: string[];
-
-    values3: string[];
-
-    values4: string[];
-
-    separatorExp: RegExp = /,| /;
-
     docs = [
         {
             id: 'import',
@@ -59,11 +49,6 @@ export class ChipsDemo {
             id: 'properties',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Chips', pathname: '/modules/chips.html' }]
         }
     ];
 }

@@ -7,16 +7,19 @@ import { ProductService } from '../../service/productservice';
     selector: 'table-reorder-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-        <p>Order of the columns and rows can be changed using drag and drop. Column reordering is configured by adding <i>reorderableColumns</i> property.</p>
-        <p>Similarly, adding <i>reorderableRows</i> property enables draggable rows. For the drag handle a column needs to have <i>rowReorder</i> property and <i>onRowReorder</i> callback is required to control the state of the rows after reorder completes.</p>
+            <p>Order of the columns and rows can be changed using drag and drop. Column reordering is configured by adding <i>reorderableColumns</i> property.</p>
+            <p>
+                Similarly, adding <i>reorderableRows</i> property enables draggable rows. For the drag handle a column needs to have <i>rowReorder</i> property and <i>onRowReorder</i> callback is required to control the state of the rows after
+                reorder completes.
+            </p>
         </app-docsectiontext>
         <div class="card">
-            <p-table [value]="products" [columns]="cols" [reorderableColumns]="true" [tableStyle]="{'min-width': '50rem'}">
+            <p-table [value]="products" [columns]="cols" [reorderableColumns]="true" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header" let-columns>
                     <tr>
                         <th style="width:3rem"></th>
                         <th *ngFor="let col of columns" pReorderableColumn>
-                            {{col.header}}
+                            {{ col.header }}
                         </th>
                     </tr>
                 </ng-template>
@@ -26,7 +29,7 @@ import { ProductService } from '../../service/productservice';
                             <span class="pi pi-bars" pReorderableRowHandle></span>
                         </td>
                         <td *ngFor="let col of columns">
-                            {{rowData[col.field]}}
+                            {{ rowData[col.field] }}
                         </td>
                     </tr>
                 </ng-template>

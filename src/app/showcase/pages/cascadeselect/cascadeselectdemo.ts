@@ -43,11 +43,6 @@ export class CascadeSelectDemo {
             id: 'events',
             label: 'Events',
             component: EventsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'CascadeSelect', pathname: '/modules/cascadeselect.html' }]
         }
     ];
 }

@@ -7,9 +7,10 @@ import { CustomerService } from '../../service/customerservice';
     selector: 'table-vertical-scroll-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
-            <p>Adding <i>scrollable</i> property along with a <i>scrollHeight</i> for the data viewport enables vertical scrolling with fixed headers.</p></app-docsectiontext>
+            <p>Adding <i>scrollable</i> property along with a <i>scrollHeight</i> for the data viewport enables vertical scrolling with fixed headers.</p></app-docsectiontext
+        >
         <div class="card">
-            <p-table [value]="customers" [scrollable]="true" scrollHeight="400px" [tableStyle]="{'min-width': '50rem'}">
+            <p-table [value]="customers" [scrollable]="true" scrollHeight="400px" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header">
                     <tr>
                         <th>Name</th>
@@ -20,10 +21,10 @@ import { CustomerService } from '../../service/customerservice';
                 </ng-template>
                 <ng-template pTemplate="body" let-customer>
                     <tr>
-                        <td>{{customer.name}}</td>
-                        <td>{{customer.country.name}}</td>
-                        <td>{{customer.company}}</td>
-                        <td>{{customer.representative.name}}</td>
+                        <td>{{ customer.name }}</td>
+                        <td>{{ customer.country.name }}</td>
+                        <td>{{ customer.company }}</td>
+                        <td>{{ customer.representative.name }}</td>
                     </tr>
                 </ng-template>
             </p-table>
@@ -35,7 +36,7 @@ export class TableVerticalScrollDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
-    
+
     customers: Customer[];
 
     constructor(private customerService: CustomerService) {}

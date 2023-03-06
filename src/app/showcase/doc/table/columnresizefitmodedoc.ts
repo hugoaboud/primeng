@@ -10,7 +10,7 @@ import { ProductService } from '../../service/productservice';
             <p>Columns can be resized using drag drop by setting the <i>resizableColumns</i> to <i>true</i>. Fit mode is the default one and the overall table width does not change when a column is resized.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-table [value]="products" [resizableColumns]="true" styleClass="p-datatable-gridlines" [tableStyle]="{'min-width': '50rem'}">
+            <p-table [value]="products" [resizableColumns]="true" styleClass="p-datatable-gridlines" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header">
                     <tr>
                         <th pResizableColumn>Code</th>
@@ -21,10 +21,10 @@ import { ProductService } from '../../service/productservice';
                 </ng-template>
                 <ng-template pTemplate="body" let-product>
                     <tr>
-                        <td>{{product.code}}</td>
-                        <td>{{product.name}}</td>
-                        <td>{{product.category}}</td>
-                        <td>{{product.quantity}}</td>
+                        <td>{{ product.code }}</td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.category }}</td>
+                        <td>{{ product.quantity }}</td>
                     </tr>
                 </ng-template>
             </p-table>

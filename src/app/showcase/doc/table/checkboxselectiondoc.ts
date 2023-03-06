@@ -10,7 +10,7 @@ import { ProductService } from '../../service/productservice';
             <p>Multiple selection can also be handled using checkboxes by enabling the <i>selectionMode</i> property of column as <i>multiple</i>.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-table [value]="products" [(selection)]="selectedProducts" dataKey="code" [tableStyle]="{'min-width': '50rem'}">
+            <p-table [value]="products" [(selection)]="selectedProducts" dataKey="code" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header">
                     <tr>
                         <th style="width: 4rem">
@@ -27,10 +27,10 @@ import { ProductService } from '../../service/productservice';
                         <td>
                             <p-tableCheckbox [value]="product"></p-tableCheckbox>
                         </td>
-                        <td>{{product.code}}</td>
-                        <td>{{product.name}}</td>
-                        <td>{{product.category}}</td>
-                        <td>{{product.quantity}}</td>
+                        <td>{{ product.code }}</td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ product.category }}</td>
+                        <td>{{ product.quantity }}</td>
                     </tr>
                 </ng-template>
             </p-table>

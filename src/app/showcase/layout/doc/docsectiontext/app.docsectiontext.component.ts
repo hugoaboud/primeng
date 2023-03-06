@@ -18,11 +18,11 @@ export class AppDocSectionTextComponent {
         const hash = window.location.hash.substring(1);
         this.location.go(this.location.path().split('#')[0] + '#' + this.id);
         const parentElement = event.currentTarget.parentElement;
-        
+
         setTimeout(() => {
-            parentElement.scrollIntoView({ block: 'start', behavior: 'smooth'});
+            parentElement.scrollIntoView({ block: 'start', behavior: 'smooth' });
         }, 0);
-        
+
         hash === this.id && event.preventDefault();
     }
 }

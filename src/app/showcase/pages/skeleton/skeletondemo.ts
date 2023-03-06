@@ -50,11 +50,6 @@ export class SkeletonDemo {
             id: 'properties',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'Skeleton', pathname: '/modules/skeleton.html' }]
         }
     ];
 }

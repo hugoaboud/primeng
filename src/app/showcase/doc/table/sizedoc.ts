@@ -54,7 +54,7 @@ export class TableSizeDemo {
         this.sizes = [
             { name: 'Small', class: 'p-datatable-sm' },
             { name: 'Normal', class: '' },
-            { name: 'Large',  class: 'p-datatable-lg' }
+            { name: 'Large', class: 'p-datatable-lg' }
         ];
     }
 

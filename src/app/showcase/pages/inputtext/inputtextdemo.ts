@@ -88,11 +88,6 @@ export class InputTextDemo {
             id: 'properties',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'InputText', pathname: '/modules/inputtext.html' }]
         }
     ];
 }

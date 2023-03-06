@@ -81,11 +81,6 @@ export class BlockUIDemo {
             id: 'props',
             label: 'Properties',
             component: PropsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'BlockUI', pathname: '/modules/blockui.html' }]
         }
     ];
 }

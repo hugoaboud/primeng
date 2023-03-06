@@ -7,13 +7,16 @@ import { ProductService } from '../../service/productservice';
     selector: 'table-multiple-selection-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
-            <p>In multiple mode, selection binding should be an array. For touch enabled devices, selection is managed by tapping and for other devices metakey or <i>shiftkey</i> are required. Setting <i>metaKeySelection</i> property as false enables multiple selection without meta key.</p>
+            <p>
+                In multiple mode, selection binding should be an array. For touch enabled devices, selection is managed by tapping and for other devices metakey or <i>shiftkey</i> are required. Setting <i>metaKeySelection</i> property as false
+                enables multiple selection without meta key.
+            </p>
         </app-docsectiontext>
         <div class="card">
-        <div class="flex justify-content-center align-items-center gap-2 mb-3">
-            <p-inputSwitch inputId="metakey" [(ngModel)]="metaKeySelection" label="MetaKey"></p-inputSwitch>
-            <span>MetaKey</span>
-        </div>
+            <div class="flex justify-content-center align-items-center gap-2 mb-3">
+                <p-inputSwitch inputId="metakey" [(ngModel)]="metaKeySelection" label="MetaKey"></p-inputSwitch>
+                <span>MetaKey</span>
+            </div>
             <p-table [value]="products" selectionMode="multiple" [(selection)]="selectedProducts" [metaKeySelection]="metaKeySelection" dataKey="code" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="caption"> Multiple Selection with MetaKey </ng-template>
                 <ng-template pTemplate="header">

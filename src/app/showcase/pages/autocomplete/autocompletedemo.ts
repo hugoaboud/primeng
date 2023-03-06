@@ -60,11 +60,6 @@ export class AutoCompleteDemo {
             id: 'events',
             label: 'Events',
             component: EventsDocComponent
-        },
-        {
-            id: 'api',
-            label: 'API',
-            doc: [{ name: 'AutoComplete', pathname: '/modules/autocomplete.html' }]
         }
     ];
 }

@@ -7,7 +7,10 @@ import { ProductService } from '../../service/productservice';
     selector: 'table-single-column-sort-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
-            <p>A column can be made sortable by adding the <i>pSortableColumn</i> directive whose value is the field to sort against and a sort indicator via <i>p-sortIcon</i> component. For dynamic columns, setting <i>pSortableColumnDisabled</i> property as true disables sorting for that particular column. </p>
+            <p>
+                A column can be made sortable by adding the <i>pSortableColumn</i> directive whose value is the field to sort against and a sort indicator via <i>p-sortIcon</i> component. For dynamic columns, setting
+                <i>pSortableColumnDisabled</i> property as true disables sorting for that particular column.
+            </p>
             <p>Default sorting is executed on a single column, in order to enable multiple field sorting, set <i>sortMode</i> property to "multiple" and use metakey when clicking on another column.</p>
         </app-docsectiontext>
         <div class="card">
@@ -35,7 +38,7 @@ import { ProductService } from '../../service/productservice';
         <app-code [code]="code" selector="table-single-column-sort-demo" [extFiles]="extFiles"></app-code>
     </div>`
 })
-export class TableSingleColumnSortDemo implements OnInit{
+export class TableSingleColumnSortDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;

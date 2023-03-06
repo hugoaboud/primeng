@@ -7,9 +7,13 @@ import { ProductService } from '../../service/productservice';
     selector: 'table-responsive-stack-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id" [level]="3">
-            <p>In stack layout, columns are displayed as stacked after a certain breakpoint. Default is '960px' as max-width. This feature is enabled by setting <i>responsiveLayout</i> to <i>stack</i> and adding an element with <i>p-column-title</i> style class to the body cells.</p></app-docsectiontext>
+            <p>
+                In stack layout, columns are displayed as stacked after a certain breakpoint. Default is '960px' as max-width. This feature is enabled by setting <i>responsiveLayout</i> to <i>stack</i> and adding an element with
+                <i>p-column-title</i> style class to the body cells.
+            </p></app-docsectiontext
+        >
         <div class="card">
-            <p-table [value]="products" responsiveLayout="stack" [breakpoint]="'960px'" [tableStyle]="{'min-width': '50rem'}">
+            <p-table [value]="products" responsiveLayout="stack" [breakpoint]="'960px'" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header" let-columns>
                     <tr>
                         <th>Name</th>
@@ -22,11 +26,13 @@ import { ProductService } from '../../service/productservice';
                 </ng-template>
                 <ng-template pTemplate="body" let-product let-columns="columns">
                     <tr>
-                        <td><span class="p-column-title">Name</span>{{product.name}}</td>
-                        <td><span class="p-column-title">Price</span>{{product.price | currency:'USD'}}</td>
-                        <td><span class="p-column-title">Category</span>{{product.category}}</td>
-                        <td><span class="p-column-title">Quantity</span>{{product.quantity}}</td>
-                        <td><span class="p-column-title">Status</span><span [class]="'product-badge status-' + (product.inventoryStatus ? product.inventoryStatus.toLowerCase() : '')">{{product.inventoryStatus}}</span></td>
+                        <td><span class="p-column-title">Name</span>{{ product.name }}</td>
+                        <td><span class="p-column-title">Price</span>{{ product.price | currency: 'USD' }}</td>
+                        <td><span class="p-column-title">Category</span>{{ product.category }}</td>
+                        <td><span class="p-column-title">Quantity</span>{{ product.quantity }}</td>
+                        <td>
+                            <span class="p-column-title">Status</span><span [class]="'product-badge status-' + (product.inventoryStatus ? product.inventoryStatus.toLowerCase() : '')">{{ product.inventoryStatus }}</span>
+                        </td>
                         <td><span class="p-column-title">Reviews</span><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
                     </tr>
                 </ng-template>
