@@ -1,0 +1,219 @@
+import { Component, Input } from '@angular/core';
+import { Customer } from '../../domain/customer';
+import { CustomerService } from '../../service/customerservice';
+import { Code } from '../../domain/code';
+
+@Component({
+    selector: 'table-paginator-programmatic-demo',
+    template: ` <div>
+        <app-docsectiontext [title]="title" [id]="id" [level]="3">
+            <p _ngcontent-ylv-c94="">Paginator can also be controlled via model using a binding to the <i>first</i> property where changes trigger a pagination.</p>
+        </app-docsectiontext>
+        <div class="card">
+            <div class="mb-3">
+                <p-button type="button" icon="pi pi-chevron-left" (click)="prev()" [disabled]="isFirstPage()" styleClass="p-button-text"></p-button>
+                <p-button type="button" icon="pi pi-refresh" (click)="reset()" styleClass="p-button-text"></p-button>
+                <p-button type="button" icon="pi pi-chevron-right" (click)="next()" [disabled]="isLastPage()" styleClass="p-button-text"></p-button>
+            </div>
+            <p-table
+                [value]="customers"
+                [paginator]="true"
+                [rows]="rows"
+                [showCurrentPageReport]="true"
+                [(first)]="first"
+                [tableStyle]="{ 'min-width': '50rem' }"
+                currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+                [rowsPerPageOptions]="[10, 25, 50]"
+            >
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th style="width:25%">Name</th>
+                        <th style="width:25%">Country</th>
+                        <th style="width:25%">Company</th>
+                        <th style="width:25%">Representative</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-customer>
+                    <tr>
+                        <td>{{ customer.name }}</td>
+                        <td>{{ customer.country.name }}</td>
+                        <td>{{ customer.company }}</td>
+                        <td>{{ customer.representative.name }}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        <app-code [code]="code" selector="table-paginator-programmatic-demo" [extFiles]="extFiles"></app-code>
+    </div>`
+})
+export class TablePaginatorProgrammaticDemo {
+    @Input() id: string;
+
+    @Input() title: string;
+
+    customers: Customer[];
+
+    first = 0;
+
+    rows = 10;
+
+    constructor(private customerService: CustomerService) {}
+
+    ngOnInit() {
+        this.customerService.getCustomersLarge().then((customers) => (this.customers = customers));
+    }
+
+    next() {
+        this.first = this.first + this.rows;
+    }
+
+    prev() {
+        this.first = this.first - this.rows;
+    }
+
+    reset() {
+        this.first = 0;
+    }
+
+    isLastPage(): boolean {
+        return this.customers ? this.first === this.customers.length - this.rows : true;
+    }
+
+    isFirstPage(): boolean {
+        return this.customers ? this.first === 0 : true;
+    }
+
+    code: Code = {
+        basic: `
+<p-table
+    [value]="customers"
+    [paginator]="true"
+    [rows]="5"
+    [showCurrentPageReport]="true"
+    [tableStyle]="{ 'min-width': '50rem' }"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [rowsPerPageOptions]="[10, 25, 50]"
+>
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="width:25%">Name</th>
+            <th style="width:25%">Country</th>
+            <th style="width:25%">Company</th>
+            <th style="width:25%">Representative</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-customer>
+        <tr>
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.country.name }}</td>
+            <td>{{ customer.company }}</td>
+            <td>{{ customer.representative.name }}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="paginatorleft">
+        <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+    </ng-template>
+    <ng-template pTemplate="paginatorright">
+        <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+    </ng-template>
+</p-table>`,
+        html: `
+<div class="card">
+    <p-table
+        [value]="customers"
+        [paginator]="true"
+        [rows]="5"
+        [showCurrentPageReport]="true"
+        [tableStyle]="{ 'min-width': '50rem' }"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[10, 25, 50]"
+    >
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width:25%">Name</th>
+                <th style="width:25%">Country</th>
+                <th style="width:25%">Company</th>
+                <th style="width:25%">Representative</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-customer>
+            <tr>
+                <td>{{ customer.name }}</td>
+                <td>{{ customer.country.name }}</td>
+                <td>{{ customer.company }}</td>
+                <td>{{ customer.representative.name }}</td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+            <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+        </ng-template>
+    </p-table>
+</div>`,
+        typescript: `
+import { Component } from '@angular/core';
+import { Customer } from '../../domain/customer';
+import { CustomerService } from '../../service/customerservice';
+
+@Component({
+    selector: 'table-paginator-programmatic-demo',
+    templateUrl: 'table-paginator-programmatic-demo',
+    providers: [CustomerService]
+})
+export class TablePaginatorProgrammaticDemo {
+    customers: Customer[];
+
+    first = 0;
+
+    rows = 10;
+
+    constructor(private customerService: CustomerService) {}
+
+    ngOnInit() {
+        this.customerService.getCustomersLarge().then((customers) => (this.customers = customers));
+    }
+
+    next() {
+        this.first = this.first + this.rows;
+    }
+
+    prev() {
+        this.first = this.first - this.rows;
+    }
+
+    reset() {
+        this.first = 0;
+    }
+
+    isLastPage(): boolean {
+        return this.customers ? this.first === this.customers.length - this.rows : true;
+    }
+
+    isFirstPage(): boolean {
+        return this.customers ? this.first === 0 : true;
+    }
+}`,
+        service: ['CustomerService']
+    };
+
+    extFiles = [
+        {
+            path: 'src/domain/product.ts',
+            content: `
+export interface Product {
+    id?: string;
+    code?: string;
+    name?: string;
+    description?: string;
+    price?: number;
+    quantity?: number;
+    inventoryStatus?: string;
+    category?: string;
+    image?: string;
+    rating?: number;
+}`
+        }
+    ];
+}

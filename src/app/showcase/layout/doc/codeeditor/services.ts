@@ -10520,6 +10520,10 @@ export class CustomerService {
             }
         ];
     }
+    
+    getCustomersMini() {
+        return Promise.resolve(this.getData().slice(0, 5));
+    }
 
     getCustomersSmall() {
         return Promise.resolve(this.getData().slice(0, 10));
@@ -11140,7 +11144,7 @@ export class ProductService {
                 price: 72,
                 category: 'Accessories',
                 quantity: 61,
-                inventoryStatus: 'INSTOCK',
+                inventoryStatus: 'OUTOFSTOCK',
                 rating: 4
             },
             {
