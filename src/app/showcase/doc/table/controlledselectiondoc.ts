@@ -123,7 +123,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-controlled-selection-demo',
-    templateUrl: 'table-controlled-selection-demo'
+    templateUrl: 'table-controlled-selection-demo.html'
 })
 export class TableControlledSelectionDemo implements OnInit{
     products: Product[];

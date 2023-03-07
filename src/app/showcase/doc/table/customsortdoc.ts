@@ -120,7 +120,7 @@ import { SortEvent } from 'primeng/api';
 
 @Component({
     selector: 'table-custom-sort-demo',
-    templateUrl: 'table-custom-sort-demo'
+    templateUrl: 'table-custom-sort-demo.html'
 })
 export class TableCustomSortDemo implements OnInit {
     products: Product[];

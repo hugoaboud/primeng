@@ -1513,6 +1513,7 @@ export class CountryService {
     }
 };`,
     CustomerService: `import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class CustomerService {
@@ -10520,6 +10521,8 @@ export class CustomerService {
             }
         ];
     }
+
+    constructor(private http: HttpClient) {}
     
     getCustomersMini() {
         return Promise.resolve(this.getData().slice(0, 5));
@@ -10541,14 +10544,8 @@ export class CustomerService {
         return Promise.resolve(this.getData());
     }
 
-    getCustomers(params) {
-        const queryParams = params
-            ? Object.keys(params)
-                    .map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(params[k]))
-                    .join('&')
-            : '';
-
-        return fetch('https://www.primefaces.org/data/customers?' + queryParams).then((res) => res.json());
+    getCustomers(params?: any) {
+        return this.http.get<any>('https://www.primefaces.org/data/customers', { params: params }).toPromise();
     }
 };`,
     EventService: `import { Injectable } from '@angular/core';

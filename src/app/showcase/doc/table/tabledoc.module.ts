@@ -71,7 +71,7 @@ import { TableStickyDemo } from './stickydoc';
 import { TableStripedDemo } from './stripeddoc';
 import { TableStyleDemo } from './styledoc';
 import { TableSubheaderGroupingDemo } from './subheadergroupingdoc';
-import { TableTemplatingDemo } from './templatedoc';
+import { TableTemplateDemo } from './templatedoc';
 import { TableVerticalScrollDemo } from './verticalscrolldoc';
 import { TableVirtualScrollDemo } from './virtualscrolldoc';
 import { TableVirtualScrollLazyDemo } from './virtualscrolllazydoc';
@@ -163,7 +163,7 @@ import { TableSelectionEventsDemo } from './selectioneventsdoc';
         TableStripedDemo,
         TableStyleDemo,
         TableSubheaderGroupingDemo,
-        TableTemplatingDemo,
+        TableTemplateDemo,
         TableVerticalScrollDemo,
         TableVirtualScrollDemo,
         TableVirtualScrollLazyDemo,

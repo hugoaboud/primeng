@@ -111,7 +111,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-page-only-selection-demo',
-    templateUrl: 'table-page-only-selection-demo'
+    templateUrl: 'table-page-only-selection-demo.html'
 })
 export class TablePageOnlySelectionDemo implements OnInit{
     products: Product[];

@@ -32,7 +32,7 @@ import { ProductService } from '../../service/productservice';
                             <button type="button" pButton pRipple [pRowToggler]="product" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
                         </td>
                         <td>{{ product.name }}</td>
-                        <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
+                        <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.name" width="50" class="shadow-4" /></td>
                         <td>{{ product.price | currency: 'USD' }}</td>
                         <td>{{ product.category }}</td>
                         <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
@@ -65,7 +65,7 @@ import { ProductService } from '../../service/productservice';
                                             <td>
                                                 <span [class]="'order-badge order-' + order.status.toLowerCase()">{{ order.status }}</span>
                                             </td>
-                                            <td><p-button type="button" icon="pi pi-search"></p-button></td>
+                                            <td><p-button type="button" icon="pi pi-plus"></p-button></td>
                                         </tr>
                                     </ng-template>
                                     <ng-template pTemplate="emptymessage">
@@ -116,7 +116,7 @@ export class TableRowExpandDemo implements OnInit {
                 <button type="button" pButton pRipple [pRowToggler]="product" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
             </td>
             <td>{{product.name}}</td>
-            <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
+            <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.name" width="50" class="shadow-4" /></td>
             <td>{{product.price | currency:'USD'}}</td>
             <td>{{product.category}}</td>
             <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
@@ -145,7 +145,7 @@ export class TableRowExpandDemo implements OnInit {
                                 <td>{{order.id}}</td>
                                 <td>{{order.amount | currency:'USD'}}</td>
                                 <td><span [class]="'order-badge order-' + order.status.toLowerCase()">{{order.status}}</span></td>
-                                <td><p-button type="button" icon="pi pi-search"></p-button></td>
+                                <td><p-button type="button" icon="pi pi-plus"></p-button></td>
                             </tr>
                         </ng-template>
                         <ng-template pTemplate="emptymessage">
@@ -179,7 +179,7 @@ export class TableRowExpandDemo implements OnInit {
                     <button type="button" pButton pRipple [pRowToggler]="product" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
                 </td>
                 <td>{{product.name}}</td>
-                <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
+                <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.name" width="50" class="shadow-4" /></td>
                 <td>{{product.price | currency:'USD'}}</td>
                 <td>{{product.category}}</td>
                 <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
@@ -208,7 +208,7 @@ export class TableRowExpandDemo implements OnInit {
                                     <td>{{order.id}}</td>
                                     <td>{{order.amount | currency:'USD'}}</td>
                                     <td><span [class]="'order-badge order-' + order.status.toLowerCase()">{{order.status}}</span></td>
-                                    <td><p-button type="button" icon="pi pi-search"></p-button></td>
+                                    <td><p-button type="button" icon="pi pi-plus"></p-button></td>
                                 </tr>
                             </ng-template>
                             <ng-template pTemplate="emptymessage">
@@ -230,7 +230,8 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-row-expand-demo',
-    templateUrl: 'table-row-expand-demo'
+    templateUrl: 'table-row-expand-demo.html',
+    styleUrls: ['table-row-expand-demo.scss']
 })
 export class TableRowExpandDemo implements OnInit{
     products: Product[];
@@ -239,6 +240,59 @@ export class TableRowExpandDemo implements OnInit{
 
     ngOnInit() {
         this.productService.getProductsWithOrdersSmall().then((data) => (this.products = data));
+    }
+}`,
+        scss: `
+.product-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+
+    &.status-instock {
+        background: #C8E6C9;
+        color: #256029;
+    }
+    
+    &.status-outofstock {
+        background: #FFCDD2;
+        color: #C63737;
+    }
+    
+    &.status-lowstock {
+        background: #FEEDAF;
+        color: #8A5340;
+    }
+}
+
+.order-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+
+    &.order-delivered {
+        background: #C8E6C9;
+        color: #256029;
+    }
+    
+    &.order-cancelled {
+        background: #FFCDD2;
+        color: #C63737;
+    }
+    
+    &.order-pending {
+        background: #FEEDAF;
+        color: #8A5340;
+    }
+    
+    &.order-returned {
+        background: #ECCFFF;
+        color: #694382;
     }
 }`,
         service: ['ProductService']

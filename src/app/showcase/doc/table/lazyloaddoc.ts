@@ -58,7 +58,7 @@ import { CustomerService } from '../../service/customerservice';
                                     <p-multiSelect [ngModel]="value" appendTo="body" [options]="representatives" placeholder="Any" (onChange)="filter($event.value)" optionLabel="name" [maxSelectedLabels]="1" [selectedItemsLabel]="'{0} items'">
                                         <ng-template let-option pTemplate="item">
                                             <div class="p-multiselect-representative-option">
-                                                <img [alt]="option.label" src="assets/showcase/images/demo/avatar/{{ option.image }}" width="32" style="vertical-align: middle" />
+                                                <img [alt]="option.label" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ option.image }}" width="32" style="vertical-align: middle" />
                                                 <span class="ml-1">{{ option.name }}</span>
                                             </div>
                                         </ng-template>
@@ -196,7 +196,7 @@ export class TableLazyLoadDemo implements OnInit {
                         <p-multiSelect [ngModel]="value" appendTo="body" [options]="representatives" placeholder="Any" (onChange)="filter($event.value)" optionLabel="name" [maxSelectedLabels]="1" [selectedItemsLabel]="'{0} items'">
                             <ng-template let-option pTemplate="item">
                                 <div class="p-multiselect-representative-option">
-                                    <img [alt]="option.label" src="assets/showcase/images/demo/avatar/{{ option.image }}" width="32" style="vertical-align: middle" />
+                                    <img [alt]="option.label" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ option.image }}" width="32" style="vertical-align: middle" />
                                     <span class="ml-1">{{ option.name }}</span>
                                 </div>
                             </ng-template>
@@ -263,7 +263,7 @@ export class TableLazyLoadDemo implements OnInit {
                             <p-multiSelect [ngModel]="value" appendTo="body" [options]="representatives" placeholder="Any" (onChange)="filter($event.value)" optionLabel="name" [maxSelectedLabels]="1" [selectedItemsLabel]="'{0} items'">
                                 <ng-template let-option pTemplate="item">
                                     <div class="p-multiselect-representative-option">
-                                        <img [alt]="option.label" src="assets/showcase/images/demo/avatar/{{ option.image }}" width="32" style="vertical-align: middle" />
+                                        <img [alt]="option.label" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ option.image }}" width="32" style="vertical-align: middle" />
                                         <span class="ml-1">{{ option.name }}</span>
                                     </div>
                                 </ng-template>
@@ -294,7 +294,7 @@ import { CustomerService } from '../../service/customerservice';
 
 @Component({
     selector: 'table-lazy-load-demo',
-    templateUrl: 'table-lazy-load-demo'
+    templateUrl: 'table-lazy-load-demo.html'
 })
 export class TableLazyLoadDemo implements OnInit{
     customers: Customer[];
@@ -359,24 +359,34 @@ export class TableLazyLoadDemo implements OnInit{
         }
     }
 }`,
-        service: ['ProductService']
+        service: ['CustomerService']
     };
 
     extFiles = [
         {
-            path: 'src/domain/product.ts',
+            path: 'src/domain/customer.ts',
             content: `
-export interface Product {
-    id?: string;
-    code?: string;
+export interface Country {
     name?: string;
-    description?: string;
-    price?: number;
-    quantity?: number;
-    inventoryStatus?: string;
-    category?: string;
+    code?: string;
+}
+
+export interface Representative {
+    name?: string;
     image?: string;
-    rating?: number;
+}
+
+export interface Customer {
+    id?: number;
+    name?: string;
+    country?: Country;
+    company?: string;
+    date?: string | Date;
+    status?: string;
+    activity?: number;
+    representative?: Representative;
+    verified?: boolean;
+    balance?: number;
 }`
         }
     ];

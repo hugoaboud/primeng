@@ -128,7 +128,7 @@ import { CustomerService } from '../../service/customerservice';
 
 @Component({
     selector: 'table-flexible-scroll-demo',
-    templateUrl: 'table-flexible-scroll-demo'
+    templateUrl: 'table-flexible-scroll-demo.html'
 })
 export class TableFlexibleScrollDemo implements OnInit{
     customers: Customer[];
@@ -174,8 +174,8 @@ export interface Customer {
     activity?: number;
     representative?: Representative;
     verified?: boolean;
-    balance?: boolean;
-}`
+    balance?: number;
+}` 
         }
     ];
 }

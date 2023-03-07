@@ -112,7 +112,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-size-demo',
-    templateUrl: 'table-size-demo'
+    templateUrl: 'table-size-demo.html'
 })
 export class TableSizeDemo {
     products: Product[];

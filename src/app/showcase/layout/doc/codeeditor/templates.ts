@@ -723,7 +723,11 @@ export class AppModule {}`;
                     build: 'ng build',
                     test: 'ng test'
                 },
-                dependencies
+                dependencies: {
+                    ...dependencies,
+                    "jspdf": "1.5.3",
+                    "jspdf-autotable": "3.2.5",
+                }
             }
         },
         [`src/app/demo/${selector}.html`]: { content: code.html.trim() },

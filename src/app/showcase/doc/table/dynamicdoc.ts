@@ -96,7 +96,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-dynamic-demo',
-    templateUrl: 'table-dynamic-demo'
+    templateUrl: 'table-dynamic-demo.html'
 })
 export class TableDynamicDemo {
 

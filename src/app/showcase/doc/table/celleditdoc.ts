@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MessageService, SelectItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
@@ -11,7 +10,6 @@ import { ProductService } from '../../service/productservice';
             <p>In-cell editing is enabled by adding <i>pEditableColumn</i> directive to an editable cell that has a <i>p-cellEditor</i> helper component to define the input-output templates for the edit and view modes respectively.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-toast></p-toast>
             <p-table [value]="products" dataKey="id" [tableStyle]="{ 'min-width': '50rem' }">
                 <ng-template pTemplate="header">
                     <tr>
@@ -68,8 +66,7 @@ import { ProductService } from '../../service/productservice';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-cell-edit-demo" [extFiles]="extFiles"></app-code>
-    </div>`,
-    providers: [MessageService]
+    </div>`
 })
 export class TableCellEditDemo implements OnInit {
     @Input() id: string;
@@ -78,16 +75,15 @@ export class TableCellEditDemo implements OnInit {
 
     products: Product[];
 
-    constructor(private productService: ProductService, private messageService: MessageService) {}
+    constructor(private productService: ProductService) {}
 
     ngOnInit() {
-        this.productService.getProductsSmall().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => (this.products = data));
     }
 
     code: Code = {
         basic: `
-<p-toast></p-toast>
-<p-table [value]="products1" dataKey="id" [tableStyle]="{ 'min-width': '50rem' }">
+<p-table [value]="products" dataKey="id" [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="header">
         <tr>
             <th style="width:25%">Code</th>
@@ -143,8 +139,7 @@ export class TableCellEditDemo implements OnInit {
 </p-table>`,
         html: `
 <div class="card">
-    <p-toast></p-toast>
-    <p-table [value]="products1" dataKey="id" [tableStyle]="{ 'min-width': '50rem' }">
+    <p-table [value]="products" dataKey="id" [tableStyle]="{ 'min-width': '50rem' }">
         <ng-template pTemplate="header">
             <tr>
                 <th style="width:25%">Code</th>
@@ -201,21 +196,20 @@ export class TableCellEditDemo implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { SelectItem } from 'primeng/api';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-cell-edit-demo',
-    templateUrl: 'table-cell-edit-demo'
+    templateUrl: 'table-cell-edit-demo.html'
 })
 export class TableCellEditDemo implements OnInit {
     products: Product[];
 
-    constructor(private productService: ProductService, private messageService: MessageService) {}
+    constructor(private productService: ProductService) {}
 
     ngOnInit() {
-        this.productService.getProductsSmall().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => (this.products = data));
     }
 }`,
         scss: `

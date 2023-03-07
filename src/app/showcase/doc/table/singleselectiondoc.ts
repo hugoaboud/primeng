@@ -102,7 +102,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-single-selection-demo',
-    templateUrl: 'table-single-selection-demo'
+    templateUrl: 'table-single-selection-demo.html'
 })
 export class TableSingleSelectionDemo implements OnInit{
     products: Product[];

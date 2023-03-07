@@ -159,8 +159,7 @@ import { CustomerService } from '../../service/customerservice';
 
 @Component({
     selector: 'table-paginator-programmatic-demo',
-    templateUrl: 'table-paginator-programmatic-demo',
-    providers: [CustomerService]
+    templateUrl: 'table-paginator-programmatic-demo.html'
 })
 export class TablePaginatorProgrammaticDemo {
     customers: Customer[];
@@ -198,22 +197,32 @@ export class TablePaginatorProgrammaticDemo {
         service: ['CustomerService']
     };
 
+
     extFiles = [
         {
-            path: 'src/domain/product.ts',
+            path: 'src/domain/customer.ts',
             content: `
-export interface Product {
-    id?: string;
-    code?: string;
+export interface Country {
     name?: string;
-    description?: string;
-    price?: number;
-    quantity?: number;
-    inventoryStatus?: string;
-    category?: string;
+    code?: string;
+}
+
+export interface Representative {
+    name?: string;
     image?: string;
-    rating?: number;
-}`
-        }
-    ];
+}
+
+export interface Customer {
+    id?: number;
+    name?: string;
+    country?: Country;
+    company?: string;
+    date?: string | Date;
+    status?: string;
+    activity?: number;
+    representative?: Representative;
+    verified?: boolean;
+    balance?: number;
+}`     }
+            ]
 }

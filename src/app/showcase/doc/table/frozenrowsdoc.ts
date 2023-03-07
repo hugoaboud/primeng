@@ -172,7 +172,7 @@ import { CustomerService } from '../../service/customerservice';
 
 @Component({
     selector: 'table-frozen-rows-demo',
-    templateUrl: 'table-frozen-rows-demo'
+    templateUrl: 'table-frozen-rows-demo.html'
 })
 export class TableFrozenRowsDemo implements OnInit{
     unlockedCustomers: any[];
@@ -245,8 +245,8 @@ export interface Customer {
     activity?: number;
     representative?: Representative;
     verified?: boolean;
-    balance?: boolean;
-}`
+    balance?: number;
+}` 
         }
     ];
 }

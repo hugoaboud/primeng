@@ -93,7 +93,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-striped-demo',
-    templateUrl: 'table-striped-demo'
+    templateUrl: 'table-striped-demo.html'
 })
 export class TableStripedDemo {
     products: Product[];

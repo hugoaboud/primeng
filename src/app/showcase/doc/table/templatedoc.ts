@@ -30,7 +30,7 @@ import { ProductService } from '../../service/productservice';
                 <ng-template pTemplate="body" let-product>
                     <tr>
                         <td>{{ product.name }}</td>
-                        <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
+                        <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
                         <td>{{ product.price | currency: 'USD' }}</td>
                         <td>{{ product.category }}</td>
                         <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
@@ -47,7 +47,7 @@ import { ProductService } from '../../service/productservice';
         <app-code [code]="code" selector="table-template-demo" [extFiles]="extFiles"></app-code>
     </div>`
 })
-export class TableTemplatingDemo implements OnInit {
+export class TableTemplateDemo implements OnInit {
     @Input() id: string;
 
     @Input() title: string;
@@ -91,7 +91,7 @@ export class TableTemplatingDemo implements OnInit {
     <ng-template pTemplate="body" let-product>
         <tr>
             <td>{{product.name}}</td>
-            <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
+            <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
             <td>{{product.price | currency:'USD'}}</td>
             <td>{{product.category}}</td>
             <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
@@ -126,7 +126,7 @@ export class TableTemplatingDemo implements OnInit {
         <ng-template pTemplate="body" let-product>
             <tr>
                 <td>{{product.name}}</td>
-                <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
+                <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
                 <td>{{product.price | currency:'USD'}}</td>
                 <td>{{product.category}}</td>
                 <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
@@ -147,9 +147,9 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-template-demo',
-    templateUrl: 'table-template-demo'
+    templateUrl: 'table-template-demo.html'
 })
-export class TableTemplatingDemo implements OnInit {
+export class TableTemplateDemo implements OnInit {
     products: Product[];
 
     constructor(private productService: ProductService) {}

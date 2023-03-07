@@ -93,7 +93,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-column-resize-fit-mode-demo',
-    templateUrl: 'table-column-resize-fit-mode-demo'
+    templateUrl: 'table-column-resize-fit-mode-demo.html'
 })
 export class TableColumnResizeFitModeDemo implements OnInit{
     products: Product[];

@@ -142,7 +142,7 @@ import { CarService } from '../../service/carservice';
 
 @Component({
     selector: 'table-virtual-scroll-lazy-demo',
-    templateUrl: 'table-virtual-scroll-lazy-demo'
+    templateUrl: 'table-virtual-scroll-lazy-demo.html'
 })
 export class TableVirtualScrollLazyDemo implements OnInit{
     cars: Car[];

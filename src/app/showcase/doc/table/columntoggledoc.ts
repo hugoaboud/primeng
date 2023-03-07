@@ -119,13 +119,13 @@ export class TableColumnToggleDemo implements OnInit {
     </p-table>
 </div>`,
         typescript: `
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-column-toggle-demo',
-    templateUrl: 'table-column-toggle-demo'
+    templateUrl: 'table-column-toggle-demo.html'
 })
 export class TableColumnToggleDemo implements OnInit{
     products: Product[];

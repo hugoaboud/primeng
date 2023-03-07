@@ -24,7 +24,7 @@ import { CustomerService } from '../../service/customerservice';
                     <tr>
                         <td colspan="5">
                             <button type="button" pButton pRipple [pRowToggler]="customer" class="p-button-text p-button-rounded p-button-plain mr-2" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
-                            <img [alt]="customer.representative.name" src="assets/showcase/images/demo/avatar/{{ customer.representative.image }}" width="32" style="vertical-align: middle" />
+                            <img [alt]="customer.representative.name" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ customer.representative.image }}" width="32" style="vertical-align: middle" />
                             <span class="font-bold ml-2">{{ customer.representative.name }}</span>
                         </td>
                     </tr>
@@ -41,7 +41,7 @@ import { CustomerService } from '../../service/customerservice';
                             {{ customer.name }}
                         </td>
                         <td>
-                            <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30" />
+                            <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30" />
                             <span class="image-text">{{ customer.country.name }}</span>
                         </td>
                         <td>
@@ -105,7 +105,7 @@ export class TableExpandableRowGroupDemo implements OnInit {
         <tr>
             <td colspan="5">
                 <button type="button" pButton pRipple [pRowToggler]="customer" class="p-button-text p-button-rounded p-button-plain mr-2" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
-                <img [alt]="customer.representative.name" src="assets/showcase/images/demo/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
+                <img [alt]="customer.representative.name" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
                 <span class="font-bold ml-2">{{customer.representative.name}}</span>
             </td>
         </tr>
@@ -122,7 +122,7 @@ export class TableExpandableRowGroupDemo implements OnInit {
                 {{customer.name}}
             </td>
             <td>
-                <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30">
+                <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30">
                 <span class="image-text">{{customer.country.name}}</span>
             </td>
             <td>
@@ -153,7 +153,7 @@ export class TableExpandableRowGroupDemo implements OnInit {
             <tr>
                 <td colspan="5">
                     <button type="button" pButton pRipple [pRowToggler]="customer" class="p-button-text p-button-rounded p-button-plain mr-2" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
-                    <img [alt]="customer.representative.name" src="assets/showcase/images/demo/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
+                    <img [alt]="customer.representative.name" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
                     <span class="font-bold ml-2">{{customer.representative.name}}</span>
                 </td>
             </tr>
@@ -170,7 +170,7 @@ export class TableExpandableRowGroupDemo implements OnInit {
                     {{customer.name}}
                 </td>
                 <td>
-                    <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30">
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30">
                     <span class="image-text">{{customer.country.name}}</span>
                 </td>
                 <td>
@@ -193,7 +193,8 @@ import { CustomerService } from '../../service/customerservice';
 
 @Component({
     selector: 'table-expandable-row-group-demo',
-    templateUrl: 'table-expandable-row-group-demo'
+    templateUrl: 'table-expandable-row-group-demo.html',
+    styleUrls: ['table-expandable-row-group-demo.scss']
 })
 export class TableExpandableRowGroupDemo implements OnInit{
     customers: Customer[];
@@ -234,26 +235,75 @@ export class TableExpandableRowGroupDemo implements OnInit{
         vertical-align: middle;
         margin-right: .25rem;
     }
+}
+
+.customer-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+
+    &.status-qualified {
+        background-color: #C8E6C9;
+        color: #256029;
+    }
+
+    &.status-unqualified {
+        background-color: #FFCDD2;
+        color: #C63737;
+    }
+
+    &.status-negotiation {
+        background-color: #FEEDAF;
+        color: #8A5340;
+    }
+
+    &.status-new {
+        background-color: #B3E5FC;
+        color: #23547B;
+    }
+
+    &.status-renewal {
+        background-color: #ECCFFF;
+        color: #694382;
+    }
+
+    &.status-proposal {
+        background-color: #FFD8B2;
+        color: #805B36;
+    }
 }`,
         service: ['CustomerService']
     };
 
     extFiles = [
         {
-            path: 'src/domain/product.ts',
+            path: 'src/domain/customer.ts',
             content: `
-export interface Product {
-    id?: string;
-    code?: string;
+export interface Country {
     name?: string;
-    description?: string;
-    price?: number;
-    quantity?: number;
-    inventoryStatus?: string;
-    category?: string;
+    code?: string;
+}
+
+export interface Representative {
+    name?: string;
     image?: string;
-    rating?: number;
-}`
+}
+
+export interface Customer {
+    id?: number;
+    name?: string;
+    country?: Country;
+    company?: string;
+    date?: string | Date;
+    status?: string;
+    activity?: number;
+    representative?: Representative;
+    verified?: boolean;
+    balance?: number;
+}` 
         }
     ];
 }

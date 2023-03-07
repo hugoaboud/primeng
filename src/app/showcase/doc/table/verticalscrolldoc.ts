@@ -95,7 +95,7 @@ import { CustomerService } from '../../service/customerservice';
 
 @Component({
     selector: 'table-vertical-scroll-demo',
-    templateUrl: 'table-vertical-scroll-demo'
+    templateUrl: 'table-vertical-scroll-demo.html'
 })
 export class TableVerticalScrollDemo implements OnInit{
     customers: Customer[];
@@ -108,7 +108,7 @@ export class TableVerticalScrollDemo implements OnInit{
         });
     }
 }`,
-        service: ['ProductService']
+        service: ['CustomerService']
     };
 
     extFiles = [
@@ -135,7 +135,7 @@ export interface Customer {
     activity?: number;
     representative?: Representative;
     verified?: boolean;
-    balance?: boolean;
+    balance?: number;
 }`
         }
     ];

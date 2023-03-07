@@ -53,7 +53,7 @@ import { CustomerService } from '../../service/customerservice';
                                     <p-multiSelect [ngModel]="value" [options]="representatives" placeholder="Any" (onChange)="filter($event.value)" optionLabel="name">
                                         <ng-template let-option pTemplate="item">
                                             <div class="p-multiselect-representative-option">
-                                                <img [alt]="option.label" src="assets/showcase/images/demo/avatar/{{ option.image }}" width="32" style="vertical-align: middle" />
+                                                <img [alt]="option.label" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ option.image }}" width="32" style="vertical-align: middle" />
                                                 <span class="ml-1">{{ option.name }}</span>
                                             </div>
                                         </ng-template>
@@ -83,11 +83,11 @@ import { CustomerService } from '../../service/customerservice';
                             {{ customer.name }}
                         </td>
                         <td>
-                            <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30" />
+                            <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30" />
                             <span class="image-text">{{ customer.country.name }}</span>
                         </td>
                         <td>
-                            <img [alt]="customer.representative.name" src="assets/showcase/images/demo/avatar/{{ customer.representative.image }}" width="32" style="vertical-align: middle" />
+                            <img [alt]="customer.representative.name" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ customer.representative.image }}" width="32" style="vertical-align: middle" />
                             <span class="image-text">{{ customer.representative.name }}</span>
                         </td>
                         <td>
@@ -204,7 +204,7 @@ export class TableFilterRowDemo implements OnInit {
                         <p-multiSelect [ngModel]="value" [options]="representatives" placeholder="Any" (onChange)="filter($event.value)" optionLabel="name">
                             <ng-template let-option pTemplate="item">
                                 <div class="p-multiselect-representative-option">
-                                    <img [alt]="option.label" src="assets/showcase/images/demo/avatar/{{ option.image }}" width="32" style="vertical-align: middle" />
+                                    <img [alt]="option.label" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ option.image }}" width="32" style="vertical-align: middle" />
                                     <span class="ml-1">{{ option.name }}</span>
                                 </div>
                             </ng-template>
@@ -234,11 +234,11 @@ export class TableFilterRowDemo implements OnInit {
                 {{ customer.name }}
             </td>
             <td>
-                <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30" />
+                <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30" />
                 <span class="image-text">{{ customer.country.name }}</span>
             </td>
             <td>
-                <img [alt]="customer.representative.name" src="assets/showcase/images/demo/avatar/{{ customer.representative.image }}" width="32" style="vertical-align: middle" />
+                <img [alt]="customer.representative.name" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ customer.representative.image }}" width="32" style="vertical-align: middle" />
                 <span class="image-text">{{ customer.representative.name }}</span>
             </td>
             <td>
@@ -299,7 +299,7 @@ export class TableFilterRowDemo implements OnInit {
                             <p-multiSelect [ngModel]="value" [options]="representatives" placeholder="Any" (onChange)="filter($event.value)" optionLabel="name">
                                 <ng-template let-option pTemplate="item">
                                     <div class="p-multiselect-representative-option">
-                                        <img [alt]="option.label" src="assets/showcase/images/demo/avatar/{{ option.image }}" width="32" style="vertical-align: middle" />
+                                        <img [alt]="option.label" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ option.image }}" width="32" style="vertical-align: middle" />
                                         <span class="ml-1">{{ option.name }}</span>
                                     </div>
                                 </ng-template>
@@ -329,11 +329,11 @@ export class TableFilterRowDemo implements OnInit {
                     {{ customer.name }}
                 </td>
                 <td>
-                    <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30" />
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30" />
                     <span class="image-text">{{ customer.country.name }}</span>
                 </td>
                 <td>
-                    <img [alt]="customer.representative.name" src="assets/showcase/images/demo/avatar/{{ customer.representative.image }}" width="32" style="vertical-align: middle" />
+                    <img [alt]="customer.representative.name" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ customer.representative.image }}" width="32" style="vertical-align: middle" />
                     <span class="image-text">{{ customer.representative.name }}</span>
                 </td>
                 <td>
@@ -359,7 +359,8 @@ import { CustomerService } from '../../service/customerservice';
 
 @Component({
     selector: 'table-filter-row-demo',
-    templateUrl: 'table-filter-row-demo'
+    templateUrl: 'table-filter-row-demo.html',
+    styleUrls: ['table-filter-row-demo.scss']
 })
 export class TableFilterRowDemo implements OnInit {
     customers: Customer[];
@@ -410,6 +411,53 @@ export class TableFilterRowDemo implements OnInit {
     }
 
 }`,
+        scss: `
+.customer-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+
+    &.status-qualified {
+        background-color: #C8E6C9;
+        color: #256029;
+    }
+
+    &.status-unqualified {
+        background-color: #FFCDD2;
+        color: #C63737;
+    }
+
+    &.status-negotiation {
+        background-color: #FEEDAF;
+        color: #8A5340;
+    }
+
+    &.status-new {
+        background-color: #B3E5FC;
+        color: #23547B;
+    }
+
+    &.status-renewal {
+        background-color: #ECCFFF;
+        color: #694382;
+    }
+
+    &.status-proposal {
+        background-color: #FFD8B2;
+        color: #805B36;
+    }
+}
+
+.true-icon {
+    color: #256029;
+}
+
+.false-icon {
+    color: #C63737;
+}`,
         service: ['CustomerService']
     };
 
@@ -437,8 +485,8 @@ export interface Customer {
     activity?: number;
     representative?: Representative;
     verified?: boolean;
-    balance?: boolean;
-}`
+    balance?: number;
+}` 
         }
     ];
 }

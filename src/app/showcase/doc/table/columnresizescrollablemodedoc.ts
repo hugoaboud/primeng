@@ -89,7 +89,7 @@ import { CustomerService } from '../../service/customerservice';
 
 @Component({
     selector: 'table-column-resize-scrollable-mode-demo',
-    templateUrl: 'table-column-resize-scrollable-mode-demo'
+    templateUrl: 'table-column-resize-scrollable-mode-demo.html'
 })
 export class TableColumnResizeScrollableModeDemo implements OnInit{
     customers: Customer[];
@@ -127,8 +127,8 @@ export interface Customer {
     activity?: number;
     representative?: Representative;
     verified?: boolean;
-    balance?: boolean;
-}`
+    balance?: number;
+}` 
         }
     ];
 }

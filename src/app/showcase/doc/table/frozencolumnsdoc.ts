@@ -137,7 +137,7 @@ import { CustomerService } from '../../service/customerservice';
 
 @Component({
     selector: 'table-frozen-columns-demo',
-    templateUrl: 'table-frozen-columns-demo'
+    templateUrl: 'table-frozen-columns-demo.html'
 })
 export class TableFrozenColumnsDemo implements OnInit{
     balanceFrozen: boolean = false;
@@ -191,8 +191,8 @@ export interface Customer {
     activity?: number;
     representative?: Representative;
     verified?: boolean;
-    balance?: boolean;
-}`
+    balance?: number;
+}` 
         }
     ];
 }

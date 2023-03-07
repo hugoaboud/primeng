@@ -99,7 +99,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-gridlines-demo',
-    templateUrl: 'table-gridlines-demo'
+    templateUrl: 'table-gridlines-demo.html'
 })
 export class TableGridlinesDemo {
     products: Product[];

@@ -122,7 +122,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-context-menu-demo',
-    templateUrl: 'table-context-menu-demo',
+    templateUrl: 'table-context-menu-demo.html',
     providers: [MessageService]
 })
 export class TableContextMenuDemo implements OnInit{

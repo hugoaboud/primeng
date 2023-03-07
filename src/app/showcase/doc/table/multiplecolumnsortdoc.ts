@@ -99,7 +99,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-single-column-sort-demo',
-    templateUrl: 'table-single-column-sort-demo'
+    templateUrl: 'table-single-column-sort-demo.html'
 })
 export class TableSingleColumnSortDemo implements OnInit {
     products: Product[];

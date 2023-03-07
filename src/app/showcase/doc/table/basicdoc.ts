@@ -93,7 +93,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-basic-demo',
-    templateUrl: 'table-basic-demo'
+    templateUrl: 'table-basic-demo.html'
 })
 export class TableBasicDemo implements OnInit{
     products: Product[];

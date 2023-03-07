@@ -103,7 +103,7 @@ import { CarService } from '../../service/carservice';
 
 @Component({
     selector: 'table-virtual-scroll-demo',
-    templateUrl: 'table-virtual-scroll-demo'
+    templateUrl: 'table-virtual-scroll-demo.html'
 })
 export class TableVirtualScrollDemo implements OnInit{
     cars: Car[];

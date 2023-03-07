@@ -115,7 +115,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-multiple-selection-demo',
-    templateUrl: 'table-multiple-selection-demo'
+    templateUrl: 'table-multiple-selection-demo.html'
 })
 export class TableMultipleSelectionDemo implements OnInit{
     products: Product[];

@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core';
                 premium feature in the designer.
             </p>
         </app-docsectiontext>
-        <img alt="Architecture" src="assets/showcase/images/architecture.jpg" class="w-full mb-5" />
+        <img alt="Architecture" src="https://primefaces.org/cdn/primeng/images/architecture.jpg" class="w-full mb-5" />
     </div>`
 })
 export class ArchitectureDoc {

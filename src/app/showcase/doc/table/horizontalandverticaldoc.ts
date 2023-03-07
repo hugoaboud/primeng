@@ -168,7 +168,7 @@ import { CustomerService } from '../../service/customerservice';
 
 @Component({
     selector: 'table-horizontal-and-vertical-scroll-demo',
-    templateUrl: 'table-horizontal-and-vertical-scroll-demo'
+    templateUrl: 'table-horizontal-and-vertical-scroll-demo.html'
 })
 export class TableHorizontalAndVerticalScrollDemo implements OnInit{
     customers: Customer[];
@@ -212,8 +212,8 @@ export interface Customer {
     activity?: number;
     representative?: Representative;
     verified?: boolean;
-    balance?: boolean;
-}`
+    balance?: number;
+}` 
         }
     ];
 }

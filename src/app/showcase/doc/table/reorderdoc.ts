@@ -112,7 +112,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-reorder-demo',
-    templateUrl: 'table-reorder-demo'
+    templateUrl: 'table-reorder-demo.html'
 })
 export class TableReorderDemo implements OnInit{
     products: Product[];

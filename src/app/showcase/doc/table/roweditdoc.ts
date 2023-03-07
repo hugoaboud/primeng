@@ -105,7 +105,7 @@ export class TableRowEditDemo implements OnInit {
     constructor(private productService: ProductService, private messageService: MessageService) {}
 
     ngOnInit() {
-        this.productService.getProductsSmall().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => (this.products = data));
 
         this.statuses = [
             { label: 'In Stock', value: 'INSTOCK' },
@@ -271,7 +271,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-row-edit-demo',
-    templateUrl: 'table-row-edit-demo',
+    templateUrl: 'table-row-edit-demo.html',
     providers: [MessageService]
 })
 export class TableRowEditDemo implements OnInit{
@@ -285,7 +285,7 @@ export class TableRowEditDemo implements OnInit{
     constructor(private productService: ProductService, private messageService: MessageService) {}
 
     ngOnInit() {
-        this.productService.getProductsSmall().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => (this.products = data));
 
         this.statuses = [
             { label: 'In Stock', value: 'INSTOCK' },

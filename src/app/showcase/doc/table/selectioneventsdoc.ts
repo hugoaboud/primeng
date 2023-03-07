@@ -111,7 +111,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-selection-events-demo',
-    templateUrl: 'table-selection-events-demo',
+    templateUrl: 'table-selection-events-demo.html',
     providers: [MessageService]
 })
 export class TableSelectionEventsDemo implements OnInit{

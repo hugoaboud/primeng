@@ -121,7 +121,8 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-responsive-stack-demo',
-    templateUrl: 'table-responsive-stack-demo'
+    templateUrl: 'table-responsive-stack-demo.html',
+    styleUrls: ['table-responsive-stack-demo.scss']
 })
 export class TableResponsiveStackDemo implements OnInit{
     products: Product[];
@@ -141,6 +142,30 @@ export class TableResponsiveStackDemo implements OnInit{
             { field: 'inventoryStatus', header: 'Status' },
             { field: 'rating', header: 'Rating' }
         ];
+    }
+}`,
+        scss: `
+.product-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+
+    &.status-instock {
+        background: #C8E6C9;
+        color: #256029;
+    }
+    
+    &.status-outofstock {
+        background: #FFCDD2;
+        color: #C63737;
+    }
+    
+    &.status-lowstock {
+        background: #FEEDAF;
+        color: #8A5340;
     }
 }`,
         service: ['ProductService']

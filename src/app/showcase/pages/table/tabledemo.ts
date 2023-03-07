@@ -42,7 +42,7 @@ import { TableStatefulDemo } from '../../doc/table/statefuldoc';
 import { TableStripedDemo } from '../../doc/table/stripeddoc';
 import { TableStyleDemo } from '../../doc/table/styledoc';
 import { TableSubheaderGroupingDemo } from '../../doc/table/subheadergroupingdoc';
-import { TableTemplatingDemo } from '../../doc/table/templatedoc';
+import { TableTemplateDemo } from '../../doc/table/templatedoc';
 import { TableVerticalScrollDemo } from '../../doc/table/verticalscrolldoc';
 import { TableVirtualScrollDemo } from '../../doc/table/virtualscrolldoc';
 import { TableVirtualScrollLazyDemo } from '../../doc/table/virtualscrolllazydoc';
@@ -78,7 +78,7 @@ export class TableDemo {
         {
             id: 'template',
             label: 'Template',
-            component: TableTemplatingDemo
+            component: TableTemplateDemo
         },
         {
             id: 'size',
@@ -117,7 +117,7 @@ export class TableDemo {
             ]
         },
         {
-            id: 'Paginator',
+            id: 'paginator',
             label: 'Paginator',
             children: [
                 {

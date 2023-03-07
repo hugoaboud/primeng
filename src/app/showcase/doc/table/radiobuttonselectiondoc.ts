@@ -107,7 +107,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-radio-button-selection-demo',
-    templateUrl: 'table-radio-button-selection-demo'
+    templateUrl: 'table-radio-button-selection-demo.html'
 })
 export class TableRadioButtonSelectionDemo implements OnInit{
     products: Product[];

@@ -78,7 +78,7 @@ export class TableColumnSelectionDemo implements OnInit {
             <td>{{ product.category }}</td>
             <td>{{ product.quantity }}</td>
             <td>
-                <button type="button" pButton pRipple icon="pi pi-search" (click)="selectProduct(product)"></button>
+                <button type="button" pButton pRipple icon="pi pi-plus" (click)="selectProduct(product)"></button>
             </td>
         </tr>
     </ng-template>
@@ -103,7 +103,7 @@ export class TableColumnSelectionDemo implements OnInit {
                 <td>{{ product.category }}</td>
                 <td>{{ product.quantity }}</td>
                 <td>
-                    <button type="button" pButton pRipple icon="pi pi-search" (click)="selectProduct(product)"></button>
+                    <button type="button" pButton pRipple icon="pi pi-plus" (click)="selectProduct(product)"></button>
                 </td>
             </tr>
         </ng-template>
@@ -117,7 +117,7 @@ import { MessageService } from 'primeng/api';
 
 @Component({
     selector: 'table-column-selection-demo',
-    templateUrl: 'table-column-selection-demo',
+    templateUrl: 'table-column-selection-demo.html',
     providers: [MessageService]
 })
 export class TableColumnSelectionDemo implements OnInit{
@@ -125,14 +125,15 @@ export class TableColumnSelectionDemo implements OnInit{
 
     selectedProduct: Product;
 
-    metaKeySelection: boolean = true;
-
-    constructor(private productService: ProductService) {}
+    constructor(private productService: ProductService, private messageService: MessageService) {}
 
     ngOnInit() {
         this.productService.getProductsMini().then((data) => (this.products = data));
     }
 
+    selectProduct(product: Product) {
+        this.messageService.add({ severity: 'info', summary: 'Product Selected', detail: product.name });
+    }
 }`,
 
         service: ['ProductService']

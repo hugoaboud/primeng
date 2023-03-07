@@ -128,7 +128,8 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-style-demo',
-    templateUrl: 'table-style-demo'
+    templateUrl: 'table-style-demo.html',
+    styleUrls: ['table-style-demo.scss']
 })
 export class TableStyleDemo implements OnInit{
     products: Product[];

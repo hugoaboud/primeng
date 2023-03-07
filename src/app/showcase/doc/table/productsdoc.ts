@@ -66,7 +66,7 @@ import { ProductService } from '../../service/productservice';
                             <p-tableCheckbox [value]="product"></p-tableCheckbox>
                         </td>
                         <td>{{ product.name }}</td>
-                        <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
+                        <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.name" width="50" class="shadow-4" /></td>
                         <td>{{ product.price | currency: 'USD' }}</td>
                         <td>{{ product.category }}</td>
                         <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
@@ -256,7 +256,7 @@ export class TableProductsDemo implements OnInit {
                 <p-tableCheckbox [value]="product"></p-tableCheckbox>
             </td>
             <td>{{ product.name }}</td>
-            <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
+            <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.name" width="50" class="shadow-4" /></td>
             <td>{{ product.price | currency: 'USD' }}</td>
             <td>{{ product.category }}</td>
             <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
@@ -330,7 +330,7 @@ export class TableProductsDemo implements OnInit {
                     <p-tableCheckbox [value]="product"></p-tableCheckbox>
                 </td>
                 <td>{{ product.name }}</td>
-                <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="shadow-4" /></td>
+                <td><img [src]="'https://primefaces.org/cdn/primeng/images/demo/product/' + product.image" [alt]="product.name" width="50" class="shadow-4" /></td>
                 <td>{{ product.price | currency: 'USD' }}</td>
                 <td>{{ product.category }}</td>
                 <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>
@@ -356,7 +356,8 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-products-demo',
-    templateUrl: 'table-products-demo',
+    templateUrl: 'table-products-demo.html',
+    styleUrls: ['table-products-demo.scss'],
     providers: [MessageService, ConfirmationService]
 })
 export class TableProductsDemo implements OnInit{
@@ -472,7 +473,47 @@ export class TableProductsDemo implements OnInit{
     width: 150px;
     margin: 0 auto 2rem auto;
     display: block;
-}`,
+}
+
+.customer-badge {
+    border-radius: 2px;
+    padding: .25em .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .3px;
+
+    &.status-qualified {
+        background-color: #C8E6C9;
+        color: #256029;
+    }
+
+    &.status-unqualified {
+        background-color: #FFCDD2;
+        color: #C63737;
+    }
+
+    &.status-negotiation {
+        background-color: #FEEDAF;
+        color: #8A5340;
+    }
+
+    &.status-new {
+        background-color: #B3E5FC;
+        color: #23547B;
+    }
+
+    &.status-renewal {
+        background-color: #ECCFFF;
+        color: #694382;
+    }
+
+    &.status-proposal {
+        background-color: #FFD8B2;
+        color: #805B36;
+    }
+}
+`,
         service: ['ProductService']
     };
 

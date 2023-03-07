@@ -25,11 +25,11 @@ import { CustomerService } from '../../service/customerservice';
                             {{ customer.name }}
                         </td>
                         <td>
-                            <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30" />
+                            <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30" />
                             <span class="image-text">{{ customer.country.name }}</span>
                         </td>
                         <td>
-                            <img [alt]="customer.representative.name" src="assets/showcase/images/demo/avatar/{{ customer.representative.image }}" width="32" style="vertical-align: middle" />
+                            <img [alt]="customer.representative.name" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{ customer.representative.image }}" width="32" style="vertical-align: middle" />
                             <span class="image-text">{{ customer.representative.name }}</span>
                         </td>
                         <td>
@@ -72,11 +72,11 @@ export class TableStickyDemo implements OnInit {
                 {{customer.name}}
             </td>
             <td>
-                <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30">
+                <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30">
                 <span class="image-text">{{customer.country.name}}</span>
             </td>
             <td>
-                <img [alt]="customer.representative.name" src="assets/showcase/images/demo/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
+                <img [alt]="customer.representative.name" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
                 <span class="image-text">{{customer.representative.name}}</span>
             </td>
             <td>
@@ -102,11 +102,11 @@ export class TableStickyDemo implements OnInit {
                     {{customer.name}}
                 </td>
                 <td>
-                    <img src="assets/showcase/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30">
+                    <img src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" [class]="'flag flag-' + customer.country.code" width="30">
                     <span class="image-text">{{customer.country.name}}</span>
                 </td>
                 <td>
-                    <img [alt]="customer.representative.name" src="assets/showcase/images/demo/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
+                    <img [alt]="customer.representative.name" src="https://primefaces.org/cdn/primeng/images/demo/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
                     <span class="image-text">{{customer.representative.name}}</span>
                 </td>
                 <td>
@@ -123,7 +123,7 @@ import { CustomerService } from '../../service/customerservice';
 
 @Component({
     selector: 'table-sticky-demo',
-    templateUrl: 'table-sticky-demo'
+    templateUrl: 'table-sticky-demo.html'
 })
 export class TableStickyDemo implements OnInit{
     customers: Customer[];
@@ -175,7 +175,7 @@ export interface Customer {
     activity?: number;
     representative?: Representative;
     verified?: boolean;
-    balance?: boolean;
+    balance?: number;
 }`
         }
     ];

@@ -113,7 +113,7 @@ import { ProductService } from '../../service/productservice';
 
 @Component({
     selector: 'table-checkbox-selection-demo',
-    templateUrl: 'table-checkbox-selection-demo'
+    templateUrl: 'table-checkbox-selection-demo.html'
 })
 export class TableCheckboxSelectionDemo implements OnInit{
     products: Product[];

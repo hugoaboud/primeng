@@ -171,7 +171,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'table-column-group-demo',
-    templateUrl: 'table-column-group-demo'
+    templateUrl: 'table-column-group-demo.html'
 })
 export class TableColumnGroupDemo implements OnInit {
     sales: any[];
