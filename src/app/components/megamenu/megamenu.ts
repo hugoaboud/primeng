@@ -1,6 +1,6 @@
 import { NgModule, Component, ElementRef, Input, Renderer2, ChangeDetectionStrategy, ViewEncapsulation, ChangeDetectorRef, AfterContentInit, ContentChildren, QueryList, TemplateRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MegaMenuItem, MenuItem, PrimeTemplate } from 'primeng/api';
+import { MegaMenuItem, MenuItem, PrimeTemplate, SharedModule } from 'primeng/api';
 import { RouterModule } from '@angular/router';
 import { RippleModule } from 'primeng/ripple';
 import { TooltipModule } from 'primeng/tooltip';
@@ -177,6 +177,7 @@ export class MegaMenu implements AfterContentInit {
     constructor(public el: ElementRef, public renderer: Renderer2, public cd: ChangeDetectorRef) {}
 
     ngAfterContentInit() {
+        console.log('yo', this.templates)
         this.templates.forEach((item) => {
             switch (item.getType()) {
                 case 'start':
@@ -300,8 +301,8 @@ export class MegaMenu implements AfterContentInit {
 }
 
 @NgModule({
-    imports: [CommonModule, RouterModule, RippleModule, TooltipModule],
-    exports: [MegaMenu, RouterModule, TooltipModule],
+    imports: [CommonModule, RouterModule, RippleModule, TooltipModule, SharedModule],
+    exports: [MegaMenu, RouterModule, TooltipModule, SharedModule],
     declarations: [MegaMenu]
 })
 export class MegaMenuModule {}
