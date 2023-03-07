@@ -684,7 +684,8 @@ pre[class*=language-] code .token.operator, pre[class*=language-] code .token.st
   border-bottom-color: var(--primary-color);
 }
 
-.doc-tabpanel, .doc {
+.doc-tabpanel,
+.doc {
   display: flex;
 }
 
@@ -709,7 +710,6 @@ pre[class*=language-] code .token.operator, pre[class*=language-] code .token.st
   scroll-margin-top: 6.5rem;
 }
 .doc-section-label > a {
-  font-size: 1.25rem;
   color: var(--primary-color);
   opacity: 0.7;
   margin-left: 1rem;
@@ -723,95 +723,81 @@ pre[class*=language-] code .token.operator, pre[class*=language-] code .token.st
   opacity: 1;
 }
 
-.doc-section-description {
+.doc-section-description > p {
   font-size: 1.125rem;
   color: var(--surface-800);
 }
-.doc-section-description i {
-  background-color: var(--primary-100);
-  color: var(--primary-900);
+.doc-section-description > p i {
   border-radius: 6px;
   padding: 2px 6px;
   font-size: 0.875rem;
   font-weight: 600;
   font-style: normal;
 }
-.doc-section-description a {
+.doc-section-description > p a {
   color: var(--primary-color);
   font-weight: 600;
 }
-.doc-section-description a:hover {
+.doc-section-description > p a:hover {
   text-decoration: underline;
 }
-.doc-section-description.main {
-  margin-bottom: 1rem;
+
+.layout-wrapper-light .doc-section-description > p i {
+  background-color: var(--primary-100);
+  color: var(--primary-900);
+}
+
+.layout-wrapper-dark .doc-section-description > p i {
+  background-color: var(--highlight-bg);
+  color: var(--highlight-text-color);
 }
 
 .doc-section-nav {
   position: sticky;
-  list-style: none;
-  width: 18rem;
-  height: calc(100vh - 15rem);
   top: 7rem;
   right: 0;
-  flex-basis: auto;
-  flex-shrink: 0;
-  flex-grow: 0;
-  padding: 0.25rem 0 0.25rem 4rem;
+  width: 14rem;
+  max-height: calc(100vh - 15rem);
+  list-style: none;
   margin: 0;
+  padding: 0.25rem 0;
+  margin-left: 4rem;
   overflow-y: auto;
+  overflow-x: hidden;
+  align-self: flex-start;
 }
-.doc-section-nav li.navbar-item {
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-color: var(--surface-border);
-  z-index: 1;
+.doc-section-nav > .navbar-item .navbar-item-content {
+  border-left: 1px solid var(--surface-border);
+  padding-left: 0.25rem;
 }
-.doc-section-nav li.navbar-item button {
+.doc-section-nav .navbar-item > .navbar-item-content {
+  display: flex;
+}
+.doc-section-nav .navbar-item > .navbar-item-content .p-link {
   padding: 0.25rem 1rem 0.25rem 1rem;
-  font-size: 1rem;
-  display: inline;
   color: var(--text-color);
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.doc-section-nav li.navbar-item button:hover {
+.doc-section-nav .navbar-item > .navbar-item-content .p-link:hover {
   color: var(--primary-color);
 }
-.doc-section-nav li.navbar-item.active-navbar-item {
+.doc-section-nav .navbar-item.active-navbar-item > .navbar-item-content {
   border-color: var(--primary-color);
 }
-.doc-section-nav li.navbar-item.active-navbar-item button {
+.doc-section-nav .navbar-item.active-navbar-item > .navbar-item-content .p-link {
   font-weight: 700;
   color: var(--primary-color);
 }
-.doc-section-nav ul {
+.doc-section-nav .navbar-item ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
 }
-.doc-section-nav ul li.navbar-child-item {
-  border-left: 1rem;
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-color: var(--surface-border);
-  z-index: 1;
-}
-.doc-section-nav ul li.navbar-child-item button {
-  padding: 0.25rem 1rem 0.25rem 1rem;
-  margin-left: 1rem;
-  color: var(--text-color);
-}
-.doc-section-nav ul li.navbar-child-item button:hover {
-  color: var(--primary-color);
-}
-.doc-section-nav ul li.navbar-child-item.active-navbar-child-item {
-  border-color: var(--primary-color);
-}
-.doc-section-nav ul li.navbar-child-item.active-navbar-child-item button {
-  font-weight: 600;
-  color: var(--primary-color);
+.doc-section-nav .navbar-item ul .navbar-item .navbar-item-content {
+  padding-left: 1rem;
 }
 
 .doc-section-code-tooltip .p-tooltip-text {
@@ -840,6 +826,7 @@ pre[class*=language-] code .token.operator, pre[class*=language-] code .token.st
 .doc-table {
   border-collapse: collapse;
   width: 100%;
+  min-width: 960px;
   background-color: var(--surface-card);
   margin-bottom: 1.5rem;
 }
@@ -847,6 +834,7 @@ pre[class*=language-] code .token.operator, pre[class*=language-] code .token.st
   border-bottom: 1px solid var(--surface-border);
   padding: 1rem;
   text-align: left;
+  text-transform: capitalize;
 }
 .doc-table tbody tr:hover {
   background: var(--surface-hover);
@@ -854,16 +842,55 @@ pre[class*=language-] code .token.operator, pre[class*=language-] code .token.st
 .doc-table tbody td {
   padding: 1rem;
   border-bottom: 1px solid var(--surface-border);
+  white-space: pre-wrap;
+  line-height: 1.5;
 }
-.doc-table tbody td:first-child {
+.doc-table tbody td.doc-option-type {
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, Liberation Mono, monospace;
-  font-weight: 700;
-  color: var(--text-color-secondary);
+  color: var(--primary-500);
 }
-.doc-table tbody td:nth-child(2):not(:last-child) {
+.doc-table tbody td.doc-option-type > a {
+  color: var(--primary-500);
+}
+.doc-table tbody td.doc-option-type > a:hover {
+  text-decoration: underline;
+}
+.doc-table tbody td.doc-option-default {
   font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, Liberation Mono, monospace;
   color: var(--primary-color);
+}
+.doc-table tbody td:first-child {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, Liberation Mono, monospace;
+}
+.doc-table tbody td .doc-option-name,
+.doc-table tbody td > i {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, Liberation Mono, monospace;
+  position: relative;
+  scroll-margin-top: 6.5rem;
+  background-color: var(--highlight-bg);
+  color: var(--highlight-text-color);
+  border-radius: 6px;
+  padding: 2px 6px;
   font-weight: 600;
+  font-style: normal;
+}
+.doc-table tbody td .doc-option-name .doc-option-link,
+.doc-table tbody td > i .doc-option-link {
+  position: absolute;
+  top: 0;
+  right: -1.5rem;
+  color: var(--primary-color);
+  opacity: 0.7;
+  display: none;
+  transition: opacity 0.3s, colors 0.3s;
+}
+.doc-table tbody td:hover .doc-option-name .doc-option-link {
+  display: inline;
+}
+.doc-table tbody td:hover .doc-option-name .doc-option-link:hover {
+  opacity: 1;
 }
 
 /* Home Component*/
