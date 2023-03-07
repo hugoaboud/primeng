@@ -1,20 +1,61 @@
 import { Component } from '@angular/core';
-import { Product } from '../../domain/product';
-import { ProductService } from '../../service/productservice';
+import { FilterDoc } from '../../doc/picklist/filterdoc';
+import { BasicDoc } from '../../doc/picklist/basicdoc';
+import { ImportDoc } from '../../doc/picklist/importdoc';
+import { PropsDoc } from '../../doc/picklist/propsdoc';
+import { EventsDoc } from '../../doc/picklist/eventsdoc';
+import { TemplatesDoc } from '../../doc/picklist/templatesdoc';
+import { MethodsDoc } from '../../doc/picklist/methodsdoc';
+import { StyleDoc } from '../../doc/picklist/styledoc';
 
 @Component({
     templateUrl: './picklistdemo.html',
     styleUrls: ['./picklistdemo.scss']
 })
 export class PickListDemo {
-    sourceProducts: Product[];
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDoc
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDoc
+        },
+        {
+            id: 'filter',
+            label: 'Filter',
+            component: FilterDoc
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDoc
+        }
+    ];
 
-    targetProducts: Product[];
-
-    constructor(private carService: ProductService) {}
-
-    ngOnInit() {
-        this.carService.getProductsSmall().then((products) => (this.sourceProducts = products));
-        this.targetProducts = [];
-    }
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDoc
+        },
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: EventsDoc
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDoc
+        },
+        {
+            id: 'methods',
+            label: 'Methods',
+            component: MethodsDoc
+        }
+    ];
 }

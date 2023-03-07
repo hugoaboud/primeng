@@ -10999,6 +10999,32 @@ export class NodeService {
         ];
     }
 
+    getLazyNodesData() {
+        return [
+            {
+                "label": "Lazy Node 0",
+                "data": "Node 0",
+                "expandedIcon": "pi pi-folder-open",
+                "collapsedIcon": "pi pi-folder",
+                "leaf": false
+            },
+            {
+                "label": "Lazy Node 1",
+                "data": "Node 1",
+                "expandedIcon": "pi pi-folder-open",
+                "collapsedIcon": "pi pi-folder",
+                "leaf": false
+            },
+            {
+                "label": "Lazy Node 1",
+                "data": "Node 2",
+                "expandedIcon": "pi pi-folder-open",
+                "collapsedIcon": "pi pi-folder",
+                "leaf": false
+            }
+        ]
+    }
+    
     getTreeTableNodes() {
         return Promise.resolve(this.getTreeTableNodesData());
     }
@@ -11009,6 +11035,10 @@ export class NodeService {
 
     getFiles() {
         return Promise.resolve(this.getTreeNodesData());
+    }
+
+    getLazyFiles() {
+        return Promise.resolve(this.getLazyNodesData());
     }
 };`,
     PhotoService: `import { Injectable } from '@angular/core';
