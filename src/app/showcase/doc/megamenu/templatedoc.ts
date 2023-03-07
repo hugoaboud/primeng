@@ -9,7 +9,7 @@ import { Code } from '../../domain/code';
             <p>Custom content can be placed between p-megaMenu tags. Megamenu should be <i>horizontal</i> for custom content.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-megaMenu [model]="items">
+            <p-megaMenu [model]="items" styleClass="flex">
                 <ng-template pTemplate="start">
                     <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
                 </ng-template>
@@ -149,7 +149,7 @@ export class MegaMenuTemplateDemo implements OnInit {
 
     code: Code = {
         basic: `
-<p-megaMenu [model]="items">
+<p-megaMenu [model]="items" styleClass="flex">
     <ng-template pTemplate="start">
         <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
     </ng-template>
@@ -160,7 +160,7 @@ export class MegaMenuTemplateDemo implements OnInit {
 
         html: `
 <div class="card">
-    <p-megaMenu [model]="items">
+    <p-megaMenu [model]="items" styleClass="flex">
         <ng-template pTemplate="start">
             <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2" />
         </ng-template>
