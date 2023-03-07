@@ -177,7 +177,6 @@ export class MegaMenu implements AfterContentInit {
     constructor(public el: ElementRef, public renderer: Renderer2, public cd: ChangeDetectorRef) {}
 
     ngAfterContentInit() {
-        console.log('yo', this.templates);
         this.templates.forEach((item) => {
             switch (item.getType()) {
                 case 'start':
