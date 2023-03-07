@@ -8,8 +8,10 @@ import { Code } from '../../domain/code';
             <p>Inplace can be used within a form to display a value as read only before making it editable. The <i>closable</i> property adds a close button next to the content to switch back to read only mode.</p>
         </app-docsectiontext>
         <div class="card">
-            <p-inplace closable="closable" [style]="{ 'min-height': '33px' }">
-                <ng-template pTemplate="display"> Click to Edit </ng-template>
+            <p-inplace closable="closable">
+                <ng-template pTemplate="display">
+                    <span>Click to Edit</span>
+                </ng-template>
                 <ng-template pTemplate="content">
                     <input type="text" value="PrimeNG" pInputText />
                 </ng-template>
@@ -25,20 +27,22 @@ export class InplaceInputDemo {
 
     code: Code = {
         basic: `
-<p-inplace closable="closable" [style]="{ 'min-height': '33px' }">
-    <ng-template pTemplate="display"> Click to Edit </ng-template>
+<p-inplace closable="closable">
+    <ng-template pTemplate="display">
+        <span>Click to Edit</span>
+    </ng-template>
     <ng-template pTemplate="content">
         <input type="text" value="PrimeNG" pInputText />
     </ng-template>
 </p-inplace>`,
         html: `
 <div class="card">
-    <p-inplace closable="closable" [style]="{'min-height':'33px'}">
+    <p-inplace closable="closable">
         <ng-template pTemplate="display">
-            Click to Edit
+            <span>Click to Edit</span>
         </ng-template>
         <ng-template pTemplate="content">
-            <input type="text" value="PrimeNG" pInputText>
+            <input type="text" value="PrimeNG" pInputText />
         </ng-template>
     </p-inplace>
 </div>`,
