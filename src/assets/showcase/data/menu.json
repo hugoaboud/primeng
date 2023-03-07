@@ -164,8 +164,8 @@
                     "name": "Data",
                     "children": [
                         {
-                            "name": "DataTable",
-                            "routerLink": "/datatable"
+                            "name": "Table",
+                            "routerLink": "/table"
                         },
                         {
                             "name": "DataView",
