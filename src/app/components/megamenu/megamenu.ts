@@ -137,15 +137,15 @@ import { TooltipModule } from 'primeng/tooltip';
                         </div>
                     </li>
                 </ng-template>
-                <div class="p-megamenu-end" *ngIf="endTemplate; else legacy">
-                    <ng-container *ngTemplateOutlet="endTemplate"></ng-container>
-                </div>
-                <ng-template #legacy>
-                    <div class="p-megamenu-end">
-                        <ng-content></ng-content>
-                    </div>
-                </ng-template>
             </ul>
+            <div class="p-megamenu-end" *ngIf="endTemplate; else legacy">
+                <ng-container *ngTemplateOutlet="endTemplate"></ng-container>
+            </div>
+            <ng-template #legacy>
+                <div class="p-megamenu-end">
+                    <ng-content></ng-content>
+                </div>
+            </ng-template>
         </div>
     `,
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -177,7 +177,7 @@ export class MegaMenu implements AfterContentInit {
     constructor(public el: ElementRef, public renderer: Renderer2, public cd: ChangeDetectorRef) {}
 
     ngAfterContentInit() {
-        console.log('yo', this.templates)
+        console.log('yo', this.templates);
         this.templates.forEach((item) => {
             switch (item.getType()) {
                 case 'start':
