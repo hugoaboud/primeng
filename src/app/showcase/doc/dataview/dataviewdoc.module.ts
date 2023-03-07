@@ -22,4 +22,4 @@ import { TemplatesDoc } from './templatesdoc';
     exports: [AppDocModule],
     declarations: [ImportDoc, PrimeflexDoc, BasicDoc, PaginationDoc, SortingDoc, LayoutDoc, StyleDoc, PropsDoc, EventsDoc, TemplatesDoc]
 })
-export class DataViewDocModule { }
+export class DataViewDocModule {}

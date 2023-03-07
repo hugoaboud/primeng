@@ -23,22 +23,6 @@ import { TextDoc } from './textdoc';
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, SplitButtonModule, ToastModule],
     exports: [AppDocModule],
-    declarations: [
-        ImportDoc,
-        BasicDoc,
-        NestedDoc,
-        SeverityDoc,
-        RaisedDoc,
-        RoundedDoc,
-        TextDoc,
-        RaisedTextDoc,
-        OutlinedDoc,
-        SizesDoc,
-        DisabledDoc,
-        StyleDoc,
-        PropsDoc,
-        EventsDoc,
-        TemplatesDoc
-    ]
+    declarations: [ImportDoc, BasicDoc, NestedDoc, SeverityDoc, RaisedDoc, RoundedDoc, TextDoc, RaisedTextDoc, OutlinedDoc, SizesDoc, DisabledDoc, StyleDoc, PropsDoc, EventsDoc, TemplatesDoc]
 })
 export class SplitButtonDocModule {}

@@ -23,21 +23,6 @@ import { VerticalDoc } from './verticaldoc';
 @NgModule({
     imports: [CommonModule, FormsModule, InputNumberModule, RouterModule, AppCodeModule, AppDocModule],
     exports: [AppDocModule],
-    declarations: [
-        ImportDoc,
-        NumeralsDoc,
-        LocaleDoc,
-        CurrencyDoc,
-        PrefixSuffixDoc,
-        ButtonsDoc,
-        VerticalDoc,
-        FloatlabelDoc,
-        InvalidDoc,
-        DisabledDoc,
-        PropsDoc,
-        MethodsDoc,
-        EventsDoc,
-        StyleDoc
-    ]
+    declarations: [ImportDoc, NumeralsDoc, LocaleDoc, CurrencyDoc, PrefixSuffixDoc, ButtonsDoc, VerticalDoc, FloatlabelDoc, InvalidDoc, DisabledDoc, PropsDoc, MethodsDoc, EventsDoc, StyleDoc]
 })
 export class InputNumberDocModule {}

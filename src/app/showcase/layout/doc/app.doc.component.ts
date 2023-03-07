@@ -17,14 +17,12 @@ export class AppDoc {
 
     activeTab!: number;
 
-    constructor(private router: Router) {
-    }
+    constructor(private router: Router) {}
 
     ngOnInit() {
         if (this.router.url.includes('#api')) {
             this.activeTab = 1;
-        }
-        else { 
+        } else {
             this.activeTab = 0;
         }
     }

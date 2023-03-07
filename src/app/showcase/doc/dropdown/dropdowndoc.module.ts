@@ -23,21 +23,6 @@ import { TemplatesDoc } from './templatesdoc';
 @NgModule({
     imports: [CommonModule, RouterModule, AppCodeModule, AppDocModule, FormsModule, DropdownModule],
     exports: [AppDocModule],
-    declarations: [
-        ImportDoc,
-        BasicDoc,
-        EditableDoc,
-        GroupDoc,
-        TemplateDoc,
-        DisabledDoc,
-        VirtualScrollDoc,
-        FilterDoc,
-        FloatLabelDoc,
-        PropsDoc,
-        StyleDoc,
-        EventsDoc,
-        MethodsDoc,
-        TemplatesDoc
-    ]
+    declarations: [ImportDoc, BasicDoc, EditableDoc, GroupDoc, TemplateDoc, DisabledDoc, VirtualScrollDoc, FilterDoc, FloatLabelDoc, PropsDoc, StyleDoc, EventsDoc, MethodsDoc, TemplatesDoc]
 })
 export class DropdownDocModule {}
