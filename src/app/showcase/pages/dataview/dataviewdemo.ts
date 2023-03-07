@@ -1,41 +1,73 @@
-import { Component, OnInit } from '@angular/core';
-import { SelectItem } from 'primeng/api';
-import { Product } from '../../domain/product';
-import { ProductService } from '../../service/productservice';
+import { Component } from '@angular/core';
+import { StyleDoc } from '../../doc/dataview/styledoc';
+import { BasicDoc } from '../../doc/dataview/basicdoc';
+import { ImportDoc } from '../../doc/dataview/importdoc';
+import { LayoutDoc } from '../../doc/dataview/layoutdoc';
+import { PaginationDoc } from '../../doc/dataview/paginationdoc';
+import { PrimeflexDoc } from '../../doc/dataview/primeflexdoc';
+import { SortingDoc } from '../../doc/dataview/sortingdoc';
+import { PropsDoc } from '../../doc/dataview/propsdoc';
+import { EventsDoc } from '../../doc/dataview/eventsdoc';
+import { TemplatesDoc } from '../../doc/dataview/templatesdoc';
 
 @Component({
     templateUrl: './dataviewdemo.html',
     styleUrls: ['./dataviewdemo.scss']
 })
-export class DataViewDemo implements OnInit {
-    products: Product[];
-
-    sortOptions: SelectItem[];
-
-    sortOrder: number;
-
-    sortField: string;
-
-    constructor(private productService: ProductService) {}
-
-    ngOnInit() {
-        this.productService.getProducts().then((data) => (this.products = data));
-
-        this.sortOptions = [
-            { label: 'Price High to Low', value: '!price' },
-            { label: 'Price Low to High', value: 'price' }
-        ];
-    }
-
-    onSortChange(event) {
-        let value = event.value;
-
-        if (value.indexOf('!') === 0) {
-            this.sortOrder = -1;
-            this.sortField = value.substring(1, value.length);
-        } else {
-            this.sortOrder = 1;
-            this.sortField = value;
+export class DataViewDemo {
+    docs = [
+        {
+            id: 'import',
+            label: 'Import',
+            component: ImportDoc
+        },
+        {
+            id: 'primeflex',
+            label: 'PrimeFlex',
+            component: PrimeflexDoc
+        },
+        {
+            id: 'basic',
+            label: 'Basic',
+            component: BasicDoc
+        },
+        {
+            id: 'pagination',
+            label: 'Pagination',
+            component: PaginationDoc
+        },
+        {
+            id: 'sorting',
+            label: 'Sorting',
+            component: SortingDoc
+        },
+        {
+            id: 'layout',
+            label: 'Layout',
+            component: LayoutDoc
+        },
+        {
+            id: 'style',
+            label: 'Style',
+            component: StyleDoc
         }
-    }
+    ];
+
+    apiDocs = [
+        {
+            id: 'properties',
+            label: 'Properties',
+            component: PropsDoc
+        },
+        {
+            id: 'events',
+            label: 'Events',
+            component: EventsDoc
+        },
+        {
+            id: 'templates',
+            label: 'Templates',
+            component: TemplatesDoc
+        }
+    ];
 }
