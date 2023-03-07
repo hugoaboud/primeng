@@ -172,10 +172,6 @@
                             "routerLink": "/dataview"
                         },
                         {
-                            "name": "DataScroller",
-                            "routerLink": "/datascroller"
-                        },
-                        {
                             "name": "VirtualScroller",
                             "routerLink": "/virtualscroller"
                         },
