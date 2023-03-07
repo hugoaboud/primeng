@@ -1,10 +1,10 @@
 <div class="doc-component">
     <ul class="doc-tabmenu" *ngIf="docs && apiDocs">
         <li [ngClass]="{'doc-tabmenu-active': activeTab === 0}">
-            <button type="button" (click)="activeTab = 0">COMPONENT</button>
+            <button type="button" (click)="activateTab(0)">COMPONENT</button>
         </li>
-        <li *ngIf="apiDocs" [ngClass]="{'doc-tabmenu-active': activeTab === 1}">
-            <button type="button" (click)="activeTab = 1">API</button>
+        <li *ngIf="apiDocs" [ngClass]="{'doc-tabmenu-active': activeTab === 1}" >
+            <button type="button" (click)="activateTab(1)">API</button>
         </li>
     </ul>
     <div class="doc-tabpanels">
@@ -19,14 +19,7 @@
             <app-docsection-nav [docs]="docs"></app-docsection-nav>
         </div>
         <div *ngIf="activeTab === 1" class="doc-tabpanel">
-            <div class="doc-main">
-                <div class="doc-intro">
-                    <h1>{{header}} API</h1>
-                    <p>API defines helper props, events and others for the PrimeNG {{header}} module.</p>
-                </div>
-                <app-docsection [docs]="apiDocs"></app-docsection>
-            </div>
-            <app-docsection-nav [docs]="apiDocs"></app-docsection-nav>
+            <app-docapisection [docs]="apiDocs" [header]="header" class="flex"></app-docapisection>
         </div>
     </div>
 </div>

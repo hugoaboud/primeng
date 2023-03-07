@@ -1,9 +1,8 @@
-<div>
-    <app-docsectiontext id="api" title="API">Visit the API documentation for detailed information about all the properties,
-        events and methods of the component.</app-docsectiontext>
-    <ul>
-        <li *ngFor="let doc of docs" class="field doc-section-description">
-            <a [href]="doc.pathname">{{doc.name}}</a>
-        </li>
-    </ul>
+<div className="doc-main">
+    <div className="doc-intro">
+        <h1>{{ header }} API</h1>
+        <p>API defines helper props, events and others for the PrimeNG {{ header }} module.</p>
+    </div>
+    <app-docsection [docs]="_docs"></app-docsection>
 </div>
+<app-docsection-nav [docs]="_docs"></app-docsection-nav>

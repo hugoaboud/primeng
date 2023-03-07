@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Doc } from '../../domain/doc';
 
 @Component({
@@ -14,5 +15,21 @@ export class AppDoc {
 
     @Input() apiDocs!: Doc[];
 
-    activeTab: number = 0;
+    activeTab!: number;
+
+    constructor(private router: Router) {
+    }
+
+    ngOnInit() {
+        if (this.router.url.includes('#api')) {
+            this.activeTab = 1;
+        }
+        else { 
+            this.activeTab = 0;
+        }
+    }
+
+    activateTab(index) {
+        this.activeTab = index;
+    }
 }
