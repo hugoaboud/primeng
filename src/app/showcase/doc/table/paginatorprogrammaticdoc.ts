@@ -197,7 +197,6 @@ export class TablePaginatorProgrammaticDemo {
         service: ['CustomerService']
     };
 
-
     extFiles = [
         {
             path: 'src/domain/customer.ts',
@@ -223,6 +222,7 @@ export interface Customer {
     representative?: Representative;
     verified?: boolean;
     balance?: number;
-}`     }
-            ]
+}`
+        }
+    ];
 }

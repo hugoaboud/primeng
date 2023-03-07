@@ -21,19 +21,6 @@ import { StyleDoc } from './styledoc';
 @NgModule({
     imports: [CommonModule, FormsModule, InputMaskModule, RouterModule, AppCodeModule, AppDocModule],
     exports: [AppDocModule],
-    declarations: [
-        ImportDoc,
-        BasicDoc,
-        MaskDoc,
-        SlotCharDoc,
-        OptionalDoc,
-        FloatlabelDoc,
-        DisabledDoc,
-        InvalidDoc,
-        PropsDoc,
-        EventsDoc,
-        MethodsDoc,
-        StyleDoc
-    ]
+    declarations: [ImportDoc, BasicDoc, MaskDoc, SlotCharDoc, OptionalDoc, FloatlabelDoc, DisabledDoc, InvalidDoc, PropsDoc, EventsDoc, MethodsDoc, StyleDoc]
 })
 export class InputMaskDocModule {}

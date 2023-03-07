@@ -22,20 +22,7 @@ import { EventsDoc } from './eventsdoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, FormsModule, DialogModule, ButtonModule, AppDocModule, ToastModule, TableModule],
-    declarations: [
-        OpenDoc,
-        ImportDoc,
-        PropsDoc,
-        StyleDoc,
-        DynamicDialogBasicDemo,
-        ProductListDemo,
-        UsageDoc,
-        PassingDataDoc,
-        CloseDoc,
-        ProductListDemoDoc,
-        StyleDoc,
-        EventsDoc
-    ],
+    declarations: [OpenDoc, ImportDoc, PropsDoc, StyleDoc, DynamicDialogBasicDemo, ProductListDemo, UsageDoc, PassingDataDoc, CloseDoc, ProductListDemoDoc, StyleDoc, EventsDoc],
     exports: [AppDocModule],
     entryComponents: [ProductListDemo]
 })

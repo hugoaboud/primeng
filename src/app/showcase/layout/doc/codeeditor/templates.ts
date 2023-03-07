@@ -725,8 +725,8 @@ export class AppModule {}`;
                 },
                 dependencies: {
                     ...dependencies,
-                    "jspdf": "1.5.3",
-                    "jspdf-autotable": "3.2.5",
+                    jspdf: '1.5.3',
+                    'jspdf-autotable': '3.2.5'
                 }
             }
         },

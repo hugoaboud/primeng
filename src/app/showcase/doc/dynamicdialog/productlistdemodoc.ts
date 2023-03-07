@@ -155,5 +155,5 @@ export interface Product {
     rating?: number;
 }`
         }
-    ]
+    ];
 }

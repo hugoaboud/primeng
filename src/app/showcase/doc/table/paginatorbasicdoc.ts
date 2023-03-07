@@ -177,7 +177,7 @@ export interface Customer {
     representative?: Representative;
     verified?: boolean;
     balance?: number;
-}` 
+}`
         }
     ];
 }

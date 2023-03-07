@@ -17,19 +17,19 @@ export class AppDocApiSection {
     constructor(private location: Location, private router: Router) {}
 
     ngOnInit() {
-        if(!this.router.url.includes('#api')) {
+        if (!this.router.url.includes('#api')) {
             this.location.go(this.location.path().split('#')[0]);
         }
         this.generateDocs();
     }
 
     generateDocs() {
-        for(let i = 0; i < this.docs.length; i++) {
+        for (let i = 0; i < this.docs.length; i++) {
             const doc = this.docs[i];
             const _doc = {
                 ...doc,
                 id: `api.${doc.id}`
-            }
+            };
             this._docs.push(_doc);
         }
     }
@@ -37,5 +37,4 @@ export class AppDocApiSection {
     ngOnDestroy() {
         this.location.go(this.location.path().split('#')[0]);
     }
-
 }

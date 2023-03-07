@@ -22,20 +22,6 @@ import { StyleDoc } from './styledoc';
 @NgModule({
     imports: [CommonModule, RouterModule, FormsModule, AppCodeModule, AppDocModule, KnobModule],
     exports: [AppDocModule],
-    declarations: [
-        ImportDoc,
-        BasicDoc,
-        MinMaxDoc,
-        StepDoc,
-        TemplateDoc,
-        StrokeDoc,
-        SizeDoc,
-        ColorDoc,
-        ReadonlyDoc,
-        DisabledDoc,
-        PropsDoc,
-        EventsDoc,
-        StyleDoc
-    ]
+    declarations: [ImportDoc, BasicDoc, MinMaxDoc, StepDoc, TemplateDoc, StrokeDoc, SizeDoc, ColorDoc, ReadonlyDoc, DisabledDoc, PropsDoc, EventsDoc, StyleDoc]
 })
 export class KnobDocModule {}

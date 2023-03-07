@@ -21,19 +21,6 @@ import { TemplatesDoc } from './templatesdoc';
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, ListboxModule, FormsModule, AppDocModule],
     exports: [AppDocModule],
-    declarations: [
-        ImportDoc,
-        BasicDoc,
-        MultipleDoc,
-        TemplateDoc,
-        InvalidDoc,
-        DisabledDoc,
-        FilterDoc,
-        GroupDoc,
-        PropsDoc,
-        EventsDoc,
-        TemplatesDoc,
-        StyleDoc
-    ]
+    declarations: [ImportDoc, BasicDoc, MultipleDoc, TemplateDoc, InvalidDoc, DisabledDoc, FilterDoc, GroupDoc, PropsDoc, EventsDoc, TemplatesDoc, StyleDoc]
 })
 export class ListboxDocModule {}

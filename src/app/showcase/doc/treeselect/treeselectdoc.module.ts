@@ -21,19 +21,6 @@ import { TemplatesDoc } from './templatesdoc';
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, TreeSelectModule, FormsModule, RouterModule],
     exports: [AppDocModule],
-    declarations: [
-        ImportDoc,
-        BasicDoc,
-        MultipleDoc,
-        CheckboxDoc,
-        FilterDoc,
-        FloatLabelDoc,
-        InvalidDoc,
-        DisabledDoc,
-        PropsDoc,
-        EventsDoc,
-        TemplatesDoc,
-        StyleDoc
-    ]
+    declarations: [ImportDoc, BasicDoc, MultipleDoc, CheckboxDoc, FilterDoc, FloatLabelDoc, InvalidDoc, DisabledDoc, PropsDoc, EventsDoc, TemplatesDoc, StyleDoc]
 })
 export class TreeSelectDocModule {}

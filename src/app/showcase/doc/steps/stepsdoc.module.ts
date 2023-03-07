@@ -27,21 +27,7 @@ import { TicketService } from '../../service/ticketservice';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, StepsModule, ToastModule, AppDocModule, FormsModule, DropdownModule, InputTextModule, InputMaskModule, CheckboxModule, CardModule],
-    declarations: [
-        StepsBasicDemo,
-        ImportDoc,
-        MenuItemDoc,
-        MethodsDoc,
-        PropsDoc,
-        StyleDoc,
-        StepsInteractiveDemo,
-        EventsDoc,
-        ConfirmationDemo,
-        PaymentDemo,
-        PersonalDemo,
-        SeatDemo,
-        StepsRoutingDemo
-    ],
+    declarations: [StepsBasicDemo, ImportDoc, MenuItemDoc, MethodsDoc, PropsDoc, StyleDoc, StepsInteractiveDemo, EventsDoc, ConfirmationDemo, PaymentDemo, PersonalDemo, SeatDemo, StepsRoutingDemo],
     exports: [AppDocModule],
     providers: [TicketService]
 })

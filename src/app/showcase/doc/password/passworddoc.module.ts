@@ -22,19 +22,6 @@ import { TogglemaskDoc } from './togglemaskdoc';
 @NgModule({
     imports: [CommonModule, AppCodeModule, AppDocModule, PasswordModule, FormsModule, DividerModule, RouterModule],
     exports: [AppDocModule],
-    declarations: [
-        ImportDoc,
-        BasicDoc,
-        MeterDoc,
-        TogglemaskDoc,
-        TemplateDoc,
-        FloatLabelDoc,
-        InvalidDoc,
-        DisabledDoc,
-        PropsDoc,
-        EventsDoc,
-        TemplatesDoc,
-        StyleDoc
-    ]
+    declarations: [ImportDoc, BasicDoc, MeterDoc, TogglemaskDoc, TemplateDoc, FloatLabelDoc, InvalidDoc, DisabledDoc, PropsDoc, EventsDoc, TemplatesDoc, StyleDoc]
 })
 export class PasswordDocModule {}

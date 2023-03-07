@@ -22,20 +22,7 @@ import { DialogModalDemo } from './modaldoc';
 
 @NgModule({
     imports: [CommonModule, AppCodeModule, RouterModule, FormsModule, DialogModule, ButtonModule, DropdownModule, AppDocModule],
-    declarations: [
-        DialogBasicDemo,
-        EventsDoc,
-        ImportDoc,
-        PropsDoc,
-        StyleDoc,
-        DialogLongContentDemo,
-        DialogResponsiveDemo,
-        DialogPositionDemo,
-        DialogMaximizableDemo,
-        DialogTemplateDemo,
-        DialogOverlaysInsideDemo,
-        DialogModalDemo
-    ],
+    declarations: [DialogBasicDemo, EventsDoc, ImportDoc, PropsDoc, StyleDoc, DialogLongContentDemo, DialogResponsiveDemo, DialogPositionDemo, DialogMaximizableDemo, DialogTemplateDemo, DialogOverlaysInsideDemo, DialogModalDemo],
     exports: [AppDocModule]
 })
 export class DialogDocModule {}
