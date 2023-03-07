@@ -553,7 +553,8 @@ import { CustomerService } from '../../service/customerservice';
 
 @Component({
     selector: 'table-customers-demo',
-    templateUrl: 'table-customers-demo.html'
+    templateUrl: 'table-customers-demo.html',
+    styleUrls: ['table-customers-demo.scss']
 })
 export class TableCustomersDemo implements OnInit{
     customers: Customer[];
