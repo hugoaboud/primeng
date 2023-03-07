@@ -475,7 +475,7 @@ export class TableProductsDemo implements OnInit{
     display: block;
 }
 
-.customer-badge {
+.product-badge {
     border-radius: 2px;
     padding: .25em .5rem;
     text-transform: uppercase;
@@ -483,37 +483,21 @@ export class TableProductsDemo implements OnInit{
     font-size: 12px;
     letter-spacing: .3px;
 
-    &.status-qualified {
-        background-color: #C8E6C9;
+    &.status-instock {
+        background: #C8E6C9;
         color: #256029;
     }
-
-    &.status-unqualified {
-        background-color: #FFCDD2;
+    
+    &.status-outofstock {
+        background: #FFCDD2;
         color: #C63737;
     }
-
-    &.status-negotiation {
-        background-color: #FEEDAF;
+    
+    &.status-lowstock {
+        background: #FEEDAF;
         color: #8A5340;
     }
-
-    &.status-new {
-        background-color: #B3E5FC;
-        color: #23547B;
-    }
-
-    &.status-renewal {
-        background-color: #ECCFFF;
-        color: #694382;
-    }
-
-    &.status-proposal {
-        background-color: #FFD8B2;
-        color: #805B36;
-    }
-}
-`,
+}`,
         service: ['ProductService']
     };
 
