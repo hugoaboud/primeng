@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
-import { DynamicDialogRef } from '../../../components/dynamicdialog/dynamicdialog-ref';
+import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
 
@@ -36,9 +36,9 @@ import { ProductService } from '../../service/productservice';
                 </ng-template>
             </p-table>
         </div>
-        <app-code [code]="code" [hideStackBlitz]="true" [hideCodeSandbox]="true"></app-code>
+        <app-code [code]="code" [hideStackBlitz]="true" [hideCodeSandbox]="true" [extFiles]="extFiles"></app-code>
     </div> `,
-    providers: [ProductService, DynamicDialogRef]
+    providers: [DynamicDialogRef]
 })
 export class ProductListDemoDoc implements OnInit {
     @Input() id: string;
@@ -112,13 +112,14 @@ export class ProductListDemoDoc implements OnInit {
 </div>`,
         typescript: `
 import { Component, OnInit } from '@angular/core';
-import { DynamicDialogRef } from '../../../components/dynamicdialog/dynamicdialog-ref';
+import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { Product } from '../../domain/product';
-import { ProductService } from '../../service/product.service';
+import { ProductService } from '../../service/productservice';
         
 @Component({
+    selector: 'product-list-demo',
     templateUrl: './productlistdemo.html',
-    providers: [ProductService]
+    providers: [DynamicDialogRef]
 })
 export class ProductListDemo implements OnInit {
 
@@ -133,6 +134,26 @@ export class ProductListDemo implements OnInit {
     selectProduct(product: Product) {
         this.ref.close(product);
     }
-}`
+}`,
+        service: ['ProductService']
     };
+
+    extFiles = [
+        {
+            path: 'src/domain/product.ts',
+            content: `
+export interface Product {
+    id?: string;
+    code?: string;
+    name?: string;
+    description?: string;
+    price?: number;
+    quantity?: number;
+    inventoryStatus?: string;
+    category?: string;
+    image?: string;
+    rating?: number;
+}`
+        }
+    ]
 }

@@ -37,7 +37,7 @@ import { CarService } from '../../service/carservice';
                 </ng-template>
             </p-inplace>
         </div>
-        <app-code [code]="code" selector="inplace-data-demo"></app-code>
+        <app-code [code]="code" selector="inplace-data-demo" [extFiles]="extFiles"></app-code>
     </div>`
 })
 export class InplaceDataDemo {
@@ -85,19 +85,39 @@ export class InplaceDataDemo {
 </p-inplace>`,
         html: `
 <div class="card">
-    <p-inplace closable="closable" [style]="{'min-height':'33px'}">
+    <p-inplace>
         <ng-template pTemplate="display">
-            Click to Edit
+            <div class="inline-flex align-items-center">
+                <span class="pi pi-table" style="vertical-align: middle"></span>
+                <span class="ml-2">View Data</span>
+            </div>
         </ng-template>
         <ng-template pTemplate="content">
-            <input type="text" value="PrimeNG" pInputText>
+            <p-table [value]="cars" responsiveLayout="scroll">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Vin</th>
+                        <th>Year</th>
+                        <th>Brand</th>
+                        <th>Color</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-car>
+                    <tr>
+                        <td>{{ car.vin }}</td>
+                        <td>{{ car.year }}</td>
+                        <td>{{ car.brand }}</td>
+                        <td>{{ car.color }}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
         </ng-template>
     </p-inplace>
 </div>`,
         typescript: `
 import { Component } from '@angular/core';
 import { Car } from '../../domain/car';
-import { CarService } from '../../service/car.service';
+import { CarService } from '../../service/carservice';
 
 @Component({
     selector: 'inplace-data-demo',
@@ -115,4 +135,20 @@ export class InplaceDataDemo {
 }`,
         service: ['CarService']
     };
+
+    extFiles = [
+        {
+            path: 'src/domain/car.ts',
+            content: `
+export interface Car {
+    id?;
+    vin?;
+    year?;
+    brand?;
+    color?;
+    price?;
+    saleDate?;
+}`
+        }
+    ];
 }
