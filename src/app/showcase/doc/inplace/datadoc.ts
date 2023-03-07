@@ -112,6 +112,7 @@ export class InplaceDataDemo {
         this.carService.getCarsSmall().then((cars) => (this.cars = cars));
     }
 
-}`
+}`,
+        service: ['CarService']
     };
 }
