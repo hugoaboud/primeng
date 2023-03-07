@@ -1,14 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { PickListModule } from 'primeng/picklist';
-import { TabViewModule } from 'primeng/tabview';
-import { AppCodeModule } from 'src/app/showcase/layout/doc/code/app.code.component';
-import { AppDemoActionsModule } from '../../layout/demoactions/app.demoactions.component';
+import { PicklistDocModule } from '../../doc/picklist/picklistdoc.module';
 import { PickListDemo } from './picklistdemo';
 import { PickListDemoRoutingModule } from './picklistdemo-routing.module';
 
 @NgModule({
-    imports: [CommonModule, PickListDemoRoutingModule, PickListModule, TabViewModule, AppCodeModule, AppDemoActionsModule],
+    imports: [CommonModule, PickListDemoRoutingModule, PicklistDocModule],
     declarations: [PickListDemo]
 })
 export class PickListDemoModule {}
