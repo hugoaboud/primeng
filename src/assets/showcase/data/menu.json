@@ -467,11 +467,6 @@
             ]
         },
         {
-            "name": "Component API",
-            "icon": "pi pi-list",
-            "href": "https://primefaces.github.io/primeng"
-        },
-        {
             "name": "Theming",
             "icon": "pi pi-palette",
             "children": [
