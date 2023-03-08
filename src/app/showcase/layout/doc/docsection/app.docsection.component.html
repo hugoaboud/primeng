@@ -1,6 +1,1 @@
-<div *ngIf="docs && docs.length">
-    <section *ngFor="let doc of docs">
-        <ng-template *ngIf="doc.id !== 'api'" #Doc></ng-template>
-        <app-docapisection *ngIf="doc.id ==='api' && doc.doc" [docs]="doc.doc"></app-docapisection>
-    </section>
-</div>
+<ng-template *ngIf="docs && docs.length" #Doc></ng-template>

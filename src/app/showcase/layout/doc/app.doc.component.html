@@ -18,8 +18,8 @@
             </div>
             <app-docsection-nav [docs]="docs"></app-docsection-nav>
         </div>
-        <div *ngIf="activeTab === 1" class="doc-tabpanel">
-            <app-docapisection [docs]="apiDocs" [header]="header" class="flex"></app-docapisection>
+        <div *ngIf="activeTab === 1">
+            <app-docapisection [docs]="apiDocs" [header]="header" ngClass="doc-tabpanel"></app-docapisection>
         </div>
     </div>
 </div>

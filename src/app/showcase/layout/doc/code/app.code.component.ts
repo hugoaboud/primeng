@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, NgModule } from '@angular/core';
+import { Component, ElementRef, Input, NgModule, ViewChild } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
 import { Code, ExtFile, RouteFile } from 'src/app/showcase/domain/code';
-import { CodeHighlighterComponent } from '../codehighlighter/app.codehighlighter.component';
 import { useStackBlitz, useCodeSandbox } from '../codeeditor';
+
 @Component({
     selector: 'app-code',
     templateUrl: './app.code.component.html'
@@ -13,8 +13,6 @@ export class AppCodeComponent {
     @Input() code!: Code;
 
     @Input() service!: any;
-
-    @Input() dependencies!: any;
 
     @Input() selector!: string;
 
@@ -28,23 +26,27 @@ export class AppCodeComponent {
 
     @Input() hideStackBlitz: boolean = false;
 
+    @ViewChild('codeElement') codeElement: ElementRef;
+
     fullCodeVisible: boolean = false;
 
     lang!: string;
 
-    selectedCode!: string;
-
-    constructor() {}
+    ngAfterViewChecked() {
+        if (window['Prism'] && this.codeElement) {
+            window['Prism'].highlightElement(this.codeElement.nativeElement);
+        }
+    }
 
     ngOnInit() {
-        this.lang = this.getLang();
+        this.lang = this.getInitialLang();
     }
 
     changeLang(lang: string) {
         this.lang = lang;
     }
 
-    getLang(): string {
+    getInitialLang(): string {
         if (this.code) {
             return Object.keys(this.code)[0];
         }
@@ -67,6 +69,7 @@ export class AppCodeComponent {
     toggleCode() {
         this.fullCodeVisible = !this.fullCodeVisible;
         this.fullCodeVisible && (this.lang = 'html');
+        !this.fullCodeVisible && (this.lang = 'basic');
     }
 
     openStackBlitz() {
@@ -85,6 +88,6 @@ export class AppCodeComponent {
 @NgModule({
     imports: [CommonModule, ButtonModule, TooltipModule],
     exports: [AppCodeComponent],
-    declarations: [AppCodeComponent, CodeHighlighterComponent]
+    declarations: [AppCodeComponent]
 })
 export class AppCodeModule {}
