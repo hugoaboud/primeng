@@ -1208,11 +1208,11 @@ export class CarService {
         ];
     }
 
-    brands: ['Vapid', 'Carson', 'Kitano', 'Dabver', 'Ibex', 'Morello', 'Akira', 'Titan', 'Dover', 'Norma']
+    brands = ['Vapid', 'Carson', 'Kitano', 'Dabver', 'Ibex', 'Morello', 'Akira', 'Titan', 'Dover', 'Norma'];
 
-    colors: ['Black', 'White', 'Red', 'Blue', 'Silver', 'Green', 'Yellow']
+    colors = ['Black', 'White', 'Red', 'Blue', 'Silver', 'Green', 'Yellow'];
 
-    generateCar(id) {
+    generateCar(id?:any) {
         return {
             id,
             vin: this.generateVin(),
