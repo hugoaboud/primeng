@@ -77,4 +77,4 @@ import { MethodsDoc } from './methodsdoc';
         MethodsDoc
     ]
 })
-export class TreeTableDocModule { }
+export class TreeTableDocModule {}
