@@ -6,7 +6,9 @@ import { NodeService } from '../../service/nodeservice';
 @Component({
     selector: 'tree-table-basic-demo',
     template: ` <div>
-        <app-docsectiontext [title]="title" [id]="id"> </app-docsectiontext>
+        <app-docsectiontext [title]="title" [id]="id">
+            <p>TreeTable requires a collection of <i>TreeNode</i> instances as a <i>value</i> components as children for the representation.</p>
+        </app-docsectiontext>
         <div class="card">
             <p-treeTable [value]="files">
                 <ng-template pTemplate="header">

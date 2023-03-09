@@ -5,7 +5,7 @@ import { Code } from '../../domain/code';
     selector: 'inputnumber-numerals-demo',
     template: ` <div>
         <app-docsectiontext [title]="title" [id]="id">
-            <p>InputNumber is used with the standard v-model directive. Component always provides a number type although formatting on the input is a string.</p>
+            <p>InputNumber is used as a controlled input with <i>[(ngModel)]</i> properties.</p>
         </app-docsectiontext>
         <div class="card flex flex-wrap gap-3 p-fluid">
             <div class="flex-auto">
