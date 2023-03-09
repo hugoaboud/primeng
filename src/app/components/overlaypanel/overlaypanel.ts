@@ -256,7 +256,7 @@ export class OverlayPanel implements AfterContentInit, OnDestroy {
         let arrowLeft = 0;
 
         if (containerOffset.left < targetOffset.left) {
-            arrowLeft = targetOffset.left - containerOffset.left - (parseFloat(borderRadius) * 2);
+            arrowLeft = targetOffset.left - containerOffset.left - parseFloat(borderRadius) * 2;
         }
         this.container.style.setProperty('--overlayArrowLeft', `${arrowLeft}px`);
 
