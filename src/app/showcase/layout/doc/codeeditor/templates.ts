@@ -400,16 +400,16 @@ const tsconfig_json = `{
       "outDir": "./dist/out-tsc",
       "sourceMap": true,
       "declaration": false,
-      "module": "es2020",
+      "module": "es2022",
       "moduleResolution": "node",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
-      "target": "es2020",
+      "target": "es2022",
       "typeRoots": [
         "node_modules/@types"
       ],
       "lib": [
-        "es2020",
+        "es2022",
         "dom"
       ]
     }
