@@ -8,15 +8,15 @@ import { Code } from '../../domain/code';
             <p>Multiple mode is enabled by default, ngModel property refers to an array to bind the selected values.</p>
         </app-docsectiontext>
         <div class="card flex justify-content-center gap-3">
-            <div class="field-checkbox">
+            <div class="flex align-items-center gap-1">
                 <p-checkbox name="group1" value="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>
                 <label for="ny">New York</label>
             </div>
-            <div class="field-checkbox">
+            <div class="flex align-items-center gap-1">
                 <p-checkbox name="group1" value="San Francisco" [(ngModel)]="selectedCities" inputId="sf"></p-checkbox>
                 <label for="sf">San Francisco</label>
             </div>
-            <div class="field-checkbox">
+            <div class="flex align-items-center gap-1">
                 <p-checkbox name="group1" value="Los Angeles" [(ngModel)]="selectedCities" inputId="la"></p-checkbox>
                 <label for="la">Los Angeles</label>
             </div>
@@ -33,32 +33,32 @@ export class MultipleDoc {
 
     code: Code = {
         basic: `
-<div class="field-checkbox">
+<div class="flex align-items-center gap-1">
         <p-checkbox name="group1" value="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>
         <label for="ny">New York</label>
 </div>
 
-<div class="field-checkbox">
+<div class="flex align-items-center gap-1">
     <p-checkbox name="group1" value="San Francisco" [(ngModel)]="selectedCities" inputId="sf"></p-checkbox>
     <label for="sf">San Francisco</label>
 </div>
 
-<div class="field-checkbox">
+<div class="flex align-items-center gap-1">
     <p-checkbox name="group1" value="Los Angeles" [(ngModel)]="selectedCities" inputId="la"></p-checkbox>
     <label for="la">Los Angeles</label>
 </div>`,
 
         html: `
 <div class="card flex justify-content-center gap-3">
-    <div class="field-checkbox">
+    <div class="flex align-items-center gap-1">
         <p-checkbox name="group1" value="New York" [(ngModel)]="selectedCities" inputId="ny"></p-checkbox>
         <label for="ny">New York</label>
     </div>
-    <div class="field-checkbox">
+    <div class="flex align-items-center gap-1">
         <p-checkbox name="group1" value="San Francisco" [(ngModel)]="selectedCities" inputId="sf"></p-checkbox>
         <label for="sf">San Francisco</label>
     </div>
-    <div class="field-checkbox">
+    <div class="flex align-items-center gap-1">
         <p-checkbox name="group1" value="Los Angeles" [(ngModel)]="selectedCities" inputId="la"></p-checkbox>
         <label for="la">Los Angeles</label>
     </div>
