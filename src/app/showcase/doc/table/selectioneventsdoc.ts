@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 import { Product } from '../../domain/product';
@@ -33,6 +33,7 @@ import { ProductService } from '../../service/productservice';
         </div>
         <app-code [code]="code" selector="table-selection-events-demo" [extFiles]="extFiles"></app-code>
     </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [MessageService]
 })
 export class TableSelectionEventsDemo implements OnInit {
@@ -44,10 +45,13 @@ export class TableSelectionEventsDemo implements OnInit {
 
     selectedProduct: Product;
 
-    constructor(private productService: ProductService, private messageService: MessageService) {}
+    constructor(private productService: ProductService, private messageService: MessageService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
-        this.productService.getProductsMini().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => {
+            this.products = data;
+            this.cd.markForCheck();
+        });
     }
 
     onRowSelect(event) {
@@ -122,7 +126,9 @@ export class TableSelectionEventsDemo implements OnInit{
     constructor(private productService: ProductService, private messageService: MessageService) {}
 
     ngOnInit() {
-        this.productService.getProductsMini().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => {
+            this.products = data;
+        });
     }
 
     onRowSelect(event) {

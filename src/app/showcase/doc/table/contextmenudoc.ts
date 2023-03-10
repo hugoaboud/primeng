@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { MessageService, MenuItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 import { Product } from '../../domain/product';
@@ -37,6 +37,7 @@ import { ProductService } from '../../service/productservice';
         </div>
         <app-code [code]="code" selector="table-context-menu-demo" [extFiles]="extFiles"></app-code>
     </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [MessageService]
 })
 export class TableContextMenuDemo implements OnInit {
@@ -50,10 +51,13 @@ export class TableContextMenuDemo implements OnInit {
 
     items: MenuItem[];
 
-    constructor(private productService: ProductService, private messageService: MessageService) {}
+    constructor(private productService: ProductService, private messageService: MessageService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
-        this.productService.getProductsSmall().then((data) => (this.products = data));
+        this.productService.getProductsSmall().then((data) => {
+            this.products = data;
+            this.cd.markForCheck();
+        });
 
         this.items = [
             { label: 'View', icon: 'pi pi-fw pi-search', command: () => this.viewProduct(this.selectedProduct) },

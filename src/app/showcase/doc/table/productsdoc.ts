@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { Code } from '../../domain/code';
 import { Product } from '../../domain/product';
@@ -86,6 +86,7 @@ import { ProductService } from '../../service/productservice';
         </div>
         <app-code [code]="code" selector="table-products-demo" [extFiles]="extFiles"></app-code>
     </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [MessageService, ConfirmationService]
 })
 export class TableProductsDemo implements OnInit {
@@ -105,10 +106,13 @@ export class TableProductsDemo implements OnInit {
 
     statuses: any[];
 
-    constructor(private productService: ProductService, private messageService: MessageService, private confirmationService: ConfirmationService) {}
+    constructor(private productService: ProductService, private messageService: MessageService, private confirmationService: ConfirmationService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
-        this.productService.getProducts().then((data) => (this.products = data));
+        this.productService.getProducts().then((data) => {
+            this.products = data;
+            this.cd.markForCheck();
+        });
 
         this.statuses = [
             { label: 'INSTOCK', value: 'instock' },

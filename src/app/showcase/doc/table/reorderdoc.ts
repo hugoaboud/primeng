@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
@@ -36,7 +36,8 @@ import { ProductService } from '../../service/productservice';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-reorder-demo" [extFiles]="extFiles"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableReorderDemo implements OnInit {
     @Input() id: string;
@@ -47,10 +48,13 @@ export class TableReorderDemo implements OnInit {
 
     cols: any[];
 
-    constructor(private productService: ProductService) {}
+    constructor(private productService: ProductService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
-        this.productService.getProductsSmall().then((data) => (this.products = data));
+        this.productService.getProductsSmall().then((data) => {
+            this.products = data;
+            this.cd.markForCheck();
+        });
 
         this.cols = [
             { field: 'code', header: 'Code' },

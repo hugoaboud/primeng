@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { LazyLoadEvent } from 'primeng/api';
 import { Code } from '../../domain/code';
 import { Customer, Representative } from '../../domain/customer';
@@ -82,7 +82,8 @@ import { CustomerService } from '../../service/customerservice';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-lazy-load-demo" [extFiles]="extFiles"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableLazyLoadDemo implements OnInit {
     @Input() id: string;
@@ -101,7 +102,7 @@ export class TableLazyLoadDemo implements OnInit {
 
     selectedCustomers: Customer[];
 
-    constructor(private customerService: CustomerService) {}
+    constructor(private customerService: CustomerService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
         this.representatives = [
@@ -128,6 +129,7 @@ export class TableLazyLoadDemo implements OnInit {
                 this.customers = res.customers;
                 this.totalRecords = res.totalRecords;
                 this.loading = false;
+                this.cd.markForCheck();
             });
         }, 1000);
     }

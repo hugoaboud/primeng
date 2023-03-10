@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 import { Customer } from '../../domain/customer';
 import { CustomerService } from '../../service/customerservice';
@@ -28,7 +28,8 @@ import { CustomerService } from '../../service/customerservice';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-column-resize-scrollable-mode-demo" [extFiles]="extFiles"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableColumnResizeScrollableModeDemo implements OnInit {
     @Input() id: string;
@@ -37,10 +38,13 @@ export class TableColumnResizeScrollableModeDemo implements OnInit {
 
     customers: Customer[];
 
-    constructor(private customerService: CustomerService) {}
+    constructor(private customerService: CustomerService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
-        this.customerService.getCustomersLarge().then((customers) => (this.customers = customers));
+        this.customerService.getCustomersLarge().then((customers) => {
+            this.customers = customers;
+            this.cd.markForCheck();
+        });
     }
 
     code: Code = {

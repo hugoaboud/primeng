@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Car } from '../../domain/car';
 import { Code } from '../../domain/code';
 import { CarService } from '../../service/carservice';
@@ -31,7 +31,8 @@ import { CarService } from '../../service/carservice';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-virtual-scroll-demo" [extFiles]="extFiles"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableVirtualScrollDemo implements OnInit {
     @Input() id: string;

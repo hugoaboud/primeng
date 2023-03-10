@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 import { Customer } from '../../domain/customer';
 import { CustomerService } from '../../service/customerservice';
@@ -59,7 +59,8 @@ import { CustomerService } from '../../service/customerservice';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-subheader-grouping-demo" [extFiles]="extFiles"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableSubheaderGroupingDemo implements OnInit {
     @Input() id: string;
@@ -68,11 +69,12 @@ export class TableSubheaderGroupingDemo implements OnInit {
 
     customers: Customer[];
 
-    constructor(private customerService: CustomerService) {}
+    constructor(private customerService: CustomerService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
         this.customerService.getCustomersMedium().then((data) => {
             this.customers = data;
+            this.cd.markForCheck();
         });
     }
 

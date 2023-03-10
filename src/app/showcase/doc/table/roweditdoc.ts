@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { MessageService, SelectItem } from 'primeng/api';
 import { Code } from '../../domain/code';
 import { Product } from '../../domain/product';
@@ -89,6 +89,7 @@ import { ProductService } from '../../service/productservice';
         </div>
         <app-code [code]="code" selector="table-row-edit-demo" [extFiles]="extFiles"></app-code>
     </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [MessageService]
 })
 export class TableRowEditDemo implements OnInit {
@@ -102,10 +103,13 @@ export class TableRowEditDemo implements OnInit {
 
     clonedProducts: { [s: string]: Product } = {};
 
-    constructor(private productService: ProductService, private messageService: MessageService) {}
+    constructor(private productService: ProductService, private messageService: MessageService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
-        this.productService.getProductsMini().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => {
+            this.products = data;
+            this.cd.markForCheck();
+        });
 
         this.statuses = [
             { label: 'In Stock', value: 'INSTOCK' },
@@ -285,7 +289,9 @@ export class TableRowEditDemo implements OnInit{
     constructor(private productService: ProductService, private messageService: MessageService) {}
 
     ngOnInit() {
-        this.productService.getProductsMini().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => {
+            this.products = data;
+        });
 
         this.statuses = [
             { label: 'In Stock', value: 'INSTOCK' },

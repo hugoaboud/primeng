@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 
 @Component({
@@ -44,7 +44,8 @@ import { Code } from '../../domain/code';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-column-group-demo"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableColumnGroupDemo {
     @Input() id: string;
@@ -56,6 +57,8 @@ export class TableColumnGroupDemo {
     lastYearTotal: number;
 
     thisYearTotal: number;
+
+    constructor(private cd: ChangeDetectorRef){}
 
     ngOnInit() {
         this.sales = [
@@ -73,6 +76,8 @@ export class TableColumnGroupDemo {
 
         this.calculateLastYearTotal();
         this.calculateThisYearTotal();
+
+        this.cd.markForCheck();
     }
 
     calculateLastYearTotal() {

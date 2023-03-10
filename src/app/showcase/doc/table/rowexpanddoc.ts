@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
@@ -81,7 +81,8 @@ import { ProductService } from '../../service/productservice';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-row-expand-demo" [extFiles]="extFiles"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableRowExpandDemo implements OnInit {
     @Input() id: string;
@@ -90,10 +91,13 @@ export class TableRowExpandDemo implements OnInit {
 
     products: Product[];
 
-    constructor(private productService: ProductService) {}
+    constructor(private productService: ProductService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
-        this.productService.getProductsWithOrdersSmall().then((data) => (this.products = data));
+        this.productService.getProductsWithOrdersSmall().then((data) => {
+            this.products = data;
+            this.cd.markForCheck();
+        });
     }
 
     code: Code = {

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@angular/core';
 import { Code } from '../../domain/code';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
@@ -28,7 +28,8 @@ import { ProductService } from '../../service/productservice';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-dynamic-demo" [extFiles]="extFiles"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableDynamicDemo {
     @Input() id: string;
@@ -39,10 +40,13 @@ export class TableDynamicDemo {
 
     cols: any[];
 
-    constructor(private productService: ProductService) {}
+    constructor(private productService: ProductService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
-        this.productService.getProductsMini().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => {
+            this.products = data;
+            this.cd.markForCheck();
+        });
 
         this.cols = [
             { field: 'code', header: 'Code' },
@@ -107,7 +111,9 @@ export class TableDynamicDemo {
     constructor(private productService: ProductService) {}
 
     ngOnInit() {
-        this.productService.getProductsMini().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => {
+            this.products = data;
+        });
 
         this.cols = [
             { field: 'code', header: 'Code' },

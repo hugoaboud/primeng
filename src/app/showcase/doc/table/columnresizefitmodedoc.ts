@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 import { Product } from '../../domain/product';
 import { ProductService } from '../../service/productservice';
@@ -30,7 +30,8 @@ import { ProductService } from '../../service/productservice';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-column-resize-fit-mode-demo" [extFiles]="extFiles"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableColumnResizeFitModeDemo implements OnInit {
     @Input() id: string;
@@ -39,10 +40,13 @@ export class TableColumnResizeFitModeDemo implements OnInit {
 
     products: Product[];
 
-    constructor(private productService: ProductService) {}
+    constructor(private productService: ProductService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
-        this.productService.getProductsMini().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => {
+            this.products = data;
+            this.cd.markForCheck();
+        });
     }
 
     code: Code = {
@@ -101,7 +105,9 @@ export class TableColumnResizeFitModeDemo implements OnInit{
     constructor(private productService: ProductService) {}
 
     ngOnInit() {
-        this.productService.getProductsMini().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => {
+            this.products = data;
+        });
     }
 
 }`,

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Table } from 'primeng/table';
 import { Code } from '../../domain/code';
 import { Customer, Representative } from '../../domain/customer';
@@ -106,7 +106,8 @@ import { CustomerService } from '../../service/customerservice';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-filter-row-demo" [extFiles]="extFiles"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableFilterRowDemo implements OnInit {
     @Input() id: string;
@@ -123,7 +124,7 @@ export class TableFilterRowDemo implements OnInit {
 
     activityValues: number[] = [0, 100];
 
-    constructor(private customerService: CustomerService) {}
+    constructor(private customerService: CustomerService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
         this.customerService.getCustomersLarge().then((customers) => {
@@ -131,6 +132,8 @@ export class TableFilterRowDemo implements OnInit {
             this.loading = false;
 
             this.customers.forEach((customer) => (customer.date = new Date(customer.date)));
+
+            this.cd.markForCheck();
         });
 
         this.representatives = [

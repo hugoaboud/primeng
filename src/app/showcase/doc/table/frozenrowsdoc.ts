@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 import { CustomerService } from '../../service/customerservice';
 
@@ -44,7 +44,8 @@ import { CustomerService } from '../../service/customerservice';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-frozen-rows-demo" [extFiles]="extFiles"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableFrozenRowsDemo implements OnInit {
     @Input() id: string;
@@ -55,10 +56,13 @@ export class TableFrozenRowsDemo implements OnInit {
 
     lockedCustomers: any[];
 
-    constructor(private customerService: CustomerService) {}
+    constructor(private customerService: CustomerService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
-        this.customerService.getCustomersMedium().then((data) => (this.unlockedCustomers = data));
+        this.customerService.getCustomersMedium().then((data) => {
+            this.unlockedCustomers = data;
+            this.cd.markForCheck();
+        });
 
         this.lockedCustomers = [
             {

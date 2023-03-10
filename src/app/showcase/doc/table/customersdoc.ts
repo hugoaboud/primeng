@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Code } from '../../domain/code';
 import { Customer, Representative } from '../../domain/customer';
 import { CustomerService } from '../../service/customerservice';
@@ -171,7 +171,8 @@ import { CustomerService } from '../../service/customerservice';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-customers-demo" [extFiles]="extFiles"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableCustomersDemo implements OnInit {
     @Input() id: string;
@@ -190,7 +191,7 @@ export class TableCustomersDemo implements OnInit {
 
     activityValues: number[] = [0, 100];
 
-    constructor(private customerService: CustomerService) {}
+    constructor(private customerService: CustomerService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
         this.customerService.getCustomersLarge().then((customers) => {
@@ -198,6 +199,7 @@ export class TableCustomersDemo implements OnInit {
             this.loading = false;
 
             this.customers.forEach((customer) => (customer.date = new Date(customer.date)));
+            this.cd.markForCheck();
         });
 
         this.representatives = [

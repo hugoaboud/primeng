@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@angular/core';
 import { Customer } from '../../domain/customer';
 import { CustomerService } from '../../service/customerservice';
 import { Code } from '../../domain/code';
@@ -44,7 +44,8 @@ import { Code } from '../../domain/code';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-paginator-programmatic-demo" [extFiles]="extFiles"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TablePaginatorProgrammaticDemo {
     @Input() id: string;
@@ -57,10 +58,13 @@ export class TablePaginatorProgrammaticDemo {
 
     rows = 10;
 
-    constructor(private customerService: CustomerService) {}
+    constructor(private customerService: CustomerService, private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
-        this.customerService.getCustomersLarge().then((customers) => (this.customers = customers));
+        this.customerService.getCustomersLarge().then((customers) => {
+            this.customers = customers;
+            this.cd.markForCheck();
+        });
     }
 
     next() {

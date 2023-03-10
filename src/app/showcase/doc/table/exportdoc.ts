@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import * as FileSaver from 'file-saver';
 import { Code } from '../../domain/code';
 import { Product } from '../../domain/product';
@@ -41,7 +41,8 @@ import { ProductService } from '../../service/productservice';
             </p-table>
         </div>
         <app-code [code]="code" selector="table-export-demo" [extFiles]="extFiles"></app-code>
-    </div>`
+    </div>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableExportDemo implements OnInit {
     @Input() id: string;
@@ -52,14 +53,17 @@ export class TableExportDemo implements OnInit {
 
     selectedProducts: Product[];
 
-    constructor(private productService: ProductService) {}
+    constructor(private productService: ProductService, private cd: ChangeDetectorRef) {}
 
     cols: any[];
 
     exportColumns: any[];
 
     ngOnInit() {
-        this.productService.getProductsMini().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => {
+            this.products = data;
+            this.cd.markForCheck();
+        });
 
         this.cols = [
             { field: 'code', header: 'Code', customExportHeader: 'Product Code' },
@@ -174,7 +178,9 @@ export class TableExportDemo implements OnInit{
     exportColumns: any[];
 
     ngOnInit() {
-        this.productService.getProductsMini().then((data) => (this.products = data));
+        this.productService.getProductsMini().then((data) => {
+            this.products = data;
+        });
 
         this.cols = [
             { field: 'code', header: 'Code', customExportHeader: 'Product Code' },
