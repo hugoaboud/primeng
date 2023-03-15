@@ -58,7 +58,7 @@ export class TableColumnGroupDemo {
 
     thisYearTotal: number;
 
-    constructor(private cd: ChangeDetectorRef){}
+    constructor(private cd: ChangeDetectorRef) {}
 
     ngOnInit() {
         this.sales = [

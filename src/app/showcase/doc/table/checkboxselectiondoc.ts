@@ -37,8 +37,7 @@ import { ProductService } from '../../service/productservice';
         </div>
         <app-code [code]="code" selector="table-checkbox-selection-demo" [extFiles]="extFiles"></app-code>
     </div>`,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TableCheckboxSelectionDemo implements OnInit {
     @Input() id: string;

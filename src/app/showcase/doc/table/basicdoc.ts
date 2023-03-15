@@ -45,7 +45,7 @@ export class TableBasicDemo implements OnInit {
     ngOnInit() {
         this.productService.getProductsMini().then((data) => {
             this.products = data;
-            this.cd.markForCheck()
+            this.cd.markForCheck();
         });
     }
 
