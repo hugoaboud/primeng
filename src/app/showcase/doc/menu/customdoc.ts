@@ -27,14 +27,16 @@ export class MenuCustomContentDemo implements OnInit {
                 label: 'Options',
                 items: [
                     {
-                        label: '<h2>Refresh</h2>',
+                        label: '<span class="text-xl font-bold">Refresh</span>',
                         escape: false,
-                        icon: 'pi pi-refresh'
+                        icon: 'pi pi-refresh',
+                        iconClass: 'text-xl'
                     },
                     {
-                        label: '<h2>Delete</h2>',
+                        label: '<span class="text-xl font-bold">Delete</span>',
                         escape: false,
-                        icon: 'pi pi-times'
+                        icon: 'pi pi-times',
+                        iconClass: 'text-xl'
                     }
                 ]
             },
@@ -83,14 +85,16 @@ export class MenuCustomContentDemo implements OnInit {
                 label: 'Options',
                 items: [
                     {
-                        label: '<h2>Update</h2>',
+                        label: '<span class="text-xl font-bold">Refresh</span>',
                         escape: false,
-                        icon: 'pi pi-refresh'
+                        icon: 'pi pi-refresh',
+                        iconClass: 'text-xl'
                     },
                     {
-                        label: '<h2>Delete</h2>',
+                        label: '<span class="text-xl font-bold">Delete</span>',
                         escape: false,
-                        icon: 'pi pi-times'
+                        icon: 'pi pi-times',
+                        iconClass: 'text-xl'
                     }
                 ]
             },
