@@ -9,9 +9,11 @@
 @import './_footer';
 @import './_config';
 @import './_designer';
-@import './_doc.scss';
+@import './_doc';
 @import './_home';
 @import './_responsive';
 @import './_demo';
 @import './_code';
 @import './landing/_landing';
+@import '@docsearch/css';
+@import './_docsearch';

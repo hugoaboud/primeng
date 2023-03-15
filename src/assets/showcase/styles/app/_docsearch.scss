@@ -42,7 +42,7 @@
                 justify-content: start;
                 padding-left: 2px;
             }
-        }        
+        }
     }
 }
 
@@ -72,7 +72,8 @@
         border-color: var(--primary-color);
     }
 
-    .DocSearch-MagnifierLabel, .DocSearch-Reset {
+    .DocSearch-MagnifierLabel,
+    .DocSearch-Reset {
         color: var(--text-color);
     }
 }
@@ -87,7 +88,8 @@
     color: var(--primary-color);
 }
 
-.DocSearch-Logo .cls-1, .DocSearch-Logo .cls-2 {
+.DocSearch-Logo .cls-1,
+.DocSearch-Logo .cls-2 {
     fill: var(--primary-color);
 }
 

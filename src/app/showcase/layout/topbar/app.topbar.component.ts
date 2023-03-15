@@ -5,6 +5,7 @@ import { Subscription } from 'rxjs';
 import { AppConfig } from '../../domain/appconfig';
 import { AppConfigService } from '../../service/appconfigservice';
 import { JsonService, Version } from '../../service/jsonservice';
+import docsearch from '@docsearch/js';
 
 @Component({
     selector: 'app-topbar',
@@ -49,6 +50,16 @@ export class AppTopBarComponent implements OnInit, OnDestroy {
         });
 
         this.bindScrollListener();
+        this.initDocSearch();
+    }
+
+    initDocSearch() {
+        docsearch({
+            appId: 'XG1L2MUWT9',
+            apiKey: '6057fe1af77fee4e7e41907b0b3ec79d',
+            indexName: 'primeng',
+            container: '#docsearch'
+        });
     }
 
     bindScrollListener() {
