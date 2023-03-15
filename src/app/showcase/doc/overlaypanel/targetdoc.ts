@@ -38,7 +38,7 @@ export class OverlayPanelTargetDemo {
 </p-overlayPanel>`,
 
         html: `
-<div class="card flex justify-content-center">
+<div class="card flex flex-column align-items-center gap-3">
     <p-button (click)="op.show($event, targetEl)" icon="pi pi-image" label="Show"></p-button>
     <div #targetEl class="mt-5 w-10rem h-5rem border-1 surface-border border-round flex align-items-center justify-content-center">
         <span>Target Element</span>
