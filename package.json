@@ -84,5 +84,9 @@
         "typescript": "~4.8.4",
         "xlsx": "^0.18.5",
         "zone.js": "~0.11.4"
+    },
+    "dependencies": {
+        "@docsearch/js": "^3.3.3",
+        "@types/react": "^18.0.28"
     }
 }
