@@ -16,5 +16,4 @@ export class AppMenuItemComponent {
     isActiveRootMenuItem(menuitem: MenuItem): boolean {
         return menuitem.children && !menuitem.children.some((item) => item.routerLink === `${this.router.url}` || (item.children && item.children.some((it) => it.routerLink === `${this.router.url}`)));
     }
-
 }

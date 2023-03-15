@@ -32,7 +32,6 @@ export class AppMenuComponent {
 
     constructor(private configService: AppConfigService, private el: ElementRef, private router: Router) {
         this.menu = MenuData.data;
-
         this.config = this.configService.config;
         this.subscription = this.configService.configUpdate$.subscribe((config) => (this.config = config));
         this.routeSubscription = this.router.events.subscribe((event) => {
@@ -41,13 +40,13 @@ export class AppMenuComponent {
                     this.scrollToActiveItem();
                 }, 1);
             }
-        })
+        });
     }
 
     scrollToActiveItem() {
-        let activeItem = DomHandler.findSingle(this.el.nativeElement, '.router-link-active')
+        let activeItem = DomHandler.findSingle(this.el.nativeElement, '.router-link-active');
         if (activeItem) {
-            activeItem.scrollIntoView({inline: 'start', behavior: 'smooth'})
+            activeItem.scrollIntoView({ inline: 'start', behavior: 'smooth' });
         }
     }
 
